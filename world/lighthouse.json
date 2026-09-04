@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 3130,
+  "maxScore": 3170,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -7712,7 +7712,7 @@
       "name": "Rust Hood",
       "desc": "A dry hood above the stoop. A rust knob is packed in a crack.",
       "brief": "Dry hood, packed knob.",
-      "exits": { "down": { "to": "rust_stoop" }, "east": { "to": "rust_cover" }, "north": { "to": "rust_leaf" }, "south": { "to": "rust_boomkin" } },
+      "exits": { "down": { "to": "rust_stoop" }, "east": { "to": "rust_cover" }, "north": { "to": "rust_leaf" }, "south": { "to": "rust_boomkin" }, "west": { "to": "rust_coaming" } },
       "actions": [
         {
           "id": "pinch_knob",
@@ -7721,6 +7721,23 @@
           "fx": [
             ["score", 5],
             ["say", "Round knob. Spray built it on the hood and they left it."]
+          ]
+        }
+      ]
+    },
+    "rust_coaming": {
+      "name": "Rust Coaming",
+      "desc": "A dry coaming west of the hood. Packed rust coats a coaming.",
+      "brief": "Dry coaming, packed rust.",
+      "exits": { "east": { "to": "rust_hood" } },
+      "actions": [
+        {
+          "id": "pinch_coaming",
+          "label": "pinch the coaming",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard coaming. They framed it on the hood and packed rust around it."]
           ]
         }
       ]
@@ -7797,7 +7814,7 @@
       "name": "Rust Band",
       "desc": "A dry band east of the cover. Packed rust forms a band.",
       "brief": "Dry band, packed rust.",
-      "exits": { "west": { "to": "rust_cover" }, "north": { "to": "rust_spoke" }, "south": { "to": "rust_clamp" } },
+      "exits": { "west": { "to": "rust_cover" }, "north": { "to": "rust_spoke" }, "south": { "to": "rust_clamp" }, "east": { "to": "rust_grating" } },
       "actions": [
         {
           "id": "pinch_band",
@@ -7806,6 +7823,23 @@
           "fx": [
             ["score", 5],
             ["say", "Tight band. They wrapped the cover and packed rust over it."]
+          ]
+        }
+      ]
+    },
+    "rust_grating": {
+      "name": "Rust Grating",
+      "desc": "A dry grating east of the band. Packed rust coats a grating.",
+      "brief": "Dry grating, packed rust.",
+      "exits": { "west": { "to": "rust_band" } },
+      "actions": [
+        {
+          "id": "pinch_grating",
+          "label": "pinch the grating",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard grating. They laid it on the band and packed rust around it."]
           ]
         }
       ]
@@ -8426,7 +8460,7 @@
       "name": "Rust Lid",
       "desc": "A dry lid above the bay. A rust dab is packed in a crack.",
       "brief": "Dry lid, packed dab.",
-      "exits": { "down": { "to": "rust_bay" }, "east": { "to": "rust_flap" }, "north": { "to": "rust_jaw" }, "south": { "to": "rust_mizzen" } },
+      "exits": { "down": { "to": "rust_bay" }, "east": { "to": "rust_flap" }, "north": { "to": "rust_jaw" }, "south": { "to": "rust_mizzen" }, "west": { "to": "rust_companion" } },
       "actions": [
         {
           "id": "pinch_dab",
@@ -8435,6 +8469,23 @@
           "fx": [
             ["score", 5],
             ["say", "Small dab. Spray hit the lid and they packed it here."]
+          ]
+        }
+      ]
+    },
+    "rust_companion": {
+      "name": "Rust Companion",
+      "desc": "A dry companion west of the lid. Packed rust coats a companion.",
+      "brief": "Dry companion, packed rust.",
+      "exits": { "east": { "to": "rust_lid" } },
+      "actions": [
+        {
+          "id": "pinch_companion",
+          "label": "pinch the companion",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard companion. They boxed it on the lid and packed rust around it."]
           ]
         }
       ]
@@ -8460,7 +8511,7 @@
       "name": "Rust Pan",
       "desc": "A dry pan south of the bay. A rust crumb is packed in a crack.",
       "brief": "Dry pan, packed crumb.",
-      "exits": { "north": { "to": "rust_bay" }, "east": { "to": "rust_rib" }, "west": { "to": "rust_whisker" } },
+      "exits": { "north": { "to": "rust_bay" }, "east": { "to": "rust_rib" }, "west": { "to": "rust_whisker" }, "south": { "to": "rust_scuttle" } },
       "actions": [
         {
           "id": "pinch_crumb",
@@ -8469,6 +8520,23 @@
           "fx": [
             ["score", 5],
             ["say", "Dry crumb. Spray left it in the pan and they packed it here."]
+          ]
+        }
+      ]
+    },
+    "rust_scuttle": {
+      "name": "Rust Scuttle",
+      "desc": "A dry scuttle south of the pan. Packed rust coats a scuttle.",
+      "brief": "Dry scuttle, packed rust.",
+      "exits": { "north": { "to": "rust_pan" } },
+      "actions": [
+        {
+          "id": "pinch_scuttle",
+          "label": "pinch the scuttle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard scuttle. They cut it on the pan and packed rust around it."]
           ]
         }
       ]
@@ -8851,7 +8919,7 @@
       "name": "Rust Brim",
       "desc": "A dry brim north of the rim. A rust smudge is packed in a crack.",
       "brief": "Dry brim, packed smudge.",
-      "exits": { "south": { "to": "rust_rim" }, "east": { "to": "rust_duct" }, "north": { "to": "rust_stirrup" } },
+      "exits": { "south": { "to": "rust_rim" }, "east": { "to": "rust_duct" }, "north": { "to": "rust_stirrup" }, "west": { "to": "rust_deadlight" } },
       "actions": [
         {
           "id": "pinch_smudge",
@@ -8860,6 +8928,23 @@
           "fx": [
             ["score", 5],
             ["say", "Dry smudge. Spray wiped on the brim and they packed it here."]
+          ]
+        }
+      ]
+    },
+    "rust_deadlight": {
+      "name": "Rust Deadlight",
+      "desc": "A dry deadlight west of the brim. Packed rust coats a deadlight.",
+      "brief": "Dry deadlight, packed rust.",
+      "exits": { "east": { "to": "rust_brim" } },
+      "actions": [
+        {
+          "id": "pinch_deadlight",
+          "label": "pinch the deadlight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard deadlight. They shut it on the brim and packed rust around it."]
           ]
         }
       ]
@@ -9548,7 +9633,7 @@
       "name": "Rust Heel",
       "desc": "A dry heel north of the cap. A rust nick is packed in a crack.",
       "brief": "Dry heel, packed nick.",
-      "exits": { "south": { "to": "rust_cap" }, "east": { "to": "rust_grid" }, "north": { "to": "rust_stem" } },
+      "exits": { "south": { "to": "rust_cap" }, "east": { "to": "rust_grid" }, "north": { "to": "rust_stem" }, "west": { "to": "rust_skylight" } },
       "actions": [
         {
           "id": "pinch_nick",
@@ -9557,6 +9642,23 @@
           "fx": [
             ["score", 5],
             ["say", "Small nick. Spray cut the heel and they packed it here."]
+          ]
+        }
+      ]
+    },
+    "rust_skylight": {
+      "name": "Rust Skylight",
+      "desc": "A dry skylight west of the heel. Packed rust coats a skylight.",
+      "brief": "Dry skylight, packed rust.",
+      "exits": { "east": { "to": "rust_heel" } },
+      "actions": [
+        {
+          "id": "pinch_skylight",
+          "label": "pinch the skylight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard skylight. They glazed it on the heel and packed rust around it."]
           ]
         }
       ]
@@ -9667,7 +9769,7 @@
       "name": "Rust Pipe",
       "desc": "A dry pipe east of the edge. Packed rust coats a pipe.",
       "brief": "Dry pipe, packed rust.",
-      "exits": { "west": { "to": "rust_edge" }, "north": { "to": "rust_axle" }, "south": { "to": "rust_zinc" } },
+      "exits": { "west": { "to": "rust_edge" }, "north": { "to": "rust_axle" }, "south": { "to": "rust_zinc" }, "east": { "to": "rust_orlop" } },
       "actions": [
         {
           "id": "pinch_pipe",
@@ -9676,6 +9778,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pipe. They laid it on the edge and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_orlop": {
+      "name": "Rust Orlop",
+      "desc": "A dry orlop east of the pipe. Packed rust coats an orlop.",
+      "brief": "Dry orlop, packed rust.",
+      "exits": { "west": { "to": "rust_pipe" } },
+      "actions": [
+        {
+          "id": "pinch_orlop",
+          "label": "pinch the orlop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard orlop. They decked it on the pipe and packed rust around it."]
           ]
         }
       ]
@@ -9701,7 +9820,7 @@
       "name": "Rust Axle",
       "desc": "A dry axle north of the pipe. Packed rust coats an axle.",
       "brief": "Dry axle, packed rust.",
-      "exits": { "south": { "to": "rust_pipe" }, "east": { "to": "rust_fang" }, "north": { "to": "rust_sheer" } },
+      "exits": { "south": { "to": "rust_pipe" }, "east": { "to": "rust_fang" }, "north": { "to": "rust_sheer" }, "west": { "to": "rust_lazarette" } },
       "actions": [
         {
           "id": "pinch_axle",
@@ -9710,6 +9829,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard axle. They laid it by the pipe and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_lazarette": {
+      "name": "Rust Lazarette",
+      "desc": "A dry lazarette west of the axle. Packed rust coats a lazarette.",
+      "brief": "Dry lazarette, packed rust.",
+      "exits": { "east": { "to": "rust_axle" } },
+      "actions": [
+        {
+          "id": "pinch_lazarette",
+          "label": "pinch the lazarette",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lazarette. They stowed it on the axle and packed rust around it."]
           ]
         }
       ]
@@ -11902,6 +12038,9 @@
     "go north",
     "go up",
     "pinch the knob",
+    "go west",
+    "pinch the coaming",
+    "go east",
     "go south",
     "pinch the boomkin",
     "go north",
@@ -11918,6 +12057,9 @@
     "go south",
     "go east",
     "pinch the band",
+    "go east",
+    "pinch the grating",
+    "go west",
     "go south",
     "pinch the clamp",
     "go north",
@@ -11979,6 +12121,9 @@
     "go up",
     "go up",
     "pinch the dab",
+    "go west",
+    "pinch the companion",
+    "go east",
     "go south",
     "pinch the mizzen",
     "go north",
@@ -12036,6 +12181,9 @@
     "go down",
     "go south",
     "pinch the crumb",
+    "go south",
+    "pinch the scuttle",
+    "go north",
     "go west",
     "pinch the whisker",
     "go east",
@@ -12104,6 +12252,9 @@
     "go north",
     "go north",
     "pinch the smudge",
+    "go west",
+    "pinch the deadlight",
+    "go east",
     "go north",
     "pinch the stirrup",
     "go south",
@@ -12175,6 +12326,9 @@
     "pinch the nub",
     "go north",
     "pinch the nick",
+    "go west",
+    "pinch the skylight",
+    "go east",
     "go north",
     "pinch the stem",
     "go south",
@@ -12248,11 +12402,17 @@
     "go east",
     "go east",
     "pinch the pipe",
+    "go east",
+    "pinch the orlop",
+    "go west",
     "go south",
     "pinch the zinc",
     "go north",
     "go north",
     "pinch the axle",
+    "go west",
+    "pinch the lazarette",
+    "go east",
     "go north",
     "pinch the sheer",
     "go south",
