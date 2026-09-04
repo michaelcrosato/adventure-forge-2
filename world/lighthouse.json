@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 3570,
+  "maxScore": 3610,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -8970,7 +8970,7 @@
       "name": "Rust Toggle",
       "desc": "A dry toggle north of the hilt. Packed rust coats a toggle.",
       "brief": "Dry toggle, packed rust.",
-      "exits": { "south": { "to": "rust_hilt" } },
+      "exits": { "south": { "to": "rust_hilt" }, "east": { "to": "rust_hitch" } },
       "actions": [
         {
           "id": "pinch_toggle",
@@ -8979,6 +8979,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard toggle. They snapped it on the hilt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_hitch": {
+      "name": "Rust Hitch",
+      "desc": "A dry hitch east of the toggle. Packed rust coats a hitch.",
+      "brief": "Dry hitch, packed rust.",
+      "exits": { "west": { "to": "rust_toggle" } },
+      "actions": [
+        {
+          "id": "pinch_hitch",
+          "label": "pinch the hitch",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hitch. They bent it on the toggle and packed rust around it."]
           ]
         }
       ]
@@ -9004,7 +9021,7 @@
       "name": "Rust Pintle",
       "desc": "A dry pintle east of the hilt. Packed rust coats a pintle.",
       "brief": "Dry pintle, packed rust.",
-      "exits": { "west": { "to": "rust_hilt" } },
+      "exits": { "west": { "to": "rust_hilt" }, "east": { "to": "rust_splice" } },
       "actions": [
         {
           "id": "pinch_pintle",
@@ -9013,6 +9030,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pintle. They pinned it through the hilt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_splice": {
+      "name": "Rust Splice",
+      "desc": "A dry splice east of the pintle. Packed rust coats a splice.",
+      "brief": "Dry splice, packed rust.",
+      "exits": { "west": { "to": "rust_pintle" } },
+      "actions": [
+        {
+          "id": "pinch_splice",
+          "label": "pinch the splice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard splice. They joined it on the pintle and packed rust around it."]
           ]
         }
       ]
@@ -9497,7 +9531,7 @@
       "name": "Rust Sheave",
       "desc": "A dry sheave east of the dross. Packed rust coats a sheave.",
       "brief": "Dry sheave, packed rust.",
-      "exits": { "west": { "to": "rust_dross" } },
+      "exits": { "west": { "to": "rust_dross" }, "east": { "to": "rust_eyeplice" } },
       "actions": [
         {
           "id": "pinch_sheave",
@@ -9506,6 +9540,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheave. They grooved it in the dross and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_eyeplice": {
+      "name": "Rust Eyeplice",
+      "desc": "A dry eyeplice east of the sheave. Packed rust coats an eyeplice.",
+      "brief": "Dry eyeplice, packed rust.",
+      "exits": { "west": { "to": "rust_sheave" } },
+      "actions": [
+        {
+          "id": "pinch_eyeplice",
+          "label": "pinch the eyeplice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard eyeplice. They tucked it on the sheave and packed rust around it."]
           ]
         }
       ]
@@ -9548,7 +9599,7 @@
       "name": "Rust Stay",
       "desc": "A dry stay east of the pommel. Packed rust coats a stay.",
       "brief": "Dry stay, packed rust.",
-      "exits": { "west": { "to": "rust_pommel" } },
+      "exits": { "west": { "to": "rust_pommel" }, "east": { "to": "rust_shortsplice" } },
       "actions": [
         {
           "id": "pinch_stay",
@@ -9557,6 +9608,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stay. They guyed it from the pommel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_shortsplice": {
+      "name": "Rust Shortsplice",
+      "desc": "A dry shortsplice east of the stay. Packed rust coats a shortsplice.",
+      "brief": "Dry shortsplice, packed rust.",
+      "exits": { "west": { "to": "rust_stay" } },
+      "actions": [
+        {
+          "id": "pinch_shortsplice",
+          "label": "pinch the shortsplice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard shortsplice. They joined it on the stay and packed rust around it."]
           ]
         }
       ]
@@ -9582,7 +9650,7 @@
       "name": "Rust Cranse",
       "desc": "A dry cranse north of the keel. Packed rust coats a cranse.",
       "brief": "Dry cranse, packed rust.",
-      "exits": { "south": { "to": "rust_keel" } },
+      "exits": { "south": { "to": "rust_keel" }, "east": { "to": "rust_wallknot" } },
       "actions": [
         {
           "id": "pinch_cranse",
@@ -9591,6 +9659,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cranse. They ringed it on the keel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wallknot": {
+      "name": "Rust Wallknot",
+      "desc": "A dry wallknot east of the cranse. Packed rust coats a wallknot.",
+      "brief": "Dry wallknot, packed rust.",
+      "exits": { "west": { "to": "rust_cranse" } },
+      "actions": [
+        {
+          "id": "pinch_wallknot",
+          "label": "pinch the wallknot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wallknot. They tied it on the cranse and packed rust around it."]
           ]
         }
       ]
@@ -9616,7 +9701,7 @@
       "name": "Rust Knee",
       "desc": "A dry knee east of the keel. Packed rust coats a knee.",
       "brief": "Dry knee, packed rust.",
-      "exits": { "west": { "to": "rust_keel" } },
+      "exits": { "west": { "to": "rust_keel" }, "east": { "to": "rust_turkshead" } },
       "actions": [
         {
           "id": "pinch_knee",
@@ -9629,6 +9714,24 @@
         }
       ]
     },
+    "rust_turkshead": {
+      "name": "Rust Turkshead",
+      "desc": "A dry turkshead east of the knee. Packed rust coats a turkshead.",
+      "brief": "Dry turkshead, packed rust.",
+      "exits": { "west": { "to": "rust_knee" } },
+      "actions": [
+        {
+          "id": "pinch_turkshead",
+          "label": "pinch the turkshead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard turkshead. They wove it on the knee and packed rust around it."]
+          ]
+        }
+      ]
+    },
+
     "rust_rim": {
       "name": "Rust Rim",
       "desc": "A dry rim east of the bay. A rust wad is packed in a crack.",
@@ -9650,7 +9753,7 @@
       "name": "Rust Timber",
       "desc": "A dry timber south of the rim. Packed rust coats a timber.",
       "brief": "Dry timber, packed rust.",
-      "exits": { "north": { "to": "rust_rim" } },
+      "exits": { "north": { "to": "rust_rim" }, "east": { "to": "rust_walker" } },
       "actions": [
         {
           "id": "pinch_timber",
@@ -9659,6 +9762,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard timber. They squared it on the rim and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_walker": {
+      "name": "Rust Walker",
+      "desc": "A dry walker east of the timber. Packed rust coats a walker.",
+      "brief": "Dry walker, packed rust.",
+      "exits": { "west": { "to": "rust_timber" } },
+      "actions": [
+        {
+          "id": "pinch_walker",
+          "label": "pinch the walker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard walker. They tied it on the timber and packed rust around it."]
           ]
         }
       ]
@@ -10109,7 +10229,7 @@
       "name": "Rust Eyelet",
       "desc": "A dry eyelet east of the beam. Packed rust coats an eyelet.",
       "brief": "Dry eyelet, packed rust.",
-      "exits": { "west": { "to": "rust_beam" } },
+      "exits": { "west": { "to": "rust_beam" }, "east": { "to": "rust_stevedore" } },
       "actions": [
         {
           "id": "pinch_eyelet",
@@ -10118,6 +10238,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard eyelet. They punched it in the beam and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_stevedore": {
+      "name": "Rust Stevedore",
+      "desc": "A dry stevedore east of the eyelet. Packed rust coats a stevedore.",
+      "brief": "Dry stevedore, packed rust.",
+      "exits": { "west": { "to": "rust_eyelet" } },
+      "actions": [
+        {
+          "id": "pinch_stevedore",
+          "label": "pinch the stevedore",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard stevedore. They tied it on the eyelet and packed rust around it."]
           ]
         }
       ]
@@ -13632,12 +13769,18 @@
     "pinch the hilt",
     "go north",
     "pinch the toggle",
+    "go east",
+    "pinch the hitch",
+    "go west",
     "go south",
     "go west",
     "pinch the windlass",
     "go east",
     "go east",
     "pinch the pintle",
+    "go east",
+    "pinch the splice",
+    "go west",
     "go west",
     "go south",
     "go west",
@@ -13713,6 +13856,9 @@
     "go north",
     "go east",
     "pinch the sheave",
+    "go east",
+    "pinch the eyeplice",
+    "go west",
     "go west",
     "go north",
     "pinch the pommel",
@@ -13721,17 +13867,26 @@
     "go east",
     "go east",
     "pinch the stay",
+    "go east",
+    "pinch the shortsplice",
+    "go west",
     "go west",
     "go north",
     "pinch the keel",
     "go north",
     "pinch the cranse",
+    "go east",
+    "pinch the wallknot",
+    "go west",
     "go south",
     "go west",
     "pinch the capstan",
     "go east",
     "go east",
     "pinch the knee",
+    "go east",
+    "pinch the turkshead",
+    "go west",
     "go west",
     "go south",
     "go south",
@@ -13742,6 +13897,9 @@
     "pinch the wad",
     "go south",
     "pinch the timber",
+    "go east",
+    "pinch the walker",
+    "go west",
     "go north",
     "go north",
     "pinch the smudge",
@@ -13817,6 +13975,9 @@
     "go east",
     "go east",
     "pinch the eyelet",
+    "go east",
+    "pinch the stevedore",
+    "go west",
     "go west",
     "go south",
     "go south",
