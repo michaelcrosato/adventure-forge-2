@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 3450,
+  "maxScore": 3490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -10143,7 +10143,7 @@
       "name": "Rust Rider",
       "desc": "A dry rider south of the flank. Packed rust coats a rider.",
       "brief": "Dry rider, packed rust.",
-      "exits": { "north": { "to": "rust_flank" } },
+      "exits": { "north": { "to": "rust_flank" }, "east": { "to": "rust_thimble" } },
       "actions": [
         {
           "id": "pinch_rider",
@@ -10156,11 +10156,28 @@
         }
       ]
     },
+    "rust_thimble": {
+      "name": "Rust Thimble",
+      "desc": "A dry thimble east of the rider. Packed rust coats a thimble.",
+      "brief": "Dry thimble, packed rust.",
+      "exits": { "west": { "to": "rust_rider" } },
+      "actions": [
+        {
+          "id": "pinch_thimble",
+          "label": "pinch the thimble",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard thimble. They seized it on the rider and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_garboard": {
       "name": "Rust Garboard",
       "desc": "A dry garboard north of the flank. Packed rust coats a garboard.",
       "brief": "Dry garboard, packed rust.",
-      "exits": { "south": { "to": "rust_flank" } },
+      "exits": { "south": { "to": "rust_flank" }, "east": { "to": "rust_marling" } },
       "actions": [
         {
           "id": "pinch_garboard",
@@ -10169,6 +10186,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard garboard. They fayed it on the flank and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_marling": {
+      "name": "Rust Marling",
+      "desc": "A dry marling east of the garboard. Packed rust coats marling.",
+      "brief": "Dry marling, packed rust.",
+      "exits": { "west": { "to": "rust_garboard" } },
+      "actions": [
+        {
+          "id": "pinch_marling",
+          "label": "pinch the marling",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard marling. They hitched it on the garboard and packed rust around it."]
           ]
         }
       ]
@@ -10228,7 +10262,7 @@
       "name": "Rust Leechline",
       "desc": "A dry leechline south of the toe. Packed rust coats a leechline.",
       "brief": "Dry leechline, packed rust.",
-      "exits": { "north": { "to": "rust_toe" } },
+      "exits": { "north": { "to": "rust_toe" }, "east": { "to": "rust_logline" } },
       "actions": [
         {
           "id": "pinch_leechline",
@@ -10237,6 +10271,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard leechline. They rove it on the toe and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_logline": {
+      "name": "Rust Logline",
+      "desc": "A dry logline east of the leechline. Packed rust coats a logline.",
+      "brief": "Dry logline, packed rust.",
+      "exits": { "west": { "to": "rust_leechline" } },
+      "actions": [
+        {
+          "id": "pinch_logline",
+          "label": "pinch the logline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard logline. They coiled it on the leechline and packed rust around it."]
           ]
         }
       ]
@@ -10279,7 +10330,7 @@
       "name": "Rust Timberhead",
       "desc": "A dry timberhead south of the vent. Packed rust coats a timberhead.",
       "brief": "Dry timberhead, packed rust.",
-      "exits": { "north": { "to": "rust_vent" } },
+      "exits": { "north": { "to": "rust_vent" }, "east": { "to": "rust_leadline" } },
       "actions": [
         {
           "id": "pinch_timberhead",
@@ -10292,11 +10343,28 @@
         }
       ]
     },
+    "rust_leadline": {
+      "name": "Rust Leadline",
+      "desc": "A dry leadline east of the timberhead. Packed rust coats a leadline.",
+      "brief": "Dry leadline, packed rust.",
+      "exits": { "west": { "to": "rust_timberhead" } },
+      "actions": [
+        {
+          "id": "pinch_leadline",
+          "label": "pinch the leadline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard leadline. They bent it on the timberhead and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_burton": {
       "name": "Rust Burton",
       "desc": "A dry burton east of the vent. Packed rust coats a burton.",
       "brief": "Dry burton, packed rust.",
-      "exits": { "west": { "to": "rust_vent" } },
+      "exits": { "west": { "to": "rust_vent" }, "east": { "to": "rust_towline" } },
       "actions": [
         {
           "id": "pinch_burton",
@@ -10305,6 +10373,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard burton. They sprung it off the vent and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_towline": {
+      "name": "Rust Towline",
+      "desc": "A dry towline east of the burton. Packed rust coats a towline.",
+      "brief": "Dry towline, packed rust.",
+      "exits": { "west": { "to": "rust_burton" } },
+      "actions": [
+        {
+          "id": "pinch_towline",
+          "label": "pinch the towline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard towline. They paid it on the burton and packed rust around it."]
           ]
         }
       ]
@@ -10347,7 +10432,7 @@
       "name": "Rust Horse",
       "desc": "A dry horse north of the core. Packed rust coats a horse.",
       "brief": "Dry horse, packed rust.",
-      "exits": { "south": { "to": "rust_core" } },
+      "exits": { "south": { "to": "rust_core" }, "east": { "to": "rust_headfast" } },
       "actions": [
         {
           "id": "pinch_horse",
@@ -10356,6 +10441,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard horse. They framed it on the core and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_headfast": {
+      "name": "Rust Headfast",
+      "desc": "A dry headfast east of the horse. Packed rust coats a headfast.",
+      "brief": "Dry headfast, packed rust.",
+      "exits": { "west": { "to": "rust_horse" } },
+      "actions": [
+        {
+          "id": "pinch_headfast",
+          "label": "pinch the headfast",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard headfast. They made it on the horse and packed rust around it."]
           ]
         }
       ]
@@ -10381,7 +10483,7 @@
       "name": "Rust Futtock",
       "desc": "A dry futtock south of the hide. Packed rust coats a futtock.",
       "brief": "Dry futtock, packed rust.",
-      "exits": { "north": { "to": "rust_hide" } },
+      "exits": { "north": { "to": "rust_hide" }, "east": { "to": "rust_sternfast" } },
       "actions": [
         {
           "id": "pinch_futtock",
@@ -10390,6 +10492,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard futtock. They framed it under the hide and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sternfast": {
+      "name": "Rust Sternfast",
+      "desc": "A dry sternfast east of the futtock. Packed rust coats a sternfast.",
+      "brief": "Dry sternfast, packed rust.",
+      "exits": { "west": { "to": "rust_futtock" } },
+      "actions": [
+        {
+          "id": "pinch_sternfast",
+          "label": "pinch the sternfast",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sternfast. They made it on the futtock and packed rust around it."]
           ]
         }
       ]
@@ -10568,7 +10687,7 @@
       "name": "Rust Stem",
       "desc": "A dry stem north of the heel. Packed rust coats a stem.",
       "brief": "Dry stem, packed rust.",
-      "exits": { "south": { "to": "rust_heel" } },
+      "exits": { "south": { "to": "rust_heel" }, "east": { "to": "rust_roundline" } },
       "actions": [
         {
           "id": "pinch_stem",
@@ -10577,6 +10696,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stem. They scarfed it on the heel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_roundline": {
+      "name": "Rust Roundline",
+      "desc": "A dry roundline east of the stem. Packed rust coats a roundline.",
+      "brief": "Dry roundline, packed rust.",
+      "exits": { "west": { "to": "rust_stem" } },
+      "actions": [
+        {
+          "id": "pinch_roundline",
+          "label": "pinch the roundline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard roundline. They rove it on the stem and packed rust around it."]
           ]
         }
       ]
@@ -13419,9 +13555,15 @@
     "pinch the slab",
     "go south",
     "pinch the rider",
+    "go east",
+    "pinch the thimble",
+    "go west",
     "go north",
     "go north",
     "pinch the garboard",
+    "go east",
+    "pinch the marling",
+    "go west",
     "go south",
     "go east",
     "pinch the boss",
@@ -13439,6 +13581,9 @@
     "go east",
     "go north",
     "pinch the stem",
+    "go east",
+    "pinch the roundline",
+    "go west",
     "go south",
     "go east",
     "pinch the tab",
@@ -13448,6 +13593,9 @@
     "pinch the blob",
     "go south",
     "pinch the leechline",
+    "go east",
+    "pinch the logline",
+    "go west",
     "go north",
     "go west",
     "pinch the runner",
@@ -13456,9 +13604,15 @@
     "pinch the vent",
     "go south",
     "pinch the timberhead",
+    "go east",
+    "pinch the leadline",
+    "go west",
     "go north",
     "go east",
     "pinch the burton",
+    "go east",
+    "pinch the towline",
+    "go west",
     "go west",
     "go north",
     "pinch the core",
@@ -13467,11 +13621,17 @@
     "go east",
     "go north",
     "pinch the horse",
+    "go east",
+    "pinch the headfast",
+    "go west",
     "go south",
     "go east",
     "pinch the hide",
     "go south",
     "pinch the futtock",
+    "go east",
+    "pinch the sternfast",
+    "go west",
     "go north",
     "go east",
     "pinch the chock",
