@@ -12,7 +12,7 @@ import type { World } from "../src/types.ts";
 const world: World = loadWorldUrl(new URL("../world/lighthouse.json", import.meta.url));
 
 test("direct player wins via walkthrough policy and files a verified report", async () => {
-  const r = await playOne(world, 7, mockProvider(world), 2000);
+  const r = await playOne(world, 7, mockProvider(world), 2100);
   assert.equal(r.ended, "beacon_lit");
   assert.ok(r.report, "report parsed");
   assert.equal(r.verified, true, "receipt verified by in-process replay");
