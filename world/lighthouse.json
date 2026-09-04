@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 2570,
+  "maxScore": 2610,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6811,7 +6811,7 @@
       "name": "Rust Wedge",
       "desc": "A dry wedge east of the pelt. Packed rust coats a wedge.",
       "brief": "Dry wedge, packed rust.",
-      "exits": { "west": { "to": "rust_pelt" }, "north": { "to": "rust_bush" } },
+      "exits": { "west": { "to": "rust_pelt" }, "north": { "to": "rust_bush" }, "east": { "to": "rust_shroud" } },
       "actions": [
         {
           "id": "pinch_wedge",
@@ -6820,6 +6820,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wedge. They drove it under the pelt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_shroud": {
+      "name": "Rust Shroud",
+      "desc": "A dry shroud east of the wedge. Packed rust coats a shroud.",
+      "brief": "Dry shroud, packed rust.",
+      "exits": { "west": { "to": "rust_wedge" } },
+      "actions": [
+        {
+          "id": "pinch_shroud",
+          "label": "pinch the shroud",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard shroud. They rigged it on the wedge and packed rust around it."]
           ]
         }
       ]
@@ -7015,7 +7032,7 @@
       "name": "Rust Shim",
       "desc": "A dry shim east of the coat. Packed rust coats a shim.",
       "brief": "Dry shim, packed rust.",
-      "exits": { "west": { "to": "rust_coat" }, "north": { "to": "rust_grommet" } },
+      "exits": { "west": { "to": "rust_coat" }, "north": { "to": "rust_grommet" }, "east": { "to": "rust_deadeye" } },
       "actions": [
         {
           "id": "pinch_shim",
@@ -7024,6 +7041,23 @@
           "fx": [
             ["score", 5],
             ["say", "Thin shim. They packed it under the coat and left it."]
+          ]
+        }
+      ]
+    },
+    "rust_deadeye": {
+      "name": "Rust Deadeye",
+      "desc": "A dry deadeye east of the shim. Packed rust coats a deadeye.",
+      "brief": "Dry deadeye, packed rust.",
+      "exits": { "west": { "to": "rust_shim" } },
+      "actions": [
+        {
+          "id": "pinch_deadeye",
+          "label": "pinch the deadeye",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard deadeye. They reeved it on the shim and packed rust around it."]
           ]
         }
       ]
@@ -7508,7 +7542,7 @@
       "name": "Rust Dross",
       "desc": "A dry dross east of the web. Packed rust is dross.",
       "brief": "Dry dross, packed rust.",
-      "exits": { "west": { "to": "rust_web" }, "north": { "to": "rust_pommel" } },
+      "exits": { "west": { "to": "rust_web" }, "north": { "to": "rust_pommel" }, "east": { "to": "rust_sheave" } },
       "actions": [
         {
           "id": "pinch_dross",
@@ -7521,11 +7555,28 @@
         }
       ]
     },
+    "rust_sheave": {
+      "name": "Rust Sheave",
+      "desc": "A dry sheave east of the dross. Packed rust coats a sheave.",
+      "brief": "Dry sheave, packed rust.",
+      "exits": { "west": { "to": "rust_dross" } },
+      "actions": [
+        {
+          "id": "pinch_sheave",
+          "label": "pinch the sheave",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sheave. They grooved it in the dross and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_pommel": {
       "name": "Rust Pommel",
       "desc": "A dry pommel north of the dross. Packed rust coats a pommel.",
       "brief": "Dry pommel, packed rust.",
-      "exits": { "south": { "to": "rust_dross" }, "north": { "to": "rust_keel" } },
+      "exits": { "south": { "to": "rust_dross" }, "north": { "to": "rust_keel" }, "east": { "to": "rust_stay" } },
       "actions": [
         {
           "id": "pinch_pommel",
@@ -7534,6 +7585,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pommel. They set it in the dross and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_stay": {
+      "name": "Rust Stay",
+      "desc": "A dry stay east of the pommel. Packed rust coats a stay.",
+      "brief": "Dry stay, packed rust.",
+      "exits": { "west": { "to": "rust_pommel" } },
+      "actions": [
+        {
+          "id": "pinch_stay",
+          "label": "pinch the stay",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard stay. They guyed it from the pommel and packed rust around it."]
           ]
         }
       ]
@@ -7644,7 +7712,7 @@
       "name": "Rust Belt",
       "desc": "A dry belt east of the bore. Packed rust forms a belt.",
       "brief": "Dry belt, packed rust.",
-      "exits": { "west": { "to": "rust_bore" }, "north": { "to": "rust_stack" } },
+      "exits": { "west": { "to": "rust_bore" }, "north": { "to": "rust_stack" }, "east": { "to": "rust_fairlead" } },
       "actions": [
         {
           "id": "pinch_belt",
@@ -7657,11 +7725,28 @@
         }
       ]
     },
+    "rust_fairlead": {
+      "name": "Rust Fairlead",
+      "desc": "A dry fairlead east of the belt. Packed rust coats a fairlead.",
+      "brief": "Dry fairlead, packed rust.",
+      "exits": { "west": { "to": "rust_belt" } },
+      "actions": [
+        {
+          "id": "pinch_fairlead",
+          "label": "pinch the fairlead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fairlead. They led line off the belt and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_stack": {
       "name": "Rust Stack",
       "desc": "A dry stack north of the belt. Packed rust clogs a stack.",
       "brief": "Dry stack, packed rust.",
-      "exits": { "south": { "to": "rust_belt" }, "north": { "to": "rust_beam" } },
+      "exits": { "south": { "to": "rust_belt" }, "north": { "to": "rust_beam" }, "east": { "to": "rust_mast" } },
       "actions": [
         {
           "id": "pinch_stack",
@@ -7670,6 +7755,23 @@
           "fx": [
             ["score", 5],
             ["say", "Clogged stack. Spray filled it at the belt and they packed it here."]
+          ]
+        }
+      ]
+    },
+    "rust_mast": {
+      "name": "Rust Mast",
+      "desc": "A dry mast east of the stack. Packed rust coats a mast.",
+      "brief": "Dry mast, packed rust.",
+      "exits": { "west": { "to": "rust_stack" } },
+      "actions": [
+        {
+          "id": "pinch_mast",
+          "label": "pinch the mast",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mast. They stepped it by the stack and packed rust around it."]
           ]
         }
       ]
@@ -7865,7 +7967,7 @@
       "name": "Rust Joist",
       "desc": "A dry joist north of the flue. Packed rust coats a joist.",
       "brief": "Dry joist, packed rust.",
-      "exits": { "south": { "to": "rust_flue" } },
+      "exits": { "south": { "to": "rust_flue" }, "east": { "to": "rust_gaff" } },
       "actions": [
         {
           "id": "pinch_joist",
@@ -7874,6 +7976,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard joist. They laid it over the flue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_gaff": {
+      "name": "Rust Gaff",
+      "desc": "A dry gaff east of the joist. Packed rust coats a gaff.",
+      "brief": "Dry gaff, packed rust.",
+      "exits": { "west": { "to": "rust_joist" } },
+      "actions": [
+        {
+          "id": "pinch_gaff",
+          "label": "pinch the gaff",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gaff. They hooked it on the joist and packed rust around it."]
           ]
         }
       ]
@@ -7984,7 +8103,7 @@
       "name": "Rust Fang",
       "desc": "A dry fang east of the axle. Packed rust forms a fang.",
       "brief": "Dry fang, packed rust.",
-      "exits": { "west": { "to": "rust_axle" }, "north": { "to": "rust_guard" } },
+      "exits": { "west": { "to": "rust_axle" }, "north": { "to": "rust_guard" }, "east": { "to": "rust_boom" } },
       "actions": [
         {
           "id": "pinch_fang",
@@ -7993,6 +8112,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fang. Spray hooked off the axle and they packed it here."]
+          ]
+        }
+      ]
+    },
+    "rust_boom": {
+      "name": "Rust Boom",
+      "desc": "A dry boom east of the fang. Packed rust coats a boom.",
+      "brief": "Dry boom, packed rust.",
+      "exits": { "west": { "to": "rust_fang" } },
+      "actions": [
+        {
+          "id": "pinch_boom",
+          "label": "pinch the boom",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard boom. They swung it off the fang and packed rust around it."]
           ]
         }
       ]
@@ -9839,6 +9975,9 @@
     "go east",
     "go east",
     "pinch the wedge",
+    "go east",
+    "pinch the shroud",
+    "go west",
     "go north",
     "pinch the bush",
     "go east",
@@ -9869,6 +10008,9 @@
     "pinch the coat",
     "go east",
     "pinch the shim",
+    "go east",
+    "pinch the deadeye",
+    "go west",
     "go north",
     "pinch the grommet",
     "go east",
@@ -9962,8 +10104,14 @@
     "pinch the foil",
     "go east",
     "pinch the dross",
+    "go east",
+    "pinch the sheave",
+    "go west",
     "go north",
     "pinch the pommel",
+    "go east",
+    "pinch the stay",
+    "go west",
     "go north",
     "pinch the keel",
     "go east",
@@ -9984,8 +10132,14 @@
     "pinch the bore",
     "go east",
     "pinch the belt",
+    "go east",
+    "pinch the fairlead",
+    "go west",
     "go north",
     "pinch the stack",
+    "go east",
+    "pinch the mast",
+    "go west",
     "go north",
     "pinch the beam",
     "go east",
@@ -10029,6 +10183,9 @@
     "pinch the flue",
     "go north",
     "pinch the joist",
+    "go east",
+    "pinch the gaff",
+    "go west",
     "go south",
     "go south",
     "go west",
@@ -10045,6 +10202,9 @@
     "pinch the axle",
     "go east",
     "pinch the fang",
+    "go east",
+    "pinch the boom",
+    "go west",
     "go north",
     "pinch the guard",
     "go east",
