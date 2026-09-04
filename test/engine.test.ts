@@ -139,6 +139,62 @@ test("successful oiling consumes the oil flask", () => {
   assert.equal(state.itemLoc.oil_flask, "nowhere");
 });
 
+test("rust worming is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_worming);
+  assert.ok(state.visited.includes("rust_worming"));
+});
+
+test("rust parcelling is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_parcelling);
+  assert.ok(state.visited.includes("rust_parcelling"));
+});
+
+test("rust girtline is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_girtline);
+  assert.ok(state.visited.includes("rust_girtline"));
+});
+
+test("rust stemson is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_stemson);
+  assert.ok(state.visited.includes("rust_stemson"));
+});
+
+test("rust sternpost is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_sternpost);
+  assert.ok(state.visited.includes("rust_sternpost"));
+});
+
+test("rust footwale is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_footwale);
+  assert.ok(state.visited.includes("rust_footwale"));
+});
+
+test("rust scarph is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_scarph);
+  assert.ok(state.visited.includes("rust_scarph"));
+});
+
+test("rust eyebolt is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_eyebolt);
+  assert.ok(state.visited.includes("rust_eyebolt"));
+});
+
 test("rust ringbolt is scored on the proven path", () => {
   const { state } = playWalkthrough(1);
   assert.equal(state.ended?.id, "beacon_lit");

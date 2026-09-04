@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 3330,
+  "maxScore": 3370,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -8409,7 +8409,7 @@
       "name": "Rust Thwart",
       "desc": "A dry thwart east of the brow. Packed rust coats a thwart.",
       "brief": "Dry thwart, packed rust.",
-      "exits": { "west": { "to": "rust_brow" } },
+      "exits": { "west": { "to": "rust_brow" }, "east": { "to": "rust_eyebolt" } },
       "actions": [
         {
           "id": "pinch_thwart",
@@ -8418,6 +8418,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard thwart. They spanned it off the brow and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_eyebolt": {
+      "name": "Rust Eyebolt",
+      "desc": "A dry eyebolt east of the thwart. Packed rust coats an eyebolt.",
+      "brief": "Dry eyebolt, packed rust.",
+      "exits": { "west": { "to": "rust_thwart" } },
+      "actions": [
+        {
+          "id": "pinch_eyebolt",
+          "label": "pinch the eyebolt",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard eyebolt. They drove it on the thwart and packed rust around it."]
           ]
         }
       ]
@@ -8443,7 +8460,7 @@
       "name": "Rust Gasket",
       "desc": "A dry gasket north of the socket. Packed rust coats a gasket.",
       "brief": "Dry gasket, packed rust.",
-      "exits": { "south": { "to": "rust_socket" } },
+      "exits": { "south": { "to": "rust_socket" }, "east": { "to": "rust_scarph" } },
       "actions": [
         {
           "id": "pinch_gasket",
@@ -8452,6 +8469,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gasket. They furled it on the socket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_scarph": {
+      "name": "Rust Scarph",
+      "desc": "A dry scarph east of the gasket. Packed rust coats a scarph.",
+      "brief": "Dry scarph, packed rust.",
+      "exits": { "west": { "to": "rust_gasket" } },
+      "actions": [
+        {
+          "id": "pinch_scarph",
+          "label": "pinch the scarph",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard scarph. They joined it on the gasket and packed rust around it."]
           ]
         }
       ]
@@ -8494,7 +8528,7 @@
       "name": "Rust Spreader",
       "desc": "A dry spreader south of the sleeve. Packed rust coats a spreader.",
       "brief": "Dry spreader, packed rust.",
-      "exits": { "north": { "to": "rust_sleeve" } },
+      "exits": { "north": { "to": "rust_sleeve" }, "east": { "to": "rust_footwale" } },
       "actions": [
         {
           "id": "pinch_spreader",
@@ -8507,11 +8541,28 @@
         }
       ]
     },
+    "rust_footwale": {
+      "name": "Rust Footwale",
+      "desc": "A dry footwale east of the spreader. Packed rust coats a footwale.",
+      "brief": "Dry footwale, packed rust.",
+      "exits": { "west": { "to": "rust_spreader" } },
+      "actions": [
+        {
+          "id": "pinch_footwale",
+          "label": "pinch the footwale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard footwale. They laid it on the spreader and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bitt": {
       "name": "Rust Bitt",
       "desc": "A dry bitt east of the sleeve. Packed rust coats a bitt.",
       "brief": "Dry bitt, packed rust.",
-      "exits": { "west": { "to": "rust_sleeve" } },
+      "exits": { "west": { "to": "rust_sleeve" }, "east": { "to": "rust_sternpost" } },
       "actions": [
         {
           "id": "pinch_bitt",
@@ -8520,6 +8571,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bitt. They tied off on the sleeve and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sternpost": {
+      "name": "Rust Sternpost",
+      "desc": "A dry sternpost east of the bitt. Packed rust coats a sternpost.",
+      "brief": "Dry sternpost, packed rust.",
+      "exits": { "west": { "to": "rust_bitt" } },
+      "actions": [
+        {
+          "id": "pinch_sternpost",
+          "label": "pinch the sternpost",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sternpost. They stepped it on the bitt and packed rust around it."]
           ]
         }
       ]
@@ -8545,7 +8613,7 @@
       "name": "Rust Parrel",
       "desc": "A dry parrel north of the spar. Packed rust coats a parrel.",
       "brief": "Dry parrel, packed rust.",
-      "exits": { "south": { "to": "rust_spar" } },
+      "exits": { "south": { "to": "rust_spar" }, "east": { "to": "rust_stemson" } },
       "actions": [
         {
           "id": "pinch_parrel",
@@ -8554,6 +8622,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard parrel. They lashed it on the spar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_stemson": {
+      "name": "Rust Stemson",
+      "desc": "A dry stemson east of the parrel. Packed rust coats a stemson.",
+      "brief": "Dry stemson, packed rust.",
+      "exits": { "west": { "to": "rust_parrel" } },
+      "actions": [
+        {
+          "id": "pinch_stemson",
+          "label": "pinch the stemson",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard stemson. They scarfed it on the parrel and packed rust around it."]
           ]
         }
       ]
@@ -8647,7 +8732,7 @@
       "name": "Rust Striker",
       "desc": "A dry striker south of the flap. Packed rust coats a striker.",
       "brief": "Dry striker, packed rust.",
-      "exits": { "north": { "to": "rust_flap" } },
+      "exits": { "north": { "to": "rust_flap" }, "east": { "to": "rust_parcelling" } },
       "actions": [
         {
           "id": "pinch_striker",
@@ -8656,6 +8741,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard striker. They spiked it off the flap and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_parcelling": {
+      "name": "Rust Parcelling",
+      "desc": "A dry parcelling east of the striker. Packed rust coats parcelling.",
+      "brief": "Dry parcelling, packed rust.",
+      "exits": { "west": { "to": "rust_striker" } },
+      "actions": [
+        {
+          "id": "pinch_parcelling",
+          "label": "pinch the parcelling",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard parcelling. They wrapped it on the striker and packed rust around it."]
           ]
         }
       ]
@@ -8698,7 +8800,7 @@
       "name": "Rust Tabernacle",
       "desc": "A dry tabernacle south of the rod. Packed rust coats a tabernacle.",
       "brief": "Dry tabernacle, packed rust.",
-      "exits": { "north": { "to": "rust_rod" } },
+      "exits": { "north": { "to": "rust_rod" }, "east": { "to": "rust_worming" } },
       "actions": [
         {
           "id": "pinch_tabernacle",
@@ -8707,6 +8809,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tabernacle. They stepped it on the rod and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_worming": {
+      "name": "Rust Worming",
+      "desc": "A dry worming east of the tabernacle. Packed rust coats worming.",
+      "brief": "Dry worming, packed rust.",
+      "exits": { "west": { "to": "rust_tabernacle" } },
+      "actions": [
+        {
+          "id": "pinch_worming",
+          "label": "pinch the worming",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard worming. They laid it on the tabernacle and packed rust around it."]
           ]
         }
       ]
@@ -8953,7 +9072,7 @@
       "name": "Rust Mizzen",
       "desc": "A dry mizzen south of the lid. Packed rust coats a mizzen.",
       "brief": "Dry mizzen, packed rust.",
-      "exits": { "north": { "to": "rust_lid" } },
+      "exits": { "north": { "to": "rust_lid" }, "east": { "to": "rust_girtline" } },
       "actions": [
         {
           "id": "pinch_mizzen",
@@ -8962,6 +9081,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mizzen. They raised it on the lid and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_girtline": {
+      "name": "Rust Girtline",
+      "desc": "A dry girtline east of the mizzen. Packed rust coats a girtline.",
+      "brief": "Dry girtline, packed rust.",
+      "exits": { "west": { "to": "rust_mizzen" } },
+      "actions": [
+        {
+          "id": "pinch_girtline",
+          "label": "pinch the girtline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard girtline. They rove it on the mizzen and packed rust around it."]
           ]
         }
       ]
@@ -12703,11 +12839,17 @@
     "go north",
     "go east",
     "pinch the thwart",
+    "go east",
+    "pinch the eyebolt",
+    "go west",
     "go west",
     "go north",
     "pinch the socket",
     "go north",
     "pinch the gasket",
+    "go east",
+    "pinch the scarph",
+    "go west",
     "go south",
     "go west",
     "pinch the lanyard",
@@ -12716,14 +12858,23 @@
     "pinch the sleeve",
     "go south",
     "pinch the spreader",
+    "go east",
+    "pinch the footwale",
+    "go west",
     "go north",
     "go east",
     "pinch the bitt",
+    "go east",
+    "pinch the sternpost",
+    "go west",
     "go west",
     "go north",
     "pinch the spar",
     "go north",
     "pinch the parrel",
+    "go east",
+    "pinch the stemson",
+    "go west",
     "go south",
     "go west",
     "pinch the winch",
@@ -12751,6 +12902,9 @@
     "go east",
     "go south",
     "pinch the mizzen",
+    "go east",
+    "pinch the girtline",
+    "go west",
     "go north",
     "go north",
     "pinch the wire",
@@ -12759,6 +12913,9 @@
     "pinch the dot",
     "go south",
     "pinch the striker",
+    "go east",
+    "pinch the parcelling",
+    "go west",
     "go north",
     "go north",
     "pinch the bunt",
@@ -12767,6 +12924,9 @@
     "pinch the rod",
     "go south",
     "pinch the tabernacle",
+    "go east",
+    "pinch the worming",
+    "go west",
     "go north",
     "go east",
     "pinch the sprit",
