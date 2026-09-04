@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 3290,
+  "maxScore": 3330,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -7933,7 +7933,7 @@
       "name": "Rust Hounds",
       "desc": "A dry hounds south of the shim. Packed rust coats the hounds.",
       "brief": "Dry hounds, packed rust.",
-      "exits": { "north": { "to": "rust_shim" } },
+      "exits": { "north": { "to": "rust_shim" }, "east": { "to": "rust_masthead" } },
       "actions": [
         {
           "id": "pinch_hounds",
@@ -7946,11 +7946,28 @@
         }
       ]
     },
+    "rust_masthead": {
+      "name": "Rust Masthead",
+      "desc": "A dry masthead east of the hounds. Packed rust coats a masthead.",
+      "brief": "Dry masthead, packed rust.",
+      "exits": { "west": { "to": "rust_hounds" } },
+      "actions": [
+        {
+          "id": "pinch_masthead",
+          "label": "pinch the masthead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard masthead. They capped it on the hounds and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_deadeye": {
       "name": "Rust Deadeye",
       "desc": "A dry deadeye east of the shim. Packed rust coats a deadeye.",
       "brief": "Dry deadeye, packed rust.",
-      "exits": { "west": { "to": "rust_shim" } },
+      "exits": { "west": { "to": "rust_shim" }, "east": { "to": "rust_gantline" } },
       "actions": [
         {
           "id": "pinch_deadeye",
@@ -7959,6 +7976,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard deadeye. They reeved it on the shim and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_gantline": {
+      "name": "Rust Gantline",
+      "desc": "A dry gantline east of the deadeye. Packed rust coats a gantline.",
+      "brief": "Dry gantline, packed rust.",
+      "exits": { "west": { "to": "rust_deadeye" } },
+      "actions": [
+        {
+          "id": "pinch_gantline",
+          "label": "pinch the gantline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gantline. They rove it on the deadeye and packed rust around it."]
           ]
         }
       ]
@@ -7984,7 +8018,7 @@
       "name": "Rust Bobstay",
       "desc": "A dry bobstay north of the grommet. Packed rust coats a bobstay.",
       "brief": "Dry bobstay, packed rust.",
-      "exits": { "south": { "to": "rust_grommet" } },
+      "exits": { "south": { "to": "rust_grommet" }, "east": { "to": "rust_nipper" } },
       "actions": [
         {
           "id": "pinch_bobstay",
@@ -7997,11 +8031,28 @@
         }
       ]
     },
+    "rust_nipper": {
+      "name": "Rust Nipper",
+      "desc": "A dry nipper east of the bobstay. Packed rust coats a nipper.",
+      "brief": "Dry nipper, packed rust.",
+      "exits": { "west": { "to": "rust_bobstay" } },
+      "actions": [
+        {
+          "id": "pinch_nipper",
+          "label": "pinch the nipper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nipper. They seized it on the bobstay and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cringle": {
       "name": "Rust Cringle",
       "desc": "A dry cringle west of the grommet. Packed rust coats a cringle.",
       "brief": "Dry cringle, packed rust.",
-      "exits": { "east": { "to": "rust_grommet" } },
+      "exits": { "east": { "to": "rust_grommet" }, "south": { "to": "rust_hawser" } },
       "actions": [
         {
           "id": "pinch_cringle",
@@ -8010,6 +8061,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cringle. They worked it into the grommet and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_hawser": {
+      "name": "Rust Hawser",
+      "desc": "A dry hawser south of the cringle. Packed rust coats a hawser.",
+      "brief": "Dry hawser, packed rust.",
+      "exits": { "north": { "to": "rust_cringle" } },
+      "actions": [
+        {
+          "id": "pinch_hawser",
+          "label": "pinch the hawser",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hawser. They bent it on the cringle and packed rust around it."]
           ]
         }
       ]
@@ -8069,7 +8137,7 @@
       "name": "Rust Boomkin",
       "desc": "A dry boomkin south of the hood. Packed rust coats a boomkin.",
       "brief": "Dry boomkin, packed rust.",
-      "exits": { "north": { "to": "rust_hood" } },
+      "exits": { "north": { "to": "rust_hood" }, "east": { "to": "rust_kedge" } },
       "actions": [
         {
           "id": "pinch_boomkin",
@@ -8078,6 +8146,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boomkin. They canted it off the hood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kedge": {
+      "name": "Rust Kedge",
+      "desc": "A dry kedge east of the boomkin. Packed rust coats a kedge.",
+      "brief": "Dry kedge, packed rust.",
+      "exits": { "west": { "to": "rust_boomkin" } },
+      "actions": [
+        {
+          "id": "pinch_kedge",
+          "label": "pinch the kedge",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kedge. They laid it on the boomkin and packed rust around it."]
           ]
         }
       ]
@@ -8103,7 +8188,7 @@
       "name": "Rust Dolphin",
       "desc": "A dry dolphin south of the cover. Packed rust coats a dolphin.",
       "brief": "Dry dolphin, packed rust.",
-      "exits": { "north": { "to": "rust_cover" } },
+      "exits": { "north": { "to": "rust_cover" }, "east": { "to": "rust_fluke" } },
       "actions": [
         {
           "id": "pinch_dolphin",
@@ -8112,6 +8197,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dolphin. They chained it under the cover and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fluke": {
+      "name": "Rust Fluke",
+      "desc": "A dry fluke east of the dolphin. Packed rust coats a fluke.",
+      "brief": "Dry fluke, packed rust.",
+      "exits": { "west": { "to": "rust_dolphin" } },
+      "actions": [
+        {
+          "id": "pinch_fluke",
+          "label": "pinch the fluke",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fluke. They set it on the dolphin and packed rust around it."]
           ]
         }
       ]
@@ -8171,7 +8273,7 @@
       "name": "Rust Clamp",
       "desc": "A dry clamp south of the band. Packed rust coats a clamp.",
       "brief": "Dry clamp, packed rust.",
-      "exits": { "north": { "to": "rust_band" } },
+      "exits": { "north": { "to": "rust_band" }, "east": { "to": "rust_swivel" } },
       "actions": [
         {
           "id": "pinch_clamp",
@@ -8180,6 +8282,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clamp. They gripped it under the band and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_swivel": {
+      "name": "Rust Swivel",
+      "desc": "A dry swivel east of the clamp. Packed rust coats a swivel.",
+      "brief": "Dry swivel, packed rust.",
+      "exits": { "west": { "to": "rust_clamp" } },
+      "actions": [
+        {
+          "id": "pinch_swivel",
+          "label": "pinch the swivel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard swivel. They pinned it on the clamp and packed rust around it."]
           ]
         }
       ]
@@ -8256,7 +8375,7 @@
       "name": "Rust Rudder",
       "desc": "A dry rudder south of the brow. Packed rust coats a rudder.",
       "brief": "Dry rudder, packed rust.",
-      "exits": { "north": { "to": "rust_brow" } },
+      "exits": { "north": { "to": "rust_brow" }, "east": { "to": "rust_ringbolt" } },
       "actions": [
         {
           "id": "pinch_rudder",
@@ -8265,6 +8384,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rudder. They hung it under the brow and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ringbolt": {
+      "name": "Rust Ringbolt",
+      "desc": "A dry ringbolt east of the rudder. Packed rust coats a ringbolt.",
+      "brief": "Dry ringbolt, packed rust.",
+      "exits": { "west": { "to": "rust_rudder" } },
+      "actions": [
+        {
+          "id": "pinch_ringbolt",
+          "label": "pinch the ringbolt",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ringbolt. They drove it on the rudder and packed rust around it."]
           ]
         }
       ]
@@ -12478,17 +12614,29 @@
     "pinch the shim",
     "go south",
     "pinch the hounds",
+    "go east",
+    "pinch the masthead",
+    "go west",
     "go north",
     "go east",
     "pinch the deadeye",
+    "go east",
+    "pinch the gantline",
+    "go west",
     "go west",
     "go north",
     "pinch the grommet",
     "go north",
     "pinch the bobstay",
+    "go east",
+    "pinch the nipper",
+    "go west",
     "go south",
     "go west",
     "pinch the cringle",
+    "go south",
+    "pinch the hawser",
+    "go north",
     "go east",
     "go east",
     "pinch the thole",
@@ -12508,6 +12656,9 @@
     "go east",
     "go south",
     "pinch the boomkin",
+    "go east",
+    "pinch the kedge",
+    "go west",
     "go north",
     "go north",
     "pinch the coil",
@@ -12516,6 +12667,9 @@
     "pinch the streak",
     "go south",
     "pinch the dolphin",
+    "go east",
+    "pinch the fluke",
+    "go west",
     "go north",
     "go north",
     "pinch the luff",
@@ -12527,6 +12681,9 @@
     "go west",
     "go south",
     "pinch the clamp",
+    "go east",
+    "pinch the swivel",
+    "go west",
     "go north",
     "go north",
     "pinch the spoke",
@@ -12540,6 +12697,9 @@
     "pinch the brow",
     "go south",
     "pinch the rudder",
+    "go east",
+    "pinch the ringbolt",
+    "go west",
     "go north",
     "go east",
     "pinch the thwart",
