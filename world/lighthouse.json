@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 3530,
+  "maxScore": 3570,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -11096,7 +11096,7 @@
       "name": "Rust Clew",
       "desc": "A dry clew south of the fang. Packed rust coats a clew.",
       "brief": "Dry clew, packed rust.",
-      "exits": { "north": { "to": "rust_fang" } },
+      "exits": { "north": { "to": "rust_fang" }, "east": { "to": "rust_nock" } },
       "actions": [
         {
           "id": "pinch_clew",
@@ -11109,11 +11109,28 @@
         }
       ]
     },
+    "rust_nock": {
+      "name": "Rust Nock",
+      "desc": "A dry nock east of the clew. Packed rust coats a nock.",
+      "brief": "Dry nock, packed rust.",
+      "exits": { "west": { "to": "rust_clew" } },
+      "actions": [
+        {
+          "id": "pinch_nock",
+          "label": "pinch the nock",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nock. They cut it on the clew and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_boom": {
       "name": "Rust Boom",
       "desc": "A dry boom east of the fang. Packed rust coats a boom.",
       "brief": "Dry boom, packed rust.",
-      "exits": { "west": { "to": "rust_fang" } },
+      "exits": { "west": { "to": "rust_fang" }, "east": { "to": "rust_serving" } },
       "actions": [
         {
           "id": "pinch_boom",
@@ -11122,6 +11139,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boom. They swung it off the fang and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_serving": {
+      "name": "Rust Serving",
+      "desc": "A dry serving east of the boom. Packed rust coats serving.",
+      "brief": "Dry serving, packed rust.",
+      "exits": { "west": { "to": "rust_boom" } },
+      "actions": [
+        {
+          "id": "pinch_serving",
+          "label": "pinch the serving",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard serving. They wrapped it on the boom and packed rust around it."]
           ]
         }
       ]
@@ -11147,7 +11181,7 @@
       "name": "Rust Becket",
       "desc": "A dry becket north of the guard. Packed rust coats a becket.",
       "brief": "Dry becket, packed rust.",
-      "exits": { "south": { "to": "rust_guard" } },
+      "exits": { "south": { "to": "rust_guard" }, "east": { "to": "rust_rounding" } },
       "actions": [
         {
           "id": "pinch_becket",
@@ -11156,6 +11190,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard becket. They looped it on the guard and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_rounding": {
+      "name": "Rust Rounding",
+      "desc": "A dry rounding east of the becket. Packed rust coats rounding.",
+      "brief": "Dry rounding, packed rust.",
+      "exits": { "west": { "to": "rust_becket" } },
+      "actions": [
+        {
+          "id": "pinch_rounding",
+          "label": "pinch the rounding",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rounding. They served it on the becket and packed rust around it."]
           ]
         }
       ]
@@ -11181,7 +11232,7 @@
       "name": "Rust Bit",
       "desc": "A dry bit east of the guard. Packed rust coats a bit.",
       "brief": "Dry bit, packed rust.",
-      "exits": { "west": { "to": "rust_guard" } },
+      "exits": { "west": { "to": "rust_guard" }, "east": { "to": "rust_keckling" } },
       "actions": [
         {
           "id": "pinch_bit",
@@ -11190,6 +11241,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bit. They set it on the guard and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_keckling": {
+      "name": "Rust Keckling",
+      "desc": "A dry keckling east of the bit. Packed rust coats keckling.",
+      "brief": "Dry keckling, packed rust.",
+      "exits": { "west": { "to": "rust_bit" } },
+      "actions": [
+        {
+          "id": "pinch_keckling",
+          "label": "pinch the keckling",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard keckling. They wormed it on the bit and packed rust around it."]
           ]
         }
       ]
@@ -11215,7 +11283,7 @@
       "name": "Rust Pinrail",
       "desc": "A dry pinrail south of the spur. Packed rust coats a pinrail.",
       "brief": "Dry pinrail, packed rust.",
-      "exits": { "north": { "to": "rust_spur" } },
+      "exits": { "north": { "to": "rust_spur" }, "east": { "to": "rust_pointing" } },
       "actions": [
         {
           "id": "pinch_pinrail",
@@ -11228,11 +11296,28 @@
         }
       ]
     },
+    "rust_pointing": {
+      "name": "Rust Pointing",
+      "desc": "A dry pointing east of the pinrail. Packed rust coats pointing.",
+      "brief": "Dry pointing, packed rust.",
+      "exits": { "west": { "to": "rust_pinrail" } },
+      "actions": [
+        {
+          "id": "pinch_pointing",
+          "label": "pinch the pointing",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pointing. They tapered it on the pinrail and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_wale": {
       "name": "Rust Wale",
       "desc": "A dry wale north of the spur. Packed rust coats a wale.",
       "brief": "Dry wale, packed rust.",
-      "exits": { "south": { "to": "rust_spur" } },
+      "exits": { "south": { "to": "rust_spur" }, "east": { "to": "rust_whipping" } },
       "actions": [
         {
           "id": "pinch_wale",
@@ -11241,6 +11326,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wale. They belted it on the spur and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_whipping": {
+      "name": "Rust Whipping",
+      "desc": "A dry whipping east of the wale. Packed rust coats whipping.",
+      "brief": "Dry whipping, packed rust.",
+      "exits": { "west": { "to": "rust_wale" } },
+      "actions": [
+        {
+          "id": "pinch_whipping",
+          "label": "pinch the whipping",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard whipping. They bound it on the wale and packed rust around it."]
           ]
         }
       ]
@@ -11317,7 +11419,7 @@
       "name": "Rust Jackstay",
       "desc": "A dry jackstay north of the tip. Packed rust coats a jackstay.",
       "brief": "Dry jackstay, packed rust.",
-      "exits": { "south": { "to": "rust_tip" } },
+      "exits": { "south": { "to": "rust_tip" }, "east": { "to": "rust_mouse" } },
       "actions": [
         {
           "id": "pinch_jackstay",
@@ -11326,6 +11428,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jackstay. They ran it on the tip and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_mouse": {
+      "name": "Rust Mouse",
+      "desc": "A dry mouse east of the jackstay. Packed rust coats a mouse.",
+      "brief": "Dry mouse, packed rust.",
+      "exits": { "west": { "to": "rust_jackstay" } },
+      "actions": [
+        {
+          "id": "pinch_mouse",
+          "label": "pinch the mouse",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mouse. They seized it on the jackstay and packed rust around it."]
           ]
         }
       ]
@@ -11368,7 +11487,7 @@
       "name": "Rust Floor",
       "desc": "A dry floor south of the crown. Packed rust coats a floor.",
       "brief": "Dry floor, packed rust.",
-      "exits": { "north": { "to": "rust_crown" } },
+      "exits": { "north": { "to": "rust_crown" }, "east": { "to": "rust_paunch" } },
       "actions": [
         {
           "id": "pinch_floor",
@@ -11377,6 +11496,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard floor. They decked it on the crown and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_paunch": {
+      "name": "Rust Paunch",
+      "desc": "A dry paunch east of the floor. Packed rust coats a paunch.",
+      "brief": "Dry paunch, packed rust.",
+      "exits": { "west": { "to": "rust_floor" } },
+      "actions": [
+        {
+          "id": "pinch_paunch",
+          "label": "pinch the paunch",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard paunch. They padded it on the floor and packed rust around it."]
           ]
         }
       ]
@@ -13858,20 +13994,32 @@
     "pinch the fang",
     "go south",
     "pinch the clew",
+    "go east",
+    "pinch the nock",
+    "go west",
     "go north",
     "go east",
     "pinch the boom",
+    "go east",
+    "pinch the serving",
+    "go west",
     "go west",
     "go north",
     "pinch the guard",
     "go north",
     "pinch the becket",
+    "go east",
+    "pinch the rounding",
+    "go west",
     "go south",
     "go west",
     "pinch the cathead",
     "go east",
     "go east",
     "pinch the bit",
+    "go east",
+    "pinch the keckling",
+    "go west",
     "go west",
     "go south",
     "go west",
@@ -13883,9 +14031,15 @@
     "pinch the crest",
     "go south",
     "pinch the pinrail",
+    "go east",
+    "pinch the pointing",
+    "go west",
     "go north",
     "go north",
     "pinch the wale",
+    "go east",
+    "pinch the whipping",
+    "go west",
     "go south",
     "go east",
     "pinch the stud",
@@ -13900,6 +14054,9 @@
     "go east",
     "go north",
     "pinch the jackstay",
+    "go east",
+    "pinch the mouse",
+    "go west",
     "go south",
     "go east",
     "pinch the shaft",
@@ -13909,6 +14066,9 @@
     "pinch the crown",
     "go south",
     "pinch the floor",
+    "go east",
+    "pinch the paunch",
+    "go west",
     "go north",
     "go north",
     "pinch the helm",
