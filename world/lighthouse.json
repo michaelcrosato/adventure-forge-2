@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 3650,
+  "maxScore": 3690,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -7423,7 +7423,7 @@
       "name": "Rust Cleat",
       "desc": "A dry cleat east of the bush. Packed rust coats a cleat.",
       "brief": "Dry cleat, packed rust.",
-      "exits": { "west": { "to": "rust_bush" } },
+      "exits": { "west": { "to": "rust_bush" }, "east": { "to": "rust_fid" } },
       "actions": [
         {
           "id": "pinch_cleat",
@@ -7432,6 +7432,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cleat. They bolted it to the bush and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fid": {
+      "name": "Rust Fid",
+      "desc": "A dry fid east of the cleat. Packed rust coats a fid.",
+      "brief": "Dry fid, packed rust.",
+      "exits": { "west": { "to": "rust_cleat" } },
+      "actions": [
+        {
+          "id": "pinch_fid",
+          "label": "pinch the fid",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fid. They drove it on the cleat and packed rust around it."]
           ]
         }
       ]
@@ -7525,7 +7542,7 @@
       "name": "Rust Covering",
       "desc": "A dry covering south of the step. Packed rust coats a covering.",
       "brief": "Dry covering, packed rust.",
-      "exits": { "north": { "to": "rust_step" } },
+      "exits": { "north": { "to": "rust_step" }, "east": { "to": "rust_coiling" } },
       "actions": [
         {
           "id": "pinch_covering",
@@ -7534,6 +7551,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard covering. They payed it on the step and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_coiling": {
+      "name": "Rust Coiling",
+      "desc": "A dry coiling east of the covering. Packed rust coats coiling.",
+      "brief": "Dry coiling, packed rust.",
+      "exits": { "west": { "to": "rust_covering" } },
+      "actions": [
+        {
+          "id": "pinch_coiling",
+          "label": "pinch the coiling",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard coiling. They laid it on the covering and packed rust around it."]
           ]
         }
       ]
@@ -7559,7 +7593,7 @@
       "name": "Rust Lizard",
       "desc": "A dry lizard south of the bowsprit. Packed rust coats a lizard.",
       "brief": "Dry lizard, packed rust.",
-      "exits": { "north": { "to": "rust_bowsprit" } },
+      "exits": { "north": { "to": "rust_bowsprit" }, "east": { "to": "rust_belaying" } },
       "actions": [
         {
           "id": "pinch_lizard",
@@ -7568,6 +7602,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lizard. They seized it on the bowsprit and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_belaying": {
+      "name": "Rust Belaying",
+      "desc": "A dry belaying east of the lizard. Packed rust coats belaying.",
+      "brief": "Dry belaying, packed rust.",
+      "exits": { "west": { "to": "rust_lizard" } },
+      "actions": [
+        {
+          "id": "pinch_belaying",
+          "label": "pinch the belaying",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard belaying. They made it on the lizard and packed rust around it."]
           ]
         }
       ]
@@ -7644,7 +7695,7 @@
       "name": "Rust Leech",
       "desc": "A dry leech north of the plank. Packed rust coats a leech.",
       "brief": "Dry leech, packed rust.",
-      "exits": { "south": { "to": "rust_plank" } },
+      "exits": { "south": { "to": "rust_plank" }, "east": { "to": "rust_larkhead" } },
       "actions": [
         {
           "id": "pinch_leech",
@@ -7653,6 +7704,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard leech. They hemmed it on the plank and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_larkhead": {
+      "name": "Rust Larkhead",
+      "desc": "A dry larkhead east of the leech. Packed rust coats a larkhead.",
+      "brief": "Dry larkhead, packed rust.",
+      "exits": { "west": { "to": "rust_leech" } },
+      "actions": [
+        {
+          "id": "pinch_larkhead",
+          "label": "pinch the larkhead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard larkhead. They hitched it on the leech and packed rust around it."]
           ]
         }
       ]
@@ -7763,7 +7831,7 @@
       "name": "Rust Hog",
       "desc": "A dry hog north of the strap. Packed rust coats a hog.",
       "brief": "Dry hog, packed rust.",
-      "exits": { "south": { "to": "rust_strap" } },
+      "exits": { "south": { "to": "rust_strap" }, "east": { "to": "rust_cowhitch" } },
       "actions": [
         {
           "id": "pinch_hog",
@@ -7772,6 +7840,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hog. They hogged it on the strap and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cowhitch": {
+      "name": "Rust Cowhitch",
+      "desc": "A dry cowhitch east of the hog. Packed rust coats a cowhitch.",
+      "brief": "Dry cowhitch, packed rust.",
+      "exits": { "west": { "to": "rust_hog" } },
+      "actions": [
+        {
+          "id": "pinch_cowhitch",
+          "label": "pinch the cowhitch",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cowhitch. They tied it on the hog and packed rust around it."]
           ]
         }
       ]
@@ -7831,7 +7916,7 @@
       "name": "Rust Tiller",
       "desc": "A dry tiller east of the chin. Packed rust coats a tiller.",
       "brief": "Dry tiller, packed rust.",
-      "exits": { "west": { "to": "rust_chin" } },
+      "exits": { "west": { "to": "rust_chin" }, "east": { "to": "rust_halfhitch" } },
       "actions": [
         {
           "id": "pinch_tiller",
@@ -7840,6 +7925,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tiller. They lashed it to the chin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_halfhitch": {
+      "name": "Rust Halfhitch",
+      "desc": "A dry halfhitch east of the tiller. Packed rust coats a halfhitch.",
+      "brief": "Dry halfhitch, packed rust.",
+      "exits": { "west": { "to": "rust_tiller" } },
+      "actions": [
+        {
+          "id": "pinch_halfhitch",
+          "label": "pinch the halfhitch",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard halfhitch. They tied it on the tiller and packed rust around it."]
           ]
         }
       ]
@@ -8086,7 +8188,7 @@
       "name": "Rust Thole",
       "desc": "A dry thole east of the grommet. Packed rust coats a thole.",
       "brief": "Dry thole, packed rust.",
-      "exits": { "west": { "to": "rust_grommet" } },
+      "exits": { "west": { "to": "rust_grommet" }, "east": { "to": "rust_carrick" } },
       "actions": [
         {
           "id": "pinch_thole",
@@ -8095,6 +8197,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard thole. They set it on the grommet and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_carrick": {
+      "name": "Rust Carrick",
+      "desc": "A dry carrick east of the thole. Packed rust coats a carrick.",
+      "brief": "Dry carrick, packed rust.",
+      "exits": { "west": { "to": "rust_thole" } },
+      "actions": [
+        {
+          "id": "pinch_carrick",
+          "label": "pinch the carrick",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard carrick. They bent it on the thole and packed rust around it."]
           ]
         }
       ]
@@ -8222,7 +8341,7 @@
       "name": "Rust Luff",
       "desc": "A dry luff north of the cover. Packed rust coats a luff.",
       "brief": "Dry luff, packed rust.",
-      "exits": { "south": { "to": "rust_cover" } },
+      "exits": { "south": { "to": "rust_cover" }, "east": { "to": "rust_constrictor" } },
       "actions": [
         {
           "id": "pinch_luff",
@@ -8231,6 +8350,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard luff. They seamed it on the cover and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_constrictor": {
+      "name": "Rust Constrictor",
+      "desc": "A dry constrictor east of the luff. Packed rust coats a constrictor.",
+      "brief": "Dry constrictor, packed rust.",
+      "exits": { "west": { "to": "rust_luff" } },
+      "actions": [
+        {
+          "id": "pinch_constrictor",
+          "label": "pinch the constrictor",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard constrictor. They bound it on the luff and packed rust around it."]
           ]
         }
       ]
@@ -13629,6 +13765,9 @@
     "go east",
     "go east",
     "pinch the cleat",
+    "go east",
+    "pinch the fid",
+    "go west",
     "go west",
     "go south",
     "go west",
@@ -13642,11 +13781,17 @@
     "pinch the bead",
     "go south",
     "pinch the covering",
+    "go east",
+    "pinch the coiling",
+    "go west",
     "go north",
     "go west",
     "pinch the bowsprit",
     "go south",
     "pinch the lizard",
+    "go east",
+    "pinch the belaying",
+    "go west",
     "go north",
     "go east",
     "go east",
@@ -13659,6 +13804,9 @@
     "go north",
     "go north",
     "pinch the leech",
+    "go east",
+    "pinch the larkhead",
+    "go west",
     "go south",
     "go east",
     "pinch the claw",
@@ -13678,6 +13826,9 @@
     "go east",
     "go north",
     "pinch the hog",
+    "go east",
+    "pinch the cowhitch",
+    "go west",
     "go south",
     "go east",
     "pinch the chin",
@@ -13689,6 +13840,9 @@
     "go north",
     "go east",
     "pinch the tiller",
+    "go east",
+    "pinch the halfhitch",
+    "go west",
     "go west",
     "go north",
     "pinch the coat",
@@ -13731,6 +13885,9 @@
     "go east",
     "go east",
     "pinch the thole",
+    "go east",
+    "pinch the carrick",
+    "go west",
     "go west",
     "go south",
     "go west",
@@ -13764,6 +13921,9 @@
     "go north",
     "go north",
     "pinch the luff",
+    "go east",
+    "pinch the constrictor",
+    "go west",
     "go south",
     "go east",
     "pinch the band",
