@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 2450,
+  "maxScore": 2490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6641,7 +6641,7 @@
       "name": "Rust Mill",
       "desc": "A dry mill east of the loop. Packed rust is mill scale.",
       "brief": "Dry mill, packed scale.",
-      "exits": { "west": { "to": "rust_loop" }, "north": { "to": "rust_pelt" }, "east": { "to": "rust_cuff" } },
+      "exits": { "west": { "to": "rust_loop" }, "north": { "to": "rust_pelt" }, "east": { "to": "rust_cuff" }, "south": { "to": "rust_lath" } },
       "actions": [
         {
           "id": "pinch_mill",
@@ -6654,11 +6654,28 @@
         }
       ]
     },
+    "rust_lath": {
+      "name": "Rust Lath",
+      "desc": "A dry lath south of the mill. Packed rust coats a lath.",
+      "brief": "Dry lath, packed rust.",
+      "exits": { "north": { "to": "rust_mill" } },
+      "actions": [
+        {
+          "id": "pinch_lath",
+          "label": "pinch the lath",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Thin lath. They nailed it under the mill and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cuff": {
       "name": "Rust Cuff",
       "desc": "A dry cuff east of the mill. Packed rust forms a cuff.",
       "brief": "Dry cuff, packed rust.",
-      "exits": { "west": { "to": "rust_mill" } },
+      "exits": { "west": { "to": "rust_mill" }, "north": { "to": "rust_nut" } },
       "actions": [
         {
           "id": "pinch_cuff",
@@ -6667,6 +6684,23 @@
           "fx": [
             ["score", 5],
             ["say", "Bent cuff. They wrapped the mill and packed rust over it."]
+          ]
+        }
+      ]
+    },
+    "rust_nut": {
+      "name": "Rust Nut",
+      "desc": "A dry nut north of the cuff. Packed rust coats a nut.",
+      "brief": "Dry nut, packed rust.",
+      "exits": { "south": { "to": "rust_cuff" } },
+      "actions": [
+        {
+          "id": "pinch_nut",
+          "label": "pinch the nut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nut. They threaded it on the cuff and packed rust around it."]
           ]
         }
       ]
@@ -6692,7 +6726,7 @@
       "name": "Rust Wedge",
       "desc": "A dry wedge east of the pelt. Packed rust coats a wedge.",
       "brief": "Dry wedge, packed rust.",
-      "exits": { "west": { "to": "rust_pelt" } },
+      "exits": { "west": { "to": "rust_pelt" }, "north": { "to": "rust_bush" } },
       "actions": [
         {
           "id": "pinch_wedge",
@@ -6701,6 +6735,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wedge. They drove it under the pelt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bush": {
+      "name": "Rust Bush",
+      "desc": "A dry bush north of the wedge. Packed rust coats a bush.",
+      "brief": "Dry bush, packed rust.",
+      "exits": { "south": { "to": "rust_wedge" } },
+      "actions": [
+        {
+          "id": "pinch_bush",
+          "label": "pinch the bush",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bush. They pressed it on the wedge and packed rust around it."]
           ]
         }
       ]
@@ -6845,7 +6896,7 @@
       "name": "Rust Shim",
       "desc": "A dry shim east of the coat. Packed rust coats a shim.",
       "brief": "Dry shim, packed rust.",
-      "exits": { "west": { "to": "rust_coat" } },
+      "exits": { "west": { "to": "rust_coat" }, "north": { "to": "rust_grommet" } },
       "actions": [
         {
           "id": "pinch_shim",
@@ -6854,6 +6905,23 @@
           "fx": [
             ["score", 5],
             ["say", "Thin shim. They packed it under the coat and left it."]
+          ]
+        }
+      ]
+    },
+    "rust_grommet": {
+      "name": "Rust Grommet",
+      "desc": "A dry grommet north of the shim. Packed rust coats a grommet.",
+      "brief": "Dry grommet, packed rust.",
+      "exits": { "south": { "to": "rust_shim" } },
+      "actions": [
+        {
+          "id": "pinch_grommet",
+          "label": "pinch the grommet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard grommet. They set it on the shim and packed rust around it."]
           ]
         }
       ]
@@ -6964,7 +7032,7 @@
       "name": "Rust Sleeve",
       "desc": "A dry sleeve east of the socket. Packed rust forms a sleeve.",
       "brief": "Dry sleeve, packed rust.",
-      "exits": { "west": { "to": "rust_socket" } },
+      "exits": { "west": { "to": "rust_socket" }, "north": { "to": "rust_spar" } },
       "actions": [
         {
           "id": "pinch_sleeve",
@@ -6973,6 +7041,23 @@
           "fx": [
             ["score", 5],
             ["say", "Bent sleeve. They slid it on the socket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_spar": {
+      "name": "Rust Spar",
+      "desc": "A dry spar north of the sleeve. Packed rust coats a spar.",
+      "brief": "Dry spar, packed rust.",
+      "exits": { "south": { "to": "rust_sleeve" } },
+      "actions": [
+        {
+          "id": "pinch_spar",
+          "label": "pinch the spar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard spar. They braced the sleeve and packed rust around it."]
           ]
         }
       ]
@@ -7236,7 +7321,7 @@
       "name": "Rust Pommel",
       "desc": "A dry pommel north of the dross. Packed rust coats a pommel.",
       "brief": "Dry pommel, packed rust.",
-      "exits": { "south": { "to": "rust_dross" } },
+      "exits": { "south": { "to": "rust_dross" }, "north": { "to": "rust_keel" } },
       "actions": [
         {
           "id": "pinch_pommel",
@@ -7245,6 +7330,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pommel. They set it in the dross and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_keel": {
+      "name": "Rust Keel",
+      "desc": "A dry keel north of the pommel. Packed rust coats a keel.",
+      "brief": "Dry keel, packed rust.",
+      "exits": { "south": { "to": "rust_pommel" } },
+      "actions": [
+        {
+          "id": "pinch_keel",
+          "label": "pinch the keel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard keel. They laid it by the pommel and packed rust around it."]
           ]
         }
       ]
@@ -7338,7 +7440,7 @@
       "name": "Rust Stack",
       "desc": "A dry stack north of the belt. Packed rust clogs a stack.",
       "brief": "Dry stack, packed rust.",
-      "exits": { "south": { "to": "rust_belt" } },
+      "exits": { "south": { "to": "rust_belt" }, "north": { "to": "rust_beam" } },
       "actions": [
         {
           "id": "pinch_stack",
@@ -7347,6 +7449,23 @@
           "fx": [
             ["score", 5],
             ["say", "Clogged stack. Spray filled it at the belt and they packed it here."]
+          ]
+        }
+      ]
+    },
+    "rust_beam": {
+      "name": "Rust Beam",
+      "desc": "A dry beam north of the stack. Packed rust coats a beam.",
+      "brief": "Dry beam, packed rust.",
+      "exits": { "south": { "to": "rust_stack" } },
+      "actions": [
+        {
+          "id": "pinch_beam",
+          "label": "pinch the beam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard beam. They set it over the stack and packed rust around it."]
           ]
         }
       ]
@@ -7474,7 +7593,7 @@
       "name": "Rust Flue",
       "desc": "A dry flue north of the hide. Packed rust clogs a flue.",
       "brief": "Dry flue, packed rust.",
-      "exits": { "south": { "to": "rust_hide" } },
+      "exits": { "south": { "to": "rust_hide" }, "north": { "to": "rust_joist" } },
       "actions": [
         {
           "id": "pinch_flue",
@@ -7483,6 +7602,23 @@
           "fx": [
             ["score", 5],
             ["say", "Clogged flue. Spray blocked it at the hide and they packed it here."]
+          ]
+        }
+      ]
+    },
+    "rust_joist": {
+      "name": "Rust Joist",
+      "desc": "A dry joist north of the flue. Packed rust coats a joist.",
+      "brief": "Dry joist, packed rust.",
+      "exits": { "south": { "to": "rust_flue" } },
+      "actions": [
+        {
+          "id": "pinch_joist",
+          "label": "pinch the joist",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard joist. They laid it over the flue and packed rust around it."]
           ]
         }
       ]
@@ -9403,13 +9539,22 @@
     "pinch the loop",
     "go east",
     "pinch the mill",
+    "go south",
+    "pinch the lath",
+    "go north",
     "go east",
     "pinch the cuff",
+    "go north",
+    "pinch the nut",
+    "go south",
     "go west",
     "go north",
     "pinch the pelt",
     "go east",
     "pinch the wedge",
+    "go north",
+    "pinch the bush",
+    "go south",
     "go west",
     "go south",
     "go west",
@@ -9431,6 +9576,9 @@
     "pinch the coat",
     "go east",
     "pinch the shim",
+    "go north",
+    "pinch the grommet",
+    "go south",
     "go west",
     "go south",
     "go west",
@@ -9455,6 +9603,9 @@
     "pinch the socket",
     "go east",
     "pinch the sleeve",
+    "go north",
+    "pinch the spar",
+    "go south",
     "go west",
     "go south",
     "go west",
@@ -9505,6 +9656,9 @@
     "pinch the dross",
     "go north",
     "pinch the pommel",
+    "go north",
+    "pinch the keel",
+    "go south",
     "go south",
     "go west",
     "go west",
@@ -9521,6 +9675,9 @@
     "pinch the belt",
     "go north",
     "pinch the stack",
+    "go north",
+    "pinch the beam",
+    "go south",
     "go south",
     "go west",
     "go south",
@@ -9553,6 +9710,9 @@
     "pinch the hide",
     "go north",
     "pinch the flue",
+    "go north",
+    "pinch the joist",
+    "go south",
     "go south",
     "go west",
     "go south",
