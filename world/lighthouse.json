@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 3370,
+  "maxScore": 3410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -9123,7 +9123,7 @@
       "name": "Rust Scuttle",
       "desc": "A dry scuttle south of the pan. Packed rust coats a scuttle.",
       "brief": "Dry scuttle, packed rust.",
-      "exits": { "north": { "to": "rust_pan" } },
+      "exits": { "north": { "to": "rust_pan" }, "east": { "to": "rust_spunyarn" } },
       "actions": [
         {
           "id": "pinch_scuttle",
@@ -9132,6 +9132,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard scuttle. They cut it on the pan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_spunyarn": {
+      "name": "Rust Spunyarn",
+      "desc": "A dry spunyarn east of the scuttle. Packed rust coats spunyarn.",
+      "brief": "Dry spunyarn, packed rust.",
+      "exits": { "west": { "to": "rust_scuttle" } },
+      "actions": [
+        {
+          "id": "pinch_spunyarn",
+          "label": "pinch the spunyarn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard spunyarn. They laid it on the scuttle and packed rust around it."]
           ]
         }
       ]
@@ -9174,7 +9191,7 @@
       "name": "Rust Triatic",
       "desc": "A dry triatic south of the rib. Packed rust coats a triatic.",
       "brief": "Dry triatic, packed rust.",
-      "exits": { "north": { "to": "rust_rib" } },
+      "exits": { "north": { "to": "rust_rib" }, "east": { "to": "rust_houseline" } },
       "actions": [
         {
           "id": "pinch_triatic",
@@ -9187,11 +9204,28 @@
         }
       ]
     },
+    "rust_houseline": {
+      "name": "Rust Houseline",
+      "desc": "A dry houseline east of the triatic. Packed rust coats a houseline.",
+      "brief": "Dry houseline, packed rust.",
+      "exits": { "west": { "to": "rust_triatic" } },
+      "actions": [
+        {
+          "id": "pinch_houseline",
+          "label": "pinch the houseline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard houseline. They rove it on the triatic and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_keelson": {
       "name": "Rust Keelson",
       "desc": "A dry keelson east of the rib. Packed rust coats a keelson.",
       "brief": "Dry keelson, packed rust.",
-      "exits": { "west": { "to": "rust_rib" } },
+      "exits": { "west": { "to": "rust_rib" }, "east": { "to": "rust_boltrope" } },
       "actions": [
         {
           "id": "pinch_keelson",
@@ -9204,11 +9238,28 @@
         }
       ]
     },
+    "rust_boltrope": {
+      "name": "Rust Boltrope",
+      "desc": "A dry boltrope east of the keelson. Packed rust coats a boltrope.",
+      "brief": "Dry boltrope, packed rust.",
+      "exits": { "west": { "to": "rust_keelson" } },
+      "actions": [
+        {
+          "id": "pinch_boltrope",
+          "label": "pinch the boltrope",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard boltrope. They sewed it on the keelson and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_hull": {
       "name": "Rust Hull",
       "desc": "A dry hull north of the rib. Packed rust coats a hull plate.",
       "brief": "Dry hull, packed rust.",
-      "exits": { "south": { "to": "rust_rib" } },
+      "exits": { "south": { "to": "rust_rib" }, "east": { "to": "rust_tabling" } },
       "actions": [
         {
           "id": "pinch_hull",
@@ -9217,6 +9268,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hull. They plated the rib and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tabling": {
+      "name": "Rust Tabling",
+      "desc": "A dry tabling east of the hull. Packed rust coats tabling.",
+      "brief": "Dry tabling, packed rust.",
+      "exits": { "west": { "to": "rust_hull" } },
+      "actions": [
+        {
+          "id": "pinch_tabling",
+          "label": "pinch the tabling",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tabling. They hemmed it on the hull and packed rust around it."]
           ]
         }
       ]
@@ -9259,7 +9327,7 @@
       "name": "Rust Jumper",
       "desc": "A dry jumper north of the fin. Packed rust coats a jumper.",
       "brief": "Dry jumper, packed rust.",
-      "exits": { "south": { "to": "rust_fin" } },
+      "exits": { "south": { "to": "rust_fin" }, "east": { "to": "rust_earing" } },
       "actions": [
         {
           "id": "pinch_jumper",
@@ -9268,6 +9336,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jumper. They nipped it off the fin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_earing": {
+      "name": "Rust Earing",
+      "desc": "A dry earing east of the jumper. Packed rust coats an earing.",
+      "brief": "Dry earing, packed rust.",
+      "exits": { "west": { "to": "rust_jumper" } },
+      "actions": [
+        {
+          "id": "pinch_earing",
+          "label": "pinch the earing",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard earing. They seized it on the jumper and packed rust around it."]
           ]
         }
       ]
@@ -9293,7 +9378,7 @@
       "name": "Rust Bonnet",
       "desc": "A dry bonnet south of the web. Packed rust coats a bonnet.",
       "brief": "Dry bonnet, packed rust.",
-      "exits": { "north": { "to": "rust_web" } },
+      "exits": { "north": { "to": "rust_web" }, "east": { "to": "rust_bowline" } },
       "actions": [
         {
           "id": "pinch_bonnet",
@@ -9306,11 +9391,28 @@
         }
       ]
     },
+    "rust_bowline": {
+      "name": "Rust Bowline",
+      "desc": "A dry bowline east of the bonnet. Packed rust coats a bowline.",
+      "brief": "Dry bowline, packed rust.",
+      "exits": { "west": { "to": "rust_bonnet" } },
+      "actions": [
+        {
+          "id": "pinch_bowline",
+          "label": "pinch the bowline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bowline. They bent it on the bonnet and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_yard": {
       "name": "Rust Yard",
       "desc": "A dry yard north of the web. Packed rust coats a yard.",
       "brief": "Dry yard, packed rust.",
-      "exits": { "south": { "to": "rust_web" } },
+      "exits": { "south": { "to": "rust_web" }, "east": { "to": "rust_bridle" } },
       "actions": [
         {
           "id": "pinch_yard",
@@ -9319,6 +9421,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yard. They slung it on the web and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bridle": {
+      "name": "Rust Bridle",
+      "desc": "A dry bridle east of the yard. Packed rust coats a bridle.",
+      "brief": "Dry bridle, packed rust.",
+      "exits": { "west": { "to": "rust_yard" } },
+      "actions": [
+        {
+          "id": "pinch_bridle",
+          "label": "pinch the bridle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bridle. They spliced it on the yard and packed rust around it."]
           ]
         }
       ]
@@ -9344,7 +9463,7 @@
       "name": "Rust Trysail",
       "desc": "A dry trysail south of the dross. Packed rust coats a trysail.",
       "brief": "Dry trysail, packed rust.",
-      "exits": { "north": { "to": "rust_dross" } },
+      "exits": { "north": { "to": "rust_dross" }, "east": { "to": "rust_lazyjack" } },
       "actions": [
         {
           "id": "pinch_trysail",
@@ -9353,6 +9472,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard trysail. They stood it on the dross and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_lazyjack": {
+      "name": "Rust Lazyjack",
+      "desc": "A dry lazyjack east of the trysail. Packed rust coats a lazyjack.",
+      "brief": "Dry lazyjack, packed rust.",
+      "exits": { "west": { "to": "rust_trysail" } },
+      "actions": [
+        {
+          "id": "pinch_lazyjack",
+          "label": "pinch the lazyjack",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lazyjack. They rove it on the trysail and packed rust around it."]
           ]
         }
       ]
@@ -12968,6 +13104,9 @@
     "pinch the crumb",
     "go south",
     "pinch the scuttle",
+    "go east",
+    "pinch the spunyarn",
+    "go west",
     "go north",
     "go west",
     "pinch the whisker",
@@ -12976,12 +13115,21 @@
     "pinch the spec",
     "go south",
     "pinch the triatic",
+    "go east",
+    "pinch the houseline",
+    "go west",
     "go north",
     "go east",
     "pinch the keelson",
+    "go east",
+    "pinch the boltrope",
+    "go west",
     "go west",
     "go north",
     "pinch the hull",
+    "go east",
+    "pinch the tabling",
+    "go west",
     "go south",
     "go west",
     "go north",
@@ -12992,19 +13140,31 @@
     "go east",
     "go north",
     "pinch the jumper",
+    "go east",
+    "pinch the earing",
+    "go west",
     "go south",
     "go east",
     "pinch the foil",
     "go south",
     "pinch the bonnet",
+    "go east",
+    "pinch the bowline",
+    "go west",
     "go north",
     "go north",
     "pinch the yard",
+    "go east",
+    "pinch the bridle",
+    "go west",
     "go south",
     "go east",
     "pinch the dross",
     "go south",
     "pinch the trysail",
+    "go east",
+    "pinch the lazyjack",
+    "go west",
     "go north",
     "go east",
     "pinch the sheave",
