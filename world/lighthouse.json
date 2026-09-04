@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 3490,
+  "maxScore": 3530,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -10568,7 +10568,7 @@
       "name": "Rust Bollard",
       "desc": "A dry bollard east of the flue. Packed rust coats a bollard.",
       "brief": "Dry bollard, packed rust.",
-      "exits": { "west": { "to": "rust_flue" } },
+      "exits": { "west": { "to": "rust_flue" }, "east": { "to": "rust_heavingline" } },
       "actions": [
         {
           "id": "pinch_bollard",
@@ -10577,6 +10577,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bollard. They moored line on the flue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_heavingline": {
+      "name": "Rust Heavingline",
+      "desc": "A dry heavingline east of the bollard. Packed rust coats a heavingline.",
+      "brief": "Dry heavingline, packed rust.",
+      "exits": { "west": { "to": "rust_bollard" } },
+      "actions": [
+        {
+          "id": "pinch_heavingline",
+          "label": "pinch the heavingline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard heavingline. They coiled it on the bollard and packed rust around it."]
           ]
         }
       ]
@@ -10602,7 +10619,7 @@
       "name": "Rust Reefpoint",
       "desc": "A dry reefpoint north of the joist. Packed rust coats a reefpoint.",
       "brief": "Dry reefpoint, packed rust.",
-      "exits": { "south": { "to": "rust_joist" } },
+      "exits": { "south": { "to": "rust_joist" }, "east": { "to": "rust_breastline" } },
       "actions": [
         {
           "id": "pinch_reefpoint",
@@ -10611,6 +10628,23 @@
           "fx": [
             ["score", 5],
             ["say", "Thin reefpoint. They reefed it on the joist and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_breastline": {
+      "name": "Rust Breastline",
+      "desc": "A dry breastline east of the reefpoint. Packed rust coats a breastline.",
+      "brief": "Dry breastline, packed rust.",
+      "exits": { "west": { "to": "rust_reefpoint" } },
+      "actions": [
+        {
+          "id": "pinch_breastline",
+          "label": "pinch the breastline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard breastline. They made it on the reefpoint and packed rust around it."]
           ]
         }
       ]
@@ -10636,7 +10670,7 @@
       "name": "Rust Gaff",
       "desc": "A dry gaff east of the joist. Packed rust coats a gaff.",
       "brief": "Dry gaff, packed rust.",
-      "exits": { "west": { "to": "rust_joist" } },
+      "exits": { "west": { "to": "rust_joist" }, "east": { "to": "rust_warp" } },
       "actions": [
         {
           "id": "pinch_gaff",
@@ -10645,6 +10679,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gaff. They hooked it on the joist and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_warp": {
+      "name": "Rust Warp",
+      "desc": "A dry warp east of the gaff. Packed rust coats a warp.",
+      "brief": "Dry warp, packed rust.",
+      "exits": { "west": { "to": "rust_gaff" } },
+      "actions": [
+        {
+          "id": "pinch_warp",
+          "label": "pinch the warp",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard warp. They bent it on the gaff and packed rust around it."]
           ]
         }
       ]
@@ -10755,7 +10806,7 @@
       "name": "Rust Clewline",
       "desc": "A dry clewline south of the bank. Packed rust coats a clewline.",
       "brief": "Dry clewline, packed rust.",
-      "exits": { "north": { "to": "rust_bank" } },
+      "exits": { "north": { "to": "rust_bank" }, "east": { "to": "rust_messenger" } },
       "actions": [
         {
           "id": "pinch_clewline",
@@ -10764,6 +10815,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clewline. They rove it on the bank and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_messenger": {
+      "name": "Rust Messenger",
+      "desc": "A dry messenger east of the clewline. Packed rust coats a messenger.",
+      "brief": "Dry messenger, packed rust.",
+      "exits": { "west": { "to": "rust_clewline" } },
+      "actions": [
+        {
+          "id": "pinch_messenger",
+          "label": "pinch the messenger",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard messenger. They rove it on the clewline and packed rust around it."]
           ]
         }
       ]
@@ -10806,7 +10874,7 @@
       "name": "Rust Brail",
       "desc": "A dry brail north of the edge. Packed rust coats a brail.",
       "brief": "Dry brail, packed rust.",
-      "exits": { "south": { "to": "rust_edge" } },
+      "exits": { "south": { "to": "rust_edge" }, "east": { "to": "rust_stopper" } },
       "actions": [
         {
           "id": "pinch_brail",
@@ -10815,6 +10883,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard brail. They hauled it on the edge and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_stopper": {
+      "name": "Rust Stopper",
+      "desc": "A dry stopper east of the brail. Packed rust coats a stopper.",
+      "brief": "Dry stopper, packed rust.",
+      "exits": { "west": { "to": "rust_brail" } },
+      "actions": [
+        {
+          "id": "pinch_stopper",
+          "label": "pinch the stopper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard stopper. They seized it on the brail and packed rust around it."]
           ]
         }
       ]
@@ -10857,7 +10942,7 @@
       "name": "Rust Orlop",
       "desc": "A dry orlop east of the pipe. Packed rust coats an orlop.",
       "brief": "Dry orlop, packed rust.",
-      "exits": { "west": { "to": "rust_pipe" } },
+      "exits": { "west": { "to": "rust_pipe" }, "east": { "to": "rust_lashing" } },
       "actions": [
         {
           "id": "pinch_orlop",
@@ -10870,11 +10955,28 @@
         }
       ]
     },
+    "rust_lashing": {
+      "name": "Rust Lashing",
+      "desc": "A dry lashing east of the orlop. Packed rust coats a lashing.",
+      "brief": "Dry lashing, packed rust.",
+      "exits": { "west": { "to": "rust_orlop" } },
+      "actions": [
+        {
+          "id": "pinch_lashing",
+          "label": "pinch the lashing",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lashing. They bound it on the orlop and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_zinc": {
       "name": "Rust Zinc",
       "desc": "A dry zinc south of the pipe. Packed rust coats zinc.",
       "brief": "Dry zinc, packed rust.",
-      "exits": { "north": { "to": "rust_pipe" } },
+      "exits": { "north": { "to": "rust_pipe" }, "east": { "to": "rust_foxes" } },
       "actions": [
         {
           "id": "pinch_zinc",
@@ -10883,6 +10985,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard zinc. They tinned it on the pipe and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foxes": {
+      "name": "Rust Foxes",
+      "desc": "A dry foxes east of the zinc. Packed rust coats foxes.",
+      "brief": "Dry foxes, packed rust.",
+      "exits": { "west": { "to": "rust_zinc" } },
+      "actions": [
+        {
+          "id": "pinch_foxes",
+          "label": "pinch the foxes",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foxes. They laid it on the zinc and packed rust around it."]
           ]
         }
       ]
@@ -10925,7 +11044,7 @@
       "name": "Rust Sheer",
       "desc": "A dry sheer north of the axle. Packed rust coats a sheer.",
       "brief": "Dry sheer, packed rust.",
-      "exits": { "south": { "to": "rust_axle" } },
+      "exits": { "south": { "to": "rust_axle" }, "east": { "to": "rust_hambroline" } },
       "actions": [
         {
           "id": "pinch_sheer",
@@ -10938,6 +11057,24 @@
         }
       ]
     },
+    "rust_hambroline": {
+      "name": "Rust Hambroline",
+      "desc": "A dry hambroline east of the sheer. Packed rust coats hambroline.",
+      "brief": "Dry hambroline, packed rust.",
+      "exits": { "west": { "to": "rust_sheer" } },
+      "actions": [
+        {
+          "id": "pinch_hambroline",
+          "label": "pinch the hambroline",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hambroline. They rove it on the sheer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+
     "rust_fang": {
       "name": "Rust Fang",
       "desc": "A dry fang east of the axle. Packed rust forms a fang.",
@@ -13643,17 +13780,26 @@
     "go east",
     "go east",
     "pinch the bollard",
+    "go east",
+    "pinch the heavingline",
+    "go west",
     "go west",
     "go north",
     "pinch the joist",
     "go north",
     "pinch the reefpoint",
+    "go east",
+    "pinch the breastline",
+    "go west",
     "go south",
     "go west",
     "pinch the yoke",
     "go east",
     "go east",
     "pinch the gaff",
+    "go east",
+    "pinch the warp",
+    "go west",
     "go west",
     "go south",
     "go south",
@@ -13665,6 +13811,9 @@
     "pinch the knot",
     "go south",
     "pinch the clewline",
+    "go east",
+    "pinch the messenger",
+    "go west",
     "go north",
     "go west",
     "pinch the oakum",
@@ -13673,6 +13822,9 @@
     "pinch the trace",
     "go north",
     "pinch the brail",
+    "go east",
+    "pinch the stopper",
+    "go west",
     "go south",
     "go west",
     "pinch the flemish",
@@ -13681,9 +13833,15 @@
     "pinch the pipe",
     "go east",
     "pinch the orlop",
+    "go east",
+    "pinch the lashing",
+    "go west",
     "go west",
     "go south",
     "pinch the zinc",
+    "go east",
+    "pinch the foxes",
+    "go west",
     "go north",
     "go north",
     "pinch the axle",
@@ -13692,6 +13850,9 @@
     "go east",
     "go north",
     "pinch the sheer",
+    "go east",
+    "pinch the hambroline",
+    "go west",
     "go south",
     "go east",
     "pinch the fang",
