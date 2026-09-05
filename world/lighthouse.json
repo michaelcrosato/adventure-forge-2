@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4730,
+  "maxScore": 4770,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -9888,7 +9888,7 @@
       "name": "Rust Reeving",
       "desc": "A dry reeving east of the trunnel. Packed rust coats reeving.",
       "brief": "Dry reeving, packed rust.",
-      "exits": { "west": { "to": "rust_trunnel" } },
+      "exits": { "west": { "to": "rust_trunnel" }, "east": { "to": "rust_ambergris" } },
       "actions": [
         {
           "id": "pinch_reeving",
@@ -9897,6 +9897,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard reeving. They rove it on the trunnel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ambergris": {
+      "name": "Rust Ambergris",
+      "desc": "A dry ambergris east of the reeving. Packed rust coats ambergris.",
+      "brief": "Dry ambergris, packed rust.",
+      "exits": { "west": { "to": "rust_reeving" } },
+      "actions": [
+        {
+          "id": "pinch_ambergris",
+          "label": "pinch the ambergris",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ambergris. They packed it on the reeving and packed rust around it."]
           ]
         }
       ]
@@ -9922,7 +9939,7 @@
       "name": "Rust Bending",
       "desc": "A dry bending east of the gunnel. Packed rust coats bending.",
       "brief": "Dry bending, packed rust.",
-      "exits": { "west": { "to": "rust_gunnel" } },
+      "exits": { "west": { "to": "rust_gunnel" }, "east": { "to": "rust_spermaceti" } },
       "actions": [
         {
           "id": "pinch_bending",
@@ -9931,6 +9948,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bending. They made it on the gunnel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_spermaceti": {
+      "name": "Rust Spermaceti",
+      "desc": "A dry spermaceti east of the bending. Packed rust coats spermaceti.",
+      "brief": "Dry spermaceti, packed rust.",
+      "exits": { "west": { "to": "rust_bending" } },
+      "actions": [
+        {
+          "id": "pinch_spermaceti",
+          "label": "pinch the spermaceti",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard spermaceti. They packed it on the bending and packed rust around it."]
           ]
         }
       ]
@@ -9974,7 +10008,7 @@
       "name": "Rust Hitch",
       "desc": "A dry hitch east of the toggle. Packed rust coats a hitch.",
       "brief": "Dry hitch, packed rust.",
-      "exits": { "west": { "to": "rust_toggle" } },
+      "exits": { "west": { "to": "rust_toggle" }, "east": { "to": "rust_japanblack" } },
       "actions": [
         {
           "id": "pinch_hitch",
@@ -9983,6 +10017,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hitch. They bent it on the toggle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_japanblack": {
+      "name": "Rust Japanblack",
+      "desc": "A dry japanblack east of the hitch. Packed rust coats japanblack.",
+      "brief": "Dry japanblack, packed rust.",
+      "exits": { "west": { "to": "rust_hitch" } },
+      "actions": [
+        {
+          "id": "pinch_japanblack",
+          "label": "pinch the japanblack",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard japanblack. They packed it on the hitch and packed rust around it."]
           ]
         }
       ]
@@ -10025,7 +10076,7 @@
       "name": "Rust Splice",
       "desc": "A dry splice east of the pintle. Packed rust coats a splice.",
       "brief": "Dry splice, packed rust.",
-      "exits": { "west": { "to": "rust_pintle" } },
+      "exits": { "west": { "to": "rust_pintle" }, "east": { "to": "rust_tungoil" } },
       "actions": [
         {
           "id": "pinch_splice",
@@ -10034,6 +10085,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard splice. They joined it on the pintle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tungoil": {
+      "name": "Rust Tungoil",
+      "desc": "A dry tungoil east of the splice. Packed rust coats tungoil.",
+      "brief": "Dry tungoil, packed rust.",
+      "exits": { "west": { "to": "rust_splice" } },
+      "actions": [
+        {
+          "id": "pinch_tungoil",
+          "label": "pinch the tungoil",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tungoil. They soaked it on the splice and packed rust around it."]
           ]
         }
       ]
@@ -10195,7 +10263,7 @@
       "name": "Rust Houndband",
       "desc": "A dry houndband east of the spunyarn. Packed rust coats a houndband.",
       "brief": "Dry houndband, packed rust.",
-      "exits": { "west": { "to": "rust_spunyarn" } },
+      "exits": { "west": { "to": "rust_spunyarn" }, "east": { "to": "rust_copaiba" } },
       "actions": [
         {
           "id": "pinch_houndband",
@@ -10204,6 +10272,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard houndband. They banded it on the spunyarn and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_copaiba": {
+      "name": "Rust Copaiba",
+      "desc": "A dry copaiba east of the houndband. Packed rust coats copaiba.",
+      "brief": "Dry copaiba, packed rust.",
+      "exits": { "west": { "to": "rust_houndband" } },
+      "actions": [
+        {
+          "id": "pinch_copaiba",
+          "label": "pinch the copaiba",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard copaiba. They packed it on the houndband and packed rust around it."]
           ]
         }
       ]
@@ -10280,7 +10365,7 @@
       "name": "Rust Chainwale",
       "desc": "A dry chainwale east of the houseline. Packed rust coats a chainwale.",
       "brief": "Dry chainwale, packed rust.",
-      "exits": { "west": { "to": "rust_houseline" } },
+      "exits": { "west": { "to": "rust_houseline" }, "east": { "to": "rust_elemi" } },
       "actions": [
         {
           "id": "pinch_chainwale",
@@ -10289,6 +10374,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chainwale. They plated it on the houseline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_elemi": {
+      "name": "Rust Elemi",
+      "desc": "A dry elemi east of the chainwale. Packed rust coats elemi.",
+      "brief": "Dry elemi, packed rust.",
+      "exits": { "west": { "to": "rust_chainwale" } },
+      "actions": [
+        {
+          "id": "pinch_elemi",
+          "label": "pinch the elemi",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard elemi. They set it on the chainwale and packed rust around it."]
           ]
         }
       ]
@@ -10331,7 +10433,7 @@
       "name": "Rust Futtockband",
       "desc": "A dry futtockband east of the boltrope. Packed rust coats a futtockband.",
       "brief": "Dry futtockband, packed rust.",
-      "exits": { "west": { "to": "rust_boltrope" } },
+      "exits": { "west": { "to": "rust_boltrope" }, "east": { "to": "rust_sandarac" } },
       "actions": [
         {
           "id": "pinch_futtockband",
@@ -10340,6 +10442,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard futtockband. They strapped it on the boltrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sandarac": {
+      "name": "Rust Sandarac",
+      "desc": "A dry sandarac east of the futtockband. Packed rust coats sandarac.",
+      "brief": "Dry sandarac, packed rust.",
+      "exits": { "west": { "to": "rust_futtockband" } },
+      "actions": [
+        {
+          "id": "pinch_sandarac",
+          "label": "pinch the sandarac",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sandarac. They laid it on the futtockband and packed rust around it."]
           ]
         }
       ]
@@ -10382,7 +10501,7 @@
       "name": "Rust Crowfoot",
       "desc": "A dry crowfoot east of the tabling. Packed rust coats a crowfoot.",
       "brief": "Dry crowfoot, packed rust.",
-      "exits": { "west": { "to": "rust_tabling" } },
+      "exits": { "west": { "to": "rust_tabling" }, "east": { "to": "rust_mastic" } },
       "actions": [
         {
           "id": "pinch_crowfoot",
@@ -10391,6 +10510,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard crowfoot. They spread it on the tabling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_mastic": {
+      "name": "Rust Mastic",
+      "desc": "A dry mastic east of the crowfoot. Packed rust coats mastic.",
+      "brief": "Dry mastic, packed rust.",
+      "exits": { "west": { "to": "rust_crowfoot" } },
+      "actions": [
+        {
+          "id": "pinch_mastic",
+          "label": "pinch the mastic",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mastic. They packed it on the crowfoot and packed rust around it."]
           ]
         }
       ]
@@ -17742,12 +17878,18 @@
     "pinch the trunnel",
     "go east",
     "pinch the reeving",
+    "go east",
+    "pinch the ambergris",
+    "go west",
     "go west",
     "go north",
     "go east",
     "pinch the gunnel",
     "go east",
     "pinch the bending",
+    "go east",
+    "pinch the spermaceti",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17756,6 +17898,9 @@
     "pinch the toggle",
     "go east",
     "pinch the hitch",
+    "go east",
+    "pinch the japanblack",
+    "go west",
     "go west",
     "go south",
     "go west",
@@ -17765,6 +17910,9 @@
     "pinch the pintle",
     "go east",
     "pinch the splice",
+    "go east",
+    "pinch the tungoil",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -17781,6 +17929,9 @@
     "pinch the spunyarn",
     "go east",
     "pinch the houndband",
+    "go east",
+    "pinch the copaiba",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17795,6 +17946,9 @@
     "pinch the houseline",
     "go east",
     "pinch the chainwale",
+    "go east",
+    "pinch the elemi",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17804,6 +17958,9 @@
     "pinch the boltrope",
     "go east",
     "pinch the futtockband",
+    "go east",
+    "pinch the sandarac",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17813,6 +17970,9 @@
     "pinch the tabling",
     "go east",
     "pinch the crowfoot",
+    "go east",
+    "pinch the mastic",
+    "go west",
     "go west",
     "go west",
     "go south",
