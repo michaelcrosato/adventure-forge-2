@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4890,
+  "maxScore": 4930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -8069,7 +8069,7 @@
       "name": "Rust Klemheist",
       "desc": "A dry klemheist east of the marline. Packed rust coats a klemheist.",
       "brief": "Dry klemheist, packed rust.",
-      "exits": { "west": { "to": "rust_marline" } },
+      "exits": { "west": { "to": "rust_marline" }, "east": { "to": "rust_pectin" } },
       "actions": [
         {
           "id": "pinch_klemheist",
@@ -8078,6 +8078,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard klemheist. They gripped it on the marline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_pectin": {
+      "name": "Rust Pectin",
+      "desc": "A dry pectin east of the klemheist. Packed rust coats pectin.",
+      "brief": "Dry pectin, packed rust.",
+      "exits": { "west": { "to": "rust_klemheist" } },
+      "actions": [
+        {
+          "id": "pinch_pectin",
+          "label": "pinch the pectin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pectin. They packed it on the klemheist and packed rust around it."]
           ]
         }
       ]
@@ -8103,7 +8120,7 @@
       "name": "Rust Larkhead",
       "desc": "A dry larkhead east of the leech. Packed rust coats a larkhead.",
       "brief": "Dry larkhead, packed rust.",
-      "exits": { "west": { "to": "rust_leech" } },
+      "exits": { "west": { "to": "rust_leech" }, "east": { "to": "rust_xanthan" } },
       "actions": [
         {
           "id": "pinch_larkhead",
@@ -8112,6 +8129,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard larkhead. They hitched it on the leech and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_xanthan": {
+      "name": "Rust Xanthan",
+      "desc": "A dry xanthan east of the larkhead. Packed rust coats xanthan.",
+      "brief": "Dry xanthan, packed rust.",
+      "exits": { "west": { "to": "rust_larkhead" } },
+      "actions": [
+        {
+          "id": "pinch_xanthan",
+          "label": "pinch the xanthan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard xanthan. They packed it on the larkhead and packed rust around it."]
           ]
         }
       ]
@@ -8154,7 +8188,7 @@
       "name": "Rust Alpine",
       "desc": "A dry alpine east of the fish. Packed rust coats an alpine.",
       "brief": "Dry alpine, packed rust.",
-      "exits": { "west": { "to": "rust_fish" } },
+      "exits": { "west": { "to": "rust_fish" }, "east": { "to": "rust_ghatti" } },
       "actions": [
         {
           "id": "pinch_alpine",
@@ -8163,6 +8197,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard alpine. They looped it on the fish and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ghatti": {
+      "name": "Rust Ghatti",
+      "desc": "A dry ghatti east of the alpine. Packed rust coats ghatti.",
+      "brief": "Dry ghatti, packed rust.",
+      "exits": { "west": { "to": "rust_alpine" } },
+      "actions": [
+        {
+          "id": "pinch_ghatti",
+          "label": "pinch the ghatti",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ghatti. They packed it on the alpine and packed rust around it."]
           ]
         }
       ]
@@ -8205,7 +8256,7 @@
       "name": "Rust Munter",
       "desc": "A dry munter east of the catharpin. Packed rust coats a munter.",
       "brief": "Dry munter, packed rust.",
-      "exits": { "west": { "to": "rust_catharpin" } },
+      "exits": { "west": { "to": "rust_catharpin" }, "east": { "to": "rust_karaya" } },
       "actions": [
         {
           "id": "pinch_munter",
@@ -8214,6 +8265,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard munter. They wrapped it on the catharpin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_karaya": {
+      "name": "Rust Karaya",
+      "desc": "A dry karaya east of the munter. Packed rust coats karaya.",
+      "brief": "Dry karaya, packed rust.",
+      "exits": { "west": { "to": "rust_munter" } },
+      "actions": [
+        {
+          "id": "pinch_karaya",
+          "label": "pinch the karaya",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard karaya. They packed it on the munter and packed rust around it."]
           ]
         }
       ]
@@ -8273,7 +8341,7 @@
       "name": "Rust Cowhitch",
       "desc": "A dry cowhitch east of the hog. Packed rust coats a cowhitch.",
       "brief": "Dry cowhitch, packed rust.",
-      "exits": { "west": { "to": "rust_hog" } },
+      "exits": { "west": { "to": "rust_hog" }, "east": { "to": "rust_storax" } },
       "actions": [
         {
           "id": "pinch_cowhitch",
@@ -8282,6 +8350,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cowhitch. They tied it on the hog and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_storax": {
+      "name": "Rust Storax",
+      "desc": "A dry storax east of the cowhitch. Packed rust coats storax.",
+      "brief": "Dry storax, packed rust.",
+      "exits": { "west": { "to": "rust_cowhitch" } },
+      "actions": [
+        {
+          "id": "pinch_storax",
+          "label": "pinch the storax",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard storax. They packed it on the cowhitch and packed rust around it."]
           ]
         }
       ]
@@ -8341,7 +8426,7 @@
       "name": "Rust Blake",
       "desc": "A dry blake east of the sheerpole. Packed rust coats a blake.",
       "brief": "Dry blake, packed rust.",
-      "exits": { "west": { "to": "rust_sheerpole" } },
+      "exits": { "west": { "to": "rust_sheerpole" }, "east": { "to": "rust_benzoin" } },
       "actions": [
         {
           "id": "pinch_blake",
@@ -8350,6 +8435,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blake. They gripped it on the sheerpole and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_benzoin": {
+      "name": "Rust Benzoin",
+      "desc": "A dry benzoin east of the blake. Packed rust coats benzoin.",
+      "brief": "Dry benzoin, packed rust.",
+      "exits": { "west": { "to": "rust_blake" } },
+      "actions": [
+        {
+          "id": "pinch_benzoin",
+          "label": "pinch the benzoin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard benzoin. They packed it on the blake and packed rust around it."]
           ]
         }
       ]
@@ -8375,7 +8477,7 @@
       "name": "Rust Halfhitch",
       "desc": "A dry halfhitch east of the tiller. Packed rust coats a halfhitch.",
       "brief": "Dry halfhitch, packed rust.",
-      "exits": { "west": { "to": "rust_tiller" } },
+      "exits": { "west": { "to": "rust_tiller" }, "east": { "to": "rust_myrrh" } },
       "actions": [
         {
           "id": "pinch_halfhitch",
@@ -8384,6 +8486,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard halfhitch. They tied it on the tiller and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_myrrh": {
+      "name": "Rust Myrrh",
+      "desc": "A dry myrrh east of the halfhitch. Packed rust coats myrrh.",
+      "brief": "Dry myrrh, packed rust.",
+      "exits": { "west": { "to": "rust_halfhitch" } },
+      "actions": [
+        {
+          "id": "pinch_myrrh",
+          "label": "pinch the myrrh",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard myrrh. They packed it on the halfhitch and packed rust around it."]
           ]
         }
       ]
@@ -9055,7 +9174,7 @@
       "name": "Rust Constrictor",
       "desc": "A dry constrictor east of the luff. Packed rust coats a constrictor.",
       "brief": "Dry constrictor, packed rust.",
-      "exits": { "west": { "to": "rust_luff" } },
+      "exits": { "west": { "to": "rust_luff" }, "east": { "to": "rust_frankincense" } },
       "actions": [
         {
           "id": "pinch_constrictor",
@@ -9064,6 +9183,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard constrictor. They bound it on the luff and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_frankincense": {
+      "name": "Rust Frankincense",
+      "desc": "A dry frankincense east of the constrictor. Packed rust coats frankincense.",
+      "brief": "Dry frankincense, packed rust.",
+      "exits": { "west": { "to": "rust_constrictor" } },
+      "actions": [
+        {
+          "id": "pinch_frankincense",
+          "label": "pinch the frankincense",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard frankincense. They packed it on the constrictor and packed rust around it."]
           ]
         }
       ]
@@ -17947,6 +18083,9 @@
     "pinch the marline",
     "go east",
     "pinch the klemheist",
+    "go east",
+    "pinch the pectin",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17954,6 +18093,9 @@
     "pinch the leech",
     "go east",
     "pinch the larkhead",
+    "go east",
+    "pinch the xanthan",
+    "go west",
     "go west",
     "go south",
     "go east",
@@ -17962,6 +18104,9 @@
     "pinch the fish",
     "go east",
     "pinch the alpine",
+    "go east",
+    "pinch the ghatti",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -17970,6 +18115,9 @@
     "pinch the catharpin",
     "go east",
     "pinch the munter",
+    "go east",
+    "pinch the karaya",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17982,6 +18130,9 @@
     "pinch the hog",
     "go east",
     "pinch the cowhitch",
+    "go east",
+    "pinch the storax",
+    "go west",
     "go west",
     "go south",
     "go east",
@@ -17992,6 +18143,9 @@
     "pinch the sheerpole",
     "go east",
     "pinch the blake",
+    "go east",
+    "pinch the benzoin",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17999,6 +18153,9 @@
     "pinch the tiller",
     "go east",
     "pinch the halfhitch",
+    "go east",
+    "pinch the myrrh",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -18125,6 +18282,9 @@
     "pinch the luff",
     "go east",
     "pinch the constrictor",
+    "go east",
+    "pinch the frankincense",
+    "go west",
     "go west",
     "go south",
     "go east",
