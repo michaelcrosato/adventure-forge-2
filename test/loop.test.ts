@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { execFileSync, spawnSync } from "node:child_process";
-import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, realpathSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test, { type TestContext } from "node:test";
@@ -23,6 +23,7 @@ function fixture(t: TestContext) {
   put("loop/player-prompt.md", "Seed {{SEED}}, turns {{MAX_GAME_TURNS}}\n");
   put("loop/report-check.mjs", "process.exit(Number(process.env.STUB_REPORT_EXIT ?? 0));\n");
   put("src/example.ts", "export const value = 1;\n");
+  put("src/mcp.ts", "// fixture MCP entrypoint\n");
   put("test/example.test.ts", "fixture test\n");
   put("reports/.gitkeep", "");
   put("queue/P1-issue-12345678.json", JSON.stringify({ kind: "issue", title: "fixture issue" }));
@@ -128,6 +129,6 @@ test("playtest propagates player, report and triage failures and keeps separate 
     const wave = join(f.root, "runs", "playtest", dir);
     assert.equal(readdirSync(wave).filter((name) => /^player-.*\.json$/.test(name)).length, 3);
     const config = JSON.parse(readFileSync(join(wave, "mcp.json"), "utf8"));
-    assert.equal(config.mcpServers.tinyforge.args.at(-1), join(f.root, "src", "mcp.ts"));
+    assert.equal(realpathSync.native(config.mcpServers.tinyforge.args.at(-1)), realpathSync.native(join(f.root, "src", "mcp.ts")));
   }
 });

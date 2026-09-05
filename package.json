@@ -11,7 +11,7 @@
     "mcp": "tsx src/mcp.ts",
     "play": "tsx src/play.ts",
     "typecheck": "tsc --noEmit",
-    "test": "node --import tsx --test test/*.test.ts",
+    "test": "node loop/test.mjs",
     "validate": "tsx src/validate.ts world/lighthouse.json",
     "crawl": "tsx src/crawl.ts --smoke",
     "verify": "npm run -s typecheck && npm run -s test && npm run -s validate && npm run -s crawl",

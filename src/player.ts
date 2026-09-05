@@ -54,6 +54,7 @@ export function apiProvider(model: string): Provider {
     for (let attempt = 0; ; attempt++) {
       const res = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
+        signal: AbortSignal.timeout(30_000), // bounds both connection and response-body reads
         headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
         body: JSON.stringify({
           model,
@@ -63,6 +64,7 @@ export function apiProvider(model: string): Provider {
         }),
       });
       if (res.status === 429 || res.status >= 500) {
+        await res.body?.cancel(); // release the connection before retrying or giving up
         if (attempt >= 4) throw new Error(`API ${res.status} after retries`);
         await new Promise((r) => setTimeout(r, 1500 * 2 ** attempt));
         continue;
@@ -156,7 +158,7 @@ export type SessionResult = {
   reportError?: string;
   verified: boolean;
   usage: Usage;
-  apiCalls: number;
+  apiCalls: number; // completed provider exchanges; internal HTTP retries are not counted
   receipt: string | null;
 };
 

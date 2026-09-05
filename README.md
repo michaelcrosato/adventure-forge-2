@@ -80,6 +80,10 @@ npm run devloop -- 5
 
 The shell loops require Bash and the Claude Code CLI. On Windows, use Git Bash.
 The direct API lane requires `ANTHROPIC_API_KEY`; `--mock` needs no credentials.
+API requests have a 30-second timeout, including response-body reads. Rate-limit
+and server errors receive at most five HTTP attempts with exponential backoff.
+The `api_calls` field counts completed provider exchanges, excluding those
+internal HTTP retries; usage totals reflect successful API responses.
 Live runs retain an 80-turn default budget and stop after 12 turns without a new
 room or score gain. Increase the budget for longer exploration. Scripted mock
 runs use the walkthrough bound and do not use the live stall cutoff.
