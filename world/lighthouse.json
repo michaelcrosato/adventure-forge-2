@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 6930,
+  "maxScore": 6970,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -10738,7 +10738,7 @@
       "name": "Rust Durain",
       "desc": "A dry durain east of the mangrove. Packed rust coats durain.",
       "brief": "Dry durain, packed rust.",
-      "exits": { "west": { "to": "rust_mangrove" } },
+      "exits": { "west": { "to": "rust_mangrove" }, "east": { "to": "rust_swampmahogany" } },
       "actions": [
         {
           "id": "pinch_durain",
@@ -10747,6 +10747,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard durain. They packed it on the mangrove and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_swampmahogany": {
+      "name": "Rust Swampmahogany",
+      "desc": "A dry swampmahogany east of the durain. Packed rust coats swampmahogany.",
+      "brief": "Dry swampmahogany, packed rust.",
+      "exits": { "west": { "to": "rust_durain" } },
+      "actions": [
+        {
+          "id": "pinch_swampmahogany",
+          "label": "pinch the swampmahogany",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard swampmahogany. They packed it on the durain and packed rust around it."]
           ]
         }
       ]
@@ -10857,7 +10874,7 @@
       "name": "Rust Vitrain",
       "desc": "A dry vitrain east of the quebracho. Packed rust coats vitrain.",
       "brief": "Dry vitrain, packed rust.",
-      "exits": { "west": { "to": "rust_quebracho" } },
+      "exits": { "west": { "to": "rust_quebracho" }, "east": { "to": "rust_floodedgum" } },
       "actions": [
         {
           "id": "pinch_vitrain",
@@ -10866,6 +10883,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard vitrain. They packed it on the quebracho and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_floodedgum": {
+      "name": "Rust Floodedgum",
+      "desc": "A dry floodedgum east of the vitrain. Packed rust coats floodedgum.",
+      "brief": "Dry floodedgum, packed rust.",
+      "exits": { "west": { "to": "rust_vitrain" } },
+      "actions": [
+        {
+          "id": "pinch_floodedgum",
+          "label": "pinch the floodedgum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard floodedgum. They packed it on the vitrain and packed rust around it."]
           ]
         }
       ]
@@ -10959,7 +10993,7 @@
       "name": "Rust Fusain",
       "desc": "A dry fusain east of the myrobalan. Packed rust coats fusain.",
       "brief": "Dry fusain, packed rust.",
-      "exits": { "west": { "to": "rust_myrobalan" } },
+      "exits": { "west": { "to": "rust_myrobalan" }, "east": { "to": "rust_sugargum" } },
       "actions": [
         {
           "id": "pinch_fusain",
@@ -10968,6 +11002,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fusain. They packed it on the myrobalan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sugargum": {
+      "name": "Rust Sugargum",
+      "desc": "A dry sugargum east of the fusain. Packed rust coats sugargum.",
+      "brief": "Dry sugargum, packed rust.",
+      "exits": { "west": { "to": "rust_fusain" } },
+      "actions": [
+        {
+          "id": "pinch_sugargum",
+          "label": "pinch the sugargum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sugargum. They packed it on the fusain and packed rust around it."]
           ]
         }
       ]
@@ -11078,7 +11129,7 @@
       "name": "Rust Cannel",
       "desc": "A dry cannel east of the gallnut. Packed rust coats cannel.",
       "brief": "Dry cannel, packed rust.",
-      "exits": { "west": { "to": "rust_gallnut" } },
+      "exits": { "west": { "to": "rust_gallnut" }, "east": { "to": "rust_mannagum" } },
       "actions": [
         {
           "id": "pinch_cannel",
@@ -11087,6 +11138,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cannel. They packed it on the gallnut and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_mannagum": {
+      "name": "Rust Mannagum",
+      "desc": "A dry mannagum east of the cannel. Packed rust coats mannagum.",
+      "brief": "Dry mannagum, packed rust.",
+      "exits": { "west": { "to": "rust_cannel" } },
+      "actions": [
+        {
+          "id": "pinch_mannagum",
+          "label": "pinch the mannagum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mannagum. They packed it on the cannel and packed rust around it."]
           ]
         }
       ]
@@ -11214,7 +11282,7 @@
       "name": "Rust Anthracite",
       "desc": "A dry anthracite east of the sumac. Packed rust coats anthracite.",
       "brief": "Dry anthracite, packed rust.",
-      "exits": { "west": { "to": "rust_sumac" } },
+      "exits": { "west": { "to": "rust_sumac" }, "east": { "to": "rust_woollybutt" } },
       "actions": [
         {
           "id": "pinch_anthracite",
@@ -11223,6 +11291,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard anthracite. They packed it on the sumac and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_woollybutt": {
+      "name": "Rust Woollybutt",
+      "desc": "A dry woollybutt east of the anthracite. Packed rust coats woollybutt.",
+      "brief": "Dry woollybutt, packed rust.",
+      "exits": { "west": { "to": "rust_anthracite" } },
+      "actions": [
+        {
+          "id": "pinch_woollybutt",
+          "label": "pinch the woollybutt",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard woollybutt. They packed it on the anthracite and packed rust around it."]
           ]
         }
       ]
@@ -11316,7 +11401,7 @@
       "name": "Rust Lampwick",
       "desc": "A dry lampwick east of the catechu. Packed rust coats lampwick.",
       "brief": "Dry lampwick, packed rust.",
-      "exits": { "west": { "to": "rust_catechu" } },
+      "exits": { "west": { "to": "rust_catechu" }, "east": { "to": "rust_candlebark" } },
       "actions": [
         {
           "id": "pinch_lampwick",
@@ -11325,6 +11410,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lampwick. They packed it on the catechu and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_candlebark": {
+      "name": "Rust Candlebark",
+      "desc": "A dry candlebark east of the lampwick. Packed rust coats candlebark.",
+      "brief": "Dry candlebark, packed rust.",
+      "exits": { "west": { "to": "rust_lampwick" } },
+      "actions": [
+        {
+          "id": "pinch_candlebark",
+          "label": "pinch the candlebark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard candlebark. They packed it on the lampwick and packed rust around it."]
           ]
         }
       ]
@@ -11401,7 +11503,7 @@
       "name": "Rust Anime",
       "desc": "A dry anime east of the roundseizing. Packed rust coats anime.",
       "brief": "Dry anime, packed rust.",
-      "exits": { "west": { "to": "rust_roundseizing" } },
+      "exits": { "west": { "to": "rust_roundseizing" }, "east": { "to": "rust_snowgum" } },
       "actions": [
         {
           "id": "pinch_anime",
@@ -11410,6 +11512,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard anime. They packed it on the roundseizing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_snowgum": {
+      "name": "Rust Snowgum",
+      "desc": "A dry snowgum east of the anime. Packed rust coats snowgum.",
+      "brief": "Dry snowgum, packed rust.",
+      "exits": { "west": { "to": "rust_anime" } },
+      "actions": [
+        {
+          "id": "pinch_snowgum",
+          "label": "pinch the snowgum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard snowgum. They packed it on the anime and packed rust around it."]
           ]
         }
       ]
@@ -13152,7 +13271,7 @@
       "name": "Rust Rabbitglue",
       "desc": "A dry rabbitglue east of the mastcap. Packed rust coats rabbitglue.",
       "brief": "Dry rabbitglue, packed rust.",
-      "exits": { "west": { "to": "rust_mastcap" } },
+      "exits": { "west": { "to": "rust_mastcap" }, "east": { "to": "rust_riverredgum" } },
       "actions": [
         {
           "id": "pinch_rabbitglue",
@@ -13161,6 +13280,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rabbitglue. They packed it on the mastcap and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_riverredgum": {
+      "name": "Rust Riverredgum",
+      "desc": "A dry riverredgum east of the rabbitglue. Packed rust coats riverredgum.",
+      "brief": "Dry riverredgum, packed rust.",
+      "exits": { "west": { "to": "rust_rabbitglue" } },
+      "actions": [
+        {
+          "id": "pinch_riverredgum",
+          "label": "pinch the riverredgum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard riverredgum. They packed it on the rabbitglue and packed rust around it."]
           ]
         }
       ]
@@ -25351,6 +25487,9 @@
     "pinch the mangrove",
     "go east",
     "pinch the durain",
+    "go east",
+    "pinch the swampmahogany",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25370,6 +25509,9 @@
     "pinch the quebracho",
     "go east",
     "pinch the vitrain",
+    "go east",
+    "pinch the floodedgum",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25388,6 +25530,9 @@
     "pinch the myrobalan",
     "go east",
     "pinch the fusain",
+    "go east",
+    "pinch the sugargum",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25408,6 +25553,9 @@
     "pinch the gallnut",
     "go east",
     "pinch the cannel",
+    "go east",
+    "pinch the mannagum",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25431,6 +25579,9 @@
     "pinch the sumac",
     "go east",
     "pinch the anthracite",
+    "go east",
+    "pinch the woollybutt",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25449,6 +25600,9 @@
     "pinch the catechu",
     "go east",
     "pinch the lampwick",
+    "go east",
+    "pinch the candlebark",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25465,6 +25619,9 @@
     "pinch the roundseizing",
     "go east",
     "pinch the anime",
+    "go east",
+    "pinch the snowgum",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25507,6 +25664,9 @@
     "pinch the mastcap",
     "go east",
     "pinch the rabbitglue",
+    "go east",
+    "pinch the riverredgum",
+    "go west",
     "go west",
     "go west",
     "go west",
