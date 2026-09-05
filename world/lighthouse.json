@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4770,
+  "maxScore": 4810,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -9480,7 +9480,7 @@
       "name": "Rust Roundseizing",
       "desc": "A dry roundseizing east of the stemson. Packed rust coats a roundseizing.",
       "brief": "Dry roundseizing, packed rust.",
-      "exits": { "west": { "to": "rust_stemson" } },
+      "exits": { "west": { "to": "rust_stemson" }, "east": { "to": "rust_anime" } },
       "actions": [
         {
           "id": "pinch_roundseizing",
@@ -9489,6 +9489,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard roundseizing. They seized it on the stemson and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_anime": {
+      "name": "Rust Anime",
+      "desc": "A dry anime east of the roundseizing. Packed rust coats anime.",
+      "brief": "Dry anime, packed rust.",
+      "exits": { "west": { "to": "rust_roundseizing" } },
+      "actions": [
+        {
+          "id": "pinch_anime",
+          "label": "pinch the anime",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard anime. They packed it on the roundseizing and packed rust around it."]
           ]
         }
       ]
@@ -9531,7 +9548,7 @@
       "name": "Rust Clove",
       "desc": "A dry clove east of the oar. Packed rust coats a clove.",
       "brief": "Dry clove, packed rust.",
-      "exits": { "west": { "to": "rust_oar" } },
+      "exits": { "west": { "to": "rust_oar" }, "east": { "to": "rust_copalite" } },
       "actions": [
         {
           "id": "pinch_clove",
@@ -9540,6 +9557,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clove. They hitched it on the oar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_copalite": {
+      "name": "Rust Copalite",
+      "desc": "A dry copalite east of the clove. Packed rust coats copalite.",
+      "brief": "Dry copalite, packed rust.",
+      "exits": { "west": { "to": "rust_clove" } },
+      "actions": [
+        {
+          "id": "pinch_copalite",
+          "label": "pinch the copalite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard copalite. They packed it on the clove and packed rust around it."]
           ]
         }
       ]
@@ -9633,7 +9667,7 @@
       "name": "Rust Throatseizing",
       "desc": "A dry throatseizing east of the parcelling. Packed rust coats a throatseizing.",
       "brief": "Dry throatseizing, packed rust.",
-      "exits": { "west": { "to": "rust_parcelling" } },
+      "exits": { "west": { "to": "rust_parcelling" }, "east": { "to": "rust_fishglue" } },
       "actions": [
         {
           "id": "pinch_throatseizing",
@@ -9642,6 +9676,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard throatseizing. They bound it on the parcelling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fishglue": {
+      "name": "Rust Fishglue",
+      "desc": "A dry fishglue east of the throatseizing. Packed rust coats fishglue.",
+      "brief": "Dry fishglue, packed rust.",
+      "exits": { "west": { "to": "rust_throatseizing" } },
+      "actions": [
+        {
+          "id": "pinch_fishglue",
+          "label": "pinch the fishglue",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fishglue. They packed it on the throatseizing and packed rust around it."]
           ]
         }
       ]
@@ -9667,7 +9718,7 @@
       "name": "Rust Sheetbend",
       "desc": "A dry sheetbend east of the bunt. Packed rust coats a sheetbend.",
       "brief": "Dry sheetbend, packed rust.",
-      "exits": { "west": { "to": "rust_bunt" } },
+      "exits": { "west": { "to": "rust_bunt" }, "east": { "to": "rust_casein" } },
       "actions": [
         {
           "id": "pinch_sheetbend",
@@ -9676,6 +9727,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheetbend. They tied it on the bunt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_casein": {
+      "name": "Rust Casein",
+      "desc": "A dry casein east of the sheetbend. Packed rust coats casein.",
+      "brief": "Dry casein, packed rust.",
+      "exits": { "west": { "to": "rust_sheetbend" } },
+      "actions": [
+        {
+          "id": "pinch_casein",
+          "label": "pinch the casein",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard casein. They packed it on the sheetbend and packed rust around it."]
           ]
         }
       ]
@@ -9735,7 +9803,7 @@
       "name": "Rust Rackseizing",
       "desc": "A dry rackseizing east of the worming. Packed rust coats a rackseizing.",
       "brief": "Dry rackseizing, packed rust.",
-      "exits": { "west": { "to": "rust_worming" } },
+      "exits": { "west": { "to": "rust_worming" }, "east": { "to": "rust_isinglass" } },
       "actions": [
         {
           "id": "pinch_rackseizing",
@@ -9744,6 +9812,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rackseizing. They racked it on the worming and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_isinglass": {
+      "name": "Rust Isinglass",
+      "desc": "A dry isinglass east of the rackseizing. Packed rust coats isinglass.",
+      "brief": "Dry isinglass, packed rust.",
+      "exits": { "west": { "to": "rust_rackseizing" } },
+      "actions": [
+        {
+          "id": "pinch_isinglass",
+          "label": "pinch the isinglass",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard isinglass. They packed it on the rackseizing and packed rust around it."]
           ]
         }
       ]
@@ -9769,7 +9854,7 @@
       "name": "Rust Sheepshank",
       "desc": "A dry sheepshank east of the sprit. Packed rust coats a sheepshank.",
       "brief": "Dry sheepshank, packed rust.",
-      "exits": { "west": { "to": "rust_sprit" } },
+      "exits": { "west": { "to": "rust_sprit" }, "east": { "to": "rust_distemper" } },
       "actions": [
         {
           "id": "pinch_sheepshank",
@@ -9778,6 +9863,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheepshank. They shortened it on the sprit and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_distemper": {
+      "name": "Rust Distemper",
+      "desc": "A dry distemper east of the sheepshank. Packed rust coats distemper.",
+      "brief": "Dry distemper, packed rust.",
+      "exits": { "west": { "to": "rust_sheepshank" } },
+      "actions": [
+        {
+          "id": "pinch_distemper",
+          "label": "pinch the distemper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard distemper. They packed it on the sheepshank and packed rust around it."]
           ]
         }
       ]
@@ -9837,7 +9939,7 @@
       "name": "Rust Catspaw",
       "desc": "A dry catspaw east of the felt. Packed rust coats a catspaw.",
       "brief": "Dry catspaw, packed rust.",
-      "exits": { "west": { "to": "rust_felt" } },
+      "exits": { "west": { "to": "rust_felt" }, "east": { "to": "rust_gesso" } },
       "actions": [
         {
           "id": "pinch_catspaw",
@@ -9846,6 +9948,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard catspaw. They hooked it on the felt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_gesso": {
+      "name": "Rust Gesso",
+      "desc": "A dry gesso east of the catspaw. Packed rust coats gesso.",
+      "brief": "Dry gesso, packed rust.",
+      "exits": { "west": { "to": "rust_catspaw" } },
+      "actions": [
+        {
+          "id": "pinch_gesso",
+          "label": "pinch the gesso",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gesso. They packed it on the catspaw and packed rust around it."]
           ]
         }
       ]
@@ -10195,7 +10314,7 @@
       "name": "Rust Mastcap",
       "desc": "A dry mastcap east of the girtline. Packed rust coats a mastcap.",
       "brief": "Dry mastcap, packed rust.",
-      "exits": { "west": { "to": "rust_girtline" } },
+      "exits": { "west": { "to": "rust_girtline" }, "east": { "to": "rust_rabbitglue" } },
       "actions": [
         {
           "id": "pinch_mastcap",
@@ -10204,6 +10323,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mastcap. They capped it on the girtline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_rabbitglue": {
+      "name": "Rust Rabbitglue",
+      "desc": "A dry rabbitglue east of the mastcap. Packed rust coats rabbitglue.",
+      "brief": "Dry rabbitglue, packed rust.",
+      "exits": { "west": { "to": "rust_mastcap" } },
+      "actions": [
+        {
+          "id": "pinch_rabbitglue",
+          "label": "pinch the rabbitglue",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rabbitglue. They packed it on the mastcap and packed rust around it."]
           ]
         }
       ]
@@ -17785,6 +17921,9 @@
     "pinch the stemson",
     "go east",
     "pinch the roundseizing",
+    "go east",
+    "pinch the anime",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -17795,6 +17934,9 @@
     "pinch the oar",
     "go east",
     "pinch the clove",
+    "go east",
+    "pinch the copalite",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -17821,6 +17963,9 @@
     "pinch the girtline",
     "go east",
     "pinch the mastcap",
+    "go east",
+    "pinch the rabbitglue",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17835,6 +17980,9 @@
     "pinch the parcelling",
     "go east",
     "pinch the throatseizing",
+    "go east",
+    "pinch the fishglue",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17842,6 +17990,9 @@
     "pinch the bunt",
     "go east",
     "pinch the sheetbend",
+    "go east",
+    "pinch the casein",
+    "go west",
     "go west",
     "go south",
     "go east",
@@ -17852,6 +18003,9 @@
     "pinch the worming",
     "go east",
     "pinch the rackseizing",
+    "go east",
+    "pinch the isinglass",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17859,6 +18013,9 @@
     "pinch the sprit",
     "go east",
     "pinch the sheepshank",
+    "go east",
+    "pinch the distemper",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17870,6 +18027,9 @@
     "pinch the felt",
     "go east",
     "pinch the catspaw",
+    "go east",
+    "pinch the gesso",
+    "go west",
     "go west",
     "go south",
     "go east",
