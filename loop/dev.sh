@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# tinyforge dev loop — assess -> one change -> verify -> commit. Red reverts.
+# tinyforge dev loop — assess -> one change -> verify -> commit -> push. Red reverts.
 #
 #   loop/dev.sh          one cycle
 #   loop/dev.sh 5        up to five cycles (stops when queue is empty)
@@ -22,6 +22,15 @@ git rev-parse HEAD >/dev/null 2>&1 || { echo "not a git repo — run: git init &
 
 count_tests() { npm run -s test 2>/dev/null | grep -Eo '^# pass [0-9]+' | grep -Eo '[0-9]+' || echo 0; }
 
+# Git ignores post-commit failures. Require a successful push before continuing,
+# including when hooks were skipped or could not publish the commit.
+push_commit() {
+  node loop/push.mjs || {
+    echo "push failed — commit kept locally; retry: node loop/push.mjs" >&2
+    exit 1
+  }
+}
+
 RUN_DIR=""
 
 for ((c = 1; c <= CYCLES; c++)); do
@@ -38,6 +47,7 @@ for ((c = 1; c <= CYCLES; c++)); do
   git add -A -- reports queue
   if ! git diff --cached --quiet; then
     git -c user.email="loop@tinyforge" -c user.name="tinyforge-loop" commit -qm "triage: reports -> issues"
+    push_commit
   fi
   REF="$(git rev-parse HEAD)"
   FINDING="$(ls queue/P0-*.json queue/P1-*.json queue/P2-*.json 2>/dev/null | head -1 || true)"
@@ -68,8 +78,8 @@ for ((c = 1; c <= CYCLES; c++)); do
   AGENT_RC=$?
   set -e
 
-  # integrity: the loop and charter are not the agent's to edit; tests may not shrink
-  BAD_EDITS="$( { git diff --name-only "$REF" -- loop/ AGENT.md; git ls-files --others --exclude-standard -- loop/ AGENT.md; } | tr '\n' ' ')"
+  # integrity: automation and charters are not the agent's to edit; tests may not shrink
+  BAD_EDITS="$( { git diff --name-only "$REF" -- loop/ .githooks/ .gitattributes AGENT.md AGENTS.md; git ls-files --others --exclude-standard -- loop/ .githooks/ .gitattributes AGENT.md AGENTS.md; } | tr '\n' ' ')"
   DELETED_TESTS="$(git diff --diff-filter=D --name-only "$REF" -- test/ | tr '\n' ' ')"
   TESTS_AFTER="$(count_tests)"
 
@@ -89,8 +99,10 @@ for ((c = 1; c <= CYCLES; c++)); do
     git restore --source="$REF" --staged --worktree -- .
     git clean -fd -- . >/dev/null
     mkdir -p queue/failed && mv "$FINDING" "queue/failed/$(basename "$FINDING")"
-    git add -A >/dev/null 2>&1 && git -c user.email="loop@tinyforge" -c user.name="tinyforge-loop" \
-      commit -qm "loop: quarantine $(basename "$FINDING") ($REASON)" >/dev/null 2>&1 || true
+    git add -A
+    git -c user.email="loop@tinyforge" -c user.name="tinyforge-loop" \
+      commit -qm "loop: quarantine $(basename "$FINDING") ($REASON)"
+    push_commit
     FAILS=$((FAILS + 1))
     [[ "$FAILS" -ge 3 ]] && { echo "3 consecutive failures — circuit breaker, stopping"; exit 1; }
     continue
@@ -101,6 +113,7 @@ for ((c = 1; c <= CYCLES; c++)); do
   mkdir -p done && mv "$FINDING" "done/$(basename "$FINDING")"
   git add -A
   git commit -q -m "loop: $TITLE" -m "finding: $(basename "$FINDING") | verified: npm run verify green"
+  push_commit
   echo "✓ cycle $c landed: $(git log -1 --format=%h) loop: $TITLE"
 done
 if (( FAILS > 0 )); then exit 1; fi

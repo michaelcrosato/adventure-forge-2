@@ -22,6 +22,12 @@ function fixture(t: TestContext) {
   put("loop/dev-prompt.md", "{{FINDING}}\n");
   put("loop/player-prompt.md", "Seed {{SEED}}, turns {{MAX_GAME_TURNS}}\n");
   put("loop/report-check.mjs", "process.exit(Number(process.env.STUB_REPORT_EXIT ?? 0));\n");
+  put("loop/push.mjs", `import { appendFileSync, mkdirSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+mkdirSync("runs", { recursive: true });
+appendFileSync("runs/push-called", execFileSync("git", ["rev-parse", "HEAD"], { encoding: "utf8" }));
+process.exit(Number(process.env.STUB_PUSH_EXIT ?? 0));
+`);
   put("src/example.ts", "export const value = 1;\n");
   put("src/mcp.ts", "// fixture MCP entrypoint\n");
   put("test/example.test.ts", "fixture test\n");
@@ -35,6 +41,7 @@ function fixture(t: TestContext) {
   git("config", "user.name", "Loop Test");
   git("config", "user.email", "loop-test@example.invalid");
   git("config", "core.autocrlf", "false");
+  git("config", "core.hooksPath", join(root, ".git", "hooks"));
   git("config", "commit.gpgsign", "false");
   git("add", "-A");
   git("commit", "-qm", "fixture");
@@ -65,6 +72,10 @@ test("failed dev cycle restores staged edits and rejects new protected files", {
 printf 'bad staged code\\n' > src/example.ts
 git add src/example.ts
 printf 'forbidden addition\\n' > loop/injected.sh
+mkdir -p .githooks
+printf 'forbidden hook\\n' > .githooks/post-commit
+printf 'forbidden attributes\\n' > .gitattributes
+printf 'forbidden charter\\n' > AGENTS.md
 printf 'cycle evidence\\n'
 `);
   f.git("add", "bin/claude", "bin/npx");
@@ -73,6 +84,10 @@ printf 'cycle evidence\\n'
   const result = f.run("dev.sh");
   assert.equal(result.status, 1, result.stderr);
   assert.match(result.stdout, /edited protected paths:.*injected/);
+  for (const file of [".githooks/post-commit", ".gitattributes", "AGENTS.md"]) {
+    assert.ok(result.stdout.includes(file), result.stdout);
+    assert.equal(existsSync(join(f.root, file)), false);
+  }
   assert.equal(readFileSync(join(f.root, "src", "example.ts"), "utf8"), "export const value = 1;\n");
   assert.equal(existsSync(join(f.root, "loop", "injected.sh")), false);
   assert.ok(existsSync(join(f.root, "queue", "failed", "P1-issue-12345678.json")));
@@ -81,6 +96,8 @@ printf 'cycle evidence\\n'
   const runDir = readdirSync(join(f.root, "runs")).find((name) => name.startsWith("dev-"));
   assert.ok(runDir);
   assert.match(readFileSync(join(f.root, "runs", runDir, "cycle-1.json"), "utf8"), /cycle evidence/);
+  const pushes = readFileSync(join(f.root, "runs", "push-called"), "utf8").trim().split("\n");
+  assert.deepEqual(pushes, [f.git("rev-parse", "HEAD~1"), f.git("rev-parse", "HEAD")]);
 });
 
 test("new source files satisfy the dev driver's meaningful-change gate", { skip: !bashAvailable }, (t) => {
@@ -93,6 +110,60 @@ test("new source files satisfy the dev driver's meaningful-change gate", { skip:
   assert.match(result.stdout, /cycle 1 landed/);
   assert.ok(existsSync(join(f.root, "done", "P1-issue-12345678.json")));
   assert.match(f.git("show", "HEAD:src/added.ts"), /added = true/);
+  assert.equal(readFileSync(join(f.root, "runs", "push-called"), "utf8").trim(), f.git("rev-parse", "HEAD"));
+});
+
+test("triage push failures preserve the commit and stop before a paid agent starts", { skip: !bashAvailable }, (t) => {
+  const f = fixture(t);
+  f.put("bin/npx", "#!/usr/bin/env bash\nmkdir -p reports/triaged\nmv reports/fresh.json reports/triaged/fresh.json\n");
+  f.git("add", "bin/npx");
+  f.git("commit", "-qm", "test triage");
+  const before = f.git("rev-parse", "HEAD");
+  f.put("reports/fresh.json", "raw report evidence\n");
+  const result = f.run("dev.sh", ["2"], { STUB_PUSH_EXIT: "1" });
+  assert.equal(result.status, 1, result.stderr);
+  assert.match(result.stderr, /push failed.*commit kept locally/);
+  assert.doesNotMatch(result.stdout, /cycle 2\/2/);
+  assert.equal(f.git("rev-parse", "HEAD~1"), before);
+  assert.equal(f.git("log", "-1", "--format=%s"), "triage: reports -> issues");
+  assert.equal(f.git("show", "HEAD:reports/triaged/fresh.json"), "raw report evidence");
+  assert.equal(f.git("status", "--porcelain"), "");
+  assert.equal(existsSync(join(f.root, "runs", "claude-called")), false);
+  assert.equal(readFileSync(join(f.root, "runs", "push-called"), "utf8").trim(), f.git("rev-parse", "HEAD"));
+});
+
+test("quarantine push failures preserve the commit and stop further cycles", { skip: !bashAvailable }, (t) => {
+  const f = fixture(t);
+  const before = f.git("rev-parse", "HEAD");
+  const result = f.run("dev.sh", ["2"], { STUB_CLAUDE_EXIT: "1", STUB_PUSH_EXIT: "1" });
+  assert.equal(result.status, 1, result.stderr);
+  assert.match(result.stderr, /push failed.*commit kept locally/);
+  assert.doesNotMatch(result.stdout, /cycle 2\/2/);
+  assert.equal(f.git("rev-parse", "HEAD~1"), before);
+  assert.match(f.git("log", "-1", "--format=%s"), /^loop: quarantine/);
+  assert.ok(f.git("show", "HEAD:queue/failed/P1-issue-12345678.json"));
+  assert.equal(f.git("status", "--porcelain"), "");
+  assert.equal(readFileSync(join(f.root, "runs", "claude-called"), "utf8"), "called\n");
+  assert.equal(readFileSync(join(f.root, "runs", "push-called"), "utf8").trim(), f.git("rev-parse", "HEAD"));
+});
+
+test("successful cycle push failures preserve verified work without reporting it landed", { skip: !bashAvailable }, (t) => {
+  const f = fixture(t);
+  f.put("bin/claude", "#!/usr/bin/env bash\nprintf 'called\\n' >> runs/claude-called\nprintf 'export const added = true;\\n' > src/added.ts\n");
+  f.git("add", "bin/claude");
+  f.git("commit", "-qm", "test agent");
+  const before = f.git("rev-parse", "HEAD");
+  const result = f.run("dev.sh", ["2"], { STUB_PUSH_EXIT: "1" });
+  assert.equal(result.status, 1, result.stderr);
+  assert.match(result.stderr, /push failed.*commit kept locally/);
+  assert.doesNotMatch(result.stdout, /landed|reverting|cycle 2\/2/);
+  assert.equal(f.git("rev-parse", "HEAD~1"), before);
+  assert.equal(f.git("log", "-1", "--format=%s"), "loop: fixture issue");
+  assert.equal(f.git("show", "HEAD:src/added.ts"), "export const added = true;");
+  assert.ok(f.git("show", "HEAD:done/P1-issue-12345678.json"));
+  assert.equal(f.git("status", "--porcelain"), "");
+  assert.equal(readFileSync(join(f.root, "runs", "claude-called"), "utf8"), "called\n");
+  assert.equal(readFileSync(join(f.root, "runs", "push-called"), "utf8").trim(), f.git("rev-parse", "HEAD"));
 });
 
 test("triage failures stop the dev driver before a paid agent starts", { skip: !bashAvailable }, (t) => {

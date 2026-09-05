@@ -8,6 +8,9 @@
     "node": ">=20"
   },
   "scripts": {
+    "prepare": "node loop/install-hooks.mjs",
+    "hooks:install": "node loop/install-hooks.mjs",
+    "push": "node loop/push.mjs",
     "mcp": "tsx src/mcp.ts",
     "play": "tsx src/play.ts",
     "typecheck": "tsc --noEmit",

@@ -18,6 +18,19 @@ npm run measure                    # full-score walkthrough over real MCP
 npm run fleet -- --mock --count 2   # full walkthroughs through the API driver, no API calls
 ```
 
+Dependency installation also installs the tracked post-commit hook. Every
+ordinary `git commit` then pushes the current branch to `origin` (GitHub),
+including new branches. Merge, applied-patch, and history-rewrite hooks also
+attempt to publish the resulting branch. Run `npm run hooks:install` to enable it in an existing
+checkout or after installing with `--ignore-scripts`. Existing custom hooks are
+preserved; installation reports a conflict instead of silently replacing them.
+
+Pushes never force remote history. If authentication, connectivity, a divergent
+remote, or detached HEAD prevents a push, the hook reports the error and keeps
+the local commit. Git itself does not undo or fail an already-created commit
+because its post-commit hook failed. Resolve the problem and run `npm run push`.
+The dev loop explicitly checks pushing after each commit and stops on failure.
+
 There is no web server. The terminal accepts a menu number, an action label,
 `look`, or `q`. MCP exposes `new_game`, `act`, and `look`; every action returns
 its events, scene, inventory, and next numbered menu in one text block. `look`
@@ -64,7 +77,7 @@ rejects a wrong world or an illegal action instead of silently ignoring it.
 ```text
 blind players -> reports/*.json -> triage -> queue/*-issue-*.json
                                                |
-                                      dev agent -> verify -> commit
+                                      dev agent -> verify -> commit -> push
 ```
 
 The MCP lane uses Claude Code; the direct API lane sends only rendered game text

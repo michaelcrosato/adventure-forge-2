@@ -1,0 +1,3 @@
+#!/bin/sh
+# Every ordinary commit immediately publishes its current branch to origin.
+exec node "$(git rev-parse --show-toplevel)/loop/push.mjs"

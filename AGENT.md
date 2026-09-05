@@ -26,4 +26,6 @@ this file. The driver reverts any cycle that tries.
 
 ## Cycle contract
 
-One finding → one focused change → verify green → the DRIVER commits.
+One finding → one focused change → verify green → the DRIVER commits and pushes
+to GitHub (`origin`). Every commit must be pushed before the next cycle. If a
+push fails, preserve the local commit and stop until it can be pushed normally.
