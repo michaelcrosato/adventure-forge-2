@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 6210,
+  "maxScore": 6250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -12422,7 +12422,7 @@
       "name": "Rust Elemi",
       "desc": "A dry elemi east of the chainwale. Packed rust coats elemi.",
       "brief": "Dry elemi, packed rust.",
-      "exits": { "west": { "to": "rust_chainwale" } },
+      "exits": { "west": { "to": "rust_chainwale" }, "east": { "to": "rust_makore" } },
       "actions": [
         {
           "id": "pinch_elemi",
@@ -12431,6 +12431,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard elemi. They set it on the chainwale and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_makore": {
+      "name": "Rust Makore",
+      "desc": "A dry makore east of the elemi. Packed rust coats makore.",
+      "brief": "Dry makore, packed rust.",
+      "exits": { "west": { "to": "rust_elemi" } },
+      "actions": [
+        {
+          "id": "pinch_makore",
+          "label": "pinch the makore",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard makore. They packed it on the elemi and packed rust around it."]
           ]
         }
       ]
@@ -12490,7 +12507,7 @@
       "name": "Rust Sandarac",
       "desc": "A dry sandarac east of the futtockband. Packed rust coats sandarac.",
       "brief": "Dry sandarac, packed rust.",
-      "exits": { "west": { "to": "rust_futtockband" } },
+      "exits": { "west": { "to": "rust_futtockband" }, "east": { "to": "rust_afzelia" } },
       "actions": [
         {
           "id": "pinch_sandarac",
@@ -12499,6 +12516,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sandarac. They laid it on the futtockband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_afzelia": {
+      "name": "Rust Afzelia",
+      "desc": "A dry afzelia east of the sandarac. Packed rust coats afzelia.",
+      "brief": "Dry afzelia, packed rust.",
+      "exits": { "west": { "to": "rust_sandarac" } },
+      "actions": [
+        {
+          "id": "pinch_afzelia",
+          "label": "pinch the afzelia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard afzelia. They packed it on the sandarac and packed rust around it."]
           ]
         }
       ]
@@ -12558,7 +12592,7 @@
       "name": "Rust Mastic",
       "desc": "A dry mastic east of the crowfoot. Packed rust coats mastic.",
       "brief": "Dry mastic, packed rust.",
-      "exits": { "west": { "to": "rust_crowfoot" } },
+      "exits": { "west": { "to": "rust_crowfoot" }, "east": { "to": "rust_opepe" } },
       "actions": [
         {
           "id": "pinch_mastic",
@@ -12567,6 +12601,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mastic. They packed it on the crowfoot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_opepe": {
+      "name": "Rust Opepe",
+      "desc": "A dry opepe east of the mastic. Packed rust coats opepe.",
+      "brief": "Dry opepe, packed rust.",
+      "exits": { "west": { "to": "rust_mastic" } },
+      "actions": [
+        {
+          "id": "pinch_opepe",
+          "label": "pinch the opepe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard opepe. They packed it on the mastic and packed rust around it."]
           ]
         }
       ]
@@ -12660,7 +12711,7 @@
       "name": "Rust Jelutong",
       "desc": "A dry jelutong east of the jigger. Packed rust coats jelutong.",
       "brief": "Dry jelutong, packed rust.",
-      "exits": { "west": { "to": "rust_jigger" } },
+      "exits": { "west": { "to": "rust_jigger" }, "east": { "to": "rust_danta" } },
       "actions": [
         {
           "id": "pinch_jelutong",
@@ -12669,6 +12720,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jelutong. They stacked it on the jigger and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_danta": {
+      "name": "Rust Danta",
+      "desc": "A dry danta east of the jelutong. Packed rust coats danta.",
+      "brief": "Dry danta, packed rust.",
+      "exits": { "west": { "to": "rust_jelutong" } },
+      "actions": [
+        {
+          "id": "pinch_danta",
+          "label": "pinch the danta",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard danta. They packed it on the jelutong and packed rust around it."]
           ]
         }
       ]
@@ -12745,7 +12813,7 @@
       "name": "Rust Ramin",
       "desc": "A dry ramin east of the clewgarnet. Packed rust coats ramin.",
       "brief": "Dry ramin, packed rust.",
-      "exits": { "west": { "to": "rust_clewgarnet" } },
+      "exits": { "west": { "to": "rust_clewgarnet" }, "east": { "to": "rust_niangon" } },
       "actions": [
         {
           "id": "pinch_ramin",
@@ -12754,6 +12822,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ramin. They laid it on the clewgarnet and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_niangon": {
+      "name": "Rust Niangon",
+      "desc": "A dry niangon east of the ramin. Packed rust coats niangon.",
+      "brief": "Dry niangon, packed rust.",
+      "exits": { "west": { "to": "rust_ramin" } },
+      "actions": [
+        {
+          "id": "pinch_niangon",
+          "label": "pinch the niangon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard niangon. They packed it on the ramin and packed rust around it."]
           ]
         }
       ]
@@ -12813,7 +12898,7 @@
       "name": "Rust Afromosia",
       "desc": "A dry afromosia east of the backrope. Packed rust coats afromosia.",
       "brief": "Dry afromosia, packed rust.",
-      "exits": { "west": { "to": "rust_backrope" } },
+      "exits": { "west": { "to": "rust_backrope" }, "east": { "to": "rust_utile" } },
       "actions": [
         {
           "id": "pinch_afromosia",
@@ -12822,6 +12907,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard afromosia. They cut it on the backrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_utile": {
+      "name": "Rust Utile",
+      "desc": "A dry utile east of the afromosia. Packed rust coats utile.",
+      "brief": "Dry utile, packed rust.",
+      "exits": { "west": { "to": "rust_afromosia" } },
+      "actions": [
+        {
+          "id": "pinch_utile",
+          "label": "pinch the utile",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard utile. They packed it on the afromosia and packed rust around it."]
           ]
         }
       ]
@@ -12898,7 +13000,7 @@
       "name": "Rust Sapele",
       "desc": "A dry sapele east of the woolding. Packed rust coats sapele.",
       "brief": "Dry sapele, packed rust.",
-      "exits": { "west": { "to": "rust_woolding" } },
+      "exits": { "west": { "to": "rust_woolding" }, "east": { "to": "rust_koto" } },
       "actions": [
         {
           "id": "pinch_sapele",
@@ -12907,6 +13009,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sapele. They bound it on the woolding and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_koto": {
+      "name": "Rust Koto",
+      "desc": "A dry koto east of the sapele. Packed rust coats koto.",
+      "brief": "Dry koto, packed rust.",
+      "exits": { "west": { "to": "rust_sapele" } },
+      "actions": [
+        {
+          "id": "pinch_koto",
+          "label": "pinch the koto",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard koto. They packed it on the sapele and packed rust around it."]
           ]
         }
       ]
@@ -12949,7 +13068,7 @@
       "name": "Rust Cocobolo",
       "desc": "A dry cocobolo east of the eyeplice. Packed rust coats cocobolo.",
       "brief": "Dry cocobolo, packed rust.",
-      "exits": { "west": { "to": "rust_eyeplice" } },
+      "exits": { "west": { "to": "rust_eyeplice" }, "east": { "to": "rust_abachi" } },
       "actions": [
         {
           "id": "pinch_cocobolo",
@@ -12958,6 +13077,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cocobolo. They packed it on the eyeplice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_abachi": {
+      "name": "Rust Abachi",
+      "desc": "A dry abachi east of the cocobolo. Packed rust coats abachi.",
+      "brief": "Dry abachi, packed rust.",
+      "exits": { "west": { "to": "rust_cocobolo" } },
+      "actions": [
+        {
+          "id": "pinch_abachi",
+          "label": "pinch the abachi",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard abachi. They packed it on the cocobolo and packed rust around it."]
           ]
         }
       ]
@@ -23203,6 +23339,9 @@
     "pinch the chainwale",
     "go east",
     "pinch the elemi",
+    "go east",
+    "pinch the makore",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23215,6 +23354,9 @@
     "pinch the futtockband",
     "go east",
     "pinch the sandarac",
+    "go east",
+    "pinch the afzelia",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23227,6 +23369,9 @@
     "pinch the crowfoot",
     "go east",
     "pinch the mastic",
+    "go east",
+    "pinch the opepe",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23246,6 +23391,9 @@
     "pinch the jigger",
     "go east",
     "pinch the jelutong",
+    "go east",
+    "pinch the danta",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23260,6 +23408,9 @@
     "pinch the clewgarnet",
     "go east",
     "pinch the ramin",
+    "go east",
+    "pinch the niangon",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23272,6 +23423,9 @@
     "pinch the backrope",
     "go east",
     "pinch the afromosia",
+    "go east",
+    "pinch the utile",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23286,6 +23440,9 @@
     "pinch the woolding",
     "go east",
     "pinch the sapele",
+    "go east",
+    "pinch the koto",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23296,6 +23453,9 @@
     "pinch the eyeplice",
     "go east",
     "pinch the cocobolo",
+    "go east",
+    "pinch the abachi",
+    "go west",
     "go west",
     "go west",
     "go west",
