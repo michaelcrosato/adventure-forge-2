@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 6850,
+  "maxScore": 6890,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -11673,7 +11673,7 @@
       "name": "Rust Neem",
       "desc": "A dry neem east of the petaling. Packed rust coats neem.",
       "brief": "Dry neem, packed rust.",
-      "exits": { "west": { "to": "rust_petaling" } },
+      "exits": { "west": { "to": "rust_petaling" }, "east": { "to": "rust_bluegum" } },
       "actions": [
         {
           "id": "pinch_neem",
@@ -11682,6 +11682,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard neem. They packed it on the petaling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bluegum": {
+      "name": "Rust Bluegum",
+      "desc": "A dry bluegum east of the neem. Packed rust coats bluegum.",
+      "brief": "Dry bluegum, packed rust.",
+      "exits": { "west": { "to": "rust_neem" } },
+      "actions": [
+        {
+          "id": "pinch_bluegum",
+          "label": "pinch the bluegum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bluegum. They packed it on the neem and packed rust around it."]
           ]
         }
       ]
@@ -11826,7 +11843,7 @@
       "name": "Rust Salai",
       "desc": "A dry salai east of the deodar. Packed rust coats salai.",
       "brief": "Dry salai, packed rust.",
-      "exits": { "west": { "to": "rust_deodar" } },
+      "exits": { "west": { "to": "rust_deodar" }, "east": { "to": "rust_stringybark" } },
       "actions": [
         {
           "id": "pinch_salai",
@@ -11835,6 +11852,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard salai. They packed it on the deodar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_stringybark": {
+      "name": "Rust Stringybark",
+      "desc": "A dry stringybark east of the salai. Packed rust coats stringybark.",
+      "brief": "Dry stringybark, packed rust.",
+      "exits": { "west": { "to": "rust_salai" } },
+      "actions": [
+        {
+          "id": "pinch_stringybark",
+          "label": "pinch the stringybark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard stringybark. They packed it on the salai and packed rust around it."]
           ]
         }
       ]
@@ -12166,7 +12200,7 @@
       "name": "Rust Bija",
       "desc": "A dry bija east of the kekatong. Packed rust coats bija.",
       "brief": "Dry bija, packed rust.",
-      "exits": { "west": { "to": "rust_kekatong" } },
+      "exits": { "west": { "to": "rust_kekatong" }, "east": { "to": "rust_messmate" } },
       "actions": [
         {
           "id": "pinch_bija",
@@ -12175,6 +12209,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bija. They packed it on the kekatong and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_messmate": {
+      "name": "Rust Messmate",
+      "desc": "A dry messmate east of the bija. Packed rust coats messmate.",
+      "brief": "Dry messmate, packed rust.",
+      "exits": { "west": { "to": "rust_bija" } },
+      "actions": [
+        {
+          "id": "pinch_messmate",
+          "label": "pinch the messmate",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard messmate. They packed it on the bija and packed rust around it."]
           ]
         }
       ]
@@ -12353,7 +12404,7 @@
       "name": "Rust Arjun",
       "desc": "A dry arjun east of the sesendok. Packed rust coats arjun.",
       "brief": "Dry arjun, packed rust.",
-      "exits": { "west": { "to": "rust_sesendok" } },
+      "exits": { "west": { "to": "rust_sesendok" }, "east": { "to": "rust_ironbark" } },
       "actions": [
         {
           "id": "pinch_arjun",
@@ -12362,6 +12413,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard arjun. They packed it on the sesendok and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ironbark": {
+      "name": "Rust Ironbark",
+      "desc": "A dry ironbark east of the arjun. Packed rust coats ironbark.",
+      "brief": "Dry ironbark, packed rust.",
+      "exits": { "west": { "to": "rust_arjun" } },
+      "actions": [
+        {
+          "id": "pinch_ironbark",
+          "label": "pinch the ironbark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ironbark. They packed it on the arjun and packed rust around it."]
           ]
         }
       ]
@@ -12523,7 +12591,7 @@
       "name": "Rust Palash",
       "desc": "A dry palash east of the terap. Packed rust coats palash.",
       "brief": "Dry palash, packed rust.",
-      "exits": { "west": { "to": "rust_terap" } },
+      "exits": { "west": { "to": "rust_terap" }, "east": { "to": "rust_blackbutt" } },
       "actions": [
         {
           "id": "pinch_palash",
@@ -12532,6 +12600,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palash. They packed it on the terap and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_blackbutt": {
+      "name": "Rust Blackbutt",
+      "desc": "A dry blackbutt east of the palash. Packed rust coats blackbutt.",
+      "brief": "Dry blackbutt, packed rust.",
+      "exits": { "west": { "to": "rust_palash" } },
+      "actions": [
+        {
+          "id": "pinch_blackbutt",
+          "label": "pinch the blackbutt",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard blackbutt. They packed it on the palash and packed rust around it."]
           ]
         }
       ]
@@ -12676,7 +12761,7 @@
       "name": "Rust Siris",
       "desc": "A dry siris east of the palosapis. Packed rust coats siris.",
       "brief": "Dry siris, packed rust.",
-      "exits": { "west": { "to": "rust_palosapis" } },
+      "exits": { "west": { "to": "rust_palosapis" }, "east": { "to": "rust_spottedgum" } },
       "actions": [
         {
           "id": "pinch_siris",
@@ -12685,6 +12770,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard siris. They packed it on the palosapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_spottedgum": {
+      "name": "Rust Spottedgum",
+      "desc": "A dry spottedgum east of the siris. Packed rust coats spottedgum.",
+      "brief": "Dry spottedgum, packed rust.",
+      "exits": { "west": { "to": "rust_siris" } },
+      "actions": [
+        {
+          "id": "pinch_spottedgum",
+          "label": "pinch the spottedgum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard spottedgum. They packed it on the siris and packed rust around it."]
           ]
         }
       ]
@@ -12846,7 +12948,7 @@
       "name": "Rust Babul",
       "desc": "A dry babul east of the mayapis. Packed rust coats babul.",
       "brief": "Dry babul, packed rust.",
-      "exits": { "west": { "to": "rust_mayapis" } },
+      "exits": { "west": { "to": "rust_mayapis" }, "east": { "to": "rust_tallowwood" } },
       "actions": [
         {
           "id": "pinch_babul",
@@ -12855,6 +12957,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard babul. They packed it on the mayapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tallowwood": {
+      "name": "Rust Tallowwood",
+      "desc": "A dry tallowwood east of the babul. Packed rust coats tallowwood.",
+      "brief": "Dry tallowwood, packed rust.",
+      "exits": { "west": { "to": "rust_babul" } },
+      "actions": [
+        {
+          "id": "pinch_tallowwood",
+          "label": "pinch the tallowwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tallowwood. They packed it on the babul and packed rust around it."]
           ]
         }
       ]
@@ -14699,7 +14818,7 @@
       "name": "Rust Palmyra",
       "desc": "A dry palmyra east of the keranji. Packed rust coats palmyra.",
       "brief": "Dry palmyra, packed rust.",
-      "exits": { "west": { "to": "rust_keranji" } },
+      "exits": { "west": { "to": "rust_keranji" }, "east": { "to": "rust_karri" } },
       "actions": [
         {
           "id": "pinch_palmyra",
@@ -14708,6 +14827,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palmyra. They packed it on the keranji and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_karri": {
+      "name": "Rust Karri",
+      "desc": "A dry karri east of the palmyra. Packed rust coats karri.",
+      "brief": "Dry karri, packed rust.",
+      "exits": { "west": { "to": "rust_palmyra" } },
+      "actions": [
+        {
+          "id": "pinch_karri",
+          "label": "pinch the karri",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard karri. They packed it on the palmyra and packed rust around it."]
           ]
         }
       ]
@@ -25262,6 +25398,9 @@
     "pinch the petaling",
     "go east",
     "pinch the neem",
+    "go east",
+    "pinch the bluegum",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25289,6 +25428,9 @@
     "pinch the deodar",
     "go east",
     "pinch the salai",
+    "go east",
+    "pinch the stringybark",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25348,6 +25490,9 @@
     "pinch the kekatong",
     "go east",
     "pinch the bija",
+    "go east",
+    "pinch the messmate",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25380,6 +25525,9 @@
     "pinch the sesendok",
     "go east",
     "pinch the arjun",
+    "go east",
+    "pinch the ironbark",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25409,6 +25557,9 @@
     "pinch the terap",
     "go east",
     "pinch the palash",
+    "go east",
+    "pinch the blackbutt",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25436,6 +25587,9 @@
     "pinch the palosapis",
     "go east",
     "pinch the siris",
+    "go east",
+    "pinch the spottedgum",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25465,6 +25619,9 @@
     "pinch the mayapis",
     "go east",
     "pinch the babul",
+    "go east",
+    "pinch the tallowwood",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25773,6 +25930,9 @@
     "pinch the keranji",
     "go east",
     "pinch the palmyra",
+    "go east",
+    "pinch the karri",
+    "go west",
     "go west",
     "go west",
     "go west",
