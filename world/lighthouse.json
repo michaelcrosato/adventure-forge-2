@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 6170,
+  "maxScore": 6210,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13034,7 +13034,7 @@
       "name": "Rust Bubinga",
       "desc": "A dry bubinga east of the shortsplice. Packed rust coats bubinga.",
       "brief": "Dry bubinga, packed rust.",
-      "exits": { "west": { "to": "rust_shortsplice" } },
+      "exits": { "west": { "to": "rust_shortsplice" }, "east": { "to": "rust_obeche" } },
       "actions": [
         {
           "id": "pinch_bubinga",
@@ -13043,6 +13043,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bubinga. They set it on the shortsplice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_obeche": {
+      "name": "Rust Obeche",
+      "desc": "A dry obeche east of the bubinga. Packed rust coats obeche.",
+      "brief": "Dry obeche, packed rust.",
+      "exits": { "west": { "to": "rust_bubinga" } },
+      "actions": [
+        {
+          "id": "pinch_obeche",
+          "label": "pinch the obeche",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard obeche. They packed it on the bubinga and packed rust around it."]
           ]
         }
       ]
@@ -13119,7 +13136,7 @@
       "name": "Rust Wenge",
       "desc": "A dry wenge east of the sailcloth. Packed rust coats wenge.",
       "brief": "Dry wenge, packed rust.",
-      "exits": { "west": { "to": "rust_sailcloth" } },
+      "exits": { "west": { "to": "rust_sailcloth" }, "east": { "to": "rust_limba" } },
       "actions": [
         {
           "id": "pinch_wenge",
@@ -13128,6 +13145,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wenge. They laid it on the sailcloth and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_limba": {
+      "name": "Rust Limba",
+      "desc": "A dry limba east of the wenge. Packed rust coats limba.",
+      "brief": "Dry limba, packed rust.",
+      "exits": { "west": { "to": "rust_wenge" } },
+      "actions": [
+        {
+          "id": "pinch_limba",
+          "label": "pinch the limba",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard limba. They packed it on the wenge and packed rust around it."]
           ]
         }
       ]
@@ -13204,7 +13238,7 @@
       "name": "Rust Zebrawood",
       "desc": "A dry zebrawood east of the canvas. Packed rust coats zebrawood.",
       "brief": "Dry zebrawood, packed rust.",
-      "exits": { "west": { "to": "rust_canvas" } },
+      "exits": { "west": { "to": "rust_canvas" }, "east": { "to": "rust_lacewood" } },
       "actions": [
         {
           "id": "pinch_zebrawood",
@@ -13217,7 +13251,23 @@
         }
       ]
     },
-
+    "rust_lacewood": {
+      "name": "Rust Lacewood",
+      "desc": "A dry lacewood east of the zebrawood. Packed rust coats lacewood.",
+      "brief": "Dry lacewood, packed rust.",
+      "exits": { "west": { "to": "rust_zebrawood" } },
+      "actions": [
+        {
+          "id": "pinch_lacewood",
+          "label": "pinch the lacewood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lacewood. They packed it on the zebrawood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_rim": {
       "name": "Rust Rim",
       "desc": "A dry rim east of the bay. A rust wad is packed in a crack.",
@@ -13290,7 +13340,7 @@
       "name": "Rust Teakwood",
       "desc": "A dry teakwood east of the roping. Packed rust coats teakwood.",
       "brief": "Dry teakwood, packed rust.",
-      "exits": { "west": { "to": "rust_roping" } },
+      "exits": { "west": { "to": "rust_roping" }, "east": { "to": "rust_bloodwood" } },
       "actions": [
         {
           "id": "pinch_teakwood",
@@ -13299,6 +13349,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard teakwood. They stacked it on the roping and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bloodwood": {
+      "name": "Rust Bloodwood",
+      "desc": "A dry bloodwood east of the teakwood. Packed rust coats bloodwood.",
+      "brief": "Dry bloodwood, packed rust.",
+      "exits": { "west": { "to": "rust_teakwood" } },
+      "actions": [
+        {
+          "id": "pinch_bloodwood",
+          "label": "pinch the bloodwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bloodwood. They packed it on the teakwood and packed rust around it."]
           ]
         }
       ]
@@ -13392,7 +13459,7 @@
       "name": "Rust Purpleheart",
       "desc": "A dry purpleheart east of the yardsling. Packed rust coats purpleheart.",
       "brief": "Dry purpleheart, packed rust.",
-      "exits": { "west": { "to": "rust_yardsling" } },
+      "exits": { "west": { "to": "rust_yardsling" }, "east": { "to": "rust_snakewood" } },
       "actions": [
         {
           "id": "pinch_purpleheart",
@@ -13401,6 +13468,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard purpleheart. They laid it on the yardsling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_snakewood": {
+      "name": "Rust Snakewood",
+      "desc": "A dry snakewood east of the purpleheart. Packed rust coats snakewood.",
+      "brief": "Dry snakewood, packed rust.",
+      "exits": { "west": { "to": "rust_purpleheart" } },
+      "actions": [
+        {
+          "id": "pinch_snakewood",
+          "label": "pinch the snakewood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard snakewood. They packed it on the purpleheart and packed rust around it."]
           ]
         }
       ]
@@ -13477,7 +13561,7 @@
       "name": "Rust Padauk",
       "desc": "A dry padauk east of the reefearring. Packed rust coats padauk.",
       "brief": "Dry padauk, packed rust.",
-      "exits": { "west": { "to": "rust_reefearring" } },
+      "exits": { "west": { "to": "rust_reefearring" }, "east": { "to": "rust_satinwood" } },
       "actions": [
         {
           "id": "pinch_padauk",
@@ -13486,6 +13570,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard padauk. They cut it on the reefearring and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_satinwood": {
+      "name": "Rust Satinwood",
+      "desc": "A dry satinwood east of the padauk. Packed rust coats satinwood.",
+      "brief": "Dry satinwood, packed rust.",
+      "exits": { "west": { "to": "rust_padauk" } },
+      "actions": [
+        {
+          "id": "pinch_satinwood",
+          "label": "pinch the satinwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard satinwood. They packed it on the padauk and packed rust around it."]
           ]
         }
       ]
@@ -13545,7 +13646,7 @@
       "name": "Rust Meranti",
       "desc": "A dry meranti east of the slings. Packed rust coats meranti.",
       "brief": "Dry meranti, packed rust.",
-      "exits": { "west": { "to": "rust_slings" } },
+      "exits": { "west": { "to": "rust_slings" }, "east": { "to": "rust_tulipwood" } },
       "actions": [
         {
           "id": "pinch_meranti",
@@ -13554,6 +13655,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard meranti. They bound it on the slings and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tulipwood": {
+      "name": "Rust Tulipwood",
+      "desc": "A dry tulipwood east of the meranti. Packed rust coats tulipwood.",
+      "brief": "Dry tulipwood, packed rust.",
+      "exits": { "west": { "to": "rust_meranti" } },
+      "actions": [
+        {
+          "id": "pinch_tulipwood",
+          "label": "pinch the tulipwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tulipwood. They packed it on the meranti and packed rust around it."]
           ]
         }
       ]
@@ -13647,7 +13765,7 @@
       "name": "Rust Greenheart",
       "desc": "A dry greenheart east of the hanks. Packed rust coats greenheart.",
       "brief": "Dry greenheart, packed rust.",
-      "exits": { "west": { "to": "rust_hanks" } },
+      "exits": { "west": { "to": "rust_hanks" }, "east": { "to": "rust_kingwood" } },
       "actions": [
         {
           "id": "pinch_greenheart",
@@ -13656,6 +13774,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard greenheart. They packed it on the hanks and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kingwood": {
+      "name": "Rust Kingwood",
+      "desc": "A dry kingwood east of the greenheart. Packed rust coats kingwood.",
+      "brief": "Dry kingwood, packed rust.",
+      "exits": { "west": { "to": "rust_greenheart" } },
+      "actions": [
+        {
+          "id": "pinch_kingwood",
+          "label": "pinch the kingwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kingwood. They packed it on the greenheart and packed rust around it."]
           ]
         }
       ]
@@ -23175,6 +23310,9 @@
     "pinch the shortsplice",
     "go east",
     "pinch the bubinga",
+    "go east",
+    "pinch the obeche",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23188,6 +23326,9 @@
     "pinch the sailcloth",
     "go east",
     "pinch the wenge",
+    "go east",
+    "pinch the limba",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23203,6 +23344,9 @@
     "pinch the canvas",
     "go east",
     "pinch the zebrawood",
+    "go east",
+    "pinch the lacewood",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23222,6 +23366,9 @@
     "pinch the roping",
     "go east",
     "pinch the teakwood",
+    "go east",
+    "pinch the bloodwood",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23239,6 +23386,9 @@
     "pinch the yardsling",
     "go east",
     "pinch the purpleheart",
+    "go east",
+    "pinch the snakewood",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23253,6 +23403,9 @@
     "pinch the reefearring",
     "go east",
     "pinch the padauk",
+    "go east",
+    "pinch the satinwood",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23265,6 +23418,9 @@
     "pinch the slings",
     "go east",
     "pinch the meranti",
+    "go east",
+    "pinch the tulipwood",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23282,6 +23438,9 @@
     "pinch the hanks",
     "go east",
     "pinch the greenheart",
+    "go east",
+    "pinch the kingwood",
+    "go west",
     "go west",
     "go west",
     "go west",
