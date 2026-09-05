@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 6810,
+  "maxScore": 6850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13390,7 +13390,7 @@
       "name": "Rust Almon",
       "desc": "A dry almon east of the breu. Packed rust coats almon.",
       "brief": "Dry almon, packed rust.",
-      "exits": { "west": { "to": "rust_breu" } },
+      "exits": { "west": { "to": "rust_breu" }, "east": { "to": "rust_gisok" } },
       "actions": [
         {
           "id": "pinch_almon",
@@ -13399,6 +13399,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard almon. They packed it on the breu and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_gisok": {
+      "name": "Rust Gisok",
+      "desc": "A dry gisok east of the almon. Packed rust coats gisok.",
+      "brief": "Dry gisok, packed rust.",
+      "exits": { "west": { "to": "rust_almon" } },
+      "actions": [
+        {
+          "id": "pinch_gisok",
+          "label": "pinch the gisok",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gisok. They packed it on the almon and packed rust around it."]
           ]
         }
       ]
@@ -13526,7 +13543,7 @@
       "name": "Rust Tanguile",
       "desc": "A dry tanguile east of the virola. Packed rust coats tanguile.",
       "brief": "Dry tanguile, packed rust.",
-      "exits": { "west": { "to": "rust_virola" } },
+      "exits": { "west": { "to": "rust_virola" }, "east": { "to": "rust_malugai" } },
       "actions": [
         {
           "id": "pinch_tanguile",
@@ -13535,6 +13552,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tanguile. They packed it on the virola and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_malugai": {
+      "name": "Rust Malugai",
+      "desc": "A dry malugai east of the tanguile. Packed rust coats malugai.",
+      "brief": "Dry malugai, packed rust.",
+      "exits": { "west": { "to": "rust_tanguile" } },
+      "actions": [
+        {
+          "id": "pinch_malugai",
+          "label": "pinch the malugai",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard malugai. They packed it on the tanguile and packed rust around it."]
           ]
         }
       ]
@@ -13832,7 +13866,7 @@
       "name": "Rust Molave",
       "desc": "A dry molave east of the cedrorosa. Packed rust coats molave.",
       "brief": "Dry molave, packed rust.",
-      "exits": { "west": { "to": "rust_cedrorosa" } },
+      "exits": { "west": { "to": "rust_cedrorosa" }, "east": { "to": "rust_tiaong" } },
       "actions": [
         {
           "id": "pinch_molave",
@@ -13841,6 +13875,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard molave. They packed it on the cedrorosa and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tiaong": {
+      "name": "Rust Tiaong",
+      "desc": "A dry tiaong east of the molave. Packed rust coats tiaong.",
+      "brief": "Dry tiaong, packed rust.",
+      "exits": { "west": { "to": "rust_molave" } },
+      "actions": [
+        {
+          "id": "pinch_tiaong",
+          "label": "pinch the tiaong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tiaong. They packed it on the molave and packed rust around it."]
           ]
         }
       ]
@@ -13985,7 +14036,7 @@
       "name": "Rust Ipil",
       "desc": "A dry ipil east of the cambara. Packed rust coats ipil.",
       "brief": "Dry ipil, packed rust.",
-      "exits": { "west": { "to": "rust_cambara" } },
+      "exits": { "west": { "to": "rust_cambara" }, "east": { "to": "rust_redlauan" } },
       "actions": [
         {
           "id": "pinch_ipil",
@@ -13994,6 +14045,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ipil. They packed it on the cambara and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_redlauan": {
+      "name": "Rust Redlauan",
+      "desc": "A dry redlauan east of the ipil. Packed rust coats redlauan.",
+      "brief": "Dry redlauan, packed rust.",
+      "exits": { "west": { "to": "rust_ipil" } },
+      "actions": [
+        {
+          "id": "pinch_redlauan",
+          "label": "pinch the redlauan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard redlauan. They packed it on the ipil and packed rust around it."]
           ]
         }
       ]
@@ -14121,7 +14189,7 @@
       "name": "Rust Narra",
       "desc": "A dry narra east of the itauba. Packed rust coats narra.",
       "brief": "Dry narra, packed rust.",
-      "exits": { "west": { "to": "rust_itauba" } },
+      "exits": { "west": { "to": "rust_itauba" }, "east": { "to": "rust_bagras" } },
       "actions": [
         {
           "id": "pinch_narra",
@@ -14130,6 +14198,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard narra. They packed it on the itauba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bagras": {
+      "name": "Rust Bagras",
+      "desc": "A dry bagras east of the narra. Packed rust coats bagras.",
+      "brief": "Dry bagras, packed rust.",
+      "exits": { "west": { "to": "rust_narra" } },
+      "actions": [
+        {
+          "id": "pinch_bagras",
+          "label": "pinch the bagras",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bagras. They packed it on the narra and packed rust around it."]
           ]
         }
       ]
@@ -14274,7 +14359,7 @@
       "name": "Rust Yakal",
       "desc": "A dry yakal east of the goncalo. Packed rust coats yakal.",
       "brief": "Dry yakal, packed rust.",
-      "exits": { "west": { "to": "rust_goncalo" } },
+      "exits": { "west": { "to": "rust_goncalo" }, "east": { "to": "rust_whiteapo" } },
       "actions": [
         {
           "id": "pinch_yakal",
@@ -14283,6 +14368,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yakal. They packed it on the goncalo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_whiteapo": {
+      "name": "Rust Whiteapo",
+      "desc": "A dry whiteapo east of the yakal. Packed rust coats whiteapo.",
+      "brief": "Dry whiteapo, packed rust.",
+      "exits": { "west": { "to": "rust_yakal" } },
+      "actions": [
+        {
+          "id": "pinch_whiteapo",
+          "label": "pinch the whiteapo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard whiteapo. They packed it on the yakal and packed rust around it."]
           ]
         }
       ]
@@ -14393,7 +14495,7 @@
       "name": "Rust Apitong",
       "desc": "A dry apitong east of the muiracatiara. Packed rust coats apitong.",
       "brief": "Dry apitong, packed rust.",
-      "exits": { "west": { "to": "rust_muiracatiara" } },
+      "exits": { "west": { "to": "rust_muiracatiara" }, "east": { "to": "rust_dao" } },
       "actions": [
         {
           "id": "pinch_apitong",
@@ -14402,6 +14504,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard apitong. They packed it on the muiracatiara and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_dao": {
+      "name": "Rust Dao",
+      "desc": "A dry dao east of the apitong. Packed rust coats dao.",
+      "brief": "Dry dao, packed rust.",
+      "exits": { "west": { "to": "rust_apitong" } },
+      "actions": [
+        {
+          "id": "pinch_dao",
+          "label": "pinch the dao",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard dao. They packed it on the apitong and packed rust around it."]
           ]
         }
       ]
@@ -15957,7 +16076,7 @@
       "name": "Rust Arsenopyrite",
       "desc": "A dry arsenopyrite east of the eriochalcite. Packed rust coats arsenopyrite.",
       "brief": "Dry arsenopyrite, packed rust.",
-      "exits": { "west": { "to": "rust_eriochalcite" } },
+      "exits": { "west": { "to": "rust_eriochalcite" }, "east": { "to": "rust_narig" } },
       "actions": [
         {
           "id": "pinch_arsenopyrite",
@@ -15966,6 +16085,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard arsenopyrite. They packed it on the eriochalcite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_narig": {
+      "name": "Rust Narig",
+      "desc": "A dry narig east of the arsenopyrite. Packed rust coats narig.",
+      "brief": "Dry narig, packed rust.",
+      "exits": { "west": { "to": "rust_arsenopyrite" } },
+      "actions": [
+        {
+          "id": "pinch_narig",
+          "label": "pinch the narig",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard narig. They packed it on the arsenopyrite and packed rust around it."]
           ]
         }
       ]
@@ -25409,6 +25545,9 @@
     "pinch the breu",
     "go east",
     "pinch the almon",
+    "go east",
+    "pinch the gisok",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25433,6 +25572,9 @@
     "pinch the virola",
     "go east",
     "pinch the tanguile",
+    "go east",
+    "pinch the malugai",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25488,6 +25630,9 @@
     "pinch the cedrorosa",
     "go east",
     "pinch the molave",
+    "go east",
+    "pinch the tiaong",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25514,6 +25659,9 @@
     "pinch the cambara",
     "go east",
     "pinch the ipil",
+    "go east",
+    "pinch the redlauan",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25538,6 +25686,9 @@
     "pinch the itauba",
     "go east",
     "pinch the narra",
+    "go east",
+    "pinch the bagras",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25564,6 +25715,9 @@
     "pinch the goncalo",
     "go east",
     "pinch the yakal",
+    "go east",
+    "pinch the whiteapo",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25586,6 +25740,9 @@
     "pinch the muiracatiara",
     "go east",
     "pinch the apitong",
+    "go east",
+    "pinch the dao",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25860,6 +26017,9 @@
     "pinch the eriochalcite",
     "go east",
     "pinch the arsenopyrite",
+    "go east",
+    "pinch the narig",
+    "go west",
     "go west",
     "go west",
     "go west",
