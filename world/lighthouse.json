@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4410,
+  "maxScore": 4450,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -12763,7 +12763,7 @@
       "name": "Rust Pine",
       "desc": "A dry pine east of the ochre. Packed rust coats pine.",
       "brief": "Dry pine, packed rust.",
-      "exits": { "west": { "to": "rust_ochre" } },
+      "exits": { "west": { "to": "rust_ochre" }, "east": { "to": "rust_beech" } },
       "actions": [
         {
           "id": "pinch_pine",
@@ -12772,6 +12772,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pine. They stacked it on the ochre and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_beech": {
+      "name": "Rust Beech",
+      "desc": "A dry beech east of the pine. Packed rust coats beech.",
+      "brief": "Dry beech, packed rust.",
+      "exits": { "west": { "to": "rust_pine" } },
+      "actions": [
+        {
+          "id": "pinch_beech",
+          "label": "pinch the beech",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard beech. They cut it on the pine and packed rust around it."]
           ]
         }
       ]
@@ -12899,7 +12916,7 @@
       "name": "Rust Teak",
       "desc": "A dry teak east of the copal. Packed rust coats teak.",
       "brief": "Dry teak, packed rust.",
-      "exits": { "west": { "to": "rust_copal" } },
+      "exits": { "west": { "to": "rust_copal" }, "east": { "to": "rust_larch" } },
       "actions": [
         {
           "id": "pinch_teak",
@@ -12908,6 +12925,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard teak. They laid it on the copal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_larch": {
+      "name": "Rust Larch",
+      "desc": "A dry larch east of the teak. Packed rust coats larch.",
+      "brief": "Dry larch, packed rust.",
+      "exits": { "west": { "to": "rust_teak" } },
+      "actions": [
+        {
+          "id": "pinch_larch",
+          "label": "pinch the larch",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard larch. They laid it on the teak and packed rust around it."]
           ]
         }
       ]
@@ -13001,7 +13035,7 @@
       "name": "Rust Gypsum",
       "desc": "A dry gypsum east of the putty. Packed rust coats gypsum.",
       "brief": "Dry gypsum, packed rust.",
-      "exits": { "west": { "to": "rust_putty" } },
+      "exits": { "west": { "to": "rust_putty" }, "east": { "to": "rust_fir" } },
       "actions": [
         {
           "id": "pinch_gypsum",
@@ -13010,6 +13044,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gypsum. They packed it on the putty and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fir": {
+      "name": "Rust Fir",
+      "desc": "A dry fir east of the gypsum. Packed rust coats fir.",
+      "brief": "Dry fir, packed rust.",
+      "exits": { "west": { "to": "rust_gypsum" } },
+      "actions": [
+        {
+          "id": "pinch_fir",
+          "label": "pinch the fir",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fir. They stacked it on the gypsum and packed rust around it."]
           ]
         }
       ]
@@ -13137,7 +13188,7 @@
       "name": "Rust Redlead",
       "desc": "A dry redlead east of the lacquer. Packed rust coats redlead.",
       "brief": "Dry redlead, packed rust.",
-      "exits": { "west": { "to": "rust_lacquer" } },
+      "exits": { "west": { "to": "rust_lacquer" }, "east": { "to": "rust_poplar" } },
       "actions": [
         {
           "id": "pinch_redlead",
@@ -13146,6 +13197,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redlead. They coated it on the lacquer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_poplar": {
+      "name": "Rust Poplar",
+      "desc": "A dry poplar east of the redlead. Packed rust coats poplar.",
+      "brief": "Dry poplar, packed rust.",
+      "exits": { "west": { "to": "rust_redlead" } },
+      "actions": [
+        {
+          "id": "pinch_poplar",
+          "label": "pinch the poplar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard poplar. They bound it on the redlead and packed rust around it."]
           ]
         }
       ]
@@ -13256,7 +13324,7 @@
       "name": "Rust Whitelead",
       "desc": "A dry whitelead east of the shellac. Packed rust coats whitelead.",
       "brief": "Dry whitelead, packed rust.",
-      "exits": { "west": { "to": "rust_shellac" } },
+      "exits": { "west": { "to": "rust_shellac" }, "east": { "to": "rust_alder" } },
       "actions": [
         {
           "id": "pinch_whitelead",
@@ -13265,6 +13333,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whitelead. They painted it on the shellac and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_alder": {
+      "name": "Rust Alder",
+      "desc": "A dry alder east of the whitelead. Packed rust coats alder.",
+      "brief": "Dry alder, packed rust.",
+      "exits": { "west": { "to": "rust_whitelead" } },
+      "actions": [
+        {
+          "id": "pinch_alder",
+          "label": "pinch the alder",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard alder. They packed it on the whitelead and packed rust around it."]
           ]
         }
       ]
@@ -13358,7 +13443,7 @@
       "name": "Rust Damar",
       "desc": "A dry damar east of the rubber. Packed rust coats damar.",
       "brief": "Dry damar, packed rust.",
-      "exits": { "west": { "to": "rust_rubber" } },
+      "exits": { "west": { "to": "rust_rubber" }, "east": { "to": "rust_walnut" } },
       "actions": [
         {
           "id": "pinch_damar",
@@ -13367,6 +13452,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard damar. They smeared it on the rubber and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_walnut": {
+      "name": "Rust Walnut",
+      "desc": "A dry walnut east of the damar. Packed rust coats walnut.",
+      "brief": "Dry walnut, packed rust.",
+      "exits": { "west": { "to": "rust_damar" } },
+      "actions": [
+        {
+          "id": "pinch_walnut",
+          "label": "pinch the walnut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard walnut. They set it on the damar and packed rust around it."]
           ]
         }
       ]
@@ -14106,7 +14208,7 @@
       "name": "Rust Kerosene",
       "desc": "A dry kerosene east of the cork. Packed rust coats kerosene.",
       "brief": "Dry kerosene, packed rust.",
-      "exits": { "west": { "to": "rust_cork" } },
+      "exits": { "west": { "to": "rust_cork" }, "east": { "to": "rust_maple" } },
       "actions": [
         {
           "id": "pinch_kerosene",
@@ -14115,6 +14217,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kerosene. They poured it on the cork and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_maple": {
+      "name": "Rust Maple",
+      "desc": "A dry maple east of the kerosene. Packed rust coats maple.",
+      "brief": "Dry maple, packed rust.",
+      "exits": { "west": { "to": "rust_kerosene" } },
+      "actions": [
+        {
+          "id": "pinch_maple",
+          "label": "pinch the maple",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard maple. They laid it on the kerosene and packed rust around it."]
           ]
         }
       ]
@@ -14395,7 +14514,7 @@
       "name": "Rust Naphtha",
       "desc": "A dry naphtha east of the tow. Packed rust coats naphtha.",
       "brief": "Dry naphtha, packed rust.",
-      "exits": { "west": { "to": "rust_tow" } },
+      "exits": { "west": { "to": "rust_tow" }, "east": { "to": "rust_birch" } },
       "actions": [
         {
           "id": "pinch_naphtha",
@@ -14404,6 +14523,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard naphtha. They soaked it on the tow and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_birch": {
+      "name": "Rust Birch",
+      "desc": "A dry birch east of the naphtha. Packed rust coats birch.",
+      "brief": "Dry birch, packed rust.",
+      "exits": { "west": { "to": "rust_naphtha" } },
+      "actions": [
+        {
+          "id": "pinch_birch",
+          "label": "pinch the birch",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard birch. They stacked it on the naphtha and packed rust around it."]
           ]
         }
       ]
@@ -17143,6 +17279,9 @@
     "pinch the ochre",
     "go east",
     "pinch the pine",
+    "go east",
+    "pinch the beech",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17166,6 +17305,9 @@
     "pinch the copal",
     "go east",
     "pinch the teak",
+    "go east",
+    "pinch the larch",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17184,6 +17326,9 @@
     "pinch the putty",
     "go east",
     "pinch the gypsum",
+    "go east",
+    "pinch the fir",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17207,6 +17352,9 @@
     "pinch the lacquer",
     "go east",
     "pinch the redlead",
+    "go east",
+    "pinch the poplar",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17227,6 +17375,9 @@
     "pinch the shellac",
     "go east",
     "pinch the whitelead",
+    "go east",
+    "pinch the alder",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17245,6 +17396,9 @@
     "pinch the rubber",
     "go east",
     "pinch the damar",
+    "go east",
+    "pinch the walnut",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17382,6 +17536,9 @@
     "pinch the cork",
     "go east",
     "pinch the kerosene",
+    "go east",
+    "pinch the maple",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17433,6 +17590,9 @@
     "pinch the tow",
     "go east",
     "pinch the naphtha",
+    "go east",
+    "pinch the birch",
+    "go west",
     "go west",
     "go west",
     "go west",
