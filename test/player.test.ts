@@ -5,14 +5,14 @@
  */
 import assert from "node:assert/strict";
 import test from "node:test";
-import { mockProvider, playOne } from "../src/player.ts";
+import { mockProvider, playOne, walkthroughTurnLimit } from "../src/player.ts";
 import { loadWorldUrl } from "../src/validate.ts";
 import type { World } from "../src/types.ts";
 
 const world: World = loadWorldUrl(new URL("../world/lighthouse.json", import.meta.url));
 
 test("direct player wins via walkthrough policy and files a verified report", async () => {
-  const r = await playOne(world, 7, mockProvider(world), 2300);
+  const r = await playOne(world, 7, mockProvider(world), walkthroughTurnLimit(world));
   assert.equal(r.ended, "beacon_lit");
   assert.ok(r.report, "report parsed");
   assert.equal(r.verified, true, "receipt verified by in-process replay");
