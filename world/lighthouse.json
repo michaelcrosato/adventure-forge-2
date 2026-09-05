@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 5970,
+  "maxScore": 6010,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13749,7 +13749,7 @@
       "name": "Rust Langite",
       "desc": "A dry langite east of the iroko. Packed rust coats langite.",
       "brief": "Dry langite, packed rust.",
-      "exits": { "west": { "to": "rust_iroko" } },
+      "exits": { "west": { "to": "rust_iroko" }, "east": { "to": "rust_eriochalcite" } },
       "actions": [
         {
           "id": "pinch_langite",
@@ -13758,6 +13758,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard langite. They packed it on the iroko and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_eriochalcite": {
+      "name": "Rust Eriochalcite",
+      "desc": "A dry eriochalcite east of the langite. Packed rust coats eriochalcite.",
+      "brief": "Dry eriochalcite, packed rust.",
+      "exits": { "west": { "to": "rust_langite" } },
+      "actions": [
+        {
+          "id": "pinch_eriochalcite",
+          "label": "pinch the eriochalcite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard eriochalcite. They packed it on the langite and packed rust around it."]
           ]
         }
       ]
@@ -13885,7 +13902,7 @@
       "name": "Rust Smaltite",
       "desc": "A dry smaltite east of the lapis. Packed rust coats smaltite.",
       "brief": "Dry smaltite, packed rust.",
-      "exits": { "west": { "to": "rust_lapis" } },
+      "exits": { "west": { "to": "rust_lapis" }, "east": { "to": "rust_anthonyite" } },
       "actions": [
         {
           "id": "pinch_smaltite",
@@ -13894,6 +13911,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard smaltite. They packed it on the lapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_anthonyite": {
+      "name": "Rust Anthonyite",
+      "desc": "A dry anthonyite east of the smaltite. Packed rust coats anthonyite.",
+      "brief": "Dry anthonyite, packed rust.",
+      "exits": { "west": { "to": "rust_smaltite" } },
+      "actions": [
+        {
+          "id": "pinch_anthonyite",
+          "label": "pinch the anthonyite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard anthonyite. They packed it on the smaltite and packed rust around it."]
           ]
         }
       ]
@@ -14072,7 +14106,7 @@
       "name": "Rust Mayanblue",
       "desc": "A dry mayanblue east of the bice. Packed rust coats mayanblue.",
       "brief": "Dry mayanblue, packed rust.",
-      "exits": { "west": { "to": "rust_bice" } },
+      "exits": { "west": { "to": "rust_bice" }, "east": { "to": "rust_calumetite" } },
       "actions": [
         {
           "id": "pinch_mayanblue",
@@ -14081,6 +14115,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mayanblue. They packed it on the bice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_calumetite": {
+      "name": "Rust Calumetite",
+      "desc": "A dry calumetite east of the mayanblue. Packed rust coats calumetite.",
+      "brief": "Dry calumetite, packed rust.",
+      "exits": { "west": { "to": "rust_mayanblue" } },
+      "actions": [
+        {
+          "id": "pinch_calumetite",
+          "label": "pinch the calumetite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard calumetite. They packed it on the mayanblue and packed rust around it."]
           ]
         }
       ]
@@ -14242,7 +14293,7 @@
       "name": "Rust Brochantite",
       "desc": "A dry brochantite east of the sapgreen. Packed rust coats brochantite.",
       "brief": "Dry brochantite, packed rust.",
-      "exits": { "west": { "to": "rust_sapgreen" } },
+      "exits": { "west": { "to": "rust_sapgreen" }, "east": { "to": "rust_percylite" } },
       "actions": [
         {
           "id": "pinch_brochantite",
@@ -14251,6 +14302,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard brochantite. They packed it on the sapgreen and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_percylite": {
+      "name": "Rust Percylite",
+      "desc": "A dry percylite east of the brochantite. Packed rust coats percylite.",
+      "brief": "Dry percylite, packed rust.",
+      "exits": { "west": { "to": "rust_brochantite" } },
+      "actions": [
+        {
+          "id": "pinch_percylite",
+          "label": "pinch the percylite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard percylite. They packed it on the brochantite and packed rust around it."]
           ]
         }
       ]
@@ -14514,7 +14582,7 @@
       "name": "Rust Atacamite",
       "desc": "A dry atacamite east of the greenearth. Packed rust coats atacamite.",
       "brief": "Dry atacamite, packed rust.",
-      "exits": { "west": { "to": "rust_greenearth" } },
+      "exits": { "west": { "to": "rust_greenearth" }, "east": { "to": "rust_cumengeite" } },
       "actions": [
         {
           "id": "pinch_atacamite",
@@ -14523,6 +14591,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard atacamite. They packed it on the greenearth and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cumengeite": {
+      "name": "Rust Cumengeite",
+      "desc": "A dry cumengeite east of the atacamite. Packed rust coats cumengeite.",
+      "brief": "Dry cumengeite, packed rust.",
+      "exits": { "west": { "to": "rust_atacamite" } },
+      "actions": [
+        {
+          "id": "pinch_cumengeite",
+          "label": "pinch the cumengeite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cumengeite. They packed it on the atacamite and packed rust around it."]
           ]
         }
       ]
@@ -14667,7 +14752,7 @@
       "name": "Rust Dioptase",
       "desc": "A dry dioptase east of the burntsienna. Packed rust coats dioptase.",
       "brief": "Dry dioptase, packed rust.",
-      "exits": { "west": { "to": "rust_burntsienna" } },
+      "exits": { "west": { "to": "rust_burntsienna" }, "east": { "to": "rust_clinoatacamite" } },
       "actions": [
         {
           "id": "pinch_dioptase",
@@ -14676,6 +14761,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dioptase. They packed it on the burntsienna and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_clinoatacamite": {
+      "name": "Rust Clinoatacamite",
+      "desc": "A dry clinoatacamite east of the dioptase. Packed rust coats clinoatacamite.",
+      "brief": "Dry clinoatacamite, packed rust.",
+      "exits": { "west": { "to": "rust_dioptase" } },
+      "actions": [
+        {
+          "id": "pinch_clinoatacamite",
+          "label": "pinch the clinoatacamite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard clinoatacamite. They packed it on the dioptase and packed rust around it."]
           ]
         }
       ]
@@ -16605,7 +16707,7 @@
       "name": "Rust Chrysocolla",
       "desc": "A dry chrysocolla east of the burntumber. Packed rust coats chrysocolla.",
       "brief": "Dry chrysocolla, packed rust.",
-      "exits": { "west": { "to": "rust_burntumber" } },
+      "exits": { "west": { "to": "rust_burntumber" }, "east": { "to": "rust_paratacamite" } },
       "actions": [
         {
           "id": "pinch_chrysocolla",
@@ -16614,6 +16716,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chrysocolla. They packed it on the burntumber and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_paratacamite": {
+      "name": "Rust Paratacamite",
+      "desc": "A dry paratacamite east of the chrysocolla. Packed rust coats paratacamite.",
+      "brief": "Dry paratacamite, packed rust.",
+      "exits": { "west": { "to": "rust_chrysocolla" } },
+      "actions": [
+        {
+          "id": "pinch_paratacamite",
+          "label": "pinch the paratacamite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard paratacamite. They packed it on the chrysocolla and packed rust around it."]
           ]
         }
       ]
@@ -16741,7 +16860,7 @@
       "name": "Rust Turquoise",
       "desc": "A dry turquoise east of the yellowochre. Packed rust coats turquoise.",
       "brief": "Dry turquoise, packed rust.",
-      "exits": { "west": { "to": "rust_yellowochre" } },
+      "exits": { "west": { "to": "rust_yellowochre" }, "east": { "to": "rust_botallackite" } },
       "actions": [
         {
           "id": "pinch_turquoise",
@@ -16750,6 +16869,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard turquoise. They packed it on the yellowochre and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_botallackite": {
+      "name": "Rust Botallackite",
+      "desc": "A dry botallackite east of the turquoise. Packed rust coats botallackite.",
+      "brief": "Dry botallackite, packed rust.",
+      "exits": { "west": { "to": "rust_turquoise" } },
+      "actions": [
+        {
+          "id": "pinch_botallackite",
+          "label": "pinch the botallackite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard botallackite. They packed it on the turquoise and packed rust around it."]
           ]
         }
       ]
@@ -22618,6 +22754,9 @@
     "pinch the iroko",
     "go east",
     "pinch the langite",
+    "go east",
+    "pinch the eriochalcite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -22639,6 +22778,9 @@
     "pinch the lapis",
     "go east",
     "pinch the smaltite",
+    "go east",
+    "pinch the anthonyite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -22670,6 +22812,9 @@
     "pinch the bice",
     "go east",
     "pinch the mayanblue",
+    "go east",
+    "pinch the calumetite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -22699,6 +22844,9 @@
     "pinch the sapgreen",
     "go east",
     "pinch the brochantite",
+    "go east",
+    "pinch the percylite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -22752,6 +22900,9 @@
     "pinch the greenearth",
     "go east",
     "pinch the atacamite",
+    "go east",
+    "pinch the cumengeite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -22779,6 +22930,9 @@
     "pinch the burntsienna",
     "go east",
     "pinch the dioptase",
+    "go east",
+    "pinch the clinoatacamite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -22838,6 +22992,9 @@
     "pinch the burntumber",
     "go east",
     "pinch the chrysocolla",
+    "go east",
+    "pinch the paratacamite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -22863,6 +23020,9 @@
     "pinch the yellowochre",
     "go east",
     "pinch the turquoise",
+    "go east",
+    "pinch the botallackite",
+    "go west",
     "go west",
     "go west",
     "go west",
