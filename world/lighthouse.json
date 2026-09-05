@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 5490,
+  "maxScore": 5530,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13902,7 +13902,7 @@
       "name": "Rust Balsa",
       "desc": "A dry balsa east of the leechrope. Packed rust coats balsa.",
       "brief": "Dry balsa, packed rust.",
-      "exits": { "west": { "to": "rust_leechrope" } },
+      "exits": { "west": { "to": "rust_leechrope" }, "east": { "to": "rust_diatomite" } },
       "actions": [
         {
           "id": "pinch_balsa",
@@ -13911,6 +13911,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard balsa. They stacked it on the leechrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_diatomite": {
+      "name": "Rust Diatomite",
+      "desc": "A dry diatomite east of the balsa. Packed rust coats diatomite.",
+      "brief": "Dry diatomite, packed rust.",
+      "exits": { "west": { "to": "rust_balsa" } },
+      "actions": [
+        {
+          "id": "pinch_diatomite",
+          "label": "pinch the diatomite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard diatomite. They packed it on the balsa and packed rust around it."]
           ]
         }
       ]
@@ -13987,7 +14004,7 @@
       "name": "Rust Jarrah",
       "desc": "A dry jarrah east of the footband. Packed rust coats jarrah.",
       "brief": "Dry jarrah, packed rust.",
-      "exits": { "west": { "to": "rust_footband" } },
+      "exits": { "west": { "to": "rust_footband" }, "east": { "to": "rust_soapstone" } },
       "actions": [
         {
           "id": "pinch_jarrah",
@@ -13996,6 +14013,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jarrah. They set it on the footband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_soapstone": {
+      "name": "Rust Soapstone",
+      "desc": "A dry soapstone east of the jarrah. Packed rust coats soapstone.",
+      "brief": "Dry soapstone, packed rust.",
+      "exits": { "west": { "to": "rust_jarrah" } },
+      "actions": [
+        {
+          "id": "pinch_soapstone",
+          "label": "pinch the soapstone",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard soapstone. They packed it on the jarrah and packed rust around it."]
           ]
         }
       ]
@@ -14072,7 +14106,7 @@
       "name": "Rust Kauri",
       "desc": "A dry kauri east of the sisal. Packed rust coats kauri.",
       "brief": "Dry kauri, packed rust.",
-      "exits": { "west": { "to": "rust_sisal" } },
+      "exits": { "west": { "to": "rust_sisal" }, "east": { "to": "rust_calcite" } },
       "actions": [
         {
           "id": "pinch_kauri",
@@ -14081,6 +14115,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kauri. They laid it on the sisal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_calcite": {
+      "name": "Rust Calcite",
+      "desc": "A dry calcite east of the kauri. Packed rust coats calcite.",
+      "brief": "Dry calcite, packed rust.",
+      "exits": { "west": { "to": "rust_kauri" } },
+      "actions": [
+        {
+          "id": "pinch_calcite",
+          "label": "pinch the calcite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard calcite. They packed it on the kauri and packed rust around it."]
           ]
         }
       ]
@@ -14157,7 +14208,7 @@
       "name": "Rust Pitchpine",
       "desc": "A dry pitchpine east of the tackrope. Packed rust coats pitchpine.",
       "brief": "Dry pitchpine, packed rust.",
-      "exits": { "west": { "to": "rust_tackrope" } },
+      "exits": { "west": { "to": "rust_tackrope" }, "east": { "to": "rust_alabaster" } },
       "actions": [
         {
           "id": "pinch_pitchpine",
@@ -14166,6 +14217,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pitchpine. They stacked it on the tackrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_alabaster": {
+      "name": "Rust Alabaster",
+      "desc": "A dry alabaster east of the pitchpine. Packed rust coats alabaster.",
+      "brief": "Dry alabaster, packed rust.",
+      "exits": { "west": { "to": "rust_pitchpine" } },
+      "actions": [
+        {
+          "id": "pinch_alabaster",
+          "label": "pinch the alabaster",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard alabaster. They packed it on the pitchpine and packed rust around it."]
           ]
         }
       ]
@@ -14225,7 +14293,7 @@
       "name": "Rust Whitewash",
       "desc": "A dry whitewash east of the buntrope. Packed rust coats whitewash.",
       "brief": "Dry whitewash, packed rust.",
-      "exits": { "west": { "to": "rust_buntrope" } },
+      "exits": { "west": { "to": "rust_buntrope" }, "east": { "to": "rust_pariswhite" } },
       "actions": [
         {
           "id": "pinch_whitewash",
@@ -14234,6 +14302,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whitewash. They packed it on the buntrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_pariswhite": {
+      "name": "Rust Pariswhite",
+      "desc": "A dry pariswhite east of the whitewash. Packed rust coats pariswhite.",
+      "brief": "Dry pariswhite, packed rust.",
+      "exits": { "west": { "to": "rust_whitewash" } },
+      "actions": [
+        {
+          "id": "pinch_pariswhite",
+          "label": "pinch the pariswhite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pariswhite. They packed it on the whitewash and packed rust around it."]
           ]
         }
       ]
@@ -14276,7 +14361,7 @@
       "name": "Rust Limewash",
       "desc": "A dry limewash east of the yarn. Packed rust coats limewash.",
       "brief": "Dry limewash, packed rust.",
-      "exits": { "west": { "to": "rust_yarn" } },
+      "exits": { "west": { "to": "rust_yarn" }, "east": { "to": "rust_fullersearth" } },
       "actions": [
         {
           "id": "pinch_limewash",
@@ -14285,6 +14370,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard limewash. They soaked it on the yarn and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fullersearth": {
+      "name": "Rust Fullersearth",
+      "desc": "A dry fullersearth east of the limewash. Packed rust coats fullersearth.",
+      "brief": "Dry fullersearth, packed rust.",
+      "exits": { "west": { "to": "rust_limewash" } },
+      "actions": [
+        {
+          "id": "pinch_fullersearth",
+          "label": "pinch the fullersearth",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fullersearth. They packed it on the limewash and packed rust around it."]
           ]
         }
       ]
@@ -15330,7 +15432,7 @@
       "name": "Rust Sienna",
       "desc": "A dry sienna east of the sailgasket. Packed rust coats sienna.",
       "brief": "Dry sienna, packed rust.",
-      "exits": { "west": { "to": "rust_sailgasket" } },
+      "exits": { "west": { "to": "rust_sailgasket" }, "east": { "to": "rust_tripoli" } },
       "actions": [
         {
           "id": "pinch_sienna",
@@ -15339,6 +15441,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sienna. They packed it on the sailgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tripoli": {
+      "name": "Rust Tripoli",
+      "desc": "A dry tripoli east of the sienna. Packed rust coats tripoli.",
+      "brief": "Dry tripoli, packed rust.",
+      "exits": { "west": { "to": "rust_sienna" } },
+      "actions": [
+        {
+          "id": "pinch_tripoli",
+          "label": "pinch the tripoli",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tripoli. They packed it on the sienna and packed rust around it."]
           ]
         }
       ]
@@ -15381,7 +15500,7 @@
       "name": "Rust Whiting",
       "desc": "A dry whiting east of the tarpaulin. Packed rust coats whiting.",
       "brief": "Dry whiting, packed rust.",
-      "exits": { "west": { "to": "rust_tarpaulin" } },
+      "exits": { "west": { "to": "rust_tarpaulin" }, "east": { "to": "rust_rottenstone" } },
       "actions": [
         {
           "id": "pinch_whiting",
@@ -15390,6 +15509,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whiting. They packed it on the tarpaulin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_rottenstone": {
+      "name": "Rust Rottenstone",
+      "desc": "A dry rottenstone east of the whiting. Packed rust coats rottenstone.",
+      "brief": "Dry rottenstone, packed rust.",
+      "exits": { "west": { "to": "rust_whiting" } },
+      "actions": [
+        {
+          "id": "pinch_rottenstone",
+          "label": "pinch the rottenstone",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rottenstone. They packed it on the whiting and packed rust around it."]
           ]
         }
       ]
@@ -21013,6 +21149,9 @@
     "pinch the leechrope",
     "go east",
     "pinch the balsa",
+    "go east",
+    "pinch the diatomite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21027,6 +21166,9 @@
     "pinch the footband",
     "go east",
     "pinch the jarrah",
+    "go east",
+    "pinch the soapstone",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21042,6 +21184,9 @@
     "pinch the sisal",
     "go east",
     "pinch the kauri",
+    "go east",
+    "pinch the calcite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21062,6 +21207,9 @@
     "pinch the tackrope",
     "go east",
     "pinch the pitchpine",
+    "go east",
+    "pinch the alabaster",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21074,6 +21222,9 @@
     "pinch the buntrope",
     "go east",
     "pinch the whitewash",
+    "go east",
+    "pinch the pariswhite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21084,6 +21235,9 @@
     "pinch the yarn",
     "go east",
     "pinch the limewash",
+    "go east",
+    "pinch the fullersearth",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21106,6 +21260,9 @@
     "pinch the sailgasket",
     "go east",
     "pinch the sienna",
+    "go east",
+    "pinch the tripoli",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21116,6 +21273,9 @@
     "pinch the tarpaulin",
     "go east",
     "pinch the whiting",
+    "go east",
+    "pinch the rottenstone",
+    "go west",
     "go west",
     "go west",
     "go west",
