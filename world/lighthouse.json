@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7010,
+  "maxScore": 7050,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -9055,7 +9055,7 @@
       "name": "Rust Carbon",
       "desc": "A dry carbon east of the annotto. Packed rust coats carbon.",
       "brief": "Dry carbon, packed rust.",
-      "exits": { "west": { "to": "rust_annotto" } },
+      "exits": { "west": { "to": "rust_annotto" }, "east": { "to": "rust_scribblygum" } },
       "actions": [
         {
           "id": "pinch_carbon",
@@ -9064,6 +9064,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard carbon. They packed it on the annotto and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_scribblygum": {
+      "name": "Rust Scribblygum",
+      "desc": "A dry scribblygum east of the carbon. Packed rust coats scribblygum.",
+      "brief": "Dry scribblygum, packed rust.",
+      "exits": { "west": { "to": "rust_carbon" } },
+      "actions": [
+        {
+          "id": "pinch_scribblygum",
+          "label": "pinch the scribblygum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard scribblygum. They packed it on the carbon and packed rust around it."]
           ]
         }
       ]
@@ -9157,7 +9174,7 @@
       "name": "Rust Coal",
       "desc": "A dry coal east of the fustic. Packed rust coats coal.",
       "brief": "Dry coal, packed rust.",
-      "exits": { "west": { "to": "rust_fustic" } },
+      "exits": { "west": { "to": "rust_fustic" }, "east": { "to": "rust_applebox" } },
       "actions": [
         {
           "id": "pinch_coal",
@@ -9166,6 +9183,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coal. They packed it on the fustic and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_applebox": {
+      "name": "Rust Applebox",
+      "desc": "A dry applebox east of the coal. Packed rust coats applebox.",
+      "brief": "Dry applebox, packed rust.",
+      "exits": { "west": { "to": "rust_coal" } },
+      "actions": [
+        {
+          "id": "pinch_applebox",
+          "label": "pinch the applebox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard applebox. They packed it on the coal and packed rust around it."]
           ]
         }
       ]
@@ -9259,7 +9293,7 @@
       "name": "Rust Peat",
       "desc": "A dry peat east of the litmus. Packed rust coats peat.",
       "brief": "Dry peat, packed rust.",
-      "exits": { "west": { "to": "rust_litmus" } },
+      "exits": { "west": { "to": "rust_litmus" }, "east": { "to": "rust_redbox" } },
       "actions": [
         {
           "id": "pinch_peat",
@@ -9268,6 +9302,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard peat. They packed it on the litmus and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_redbox": {
+      "name": "Rust Redbox",
+      "desc": "A dry redbox east of the peat. Packed rust coats redbox.",
+      "brief": "Dry redbox, packed rust.",
+      "exits": { "west": { "to": "rust_peat" } },
+      "actions": [
+        {
+          "id": "pinch_redbox",
+          "label": "pinch the redbox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard redbox. They packed it on the peat and packed rust around it."]
           ]
         }
       ]
@@ -9378,7 +9429,7 @@
       "name": "Rust Lignite",
       "desc": "A dry lignite east of the orchil. Packed rust coats lignite.",
       "brief": "Dry lignite, packed rust.",
-      "exits": { "west": { "to": "rust_orchil" } },
+      "exits": { "west": { "to": "rust_orchil" }, "east": { "to": "rust_blackbox" } },
       "actions": [
         {
           "id": "pinch_lignite",
@@ -9387,6 +9438,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lignite. They packed it on the orchil and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_blackbox": {
+      "name": "Rust Blackbox",
+      "desc": "A dry blackbox east of the lignite. Packed rust coats blackbox.",
+      "brief": "Dry blackbox, packed rust.",
+      "exits": { "west": { "to": "rust_lignite" } },
+      "actions": [
+        {
+          "id": "pinch_blackbox",
+          "label": "pinch the blackbox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard blackbox. They packed it on the lignite and packed rust around it."]
           ]
         }
       ]
@@ -9497,7 +9565,7 @@
       "name": "Rust Coke",
       "desc": "A dry coke east of the alkanet. Packed rust coats coke.",
       "brief": "Dry coke, packed rust.",
-      "exits": { "west": { "to": "rust_alkanet" } },
+      "exits": { "west": { "to": "rust_alkanet" }, "east": { "to": "rust_bangalay" } },
       "actions": [
         {
           "id": "pinch_coke",
@@ -9506,6 +9574,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coke. They packed it on the alkanet and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bangalay": {
+      "name": "Rust Bangalay",
+      "desc": "A dry bangalay east of the coke. Packed rust coats bangalay.",
+      "brief": "Dry bangalay, packed rust.",
+      "exits": { "west": { "to": "rust_coke" } },
+      "actions": [
+        {
+          "id": "pinch_bangalay",
+          "label": "pinch the bangalay",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bangalay. They packed it on the coke and packed rust around it."]
           ]
         }
       ]
@@ -9582,7 +9667,7 @@
       "name": "Rust Charcoal",
       "desc": "A dry charcoal east of the henna. Packed rust coats charcoal.",
       "brief": "Dry charcoal, packed rust.",
-      "exits": { "west": { "to": "rust_henna" } },
+      "exits": { "west": { "to": "rust_henna" }, "east": { "to": "rust_tuart" } },
       "actions": [
         {
           "id": "pinch_charcoal",
@@ -9591,6 +9676,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard charcoal. They packed it on the henna and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tuart": {
+      "name": "Rust Tuart",
+      "desc": "A dry tuart east of the charcoal. Packed rust coats tuart.",
+      "brief": "Dry tuart, packed rust.",
+      "exits": { "west": { "to": "rust_charcoal" } },
+      "actions": [
+        {
+          "id": "pinch_tuart",
+          "label": "pinch the tuart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tuart. They packed it on the charcoal and packed rust around it."]
           ]
         }
       ]
@@ -9684,7 +9786,7 @@
       "name": "Rust Turmeric",
       "desc": "A dry turmeric east of the colophony. Packed rust coats turmeric.",
       "brief": "Dry turmeric, packed rust.",
-      "exits": { "west": { "to": "rust_colophony" } },
+      "exits": { "west": { "to": "rust_colophony" }, "east": { "to": "rust_marri" } },
       "actions": [
         {
           "id": "pinch_turmeric",
@@ -9693,6 +9795,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard turmeric. They packed it on the colophony and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_marri": {
+      "name": "Rust Marri",
+      "desc": "A dry marri east of the turmeric. Packed rust coats marri.",
+      "brief": "Dry marri, packed rust.",
+      "exits": { "west": { "to": "rust_turmeric" } },
+      "actions": [
+        {
+          "id": "pinch_marri",
+          "label": "pinch the marri",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard marri. They packed it on the turmeric and packed rust around it."]
           ]
         }
       ]
@@ -9803,7 +9922,7 @@
       "name": "Rust Saffron",
       "desc": "A dry saffron east of the venice. Packed rust coats saffron.",
       "brief": "Dry saffron, packed rust.",
-      "exits": { "west": { "to": "rust_venice" } },
+      "exits": { "west": { "to": "rust_venice" }, "east": { "to": "rust_coolibah" } },
       "actions": [
         {
           "id": "pinch_saffron",
@@ -9812,6 +9931,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard saffron. They packed it on the venice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_coolibah": {
+      "name": "Rust Coolibah",
+      "desc": "A dry coolibah east of the saffron. Packed rust coats coolibah.",
+      "brief": "Dry coolibah, packed rust.",
+      "exits": { "west": { "to": "rust_saffron" } },
+      "actions": [
+        {
+          "id": "pinch_coolibah",
+          "label": "pinch the coolibah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard coolibah. They packed it on the saffron and packed rust around it."]
           ]
         }
       ]
@@ -25325,6 +25461,9 @@
     "pinch the annotto",
     "go east",
     "pinch the carbon",
+    "go east",
+    "pinch the scribblygum",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25342,6 +25481,9 @@
     "pinch the fustic",
     "go east",
     "pinch the coal",
+    "go east",
+    "pinch the applebox",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25359,6 +25501,9 @@
     "pinch the litmus",
     "go east",
     "pinch the peat",
+    "go east",
+    "pinch the redbox",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25380,6 +25525,9 @@
     "pinch the orchil",
     "go east",
     "pinch the lignite",
+    "go east",
+    "pinch the blackbox",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25399,6 +25547,9 @@
     "pinch the alkanet",
     "go east",
     "pinch the coke",
+    "go east",
+    "pinch the bangalay",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25415,6 +25566,9 @@
     "pinch the henna",
     "go east",
     "pinch the charcoal",
+    "go east",
+    "pinch the tuart",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25432,6 +25586,9 @@
     "pinch the colophony",
     "go east",
     "pinch the turmeric",
+    "go east",
+    "pinch the marri",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25452,6 +25609,9 @@
     "pinch the venice",
     "go east",
     "pinch the saffron",
+    "go east",
+    "pinch the coolibah",
+    "go west",
     "go west",
     "go west",
     "go west",
