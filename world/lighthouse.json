@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4210,
+  "maxScore": 4250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13206,7 +13206,7 @@
       "name": "Rust Yardgasket",
       "desc": "A dry yardgasket east of the rounding. Packed rust coats a yardgasket.",
       "brief": "Dry yardgasket, packed rust.",
-      "exits": { "west": { "to": "rust_rounding" } },
+      "exits": { "west": { "to": "rust_rounding" }, "east": { "to": "rust_flax" } },
       "actions": [
         {
           "id": "pinch_yardgasket",
@@ -13215,6 +13215,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yardgasket. They seized it on the rounding and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_flax": {
+      "name": "Rust Flax",
+      "desc": "A dry flax east of the yardgasket. Packed rust coats flax.",
+      "brief": "Dry flax, packed rust.",
+      "exits": { "west": { "to": "rust_yardgasket" } },
+      "actions": [
+        {
+          "id": "pinch_flax",
+          "label": "pinch the flax",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard flax. They laid it on the yardgasket and packed rust around it."]
           ]
         }
       ]
@@ -13274,7 +13291,7 @@
       "name": "Rust Mastgasket",
       "desc": "A dry mastgasket east of the keckling. Packed rust coats a mastgasket.",
       "brief": "Dry mastgasket, packed rust.",
-      "exits": { "west": { "to": "rust_keckling" } },
+      "exits": { "west": { "to": "rust_keckling" }, "east": { "to": "rust_linen" } },
       "actions": [
         {
           "id": "pinch_mastgasket",
@@ -13283,6 +13300,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mastgasket. They bound it on the keckling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_linen": {
+      "name": "Rust Linen",
+      "desc": "A dry linen east of the mastgasket. Packed rust coats linen.",
+      "brief": "Dry linen, packed rust.",
+      "exits": { "west": { "to": "rust_mastgasket" } },
+      "actions": [
+        {
+          "id": "pinch_linen",
+          "label": "pinch the linen",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard linen. They wrapped it on the mastgasket and packed rust around it."]
           ]
         }
       ]
@@ -13342,7 +13376,7 @@
       "name": "Rust Boomgasket",
       "desc": "A dry boomgasket east of the pointing. Packed rust coats a boomgasket.",
       "brief": "Dry boomgasket, packed rust.",
-      "exits": { "west": { "to": "rust_pointing" } },
+      "exits": { "west": { "to": "rust_pointing" }, "east": { "to": "rust_cotton" } },
       "actions": [
         {
           "id": "pinch_boomgasket",
@@ -13351,6 +13385,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boomgasket. They tied it on the pointing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cotton": {
+      "name": "Rust Cotton",
+      "desc": "A dry cotton east of the boomgasket. Packed rust coats cotton.",
+      "brief": "Dry cotton, packed rust.",
+      "exits": { "west": { "to": "rust_boomgasket" } },
+      "actions": [
+        {
+          "id": "pinch_cotton",
+          "label": "pinch the cotton",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cotton. They stuffed it on the boomgasket and packed rust around it."]
           ]
         }
       ]
@@ -13393,7 +13444,7 @@
       "name": "Rust Clewgasket",
       "desc": "A dry clewgasket east of the whipping. Packed rust coats a clewgasket.",
       "brief": "Dry clewgasket, packed rust.",
-      "exits": { "west": { "to": "rust_whipping" } },
+      "exits": { "west": { "to": "rust_whipping" }, "east": { "to": "rust_wool" } },
       "actions": [
         {
           "id": "pinch_clewgasket",
@@ -13402,6 +13453,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clewgasket. They laced it on the whipping and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wool": {
+      "name": "Rust Wool",
+      "desc": "A dry wool east of the clewgasket. Packed rust coats wool.",
+      "brief": "Dry wool, packed rust.",
+      "exits": { "west": { "to": "rust_clewgasket" } },
+      "actions": [
+        {
+          "id": "pinch_wool",
+          "label": "pinch the wool",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wool. They packed it on the clewgasket and packed rust around it."]
           ]
         }
       ]
@@ -13427,7 +13495,7 @@
       "name": "Rust Spangasket",
       "desc": "A dry spangasket east of the mesh. Packed rust coats a spangasket.",
       "brief": "Dry spangasket, packed rust.",
-      "exits": { "west": { "to": "rust_mesh" } },
+      "exits": { "west": { "to": "rust_mesh" }, "east": { "to": "rust_tallow" } },
       "actions": [
         {
           "id": "pinch_spangasket",
@@ -13436,6 +13504,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spangasket. They made it on the mesh and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tallow": {
+      "name": "Rust Tallow",
+      "desc": "A dry tallow east of the spangasket. Packed rust coats tallow.",
+      "brief": "Dry tallow, packed rust.",
+      "exits": { "west": { "to": "rust_spangasket" } },
+      "actions": [
+        {
+          "id": "pinch_tallow",
+          "label": "pinch the tallow",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tallow. They smeared it on the spangasket and packed rust around it."]
           ]
         }
       ]
@@ -13529,7 +13614,7 @@
       "name": "Rust Staygasket",
       "desc": "A dry staygasket east of the mouse. Packed rust coats a staygasket.",
       "brief": "Dry staygasket, packed rust.",
-      "exits": { "west": { "to": "rust_mouse" } },
+      "exits": { "west": { "to": "rust_mouse" }, "east": { "to": "rust_beeswax" } },
       "actions": [
         {
           "id": "pinch_staygasket",
@@ -13538,6 +13623,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard staygasket. They seized it on the mouse and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_beeswax": {
+      "name": "Rust Beeswax",
+      "desc": "A dry beeswax east of the staygasket. Packed rust coats beeswax.",
+      "brief": "Dry beeswax, packed rust.",
+      "exits": { "west": { "to": "rust_staygasket" } },
+      "actions": [
+        {
+          "id": "pinch_beeswax",
+          "label": "pinch the beeswax",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard beeswax. They rubbed it on the staygasket and packed rust around it."]
           ]
         }
       ]
@@ -13631,7 +13733,7 @@
       "name": "Rust Jibgasket",
       "desc": "A dry jibgasket east of the paunch. Packed rust coats a jibgasket.",
       "brief": "Dry jibgasket, packed rust.",
-      "exits": { "west": { "to": "rust_paunch" } },
+      "exits": { "west": { "to": "rust_paunch" }, "east": { "to": "rust_linseed" } },
       "actions": [
         {
           "id": "pinch_jibgasket",
@@ -13640,6 +13742,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jibgasket. They sewed it on the paunch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_linseed": {
+      "name": "Rust Linseed",
+      "desc": "A dry linseed east of the jibgasket. Packed rust coats linseed.",
+      "brief": "Dry linseed, packed rust.",
+      "exits": { "west": { "to": "rust_jibgasket" } },
+      "actions": [
+        {
+          "id": "pinch_linseed",
+          "label": "pinch the linseed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard linseed. They soaked it on the jibgasket and packed rust around it."]
           ]
         }
       ]
@@ -13682,7 +13801,7 @@
       "name": "Rust Halyardgasket",
       "desc": "A dry halyardgasket east of the racking. Packed rust coats a halyardgasket.",
       "brief": "Dry halyardgasket, packed rust.",
-      "exits": { "west": { "to": "rust_racking" } },
+      "exits": { "west": { "to": "rust_racking" }, "east": { "to": "rust_varnish" } },
       "actions": [
         {
           "id": "pinch_halyardgasket",
@@ -13691,6 +13810,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard halyardgasket. They rove it on the racking and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_varnish": {
+      "name": "Rust Varnish",
+      "desc": "A dry varnish east of the halyardgasket. Packed rust coats varnish.",
+      "brief": "Dry varnish, packed rust.",
+      "exits": { "west": { "to": "rust_halyardgasket" } },
+      "actions": [
+        {
+          "id": "pinch_varnish",
+          "label": "pinch the varnish",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard varnish. They brushed it on the halyardgasket and packed rust around it."]
           ]
         }
       ]
@@ -16541,6 +16677,9 @@
     "pinch the rounding",
     "go east",
     "pinch the yardgasket",
+    "go east",
+    "pinch the flax",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -16553,6 +16692,9 @@
     "pinch the keckling",
     "go east",
     "pinch the mastgasket",
+    "go east",
+    "pinch the linen",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -16570,6 +16712,9 @@
     "pinch the pointing",
     "go east",
     "pinch the boomgasket",
+    "go east",
+    "pinch the cotton",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -16579,6 +16724,9 @@
     "pinch the whipping",
     "go east",
     "pinch the clewgasket",
+    "go east",
+    "pinch the wool",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -16586,6 +16734,9 @@
     "pinch the stud",
     "go east",
     "pinch the spangasket",
+    "go east",
+    "pinch the tallow",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -16602,6 +16753,9 @@
     "pinch the mouse",
     "go east",
     "pinch the staygasket",
+    "go east",
+    "pinch the beeswax",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -16620,6 +16774,9 @@
     "pinch the paunch",
     "go east",
     "pinch the jibgasket",
+    "go east",
+    "pinch the linseed",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -16629,6 +16786,9 @@
     "pinch the racking",
     "go east",
     "pinch the halyardgasket",
+    "go east",
+    "pinch the varnish",
+    "go west",
     "go west",
     "go west",
     "go south",
