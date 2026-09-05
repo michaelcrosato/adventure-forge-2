@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4650,
+  "maxScore": 4690,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -10961,7 +10961,7 @@
       "name": "Rust Roping",
       "desc": "A dry roping east of the walker. Packed rust coats a roping.",
       "brief": "Dry roping, packed rust.",
-      "exits": { "west": { "to": "rust_walker" } },
+      "exits": { "west": { "to": "rust_walker" }, "east": { "to": "rust_teakwood" } },
       "actions": [
         {
           "id": "pinch_roping",
@@ -10970,6 +10970,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard roping. They sewed it on the walker and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teakwood": {
+      "name": "Rust Teakwood",
+      "desc": "A dry teakwood east of the roping. Packed rust coats teakwood.",
+      "brief": "Dry teakwood, packed rust.",
+      "exits": { "west": { "to": "rust_roping" } },
+      "actions": [
+        {
+          "id": "pinch_teakwood",
+          "label": "pinch the teakwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teakwood. They stacked it on the roping and packed rust around it."]
           ]
         }
       ]
@@ -11046,7 +11063,7 @@
       "name": "Rust Yardsling",
       "desc": "A dry yardsling east of the yardarm. Packed rust coats a yardsling.",
       "brief": "Dry yardsling, packed rust.",
-      "exits": { "west": { "to": "rust_yardarm" } },
+      "exits": { "west": { "to": "rust_yardarm" }, "east": { "to": "rust_purpleheart" } },
       "actions": [
         {
           "id": "pinch_yardsling",
@@ -11055,6 +11072,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yardsling. They slung it on the yardarm and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_purpleheart": {
+      "name": "Rust Purpleheart",
+      "desc": "A dry purpleheart east of the yardsling. Packed rust coats purpleheart.",
+      "brief": "Dry purpleheart, packed rust.",
+      "exits": { "west": { "to": "rust_yardsling" } },
+      "actions": [
+        {
+          "id": "pinch_purpleheart",
+          "label": "pinch the purpleheart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard purpleheart. They laid it on the yardsling and packed rust around it."]
           ]
         }
       ]
@@ -11114,7 +11148,7 @@
       "name": "Rust Reefearring",
       "desc": "A dry reefearring east of the spencer. Packed rust coats a reefearring.",
       "brief": "Dry reefearring, packed rust.",
-      "exits": { "west": { "to": "rust_spencer" } },
+      "exits": { "west": { "to": "rust_spencer" }, "east": { "to": "rust_padauk" } },
       "actions": [
         {
           "id": "pinch_reefearring",
@@ -11123,6 +11157,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard reefearring. They tied it on the spencer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_padauk": {
+      "name": "Rust Padauk",
+      "desc": "A dry padauk east of the reefearring. Packed rust coats padauk.",
+      "brief": "Dry padauk, packed rust.",
+      "exits": { "west": { "to": "rust_reefearring" } },
+      "actions": [
+        {
+          "id": "pinch_padauk",
+          "label": "pinch the padauk",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard padauk. They cut it on the reefearring and packed rust around it."]
           ]
         }
       ]
@@ -11165,7 +11216,7 @@
       "name": "Rust Slings",
       "desc": "A dry slings east of the lateen. Packed rust coats slings.",
       "brief": "Dry slings, packed rust.",
-      "exits": { "west": { "to": "rust_lateen" } },
+      "exits": { "west": { "to": "rust_lateen" }, "east": { "to": "rust_meranti" } },
       "actions": [
         {
           "id": "pinch_slings",
@@ -11174,6 +11225,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard slings. They hung them on the lateen and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_meranti": {
+      "name": "Rust Meranti",
+      "desc": "A dry meranti east of the slings. Packed rust coats meranti.",
+      "brief": "Dry meranti, packed rust.",
+      "exits": { "west": { "to": "rust_slings" } },
+      "actions": [
+        {
+          "id": "pinch_meranti",
+          "label": "pinch the meranti",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard meranti. They bound it on the slings and packed rust around it."]
           ]
         }
       ]
@@ -11250,7 +11318,7 @@
       "name": "Rust Hanks",
       "desc": "A dry hanks east of the lugsail. Packed rust coats hanks.",
       "brief": "Dry hanks, packed rust.",
-      "exits": { "west": { "to": "rust_lugsail" } },
+      "exits": { "west": { "to": "rust_lugsail" }, "east": { "to": "rust_greenheart" } },
       "actions": [
         {
           "id": "pinch_hanks",
@@ -11259,6 +11327,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hanks. They sewed them on the lugsail and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_greenheart": {
+      "name": "Rust Greenheart",
+      "desc": "A dry greenheart east of the hanks. Packed rust coats greenheart.",
+      "brief": "Dry greenheart, packed rust.",
+      "exits": { "west": { "to": "rust_hanks" } },
+      "actions": [
+        {
+          "id": "pinch_greenheart",
+          "label": "pinch the greenheart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard greenheart. They packed it on the hanks and packed rust around it."]
           ]
         }
       ]
@@ -11318,7 +11403,7 @@
       "name": "Rust Reefband",
       "desc": "A dry reefband east of the roband. Packed rust coats a reefband.",
       "brief": "Dry reefband, packed rust.",
-      "exits": { "west": { "to": "rust_roband" } },
+      "exits": { "west": { "to": "rust_roband" }, "east": { "to": "rust_iroko" } },
       "actions": [
         {
           "id": "pinch_reefband",
@@ -11327,6 +11412,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard reefband. They bound it on the roband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_iroko": {
+      "name": "Rust Iroko",
+      "desc": "A dry iroko east of the reefband. Packed rust coats iroko.",
+      "brief": "Dry iroko, packed rust.",
+      "exits": { "west": { "to": "rust_reefband" } },
+      "actions": [
+        {
+          "id": "pinch_iroko",
+          "label": "pinch the iroko",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard iroko. They set it on the reefband and packed rust around it."]
           ]
         }
       ]
@@ -11369,7 +11471,7 @@
       "name": "Rust Headrope",
       "desc": "A dry headrope east of the seizing. Packed rust coats a headrope.",
       "brief": "Dry headrope, packed rust.",
-      "exits": { "west": { "to": "rust_seizing" } },
+      "exits": { "west": { "to": "rust_seizing" }, "east": { "to": "rust_lauan" } },
       "actions": [
         {
           "id": "pinch_headrope",
@@ -11378,6 +11480,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard headrope. They rove it on the seizing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_lauan": {
+      "name": "Rust Lauan",
+      "desc": "A dry lauan east of the headrope. Packed rust coats lauan.",
+      "brief": "Dry lauan, packed rust.",
+      "exits": { "west": { "to": "rust_headrope" } },
+      "actions": [
+        {
+          "id": "pinch_lauan",
+          "label": "pinch the lauan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lauan. They laid it on the headrope and packed rust around it."]
           ]
         }
       ]
@@ -11454,7 +11573,7 @@
       "name": "Rust Leechrope",
       "desc": "A dry leechrope east of the nettles. Packed rust coats a leechrope.",
       "brief": "Dry leechrope, packed rust.",
-      "exits": { "west": { "to": "rust_nettles" } },
+      "exits": { "west": { "to": "rust_nettles" }, "east": { "to": "rust_balsa" } },
       "actions": [
         {
           "id": "pinch_leechrope",
@@ -11463,6 +11582,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard leechrope. They laced it on the nettles and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_balsa": {
+      "name": "Rust Balsa",
+      "desc": "A dry balsa east of the leechrope. Packed rust coats balsa.",
+      "brief": "Dry balsa, packed rust.",
+      "exits": { "west": { "to": "rust_leechrope" } },
+      "actions": [
+        {
+          "id": "pinch_balsa",
+          "label": "pinch the balsa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard balsa. They stacked it on the leechrope and packed rust around it."]
           ]
         }
       ]
@@ -17644,6 +17780,9 @@
     "pinch the walker",
     "go east",
     "pinch the roping",
+    "go east",
+    "pinch the teakwood",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17658,6 +17797,9 @@
     "pinch the yardarm",
     "go east",
     "pinch the yardsling",
+    "go east",
+    "pinch the purpleheart",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -17669,6 +17811,9 @@
     "pinch the spencer",
     "go east",
     "pinch the reefearring",
+    "go east",
+    "pinch the padauk",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17678,6 +17823,9 @@
     "pinch the lateen",
     "go east",
     "pinch the slings",
+    "go east",
+    "pinch the meranti",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17692,6 +17840,9 @@
     "pinch the lugsail",
     "go east",
     "pinch the hanks",
+    "go east",
+    "pinch the greenheart",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -17703,6 +17854,9 @@
     "pinch the roband",
     "go east",
     "pinch the reefband",
+    "go east",
+    "pinch the iroko",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17712,6 +17866,9 @@
     "pinch the seizing",
     "go east",
     "pinch the headrope",
+    "go east",
+    "pinch the lauan",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17726,6 +17883,9 @@
     "pinch the nettles",
     "go east",
     "pinch the leechrope",
+    "go east",
+    "pinch the balsa",
+    "go west",
     "go west",
     "go west",
     "go west",
