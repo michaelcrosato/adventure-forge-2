@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 6250,
+  "maxScore": 6290,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -11639,7 +11639,7 @@
       "name": "Rust Casein",
       "desc": "A dry casein east of the sheetbend. Packed rust coats casein.",
       "brief": "Dry casein, packed rust.",
-      "exits": { "west": { "to": "rust_sheetbend" } },
+      "exits": { "west": { "to": "rust_sheetbend" }, "east": { "to": "rust_okoume" } },
       "actions": [
         {
           "id": "pinch_casein",
@@ -11648,6 +11648,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard casein. They packed it on the sheetbend and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_okoume": {
+      "name": "Rust Okoume",
+      "desc": "A dry okoume east of the casein. Packed rust coats okoume.",
+      "brief": "Dry okoume, packed rust.",
+      "exits": { "west": { "to": "rust_casein" } },
+      "actions": [
+        {
+          "id": "pinch_okoume",
+          "label": "pinch the okoume",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard okoume. They packed it on the casein and packed rust around it."]
           ]
         }
       ]
@@ -11724,7 +11741,7 @@
       "name": "Rust Isinglass",
       "desc": "A dry isinglass east of the rackseizing. Packed rust coats isinglass.",
       "brief": "Dry isinglass, packed rust.",
-      "exits": { "west": { "to": "rust_rackseizing" } },
+      "exits": { "west": { "to": "rust_rackseizing" }, "east": { "to": "rust_movingui" } },
       "actions": [
         {
           "id": "pinch_isinglass",
@@ -11733,6 +11750,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard isinglass. They packed it on the rackseizing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_movingui": {
+      "name": "Rust Movingui",
+      "desc": "A dry movingui east of the isinglass. Packed rust coats movingui.",
+      "brief": "Dry movingui, packed rust.",
+      "exits": { "west": { "to": "rust_isinglass" } },
+      "actions": [
+        {
+          "id": "pinch_movingui",
+          "label": "pinch the movingui",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard movingui. They packed it on the isinglass and packed rust around it."]
           ]
         }
       ]
@@ -11775,7 +11809,7 @@
       "name": "Rust Distemper",
       "desc": "A dry distemper east of the sheepshank. Packed rust coats distemper.",
       "brief": "Dry distemper, packed rust.",
-      "exits": { "west": { "to": "rust_sheepshank" } },
+      "exits": { "west": { "to": "rust_sheepshank" }, "east": { "to": "rust_mansonia" } },
       "actions": [
         {
           "id": "pinch_distemper",
@@ -11784,6 +11818,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard distemper. They packed it on the sheepshank and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_mansonia": {
+      "name": "Rust Mansonia",
+      "desc": "A dry mansonia east of the distemper. Packed rust coats mansonia.",
+      "brief": "Dry mansonia, packed rust.",
+      "exits": { "west": { "to": "rust_distemper" } },
+      "actions": [
+        {
+          "id": "pinch_mansonia",
+          "label": "pinch the mansonia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mansonia. They packed it on the distemper and packed rust around it."]
           ]
         }
       ]
@@ -11860,7 +11911,7 @@
       "name": "Rust Gesso",
       "desc": "A dry gesso east of the catspaw. Packed rust coats gesso.",
       "brief": "Dry gesso, packed rust.",
-      "exits": { "west": { "to": "rust_catspaw" } },
+      "exits": { "west": { "to": "rust_catspaw" }, "east": { "to": "rust_idigbo" } },
       "actions": [
         {
           "id": "pinch_gesso",
@@ -11869,6 +11920,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gesso. They packed it on the catspaw and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_idigbo": {
+      "name": "Rust Idigbo",
+      "desc": "A dry idigbo east of the gesso. Packed rust coats idigbo.",
+      "brief": "Dry idigbo, packed rust.",
+      "exits": { "west": { "to": "rust_gesso" } },
+      "actions": [
+        {
+          "id": "pinch_idigbo",
+          "label": "pinch the idigbo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard idigbo. They packed it on the gesso and packed rust around it."]
           ]
         }
       ]
@@ -11928,7 +11996,7 @@
       "name": "Rust Ambergris",
       "desc": "A dry ambergris east of the reeving. Packed rust coats ambergris.",
       "brief": "Dry ambergris, packed rust.",
-      "exits": { "west": { "to": "rust_reeving" } },
+      "exits": { "west": { "to": "rust_reeving" }, "east": { "to": "rust_framire" } },
       "actions": [
         {
           "id": "pinch_ambergris",
@@ -11937,6 +12005,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ambergris. They packed it on the reeving and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_framire": {
+      "name": "Rust Framire",
+      "desc": "A dry framire east of the ambergris. Packed rust coats framire.",
+      "brief": "Dry framire, packed rust.",
+      "exits": { "west": { "to": "rust_ambergris" } },
+      "actions": [
+        {
+          "id": "pinch_framire",
+          "label": "pinch the framire",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard framire. They packed it on the ambergris and packed rust around it."]
           ]
         }
       ]
@@ -11979,7 +12064,7 @@
       "name": "Rust Spermaceti",
       "desc": "A dry spermaceti east of the bending. Packed rust coats spermaceti.",
       "brief": "Dry spermaceti, packed rust.",
-      "exits": { "west": { "to": "rust_bending" } },
+      "exits": { "west": { "to": "rust_bending" }, "east": { "to": "rust_anigre" } },
       "actions": [
         {
           "id": "pinch_spermaceti",
@@ -11992,7 +12077,23 @@
         }
       ]
     },
-
+    "rust_anigre": {
+      "name": "Rust Anigre",
+      "desc": "A dry anigre east of the spermaceti. Packed rust coats anigre.",
+      "brief": "Dry anigre, packed rust.",
+      "exits": { "west": { "to": "rust_spermaceti" } },
+      "actions": [
+        {
+          "id": "pinch_anigre",
+          "label": "pinch the anigre",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard anigre. They packed it on the spermaceti and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_hilt": {
       "name": "Rust Hilt",
       "desc": "A dry hilt north of the tooth. Packed rust coats a hilt.",
@@ -12048,7 +12149,7 @@
       "name": "Rust Japanblack",
       "desc": "A dry japanblack east of the hitch. Packed rust coats japanblack.",
       "brief": "Dry japanblack, packed rust.",
-      "exits": { "west": { "to": "rust_hitch" } },
+      "exits": { "west": { "to": "rust_hitch" }, "east": { "to": "rust_avodire" } },
       "actions": [
         {
           "id": "pinch_japanblack",
@@ -12057,6 +12158,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard japanblack. They packed it on the hitch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_avodire": {
+      "name": "Rust Avodire",
+      "desc": "A dry avodire east of the japanblack. Packed rust coats avodire.",
+      "brief": "Dry avodire, packed rust.",
+      "exits": { "west": { "to": "rust_japanblack" } },
+      "actions": [
+        {
+          "id": "pinch_avodire",
+          "label": "pinch the avodire",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard avodire. They packed it on the japanblack and packed rust around it."]
           ]
         }
       ]
@@ -12320,7 +12438,7 @@
       "name": "Rust Copaiba",
       "desc": "A dry copaiba east of the houndband. Packed rust coats copaiba.",
       "brief": "Dry copaiba, packed rust.",
-      "exits": { "west": { "to": "rust_houndband" } },
+      "exits": { "west": { "to": "rust_houndband" }, "east": { "to": "rust_agba" } },
       "actions": [
         {
           "id": "pinch_copaiba",
@@ -12329,6 +12447,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard copaiba. They packed it on the houndband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_agba": {
+      "name": "Rust Agba",
+      "desc": "A dry agba east of the copaiba. Packed rust coats agba.",
+      "brief": "Dry agba, packed rust.",
+      "exits": { "west": { "to": "rust_copaiba" } },
+      "actions": [
+        {
+          "id": "pinch_agba",
+          "label": "pinch the agba",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard agba. They packed it on the copaiba and packed rust around it."]
           ]
         }
       ]
@@ -23223,6 +23358,9 @@
     "pinch the sheetbend",
     "go east",
     "pinch the casein",
+    "go east",
+    "pinch the okoume",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -23236,6 +23374,9 @@
     "pinch the rackseizing",
     "go east",
     "pinch the isinglass",
+    "go east",
+    "pinch the movingui",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23246,6 +23387,9 @@
     "pinch the sheepshank",
     "go east",
     "pinch the distemper",
+    "go east",
+    "pinch the mansonia",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23260,6 +23404,9 @@
     "pinch the catspaw",
     "go east",
     "pinch the gesso",
+    "go east",
+    "pinch the idigbo",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -23271,6 +23418,9 @@
     "pinch the reeving",
     "go east",
     "pinch the ambergris",
+    "go east",
+    "pinch the framire",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -23280,6 +23430,9 @@
     "pinch the bending",
     "go east",
     "pinch the spermaceti",
+    "go east",
+    "pinch the anigre",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -23291,6 +23444,9 @@
     "pinch the hitch",
     "go east",
     "pinch the japanblack",
+    "go east",
+    "pinch the avodire",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -23322,6 +23478,9 @@
     "pinch the houndband",
     "go east",
     "pinch the copaiba",
+    "go east",
+    "pinch the agba",
+    "go west",
     "go west",
     "go west",
     "go west",
