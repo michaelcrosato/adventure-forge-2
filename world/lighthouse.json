@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 5370,
+  "maxScore": 5410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -16724,7 +16724,7 @@
       "name": "Rust Caulk",
       "desc": "A dry caulk east of the sycamore. Packed rust coats caulk.",
       "brief": "Dry caulk, packed rust.",
-      "exits": { "west": { "to": "rust_sycamore" } },
+      "exits": { "west": { "to": "rust_sycamore" }, "east": { "to": "rust_leadwhite" } },
       "actions": [
         {
           "id": "pinch_caulk",
@@ -16733,6 +16733,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard caulk. They packed it on the sycamore and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_leadwhite": {
+      "name": "Rust Leadwhite",
+      "desc": "A dry leadwhite east of the caulk. Packed rust coats leadwhite.",
+      "brief": "Dry leadwhite, packed rust.",
+      "exits": { "west": { "to": "rust_caulk" } },
+      "actions": [
+        {
+          "id": "pinch_leadwhite",
+          "label": "pinch the leadwhite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard leadwhite. They packed it on the caulk and packed rust around it."]
           ]
         }
       ]
@@ -16860,7 +16877,7 @@
       "name": "Rust Plaster",
       "desc": "A dry plaster east of the locust. Packed rust coats plaster.",
       "brief": "Dry plaster, packed rust.",
-      "exits": { "west": { "to": "rust_locust" } },
+      "exits": { "west": { "to": "rust_locust" }, "east": { "to": "rust_lithopone" } },
       "actions": [
         {
           "id": "pinch_plaster",
@@ -16869,6 +16886,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard plaster. They bound it on the locust and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_lithopone": {
+      "name": "Rust Lithopone",
+      "desc": "A dry lithopone east of the plaster. Packed rust coats lithopone.",
+      "brief": "Dry lithopone, packed rust.",
+      "exits": { "west": { "to": "rust_plaster" } },
+      "actions": [
+        {
+          "id": "pinch_lithopone",
+          "label": "pinch the lithopone",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lithopone. They packed it on the plaster and packed rust around it."]
           ]
         }
       ]
@@ -16979,7 +17013,7 @@
       "name": "Rust Palm",
       "desc": "A dry palm east of the chestnut. Packed rust coats palm.",
       "brief": "Dry palm, packed rust.",
-      "exits": { "west": { "to": "rust_chestnut" } },
+      "exits": { "west": { "to": "rust_chestnut" }, "east": { "to": "rust_blancfixe" } },
       "actions": [
         {
           "id": "pinch_palm",
@@ -16988,6 +17022,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palm. They packed it on the chestnut and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_blancfixe": {
+      "name": "Rust Blancfixe",
+      "desc": "A dry blancfixe east of the palm. Packed rust coats blancfixe.",
+      "brief": "Dry blancfixe, packed rust.",
+      "exits": { "west": { "to": "rust_palm" } },
+      "actions": [
+        {
+          "id": "pinch_blancfixe",
+          "label": "pinch the blancfixe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard blancfixe. They packed it on the palm and packed rust around it."]
           ]
         }
       ]
@@ -17166,7 +17217,7 @@
       "name": "Rust Juniper",
       "desc": "A dry juniper east of the pecan. Packed rust coats juniper.",
       "brief": "Dry juniper, packed rust.",
-      "exits": { "west": { "to": "rust_pecan" } },
+      "exits": { "west": { "to": "rust_pecan" }, "east": { "to": "rust_barytes" } },
       "actions": [
         {
           "id": "pinch_juniper",
@@ -17175,6 +17226,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard juniper. They set it on the pecan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barytes": {
+      "name": "Rust Barytes",
+      "desc": "A dry barytes east of the juniper. Packed rust coats barytes.",
+      "brief": "Dry barytes, packed rust.",
+      "exits": { "west": { "to": "rust_juniper" } },
+      "actions": [
+        {
+          "id": "pinch_barytes",
+          "label": "pinch the barytes",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barytes. They packed it on the juniper and packed rust around it."]
           ]
         }
       ]
@@ -17268,7 +17336,7 @@
       "name": "Rust Osage",
       "desc": "A dry osage east of the maple. Packed rust coats osage.",
       "brief": "Dry osage, packed rust.",
-      "exits": { "west": { "to": "rust_maple" } },
+      "exits": { "west": { "to": "rust_maple" }, "east": { "to": "rust_zincwhite" } },
       "actions": [
         {
           "id": "pinch_osage",
@@ -17277,6 +17345,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard osage. They laid it on the maple and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_zincwhite": {
+      "name": "Rust Zincwhite",
+      "desc": "A dry zincwhite east of the osage. Packed rust coats zincwhite.",
+      "brief": "Dry zincwhite, packed rust.",
+      "exits": { "west": { "to": "rust_osage" } },
+      "actions": [
+        {
+          "id": "pinch_zincwhite",
+          "label": "pinch the zincwhite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard zincwhite. They packed it on the osage and packed rust around it."]
           ]
         }
       ]
@@ -17421,7 +17506,7 @@
       "name": "Rust Redwood",
       "desc": "A dry redwood east of the hickory. Packed rust coats redwood.",
       "brief": "Dry redwood, packed rust.",
-      "exits": { "west": { "to": "rust_hickory" } },
+      "exits": { "west": { "to": "rust_hickory" }, "east": { "to": "rust_flakewhite" } },
       "actions": [
         {
           "id": "pinch_redwood",
@@ -17430,6 +17515,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redwood. They laid it on the hickory and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_flakewhite": {
+      "name": "Rust Flakewhite",
+      "desc": "A dry flakewhite east of the redwood. Packed rust coats flakewhite.",
+      "brief": "Dry flakewhite, packed rust.",
+      "exits": { "west": { "to": "rust_redwood" } },
+      "actions": [
+        {
+          "id": "pinch_flakewhite",
+          "label": "pinch the flakewhite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard flakewhite. They packed it on the redwood and packed rust around it."]
           ]
         }
       ]
@@ -17557,7 +17659,7 @@
       "name": "Rust Cypress",
       "desc": "A dry cypress east of the aspen. Packed rust coats cypress.",
       "brief": "Dry cypress, packed rust.",
-      "exits": { "west": { "to": "rust_aspen" } },
+      "exits": { "west": { "to": "rust_aspen" }, "east": { "to": "rust_titanium" } },
       "actions": [
         {
           "id": "pinch_cypress",
@@ -17566,6 +17668,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cypress. They stacked it on the aspen and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_titanium": {
+      "name": "Rust Titanium",
+      "desc": "A dry titanium east of the cypress. Packed rust coats titanium.",
+      "brief": "Dry titanium, packed rust.",
+      "exits": { "west": { "to": "rust_cypress" } },
+      "actions": [
+        {
+          "id": "pinch_titanium",
+          "label": "pinch the titanium",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard titanium. They packed it on the cypress and packed rust around it."]
           ]
         }
       ]
@@ -17659,7 +17778,7 @@
       "name": "Rust Willow",
       "desc": "A dry willow east of the birch. Packed rust coats willow.",
       "brief": "Dry willow, packed rust.",
-      "exits": { "west": { "to": "rust_birch" } },
+      "exits": { "west": { "to": "rust_birch" }, "east": { "to": "rust_cadmium" } },
       "actions": [
         {
           "id": "pinch_willow",
@@ -17668,6 +17787,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard willow. They stacked it on the birch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cadmium": {
+      "name": "Rust Cadmium",
+      "desc": "A dry cadmium east of the willow. Packed rust coats cadmium.",
+      "brief": "Dry cadmium, packed rust.",
+      "exits": { "west": { "to": "rust_willow" } },
+      "actions": [
+        {
+          "id": "pinch_cadmium",
+          "label": "pinch the cadmium",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cadmium. They packed it on the willow and packed rust around it."]
           ]
         }
       ]
@@ -21105,6 +21241,9 @@
     "pinch the sycamore",
     "go east",
     "pinch the caulk",
+    "go east",
+    "pinch the leadwhite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21129,6 +21268,9 @@
     "pinch the locust",
     "go east",
     "pinch the plaster",
+    "go east",
+    "pinch the lithopone",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21151,6 +21293,9 @@
     "pinch the chestnut",
     "go east",
     "pinch the palm",
+    "go east",
+    "pinch the blancfixe",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21182,6 +21327,9 @@
     "pinch the pecan",
     "go east",
     "pinch the juniper",
+    "go east",
+    "pinch the barytes",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21202,6 +21350,9 @@
     "pinch the maple",
     "go east",
     "pinch the osage",
+    "go east",
+    "pinch the zincwhite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21227,6 +21378,9 @@
     "pinch the hickory",
     "go east",
     "pinch the redwood",
+    "go east",
+    "pinch the flakewhite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21251,6 +21405,9 @@
     "pinch the aspen",
     "go east",
     "pinch the cypress",
+    "go east",
+    "pinch the titanium",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21271,6 +21428,9 @@
     "pinch the birch",
     "go east",
     "pinch the willow",
+    "go east",
+    "pinch the cadmium",
+    "go west",
     "go west",
     "go west",
     "go west",
