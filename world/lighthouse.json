@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 5010,
+  "maxScore": 5050,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6658,7 +6658,7 @@
       "name": "Rust Rollinghitch",
       "desc": "A dry rollinghitch east of the spanker. Packed rust coats a rollinghitch.",
       "brief": "Dry rollinghitch, packed rust.",
-      "exits": { "west": { "to": "rust_spanker" } },
+      "exits": { "west": { "to": "rust_spanker" }, "east": { "to": "rust_brazilwood" } },
       "actions": [
         {
           "id": "pinch_rollinghitch",
@@ -6667,6 +6667,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rollinghitch. They hitched it on the spanker and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_brazilwood": {
+      "name": "Rust Brazilwood",
+      "desc": "A dry brazilwood east of the rollinghitch. Packed rust coats brazilwood.",
+      "brief": "Dry brazilwood, packed rust.",
+      "exits": { "west": { "to": "rust_rollinghitch" } },
+      "actions": [
+        {
+          "id": "pinch_brazilwood",
+          "label": "pinch the brazilwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard brazilwood. They packed it on the rollinghitch and packed rust around it."]
           ]
         }
       ]
@@ -6709,7 +6726,7 @@
       "name": "Rust Timberhitch",
       "desc": "A dry timberhitch east of the bumpkin. Packed rust coats a timberhitch.",
       "brief": "Dry timberhitch, packed rust.",
-      "exits": { "west": { "to": "rust_bumpkin" } },
+      "exits": { "west": { "to": "rust_bumpkin" }, "east": { "to": "rust_cochineal" } },
       "actions": [
         {
           "id": "pinch_timberhitch",
@@ -6718,6 +6735,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard timberhitch. They lashed it on the bumpkin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cochineal": {
+      "name": "Rust Cochineal",
+      "desc": "A dry cochineal east of the timberhitch. Packed rust coats cochineal.",
+      "brief": "Dry cochineal, packed rust.",
+      "exits": { "west": { "to": "rust_timberhitch" } },
+      "actions": [
+        {
+          "id": "pinch_cochineal",
+          "label": "pinch the cochineal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cochineal. They packed it on the timberhitch and packed rust around it."]
           ]
         }
       ]
@@ -6760,7 +6794,7 @@
       "name": "Rust Blackwall",
       "desc": "A dry blackwall east of the driver. Packed rust coats a blackwall.",
       "brief": "Dry blackwall, packed rust.",
-      "exits": { "west": { "to": "rust_driver" } },
+      "exits": { "west": { "to": "rust_driver" }, "east": { "to": "rust_kermes" } },
       "actions": [
         {
           "id": "pinch_blackwall",
@@ -6769,6 +6803,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackwall. They hooked it on the driver and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kermes": {
+      "name": "Rust Kermes",
+      "desc": "A dry kermes east of the blackwall. Packed rust coats kermes.",
+      "brief": "Dry kermes, packed rust.",
+      "exits": { "west": { "to": "rust_blackwall" } },
+      "actions": [
+        {
+          "id": "pinch_kermes",
+          "label": "pinch the kermes",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kermes. They packed it on the blackwall and packed rust around it."]
           ]
         }
       ]
@@ -6862,7 +6913,7 @@
       "name": "Rust Reefknot",
       "desc": "A dry reefknot east of the topgallant. Packed rust coats a reefknot.",
       "brief": "Dry reefknot, packed rust.",
-      "exits": { "west": { "to": "rust_topgallant" } },
+      "exits": { "west": { "to": "rust_topgallant" }, "east": { "to": "rust_madder" } },
       "actions": [
         {
           "id": "pinch_reefknot",
@@ -6871,6 +6922,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard reefknot. They tied it on the topgallant and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_madder": {
+      "name": "Rust Madder",
+      "desc": "A dry madder east of the reefknot. Packed rust coats madder.",
+      "brief": "Dry madder, packed rust.",
+      "exits": { "west": { "to": "rust_reefknot" } },
+      "actions": [
+        {
+          "id": "pinch_madder",
+          "label": "pinch the madder",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard madder. They packed it on the reefknot and packed rust around it."]
           ]
         }
       ]
@@ -6947,7 +7015,7 @@
       "name": "Rust Granny",
       "desc": "A dry granny east of the skysail. Packed rust coats a granny.",
       "brief": "Dry granny, packed rust.",
-      "exits": { "west": { "to": "rust_skysail" } },
+      "exits": { "west": { "to": "rust_skysail" }, "east": { "to": "rust_woad" } },
       "actions": [
         {
           "id": "pinch_granny",
@@ -6956,6 +7024,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard granny. They knotted it on the skysail and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_woad": {
+      "name": "Rust Woad",
+      "desc": "A dry woad east of the granny. Packed rust coats woad.",
+      "brief": "Dry woad, packed rust.",
+      "exits": { "west": { "to": "rust_granny" } },
+      "actions": [
+        {
+          "id": "pinch_woad",
+          "label": "pinch the woad",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard woad. They packed it on the granny and packed rust around it."]
           ]
         }
       ]
@@ -7032,7 +7117,7 @@
       "name": "Rust Overhand",
       "desc": "A dry overhand east of the course. Packed rust coats an overhand.",
       "brief": "Dry overhand, packed rust.",
-      "exits": { "west": { "to": "rust_course" } },
+      "exits": { "west": { "to": "rust_course" }, "east": { "to": "rust_indigo" } },
       "actions": [
         {
           "id": "pinch_overhand",
@@ -7041,6 +7126,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard overhand. They tied it on the course and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_indigo": {
+      "name": "Rust Indigo",
+      "desc": "A dry indigo east of the overhand. Packed rust coats indigo.",
+      "brief": "Dry indigo, packed rust.",
+      "exits": { "west": { "to": "rust_overhand" } },
+      "actions": [
+        {
+          "id": "pinch_indigo",
+          "label": "pinch the indigo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard indigo. They packed it on the overhand and packed rust around it."]
           ]
         }
       ]
@@ -8120,7 +8222,7 @@
       "name": "Rust Bloodknot",
       "desc": "A dry bloodknot east of the stunsail. Packed rust coats a bloodknot.",
       "brief": "Dry bloodknot, packed rust.",
-      "exits": { "west": { "to": "rust_stunsail" } },
+      "exits": { "west": { "to": "rust_stunsail" }, "east": { "to": "rust_logwood" } },
       "actions": [
         {
           "id": "pinch_bloodknot",
@@ -8129,6 +8231,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bloodknot. They tied it on the stunsail and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_logwood": {
+      "name": "Rust Logwood",
+      "desc": "A dry logwood east of the bloodknot. Packed rust coats logwood.",
+      "brief": "Dry logwood, packed rust.",
+      "exits": { "west": { "to": "rust_bloodknot" } },
+      "actions": [
+        {
+          "id": "pinch_logwood",
+          "label": "pinch the logwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard logwood. They packed it on the bloodknot and packed rust around it."]
           ]
         }
       ]
@@ -9531,7 +9650,7 @@
       "name": "Rust Dextrin",
       "desc": "A dry dextrin east of the surgeon. Packed rust coats dextrin.",
       "brief": "Dry dextrin, packed rust.",
-      "exits": { "west": { "to": "rust_surgeon" } },
+      "exits": { "west": { "to": "rust_surgeon" }, "east": { "to": "rust_realgar" } },
       "actions": [
         {
           "id": "pinch_dextrin",
@@ -9540,6 +9659,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dextrin. They packed it on the surgeon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_realgar": {
+      "name": "Rust Realgar",
+      "desc": "A dry realgar east of the dextrin. Packed rust coats realgar.",
+      "brief": "Dry realgar, packed rust.",
+      "exits": { "west": { "to": "rust_dextrin" } },
+      "actions": [
+        {
+          "id": "pinch_realgar",
+          "label": "pinch the realgar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard realgar. They packed it on the dextrin and packed rust around it."]
           ]
         }
       ]
@@ -18110,6 +18246,9 @@
     "pinch the stunsail",
     "go east",
     "pinch the bloodknot",
+    "go east",
+    "pinch the logwood",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -18124,6 +18263,9 @@
     "pinch the spanker",
     "go east",
     "pinch the rollinghitch",
+    "go east",
+    "pinch the brazilwood",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -18133,6 +18275,9 @@
     "pinch the bumpkin",
     "go east",
     "pinch the timberhitch",
+    "go east",
+    "pinch the cochineal",
+    "go west",
     "go west",
     "go north",
     "go east",
@@ -18141,6 +18286,9 @@
     "pinch the driver",
     "go east",
     "pinch the blackwall",
+    "go east",
+    "pinch the kermes",
+    "go west",
     "go west",
     "go north",
     "go west",
@@ -18158,6 +18306,9 @@
     "pinch the topgallant",
     "go east",
     "pinch the reefknot",
+    "go east",
+    "pinch the madder",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -18171,6 +18322,9 @@
     "pinch the skysail",
     "go east",
     "pinch the granny",
+    "go east",
+    "pinch the woad",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -18186,6 +18340,9 @@
     "pinch the course",
     "go east",
     "pinch the overhand",
+    "go east",
+    "pinch the indigo",
+    "go west",
     "go west",
     "go north",
     "go north",
@@ -18615,6 +18772,9 @@
     "pinch the surgeon",
     "go east",
     "pinch the dextrin",
+    "go east",
+    "pinch the realgar",
+    "go west",
     "go west",
     "go west",
     "go west",
