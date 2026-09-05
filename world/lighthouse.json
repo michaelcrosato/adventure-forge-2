@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7210,
+  "maxScore": 7250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -10755,7 +10755,7 @@
       "name": "Rust Casuarina",
       "desc": "A dry casuarina east of the yorkgum. Packed rust coats casuarina.",
       "brief": "Dry casuarina, packed rust.",
-      "exits": { "west": { "to": "rust_yorkgum" } },
+      "exits": { "west": { "to": "rust_yorkgum" }, "east": { "to": "rust_brigalow" } },
       "actions": [
         {
           "id": "pinch_casuarina",
@@ -10764,6 +10764,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard casuarina. They packed it on the yorkgum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_brigalow": {
+      "name": "Rust Brigalow",
+      "desc": "A dry brigalow east of the casuarina. Packed rust coats brigalow.",
+      "brief": "Dry brigalow, packed rust.",
+      "exits": { "west": { "to": "rust_casuarina" } },
+      "actions": [
+        {
+          "id": "pinch_brigalow",
+          "label": "pinch the brigalow",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard brigalow. They packed it on the casuarina and packed rust around it."]
           ]
         }
       ]
@@ -10891,7 +10908,7 @@
       "name": "Rust Forestoak",
       "desc": "A dry forestoak east of the salmongum. Packed rust coats forestoak.",
       "brief": "Dry forestoak, packed rust.",
-      "exits": { "west": { "to": "rust_salmongum" } },
+      "exits": { "west": { "to": "rust_salmongum" }, "east": { "to": "rust_myall" } },
       "actions": [
         {
           "id": "pinch_forestoak",
@@ -10900,6 +10917,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard forestoak. They packed it on the salmongum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_myall": {
+      "name": "Rust Myall",
+      "desc": "A dry myall east of the forestoak. Packed rust coats myall.",
+      "brief": "Dry myall, packed rust.",
+      "exits": { "west": { "to": "rust_forestoak" } },
+      "actions": [
+        {
+          "id": "pinch_myall",
+          "label": "pinch the myall",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard myall. They packed it on the forestoak and packed rust around it."]
           ]
         }
       ]
@@ -10993,7 +11027,7 @@
       "name": "Rust Swampoak",
       "desc": "A dry swampoak east of the whitebox. Packed rust coats swampoak.",
       "brief": "Dry swampoak, packed rust.",
-      "exits": { "west": { "to": "rust_whitebox" } },
+      "exits": { "west": { "to": "rust_whitebox" }, "east": { "to": "rust_mulga" } },
       "actions": [
         {
           "id": "pinch_swampoak",
@@ -11002,6 +11036,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard swampoak. They packed it on the whitebox and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_mulga": {
+      "name": "Rust Mulga",
+      "desc": "A dry mulga east of the swampoak. Packed rust coats mulga.",
+      "brief": "Dry mulga, packed rust.",
+      "exits": { "west": { "to": "rust_swampoak" } },
+      "actions": [
+        {
+          "id": "pinch_mulga",
+          "label": "pinch the mulga",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mulga. They packed it on the swampoak and packed rust around it."]
           ]
         }
       ]
@@ -11129,7 +11180,7 @@
       "name": "Rust Spottedironbark",
       "desc": "A dry spottedironbark east of the redironbark. Packed rust coats spottedironbark.",
       "brief": "Dry spottedironbark, packed rust.",
-      "exits": { "west": { "to": "rust_redironbark" } },
+      "exits": { "west": { "to": "rust_redironbark" }, "east": { "to": "rust_blackwattle" } },
       "actions": [
         {
           "id": "pinch_spottedironbark",
@@ -11138,6 +11189,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spottedironbark. They packed it on the redironbark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_blackwattle": {
+      "name": "Rust Blackwattle",
+      "desc": "A dry blackwattle east of the spottedironbark. Packed rust coats blackwattle.",
+      "brief": "Dry blackwattle, packed rust.",
+      "exits": { "west": { "to": "rust_spottedironbark" } },
+      "actions": [
+        {
+          "id": "pinch_blackwattle",
+          "label": "pinch the blackwattle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard blackwattle. They packed it on the spottedironbark and packed rust around it."]
           ]
         }
       ]
@@ -11418,7 +11486,7 @@
       "name": "Rust Angophora",
       "desc": "A dry angophora east of the swampmahogany. Packed rust coats angophora.",
       "brief": "Dry angophora, packed rust.",
-      "exits": { "west": { "to": "rust_swampmahogany" } },
+      "exits": { "west": { "to": "rust_swampmahogany" }, "east": { "to": "rust_belah" } },
       "actions": [
         {
           "id": "pinch_angophora",
@@ -11427,6 +11495,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard angophora. They packed it on the swampmahogany and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_belah": {
+      "name": "Rust Belah",
+      "desc": "A dry belah east of the angophora. Packed rust coats belah.",
+      "brief": "Dry belah, packed rust.",
+      "exits": { "west": { "to": "rust_angophora" } },
+      "actions": [
+        {
+          "id": "pinch_belah",
+          "label": "pinch the belah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard belah. They packed it on the angophora and packed rust around it."]
           ]
         }
       ]
@@ -11571,7 +11656,7 @@
       "name": "Rust Mallet",
       "desc": "A dry mallet east of the floodedgum. Packed rust coats mallet.",
       "brief": "Dry mallet, packed rust.",
-      "exits": { "west": { "to": "rust_floodedgum" } },
+      "exits": { "west": { "to": "rust_floodedgum" }, "east": { "to": "rust_quandong" } },
       "actions": [
         {
           "id": "pinch_mallet",
@@ -11580,6 +11665,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mallet. They packed it on the floodedgum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_quandong": {
+      "name": "Rust Quandong",
+      "desc": "A dry quandong east of the mallet. Packed rust coats quandong.",
+      "brief": "Dry quandong, packed rust.",
+      "exits": { "west": { "to": "rust_mallet" } },
+      "actions": [
+        {
+          "id": "pinch_quandong",
+          "label": "pinch the quandong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard quandong. They packed it on the mallet and packed rust around it."]
           ]
         }
       ]
@@ -11707,7 +11809,7 @@
       "name": "Rust Yate",
       "desc": "A dry yate east of the sugargum. Packed rust coats yate.",
       "brief": "Dry yate, packed rust.",
-      "exits": { "west": { "to": "rust_sugargum" } },
+      "exits": { "west": { "to": "rust_sugargum" }, "east": { "to": "rust_silverwattle" } },
       "actions": [
         {
           "id": "pinch_yate",
@@ -11716,6 +11818,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yate. They packed it on the sugargum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_silverwattle": {
+      "name": "Rust Silverwattle",
+      "desc": "A dry silverwattle east of the yate. Packed rust coats silverwattle.",
+      "brief": "Dry silverwattle, packed rust.",
+      "exits": { "west": { "to": "rust_yate" } },
+      "actions": [
+        {
+          "id": "pinch_silverwattle",
+          "label": "pinch the silverwattle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard silverwattle. They packed it on the yate and packed rust around it."]
           ]
         }
       ]
@@ -12166,7 +12285,7 @@
       "name": "Rust Lemongum",
       "desc": "A dry lemongum east of the candlebark. Packed rust coats lemongum.",
       "brief": "Dry lemongum, packed rust.",
-      "exits": { "west": { "to": "rust_candlebark" } },
+      "exits": { "west": { "to": "rust_candlebark" }, "east": { "to": "rust_bunya" } },
       "actions": [
         {
           "id": "pinch_lemongum",
@@ -12175,6 +12294,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lemongum. They packed it on the candlebark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bunya": {
+      "name": "Rust Bunya",
+      "desc": "A dry bunya east of the lemongum. Packed rust coats bunya.",
+      "brief": "Dry bunya, packed rust.",
+      "exits": { "west": { "to": "rust_lemongum" } },
+      "actions": [
+        {
+          "id": "pinch_bunya",
+          "label": "pinch the bunya",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bunya. They packed it on the lemongum and packed rust around it."]
           ]
         }
       ]
@@ -26304,6 +26440,9 @@
     "pinch the yorkgum",
     "go east",
     "pinch the casuarina",
+    "go east",
+    "pinch the brigalow",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26330,6 +26469,9 @@
     "pinch the salmongum",
     "go east",
     "pinch the forestoak",
+    "go east",
+    "pinch the myall",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26349,6 +26491,9 @@
     "pinch the whitebox",
     "go east",
     "pinch the swampoak",
+    "go east",
+    "pinch the mulga",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26371,6 +26516,9 @@
     "pinch the redironbark",
     "go east",
     "pinch the spottedironbark",
+    "go east",
+    "pinch the blackwattle",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26421,6 +26569,9 @@
     "pinch the swampmahogany",
     "go east",
     "pinch the angophora",
+    "go east",
+    "pinch the belah",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26446,6 +26597,9 @@
     "pinch the floodedgum",
     "go east",
     "pinch the mallet",
+    "go east",
+    "pinch the quandong",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26470,6 +26624,9 @@
     "pinch the sugargum",
     "go east",
     "pinch the yate",
+    "go east",
+    "pinch the silverwattle",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26549,6 +26706,9 @@
     "pinch the candlebark",
     "go east",
     "pinch the lemongum",
+    "go east",
+    "pinch the bunya",
+    "go west",
     "go west",
     "go west",
     "go west",
