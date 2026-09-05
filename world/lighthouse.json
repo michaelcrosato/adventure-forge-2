@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 5450,
+  "maxScore": 5490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -14378,7 +14378,7 @@
       "name": "Rust Chalk",
       "desc": "A dry chalk east of the clewrope. Packed rust coats chalk.",
       "brief": "Dry chalk, packed rust.",
-      "exits": { "west": { "to": "rust_clewrope" } },
+      "exits": { "west": { "to": "rust_clewrope" }, "east": { "to": "rust_magnesia" } },
       "actions": [
         {
           "id": "pinch_chalk",
@@ -14387,6 +14387,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chalk. They packed it on the clewrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_magnesia": {
+      "name": "Rust Magnesia",
+      "desc": "A dry magnesia east of the chalk. Packed rust coats magnesia.",
+      "brief": "Dry magnesia, packed rust.",
+      "exits": { "west": { "to": "rust_chalk" } },
+      "actions": [
+        {
+          "id": "pinch_magnesia",
+          "label": "pinch the magnesia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard magnesia. They packed it on the chalk and packed rust around it."]
           ]
         }
       ]
@@ -14480,7 +14497,7 @@
       "name": "Rust Graphite",
       "desc": "A dry graphite east of the peakrope. Packed rust coats graphite.",
       "brief": "Dry graphite, packed rust.",
-      "exits": { "west": { "to": "rust_peakrope" } },
+      "exits": { "west": { "to": "rust_peakrope" }, "east": { "to": "rust_dolomite" } },
       "actions": [
         {
           "id": "pinch_graphite",
@@ -14489,6 +14506,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard graphite. They packed it on the peakrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_dolomite": {
+      "name": "Rust Dolomite",
+      "desc": "A dry dolomite east of the graphite. Packed rust coats dolomite.",
+      "brief": "Dry dolomite, packed rust.",
+      "exits": { "west": { "to": "rust_graphite" } },
+      "actions": [
+        {
+          "id": "pinch_dolomite",
+          "label": "pinch the dolomite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard dolomite. They packed it on the graphite and packed rust around it."]
           ]
         }
       ]
@@ -14548,7 +14582,7 @@
       "name": "Rust Asphalt",
       "desc": "A dry asphalt east of the throatrope. Packed rust coats asphalt.",
       "brief": "Dry asphalt, packed rust.",
-      "exits": { "west": { "to": "rust_throatrope" } },
+      "exits": { "west": { "to": "rust_throatrope" }, "east": { "to": "rust_bentonite" } },
       "actions": [
         {
           "id": "pinch_asphalt",
@@ -14557,6 +14591,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard asphalt. They packed it on the throatrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bentonite": {
+      "name": "Rust Bentonite",
+      "desc": "A dry bentonite east of the asphalt. Packed rust coats bentonite.",
+      "brief": "Dry bentonite, packed rust.",
+      "exits": { "west": { "to": "rust_asphalt" } },
+      "actions": [
+        {
+          "id": "pinch_bentonite",
+          "label": "pinch the bentonite",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bentonite. They packed it on the asphalt and packed rust around it."]
           ]
         }
       ]
@@ -14650,7 +14701,7 @@
       "name": "Rust Bitumen",
       "desc": "A dry bitumen east of the reefcringle. Packed rust coats bitumen.",
       "brief": "Dry bitumen, packed rust.",
-      "exits": { "west": { "to": "rust_reefcringle" } },
+      "exits": { "west": { "to": "rust_reefcringle" }, "east": { "to": "rust_megilp" } },
       "actions": [
         {
           "id": "pinch_bitumen",
@@ -14659,6 +14710,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bitumen. They packed it on the reefcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_megilp": {
+      "name": "Rust Megilp",
+      "desc": "A dry megilp east of the bitumen. Packed rust coats megilp.",
+      "brief": "Dry megilp, packed rust.",
+      "exits": { "west": { "to": "rust_bitumen" } },
+      "actions": [
+        {
+          "id": "pinch_megilp",
+          "label": "pinch the megilp",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard megilp. They packed it on the bitumen and packed rust around it."]
           ]
         }
       ]
@@ -14735,7 +14803,7 @@
       "name": "Rust Creosote",
       "desc": "A dry creosote east of the tackcringle. Packed rust coats creosote.",
       "brief": "Dry creosote, packed rust.",
-      "exits": { "west": { "to": "rust_tackcringle" } },
+      "exits": { "west": { "to": "rust_tackcringle" }, "east": { "to": "rust_siccative" } },
       "actions": [
         {
           "id": "pinch_creosote",
@@ -14744,6 +14812,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard creosote. They soaked it on the tackcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_siccative": {
+      "name": "Rust Siccative",
+      "desc": "A dry siccative east of the creosote. Packed rust coats siccative.",
+      "brief": "Dry siccative, packed rust.",
+      "exits": { "west": { "to": "rust_creosote" } },
+      "actions": [
+        {
+          "id": "pinch_siccative",
+          "label": "pinch the siccative",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard siccative. They packed it on the creosote and packed rust around it."]
           ]
         }
       ]
@@ -14803,7 +14888,7 @@
       "name": "Rust Camphor",
       "desc": "A dry camphor east of the clewcringle. Packed rust coats camphor.",
       "brief": "Dry camphor, packed rust.",
-      "exits": { "west": { "to": "rust_clewcringle" } },
+      "exits": { "west": { "to": "rust_clewcringle" }, "east": { "to": "rust_drier" } },
       "actions": [
         {
           "id": "pinch_camphor",
@@ -14812,6 +14897,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard camphor. They packed it on the clewcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_drier": {
+      "name": "Rust Drier",
+      "desc": "A dry drier east of the camphor. Packed rust coats drier.",
+      "brief": "Dry drier, packed rust.",
+      "exits": { "west": { "to": "rust_camphor" } },
+      "actions": [
+        {
+          "id": "pinch_drier",
+          "label": "pinch the drier",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard drier. They packed it on the camphor and packed rust around it."]
           ]
         }
       ]
@@ -14905,7 +15007,7 @@
       "name": "Rust Sandalwood",
       "desc": "A dry sandalwood east of the sailtwine. Packed rust coats sandalwood.",
       "brief": "Dry sandalwood, packed rust.",
-      "exits": { "west": { "to": "rust_sailtwine" } },
+      "exits": { "west": { "to": "rust_sailtwine" }, "east": { "to": "rust_strontia" } },
       "actions": [
         {
           "id": "pinch_sandalwood",
@@ -14914,6 +15016,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sandalwood. They set it on the sailtwine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_strontia": {
+      "name": "Rust Strontia",
+      "desc": "A dry strontia east of the sandalwood. Packed rust coats strontia.",
+      "brief": "Dry strontia, packed rust.",
+      "exits": { "west": { "to": "rust_sandalwood" } },
+      "actions": [
+        {
+          "id": "pinch_strontia",
+          "label": "pinch the strontia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard strontia. They packed it on the sandalwood and packed rust around it."]
           ]
         }
       ]
@@ -14990,7 +15109,7 @@
       "name": "Rust Rosewood",
       "desc": "A dry rosewood east of the boltline. Packed rust coats rosewood.",
       "brief": "Dry rosewood, packed rust.",
-      "exits": { "west": { "to": "rust_boltline" } },
+      "exits": { "west": { "to": "rust_boltline" }, "east": { "to": "rust_celestine" } },
       "actions": [
         {
           "id": "pinch_rosewood",
@@ -14999,6 +15118,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rosewood. They laid it on the boltline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_celestine": {
+      "name": "Rust Celestine",
+      "desc": "A dry celestine east of the rosewood. Packed rust coats celestine.",
+      "brief": "Dry celestine, packed rust.",
+      "exits": { "west": { "to": "rust_rosewood" } },
+      "actions": [
+        {
+          "id": "pinch_celestine",
+          "label": "pinch the celestine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard celestine. They packed it on the rosewood and packed rust around it."]
           ]
         }
       ]
@@ -20994,6 +21130,9 @@
     "pinch the clewrope",
     "go east",
     "pinch the chalk",
+    "go east",
+    "pinch the magnesia",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21011,6 +21150,9 @@
     "pinch the peakrope",
     "go east",
     "pinch the graphite",
+    "go east",
+    "pinch the dolomite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21023,6 +21165,9 @@
     "pinch the throatrope",
     "go east",
     "pinch the asphalt",
+    "go east",
+    "pinch the bentonite",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21040,6 +21185,9 @@
     "pinch the reefcringle",
     "go east",
     "pinch the bitumen",
+    "go east",
+    "pinch the megilp",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21054,6 +21202,9 @@
     "pinch the tackcringle",
     "go east",
     "pinch the creosote",
+    "go east",
+    "pinch the siccative",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21066,6 +21217,9 @@
     "pinch the clewcringle",
     "go east",
     "pinch the camphor",
+    "go east",
+    "pinch the drier",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21083,6 +21237,9 @@
     "pinch the sailtwine",
     "go east",
     "pinch the sandalwood",
+    "go east",
+    "pinch the strontia",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -21097,6 +21254,9 @@
     "pinch the boltline",
     "go east",
     "pinch the rosewood",
+    "go east",
+    "pinch the celestine",
+    "go west",
     "go west",
     "go west",
     "go west",
