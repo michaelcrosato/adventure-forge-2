@@ -147,6 +147,62 @@ test("successful oiling consumes the oil flask", () => {
   assert.equal(state.itemLoc.oil_flask, "nowhere");
 });
 
+test("rust arsenopyrite is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_arsenopyrite);
+  assert.ok(state.visited.includes("rust_arsenopyrite"));
+});
+
+test("rust lollingite is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_lollingite);
+  assert.ok(state.visited.includes("rust_lollingite"));
+});
+
+test("rust ullmannite is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_ullmannite);
+  assert.ok(state.visited.includes("rust_ullmannite"));
+});
+
+test("rust gersdorffite is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_gersdorffite);
+  assert.ok(state.visited.includes("rust_gersdorffite"));
+});
+
+test("rust skutterudite is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_skutterudite);
+  assert.ok(state.visited.includes("rust_skutterudite"));
+});
+
+test("rust safflorite is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_safflorite);
+  assert.ok(state.visited.includes("rust_safflorite"));
+});
+
+test("rust rammelsbergite is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_rammelsbergite);
+  assert.ok(state.visited.includes("rust_rammelsbergite"));
+});
+
+test("rust maucherite is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_maucherite);
+  assert.ok(state.visited.includes("rust_maucherite"));
+});
+
 test("rust breithauptite is scored on the proven path", () => {
   const { state } = playWalkthrough(1);
   assert.equal(state.ended?.id, "beacon_lit");
