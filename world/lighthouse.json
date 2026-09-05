@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4370,
+  "maxScore": 4410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -12610,7 +12610,7 @@
       "name": "Rust Jute",
       "desc": "A dry jute east of the reefgasket. Packed rust coats jute.",
       "brief": "Dry jute, packed rust.",
-      "exits": { "west": { "to": "rust_reefgasket" } },
+      "exits": { "west": { "to": "rust_reefgasket" }, "east": { "to": "rust_lignum" } },
       "actions": [
         {
           "id": "pinch_jute",
@@ -12619,6 +12619,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jute. They wound it on the reefgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_lignum": {
+      "name": "Rust Lignum",
+      "desc": "A dry lignum east of the jute. Packed rust coats lignum.",
+      "brief": "Dry lignum, packed rust.",
+      "exits": { "west": { "to": "rust_jute" } },
+      "actions": [
+        {
+          "id": "pinch_lignum",
+          "label": "pinch the lignum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lignum. They laid it on the jute and packed rust around it."]
           ]
         }
       ]
@@ -13443,7 +13460,7 @@
       "name": "Rust Umber",
       "desc": "A dry umber east of the flax. Packed rust coats umber.",
       "brief": "Dry umber, packed rust.",
-      "exits": { "west": { "to": "rust_flax" } },
+      "exits": { "west": { "to": "rust_flax" }, "east": { "to": "rust_colza" } },
       "actions": [
         {
           "id": "pinch_umber",
@@ -13452,6 +13469,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard umber. They dusted it on the flax and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_colza": {
+      "name": "Rust Colza",
+      "desc": "A dry colza east of the umber. Packed rust coats colza.",
+      "brief": "Dry colza, packed rust.",
+      "exits": { "west": { "to": "rust_umber" } },
+      "actions": [
+        {
+          "id": "pinch_colza",
+          "label": "pinch the colza",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard colza. They soaked it on the umber and packed rust around it."]
           ]
         }
       ]
@@ -13647,7 +13681,7 @@
       "name": "Rust Copra",
       "desc": "A dry copra east of the cotton. Packed rust coats copra.",
       "brief": "Dry copra, packed rust.",
-      "exits": { "west": { "to": "rust_cotton" } },
+      "exits": { "west": { "to": "rust_cotton" }, "east": { "to": "rust_boxwood" } },
       "actions": [
         {
           "id": "pinch_copra",
@@ -13656,6 +13690,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard copra. They packed it on the cotton and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_boxwood": {
+      "name": "Rust Boxwood",
+      "desc": "A dry boxwood east of the copra. Packed rust coats boxwood.",
+      "brief": "Dry boxwood, packed rust.",
+      "exits": { "west": { "to": "rust_copra" } },
+      "actions": [
+        {
+          "id": "pinch_boxwood",
+          "label": "pinch the boxwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard boxwood. They cut it on the copra and packed rust around it."]
           ]
         }
       ]
@@ -13732,7 +13783,7 @@
       "name": "Rust Bamboo",
       "desc": "A dry bamboo east of the wool. Packed rust coats bamboo.",
       "brief": "Dry bamboo, packed rust.",
-      "exits": { "west": { "to": "rust_wool" } },
+      "exits": { "west": { "to": "rust_wool" }, "east": { "to": "rust_mahogany" } },
       "actions": [
         {
           "id": "pinch_bamboo",
@@ -13741,6 +13792,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bamboo. They bound it on the wool and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_mahogany": {
+      "name": "Rust Mahogany",
+      "desc": "A dry mahogany east of the bamboo. Packed rust coats mahogany.",
+      "brief": "Dry mahogany, packed rust.",
+      "exits": { "west": { "to": "rust_bamboo" } },
+      "actions": [
+        {
+          "id": "pinch_mahogany",
+          "label": "pinch the mahogany",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mahogany. They set it on the bamboo and packed rust around it."]
           ]
         }
       ]
@@ -13800,7 +13868,7 @@
       "name": "Rust Rattan",
       "desc": "A dry rattan east of the tallow. Packed rust coats rattan.",
       "brief": "Dry rattan, packed rust.",
-      "exits": { "west": { "to": "rust_tallow" } },
+      "exits": { "west": { "to": "rust_tallow" }, "east": { "to": "rust_yew" } },
       "actions": [
         {
           "id": "pinch_rattan",
@@ -13809,6 +13877,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rattan. They laid it on the tallow and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_yew": {
+      "name": "Rust Yew",
+      "desc": "A dry yew east of the rattan. Packed rust coats yew.",
+      "brief": "Dry yew, packed rust.",
+      "exits": { "west": { "to": "rust_rattan" } },
+      "actions": [
+        {
+          "id": "pinch_yew",
+          "label": "pinch the yew",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard yew. They bound it on the rattan and packed rust around it."]
           ]
         }
       ]
@@ -13936,7 +14021,7 @@
       "name": "Rust Lanolin",
       "desc": "A dry lanolin east of the beeswax. Packed rust coats lanolin.",
       "brief": "Dry lanolin, packed rust.",
-      "exits": { "west": { "to": "rust_beeswax" } },
+      "exits": { "west": { "to": "rust_beeswax" }, "east": { "to": "rust_elm" } },
       "actions": [
         {
           "id": "pinch_lanolin",
@@ -13945,6 +14030,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lanolin. They rubbed it on the beeswax and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_elm": {
+      "name": "Rust Elm",
+      "desc": "A dry elm east of the lanolin. Packed rust coats elm.",
+      "brief": "Dry elm, packed rust.",
+      "exits": { "west": { "to": "rust_lanolin" } },
+      "actions": [
+        {
+          "id": "pinch_elm",
+          "label": "pinch the elm",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard elm. They packed it on the lanolin and packed rust around it."]
           ]
         }
       ]
@@ -14106,7 +14208,7 @@
       "name": "Rust Turpentine",
       "desc": "A dry turpentine east of the linseed. Packed rust coats turpentine.",
       "brief": "Dry turpentine, packed rust.",
-      "exits": { "west": { "to": "rust_linseed" } },
+      "exits": { "west": { "to": "rust_linseed" }, "east": { "to": "rust_cedar" } },
       "actions": [
         {
           "id": "pinch_turpentine",
@@ -14115,6 +14217,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard turpentine. They soaked it on the linseed and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cedar": {
+      "name": "Rust Cedar",
+      "desc": "A dry cedar east of the turpentine. Packed rust coats cedar.",
+      "brief": "Dry cedar, packed rust.",
+      "exits": { "west": { "to": "rust_turpentine" } },
+      "actions": [
+        {
+          "id": "pinch_cedar",
+          "label": "pinch the cedar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cedar. They laid it on the turpentine and packed rust around it."]
           ]
         }
       ]
@@ -14191,7 +14310,7 @@
       "name": "Rust Lampblack",
       "desc": "A dry lampblack east of the varnish. Packed rust coats lampblack.",
       "brief": "Dry lampblack, packed rust.",
-      "exits": { "west": { "to": "rust_varnish" } },
+      "exits": { "west": { "to": "rust_varnish" }, "east": { "to": "rust_spruce" } },
       "actions": [
         {
           "id": "pinch_lampblack",
@@ -14200,6 +14319,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lampblack. They dusted it on the varnish and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_spruce": {
+      "name": "Rust Spruce",
+      "desc": "A dry spruce east of the lampblack. Packed rust coats spruce.",
+      "brief": "Dry spruce, packed rust.",
+      "exits": { "west": { "to": "rust_lampblack" } },
+      "actions": [
+        {
+          "id": "pinch_spruce",
+          "label": "pinch the spruce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard spruce. They stacked it on the lampblack and packed rust around it."]
           ]
         }
       ]
@@ -16983,6 +17119,9 @@
     "pinch the reefgasket",
     "go east",
     "pinch the jute",
+    "go east",
+    "pinch the lignum",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17124,6 +17263,9 @@
     "pinch the flax",
     "go east",
     "pinch the umber",
+    "go east",
+    "pinch the colza",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17165,6 +17307,9 @@
     "pinch the cotton",
     "go east",
     "pinch the copra",
+    "go east",
+    "pinch the boxwood",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17180,6 +17325,9 @@
     "pinch the wool",
     "go east",
     "pinch the bamboo",
+    "go east",
+    "pinch the mahogany",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17193,6 +17341,9 @@
     "pinch the tallow",
     "go east",
     "pinch the rattan",
+    "go east",
+    "pinch the yew",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17215,6 +17366,9 @@
     "pinch the beeswax",
     "go east",
     "pinch the lanolin",
+    "go east",
+    "pinch the elm",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17245,6 +17399,9 @@
     "pinch the linseed",
     "go east",
     "pinch the turpentine",
+    "go east",
+    "pinch the cedar",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17260,6 +17417,9 @@
     "pinch the varnish",
     "go east",
     "pinch the lampblack",
+    "go east",
+    "pinch the spruce",
+    "go west",
     "go west",
     "go west",
     "go west",
