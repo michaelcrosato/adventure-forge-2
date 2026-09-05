@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 6730,
+  "maxScore": 6770,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -11656,7 +11656,7 @@
       "name": "Rust Petaling",
       "desc": "A dry petaling east of the mersawa. Packed rust coats petaling.",
       "brief": "Dry petaling, packed rust.",
-      "exits": { "west": { "to": "rust_mersawa" } },
+      "exits": { "west": { "to": "rust_mersawa" }, "east": { "to": "rust_neem" } },
       "actions": [
         {
           "id": "pinch_petaling",
@@ -11665,6 +11665,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard petaling. They packed it on the mersawa and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_neem": {
+      "name": "Rust Neem",
+      "desc": "A dry neem east of the petaling. Packed rust coats neem.",
+      "brief": "Dry neem, packed rust.",
+      "exits": { "west": { "to": "rust_petaling" } },
+      "actions": [
+        {
+          "id": "pinch_neem",
+          "label": "pinch the neem",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard neem. They packed it on the petaling and packed rust around it."]
           ]
         }
       ]
@@ -14410,7 +14427,7 @@
       "name": "Rust Keranji",
       "desc": "A dry keranji east of the geronggang. Packed rust coats keranji.",
       "brief": "Dry keranji, packed rust.",
-      "exits": { "west": { "to": "rust_geronggang" } },
+      "exits": { "west": { "to": "rust_geronggang" }, "east": { "to": "rust_palmyra" } },
       "actions": [
         {
           "id": "pinch_keranji",
@@ -14419,6 +14436,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard keranji. They packed it on the geronggang and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_palmyra": {
+      "name": "Rust Palmyra",
+      "desc": "A dry palmyra east of the keranji. Packed rust coats palmyra.",
+      "brief": "Dry palmyra, packed rust.",
+      "exits": { "west": { "to": "rust_keranji" } },
+      "actions": [
+        {
+          "id": "pinch_palmyra",
+          "label": "pinch the palmyra",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard palmyra. They packed it on the keranji and packed rust around it."]
           ]
         }
       ]
@@ -14580,7 +14614,7 @@
       "name": "Rust Tembesu",
       "desc": "A dry tembesu east of the bintangor. Packed rust coats tembesu.",
       "brief": "Dry tembesu, packed rust.",
-      "exits": { "west": { "to": "rust_bintangor" } },
+      "exits": { "west": { "to": "rust_bintangor" }, "east": { "to": "rust_champak" } },
       "actions": [
         {
           "id": "pinch_tembesu",
@@ -14589,6 +14623,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tembesu. They packed it on the bintangor and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_champak": {
+      "name": "Rust Champak",
+      "desc": "A dry champak east of the tembesu. Packed rust coats champak.",
+      "brief": "Dry champak, packed rust.",
+      "exits": { "west": { "to": "rust_tembesu" } },
+      "actions": [
+        {
+          "id": "pinch_champak",
+          "label": "pinch the champak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard champak. They packed it on the tembesu and packed rust around it."]
           ]
         }
       ]
@@ -14852,7 +14903,7 @@
       "name": "Rust Tualang",
       "desc": "A dry tualang east of the nyatoh. Packed rust coats tualang.",
       "brief": "Dry tualang, packed rust.",
-      "exits": { "west": { "to": "rust_nyatoh" } },
+      "exits": { "west": { "to": "rust_nyatoh" }, "east": { "to": "rust_toon" } },
       "actions": [
         {
           "id": "pinch_tualang",
@@ -14861,6 +14912,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tualang. They packed it on the nyatoh and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_toon": {
+      "name": "Rust Toon",
+      "desc": "A dry toon east of the tualang. Packed rust coats toon.",
+      "brief": "Dry toon, packed rust.",
+      "exits": { "west": { "to": "rust_tualang" } },
+      "actions": [
+        {
+          "id": "pinch_toon",
+          "label": "pinch the toon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard toon. They packed it on the tualang and packed rust around it."]
           ]
         }
       ]
@@ -15039,7 +15107,7 @@
       "name": "Rust Keladan",
       "desc": "A dry keladan east of the seraya. Packed rust coats keladan.",
       "brief": "Dry keladan, packed rust.",
-      "exits": { "west": { "to": "rust_seraya" } },
+      "exits": { "west": { "to": "rust_seraya" }, "east": { "to": "rust_haldu" } },
       "actions": [
         {
           "id": "pinch_keladan",
@@ -15048,6 +15116,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard keladan. They packed it on the seraya and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_haldu": {
+      "name": "Rust Haldu",
+      "desc": "A dry haldu east of the keladan. Packed rust coats haldu.",
+      "brief": "Dry haldu, packed rust.",
+      "exits": { "west": { "to": "rust_keladan" } },
+      "actions": [
+        {
+          "id": "pinch_haldu",
+          "label": "pinch the haldu",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard haldu. They packed it on the keladan and packed rust around it."]
           ]
         }
       ]
@@ -15209,7 +15294,7 @@
       "name": "Rust Gerutu",
       "desc": "A dry gerutu east of the kapur. Packed rust coats gerutu.",
       "brief": "Dry gerutu, packed rust.",
-      "exits": { "west": { "to": "rust_kapur" } },
+      "exits": { "west": { "to": "rust_kapur" }, "east": { "to": "rust_salwood" } },
       "actions": [
         {
           "id": "pinch_gerutu",
@@ -15218,6 +15303,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gerutu. They packed it on the kapur and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_salwood": {
+      "name": "Rust Salwood",
+      "desc": "A dry salwood east of the gerutu. Packed rust coats salwood.",
+      "brief": "Dry salwood, packed rust.",
+      "exits": { "west": { "to": "rust_gerutu" } },
+      "actions": [
+        {
+          "id": "pinch_salwood",
+          "label": "pinch the salwood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard salwood. They packed it on the gerutu and packed rust around it."]
           ]
         }
       ]
@@ -15362,7 +15464,7 @@
       "name": "Rust Merpauh",
       "desc": "A dry merpauh east of the keruing. Packed rust coats merpauh.",
       "brief": "Dry merpauh, packed rust.",
-      "exits": { "west": { "to": "rust_keruing" } },
+      "exits": { "west": { "to": "rust_keruing" }, "east": { "to": "rust_sissoo" } },
       "actions": [
         {
           "id": "pinch_merpauh",
@@ -15371,6 +15473,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard merpauh. They packed it on the keruing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sissoo": {
+      "name": "Rust Sissoo",
+      "desc": "A dry sissoo east of the merpauh. Packed rust coats sissoo.",
+      "brief": "Dry sissoo, packed rust.",
+      "exits": { "west": { "to": "rust_merpauh" } },
+      "actions": [
+        {
+          "id": "pinch_sissoo",
+          "label": "pinch the sissoo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sissoo. They packed it on the merpauh and packed rust around it."]
           ]
         }
       ]
@@ -15549,7 +15668,7 @@
       "name": "Rust Selangan",
       "desc": "A dry selangan east of the merbau. Packed rust coats selangan.",
       "brief": "Dry selangan, packed rust.",
-      "exits": { "west": { "to": "rust_merbau" } },
+      "exits": { "west": { "to": "rust_merbau" }, "east": { "to": "rust_shisham" } },
       "actions": [
         {
           "id": "pinch_selangan",
@@ -15558,6 +15677,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard selangan. They packed it on the merbau and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_shisham": {
+      "name": "Rust Shisham",
+      "desc": "A dry shisham east of the selangan. Packed rust coats shisham.",
+      "brief": "Dry shisham, packed rust.",
+      "exits": { "west": { "to": "rust_selangan" } },
+      "actions": [
+        {
+          "id": "pinch_shisham",
+          "label": "pinch the shisham",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard shisham. They packed it on the selangan and packed rust around it."]
           ]
         }
       ]
@@ -24852,6 +24988,9 @@
     "pinch the mersawa",
     "go east",
     "pinch the petaling",
+    "go east",
+    "pinch the neem",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25315,6 +25454,9 @@
     "pinch the geronggang",
     "go east",
     "pinch the keranji",
+    "go east",
+    "pinch the palmyra",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25343,6 +25485,9 @@
     "pinch the bintangor",
     "go east",
     "pinch the tembesu",
+    "go east",
+    "pinch the champak",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25395,6 +25540,9 @@
     "pinch the nyatoh",
     "go east",
     "pinch the tualang",
+    "go east",
+    "pinch the toon",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25427,6 +25575,9 @@
     "pinch the seraya",
     "go east",
     "pinch the keladan",
+    "go east",
+    "pinch the haldu",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25456,6 +25607,9 @@
     "pinch the kapur",
     "go east",
     "pinch the gerutu",
+    "go east",
+    "pinch the salwood",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25483,6 +25637,9 @@
     "pinch the keruing",
     "go east",
     "pinch the merpauh",
+    "go east",
+    "pinch the sissoo",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25515,6 +25672,9 @@
     "pinch the merbau",
     "go east",
     "pinch the selangan",
+    "go east",
+    "pinch the shisham",
+    "go west",
     "go west",
     "go west",
     "go west",
