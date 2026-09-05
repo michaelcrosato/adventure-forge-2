@@ -6021,8 +6021,8 @@
     },
     "lamp_room": {
       "name": "Lamp Room",
-      "desc": "The great mirrored lamp, cold and still. Its winding mechanism is orange with rust. The whole coast lies black below.",
-      "brief": "The great cold lamp.",
+      "desc": "The great mirrored lamp, cold and still. Its winding mechanism is orange with rust. Oiling takes STR 11 (+2): 60% success, 1hp lost on failure. The whole coast lies black below.",
+      "brief": "The great cold lamp. Oiling: 60% success, failure costs 1hp.",
       "exits": { "down": { "to": "stair" }, "out": { "to": "gallery" }, "west": { "to": "wick_scissors" }, "east": { "to": "lamp_nook" }, "south": { "to": "lamp_sill" }, "north": { "to": "lamp_lip" }, "up": { "to": "lamp_ridge" } },
       "actions": [
         {

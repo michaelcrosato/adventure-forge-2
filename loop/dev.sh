@@ -14,22 +14,34 @@ CYCLES="${1:-1}"
 MAX_TURNS="${TF_DEV_MAX_TURNS:-50}"
 FAILS=0
 
+[[ "$CYCLES" =~ ^[1-9][0-9]{0,8}$ ]] || { echo "cycles must be a positive integer (at most 9 digits)"; exit 1; }
+[[ "$MAX_TURNS" =~ ^[1-9][0-9]{0,8}$ ]] || { echo "TF_DEV_MAX_TURNS must be a positive integer (at most 9 digits)"; exit 1; }
+
 command -v claude >/dev/null || { echo "claude CLI not found — install Claude Code"; exit 1; }
 git rev-parse HEAD >/dev/null 2>&1 || { echo "not a git repo — run: git init && git add -A && git commit -m init"; exit 1; }
 
 count_tests() { npm run -s test 2>/dev/null | grep -Eo '^# pass [0-9]+' | grep -Eo '[0-9]+' || echo 0; }
 
+RUN_DIR=""
+
 for ((c = 1; c <= CYCLES; c++)); do
   echo "── cycle $c/$CYCLES ─────────────────────────────"
   git diff --quiet && git diff --cached --quiet || { echo "dirty tree — commit or stash first"; exit 1; }
-  REF="$(git rev-parse HEAD)"
+  # Fresh reports are the driver's inputs. Other untracked files belong to the
+  # user and must never be swept into a triage commit or failed-cycle cleanup.
+  [[ -z "$(git ls-files --others --exclude-standard -- . ':(exclude,glob)reports/*.json')" ]] || {
+    echo "untracked files outside reports/ — commit, stash, or ignore them first"; exit 1;
+  }
 
   # assess: triage any fresh reports into issues, then queued work first, P0 > P1 > P2, oldest first
-  npx tsx src/triage.ts 2>/dev/null || true
-  git add -A >/dev/null 2>&1 && git -c user.email="loop@tinyforge" -c user.name="tinyforge-loop" \
-    commit -qm "triage: reports -> issues" >/dev/null 2>&1 || true
+  npx --no-install tsx src/triage.ts
+  git add -A -- reports queue
+  if ! git diff --cached --quiet; then
+    git -c user.email="loop@tinyforge" -c user.name="tinyforge-loop" commit -qm "triage: reports -> issues"
+  fi
+  REF="$(git rev-parse HEAD)"
   FINDING="$(ls queue/P0-*.json queue/P1-*.json queue/P2-*.json 2>/dev/null | head -1 || true)"
-  [[ -z "$FINDING" ]] && { echo "queue empty — nothing to do. (Run npm run playtest to refill.)"; exit 0; }
+  [[ -z "$FINDING" ]] && { echo "queue empty — nothing to do. (Run npm run playtest to refill.)"; exit "$((FAILS > 0))"; }
   echo "finding: $FINDING"
   # staleness advisory: an issue filed against an older build is still evidence, just older
   ISSUE_REV="$(node -e 'try{const f=JSON.parse(require("fs").readFileSync(process.argv[1],"utf8"));const b=(f.builds&&f.builds[0])||f.build;if(b&&b.rev)process.stdout.write(b.rev)}catch{}' "$FINDING")"
@@ -39,6 +51,10 @@ for ((c = 1; c <= CYCLES; c++)); do
 
   npm run -s verify >/dev/null || { echo "bar is RED before work — fix the tree first"; exit 1; }
   TESTS_BEFORE="$(count_tests)"
+  if [[ -z "$RUN_DIR" ]]; then
+    mkdir -p runs
+    RUN_DIR="$(mktemp -d "runs/dev-$(date +%Y%m%dT%H%M%S)-XXXXXX")"
+  fi
 
   PROMPT="$(cat AGENT.md; echo; sed -e "/{{FINDING}}/{r $FINDING" -e "d}" loop/dev-prompt.md)"
   set +e
@@ -48,12 +64,12 @@ for ((c = 1; c <= CYCLES; c++)); do
     --output-format json --max-turns "$MAX_TURNS" \
     ${TF_DEV_MODEL:+--model "$TF_DEV_MODEL"} \
     ${TF_DEV_FLAGS:-} \
-    > "runs/dev-cycle-$c.json" 2>&1 < /dev/null
+    > "$RUN_DIR/cycle-$c.json" 2>&1 < /dev/null
   AGENT_RC=$?
   set -e
 
   # integrity: the loop and charter are not the agent's to edit; tests may not shrink
-  BAD_EDITS="$(git diff --name-only "$REF" -- loop/ AGENT.md | tr '\n' ' ')"
+  BAD_EDITS="$( { git diff --name-only "$REF" -- loop/ AGENT.md; git ls-files --others --exclude-standard -- loop/ AGENT.md; } | tr '\n' ' ')"
   DELETED_TESTS="$(git diff --diff-filter=D --name-only "$REF" -- test/ | tr '\n' ' ')"
   TESTS_AFTER="$(count_tests)"
 
@@ -61,14 +77,17 @@ for ((c = 1; c <= CYCLES; c++)); do
   elif [[ -n "$BAD_EDITS" ]]; then REASON="edited protected paths: $BAD_EDITS"
   elif [[ -n "$DELETED_TESTS" ]]; then REASON="deleted tests: $DELETED_TESTS"
   elif [[ "$TESTS_AFTER" -lt "$TESTS_BEFORE" ]]; then REASON="test count fell $TESTS_BEFORE -> $TESTS_AFTER"
-  elif git diff --quiet "$REF" -- src world test; then REASON="no-op cycle: agent changed nothing in src/ world/ test/"
+  elif git diff --quiet "$REF" -- src world test && [[ -z "$(git ls-files --others --exclude-standard -- src world test)" ]]; then REASON="no-op cycle: agent changed nothing in src/ world/ test/"
   elif ! npm run -s verify; then REASON="verify red after work"
   else REASON=""
   fi
 
   if [[ -n "$REASON" ]]; then
     echo "✗ cycle $c FAILED: $REASON — reverting"
-    git checkout -- . && git clean -fd src world test queue done reports >/dev/null 2>&1 || true
+    # Restore both index and worktree: checkout alone would keep staged bad edits.
+    # The clean-tree check above establishes that new files belong to this cycle.
+    git restore --source="$REF" --staged --worktree -- .
+    git clean -fd -- . >/dev/null
     mkdir -p queue/failed && mv "$FINDING" "queue/failed/$(basename "$FINDING")"
     git add -A >/dev/null 2>&1 && git -c user.email="loop@tinyforge" -c user.name="tinyforge-loop" \
       commit -qm "loop: quarantine $(basename "$FINDING") ($REASON)" >/dev/null 2>&1 || true
@@ -84,3 +103,4 @@ for ((c = 1; c <= CYCLES; c++)); do
   git commit -q -m "loop: $TITLE" -m "finding: $(basename "$FINDING") | verified: npm run verify green"
   echo "✓ cycle $c landed: $(git log -1 --format=%h) loop: $TITLE"
 done
+if (( FAILS > 0 )); then exit 1; fi

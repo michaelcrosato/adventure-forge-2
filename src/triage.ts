@@ -52,18 +52,44 @@ function overlap(a: Set<string>, b: Set<string>): number {
   return inter / Math.min(a.size, b.size);
 }
 
-export function unitsFromReport(file: string, r: Record<string, unknown>): Unit[] {
-  const meta = { report: file, seed: r.seed as number, model: r.model as string, build: r.build, verified: r.verified as boolean };
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function hasText(value: unknown): value is string {
+  return typeof value === "string" && value.trim().length > 0;
+}
+
+function isBug(value: unknown): value is { sev?: "P0" | "P1" | "P2"; what: string; where?: string } {
+  return isRecord(value) && hasText(value.what) &&
+    (value.where === undefined || typeof value.where === "string") &&
+    (value.sev === undefined || value.sev === "P0" || value.sev === "P1" || value.sev === "P2");
+}
+
+function isReport(value: unknown): value is Record<string, unknown> {
+  if (!isRecord(value) || value.kind !== "playtest") return false;
+  return (value.bugs === undefined || (Array.isArray(value.bugs) && value.bugs.every(isBug))) &&
+    [value.confusions, value.suggestions].every((v) => v === undefined || (Array.isArray(v) && v.every(hasText)));
+}
+
+export function unitsFromReport(file: string, r: unknown): Unit[] {
+  if (!isRecord(r)) return [];
+  const meta = {
+    report: file,
+    seed: typeof r.seed === "number" && Number.isFinite(r.seed) ? r.seed : undefined,
+    model: typeof r.model === "string" ? r.model : undefined,
+    build: r.build,
+    verified: r.verified === true,
+  };
   const out: Unit[] = [];
-  for (const b of (Array.isArray(r.bugs) ? r.bugs : []) as { sev?: string; what?: string; where?: string }[]) {
-    if (!b.what) continue;
-    const sev = b.sev === "P0" ? "P0" : "P1";
-    out.push({ kind: "bug", sev, title: b.what, where: b.where, ...meta });
+  for (const b of Array.isArray(r.bugs) ? r.bugs : []) {
+    if (!isBug(b)) continue;
+    out.push({ kind: "bug", sev: b.sev ?? "P1", title: b.what.trim(), where: b.where, ...meta });
   }
-  for (const c of (Array.isArray(r.confusions) ? r.confusions : []) as string[])
-    if (c) out.push({ kind: "confusion", sev: "P2", title: c, ...meta });
-  for (const s of (Array.isArray(r.suggestions) ? r.suggestions : []) as string[])
-    if (s) out.push({ kind: "suggestion", sev: "P2", title: s, ...meta });
+  for (const c of Array.isArray(r.confusions) ? r.confusions : [])
+    if (hasText(c)) out.push({ kind: "confusion", sev: "P2", title: c.trim(), ...meta });
+  for (const s of Array.isArray(r.suggestions) ? r.suggestions : [])
+    if (hasText(s)) out.push({ kind: "suggestion", sev: "P2", title: s.trim(), ...meta });
   return out;
 }
 
@@ -82,15 +108,26 @@ export type Issue = {
   created: string;
 };
 
+function titleKey(title: string): string {
+  // Preserve meaningful identity even when a title has no English word tokens.
+  return [...bag(title)].sort().join("-") || title.trim().toLowerCase();
+}
+
+function issueId(kind: Unit["kind"], title: string): string {
+  return createHash("sha256").update(`${kind}:${titleKey(title)}`).digest("hex").slice(0, 8);
+}
+
 export function clusterUnits(units: Unit[]): Issue[] {
   // deterministic union-find over same-kind units with word-overlap >= 0.5
   const parent = units.map((_, i) => i);
   const find = (i: number): number => (parent[i] === i ? i : (parent[i] = find(parent[i]!)));
   const bags = units.map((u) => bag(`${u.title} ${u.where ?? ""}`));
+  const titles = units.map((u) => titleKey(u.title));
   for (let i = 0; i < units.length; i++)
     for (let j = i + 1; j < units.length; j++) {
       if (units[i]!.kind !== units[j]!.kind) continue;
-      if (overlap(bags[i]!, bags[j]!) >= 0.5) parent[find(j)] = find(i);
+      if (titles[i] === titles[j] || overlap(bags[i]!, bags[j]!) >= 0.5)
+        parent[find(j)] = find(i);
     }
   const groups = new Map<number, Unit[]>();
   units.forEach((u, i) => {
@@ -101,13 +138,15 @@ export function clusterUnits(units: Unit[]): Issue[] {
 
   const issues: Issue[] = [];
   for (const g of groups.values()) {
+    g.sort((a, b) => b.title.length - a.title.length || a.title.localeCompare(b.title) ||
+      a.report.localeCompare(b.report) || (a.where ?? "").localeCompare(b.where ?? ""));
     const reps = new Set(g.map((u) => u.report));
     const corr = reps.size;
     const worstSev = g.some((u) => u.sev === "P0") ? "P0" : g.some((u) => u.sev === "P1") ? "P1" : "P2";
     const priority: Issue["priority"] =
-      worstSev !== "P2" ? worstSev : corr >= 2 ? "P1" : "P2"; // subjective rises only with corroboration
-    const title = g.map((u) => u.title).sort((a, b) => b.length - a.length)[0]!;
-    const id = createHash("sha256").update([...bag(title)].sort().join("-")).digest("hex").slice(0, 8);
+      worstSev !== "P2" ? worstSev : g[0]!.kind !== "bug" && corr >= 2 ? "P1" : "P2";
+    const title = g[0]!.title;
+    const id = issueId(g[0]!.kind, title);
     issues.push({
       schema: 1,
       kind: "issue",
@@ -117,8 +156,11 @@ export function clusterUnits(units: Unit[]): Issue[] {
       title,
       where: g.find((u) => u.where)?.where,
       corroboration: corr,
-      verified_reports: g.filter((u) => u.verified).length,
-      evidence: g.slice(0, 3).map((u) => ({ report: u.report, seed: u.seed, model: u.model, quote: u.title })),
+      verified_reports: new Set(g.filter((u) => u.verified).map((u) => u.report)).size,
+      evidence: [...reps].slice(0, 3).map((report) => {
+        const u = g.find((u) => u.report === report)!;
+        return { report: u.report, seed: u.seed, model: u.model, quote: u.title };
+      }),
       builds: [...new Set(g.map((u) => JSON.stringify(u.build ?? null)))].map((s) => JSON.parse(s)),
       created: new Date().toISOString(),
     });
@@ -138,32 +180,52 @@ export function triage(opts?: { reportsDir?: string; queueDir?: string; dedupeDi
   mkdirSync(join(reportsDir, "triaged"), { recursive: true });
   mkdirSync(queueDir, { recursive: true });
 
-  const files = readdirSync(reportsDir).filter((f) => f.endsWith(".json")).sort();
+  const files = readdirSync(reportsDir, { withFileTypes: true })
+    .filter((f) => f.isFile() && f.name.endsWith(".json")).map((f) => f.name).sort();
+  const accepted: string[] = [];
   const units: Unit[] = [];
   for (const f of files) {
+    // A reused filename must not overwrite previously archived evidence.
+    if (existsSync(join(reportsDir, "triaged", f))) continue;
     try {
-      const r = JSON.parse(readFileSync(join(reportsDir, f), "utf8")) as Record<string, unknown>;
-      if (r.kind === "playtest") units.push(...unitsFromReport(f, r));
+      const r: unknown = JSON.parse(readFileSync(join(reportsDir, f), "utf8"));
+      if (!isReport(r)) continue;
+      units.push(...unitsFromReport(f, r));
+      accepted.push(f);
     } catch {
-      /* unreadable report stays put */
+      /* unreadable or invalid report stays put */
     }
   }
-  const existing = new Set(
-    dedupeDirs.flatMap((d) => (existsSync(d) ? readdirSync(d) : [])).flatMap((f) => {
+  const existing = new Set<string>();
+  for (const d of dedupeDirs) {
+    if (!existsSync(d)) continue;
+    for (const f of readdirSync(d)) {
       const m = /-issue-([0-9a-f]{8})\.json$/.exec(f);
-      return m ? [m[1]!] : [];
-    }),
-  );
+      if (!m) continue;
+      existing.add(m[1]!);
+      try {
+        // Older issue ids hashed only the title. Keep them deduplicated by
+        // reading the kind, without suppressing another kind with that title.
+        const issue: unknown = JSON.parse(readFileSync(join(d, f), "utf8"));
+        if (isRecord(issue) && hasText(issue.title) &&
+          (issue.unit_kind === "bug" || issue.unit_kind === "confusion" || issue.unit_kind === "suggestion"))
+          existing.add(issueId(issue.unit_kind, issue.title));
+      } catch {
+        /* the filename still protects an existing issue with unreadable JSON */
+      }
+    }
+  }
   const issues = clusterUnits(units);
   const filed: Issue[] = [];
   let skipped = 0;
   for (const issue of issues) {
     if (existing.has(issue.id)) { skipped++; continue; }
-    writeFileSync(join(queueDir, `${issue.priority}-issue-${issue.id}.json`), JSON.stringify(issue, null, 2));
+    writeFileSync(join(queueDir, `${issue.priority}-issue-${issue.id}.json`), JSON.stringify(issue, null, 2), { flag: "wx" });
+    existing.add(issue.id);
     filed.push(issue);
   }
-  for (const f of files) renameSync(join(reportsDir, f), join(reportsDir, "triaged", f));
-  return { consumed: files.length, filed, skipped };
+  for (const f of accepted) renameSync(join(reportsDir, f), join(reportsDir, "triaged", f));
+  return { consumed: accepted.length, filed, skipped };
 }
 
 if (process.argv[1]?.endsWith("triage.ts")) {

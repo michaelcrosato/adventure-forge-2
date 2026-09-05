@@ -19,10 +19,12 @@ import { createHash } from "node:crypto";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { newState, receipt as receiptOf, step } from "./engine.ts";
+import { parseArgs } from "node:util";
+import { z } from "zod";
+import { actionByLabel, condOk, newState, receipt as receiptOf, roomIsDark, step } from "./engine.ts";
 import { render, renderIntro } from "./format.ts";
 import { replayTrace } from "./crawl.ts";
-import { loadWorld } from "./validate.ts";
+import { loadValidatedWorld } from "./validate.ts";
 import { triage } from "./triage.ts";
 import type { Action, State, World } from "./types.ts";
 
@@ -83,38 +85,57 @@ export function apiProvider(model: string): Provider {
   };
 }
 
-/** Scripted stand-in: follows the world's walkthrough by menu label, then files a canned report quoting the real receipt. Proves the whole driver for zero tokens. */
+/** Scripted stand-in: follows the world's walkthrough by menu label, then quotes
+ * the observed receipt. A deterministic shadow state evaluates repeat conditions;
+ * only this mock has world access, never the live API provider. */
 export function mockProvider(world: World): Provider {
-  const script = [...world.walkthrough];
-  let repeat: { repeat: string; max: number } | null = null;
+  let state: State | undefined;
+  let index = 0;
+  let repeats = 0;
   return async (_system, msgs, _maxTokens) => {
     const usage: Usage = { in: 0, out: 0, cacheRead: 0, cacheWrite: 0 };
     const last = msgs[msgs.length - 1]!.content;
     if (/output ONLY.*json report/is.test(last)) {
-      const receipt = /receipt:(\S+)/.exec(msgs.map((m) => m.content).join("\n"))?.[1] ?? "";
-      const verdict = /\*\*\* WIN/.test(msgs.map((m) => m.content).join("\n")) ? "won" : "lost";
+      const transcript = msgs.map((m) => m.content).join("\n");
+      const receipt = /receipt:(\S+)/.exec(transcript)?.[1] ?? "";
+      const verdict = /\*\*\* WIN/.test(transcript) ? "won" : /\*\*\* LOSE/.test(transcript) ? "lost" : "quit";
+      const turns = Number(/"turns":(\d+)/.exec(last)?.[1] ?? 0);
       return {
-        text: "```json\n" + JSON.stringify({ verdict, fun: 3, clarity: 3, turns: 0, receipt, bugs: [], confusions: [], suggestions: ["mock run"] }) + "\n```",
+        text: "```json\n" + JSON.stringify({ verdict, fun: 3, clarity: 3, turns, receipt, bugs: [], confusions: [], suggestions: [] }) + "\n```",
         usage,
       };
     }
-    const menu = [...last.matchAll(/^(\d+) (.+)$/gm)].map((m) => ({ n: m[1]!, label: m[2]! }));
-    const want = () => {
-      if (repeat) return repeat.repeat;
-      const s = script[0];
-      if (typeof s === "string") { script.shift(); return s; }
-      if (s) { repeat = s; script.shift(); return s.repeat; }
-      return null;
-    };
-    for (let guard = 0; guard < 3; guard++) {
-      const w = want();
-      if (!w) return { text: "1", usage };
-      const hit = menu.find((m) => m.label.toLowerCase() === w.toLowerCase());
-      if (hit) return { text: hit.n, usage };
-      repeat = null; // repeat target gone => its until-condition is met; advance
+    if (!state) {
+      const seed = /\(seed (-?\d+)\)\r?\n/.exec(msgs[0]!.content)?.[1];
+      if (seed === undefined) throw new Error("Mock player could not read the session seed");
+      state = newState(world, Number(seed)).state;
     }
-    return { text: "1", usage };
+    const menu = [...last.matchAll(/^(\d+) (.+)$/gm)].map((m) => ({ n: m[1]!, label: m[2]! }));
+    while (index < world.walkthrough.length) {
+      const entry = world.walkthrough[index]!;
+      if (typeof entry !== "string" && condOk(world, state, entry.until)) {
+        index++;
+        repeats = 0;
+        continue;
+      }
+      const label = typeof entry === "string" ? entry : entry.repeat;
+      if (typeof entry !== "string" && repeats >= entry.max)
+        throw new Error(`Mock walkthrough repeat "${label}" exceeded max ${entry.max}`);
+      const hit = menu.find((m) => m.label.toLowerCase() === label.trim().toLowerCase());
+      const action = actionByLabel(world, state, label);
+      if (!hit || !action) throw new Error(`Mock walkthrough label "${label}" missing at turn ${state.turn}`);
+      state = step(world, state, action).state;
+      if (typeof entry === "string") index++;
+      else repeats++;
+      return { text: hit.n, usage };
+    }
+    throw new Error("Mock walkthrough exhausted before an ending");
   };
+}
+
+/** Upper bound for a complete scripted run, including every allowed retry. */
+export function walkthroughTurnLimit(world: World): number {
+  return Math.max(1, world.walkthrough.reduce((n, entry) => n + (typeof entry === "string" ? 1 : entry.max), 0));
 }
 
 // ---------- one blind session, in-process ----------
@@ -127,6 +148,8 @@ When asked for your report, output ONLY a fenced \`\`\`json block, no prose.`;
 export type SessionResult = {
   seed: number;
   turns: number;
+  score: number;
+  won: boolean;
   ended: string | null;
   stalled: boolean;
   report: Record<string, unknown> | null;
@@ -142,11 +165,23 @@ export type SessionResult = {
  * "stalled at X" is itself a finding. */
 export const STALL_AFTER = 12;
 
+export const reportSchema = z.object({
+  verdict: z.enum(["won", "lost", "quit", "stuck"]),
+  fun: z.number().int().min(1).max(5),
+  clarity: z.number().int().min(1).max(5),
+  turns: z.number().int().nonnegative(),
+  receipt: z.string(),
+  bugs: z.array(z.object({ sev: z.enum(["P0", "P1", "P2"]), what: z.string(), where: z.string() })),
+  confusions: z.array(z.string()),
+  suggestions: z.array(z.string()),
+});
+
 export async function playOne(
   world: World,
   seed: number,
   provider: Provider,
   maxGameTurns = 80,
+  stallAfter = STALL_AFTER,
 ): Promise<SessionResult> {
   const usage: Usage = { in: 0, out: 0, cacheRead: 0, cacheWrite: 0 };
   let apiCalls = 0;
@@ -162,21 +197,21 @@ export async function playOne(
   const actions: Action[] = [];
   const seen = new Set<string>();
 
-  let out = newState(world, seed);
+  const out = newState(world, seed);
   let state: State = out.state;
-  seen.add(state.room);
+  if (!roomIsDark(world, state)) seen.add(state.room);
   msgs.push({ role: "user", content: renderIntro(world, state, out.events).text });
 
   let stalled = false;
   let lastProgress = 0; // turn of last score gain or first-visit
   while (!state.ended && state.turn < maxGameTurns) {
-    if (state.turn - lastProgress >= STALL_AFTER) { stalled = true; break; }
+    if (state.turn - lastProgress >= stallAfter) { stalled = true; break; }
     const reply = await ask(system, msgs, 60);
     msgs.push({ role: "assistant", content: reply.text.trim() });
     // accept "3", "3: go north", or structured {"a":3} (provider-compat)
     const parseN = (t: string) => Number(/^\s*(\d+)/.exec(t)?.[1] ?? /"a"\s*:\s*(\d+)/.exec(t)?.[1]);
     let n = parseN(reply.text);
-    let menu = render(world, state, []).actions;
+    const menu = render(world, state, []).actions;
     if (!Number.isInteger(n) || n < 1 || n > menu.length) {
       msgs.push({ role: "user", content: `Reply with ONLY a menu number (1-${menu.length}).` });
       const retry = await ask(system, msgs, 20);
@@ -186,13 +221,13 @@ export async function playOne(
     }
     const action = menu[n - 1]!;
     actions.push(action);
-    const before = state.room;
+    const beforeVisited = state.visited.length;
     const beforeScore = state.score;
     const res = step(world, state, action);
     state = res.state;
-    const first = state.room !== before && !seen.has(state.room);
-    if (first || state.score > beforeScore) lastProgress = state.turn;
-    seen.add(state.room);
+    const first = !seen.has(state.room);
+    if (state.visited.length > beforeVisited || state.score > beforeScore) lastProgress = state.turn;
+    if (!roomIsDark(world, state)) seen.add(state.room);
     msgs.push({ role: "user", content: render(world, state, res.events, { full: first }).text });
   }
 
@@ -209,7 +244,7 @@ export async function playOne(
   try {
     const fence = /```json\s*([\s\S]*?)```/.exec(rep.text);
     if (!fence) throw new Error("no fenced json block");
-    report = JSON.parse(fence[1]!) as Record<string, unknown>;
+    report = reportSchema.parse(JSON.parse(fence[1]!));
   } catch (e) {
     reportError = String(e);
   }
@@ -220,54 +255,73 @@ export async function playOne(
   const verified =
     !!report && typeof report.receipt === "string" && report.receipt === trueReceipt && replayed === trueReceipt;
 
-  return { seed, turns: state.turn, ended: state.ended?.id ?? null, stalled, report, reportError, verified, usage, apiCalls, receipt: trueReceipt };
+  return { seed, turns: state.turn, score: state.score, won: state.ended?.kind === "win", ended: state.ended?.id ?? null,
+    stalled, report, reportError, verified, usage, apiCalls, receipt: trueReceipt };
 }
 
 // ---------- fleet CLI ----------
-function fileReport(r: SessionResult, model: string, worldPath: string): string | null {
+export function fileReport(r: SessionResult, model: string, worldPath: string, reportsDir = process.env.TF_REPORTS ?? join(ROOT, "reports")): string | null {
   if (!r.report) return null;
   const ts = new Date().toISOString().replace(/[:.]/g, "-");
   const item = {
+    ...r.report,
     schema: 1, kind: "playtest", lane: "api", model, ts, seed: r.seed, stalled: r.stalled,
-    build: buildId(worldPath), usage: r.usage, api_calls: r.apiCalls, verified: r.verified, ...r.report,
+    turns: r.turns, score: r.score, won: r.won, build: buildId(worldPath), usage: r.usage, api_calls: r.apiCalls, verified: r.verified,
   };
-  mkdirSync(join(ROOT, "reports"), { recursive: true });
-  const file = join(ROOT, "reports", `playtest-${ts}-s${r.seed}.json`);
+  mkdirSync(reportsDir, { recursive: true });
+  const file = join(reportsDir, `playtest-${ts}-s${r.seed}.json`);
   writeFileSync(file, JSON.stringify(item, null, 2));
   return file;
 }
 
 if (process.argv[1]?.endsWith("player.ts")) {
-  const args = process.argv.slice(2);
-  const opt = (f: string, d: string) => (args.includes(f) ? args[args.indexOf(f) + 1]! : d);
-  const count = Number(opt("--count", "1"));
-  const seedBase = Number(opt("--seed-base", String(Math.floor(Date.now() / 1000) % 100000)));
-  const parallel = Number(opt("--parallel", "4"));
-  const maxGameTurns = Number(opt("--max-game-turns", "80"));
-  const model = opt("--model", process.env.TF_PLAYER_MODEL ?? "claude-haiku-4-5");
-  const mock = args.includes("--mock");
-  const worldPath = process.env.TF_WORLD ?? join(ROOT, "world", "lighthouse.json");
-  const world = loadWorld(worldPath);
-
   const run = async () => {
+    const { values } = parseArgs({ options: {
+      count: { type: "string", default: "1" },
+      "seed-base": { type: "string", default: String(Math.floor(Date.now() / 1000) % 100000) },
+      parallel: { type: "string", default: "4" },
+      "max-game-turns": { type: "string" },
+      model: { type: "string", default: process.env.TF_PLAYER_MODEL ?? "claude-haiku-4-5" },
+      mock: { type: "boolean", default: false },
+    } });
+    const integer = (name: string, value: string, min = 1) => {
+      const n = Number(value);
+      if (!value.trim() || !Number.isSafeInteger(n) || n < min)
+        throw new Error(`--${name} must be a safe integer >= ${min}`);
+      return n;
+    };
+    const count = integer("count", values.count);
+    const parallel = integer("parallel", values.parallel);
+    const seedBase = integer("seed-base", values["seed-base"], Number.MIN_SAFE_INTEGER);
+    if (seedBase > Number.MAX_SAFE_INTEGER - (count - 1)) throw new Error("Seed range exceeds safe integers");
+    const model = values.model.trim();
+    if (!model) throw new Error("--model must not be empty");
+    const mock = values.mock;
+    const worldPath = process.env.TF_WORLD ?? join(ROOT, "world", "lighthouse.json");
+    const world = loadValidatedWorld(worldPath);
+    const maxGameTurns = integer("max-game-turns", values["max-game-turns"] ?? String(mock ? walkthroughTurnLimit(world) : 80));
+    const liveProvider = mock ? null : apiProvider(model);
     console.log(
       `fleet: ${count} player(s), seeds ${seedBase}+, ${mock ? "MOCK (zero tokens)" : `model ${model}`}, parallel ${parallel}`,
     );
-    const seeds = Array.from({ length: count }, (_, i) => seedBase + i);
     const results: SessionResult[] = [];
     let next = 0;
     const worker = async () => {
-      while (next < seeds.length) {
-        const seed = seeds[next++]!;
+      while (next < count) {
+        const seed = seedBase + next++;
         try {
-          const provider = mock ? mockProvider(world) : apiProvider(model);
-          const r = await playOne(world, seed, provider, maxGameTurns);
+          const provider = liveProvider ?? mockProvider(world);
+          // Scripted runs already have a finite walkthrough bound; authored
+          // repeats need not gain score or enter a new room every 12 turns.
+          const r = await playOne(world, seed, provider, maxGameTurns, mock ? Infinity : STALL_AFTER);
           results.push(r);
+          if (!r.report || (mock && (!r.verified || !r.won || r.score !== world.maxScore))) process.exitCode = 1;
           const filed = fileReport(r, mock ? "mock" : model, worldPath);
           console.log(
             `  seed ${seed}: ${r.ended ?? (r.stalled ? "stalled" : "no-ending")} in ${r.turns}t | api calls ${r.apiCalls} | tok in ${r.usage.in} out ${r.usage.out} cacheR ${r.usage.cacheRead} cacheW ${r.usage.cacheWrite} | verified:${r.verified}${filed ? ` | ${filed.replace(ROOT + "/", "")}` : ` | REPORT REJECTED (${r.reportError})`}`,
           );
         } catch (e) {
+          process.exitCode = 1;
           console.error(`  seed ${seed}: FAILED ${String(e).slice(0, 200)}`);
         }
       }
@@ -280,7 +334,7 @@ if (process.argv[1]?.endsWith("player.ts")) {
     console.log(
       `fleet done: ${results.length}/${count} ok, ${results.filter((r) => r.verified).length} verified | totals: in ${tot.in} out ${tot.out} cacheRead ${tot.cacheRead} cacheWrite ${tot.cacheWrite}`,
     );
-    const t = triage();
+    const t = triage({ reportsDir: process.env.TF_REPORTS });
     console.log(`triage: ${t.consumed} report(s) -> ${t.filed.length} new issue(s)${t.skipped ? `, ${t.skipped} already known` : ""}`);
     for (const i of t.filed)
       console.log(`  ${i.priority} ${i.unit_kind} x${i.corroboration}: ${i.title.slice(0, 90)}`);

@@ -3,14 +3,18 @@
  * Type a menu number (or an action label). `look` re-shows the room. `q` quits.
  */
 import { createInterface } from "node:readline";
-import { actionByLabel, newState, step } from "./engine.ts";
+import { actionByLabel, newState, roomIsDark, step } from "./engine.ts";
 import { render, renderIntro } from "./format.ts";
-import { loadWorldUrl } from "./validate.ts";
+import { loadValidatedWorld } from "./validate.ts";
 
 const seed = Number(process.argv[2] ?? Math.floor(Math.random() * 1e9));
-const world = loadWorldUrl(new URL("../world/lighthouse.json", import.meta.url));
+if (!Number.isSafeInteger(seed) || process.argv[2]?.trim() === "") {
+  console.error("Seed must be a safe integer.");
+  process.exit(1);
+}
+const world = loadValidatedWorld(new URL("../world/lighthouse.json", import.meta.url));
 let { state, events } = newState(world, seed);
-const seen = new Set<string>([state.room]);
+const seen = new Set<string>(roomIsDark(world, state) ? [] : [state.room]);
 let out = renderIntro(world, state, events);
 console.log(out.text);
 
@@ -32,11 +36,10 @@ rl.on("line", (line) => {
     rl.prompt();
     return;
   }
-  const before = state.room;
   const res = step(world, state, action);
   state = res.state;
-  const first = state.room !== before && !seen.has(state.room);
-  seen.add(state.room);
+  const first = !seen.has(state.room);
+  if (!roomIsDark(world, state)) seen.add(state.room);
   out = render(world, state, res.events, { full: first });
   console.log(out.text);
   if (state.ended) process.exit(0);

@@ -283,11 +283,12 @@ export function actionLabel(world: World, a: Action, s?: State): string {
 }
 
 // ---------- step ----------
-function bestWeapon(world: World, s: State): { hit: number; dmg: number; item: string | null } {
+export function bestWeapon(world: World, s: State): { hit: number; dmg: number; item: string | null } {
   let best: { hit: number; dmg: number; item: string | null } = { hit: 0, dmg: 1, item: null };
   for (const id of s.inv) {
     const it = world.items[id];
-    if (it?.dmg && it.dmg > best.dmg) best = { hit: it.hit ?? 0, dmg: it.dmg, item: id };
+    if (it?.dmg && (it.dmg > best.dmg || (it.dmg === best.dmg && (it.hit ?? 0) > best.hit)))
+      best = { hit: it.hit ?? 0, dmg: it.dmg, item: id };
   }
   return best;
 }

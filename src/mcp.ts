@@ -12,18 +12,17 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { z } from "zod";
-import { receipt, step } from "./engine.ts";
-import { newState } from "./engine.ts";
+import { newState, receipt, roomIsDark, step } from "./engine.ts";
 import { render, renderIntro } from "./format.ts";
-import { loadWorld } from "./validate.ts";
+import { loadValidatedWorld } from "./validate.ts";
 import type { Action, State, Trace, World } from "./types.ts";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const RUNS = join(ROOT, "runs");
+const RUNS = process.env.TF_RUNS ?? join(ROOT, "runs");
 mkdirSync(RUNS, { recursive: true });
 
 const WORLD_PATH = process.env.TF_WORLD ?? join(ROOT, "world", "lighthouse.json");
-const world: World = loadWorld(WORLD_PATH);
+const world: World = loadValidatedWorld(WORLD_PATH);
 
 type Session = {
   id: string;
@@ -42,7 +41,7 @@ function flush(sess: Session): void {
 
 function view(sess: Session, events: string[], full: boolean): string {
   const first = !sess.seen.has(sess.state.room);
-  if (!sess.state.ended) sess.seen.add(sess.state.room);
+  if (!sess.state.ended && !roomIsDark(world, sess.state)) sess.seen.add(sess.state.room);
   const r = render(world, sess.state, events, { full: full || first });
   sess.actions = r.actions;
   return r.text;
@@ -57,7 +56,7 @@ server.registerTool(
   {
     description:
       "Start a session. Returns the intro, the scene, and a numbered action menu. Play by calling act with a menu number — every act response already contains the next scene and menu, so you never need a second call per turn.",
-    inputSchema: { seed: z.number().int().optional().describe("Determinism seed (default: random).") },
+    inputSchema: { seed: z.number().int().safe().optional().describe("Determinism seed (default: random).") },
   },
   async ({ seed }) => {
     const s = seed ?? Math.floor(Math.random() * 1e9);
@@ -73,7 +72,7 @@ server.registerTool(
     sessions.set(id, sess);
     const intro = renderIntro(world, sess.state, out.events);
     sess.actions = intro.actions;
-    sess.seen.add(sess.state.room);
+    if (!roomIsDark(world, sess.state)) sess.seen.add(sess.state.room);
     flush(sess);
     return text(`s=${id}\n${intro.text}`);
   },
@@ -96,13 +95,11 @@ server.registerTool(
     const action = sess.actions[a - 1];
     if (!action)
       return text(`No action ${a}. Menu:\n${view(sess, [], false)}`);
-    const before = sess.state.room;
     const out = step(world, sess.state, action);
     sess.state = out.state;
     sess.trace.actions.push(action);
     flush(sess);
-    const moved = sess.state.room !== before;
-    return text(view(sess, out.events, moved && !sess.seen.has(sess.state.room)));
+    return text(view(sess, out.events, false));
   },
 );
 

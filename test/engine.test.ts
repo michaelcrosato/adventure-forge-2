@@ -17,7 +17,7 @@ import type { Action, State, World } from "../src/types.ts";
 const world: World = loadWorldUrl(new URL("../world/lighthouse.json", import.meta.url));
 
 /** Play the walkthrough at a seed, recording canonical actions + hash sequence. */
-function playWalkthrough(seed: number): { actions: Action[]; hashes: string[]; state: State } {
+function recordWalkthrough(seed: number): { actions: Action[]; hashes: string[]; state: State } {
   let { state } = newState(world, seed);
   const actions: Action[] = [];
   const hashes: string[] = [hashState(state)];
@@ -43,9 +43,17 @@ function playWalkthrough(seed: number): { actions: Action[]; hashes: string[]; s
   return { actions, hashes, state };
 }
 
+// Content assertions share one proven run; callers receive isolated copies.
+// The determinism test below still executes the reducer twice independently.
+const walkthroughRuns = new Map<number, ReturnType<typeof recordWalkthrough>>();
+function playWalkthrough(seed: number): ReturnType<typeof recordWalkthrough> {
+  if (!walkthroughRuns.has(seed)) walkthroughRuns.set(seed, recordWalkthrough(seed));
+  return structuredClone(walkthroughRuns.get(seed)!);
+}
+
 test("same seed => byte-identical run (hash sequence and receipt)", () => {
-  const a = playWalkthrough(1);
-  const b = playWalkthrough(1);
+  const a = recordWalkthrough(1);
+  const b = recordWalkthrough(1);
   assert.deepEqual(a.hashes, b.hashes);
   assert.equal(receipt(world, a.state), receipt(world, b.state));
 });

@@ -9,7 +9,7 @@
  * brief line (revisit) is the caller's memo (per-session, not game state), so
  * traces replay identically no matter how the text was rendered.
  */
-import { actionLabel, hashState, legalActions, receipt, roomIsDark } from "./engine.ts";
+import { actionLabel, bestWeapon, hashState, legalActions, receipt, roomIsDark } from "./engine.ts";
 import type { Action, State, World } from "./types.ts";
 
 export function renderMenu(world: World, s: State): { text: string; actions: Action[] } {
@@ -66,7 +66,14 @@ export function render(
       .map(([id, d]) => {
         const hp = s.npcHp[id] ?? d.hp ?? 1;
         if (hp <= 0) return `${d.name} (dead)`;
-        return d.hostile ? `${d.name} (hostile, hp${hp})` : `${d.name} is here`;
+        const desc = opts.full && d.desc ? ` ${d.desc}` : "";
+        if (!d.hostile) return `${d.name} is here${desc}`;
+        const weapon = bestWeapon(world, s);
+        const hitFaces = Math.max(0, Math.min(20, 21 - Math.ceil((d.df ?? 10) - weapon.hit)));
+        const killFaces = hp <= weapon.dmg ? hitFaces : hp <= weapon.dmg * 2 && hitFaces > 0 ? 1 : 0;
+        const counter = d.atk ? (20 - killFaces) * 5 : 0;
+        const damage = hitFaces === 0 ? "0" : hitFaces === 1 ? `${weapon.dmg * 2}crit` : `${weapon.dmg}/${weapon.dmg * 2}crit`;
+        return `${d.name} (hostile, hp${hp}; hit${hitFaces * 5}%, damage${damage}; counter${counter}%${counter ? `:-${d.atk}hp` : ""})${desc}`;
       });
     if (npcs.length) lines.push(npcs.join("; "));
   }

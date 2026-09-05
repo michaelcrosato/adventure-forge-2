@@ -1,169 +1,137 @@
 # tinyforge
 
-An **AI-coded, AI-playtested** text RPG in ~2,000 lines — the
-[zork-unlimited](https://github.com/michaelcrosato/zork-unlimited) flywheel
-(deterministic engine → MCP server → blind playtest loop → dev loop) rebuilt as
-the smallest version that still keeps the property that matters: **freedom in
-design, honesty in verification.**
+A deterministic text RPG with a small TypeScript engine, a three-tool MCP server,
+and two automated playtest lanes. Content lives in `world/lighthouse.json`; each
+world carries a walkthrough that must reach a full-score win.
 
-```
-playtest loop                               dev loop
-blind players (MCP lane or API lane)        claude -p (dev agent)
-   │  play; every trace replay-verified        │  reads ONE issue
-   ▼                                           ▼
-reports/*.json (raw, build-stamped)         npm run verify (green or revert)
-   │  triage: cluster + corroborate            │
-   ▼                                           ▼
-queue/*-issue-*.json ─────────────────────► git commit → next wave plays it
-```
+## Run locally
 
-## Quickstart
+Requires Node 20+ and npm. Use the committed lockfile:
 
 ```bash
-npm install
-npm run verify        # the whole bar: typecheck + tests + validator + crawler (~5s)
-npm run play          # play it yourself in the terminal
-npm run mcp           # MCP server (stdio); .mcp.json wires it into Claude Code
-npm run mock          # zero-token structural player over real MCP (wiring check)
-npm run measure       # full walkthrough over real MCP + token stats
-npm run playtest 3    # wave of 3 blind Claude Code players (subscription lane)
-npm run fleet -- --count 10 --parallel 5   # direct-API lane (needs ANTHROPIC_API_KEY)
-npm run fleet -- --mock --count 2          # zero-token driver check for the API lane
-npm run devloop 5     # up to 5 dev cycles: finding -> change -> verify -> commit
+npm ci
+npm run verify                     # typecheck, tests, validator, smoke crawler
+npm run play -- 7                   # terminal game with a reproducible seed
+npm run mcp                        # stdio MCP server
+npm run mock                       # zero-token MCP wiring check
+npm run measure                    # full-score walkthrough over real MCP
+npm run fleet -- --mock --count 2   # full walkthroughs through the API driver, no API calls
 ```
 
-Requires Node 20+ and (for the live loops) the Claude Code CLI. `git init` +
-one commit before the first `devloop`.
+There is no web server. The terminal accepts a menu number, an action label,
+`look`, or `q`. MCP exposes `new_game`, `act`, and `look`; every action returns
+its events, scene, inventory, and next numbered menu in one text block. `look`
+costs no game turn. `.mcp.json` configures this server for Claude Code.
 
-## What a turn looks like
+`npm run measure` prints current turn and response-size measurements and fails
+unless the walkthrough wins with maximum score. Its default turn limit follows
+the authored walkthrough, including bounded repeats. `--max-steps` can override
+that limit. The random `mock` command is a wiring check and may lose normally.
 
-One tool call, one plain-text block, ~55 tokens:
+## Verification
 
-```
-=Lamp Room | hp9/10 sc40/55 t21
-[Oil works into the gears and the mechanism turns free. (+10)]
-The great cold lamp.
-1 go down
-2 light the beacon
-```
+`npm run verify` checks:
 
-The agent answers `act(s, 2)`. That's the whole interface.
+- TypeScript types and all Node tests, including real MCP transport and isolated
+  shell-driver regression tests when Bash is installed.
+- World shapes, exact condition/effect tuples, references, identifiers, and a
+  seed-1 full-score winning walkthrough with a maximum menu of 12 actions.
+- Deterministic random walks for crashes, state mutation, replay consistency,
+  legal-menu availability, health/score bounds, and turn progression.
+- Observation limits along the walkthrough: average action response <=450
+  characters, maximum <=1100, introduction <=1400.
 
-## Measured (this checkout, real runs)
+Content assertions reuse an isolated copy of one recorded walkthrough. The
+reducer determinism test still executes two independent runs and compares every
+state hash. No tests or observation limits are removed to speed up verification.
+The GitHub workflow runs verification and the real MCP measurement on Linux and
+Windows with Node 20 and 22.
 
-| metric | tinyforge | zork-unlimited |
-|---|---|---|
-| code | ~1,050 lines `src/` (2,005 total) | 112,733 lines TS |
-| MCP tools an agent must understand | **3** | 43 |
-| tool calls per game turn | **1** (menu inlined) | 1–3 (obs/actions/step; inlining added later) |
-| act response | avg ~206 chars (~54 tok), max ~500 | compact JSON + legend protocol |
-| full blind win, game-side text | ~1.4k tokens, 26 calls | (long session, one context window budget) |
-| verify bar | **~5s** (`npm run verify`) | minutes (`health`), crawl:smoke alone 20–35s |
-| real blind playtest (Claude, seed 42) | won 55/55, $0.33, receipt verified | — |
-| real dev cycle (finding → landed commit) | $0.53, 20 agent turns | — |
-
-Why it advances faster: a cycle is bounded by its verify bar, and this bar runs
-in seconds; a playtest is bounded by tokens/turn, and a turn is one small call.
-
-## Two playtest lanes (and why both exist)
-
-The engine is a **library**; MCP is just one adapter over it. That makes the
-transport a choice per use, not an architecture:
-
-| | `npm run playtest` (MCP + Claude Code) | `npm run fleet` (in-process + raw API) |
-|---|---|---|
-| player sees | game via MCP tools inside a full agent harness | ONLY rendered game text (blind by construction) |
-| prefix carried per model call | ~43k tok (harness prompt + tool defs) | ~0.5k tok (player charter) |
-| measured, one full win | seed 42: **1,197k** cache-read, $0.33 · seed 77: **2,027k** cache-read, $0.54 | seed 77 exact construction: **104k chars ≈ 25-30k tok** input across 28 calls (+~0.2k out) |
-| token accounting | harness-reported | exact, per call, from API usage |
-| needs | Claude subscription, no key | `ANTHROPIC_API_KEY`, per-token billing |
-| best for | interop proof, humans-with-Claude, any-vendor CLIs | volume: 10-100 cheap players per wave |
-
-Same report schema, same queue, same replay-verified receipts either way — a
-report's receipt must equal an engine replay of the recorded trace, so neither
-lane can hand-wave a session. The MCP server (140 lines) stays because it is
-the interop surface any agent can connect to; the fleet runs in-process because
-paying a ~43k-token harness to relay a 55-token observation is the wrong tool
-for volume. `--mock` proves the fleet driver end to end for zero tokens.
-
-Live per-turn sessions carry a stall guard — 12 turns with no new room and no
-score ends the session as `stalled`, which is cheaper than funding a wandering
-model to its turn cap and is itself a finding.
-
-Negative result, kept for the record: a one-shot plan lane (one model call
-plans the whole game from the opening scene; host executes the labels) was
-trialed live and removed. With menu-local labels and unguessable proper nouns
-("take storm lantern", "ask innkeep: the dark tower"), a real model's 30-step
-plan executed exactly 1 action before derailing — the depth-before-derail
-metric is structurally pinned at ~1 here, so the lane bought no information.
-It only works for games that expose a globally stable, guessable action-id
-grammar, which this game deliberately does not.
-
-## What was kept vs shed
-
-**Kept (the essence):** pure `step(state, action)` reducer, seeded PRNG cursor
-in the state (same seed = byte-identical run, replayable traces), content as
-validated data with a closed condition/effect DSL, legal-action menus as ground
-truth, a walkthrough that must replay to a full-score win (ending witness +
-score-economy proof in one), a zero-LLM crawler, blind players restricted to
-the game's MCP surface, receipts verified by trace replay, one intake queue,
-red-reverts-green-commits dev cycles, an observation token budget enforced as a
-test, and a charter (`AGENT.md`) with do-not-weaken rules the driver enforces.
-
-**Shed (the weight):** the overworld/journey-contract layer, 40 of 43 tools,
-JSON+legend observation protocol (plain text instead), vendor registries and
-capture attestation (single operator, trust your own machine — the receipt
-replay keeps reports honest), exit-interview cross-verifiers, GitHub intake
-sync, fleets/personas/cohort ledgers, eslint/prettier/vitest (tsc + node:test).
-
-## Layout
-
-```
-src/engine.ts     pure reducer, PRNG, hash, legal actions   (~330 lines)
-src/format.ts     the token budget lives here               (~100)
-src/validate.ts   closed-DSL checks + walkthrough proof     (~150)
-src/crawl.ts      Tier-1 mechanical crawler + trace replay  (~120)
-src/mcp.ts        3 tools: new_game / act / look            (~140)
-src/player.ts     direct-API fleet lane (in-process)        (~250)
-src/triage.ts     reports -> atomic corroborated issues     (~150)
-src/play.ts       human CLI                                 (~50)
-world/*.json      the game (content is data, never code)
-test/             determinism, validator corpus, TOKEN BUDGET, triage rules
-loop/playtest.sh  wave of blind claude -p players -> reports/
-loop/dev.sh       issue -> one change -> verify -> commit (red reverts)
-loop/mock-player.mjs  zero-token structural player (real MCP stdio)
-reports/          raw session evidence (build-stamped, replay-verified)
-queue/ done/      the one inbox (issues) and its archive
-AGENT.md          the charter the dev agent is prompted with
-```
-
-## The loops, unattended
+For a deeper mechanical crawl or a recorded trace:
 
 ```bash
-npm run playtest 5          # or loop it: while true; do npm run playtest 3; npm run devloop 3; done
-TF_PLAYER_MODEL=<model-id> TF_SEED_BASE=100 npm run playtest 10
-TF_DEV_FLAGS=--dangerously-skip-permissions npm run devloop 10   # only on a machine you trust
+npm exec -- tsx src/crawl.ts --deep
+npm exec -- tsx src/crawl.ts --replay runs/<session>.json
 ```
 
-Driver-enforced per cycle: clean tree in, protected paths untouched (`loop/`,
-`AGENT.md`), no deleted tests, test count non-decreasing, no no-op cycles (the
-agent must actually change `src/`, `world/` or `test/` — marking an issue done
-without a diff is a failure), verify green — else revert, and the issue moves
-to `queue/failed/`. Three consecutive failures trip the circuit breaker.
+A smoke crawl samples the graph; it does not prove every route is safe or that
+every seed wins. The authored walkthrough supplies the separate winning witness.
+Runtime entrypoints validate a world before starting a session. Trace replay
+rejects a wrong world or an illegal action instead of silently ignoring it.
 
-Between the waves and the dev loop sits `src/triage.ts`: raw reports are
-evidence, the queue holds atomic ISSUES. Triage clusters near-duplicate
-findings across a wave (deterministic word-overlap, no model), counts
-corroboration across independent reports, and applies zork-unlimited's
-promotion philosophy in miniature: mechanical bugs promote alone, subjective
-suggestions reach P1 only when 2+ independent players agree. Reports are
-stamped with the build (git rev + world content hash); the dev loop warns when
-it picks up an issue filed against an older build.
+## Playtest and development loops
 
-## Provenance
+```text
+blind players -> reports/*.json -> triage -> queue/*-issue-*.json
+                                               |
+                                      dev agent -> verify -> commit
+```
 
-Built 100% by AI (Claude, 2026-09-01) from a review of zork-unlimited: the
-first queued finding was filed by a real blind Claude playtest (won 55/55,
-receipt `lighthouse.42.25.55.beacon_lit.732babd1` verified by trace replay),
-and commit `d29207b` was landed by a real unattended dev cycle consuming that
-finding. MIT-yours.
+The MCP lane uses Claude Code; the direct API lane sends only rendered game text
+to Anthropic's Messages API. Both validate report fields and verify quoted
+receipts by replay. Host fields such as build identity, seed, and verification
+status cannot be overwritten by model output.
+
+```bash
+npm run playtest -- 3
+npm run fleet -- --count 10 --parallel 5 --max-game-turns 80
+npm run devloop -- 5
+```
+
+The shell loops require Bash and the Claude Code CLI. On Windows, use Git Bash.
+The direct API lane requires `ANTHROPIC_API_KEY`; `--mock` needs no credentials.
+Live runs retain an 80-turn default budget and stop after 12 turns without a new
+room or score gain. Increase the budget for longer exploration. Scripted mock
+runs use the walkthrough bound and do not use the live stall cutoff.
+
+The dev loop requires a clean worktree. Untracked raw reports are accepted as
+inputs; other untracked files must be committed, stashed, or ignored. Each cycle
+consumes one issue, protects `loop/` and `AGENT.md` from the content agent, forbids
+deleted tests or reduced test counts, and requires verification before committing.
+Failed cycles restore the baseline and quarantine the issue; three consecutive
+failures stop the loop. Infrastructure maintenance outside that loop should keep
+these integrity checks intact.
+
+Triage preserves malformed/unreadable reports for inspection and archives only
+accepted reports without overwriting existing evidence. It clusters findings by
+word overlap and counts distinct reports. P0/P1 bugs promote alone; P2 bugs keep
+their severity. Subjective findings start at P2 and rise to P1 with corroboration.
+Existing issue identities in `queue/`, `queue/failed/`, and `done/` prevent exact
+refiling, including legacy issue files. Similarity clustering applies within a
+wave; it is not a semantic guarantee across separate waves.
+
+## Configuration and files
+
+| Setting | Purpose |
+| --- | --- |
+| `TF_WORLD` | Custom world JSON for runtime adapters, mock/checker, and replay |
+| `TF_RUNS` | MCP trace directory; default `runs/` |
+| `TF_REPORTS` | API/MCP report output directory; default `reports/` |
+| `TF_PLAYER_MODEL` | Live player model override |
+| `TF_PARALLEL`, `TF_SEED_BASE` | Shell playtest concurrency and initial seed |
+| `TF_MAX_TURNS`, `TF_MAX_GAME_TURNS` | Shell agent and game turn budgets |
+| `TF_DEV_MODEL`, `TF_DEV_MAX_TURNS`, `TF_DEV_FLAGS` | Development-agent configuration |
+
+```text
+src/engine.ts       pure reducer, seeded PRNG, legal actions, hashes and receipts
+src/types.ts        world, condition/effect DSL, action and state contracts
+src/format.ts       compact observations and menus
+src/validate.ts     runtime schemas, references and walkthrough proof
+src/crawl.ts        mechanical crawler and strict trace replay
+src/mcp.ts          three-tool stdio adapter; records traces
+src/play.ts         human terminal adapter
+src/player.ts       API and mock fleet drivers; validated reports
+src/triage.ts       raw reports to deduplicated issues
+world/             authored content and winning walkthroughs
+test/              engine, content, budgets, adapters and automation regressions
+loop/              MCP mock, report checker and Bash playtest/dev drivers
+runs/              ignored local traces and driver logs
+reports/           raw and archived session evidence
+queue/ done/       active findings and resolved-finding archive
+AGENT.md           charter for the automated content dev agent
+```
+
+Build-stamped reports and archived launch-era examples describe the world at the
+time of their capture. Their old scores, turn counts, costs, and code-size claims
+are not benchmarks for the current expanded world. Run `measure` for current
+transport measurements and `verify` for the current integrity checks.
