@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7170,
+  "maxScore": 7210,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -8783,7 +8783,7 @@
       "name": "Rust Cidergum",
       "desc": "A dry cidergum east of the jetblack. Packed rust coats cidergum.",
       "brief": "Dry cidergum, packed rust.",
-      "exits": { "west": { "to": "rust_jetblack" } },
+      "exits": { "west": { "to": "rust_jetblack" }, "east": { "to": "rust_bottlebrush" } },
       "actions": [
         {
           "id": "pinch_cidergum",
@@ -8792,6 +8792,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cidergum. They packed it on the jetblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bottlebrush": {
+      "name": "Rust Bottlebrush",
+      "desc": "A dry bottlebrush east of the cidergum. Packed rust coats bottlebrush.",
+      "brief": "Dry bottlebrush, packed rust.",
+      "exits": { "west": { "to": "rust_cidergum" } },
+      "actions": [
+        {
+          "id": "pinch_bottlebrush",
+          "label": "pinch the bottlebrush",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bottlebrush. They packed it on the cidergum and packed rust around it."]
           ]
         }
       ]
@@ -8868,7 +8885,7 @@
       "name": "Rust Ribbongum",
       "desc": "A dry ribbongum east of the olibanum. Packed rust coats ribbongum.",
       "brief": "Dry ribbongum, packed rust.",
-      "exits": { "west": { "to": "rust_olibanum" } },
+      "exits": { "west": { "to": "rust_olibanum" }, "east": { "to": "rust_acacia" } },
       "actions": [
         {
           "id": "pinch_ribbongum",
@@ -8877,6 +8894,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ribbongum. They packed it on the olibanum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_acacia": {
+      "name": "Rust Acacia",
+      "desc": "A dry acacia east of the ribbongum. Packed rust coats acacia.",
+      "brief": "Dry acacia, packed rust.",
+      "exits": { "west": { "to": "rust_ribbongum" } },
+      "actions": [
+        {
+          "id": "pinch_acacia",
+          "label": "pinch the acacia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard acacia. They packed it on the ribbongum and packed rust around it."]
           ]
         }
       ]
@@ -9021,7 +9055,7 @@
       "name": "Rust Shininggum",
       "desc": "A dry shininggum east of the sootblack. Packed rust coats shininggum.",
       "brief": "Dry shininggum, packed rust.",
-      "exits": { "west": { "to": "rust_sootblack" } },
+      "exits": { "west": { "to": "rust_sootblack" }, "east": { "to": "rust_kurrajong" } },
       "actions": [
         {
           "id": "pinch_shininggum",
@@ -9030,6 +9064,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shininggum. They packed it on the sootblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kurrajong": {
+      "name": "Rust Kurrajong",
+      "desc": "A dry kurrajong east of the shininggum. Packed rust coats kurrajong.",
+      "brief": "Dry kurrajong, packed rust.",
+      "exits": { "west": { "to": "rust_shininggum" } },
+      "actions": [
+        {
+          "id": "pinch_kurrajong",
+          "label": "pinch the kurrajong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kurrajong. They packed it on the shininggum and packed rust around it."]
           ]
         }
       ]
@@ -9123,7 +9174,7 @@
       "name": "Rust Scribblygum",
       "desc": "A dry scribblygum east of the carbon. Packed rust coats scribblygum.",
       "brief": "Dry scribblygum, packed rust.",
-      "exits": { "west": { "to": "rust_carbon" } },
+      "exits": { "west": { "to": "rust_carbon" }, "east": { "to": "rust_gympie" } },
       "actions": [
         {
           "id": "pinch_scribblygum",
@@ -9132,6 +9183,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard scribblygum. They packed it on the carbon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_gympie": {
+      "name": "Rust Gympie",
+      "desc": "A dry gympie east of the scribblygum. Packed rust coats gympie.",
+      "brief": "Dry gympie, packed rust.",
+      "exits": { "west": { "to": "rust_scribblygum" } },
+      "actions": [
+        {
+          "id": "pinch_gympie",
+          "label": "pinch the gympie",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gympie. They packed it on the scribblygum and packed rust around it."]
           ]
         }
       ]
@@ -9242,7 +9310,7 @@
       "name": "Rust Applebox",
       "desc": "A dry applebox east of the coal. Packed rust coats applebox.",
       "brief": "Dry applebox, packed rust.",
-      "exits": { "west": { "to": "rust_coal" } },
+      "exits": { "west": { "to": "rust_coal" }, "east": { "to": "rust_lillypilly" } },
       "actions": [
         {
           "id": "pinch_applebox",
@@ -9251,6 +9319,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard applebox. They packed it on the coal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_lillypilly": {
+      "name": "Rust Lillypilly",
+      "desc": "A dry lillypilly east of the applebox. Packed rust coats lillypilly.",
+      "brief": "Dry lillypilly, packed rust.",
+      "exits": { "west": { "to": "rust_applebox" } },
+      "actions": [
+        {
+          "id": "pinch_lillypilly",
+          "label": "pinch the lillypilly",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lillypilly. They packed it on the applebox and packed rust around it."]
           ]
         }
       ]
@@ -9361,7 +9446,7 @@
       "name": "Rust Redbox",
       "desc": "A dry redbox east of the peat. Packed rust coats redbox.",
       "brief": "Dry redbox, packed rust.",
-      "exits": { "west": { "to": "rust_peat" } },
+      "exits": { "west": { "to": "rust_peat" }, "east": { "to": "rust_geebung" } },
       "actions": [
         {
           "id": "pinch_redbox",
@@ -9370,6 +9455,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redbox. They packed it on the peat and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_geebung": {
+      "name": "Rust Geebung",
+      "desc": "A dry geebung east of the redbox. Packed rust coats geebung.",
+      "brief": "Dry geebung, packed rust.",
+      "exits": { "west": { "to": "rust_redbox" } },
+      "actions": [
+        {
+          "id": "pinch_geebung",
+          "label": "pinch the geebung",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard geebung. They packed it on the redbox and packed rust around it."]
           ]
         }
       ]
@@ -12183,7 +12285,7 @@
       "name": "Rust Whitemahogany",
       "desc": "A dry whitemahogany east of the snowgum. Packed rust coats whitemahogany.",
       "brief": "Dry whitemahogany, packed rust.",
-      "exits": { "west": { "to": "rust_snowgum" } },
+      "exits": { "west": { "to": "rust_snowgum" }, "east": { "to": "rust_waratah" } },
       "actions": [
         {
           "id": "pinch_whitemahogany",
@@ -12192,6 +12294,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whitemahogany. They packed it on the snowgum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_waratah": {
+      "name": "Rust Waratah",
+      "desc": "A dry waratah east of the whitemahogany. Packed rust coats waratah.",
+      "brief": "Dry waratah, packed rust.",
+      "exits": { "west": { "to": "rust_whitemahogany" } },
+      "actions": [
+        {
+          "id": "pinch_waratah",
+          "label": "pinch the waratah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard waratah. They packed it on the whitemahogany and packed rust around it."]
           ]
         }
       ]
@@ -13968,7 +14087,7 @@
       "name": "Rust Brownbarrel",
       "desc": "A dry brownbarrel east of the riverredgum. Packed rust coats brownbarrel.",
       "brief": "Dry brownbarrel, packed rust.",
-      "exits": { "west": { "to": "rust_riverredgum" } },
+      "exits": { "west": { "to": "rust_riverredgum" }, "east": { "to": "rust_callistemon" } },
       "actions": [
         {
           "id": "pinch_brownbarrel",
@@ -13977,6 +14096,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard brownbarrel. They packed it on the riverredgum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_callistemon": {
+      "name": "Rust Callistemon",
+      "desc": "A dry callistemon east of the brownbarrel. Packed rust coats callistemon.",
+      "brief": "Dry callistemon, packed rust.",
+      "exits": { "west": { "to": "rust_brownbarrel" } },
+      "actions": [
+        {
+          "id": "pinch_callistemon",
+          "label": "pinch the callistemon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard callistemon. They packed it on the brownbarrel and packed rust around it."]
           ]
         }
       ]
@@ -25824,6 +25960,9 @@
     "pinch the jetblack",
     "go east",
     "pinch the cidergum",
+    "go east",
+    "pinch the bottlebrush",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25840,6 +25979,9 @@
     "pinch the olibanum",
     "go east",
     "pinch the ribbongum",
+    "go east",
+    "pinch the acacia",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25861,6 +26003,9 @@
     "pinch the sootblack",
     "go east",
     "pinch the shininggum",
+    "go east",
+    "pinch the kurrajong",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25880,6 +26025,9 @@
     "pinch the carbon",
     "go east",
     "pinch the scribblygum",
+    "go east",
+    "pinch the gympie",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25900,6 +26048,9 @@
     "pinch the coal",
     "go east",
     "pinch the applebox",
+    "go east",
+    "pinch the lillypilly",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -25920,6 +26071,9 @@
     "pinch the peat",
     "go east",
     "pinch the redbox",
+    "go east",
+    "pinch the geebung",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26417,6 +26571,9 @@
     "pinch the snowgum",
     "go east",
     "pinch the whitemahogany",
+    "go east",
+    "pinch the waratah",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26465,6 +26622,9 @@
     "pinch the riverredgum",
     "go east",
     "pinch the brownbarrel",
+    "go east",
+    "pinch the callistemon",
+    "go west",
     "go west",
     "go west",
     "go west",
