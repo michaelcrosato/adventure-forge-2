@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4930,
+  "maxScore": 4970,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -7508,7 +7508,7 @@
       "name": "Rust Waterknot",
       "desc": "A dry waterknot east of the pendant. Packed rust coats a waterknot.",
       "brief": "Dry waterknot, packed rust.",
-      "exits": { "west": { "to": "rust_pendant" } },
+      "exits": { "west": { "to": "rust_pendant" }, "east": { "to": "rust_bole" } },
       "actions": [
         {
           "id": "pinch_waterknot",
@@ -7517,6 +7517,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard waterknot. They joined it on the pendant and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bole": {
+      "name": "Rust Bole",
+      "desc": "A dry bole east of the waterknot. Packed rust coats bole.",
+      "brief": "Dry bole, packed rust.",
+      "exits": { "west": { "to": "rust_waterknot" } },
+      "actions": [
+        {
+          "id": "pinch_bole",
+          "label": "pinch the bole",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bole. They packed it on the waterknot and packed rust around it."]
           ]
         }
       ]
@@ -7593,7 +7610,7 @@
       "name": "Rust Barrelknot",
       "desc": "A dry barrelknot east of the jeer. Packed rust coats a barrelknot.",
       "brief": "Dry barrelknot, packed rust.",
-      "exits": { "west": { "to": "rust_jeer" } },
+      "exits": { "west": { "to": "rust_jeer" }, "east": { "to": "rust_carrageen" } },
       "actions": [
         {
           "id": "pinch_barrelknot",
@@ -7602,6 +7619,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard barrelknot. They seized it on the jeer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_carrageen": {
+      "name": "Rust Carrageen",
+      "desc": "A dry carrageen east of the barrelknot. Packed rust coats carrageen.",
+      "brief": "Dry carrageen, packed rust.",
+      "exits": { "west": { "to": "rust_barrelknot" } },
+      "actions": [
+        {
+          "id": "pinch_carrageen",
+          "label": "pinch the carrageen",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard carrageen. They packed it on the barrelknot and packed rust around it."]
           ]
         }
       ]
@@ -7644,7 +7678,7 @@
       "name": "Rust Diamondknot",
       "desc": "A dry diamondknot east of the tye. Packed rust coats a diamondknot.",
       "brief": "Dry diamondknot, packed rust.",
-      "exits": { "west": { "to": "rust_tye" } },
+      "exits": { "west": { "to": "rust_tye" }, "east": { "to": "rust_algin" } },
       "actions": [
         {
           "id": "pinch_diamondknot",
@@ -7653,6 +7687,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard diamondknot. They wove it on the tye and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_algin": {
+      "name": "Rust Algin",
+      "desc": "A dry algin east of the diamondknot. Packed rust coats algin.",
+      "brief": "Dry algin, packed rust.",
+      "exits": { "west": { "to": "rust_diamondknot" } },
+      "actions": [
+        {
+          "id": "pinch_algin",
+          "label": "pinch the algin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard algin. They packed it on the diamondknot and packed rust around it."]
           ]
         }
       ]
@@ -7712,7 +7763,7 @@
       "name": "Rust Stopperknot",
       "desc": "A dry stopperknot east of the truss. Packed rust coats a stopperknot.",
       "brief": "Dry stopperknot, packed rust.",
-      "exits": { "west": { "to": "rust_truss" } },
+      "exits": { "west": { "to": "rust_truss" }, "east": { "to": "rust_carob" } },
       "actions": [
         {
           "id": "pinch_stopperknot",
@@ -7721,6 +7772,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stopperknot. They stopped it on the truss and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_carob": {
+      "name": "Rust Carob",
+      "desc": "A dry carob east of the stopperknot. Packed rust coats carob.",
+      "brief": "Dry carob, packed rust.",
+      "exits": { "west": { "to": "rust_stopperknot" } },
+      "actions": [
+        {
+          "id": "pinch_carob",
+          "label": "pinch the carob",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard carob. They packed it on the stopperknot and packed rust around it."]
           ]
         }
       ]
@@ -7763,7 +7831,7 @@
       "name": "Rust Roundturn",
       "desc": "A dry roundturn east of the sling. Packed rust coats a roundturn.",
       "brief": "Dry roundturn, packed rust.",
-      "exits": { "west": { "to": "rust_sling" } },
+      "exits": { "west": { "to": "rust_sling" }, "east": { "to": "rust_locustbean" } },
       "actions": [
         {
           "id": "pinch_roundturn",
@@ -7772,6 +7840,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard roundturn. They took it on the sling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_locustbean": {
+      "name": "Rust Locustbean",
+      "desc": "A dry locustbean east of the roundturn. Packed rust coats locustbean.",
+      "brief": "Dry locustbean, packed rust.",
+      "exits": { "west": { "to": "rust_roundturn" } },
+      "actions": [
+        {
+          "id": "pinch_locustbean",
+          "label": "pinch the locustbean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard locustbean. They packed it on the roundturn and packed rust around it."]
           ]
         }
       ]
@@ -7797,7 +7882,7 @@
       "name": "Rust Fid",
       "desc": "A dry fid east of the cleat. Packed rust coats a fid.",
       "brief": "Dry fid, packed rust.",
-      "exits": { "west": { "to": "rust_cleat" } },
+      "exits": { "west": { "to": "rust_cleat" }, "east": { "to": "rust_dragonblood" } },
       "actions": [
         {
           "id": "pinch_fid",
@@ -7806,6 +7891,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fid. They drove it on the cleat and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_dragonblood": {
+      "name": "Rust Dragonblood",
+      "desc": "A dry dragonblood east of the fid. Packed rust coats dragonblood.",
+      "brief": "Dry dragonblood, packed rust.",
+      "exits": { "west": { "to": "rust_fid" } },
+      "actions": [
+        {
+          "id": "pinch_dragonblood",
+          "label": "pinch the dragonblood",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard dragonblood. They packed it on the fid and packed rust around it."]
           ]
         }
       ]
@@ -7933,7 +8035,7 @@
       "name": "Rust Coiling",
       "desc": "A dry coiling east of the covering. Packed rust coats coiling.",
       "brief": "Dry coiling, packed rust.",
-      "exits": { "west": { "to": "rust_covering" } },
+      "exits": { "west": { "to": "rust_covering" }, "east": { "to": "rust_labdanum" } },
       "actions": [
         {
           "id": "pinch_coiling",
@@ -7942,6 +8044,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coiling. They laid it on the covering and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_labdanum": {
+      "name": "Rust Labdanum",
+      "desc": "A dry labdanum east of the coiling. Packed rust coats labdanum.",
+      "brief": "Dry labdanum, packed rust.",
+      "exits": { "west": { "to": "rust_coiling" } },
+      "actions": [
+        {
+          "id": "pinch_labdanum",
+          "label": "pinch the labdanum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard labdanum. They packed it on the coiling and packed rust around it."]
           ]
         }
       ]
@@ -7984,7 +8103,7 @@
       "name": "Rust Belaying",
       "desc": "A dry belaying east of the lizard. Packed rust coats belaying.",
       "brief": "Dry belaying, packed rust.",
-      "exits": { "west": { "to": "rust_lizard" } },
+      "exits": { "west": { "to": "rust_lizard" }, "east": { "to": "rust_olibanum" } },
       "actions": [
         {
           "id": "pinch_belaying",
@@ -7993,6 +8112,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard belaying. They made it on the lizard and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_olibanum": {
+      "name": "Rust Olibanum",
+      "desc": "A dry olibanum east of the belaying. Packed rust coats olibanum.",
+      "brief": "Dry olibanum, packed rust.",
+      "exits": { "west": { "to": "rust_belaying" } },
+      "actions": [
+        {
+          "id": "pinch_olibanum",
+          "label": "pinch the olibanum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard olibanum. They packed it on the belaying and packed rust around it."]
           ]
         }
       ]
@@ -17998,6 +18134,9 @@
     "pinch the pendant",
     "go east",
     "pinch the waterknot",
+    "go east",
+    "pinch the bole",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -18012,6 +18151,9 @@
     "pinch the jeer",
     "go east",
     "pinch the barrelknot",
+    "go east",
+    "pinch the carrageen",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -18021,6 +18163,9 @@
     "pinch the tye",
     "go east",
     "pinch the diamondknot",
+    "go east",
+    "pinch the algin",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -18032,6 +18177,9 @@
     "pinch the truss",
     "go east",
     "pinch the stopperknot",
+    "go east",
+    "pinch the carob",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -18041,6 +18189,9 @@
     "pinch the sling",
     "go east",
     "pinch the roundturn",
+    "go east",
+    "pinch the locustbean",
+    "go west",
     "go west",
     "go north",
     "go east",
@@ -18048,6 +18199,9 @@
     "pinch the cleat",
     "go east",
     "pinch the fid",
+    "go east",
+    "pinch the dragonblood",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -18064,6 +18218,9 @@
     "pinch the covering",
     "go east",
     "pinch the coiling",
+    "go east",
+    "pinch the labdanum",
+    "go west",
     "go west",
     "go north",
     "go west",
@@ -18072,6 +18229,9 @@
     "pinch the lizard",
     "go east",
     "pinch the belaying",
+    "go east",
+    "pinch the olibanum",
+    "go west",
     "go west",
     "go north",
     "go east",
