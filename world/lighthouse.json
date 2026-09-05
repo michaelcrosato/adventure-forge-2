@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4130,
+  "maxScore": 4170,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -10807,7 +10807,7 @@
       "name": "Rust Wallknot",
       "desc": "A dry wallknot east of the cranse. Packed rust coats a wallknot.",
       "brief": "Dry wallknot, packed rust.",
-      "exits": { "west": { "to": "rust_cranse" } },
+      "exits": { "west": { "to": "rust_cranse" }, "east": { "to": "rust_sailcloth" } },
       "actions": [
         {
           "id": "pinch_wallknot",
@@ -10816,6 +10816,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wallknot. They tied it on the cranse and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sailcloth": {
+      "name": "Rust Sailcloth",
+      "desc": "A dry sailcloth east of the wallknot. Packed rust coats a sailcloth.",
+      "brief": "Dry sailcloth, packed rust.",
+      "exits": { "west": { "to": "rust_wallknot" } },
+      "actions": [
+        {
+          "id": "pinch_sailcloth",
+          "label": "pinch the sailcloth",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sailcloth. They wrapped it on the wallknot and packed rust around it."]
           ]
         }
       ]
@@ -10858,7 +10875,7 @@
       "name": "Rust Turkshead",
       "desc": "A dry turkshead east of the knee. Packed rust coats a turkshead.",
       "brief": "Dry turkshead, packed rust.",
-      "exits": { "west": { "to": "rust_knee" } },
+      "exits": { "west": { "to": "rust_knee" }, "east": { "to": "rust_canvas" } },
       "actions": [
         {
           "id": "pinch_turkshead",
@@ -10867,6 +10884,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard turkshead. They wove it on the knee and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_canvas": {
+      "name": "Rust Canvas",
+      "desc": "A dry canvas east of the turkshead. Packed rust coats a canvas.",
+      "brief": "Dry canvas, packed rust.",
+      "exits": { "west": { "to": "rust_turkshead" } },
+      "actions": [
+        {
+          "id": "pinch_canvas",
+          "label": "pinch the canvas",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard canvas. They spread it on the turkshead and packed rust around it."]
           ]
         }
       ]
@@ -10910,7 +10944,7 @@
       "name": "Rust Walker",
       "desc": "A dry walker east of the timber. Packed rust coats a walker.",
       "brief": "Dry walker, packed rust.",
-      "exits": { "west": { "to": "rust_timber" } },
+      "exits": { "west": { "to": "rust_timber" }, "east": { "to": "rust_roping" } },
       "actions": [
         {
           "id": "pinch_walker",
@@ -10919,6 +10953,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard walker. They tied it on the timber and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_roping": {
+      "name": "Rust Roping",
+      "desc": "A dry roping east of the walker. Packed rust coats a roping.",
+      "brief": "Dry roping, packed rust.",
+      "exits": { "west": { "to": "rust_walker" } },
+      "actions": [
+        {
+          "id": "pinch_roping",
+          "label": "pinch the roping",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard roping. They sewed it on the walker and packed rust around it."]
           ]
         }
       ]
@@ -11522,7 +11573,7 @@
       "name": "Rust Stevedore",
       "desc": "A dry stevedore east of the eyelet. Packed rust coats a stevedore.",
       "brief": "Dry stevedore, packed rust.",
-      "exits": { "west": { "to": "rust_eyelet" } },
+      "exits": { "west": { "to": "rust_eyelet" }, "east": { "to": "rust_sisal" } },
       "actions": [
         {
           "id": "pinch_stevedore",
@@ -11531,6 +11582,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stevedore. They tied it on the eyelet and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sisal": {
+      "name": "Rust Sisal",
+      "desc": "A dry sisal east of the stevedore. Packed rust coats a sisal.",
+      "brief": "Dry sisal, packed rust.",
+      "exits": { "west": { "to": "rust_stevedore" } },
+      "actions": [
+        {
+          "id": "pinch_sisal",
+          "label": "pinch the sisal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sisal. They coiled it on the stevedore and packed rust around it."]
           ]
         }
       ]
@@ -11658,7 +11726,7 @@
       "name": "Rust Plate",
       "desc": "A dry plate east of the flank. A rust boss is packed in a crack.",
       "brief": "Dry plate, packed boss.",
-      "exits": { "west": { "to": "rust_flank" } },
+      "exits": { "west": { "to": "rust_flank" }, "east": { "to": "rust_yarn" } },
       "actions": [
         {
           "id": "pinch_boss",
@@ -11667,6 +11735,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boss. Spray built it on the plate and they left it."]
+          ]
+        }
+      ]
+    },
+    "rust_yarn": {
+      "name": "Rust Yarn",
+      "desc": "A dry yarn east of the plate. Packed rust coats yarn.",
+      "brief": "Dry yarn, packed rust.",
+      "exits": { "west": { "to": "rust_plate" } },
+      "actions": [
+        {
+          "id": "pinch_yarn",
+          "label": "pinch the yarn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard yarn. They wound it on the plate and packed rust around it."]
           ]
         }
       ]
@@ -12406,7 +12491,7 @@
       "name": "Rust Grid",
       "desc": "A dry grid east of the heel. A rust tab is packed in a crack.",
       "brief": "Dry grid, packed tab.",
-      "exits": { "west": { "to": "rust_heel" } },
+      "exits": { "west": { "to": "rust_heel" }, "east": { "to": "rust_tarpaulin" } },
       "actions": [
         {
           "id": "pinch_tab",
@@ -12415,6 +12500,23 @@
           "fx": [
             ["score", 5],
             ["say", "Bent tab. They bent it on the grid and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tarpaulin": {
+      "name": "Rust Tarpaulin",
+      "desc": "A dry tarpaulin east of the grid. Packed rust coats a tarpaulin.",
+      "brief": "Dry tarpaulin, packed rust.",
+      "exits": { "west": { "to": "rust_grid" } },
+      "actions": [
+        {
+          "id": "pinch_tarpaulin",
+          "label": "pinch the tarpaulin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tarpaulin. They spread it on the grid and packed rust around it."]
           ]
         }
       ]
@@ -13308,7 +13410,7 @@
       "name": "Rust Shaft",
       "desc": "A dry shaft east of the tip. Packed rust coats a shaft.",
       "brief": "Dry shaft, packed rust.",
-      "exits": { "west": { "to": "rust_tip" } },
+      "exits": { "west": { "to": "rust_tip" }, "east": { "to": "rust_hemp" } },
       "actions": [
         {
           "id": "pinch_shaft",
@@ -13317,6 +13419,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shaft. They set it at the tip and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_hemp": {
+      "name": "Rust Hemp",
+      "desc": "A dry hemp east of the shaft. Packed rust coats a hemp.",
+      "brief": "Dry hemp, packed rust.",
+      "exits": { "west": { "to": "rust_shaft" } },
+      "actions": [
+        {
+          "id": "pinch_hemp",
+          "label": "pinch the hemp",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hemp. They bound it on the shaft and packed rust around it."]
           ]
         }
       ]
@@ -13444,7 +13563,7 @@
       "name": "Rust Sheet",
       "desc": "A dry sheet east of the crown. A rust lug is packed in a crack.",
       "brief": "Dry sheet, packed lug.",
-      "exits": { "west": { "to": "rust_crown" } },
+      "exits": { "west": { "to": "rust_crown" }, "east": { "to": "rust_manila" } },
       "actions": [
         {
           "id": "pinch_lug",
@@ -13453,6 +13572,23 @@
           "fx": [
             ["score", 5],
             ["say", "Bent lug. They bolted the sheet and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_manila": {
+      "name": "Rust Manila",
+      "desc": "A dry manila east of the sheet. Packed rust coats a manila.",
+      "brief": "Dry manila, packed rust.",
+      "exits": { "west": { "to": "rust_sheet" } },
+      "actions": [
+        {
+          "id": "pinch_manila",
+          "label": "pinch the manila",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard manila. They coiled it on the sheet and packed rust around it."]
           ]
         }
       ]
@@ -15847,6 +15983,9 @@
     "pinch the cranse",
     "go east",
     "pinch the wallknot",
+    "go east",
+    "pinch the sailcloth",
+    "go west",
     "go west",
     "go south",
     "go west",
@@ -15856,6 +15995,9 @@
     "pinch the knee",
     "go east",
     "pinch the turkshead",
+    "go east",
+    "pinch the canvas",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -15869,6 +16011,9 @@
     "pinch the timber",
     "go east",
     "pinch the walker",
+    "go east",
+    "pinch the roping",
+    "go west",
     "go west",
     "go north",
     "go north",
@@ -15971,6 +16116,9 @@
     "pinch the eyelet",
     "go east",
     "pinch the stevedore",
+    "go east",
+    "pinch the sisal",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -16001,6 +16149,9 @@
     "go south",
     "go east",
     "pinch the boss",
+    "go east",
+    "pinch the yarn",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -16024,6 +16175,9 @@
     "go south",
     "go east",
     "pinch the tab",
+    "go east",
+    "pinch the tarpaulin",
+    "go west",
     "go west",
     "go south",
     "go south",
@@ -16293,6 +16447,9 @@
     "go south",
     "go east",
     "pinch the shaft",
+    "go east",
+    "pinch the hemp",
+    "go west",
     "go west",
     "go south",
     "go east",
@@ -16317,6 +16474,9 @@
     "go south",
     "go east",
     "pinch the lug",
+    "go east",
+    "pinch the manila",
+    "go west",
     "go west",
     "go west",
     "go down",
