@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 5130,
+  "maxScore": 5170,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -7763,7 +7763,7 @@
       "name": "Rust Bole",
       "desc": "A dry bole east of the waterknot. Packed rust coats bole.",
       "brief": "Dry bole, packed rust.",
-      "exits": { "west": { "to": "rust_waterknot" } },
+      "exits": { "west": { "to": "rust_waterknot" }, "east": { "to": "rust_dividivi" } },
       "actions": [
         {
           "id": "pinch_bole",
@@ -7772,6 +7772,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bole. They packed it on the waterknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_dividivi": {
+      "name": "Rust Dividivi",
+      "desc": "A dry dividivi east of the bole. Packed rust coats dividivi.",
+      "brief": "Dry dividivi, packed rust.",
+      "exits": { "west": { "to": "rust_bole" } },
+      "actions": [
+        {
+          "id": "pinch_dividivi",
+          "label": "pinch the dividivi",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard dividivi. They packed it on the bole and packed rust around it."]
           ]
         }
       ]
@@ -8307,7 +8324,7 @@
       "name": "Rust Labdanum",
       "desc": "A dry labdanum east of the coiling. Packed rust coats labdanum.",
       "brief": "Dry labdanum, packed rust.",
-      "exits": { "west": { "to": "rust_coiling" } },
+      "exits": { "west": { "to": "rust_coiling" }, "east": { "to": "rust_oakgall" } },
       "actions": [
         {
           "id": "pinch_labdanum",
@@ -8316,6 +8333,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard labdanum. They packed it on the coiling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oakgall": {
+      "name": "Rust Oakgall",
+      "desc": "A dry oakgall east of the labdanum. Packed rust coats oakgall.",
+      "brief": "Dry oakgall, packed rust.",
+      "exits": { "west": { "to": "rust_labdanum" } },
+      "actions": [
+        {
+          "id": "pinch_oakgall",
+          "label": "pinch the oakgall",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oakgall. They packed it on the labdanum and packed rust around it."]
           ]
         }
       ]
@@ -9990,7 +10024,7 @@
       "name": "Rust Sizeglue",
       "desc": "A dry sizeglue east of the millers. Packed rust coats sizeglue.",
       "brief": "Dry sizeglue, packed rust.",
-      "exits": { "west": { "to": "rust_millers" } },
+      "exits": { "west": { "to": "rust_millers" }, "east": { "to": "rust_wattle" } },
       "actions": [
         {
           "id": "pinch_sizeglue",
@@ -9999,6 +10033,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sizeglue. They packed it on the millers and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wattle": {
+      "name": "Rust Wattle",
+      "desc": "A dry wattle east of the sizeglue. Packed rust coats wattle.",
+      "brief": "Dry wattle, packed rust.",
+      "exits": { "west": { "to": "rust_sizeglue" } },
+      "actions": [
+        {
+          "id": "pinch_wattle",
+          "label": "pinch the wattle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wattle. They packed it on the sizeglue and packed rust around it."]
           ]
         }
       ]
@@ -10075,7 +10126,7 @@
       "name": "Rust Collodion",
       "desc": "A dry collodion east of the tomfool. Packed rust coats collodion.",
       "brief": "Dry collodion, packed rust.",
-      "exits": { "west": { "to": "rust_tomfool" } },
+      "exits": { "west": { "to": "rust_tomfool" }, "east": { "to": "rust_mangrove" } },
       "actions": [
         {
           "id": "pinch_collodion",
@@ -10084,6 +10135,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard collodion. They packed it on the tomfool and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_mangrove": {
+      "name": "Rust Mangrove",
+      "desc": "A dry mangrove east of the collodion. Packed rust coats mangrove.",
+      "brief": "Dry mangrove, packed rust.",
+      "exits": { "west": { "to": "rust_collodion" } },
+      "actions": [
+        {
+          "id": "pinch_mangrove",
+          "label": "pinch the mangrove",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mangrove. They packed it on the collodion and packed rust around it."]
           ]
         }
       ]
@@ -10160,7 +10228,7 @@
       "name": "Rust Riceglue",
       "desc": "A dry riceglue east of the bagknot. Packed rust coats riceglue.",
       "brief": "Dry riceglue, packed rust.",
-      "exits": { "west": { "to": "rust_bagknot" } },
+      "exits": { "west": { "to": "rust_bagknot" }, "east": { "to": "rust_quebracho" } },
       "actions": [
         {
           "id": "pinch_riceglue",
@@ -10169,6 +10237,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard riceglue. They packed it on the bagknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_quebracho": {
+      "name": "Rust Quebracho",
+      "desc": "A dry quebracho east of the riceglue. Packed rust coats quebracho.",
+      "brief": "Dry quebracho, packed rust.",
+      "exits": { "west": { "to": "rust_riceglue" } },
+      "actions": [
+        {
+          "id": "pinch_quebracho",
+          "label": "pinch the quebracho",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard quebracho. They packed it on the riceglue and packed rust around it."]
           ]
         }
       ]
@@ -10228,7 +10313,7 @@
       "name": "Rust Wheatpaste",
       "desc": "A dry wheatpaste east of the thief. Packed rust coats wheatpaste.",
       "brief": "Dry wheatpaste, packed rust.",
-      "exits": { "west": { "to": "rust_thief" } },
+      "exits": { "west": { "to": "rust_thief" }, "east": { "to": "rust_myrobalan" } },
       "actions": [
         {
           "id": "pinch_wheatpaste",
@@ -10237,6 +10322,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wheatpaste. They packed it on the thief and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_myrobalan": {
+      "name": "Rust Myrobalan",
+      "desc": "A dry myrobalan east of the wheatpaste. Packed rust coats myrobalan.",
+      "brief": "Dry myrobalan, packed rust.",
+      "exits": { "west": { "to": "rust_wheatpaste" } },
+      "actions": [
+        {
+          "id": "pinch_myrobalan",
+          "label": "pinch the myrobalan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard myrobalan. They packed it on the wheatpaste and packed rust around it."]
           ]
         }
       ]
@@ -10313,7 +10415,7 @@
       "name": "Rust Starchpaste",
       "desc": "A dry starchpaste east of the packers. Packed rust coats starchpaste.",
       "brief": "Dry starchpaste, packed rust.",
-      "exits": { "west": { "to": "rust_packers" } },
+      "exits": { "west": { "to": "rust_packers" }, "east": { "to": "rust_gallnut" } },
       "actions": [
         {
           "id": "pinch_starchpaste",
@@ -10322,6 +10424,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard starchpaste. They packed it on the packers and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_gallnut": {
+      "name": "Rust Gallnut",
+      "desc": "A dry gallnut east of the starchpaste. Packed rust coats gallnut.",
+      "brief": "Dry gallnut, packed rust.",
+      "exits": { "west": { "to": "rust_starchpaste" } },
+      "actions": [
+        {
+          "id": "pinch_gallnut",
+          "label": "pinch the gallnut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gallnut. They packed it on the starchpaste and packed rust around it."]
           ]
         }
       ]
@@ -10415,7 +10534,7 @@
       "name": "Rust Boneglue",
       "desc": "A dry boneglue east of the wagoners. Packed rust coats boneglue.",
       "brief": "Dry boneglue, packed rust.",
-      "exits": { "west": { "to": "rust_wagoners" } },
+      "exits": { "west": { "to": "rust_wagoners" }, "east": { "to": "rust_sumac" } },
       "actions": [
         {
           "id": "pinch_boneglue",
@@ -10424,6 +10543,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boneglue. They packed it on the wagoners and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sumac": {
+      "name": "Rust Sumac",
+      "desc": "A dry sumac east of the boneglue. Packed rust coats sumac.",
+      "brief": "Dry sumac, packed rust.",
+      "exits": { "west": { "to": "rust_boneglue" } },
+      "actions": [
+        {
+          "id": "pinch_sumac",
+          "label": "pinch the sumac",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sumac. They packed it on the boneglue and packed rust around it."]
           ]
         }
       ]
@@ -18725,6 +18861,9 @@
     "pinch the waterknot",
     "go east",
     "pinch the bole",
+    "go east",
+    "pinch the dividivi",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -18809,6 +18948,9 @@
     "pinch the coiling",
     "go east",
     "pinch the labdanum",
+    "go east",
+    "pinch the oakgall",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -19103,6 +19245,9 @@
     "pinch the millers",
     "go east",
     "pinch the sizeglue",
+    "go east",
+    "pinch the wattle",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -19118,6 +19263,9 @@
     "pinch the tomfool",
     "go east",
     "pinch the collodion",
+    "go east",
+    "pinch the mangrove",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -19131,6 +19279,9 @@
     "pinch the bagknot",
     "go east",
     "pinch the riceglue",
+    "go east",
+    "pinch the quebracho",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -19143,6 +19294,9 @@
     "pinch the thief",
     "go east",
     "pinch the wheatpaste",
+    "go east",
+    "pinch the myrobalan",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -19157,6 +19311,9 @@
     "pinch the packers",
     "go east",
     "pinch the starchpaste",
+    "go east",
+    "pinch the gallnut",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -19174,6 +19331,9 @@
     "pinch the wagoners",
     "go east",
     "pinch the boneglue",
+    "go east",
+    "pinch the sumac",
+    "go west",
     "go west",
     "go west",
     "go west",
