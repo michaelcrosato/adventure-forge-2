@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 4810,
+  "maxScore": 4850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -8970,7 +8970,7 @@
       "name": "Rust Surgeon",
       "desc": "A dry surgeon east of the grating. Packed rust coats a surgeon.",
       "brief": "Dry surgeon, packed rust.",
-      "exits": { "west": { "to": "rust_grating" } },
+      "exits": { "west": { "to": "rust_grating" }, "east": { "to": "rust_dextrin" } },
       "actions": [
         {
           "id": "pinch_surgeon",
@@ -8979,6 +8979,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard surgeon. They bound it on the grating and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_dextrin": {
+      "name": "Rust Dextrin",
+      "desc": "A dry dextrin east of the surgeon. Packed rust coats dextrin.",
+      "brief": "Dry dextrin, packed rust.",
+      "exits": { "west": { "to": "rust_surgeon" } },
+      "actions": [
+        {
+          "id": "pinch_dextrin",
+          "label": "pinch the dextrin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard dextrin. They packed it on the surgeon and packed rust around it."]
           ]
         }
       ]
@@ -9021,7 +9038,7 @@
       "name": "Rust Millers",
       "desc": "A dry millers east of the swivel. Packed rust coats a millers.",
       "brief": "Dry millers, packed rust.",
-      "exits": { "west": { "to": "rust_swivel" } },
+      "exits": { "west": { "to": "rust_swivel" }, "east": { "to": "rust_sizeglue" } },
       "actions": [
         {
           "id": "pinch_millers",
@@ -9030,6 +9047,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard millers. They looped it on the swivel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sizeglue": {
+      "name": "Rust Sizeglue",
+      "desc": "A dry sizeglue east of the millers. Packed rust coats sizeglue.",
+      "brief": "Dry sizeglue, packed rust.",
+      "exits": { "west": { "to": "rust_millers" } },
+      "actions": [
+        {
+          "id": "pinch_sizeglue",
+          "label": "pinch the sizeglue",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sizeglue. They packed it on the millers and packed rust around it."]
           ]
         }
       ]
@@ -9089,7 +9123,7 @@
       "name": "Rust Tomfool",
       "desc": "A dry tomfool east of the ceiling. Packed rust coats a tomfool.",
       "brief": "Dry tomfool, packed rust.",
-      "exits": { "west": { "to": "rust_ceiling" } },
+      "exits": { "west": { "to": "rust_ceiling" }, "east": { "to": "rust_collodion" } },
       "actions": [
         {
           "id": "pinch_tomfool",
@@ -9098,6 +9132,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tomfool. They crossed it on the ceiling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_collodion": {
+      "name": "Rust Collodion",
+      "desc": "A dry collodion east of the tomfool. Packed rust coats collodion.",
+      "brief": "Dry collodion, packed rust.",
+      "exits": { "west": { "to": "rust_tomfool" } },
+      "actions": [
+        {
+          "id": "pinch_collodion",
+          "label": "pinch the collodion",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard collodion. They packed it on the tomfool and packed rust around it."]
           ]
         }
       ]
@@ -9157,7 +9208,7 @@
       "name": "Rust Bagknot",
       "desc": "A dry bagknot east of the ringbolt. Packed rust coats a bagknot.",
       "brief": "Dry bagknot, packed rust.",
-      "exits": { "west": { "to": "rust_ringbolt" } },
+      "exits": { "west": { "to": "rust_ringbolt" }, "east": { "to": "rust_riceglue" } },
       "actions": [
         {
           "id": "pinch_bagknot",
@@ -9166,6 +9217,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bagknot. They tied it on the ringbolt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_riceglue": {
+      "name": "Rust Riceglue",
+      "desc": "A dry riceglue east of the bagknot. Packed rust coats riceglue.",
+      "brief": "Dry riceglue, packed rust.",
+      "exits": { "west": { "to": "rust_bagknot" } },
+      "actions": [
+        {
+          "id": "pinch_riceglue",
+          "label": "pinch the riceglue",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard riceglue. They packed it on the bagknot and packed rust around it."]
           ]
         }
       ]
@@ -9208,7 +9276,7 @@
       "name": "Rust Thief",
       "desc": "A dry thief east of the eyebolt. Packed rust coats a thief.",
       "brief": "Dry thief, packed rust.",
-      "exits": { "west": { "to": "rust_eyebolt" } },
+      "exits": { "west": { "to": "rust_eyebolt" }, "east": { "to": "rust_wheatpaste" } },
       "actions": [
         {
           "id": "pinch_thief",
@@ -9217,6 +9285,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard thief. They slipped it on the eyebolt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wheatpaste": {
+      "name": "Rust Wheatpaste",
+      "desc": "A dry wheatpaste east of the thief. Packed rust coats wheatpaste.",
+      "brief": "Dry wheatpaste, packed rust.",
+      "exits": { "west": { "to": "rust_thief" } },
+      "actions": [
+        {
+          "id": "pinch_wheatpaste",
+          "label": "pinch the wheatpaste",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatpaste. They packed it on the thief and packed rust around it."]
           ]
         }
       ]
@@ -9276,7 +9361,7 @@
       "name": "Rust Packers",
       "desc": "A dry packers east of the scarph. Packed rust coats a packers.",
       "brief": "Dry packers, packed rust.",
-      "exits": { "west": { "to": "rust_scarph" } },
+      "exits": { "west": { "to": "rust_scarph" }, "east": { "to": "rust_starchpaste" } },
       "actions": [
         {
           "id": "pinch_packers",
@@ -9285,6 +9370,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard packers. They cinched it on the scarph and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_starchpaste": {
+      "name": "Rust Starchpaste",
+      "desc": "A dry starchpaste east of the packers. Packed rust coats starchpaste.",
+      "brief": "Dry starchpaste, packed rust.",
+      "exits": { "west": { "to": "rust_packers" } },
+      "actions": [
+        {
+          "id": "pinch_starchpaste",
+          "label": "pinch the starchpaste",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard starchpaste. They packed it on the packers and packed rust around it."]
           ]
         }
       ]
@@ -9361,7 +9463,7 @@
       "name": "Rust Wagoners",
       "desc": "A dry wagoners east of the footwale. Packed rust coats a wagoners.",
       "brief": "Dry wagoners, packed rust.",
-      "exits": { "west": { "to": "rust_footwale" } },
+      "exits": { "west": { "to": "rust_footwale" }, "east": { "to": "rust_boneglue" } },
       "actions": [
         {
           "id": "pinch_wagoners",
@@ -9370,6 +9472,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wagoners. They hauled it on the footwale and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_boneglue": {
+      "name": "Rust Boneglue",
+      "desc": "A dry boneglue east of the wagoners. Packed rust coats boneglue.",
+      "brief": "Dry boneglue, packed rust.",
+      "exits": { "west": { "to": "rust_wagoners" } },
+      "actions": [
+        {
+          "id": "pinch_boneglue",
+          "label": "pinch the boneglue",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard boneglue. They packed it on the wagoners and packed rust around it."]
           ]
         }
       ]
@@ -9412,7 +9531,7 @@
       "name": "Rust Heavingknot",
       "desc": "A dry heavingknot east of the sternpost. Packed rust coats a heavingknot.",
       "brief": "Dry heavingknot, packed rust.",
-      "exits": { "west": { "to": "rust_sternpost" } },
+      "exits": { "west": { "to": "rust_sternpost" }, "east": { "to": "rust_hideglue" } },
       "actions": [
         {
           "id": "pinch_heavingknot",
@@ -9421,6 +9540,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard heavingknot. They threw it on the sternpost and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_hideglue": {
+      "name": "Rust Hideglue",
+      "desc": "A dry hideglue east of the heavingknot. Packed rust coats hideglue.",
+      "brief": "Dry hideglue, packed rust.",
+      "exits": { "west": { "to": "rust_heavingknot" } },
+      "actions": [
+        {
+          "id": "pinch_hideglue",
+          "label": "pinch the hideglue",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hideglue. They packed it on the heavingknot and packed rust around it."]
           ]
         }
       ]
@@ -17837,6 +17973,9 @@
     "pinch the grating",
     "go east",
     "pinch the surgeon",
+    "go east",
+    "pinch the dextrin",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -17845,6 +17984,9 @@
     "pinch the swivel",
     "go east",
     "pinch the millers",
+    "go east",
+    "pinch the sizeglue",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17857,6 +17999,9 @@
     "pinch the ceiling",
     "go east",
     "pinch the tomfool",
+    "go east",
+    "pinch the collodion",
+    "go west",
     "go west",
     "go south",
     "go east",
@@ -17867,6 +18012,9 @@
     "pinch the ringbolt",
     "go east",
     "pinch the bagknot",
+    "go east",
+    "pinch the riceglue",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17876,6 +18024,9 @@
     "pinch the eyebolt",
     "go east",
     "pinch the thief",
+    "go east",
+    "pinch the wheatpaste",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -17887,6 +18038,9 @@
     "pinch the scarph",
     "go east",
     "pinch the packers",
+    "go east",
+    "pinch the starchpaste",
+    "go west",
     "go west",
     "go west",
     "go south",
@@ -17901,6 +18055,9 @@
     "pinch the footwale",
     "go east",
     "pinch the wagoners",
+    "go east",
+    "pinch the boneglue",
+    "go west",
     "go west",
     "go west",
     "go north",
@@ -17910,6 +18067,9 @@
     "pinch the sternpost",
     "go east",
     "pinch the heavingknot",
+    "go east",
+    "pinch the hideglue",
+    "go west",
     "go west",
     "go west",
     "go west",
