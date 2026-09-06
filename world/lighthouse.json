@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15610,
+  "maxScore": 15650,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -16688,7 +16688,7 @@
       "name": "Rust Burgundy",
       "desc": "A dry burgundy east of the trucker. Packed rust coats burgundy.",
       "brief": "Dry burgundy, packed rust.",
-      "exits": { "west": { "to": "rust_trucker" }, "east": { "to": "rust_safflower" }, "south": { "to": "rust_barleyweak" } },
+      "exits": { "west": { "to": "rust_trucker" }, "east": { "to": "rust_safflower" }, "south": { "to": "rust_barleyweak" }, "north": { "to": "rust_durumquart" } },
       "actions": [
         {
           "id": "pinch_burgundy",
@@ -16697,6 +16697,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard burgundy. They packed it on the trucker and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumquart": {
+      "name": "Rust Durumquart",
+      "desc": "A dry durumquart north of the burgundy. Packed rust coats durumquart.",
+      "brief": "Dry durumquart, packed rust.",
+      "exits": { "south": { "to": "rust_burgundy" } },
+      "actions": [
+        {
+          "id": "pinch_durumquart",
+          "label": "pinch the durumquart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumquart. They packed it on the burgundy and packed rust around it."]
           ]
         }
       ]
@@ -16722,7 +16739,7 @@
       "name": "Rust Safflower",
       "desc": "A dry safflower east of the burgundy. Packed rust coats safflower.",
       "brief": "Dry safflower, packed rust.",
-      "exits": { "west": { "to": "rust_burgundy" }, "east": { "to": "rust_mugga" }, "south": { "to": "rust_sorghumweak" } },
+      "exits": { "west": { "to": "rust_burgundy" }, "east": { "to": "rust_mugga" }, "south": { "to": "rust_sorghumweak" }, "north": { "to": "rust_fonioquart" } },
       "actions": [
         {
           "id": "pinch_safflower",
@@ -16731,6 +16748,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard safflower. They packed it on the burgundy and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioquart": {
+      "name": "Rust Fonioquart",
+      "desc": "A dry fonioquart north of the safflower. Packed rust coats fonioquart.",
+      "brief": "Dry fonioquart, packed rust.",
+      "exits": { "south": { "to": "rust_safflower" } },
+      "actions": [
+        {
+          "id": "pinch_fonioquart",
+          "label": "pinch the fonioquart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioquart. They packed it on the safflower and packed rust around it."]
           ]
         }
       ]
@@ -16756,7 +16790,7 @@
       "name": "Rust Mugga",
       "desc": "A dry mugga east of the safflower. Packed rust coats mugga.",
       "brief": "Dry mugga, packed rust.",
-      "exits": { "west": { "to": "rust_safflower" }, "east": { "to": "rust_melaleuca" }, "south": { "to": "rust_milletweak" } },
+      "exits": { "west": { "to": "rust_safflower" }, "east": { "to": "rust_melaleuca" }, "south": { "to": "rust_milletweak" }, "north": { "to": "rust_teffquart" } },
       "actions": [
         {
           "id": "pinch_mugga",
@@ -16765,6 +16799,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mugga. They packed it on the safflower and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffquart": {
+      "name": "Rust Teffquart",
+      "desc": "A dry teffquart north of the mugga. Packed rust coats teffquart.",
+      "brief": "Dry teffquart, packed rust.",
+      "exits": { "south": { "to": "rust_mugga" } },
+      "actions": [
+        {
+          "id": "pinch_teffquart",
+          "label": "pinch the teffquart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffquart. They packed it on the mugga and packed rust around it."]
           ]
         }
       ]
@@ -16790,7 +16841,7 @@
       "name": "Rust Melaleuca",
       "desc": "A dry melaleuca east of the mugga. Packed rust coats melaleuca.",
       "brief": "Dry melaleuca, packed rust.",
-      "exits": { "west": { "to": "rust_mugga" }, "east": { "to": "rust_cypresspine" }, "south": { "to": "rust_cornweak" } },
+      "exits": { "west": { "to": "rust_mugga" }, "east": { "to": "rust_cypresspine" }, "south": { "to": "rust_cornweak" }, "north": { "to": "rust_barleyquart" } },
       "actions": [
         {
           "id": "pinch_melaleuca",
@@ -16799,6 +16850,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard melaleuca. They packed it on the mugga and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyquart": {
+      "name": "Rust Barleyquart",
+      "desc": "A dry barleyquart north of the melaleuca. Packed rust coats barleyquart.",
+      "brief": "Dry barleyquart, packed rust.",
+      "exits": { "south": { "to": "rust_melaleuca" } },
+      "actions": [
+        {
+          "id": "pinch_barleyquart",
+          "label": "pinch the barleyquart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyquart. They packed it on the melaleuca and packed rust around it."]
           ]
         }
       ]
@@ -16824,7 +16892,7 @@
       "name": "Rust Cypresspine",
       "desc": "A dry cypresspine east of the melaleuca. Packed rust coats cypresspine.",
       "brief": "Dry cypresspine, packed rust.",
-      "exits": { "west": { "to": "rust_melaleuca" }, "east": { "to": "rust_aleppo" }, "south": { "to": "rust_oatweak" } },
+      "exits": { "west": { "to": "rust_melaleuca" }, "east": { "to": "rust_aleppo" }, "south": { "to": "rust_oatweak" }, "north": { "to": "rust_sorghumquart" } },
       "actions": [
         {
           "id": "pinch_cypresspine",
@@ -16833,6 +16901,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cypresspine. They packed it on the melaleuca and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumquart": {
+      "name": "Rust Sorghumquart",
+      "desc": "A dry sorghumquart north of the cypresspine. Packed rust coats sorghumquart.",
+      "brief": "Dry sorghumquart, packed rust.",
+      "exits": { "south": { "to": "rust_cypresspine" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumquart",
+          "label": "pinch the sorghumquart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumquart. They packed it on the cypresspine and packed rust around it."]
           ]
         }
       ]
@@ -16858,7 +16943,7 @@
       "name": "Rust Aleppo",
       "desc": "A dry aleppo east of the cypresspine. Packed rust coats aleppo.",
       "brief": "Dry aleppo, packed rust.",
-      "exits": { "west": { "to": "rust_cypresspine" }, "east": { "to": "rust_cryptomeria" }, "south": { "to": "rust_ohai" } },
+      "exits": { "west": { "to": "rust_cypresspine" }, "east": { "to": "rust_cryptomeria" }, "south": { "to": "rust_ohai" }, "north": { "to": "rust_milletquart" } },
       "actions": [
         {
           "id": "pinch_aleppo",
@@ -16867,6 +16952,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard aleppo. They packed it on the cypresspine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletquart": {
+      "name": "Rust Milletquart",
+      "desc": "A dry milletquart north of the aleppo. Packed rust coats milletquart.",
+      "brief": "Dry milletquart, packed rust.",
+      "exits": { "south": { "to": "rust_aleppo" } },
+      "actions": [
+        {
+          "id": "pinch_milletquart",
+          "label": "pinch the milletquart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletquart. They packed it on the aleppo and packed rust around it."]
           ]
         }
       ]
@@ -16943,7 +17045,7 @@
       "name": "Rust Nipper",
       "desc": "A dry nipper east of the bobstay. Packed rust coats a nipper.",
       "brief": "Dry nipper, packed rust.",
-      "exits": { "west": { "to": "rust_bobstay" }, "east": { "to": "rust_running" }, "south": { "to": "rust_durumstrong" } },
+      "exits": { "west": { "to": "rust_bobstay" }, "east": { "to": "rust_running" }, "south": { "to": "rust_durumstrong" }, "north": { "to": "rust_cornquart" } },
       "actions": [
         {
           "id": "pinch_nipper",
@@ -16952,6 +17054,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nipper. They seized it on the bobstay and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornquart": {
+      "name": "Rust Cornquart",
+      "desc": "A dry cornquart north of the nipper. Packed rust coats cornquart.",
+      "brief": "Dry cornquart, packed rust.",
+      "exits": { "south": { "to": "rust_nipper" } },
+      "actions": [
+        {
+          "id": "pinch_cornquart",
+          "label": "pinch the cornquart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornquart. They packed it on the nipper and packed rust around it."]
           ]
         }
       ]
@@ -16977,7 +17096,7 @@
       "name": "Rust Running",
       "desc": "A dry running east of the nipper. Packed rust coats a running.",
       "brief": "Dry running, packed rust.",
-      "exits": { "west": { "to": "rust_nipper" }, "east": { "to": "rust_pinegum" }, "south": { "to": "rust_foniostrong" } },
+      "exits": { "west": { "to": "rust_nipper" }, "east": { "to": "rust_pinegum" }, "south": { "to": "rust_foniostrong" }, "north": { "to": "rust_oatquart" } },
       "actions": [
         {
           "id": "pinch_running",
@@ -16986,6 +17105,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard running. They slipped it on the nipper and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatquart": {
+      "name": "Rust Oatquart",
+      "desc": "A dry oatquart north of the running. Packed rust coats oatquart.",
+      "brief": "Dry oatquart, packed rust.",
+      "exits": { "south": { "to": "rust_running" } },
+      "actions": [
+        {
+          "id": "pinch_oatquart",
+          "label": "pinch the oatquart",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatquart. They packed it on the running and packed rust around it."]
           ]
         }
       ]
@@ -55908,31 +56044,49 @@
     "go north",
     "go east",
     "pinch the burgundy",
+    "go north",
+    "pinch the durumquart",
+    "go south",
     "go south",
     "pinch the barleyweak",
     "go north",
     "go east",
     "pinch the safflower",
+    "go north",
+    "pinch the fonioquart",
+    "go south",
     "go south",
     "pinch the sorghumweak",
     "go north",
     "go east",
     "pinch the mugga",
+    "go north",
+    "pinch the teffquart",
+    "go south",
     "go south",
     "pinch the milletweak",
     "go north",
     "go east",
     "pinch the melaleuca",
+    "go north",
+    "pinch the barleyquart",
+    "go south",
     "go south",
     "pinch the cornweak",
     "go north",
     "go east",
     "pinch the cypresspine",
+    "go north",
+    "pinch the sorghumquart",
+    "go south",
     "go south",
     "pinch the oatweak",
     "go north",
     "go east",
     "pinch the aleppo",
+    "go north",
+    "pinch the milletquart",
+    "go south",
     "go south",
     "pinch the ohai",
     "go north",
@@ -55954,11 +56108,17 @@
     "pinch the bobstay",
     "go east",
     "pinch the nipper",
+    "go north",
+    "pinch the cornquart",
+    "go south",
     "go south",
     "pinch the durumstrong",
     "go north",
     "go east",
     "pinch the running",
+    "go north",
+    "pinch the oatquart",
+    "go south",
     "go south",
     "pinch the foniostrong",
     "go north",
