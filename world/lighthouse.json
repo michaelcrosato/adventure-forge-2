@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9210,
+  "maxScore": 9250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -29642,7 +29642,7 @@
       "name": "Rust Hemp",
       "desc": "A dry hemp east of the shaft. Packed rust coats a hemp.",
       "brief": "Dry hemp, packed rust.",
-      "exits": { "west": { "to": "rust_shaft" }, "east": { "to": "rust_cork" } },
+      "exits": { "west": { "to": "rust_shaft" }, "east": { "to": "rust_cork" }, "south": { "to": "rust_eelgrass" } },
       "actions": [
         {
           "id": "pinch_hemp",
@@ -29655,11 +29655,28 @@
         }
       ]
     },
+    "rust_eelgrass": {
+      "name": "Rust Eelgrass",
+      "desc": "A dry eelgrass south of the hemp. Packed rust coats eelgrass.",
+      "brief": "Dry eelgrass, packed rust.",
+      "exits": { "north": { "to": "rust_hemp" } },
+      "actions": [
+        {
+          "id": "pinch_eelgrass",
+          "label": "pinch the eelgrass",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard eelgrass. They packed it on the hemp and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cork": {
       "name": "Rust Cork",
       "desc": "A dry cork east of the hemp. Packed rust coats cork.",
       "brief": "Dry cork, packed rust.",
-      "exits": { "west": { "to": "rust_hemp" }, "east": { "to": "rust_kerosene" } },
+      "exits": { "west": { "to": "rust_hemp" }, "east": { "to": "rust_kerosene" }, "south": { "to": "rust_sargassum" } },
       "actions": [
         {
           "id": "pinch_cork",
@@ -29672,11 +29689,28 @@
         }
       ]
     },
+    "rust_sargassum": {
+      "name": "Rust Sargassum",
+      "desc": "A dry sargassum south of the cork. Packed rust coats sargassum.",
+      "brief": "Dry sargassum, packed rust.",
+      "exits": { "north": { "to": "rust_cork" } },
+      "actions": [
+        {
+          "id": "pinch_sargassum",
+          "label": "pinch the sargassum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sargassum. They packed it on the cork and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kerosene": {
       "name": "Rust Kerosene",
       "desc": "A dry kerosene east of the cork. Packed rust coats kerosene.",
       "brief": "Dry kerosene, packed rust.",
-      "exits": { "west": { "to": "rust_cork" }, "east": { "to": "rust_maple" } },
+      "exits": { "west": { "to": "rust_cork" }, "east": { "to": "rust_maple" }, "south": { "to": "rust_irishmoss" } },
       "actions": [
         {
           "id": "pinch_kerosene",
@@ -29689,11 +29723,28 @@
         }
       ]
     },
+    "rust_irishmoss": {
+      "name": "Rust Irishmoss",
+      "desc": "A dry irishmoss south of the kerosene. Packed rust coats irishmoss.",
+      "brief": "Dry irishmoss, packed rust.",
+      "exits": { "north": { "to": "rust_kerosene" } },
+      "actions": [
+        {
+          "id": "pinch_irishmoss",
+          "label": "pinch the irishmoss",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard irishmoss. They packed it on the kerosene and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_maple": {
       "name": "Rust Maple",
       "desc": "A dry maple east of the kerosene. Packed rust coats maple.",
       "brief": "Dry maple, packed rust.",
-      "exits": { "west": { "to": "rust_kerosene" }, "east": { "to": "rust_osage" } },
+      "exits": { "west": { "to": "rust_kerosene" }, "east": { "to": "rust_osage" }, "south": { "to": "rust_rockweed" } },
       "actions": [
         {
           "id": "pinch_maple",
@@ -29706,11 +29757,28 @@
         }
       ]
     },
+    "rust_rockweed": {
+      "name": "Rust Rockweed",
+      "desc": "A dry rockweed south of the maple. Packed rust coats rockweed.",
+      "brief": "Dry rockweed, packed rust.",
+      "exits": { "north": { "to": "rust_maple" } },
+      "actions": [
+        {
+          "id": "pinch_rockweed",
+          "label": "pinch the rockweed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rockweed. They packed it on the maple and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_osage": {
       "name": "Rust Osage",
       "desc": "A dry osage east of the maple. Packed rust coats osage.",
       "brief": "Dry osage, packed rust.",
-      "exits": { "west": { "to": "rust_maple" }, "east": { "to": "rust_zincwhite" } },
+      "exits": { "west": { "to": "rust_maple" }, "east": { "to": "rust_zincwhite" }, "south": { "to": "rust_bladderwrack" } },
       "actions": [
         {
           "id": "pinch_osage",
@@ -29723,11 +29791,28 @@
         }
       ]
     },
+    "rust_bladderwrack": {
+      "name": "Rust Bladderwrack",
+      "desc": "A dry bladderwrack south of the osage. Packed rust coats bladderwrack.",
+      "brief": "Dry bladderwrack, packed rust.",
+      "exits": { "north": { "to": "rust_osage" } },
+      "actions": [
+        {
+          "id": "pinch_bladderwrack",
+          "label": "pinch the bladderwrack",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bladderwrack. They packed it on the osage and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_zincwhite": {
       "name": "Rust Zincwhite",
       "desc": "A dry zincwhite east of the osage. Packed rust coats zincwhite.",
       "brief": "Dry zincwhite, packed rust.",
-      "exits": { "west": { "to": "rust_osage" }, "east": { "to": "rust_bornite" } },
+      "exits": { "west": { "to": "rust_osage" }, "east": { "to": "rust_bornite" }, "south": { "to": "rust_holdfast" } },
       "actions": [
         {
           "id": "pinch_zincwhite",
@@ -29740,11 +29825,28 @@
         }
       ]
     },
+    "rust_holdfast": {
+      "name": "Rust Holdfast",
+      "desc": "A dry holdfast south of the zincwhite. Packed rust coats holdfast.",
+      "brief": "Dry holdfast, packed rust.",
+      "exits": { "north": { "to": "rust_zincwhite" } },
+      "actions": [
+        {
+          "id": "pinch_holdfast",
+          "label": "pinch the holdfast",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard holdfast. They packed it on the zincwhite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bornite": {
       "name": "Rust Bornite",
       "desc": "A dry bornite east of the zincwhite. Packed rust coats bornite.",
       "brief": "Dry bornite, packed rust.",
-      "exits": { "west": { "to": "rust_zincwhite" }, "east": { "to": "rust_crednerite" } },
+      "exits": { "west": { "to": "rust_zincwhite" }, "east": { "to": "rust_crednerite" }, "south": { "to": "rust_stipe" } },
       "actions": [
         {
           "id": "pinch_bornite",
@@ -29757,11 +29859,28 @@
         }
       ]
     },
+    "rust_stipe": {
+      "name": "Rust Stipe",
+      "desc": "A dry stipe south of the bornite. Packed rust coats stipe.",
+      "brief": "Dry stipe, packed rust.",
+      "exits": { "north": { "to": "rust_bornite" } },
+      "actions": [
+        {
+          "id": "pinch_stipe",
+          "label": "pinch the stipe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard stipe. They packed it on the bornite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_crednerite": {
       "name": "Rust Crednerite",
       "desc": "A dry crednerite east of the bornite. Packed rust coats crednerite.",
       "brief": "Dry crednerite, packed rust.",
-      "exits": { "west": { "to": "rust_bornite" }, "east": { "to": "rust_nickeline" } },
+      "exits": { "west": { "to": "rust_bornite" }, "east": { "to": "rust_nickeline" }, "south": { "to": "rust_spore" } },
       "actions": [
         {
           "id": "pinch_crednerite",
@@ -29770,6 +29889,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard crednerite. They packed it on the bornite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_spore": {
+      "name": "Rust Spore",
+      "desc": "A dry spore south of the crednerite. Packed rust coats spore.",
+      "brief": "Dry spore, packed rust.",
+      "exits": { "north": { "to": "rust_crednerite" } },
+      "actions": [
+        {
+          "id": "pinch_spore",
+          "label": "pinch the spore",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard spore. They packed it on the crednerite and packed rust around it."]
           ]
         }
       ]
@@ -36444,20 +36580,44 @@
     "pinch the shaft",
     "go east",
     "pinch the hemp",
+    "go south",
+    "pinch the eelgrass",
+    "go north",
     "go east",
     "pinch the cork",
+    "go south",
+    "pinch the sargassum",
+    "go north",
     "go east",
     "pinch the kerosene",
+    "go south",
+    "pinch the irishmoss",
+    "go north",
     "go east",
     "pinch the maple",
+    "go south",
+    "pinch the rockweed",
+    "go north",
     "go east",
     "pinch the osage",
+    "go south",
+    "pinch the bladderwrack",
+    "go north",
     "go east",
     "pinch the zincwhite",
+    "go south",
+    "pinch the holdfast",
+    "go north",
     "go east",
     "pinch the bornite",
+    "go south",
+    "pinch the stipe",
+    "go north",
     "go east",
     "pinch the crednerite",
+    "go south",
+    "pinch the spore",
+    "go north",
     "go east",
     "pinch the nickeline",
     "go west",
