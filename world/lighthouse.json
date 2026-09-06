@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9730,
+  "maxScore": 9770,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -27347,7 +27347,7 @@
       "name": "Rust Buntgasket",
       "desc": "A dry buntgasket east of the stopper. Packed rust coats a buntgasket.",
       "brief": "Dry buntgasket, packed rust.",
-      "exits": { "west": { "to": "rust_stopper" }, "east": { "to": "rust_junk" } },
+      "exits": { "west": { "to": "rust_stopper" }, "east": { "to": "rust_junk" }, "south": { "to": "rust_goosefoot" } },
       "actions": [
         {
           "id": "pinch_buntgasket",
@@ -27360,11 +27360,28 @@
         }
       ]
     },
+    "rust_goosefoot": {
+      "name": "Rust Goosefoot",
+      "desc": "A dry goosefoot south of the buntgasket. Packed rust coats goosefoot.",
+      "brief": "Dry goosefoot, packed rust.",
+      "exits": { "north": { "to": "rust_buntgasket" } },
+      "actions": [
+        {
+          "id": "pinch_goosefoot",
+          "label": "pinch the goosefoot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard goosefoot. They packed it on the buntgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_junk": {
       "name": "Rust Junk",
       "desc": "A dry junk east of the buntgasket. Packed rust coats junk.",
       "brief": "Dry junk, packed rust.",
-      "exits": { "west": { "to": "rust_buntgasket" }, "east": { "to": "rust_ochre" } },
+      "exits": { "west": { "to": "rust_buntgasket" }, "east": { "to": "rust_ochre" }, "south": { "to": "rust_claytonia" } },
       "actions": [
         {
           "id": "pinch_junk",
@@ -27377,11 +27394,28 @@
         }
       ]
     },
+    "rust_claytonia": {
+      "name": "Rust Claytonia",
+      "desc": "A dry claytonia south of the junk. Packed rust coats claytonia.",
+      "brief": "Dry claytonia, packed rust.",
+      "exits": { "north": { "to": "rust_junk" } },
+      "actions": [
+        {
+          "id": "pinch_claytonia",
+          "label": "pinch the claytonia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard claytonia. They packed it on the junk and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ochre": {
       "name": "Rust Ochre",
       "desc": "A dry ochre east of the junk. Packed rust coats ochre.",
       "brief": "Dry ochre, packed rust.",
-      "exits": { "west": { "to": "rust_junk" }, "east": { "to": "rust_pine" } },
+      "exits": { "west": { "to": "rust_junk" }, "east": { "to": "rust_pine" }, "south": { "to": "rust_mache" } },
       "actions": [
         {
           "id": "pinch_ochre",
@@ -27394,11 +27428,28 @@
         }
       ]
     },
+    "rust_mache": {
+      "name": "Rust Mache",
+      "desc": "A dry mache south of the ochre. Packed rust coats mache.",
+      "brief": "Dry mache, packed rust.",
+      "exits": { "north": { "to": "rust_ochre" } },
+      "actions": [
+        {
+          "id": "pinch_mache",
+          "label": "pinch the mache",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mache. They packed it on the ochre and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_pine": {
       "name": "Rust Pine",
       "desc": "A dry pine east of the ochre. Packed rust coats pine.",
       "brief": "Dry pine, packed rust.",
-      "exits": { "west": { "to": "rust_ochre" }, "east": { "to": "rust_beech" } },
+      "exits": { "west": { "to": "rust_ochre" }, "east": { "to": "rust_beech" }, "south": { "to": "rust_fennelseed" } },
       "actions": [
         {
           "id": "pinch_pine",
@@ -27411,11 +27462,28 @@
         }
       ]
     },
+    "rust_fennelseed": {
+      "name": "Rust Fennelseed",
+      "desc": "A dry fennelseed south of the pine. Packed rust coats fennelseed.",
+      "brief": "Dry fennelseed, packed rust.",
+      "exits": { "north": { "to": "rust_pine" } },
+      "actions": [
+        {
+          "id": "pinch_fennelseed",
+          "label": "pinch the fennelseed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fennelseed. They packed it on the pine and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_beech": {
       "name": "Rust Beech",
       "desc": "A dry beech east of the pine. Packed rust coats beech.",
       "brief": "Dry beech, packed rust.",
-      "exits": { "west": { "to": "rust_pine" }, "east": { "to": "rust_tamarack" } },
+      "exits": { "west": { "to": "rust_pine" }, "east": { "to": "rust_tamarack" }, "south": { "to": "rust_malabar" } },
       "actions": [
         {
           "id": "pinch_beech",
@@ -27428,11 +27496,28 @@
         }
       ]
     },
+    "rust_malabar": {
+      "name": "Rust Malabar",
+      "desc": "A dry malabar south of the beech. Packed rust coats malabar.",
+      "brief": "Dry malabar, packed rust.",
+      "exits": { "north": { "to": "rust_beech" } },
+      "actions": [
+        {
+          "id": "pinch_malabar",
+          "label": "pinch the malabar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard malabar. They packed it on the beech and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tamarack": {
       "name": "Rust Tamarack",
       "desc": "A dry tamarack east of the beech. Packed rust coats tamarack.",
       "brief": "Dry tamarack, packed rust.",
-      "exits": { "west": { "to": "rust_beech" }, "east": { "to": "rust_corundum" } },
+      "exits": { "west": { "to": "rust_beech" }, "east": { "to": "rust_corundum" }, "south": { "to": "rust_lambsquarter" } },
       "actions": [
         {
           "id": "pinch_tamarack",
@@ -27445,11 +27530,28 @@
         }
       ]
     },
+    "rust_lambsquarter": {
+      "name": "Rust Lambsquarter",
+      "desc": "A dry lambsquarter south of the tamarack. Packed rust coats lambsquarter.",
+      "brief": "Dry lambsquarter, packed rust.",
+      "exits": { "north": { "to": "rust_tamarack" } },
+      "actions": [
+        {
+          "id": "pinch_lambsquarter",
+          "label": "pinch the lambsquarter",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lambsquarter. They packed it on the tamarack and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_corundum": {
       "name": "Rust Corundum",
       "desc": "A dry corundum east of the tamarack. Packed rust coats corundum.",
       "brief": "Dry corundum, packed rust.",
-      "exits": { "west": { "to": "rust_tamarack" }, "east": { "to": "rust_tetrahedrite" } },
+      "exits": { "west": { "to": "rust_tamarack" }, "east": { "to": "rust_tetrahedrite" }, "south": { "to": "rust_waterleaf" } },
       "actions": [
         {
           "id": "pinch_corundum",
@@ -27462,11 +27564,28 @@
         }
       ]
     },
+    "rust_waterleaf": {
+      "name": "Rust Waterleaf",
+      "desc": "A dry waterleaf south of the corundum. Packed rust coats waterleaf.",
+      "brief": "Dry waterleaf, packed rust.",
+      "exits": { "north": { "to": "rust_corundum" } },
+      "actions": [
+        {
+          "id": "pinch_waterleaf",
+          "label": "pinch the waterleaf",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard waterleaf. They packed it on the corundum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tetrahedrite": {
       "name": "Rust Tetrahedrite",
       "desc": "A dry tetrahedrite east of the corundum. Packed rust coats tetrahedrite.",
       "brief": "Dry tetrahedrite, packed rust.",
-      "exits": { "west": { "to": "rust_corundum" }, "east": { "to": "rust_greenockite" } },
+      "exits": { "west": { "to": "rust_corundum" }, "east": { "to": "rust_greenockite" }, "south": { "to": "rust_amaranth" } },
       "actions": [
         {
           "id": "pinch_tetrahedrite",
@@ -27475,6 +27594,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tetrahedrite. They packed it on the corundum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_amaranth": {
+      "name": "Rust Amaranth",
+      "desc": "A dry amaranth south of the tetrahedrite. Packed rust coats amaranth.",
+      "brief": "Dry amaranth, packed rust.",
+      "exits": { "north": { "to": "rust_tetrahedrite" } },
+      "actions": [
+        {
+          "id": "pinch_amaranth",
+          "label": "pinch the amaranth",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard amaranth. They packed it on the tetrahedrite and packed rust around it."]
           ]
         }
       ]
@@ -37806,20 +37942,44 @@
     "pinch the stopper",
     "go east",
     "pinch the buntgasket",
+    "go south",
+    "pinch the goosefoot",
+    "go north",
     "go east",
     "pinch the junk",
+    "go south",
+    "pinch the claytonia",
+    "go north",
     "go east",
     "pinch the ochre",
+    "go south",
+    "pinch the mache",
+    "go north",
     "go east",
     "pinch the pine",
+    "go south",
+    "pinch the fennelseed",
+    "go north",
     "go east",
     "pinch the beech",
+    "go south",
+    "pinch the malabar",
+    "go north",
     "go east",
     "pinch the tamarack",
+    "go south",
+    "pinch the lambsquarter",
+    "go north",
     "go east",
     "pinch the corundum",
+    "go south",
+    "pinch the waterleaf",
+    "go north",
     "go east",
     "pinch the tetrahedrite",
+    "go south",
+    "pinch the amaranth",
+    "go north",
     "go east",
     "pinch the greenockite",
     "go west",
