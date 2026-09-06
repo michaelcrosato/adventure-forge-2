@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15810,
+  "maxScore": 15850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -15124,7 +15124,7 @@
       "name": "Rust Blackbox",
       "desc": "A dry blackbox east of the lignite. Packed rust coats blackbox.",
       "brief": "Dry blackbox, packed rust.",
-      "exits": { "west": { "to": "rust_lignite" }, "east": { "to": "rust_grevillea" }, "south": { "to": "rust_oatchoice" } },
+      "exits": { "west": { "to": "rust_lignite" }, "east": { "to": "rust_grevillea" }, "south": { "to": "rust_oatchoice" }, "north": { "to": "rust_durummethuselah" } },
       "actions": [
         {
           "id": "pinch_blackbox",
@@ -15133,6 +15133,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackbox. They packed it on the lignite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durummethuselah": {
+      "name": "Rust Durummethuselah",
+      "desc": "A dry durummethuselah north of the blackbox. Packed rust coats durummethuselah.",
+      "brief": "Dry durummethuselah, packed rust.",
+      "exits": { "south": { "to": "rust_blackbox" } },
+      "actions": [
+        {
+          "id": "pinch_durummethuselah",
+          "label": "pinch the durummethuselah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durummethuselah. They packed it on the blackbox and packed rust around it."]
           ]
         }
       ]
@@ -15158,7 +15175,7 @@
       "name": "Rust Grevillea",
       "desc": "A dry grevillea east of the blackbox. Packed rust coats grevillea.",
       "brief": "Dry grevillea, packed rust.",
-      "exits": { "west": { "to": "rust_blackbox" }, "east": { "to": "rust_myrtlebeech" }, "south": { "to": "rust_durumprime" } },
+      "exits": { "west": { "to": "rust_blackbox" }, "east": { "to": "rust_myrtlebeech" }, "south": { "to": "rust_durumprime" }, "north": { "to": "rust_foniomethuselah" } },
       "actions": [
         {
           "id": "pinch_grevillea",
@@ -15167,6 +15184,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard grevillea. They packed it on the blackbox and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniomethuselah": {
+      "name": "Rust Foniomethuselah",
+      "desc": "A dry foniomethuselah north of the grevillea. Packed rust coats foniomethuselah.",
+      "brief": "Dry foniomethuselah, packed rust.",
+      "exits": { "south": { "to": "rust_grevillea" } },
+      "actions": [
+        {
+          "id": "pinch_foniomethuselah",
+          "label": "pinch the foniomethuselah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniomethuselah. They packed it on the grevillea and packed rust around it."]
           ]
         }
       ]
@@ -15192,7 +15226,7 @@
       "name": "Rust Myrtlebeech",
       "desc": "A dry myrtlebeech east of the grevillea. Packed rust coats myrtlebeech.",
       "brief": "Dry myrtlebeech, packed rust.",
-      "exits": { "west": { "to": "rust_grevillea" }, "east": { "to": "rust_whitespruce" }, "south": { "to": "rust_fonioprime" } },
+      "exits": { "west": { "to": "rust_grevillea" }, "east": { "to": "rust_whitespruce" }, "south": { "to": "rust_fonioprime" }, "north": { "to": "rust_teffmethuselah" } },
       "actions": [
         {
           "id": "pinch_myrtlebeech",
@@ -15201,6 +15235,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard myrtlebeech. They packed it on the grevillea and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffmethuselah": {
+      "name": "Rust Teffmethuselah",
+      "desc": "A dry teffmethuselah north of the myrtlebeech. Packed rust coats teffmethuselah.",
+      "brief": "Dry teffmethuselah, packed rust.",
+      "exits": { "south": { "to": "rust_myrtlebeech" } },
+      "actions": [
+        {
+          "id": "pinch_teffmethuselah",
+          "label": "pinch the teffmethuselah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffmethuselah. They packed it on the myrtlebeech and packed rust around it."]
           ]
         }
       ]
@@ -15226,7 +15277,7 @@
       "name": "Rust Whitespruce",
       "desc": "A dry whitespruce east of the myrtlebeech. Packed rust coats whitespruce.",
       "brief": "Dry whitespruce, packed rust.",
-      "exits": { "west": { "to": "rust_myrtlebeech" }, "east": { "to": "rust_horopito" }, "south": { "to": "rust_hangehange" } },
+      "exits": { "west": { "to": "rust_myrtlebeech" }, "east": { "to": "rust_horopito" }, "south": { "to": "rust_hangehange" }, "north": { "to": "rust_barleymethuselah" } },
       "actions": [
         {
           "id": "pinch_whitespruce",
@@ -15235,6 +15286,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whitespruce. They packed it on the myrtlebeech and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleymethuselah": {
+      "name": "Rust Barleymethuselah",
+      "desc": "A dry barleymethuselah north of the whitespruce. Packed rust coats barleymethuselah.",
+      "brief": "Dry barleymethuselah, packed rust.",
+      "exits": { "south": { "to": "rust_whitespruce" } },
+      "actions": [
+        {
+          "id": "pinch_barleymethuselah",
+          "label": "pinch the barleymethuselah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleymethuselah. They packed it on the whitespruce and packed rust around it."]
           ]
         }
       ]
@@ -15311,7 +15379,7 @@
       "name": "Rust Sheerpole",
       "desc": "A dry sheerpole east of the skeg. Packed rust coats a sheerpole.",
       "brief": "Dry sheerpole, packed rust.",
-      "exits": { "west": { "to": "rust_skeg" }, "east": { "to": "rust_blake" }, "south": { "to": "rust_teffprime" } },
+      "exits": { "west": { "to": "rust_skeg" }, "east": { "to": "rust_blake" }, "south": { "to": "rust_teffprime" }, "north": { "to": "rust_sorghummethuselah" } },
       "actions": [
         {
           "id": "pinch_sheerpole",
@@ -15320,6 +15388,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheerpole. They set it on the skeg and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghummethuselah": {
+      "name": "Rust Sorghummethuselah",
+      "desc": "A dry sorghummethuselah north of the sheerpole. Packed rust coats sorghummethuselah.",
+      "brief": "Dry sorghummethuselah, packed rust.",
+      "exits": { "south": { "to": "rust_sheerpole" } },
+      "actions": [
+        {
+          "id": "pinch_sorghummethuselah",
+          "label": "pinch the sorghummethuselah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghummethuselah. They packed it on the sheerpole and packed rust around it."]
           ]
         }
       ]
@@ -15345,7 +15430,7 @@
       "name": "Rust Blake",
       "desc": "A dry blake east of the sheerpole. Packed rust coats a blake.",
       "brief": "Dry blake, packed rust.",
-      "exits": { "west": { "to": "rust_sheerpole" }, "east": { "to": "rust_benzoin" }, "south": { "to": "rust_barleyprime" } },
+      "exits": { "west": { "to": "rust_sheerpole" }, "east": { "to": "rust_benzoin" }, "south": { "to": "rust_barleyprime" }, "north": { "to": "rust_milletmethuselah" } },
       "actions": [
         {
           "id": "pinch_blake",
@@ -15354,6 +15439,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blake. They gripped it on the sheerpole and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletmethuselah": {
+      "name": "Rust Milletmethuselah",
+      "desc": "A dry milletmethuselah north of the blake. Packed rust coats milletmethuselah.",
+      "brief": "Dry milletmethuselah, packed rust.",
+      "exits": { "south": { "to": "rust_blake" } },
+      "actions": [
+        {
+          "id": "pinch_milletmethuselah",
+          "label": "pinch the milletmethuselah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletmethuselah. They packed it on the blake and packed rust around it."]
           ]
         }
       ]
@@ -15379,7 +15481,7 @@
       "name": "Rust Benzoin",
       "desc": "A dry benzoin east of the blake. Packed rust coats benzoin.",
       "brief": "Dry benzoin, packed rust.",
-      "exits": { "west": { "to": "rust_blake" }, "east": { "to": "rust_alkanet" }, "south": { "to": "rust_sorghumprime" } },
+      "exits": { "west": { "to": "rust_blake" }, "east": { "to": "rust_alkanet" }, "south": { "to": "rust_sorghumprime" }, "north": { "to": "rust_cornmethuselah" } },
       "actions": [
         {
           "id": "pinch_benzoin",
@@ -15388,6 +15490,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard benzoin. They packed it on the blake and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornmethuselah": {
+      "name": "Rust Cornmethuselah",
+      "desc": "A dry cornmethuselah north of the benzoin. Packed rust coats cornmethuselah.",
+      "brief": "Dry cornmethuselah, packed rust.",
+      "exits": { "south": { "to": "rust_benzoin" } },
+      "actions": [
+        {
+          "id": "pinch_cornmethuselah",
+          "label": "pinch the cornmethuselah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornmethuselah. They packed it on the benzoin and packed rust around it."]
           ]
         }
       ]
@@ -15413,7 +15532,7 @@
       "name": "Rust Alkanet",
       "desc": "A dry alkanet east of the benzoin. Packed rust coats alkanet.",
       "brief": "Dry alkanet, packed rust.",
-      "exits": { "west": { "to": "rust_benzoin" }, "east": { "to": "rust_coke" }, "south": { "to": "rust_milletprime" } },
+      "exits": { "west": { "to": "rust_benzoin" }, "east": { "to": "rust_coke" }, "south": { "to": "rust_milletprime" }, "north": { "to": "rust_oatmethuselah" } },
       "actions": [
         {
           "id": "pinch_alkanet",
@@ -15422,6 +15541,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard alkanet. They packed it on the benzoin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatmethuselah": {
+      "name": "Rust Oatmethuselah",
+      "desc": "A dry oatmethuselah north of the alkanet. Packed rust coats oatmethuselah.",
+      "brief": "Dry oatmethuselah, packed rust.",
+      "exits": { "south": { "to": "rust_alkanet" } },
+      "actions": [
+        {
+          "id": "pinch_oatmethuselah",
+          "label": "pinch the oatmethuselah",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatmethuselah. They packed it on the alkanet and packed rust around it."]
           ]
         }
       ]
@@ -56313,21 +56449,33 @@
     "go north",
     "go east",
     "pinch the blackbox",
+    "go north",
+    "pinch the durummethuselah",
+    "go south",
     "go south",
     "pinch the oatchoice",
     "go north",
     "go east",
     "pinch the grevillea",
+    "go north",
+    "pinch the foniomethuselah",
+    "go south",
     "go south",
     "pinch the durumprime",
     "go north",
     "go east",
     "pinch the myrtlebeech",
+    "go north",
+    "pinch the teffmethuselah",
+    "go south",
     "go south",
     "pinch the fonioprime",
     "go north",
     "go east",
     "pinch the whitespruce",
+    "go north",
+    "pinch the barleymethuselah",
+    "go south",
     "go south",
     "pinch the hangehange",
     "go north",
@@ -56349,21 +56497,33 @@
     "pinch the skeg",
     "go east",
     "pinch the sheerpole",
+    "go north",
+    "pinch the sorghummethuselah",
+    "go south",
     "go south",
     "pinch the teffprime",
     "go north",
     "go east",
     "pinch the blake",
+    "go north",
+    "pinch the milletmethuselah",
+    "go south",
     "go south",
     "pinch the barleyprime",
     "go north",
     "go east",
     "pinch the benzoin",
+    "go north",
+    "pinch the cornmethuselah",
+    "go south",
     "go south",
     "pinch the sorghumprime",
     "go north",
     "go east",
     "pinch the alkanet",
+    "go north",
+    "pinch the oatmethuselah",
+    "go south",
     "go south",
     "pinch the milletprime",
     "go north",
