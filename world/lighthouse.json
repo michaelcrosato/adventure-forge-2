@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13370,
+  "maxScore": 13410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -33909,7 +33909,7 @@
       "name": "Rust Tackcringle",
       "desc": "A dry tackcringle east of the sternfast. Packed rust coats a tackcringle.",
       "brief": "Dry tackcringle, packed rust.",
-      "exits": { "west": { "to": "rust_sternfast" }, "east": { "to": "rust_creosote" }, "south": { "to": "rust_semolina" } },
+      "exits": { "west": { "to": "rust_sternfast" }, "east": { "to": "rust_creosote" }, "south": { "to": "rust_semolina" }, "north": { "to": "rust_durumtrunk" } },
       "actions": [
         {
           "id": "pinch_tackcringle",
@@ -33918,6 +33918,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tackcringle. They spliced it on the sternfast and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumtrunk": {
+      "name": "Rust Durumtrunk",
+      "desc": "A dry durumtrunk north of the tackcringle. Packed rust coats durumtrunk.",
+      "brief": "Dry durumtrunk, packed rust.",
+      "exits": { "south": { "to": "rust_tackcringle" } },
+      "actions": [
+        {
+          "id": "pinch_durumtrunk",
+          "label": "pinch the durumtrunk",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumtrunk. They packed it on the tackcringle and packed rust around it."]
           ]
         }
       ]
@@ -33943,7 +33960,7 @@
       "name": "Rust Creosote",
       "desc": "A dry creosote east of the tackcringle. Packed rust coats creosote.",
       "brief": "Dry creosote, packed rust.",
-      "exits": { "west": { "to": "rust_tackcringle" }, "east": { "to": "rust_siccative" }, "south": { "to": "rust_wheatcorn" } },
+      "exits": { "west": { "to": "rust_tackcringle" }, "east": { "to": "rust_siccative" }, "south": { "to": "rust_wheatcorn" }, "north": { "to": "rust_foniotrunk" } },
       "actions": [
         {
           "id": "pinch_creosote",
@@ -33952,6 +33969,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard creosote. They soaked it on the tackcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniotrunk": {
+      "name": "Rust Foniotrunk",
+      "desc": "A dry foniotrunk north of the creosote. Packed rust coats foniotrunk.",
+      "brief": "Dry foniotrunk, packed rust.",
+      "exits": { "south": { "to": "rust_creosote" } },
+      "actions": [
+        {
+          "id": "pinch_foniotrunk",
+          "label": "pinch the foniotrunk",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniotrunk. They packed it on the creosote and packed rust around it."]
           ]
         }
       ]
@@ -33977,7 +34011,7 @@
       "name": "Rust Siccative",
       "desc": "A dry siccative east of the creosote. Packed rust coats siccative.",
       "brief": "Dry siccative, packed rust.",
-      "exits": { "west": { "to": "rust_creosote" }, "east": { "to": "rust_puttypowder" }, "south": { "to": "rust_groat" } },
+      "exits": { "west": { "to": "rust_creosote" }, "east": { "to": "rust_puttypowder" }, "south": { "to": "rust_groat" }, "north": { "to": "rust_tefftrunk" } },
       "actions": [
         {
           "id": "pinch_siccative",
@@ -33986,6 +34020,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard siccative. They packed it on the creosote and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefftrunk": {
+      "name": "Rust Tefftrunk",
+      "desc": "A dry tefftrunk north of the siccative. Packed rust coats tefftrunk.",
+      "brief": "Dry tefftrunk, packed rust.",
+      "exits": { "south": { "to": "rust_siccative" } },
+      "actions": [
+        {
+          "id": "pinch_tefftrunk",
+          "label": "pinch the tefftrunk",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefftrunk. They packed it on the siccative and packed rust around it."]
           ]
         }
       ]
@@ -34011,7 +34062,7 @@
       "name": "Rust Puttypowder",
       "desc": "A dry puttypowder east of the siccative. Packed rust coats puttypowder.",
       "brief": "Dry puttypowder, packed rust.",
-      "exits": { "west": { "to": "rust_siccative" }, "east": { "to": "rust_grindstone" }, "south": { "to": "rust_fonio" } },
+      "exits": { "west": { "to": "rust_siccative" }, "east": { "to": "rust_grindstone" }, "south": { "to": "rust_fonio" }, "north": { "to": "rust_barleytrunk" } },
       "actions": [
         {
           "id": "pinch_puttypowder",
@@ -34020,6 +34071,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard puttypowder. They packed it on the siccative and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleytrunk": {
+      "name": "Rust Barleytrunk",
+      "desc": "A dry barleytrunk north of the puttypowder. Packed rust coats barleytrunk.",
+      "brief": "Dry barleytrunk, packed rust.",
+      "exits": { "south": { "to": "rust_puttypowder" } },
+      "actions": [
+        {
+          "id": "pinch_barleytrunk",
+          "label": "pinch the barleytrunk",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleytrunk. They packed it on the puttypowder and packed rust around it."]
           ]
         }
       ]
@@ -34045,7 +34113,7 @@
       "name": "Rust Grindstone",
       "desc": "A dry grindstone east of the puttypowder. Packed rust coats grindstone.",
       "brief": "Dry grindstone, packed rust.",
-      "exits": { "west": { "to": "rust_puttypowder" }, "east": { "to": "rust_stibnite" }, "south": { "to": "rust_teff" } },
+      "exits": { "west": { "to": "rust_puttypowder" }, "east": { "to": "rust_stibnite" }, "south": { "to": "rust_teff" }, "north": { "to": "rust_sorghumtrunk" } },
       "actions": [
         {
           "id": "pinch_grindstone",
@@ -34054,6 +34122,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard grindstone. They packed it on the puttypowder and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumtrunk": {
+      "name": "Rust Sorghumtrunk",
+      "desc": "A dry sorghumtrunk north of the grindstone. Packed rust coats sorghumtrunk.",
+      "brief": "Dry sorghumtrunk, packed rust.",
+      "exits": { "south": { "to": "rust_grindstone" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumtrunk",
+          "label": "pinch the sorghumtrunk",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumtrunk. They packed it on the grindstone and packed rust around it."]
           ]
         }
       ]
@@ -34079,7 +34164,7 @@
       "name": "Rust Stibnite",
       "desc": "A dry stibnite east of the grindstone. Packed rust coats stibnite.",
       "brief": "Dry stibnite, packed rust.",
-      "exits": { "west": { "to": "rust_grindstone" }, "east": { "to": "rust_glauconite" }, "south": { "to": "rust_triticale" } },
+      "exits": { "west": { "to": "rust_grindstone" }, "east": { "to": "rust_glauconite" }, "south": { "to": "rust_triticale" }, "north": { "to": "rust_millettrunk" } },
       "actions": [
         {
           "id": "pinch_stibnite",
@@ -34088,6 +34173,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stibnite. They packed it on the grindstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millettrunk": {
+      "name": "Rust Millettrunk",
+      "desc": "A dry millettrunk north of the stibnite. Packed rust coats millettrunk.",
+      "brief": "Dry millettrunk, packed rust.",
+      "exits": { "south": { "to": "rust_stibnite" } },
+      "actions": [
+        {
+          "id": "pinch_millettrunk",
+          "label": "pinch the millettrunk",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millettrunk. They packed it on the stibnite and packed rust around it."]
           ]
         }
       ]
@@ -34113,7 +34215,7 @@
       "name": "Rust Glauconite",
       "desc": "A dry glauconite east of the stibnite. Packed rust coats glauconite.",
       "brief": "Dry glauconite, packed rust.",
-      "exits": { "west": { "to": "rust_stibnite" }, "east": { "to": "rust_diaboleite" }, "south": { "to": "rust_einkorn" } },
+      "exits": { "west": { "to": "rust_stibnite" }, "east": { "to": "rust_diaboleite" }, "south": { "to": "rust_einkorn" }, "north": { "to": "rust_corntrunk" } },
       "actions": [
         {
           "id": "pinch_glauconite",
@@ -34122,6 +34224,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard glauconite. They packed it on the stibnite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corntrunk": {
+      "name": "Rust Corntrunk",
+      "desc": "A dry corntrunk north of the glauconite. Packed rust coats corntrunk.",
+      "brief": "Dry corntrunk, packed rust.",
+      "exits": { "south": { "to": "rust_glauconite" } },
+      "actions": [
+        {
+          "id": "pinch_corntrunk",
+          "label": "pinch the corntrunk",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corntrunk. They packed it on the glauconite and packed rust around it."]
           ]
         }
       ]
@@ -34147,7 +34266,7 @@
       "name": "Rust Diaboleite",
       "desc": "A dry diaboleite east of the glauconite. Packed rust coats diaboleite.",
       "brief": "Dry diaboleite, packed rust.",
-      "exits": { "west": { "to": "rust_glauconite" }, "east": { "to": "rust_cubanite" }, "south": { "to": "rust_emmer" } },
+      "exits": { "west": { "to": "rust_glauconite" }, "east": { "to": "rust_cubanite" }, "south": { "to": "rust_emmer" }, "north": { "to": "rust_oattrunk" } },
       "actions": [
         {
           "id": "pinch_diaboleite",
@@ -34156,6 +34275,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard diaboleite. They packed it on the glauconite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oattrunk": {
+      "name": "Rust Oattrunk",
+      "desc": "A dry oattrunk north of the diaboleite. Packed rust coats oattrunk.",
+      "brief": "Dry oattrunk, packed rust.",
+      "exits": { "south": { "to": "rust_diaboleite" } },
+      "actions": [
+        {
+          "id": "pinch_oattrunk",
+          "label": "pinch the oattrunk",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oattrunk. They packed it on the diaboleite and packed rust around it."]
           ]
         }
       ]
@@ -51458,41 +51594,65 @@
     "go north",
     "go east",
     "pinch the tackcringle",
+    "go north",
+    "pinch the durumtrunk",
+    "go south",
     "go south",
     "pinch the semolina",
     "go north",
     "go east",
     "pinch the creosote",
+    "go north",
+    "pinch the foniotrunk",
+    "go south",
     "go south",
     "pinch the wheatcorn",
     "go north",
     "go east",
     "pinch the siccative",
+    "go north",
+    "pinch the tefftrunk",
+    "go south",
     "go south",
     "pinch the groat",
     "go north",
     "go east",
     "pinch the puttypowder",
+    "go north",
+    "pinch the barleytrunk",
+    "go south",
     "go south",
     "pinch the fonio",
     "go north",
     "go east",
     "pinch the grindstone",
+    "go north",
+    "pinch the sorghumtrunk",
+    "go south",
     "go south",
     "pinch the teff",
     "go north",
     "go east",
     "pinch the stibnite",
+    "go north",
+    "pinch the millettrunk",
+    "go south",
     "go south",
     "pinch the triticale",
     "go north",
     "go east",
     "pinch the glauconite",
+    "go north",
+    "pinch the corntrunk",
+    "go south",
     "go south",
     "pinch the einkorn",
     "go north",
     "go east",
     "pinch the diaboleite",
+    "go north",
+    "pinch the oattrunk",
+    "go south",
     "go south",
     "pinch the emmer",
     "go north",
