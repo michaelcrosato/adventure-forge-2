@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10130,
+  "maxScore": 10170,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -25120,7 +25120,7 @@
       "name": "Rust Nantokite",
       "desc": "A dry nantokite east of the egyptianblue. Packed rust coats nantokite.",
       "brief": "Dry nantokite, packed rust.",
-      "exits": { "west": { "to": "rust_egyptianblue" }, "east": { "to": "rust_breithauptite" } },
+      "exits": { "west": { "to": "rust_egyptianblue" }, "east": { "to": "rust_breithauptite" }, "south": { "to": "rust_oatgrits" } },
       "actions": [
         {
           "id": "pinch_nantokite",
@@ -25129,6 +25129,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nantokite. They packed it on the egyptianblue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatgrits": {
+      "name": "Rust Oatgrits",
+      "desc": "A dry oatgrits south of the nantokite. Packed rust coats oatgrits.",
+      "brief": "Dry oatgrits, packed rust.",
+      "exits": { "north": { "to": "rust_nantokite" } },
+      "actions": [
+        {
+          "id": "pinch_oatgrits",
+          "label": "pinch the oatgrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatgrits. They packed it on the nantokite and packed rust around it."]
           ]
         }
       ]
@@ -25205,7 +25222,7 @@
       "name": "Rust Leadline",
       "desc": "A dry leadline east of the timberhead. Packed rust coats a leadline.",
       "brief": "Dry leadline, packed rust.",
-      "exits": { "west": { "to": "rust_timberhead" }, "east": { "to": "rust_peakrope" } },
+      "exits": { "west": { "to": "rust_timberhead" }, "east": { "to": "rust_peakrope" }, "south": { "to": "rust_ryegrits" } },
       "actions": [
         {
           "id": "pinch_leadline",
@@ -25218,11 +25235,28 @@
         }
       ]
     },
+    "rust_ryegrits": {
+      "name": "Rust Ryegrits",
+      "desc": "A dry ryegrits south of the leadline. Packed rust coats ryegrits.",
+      "brief": "Dry ryegrits, packed rust.",
+      "exits": { "north": { "to": "rust_leadline" } },
+      "actions": [
+        {
+          "id": "pinch_ryegrits",
+          "label": "pinch the ryegrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryegrits. They packed it on the leadline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_peakrope": {
       "name": "Rust Peakrope",
       "desc": "A dry peakrope east of the leadline. Packed rust coats a peakrope.",
       "brief": "Dry peakrope, packed rust.",
-      "exits": { "west": { "to": "rust_leadline" }, "east": { "to": "rust_graphite" } },
+      "exits": { "west": { "to": "rust_leadline" }, "east": { "to": "rust_graphite" }, "south": { "to": "rust_sorghumgrits" } },
       "actions": [
         {
           "id": "pinch_peakrope",
@@ -25235,11 +25269,28 @@
         }
       ]
     },
+    "rust_sorghumgrits": {
+      "name": "Rust Sorghumgrits",
+      "desc": "A dry sorghumgrits south of the peakrope. Packed rust coats sorghumgrits.",
+      "brief": "Dry sorghumgrits, packed rust.",
+      "exits": { "north": { "to": "rust_peakrope" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumgrits",
+          "label": "pinch the sorghumgrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumgrits. They packed it on the peakrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_graphite": {
       "name": "Rust Graphite",
       "desc": "A dry graphite east of the peakrope. Packed rust coats graphite.",
       "brief": "Dry graphite, packed rust.",
-      "exits": { "west": { "to": "rust_peakrope" }, "east": { "to": "rust_dolomite" } },
+      "exits": { "west": { "to": "rust_peakrope" }, "east": { "to": "rust_dolomite" }, "south": { "to": "rust_milletgrits" } },
       "actions": [
         {
           "id": "pinch_graphite",
@@ -25252,11 +25303,28 @@
         }
       ]
     },
+    "rust_milletgrits": {
+      "name": "Rust Milletgrits",
+      "desc": "A dry milletgrits south of the graphite. Packed rust coats milletgrits.",
+      "brief": "Dry milletgrits, packed rust.",
+      "exits": { "north": { "to": "rust_graphite" } },
+      "actions": [
+        {
+          "id": "pinch_milletgrits",
+          "label": "pinch the milletgrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletgrits. They packed it on the graphite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_dolomite": {
       "name": "Rust Dolomite",
       "desc": "A dry dolomite east of the graphite. Packed rust coats dolomite.",
       "brief": "Dry dolomite, packed rust.",
-      "exits": { "west": { "to": "rust_graphite" }, "east": { "to": "rust_steatite" } },
+      "exits": { "west": { "to": "rust_graphite" }, "east": { "to": "rust_steatite" }, "south": { "to": "rust_steelcutoats" } },
       "actions": [
         {
           "id": "pinch_dolomite",
@@ -25269,11 +25337,28 @@
         }
       ]
     },
+    "rust_steelcutoats": {
+      "name": "Rust Steelcutoats",
+      "desc": "A dry steelcutoats south of the dolomite. Packed rust coats steelcutoats.",
+      "brief": "Dry steelcutoats, packed rust.",
+      "exits": { "north": { "to": "rust_dolomite" } },
+      "actions": [
+        {
+          "id": "pinch_steelcutoats",
+          "label": "pinch the steelcutoats",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard steelcutoats. They packed it on the dolomite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_steatite": {
       "name": "Rust Steatite",
       "desc": "A dry steatite east of the dolomite. Packed rust coats steatite.",
       "brief": "Dry steatite, packed rust.",
-      "exits": { "west": { "to": "rust_dolomite" }, "east": { "to": "rust_colcothar" } },
+      "exits": { "west": { "to": "rust_dolomite" }, "east": { "to": "rust_colcothar" }, "south": { "to": "rust_farina" } },
       "actions": [
         {
           "id": "pinch_steatite",
@@ -25286,11 +25371,28 @@
         }
       ]
     },
+    "rust_farina": {
+      "name": "Rust Farina",
+      "desc": "A dry farina south of the steatite. Packed rust coats farina.",
+      "brief": "Dry farina, packed rust.",
+      "exits": { "north": { "to": "rust_steatite" } },
+      "actions": [
+        {
+          "id": "pinch_farina",
+          "label": "pinch the farina",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard farina. They packed it on the steatite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_colcothar": {
       "name": "Rust Colcothar",
       "desc": "A dry colcothar east of the steatite. Packed rust coats colcothar.",
       "brief": "Dry colcothar, packed rust.",
-      "exits": { "west": { "to": "rust_steatite" }, "east": { "to": "rust_redochre" } },
+      "exits": { "west": { "to": "rust_steatite" }, "east": { "to": "rust_redochre" }, "south": { "to": "rust_bulgur" } },
       "actions": [
         {
           "id": "pinch_colcothar",
@@ -25303,11 +25405,28 @@
         }
       ]
     },
+    "rust_bulgur": {
+      "name": "Rust Bulgur",
+      "desc": "A dry bulgur south of the colcothar. Packed rust coats bulgur.",
+      "brief": "Dry bulgur, packed rust.",
+      "exits": { "north": { "to": "rust_colcothar" } },
+      "actions": [
+        {
+          "id": "pinch_bulgur",
+          "label": "pinch the bulgur",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bulgur. They packed it on the colcothar and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_redochre": {
       "name": "Rust Redochre",
       "desc": "A dry redochre east of the colcothar. Packed rust coats redochre.",
       "brief": "Dry redochre, packed rust.",
-      "exits": { "west": { "to": "rust_colcothar" }, "east": { "to": "rust_cobaltite" } },
+      "exits": { "west": { "to": "rust_colcothar" }, "east": { "to": "rust_cobaltite" }, "south": { "to": "rust_couscous" } },
       "actions": [
         {
           "id": "pinch_redochre",
@@ -25316,6 +25435,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redochre. They packed it on the colcothar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_couscous": {
+      "name": "Rust Couscous",
+      "desc": "A dry couscous south of the redochre. Packed rust coats couscous.",
+      "brief": "Dry couscous, packed rust.",
+      "exits": { "north": { "to": "rust_redochre" } },
+      "actions": [
+        {
+          "id": "pinch_couscous",
+          "label": "pinch the couscous",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard couscous. They packed it on the redochre and packed rust around it."]
           ]
         }
       ]
@@ -38836,6 +38972,9 @@
     "pinch the egyptianblue",
     "go east",
     "pinch the nantokite",
+    "go south",
+    "pinch the oatgrits",
+    "go north",
     "go east",
     "pinch the breithauptite",
     "go west",
@@ -38858,18 +38997,39 @@
     "pinch the timberhead",
     "go east",
     "pinch the leadline",
+    "go south",
+    "pinch the ryegrits",
+    "go north",
     "go east",
     "pinch the peakrope",
+    "go south",
+    "pinch the sorghumgrits",
+    "go north",
     "go east",
     "pinch the graphite",
+    "go south",
+    "pinch the milletgrits",
+    "go north",
     "go east",
     "pinch the dolomite",
+    "go south",
+    "pinch the steelcutoats",
+    "go north",
     "go east",
     "pinch the steatite",
+    "go south",
+    "pinch the farina",
+    "go north",
     "go east",
     "pinch the colcothar",
+    "go south",
+    "pinch the bulgur",
+    "go north",
     "go east",
     "pinch the redochre",
+    "go south",
+    "pinch the couscous",
+    "go north",
     "go east",
     "pinch the cobaltite",
     "go south",
