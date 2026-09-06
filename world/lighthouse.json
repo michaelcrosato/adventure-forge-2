@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12970,
+  "maxScore": 13010,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -37734,7 +37734,7 @@
       "name": "Rust Lacquer",
       "desc": "A dry lacquer east of the burlap. Packed rust coats lacquer.",
       "brief": "Dry lacquer, packed rust.",
-      "exits": { "west": { "to": "rust_burlap" }, "east": { "to": "rust_redlead" }, "south": { "to": "rust_chard" } },
+      "exits": { "west": { "to": "rust_burlap" }, "east": { "to": "rust_redlead" }, "south": { "to": "rust_chard" }, "north": { "to": "rust_durumpail" } },
       "actions": [
         {
           "id": "pinch_lacquer",
@@ -37743,6 +37743,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lacquer. They coated it on the burlap and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumpail": {
+      "name": "Rust Durumpail",
+      "desc": "A dry durumpail north of the lacquer. Packed rust coats durumpail.",
+      "brief": "Dry durumpail, packed rust.",
+      "exits": { "south": { "to": "rust_lacquer" } },
+      "actions": [
+        {
+          "id": "pinch_durumpail",
+          "label": "pinch the durumpail",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumpail. They packed it on the lacquer and packed rust around it."]
           ]
         }
       ]
@@ -37768,7 +37785,7 @@
       "name": "Rust Redlead",
       "desc": "A dry redlead east of the lacquer. Packed rust coats redlead.",
       "brief": "Dry redlead, packed rust.",
-      "exits": { "west": { "to": "rust_lacquer" }, "east": { "to": "rust_poplar" }, "south": { "to": "rust_spinach" } },
+      "exits": { "west": { "to": "rust_lacquer" }, "east": { "to": "rust_poplar" }, "south": { "to": "rust_spinach" }, "north": { "to": "rust_foniopail" } },
       "actions": [
         {
           "id": "pinch_redlead",
@@ -37777,6 +37794,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redlead. They coated it on the lacquer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniopail": {
+      "name": "Rust Foniopail",
+      "desc": "A dry foniopail north of the redlead. Packed rust coats foniopail.",
+      "brief": "Dry foniopail, packed rust.",
+      "exits": { "south": { "to": "rust_redlead" } },
+      "actions": [
+        {
+          "id": "pinch_foniopail",
+          "label": "pinch the foniopail",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniopail. They packed it on the redlead and packed rust around it."]
           ]
         }
       ]
@@ -37802,7 +37836,7 @@
       "name": "Rust Poplar",
       "desc": "A dry poplar east of the redlead. Packed rust coats poplar.",
       "brief": "Dry poplar, packed rust.",
-      "exits": { "west": { "to": "rust_redlead" }, "east": { "to": "rust_hornbeam" }, "south": { "to": "rust_cabbage" } },
+      "exits": { "west": { "to": "rust_redlead" }, "east": { "to": "rust_hornbeam" }, "south": { "to": "rust_cabbage" }, "north": { "to": "rust_teffpail" } },
       "actions": [
         {
           "id": "pinch_poplar",
@@ -37811,6 +37845,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard poplar. They bound it on the redlead and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffpail": {
+      "name": "Rust Teffpail",
+      "desc": "A dry teffpail north of the poplar. Packed rust coats teffpail.",
+      "brief": "Dry teffpail, packed rust.",
+      "exits": { "south": { "to": "rust_poplar" } },
+      "actions": [
+        {
+          "id": "pinch_teffpail",
+          "label": "pinch the teffpail",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffpail. They packed it on the poplar and packed rust around it."]
           ]
         }
       ]
@@ -37836,7 +37887,7 @@
       "name": "Rust Hornbeam",
       "desc": "A dry hornbeam east of the poplar. Packed rust coats hornbeam.",
       "brief": "Dry hornbeam, packed rust.",
-      "exits": { "west": { "to": "rust_poplar" }, "east": { "to": "rust_silica" }, "south": { "to": "rust_kohlrabi" } },
+      "exits": { "west": { "to": "rust_poplar" }, "east": { "to": "rust_silica" }, "south": { "to": "rust_kohlrabi" }, "north": { "to": "rust_barleypail" } },
       "actions": [
         {
           "id": "pinch_hornbeam",
@@ -37845,6 +37896,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hornbeam. They bound it on the poplar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleypail": {
+      "name": "Rust Barleypail",
+      "desc": "A dry barleypail north of the hornbeam. Packed rust coats barleypail.",
+      "brief": "Dry barleypail, packed rust.",
+      "exits": { "south": { "to": "rust_hornbeam" } },
+      "actions": [
+        {
+          "id": "pinch_barleypail",
+          "label": "pinch the barleypail",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleypail. They packed it on the hornbeam and packed rust around it."]
           ]
         }
       ]
@@ -37870,7 +37938,7 @@
       "name": "Rust Silica",
       "desc": "A dry silica east of the hornbeam. Packed rust coats silica.",
       "brief": "Dry silica, packed rust.",
-      "exits": { "west": { "to": "rust_hornbeam" }, "east": { "to": "rust_sphalerite" }, "south": { "to": "rust_rutabaga" } },
+      "exits": { "west": { "to": "rust_hornbeam" }, "east": { "to": "rust_sphalerite" }, "south": { "to": "rust_rutabaga" }, "north": { "to": "rust_sorghumpail" } },
       "actions": [
         {
           "id": "pinch_silica",
@@ -37879,6 +37947,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard silica. They packed it on the hornbeam and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumpail": {
+      "name": "Rust Sorghumpail",
+      "desc": "A dry sorghumpail north of the silica. Packed rust coats sorghumpail.",
+      "brief": "Dry sorghumpail, packed rust.",
+      "exits": { "south": { "to": "rust_silica" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumpail",
+          "label": "pinch the sorghumpail",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumpail. They packed it on the silica and packed rust around it."]
           ]
         }
       ]
@@ -37904,7 +37989,7 @@
       "name": "Rust Sphalerite",
       "desc": "A dry sphalerite east of the silica. Packed rust coats sphalerite.",
       "brief": "Dry sphalerite, packed rust.",
-      "exits": { "west": { "to": "rust_silica" }, "east": { "to": "rust_hydrozincite" }, "south": { "to": "rust_swede" } },
+      "exits": { "west": { "to": "rust_silica" }, "east": { "to": "rust_hydrozincite" }, "south": { "to": "rust_swede" }, "north": { "to": "rust_milletpail" } },
       "actions": [
         {
           "id": "pinch_sphalerite",
@@ -37913,6 +37998,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sphalerite. They packed it on the silica and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletpail": {
+      "name": "Rust Milletpail",
+      "desc": "A dry milletpail north of the sphalerite. Packed rust coats milletpail.",
+      "brief": "Dry milletpail, packed rust.",
+      "exits": { "south": { "to": "rust_sphalerite" } },
+      "actions": [
+        {
+          "id": "pinch_milletpail",
+          "label": "pinch the milletpail",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletpail. They packed it on the sphalerite and packed rust around it."]
           ]
         }
       ]
@@ -37989,7 +38091,7 @@
       "name": "Rust Nock",
       "desc": "A dry nock east of the clew. Packed rust coats a nock.",
       "brief": "Dry nock, packed rust.",
-      "exits": { "west": { "to": "rust_clew" }, "east": { "to": "rust_sailrope" }, "south": { "to": "rust_carrot" } },
+      "exits": { "west": { "to": "rust_clew" }, "east": { "to": "rust_sailrope" }, "south": { "to": "rust_carrot" }, "north": { "to": "rust_cornpail" } },
       "actions": [
         {
           "id": "pinch_nock",
@@ -37998,6 +38100,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nock. They cut it on the clew and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornpail": {
+      "name": "Rust Cornpail",
+      "desc": "A dry cornpail north of the nock. Packed rust coats cornpail.",
+      "brief": "Dry cornpail, packed rust.",
+      "exits": { "south": { "to": "rust_nock" } },
+      "actions": [
+        {
+          "id": "pinch_cornpail",
+          "label": "pinch the cornpail",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornpail. They packed it on the nock and packed rust around it."]
           ]
         }
       ]
@@ -38023,7 +38142,7 @@
       "name": "Rust Sailrope",
       "desc": "A dry sailrope east of the nock. Packed rust coats a sailrope.",
       "brief": "Dry sailrope, packed rust.",
-      "exits": { "west": { "to": "rust_nock" }, "east": { "to": "rust_cable" }, "south": { "to": "rust_radish" } },
+      "exits": { "west": { "to": "rust_nock" }, "east": { "to": "rust_cable" }, "south": { "to": "rust_radish" }, "north": { "to": "rust_oatpail" } },
       "actions": [
         {
           "id": "pinch_sailrope",
@@ -38032,6 +38151,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sailrope. They rove it on the nock and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatpail": {
+      "name": "Rust Oatpail",
+      "desc": "A dry oatpail north of the sailrope. Packed rust coats oatpail.",
+      "brief": "Dry oatpail, packed rust.",
+      "exits": { "south": { "to": "rust_sailrope" } },
+      "actions": [
+        {
+          "id": "pinch_oatpail",
+          "label": "pinch the oatpail",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatpail. They packed it on the sailrope and packed rust around it."]
           ]
         }
       ]
@@ -50651,31 +50787,49 @@
     "go north",
     "go east",
     "pinch the lacquer",
+    "go north",
+    "pinch the durumpail",
+    "go south",
     "go south",
     "pinch the chard",
     "go north",
     "go east",
     "pinch the redlead",
+    "go north",
+    "pinch the foniopail",
+    "go south",
     "go south",
     "pinch the spinach",
     "go north",
     "go east",
     "pinch the poplar",
+    "go north",
+    "pinch the teffpail",
+    "go south",
     "go south",
     "pinch the cabbage",
     "go north",
     "go east",
     "pinch the hornbeam",
+    "go north",
+    "pinch the barleypail",
+    "go south",
     "go south",
     "pinch the kohlrabi",
     "go north",
     "go east",
     "pinch the silica",
+    "go north",
+    "pinch the sorghumpail",
+    "go south",
     "go south",
     "pinch the rutabaga",
     "go north",
     "go east",
     "pinch the sphalerite",
+    "go north",
+    "pinch the milletpail",
+    "go south",
     "go south",
     "pinch the swede",
     "go north",
@@ -50698,11 +50852,17 @@
     "pinch the clew",
     "go east",
     "pinch the nock",
+    "go north",
+    "pinch the cornpail",
+    "go south",
     "go south",
     "pinch the carrot",
     "go north",
     "go east",
     "pinch the sailrope",
+    "go north",
+    "pinch the oatpail",
+    "go south",
     "go south",
     "pinch the radish",
     "go north",
