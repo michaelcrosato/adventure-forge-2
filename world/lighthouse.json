@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7850,
+  "maxScore": 7890,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6930,7 +6930,7 @@
       "name": "Rust Nephrolepis",
       "desc": "A dry nephrolepis east of the momifir. Packed rust coats nephrolepis.",
       "brief": "Dry nephrolepis, packed rust.",
-      "exits": { "west": { "to": "rust_momifir" } },
+      "exits": { "west": { "to": "rust_momifir" }, "east": { "to": "rust_rimu" } },
       "actions": [
         {
           "id": "pinch_nephrolepis",
@@ -6939,6 +6939,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nephrolepis. They packed it on the momifir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_rimu": {
+      "name": "Rust Rimu",
+      "desc": "A dry rimu east of the nephrolepis. Packed rust coats rimu.",
+      "brief": "Dry rimu, packed rust.",
+      "exits": { "west": { "to": "rust_nephrolepis" } },
+      "actions": [
+        {
+          "id": "pinch_rimu",
+          "label": "pinch the rimu",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rimu. They packed it on the nephrolepis and packed rust around it."]
           ]
         }
       ]
@@ -7287,7 +7304,7 @@
       "name": "Rust Sieboldii",
       "desc": "A dry sieboldii east of the subalpine. Packed rust coats sieboldii.",
       "brief": "Dry sieboldii, packed rust.",
-      "exits": { "west": { "to": "rust_subalpine" } },
+      "exits": { "west": { "to": "rust_subalpine" }, "east": { "to": "rust_totara" } },
       "actions": [
         {
           "id": "pinch_sieboldii",
@@ -7296,6 +7313,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sieboldii. They packed it on the subalpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_totara": {
+      "name": "Rust Totara",
+      "desc": "A dry totara east of the sieboldii. Packed rust coats totara.",
+      "brief": "Dry totara, packed rust.",
+      "exits": { "west": { "to": "rust_sieboldii" } },
+      "actions": [
+        {
+          "id": "pinch_totara",
+          "label": "pinch the totara",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard totara. They packed it on the sieboldii and packed rust around it."]
           ]
         }
       ]
@@ -7474,7 +7508,7 @@
       "name": "Rust Firma",
       "desc": "A dry firma east of the shastafir. Packed rust coats firma.",
       "brief": "Dry firma, packed rust.",
-      "exits": { "west": { "to": "rust_shastafir" } },
+      "exits": { "west": { "to": "rust_shastafir" }, "east": { "to": "rust_matai" } },
       "actions": [
         {
           "id": "pinch_firma",
@@ -7483,6 +7517,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard firma. They packed it on the shastafir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_matai": {
+      "name": "Rust Matai",
+      "desc": "A dry matai east of the firma. Packed rust coats matai.",
+      "brief": "Dry matai, packed rust.",
+      "exits": { "west": { "to": "rust_firma" } },
+      "actions": [
+        {
+          "id": "pinch_matai",
+          "label": "pinch the matai",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard matai. They packed it on the firma and packed rust around it."]
           ]
         }
       ]
@@ -7678,7 +7729,7 @@
       "name": "Rust Koreana",
       "desc": "A dry koreana east of the nikkofir. Packed rust coats koreana.",
       "brief": "Dry koreana, packed rust.",
-      "exits": { "west": { "to": "rust_nikkofir" } },
+      "exits": { "west": { "to": "rust_nikkofir" }, "east": { "to": "rust_miro" } },
       "actions": [
         {
           "id": "pinch_koreana",
@@ -7687,6 +7738,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard koreana. They packed it on the nikkofir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_miro": {
+      "name": "Rust Miro",
+      "desc": "A dry miro east of the koreana. Packed rust coats miro.",
+      "brief": "Dry miro, packed rust.",
+      "exits": { "west": { "to": "rust_koreana" } },
+      "actions": [
+        {
+          "id": "pinch_miro",
+          "label": "pinch the miro",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard miro. They packed it on the koreana and packed rust around it."]
           ]
         }
       ]
@@ -7831,7 +7899,7 @@
       "name": "Rust Cephalonica",
       "desc": "A dry cephalonica east of the atlascedar. Packed rust coats cephalonica.",
       "brief": "Dry cephalonica, packed rust.",
-      "exits": { "west": { "to": "rust_atlascedar" } },
+      "exits": { "west": { "to": "rust_atlascedar" }, "east": { "to": "rust_kahikatea" } },
       "actions": [
         {
           "id": "pinch_cephalonica",
@@ -7840,6 +7908,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cephalonica. They packed it on the atlascedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kahikatea": {
+      "name": "Rust Kahikatea",
+      "desc": "A dry kahikatea east of the cephalonica. Packed rust coats kahikatea.",
+      "brief": "Dry kahikatea, packed rust.",
+      "exits": { "west": { "to": "rust_cephalonica" } },
+      "actions": [
+        {
+          "id": "pinch_kahikatea",
+          "label": "pinch the kahikatea",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kahikatea. They packed it on the cephalonica and packed rust around it."]
           ]
         }
       ]
@@ -7950,7 +8035,7 @@
       "name": "Rust Pondcypress",
       "desc": "A dry pondcypress east of the sprucepine. Packed rust coats pondcypress.",
       "brief": "Dry pondcypress, packed rust.",
-      "exits": { "west": { "to": "rust_sprucepine" } },
+      "exits": { "west": { "to": "rust_sprucepine" }, "east": { "to": "rust_tanekaha" } },
       "actions": [
         {
           "id": "pinch_pondcypress",
@@ -7959,6 +8044,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pondcypress. They packed it on the sprucepine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tanekaha": {
+      "name": "Rust Tanekaha",
+      "desc": "A dry tanekaha east of the pondcypress. Packed rust coats tanekaha.",
+      "brief": "Dry tanekaha, packed rust.",
+      "exits": { "west": { "to": "rust_pondcypress" } },
+      "actions": [
+        {
+          "id": "pinch_tanekaha",
+          "label": "pinch the tanekaha",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tanekaha. They packed it on the pondcypress and packed rust around it."]
           ]
         }
       ]
@@ -8443,7 +8545,7 @@
       "name": "Rust Pinsapo",
       "desc": "A dry pinsapo east of the arborvitae. Packed rust coats pinsapo.",
       "brief": "Dry pinsapo, packed rust.",
-      "exits": { "west": { "to": "rust_arborvitae" } },
+      "exits": { "west": { "to": "rust_arborvitae" }, "east": { "to": "rust_toatoa" } },
       "actions": [
         {
           "id": "pinch_pinsapo",
@@ -8452,6 +8554,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pinsapo. They packed it on the arborvitae and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_toatoa": {
+      "name": "Rust Toatoa",
+      "desc": "A dry toatoa east of the pinsapo. Packed rust coats toatoa.",
+      "brief": "Dry toatoa, packed rust.",
+      "exits": { "west": { "to": "rust_pinsapo" } },
+      "actions": [
+        {
+          "id": "pinch_toatoa",
+          "label": "pinch the toatoa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard toatoa. They packed it on the pinsapo and packed rust around it."]
           ]
         }
       ]
@@ -8630,7 +8749,7 @@
       "name": "Rust Numidica",
       "desc": "A dry numidica east of the sawara. Packed rust coats numidica.",
       "brief": "Dry numidica, packed rust.",
-      "exits": { "west": { "to": "rust_sawara" } },
+      "exits": { "west": { "to": "rust_sawara" }, "east": { "to": "rust_pokaka" } },
       "actions": [
         {
           "id": "pinch_numidica",
@@ -8639,6 +8758,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard numidica. They packed it on the sawara and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_pokaka": {
+      "name": "Rust Pokaka",
+      "desc": "A dry pokaka east of the numidica. Packed rust coats pokaka.",
+      "brief": "Dry pokaka, packed rust.",
+      "exits": { "west": { "to": "rust_numidica" } },
+      "actions": [
+        {
+          "id": "pinch_pokaka",
+          "label": "pinch the pokaka",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pokaka. They packed it on the numidica and packed rust around it."]
           ]
         }
       ]
@@ -27837,6 +27973,9 @@
     "pinch the momifir",
     "go east",
     "pinch the nephrolepis",
+    "go east",
+    "pinch the rimu",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27899,6 +28038,9 @@
     "pinch the subalpine",
     "go east",
     "pinch the sieboldii",
+    "go east",
+    "pinch the totara",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27930,6 +28072,9 @@
     "pinch the shastafir",
     "go east",
     "pinch the firma",
+    "go east",
+    "pinch the matai",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27965,6 +28110,9 @@
     "pinch the nikkofir",
     "go east",
     "pinch the koreana",
+    "go east",
+    "pinch the miro",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27992,6 +28140,9 @@
     "pinch the atlascedar",
     "go east",
     "pinch the cephalonica",
+    "go east",
+    "pinch the kahikatea",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28015,6 +28166,9 @@
     "pinch the sprucepine",
     "go east",
     "pinch the pondcypress",
+    "go east",
+    "pinch the tanekaha",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28100,6 +28254,9 @@
     "pinch the arborvitae",
     "go east",
     "pinch the pinsapo",
+    "go east",
+    "pinch the toatoa",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28132,6 +28289,9 @@
     "pinch the sawara",
     "go east",
     "pinch the numidica",
+    "go east",
+    "pinch the pokaka",
+    "go west",
     "go west",
     "go west",
     "go west",
