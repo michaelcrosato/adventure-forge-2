@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13530,
+  "maxScore": 13570,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -32617,7 +32617,7 @@
       "name": "Rust Siderite",
       "desc": "A dry siderite east of the obsidian. Packed rust coats siderite.",
       "brief": "Dry siderite, packed rust.",
-      "exits": { "west": { "to": "rust_obsidian" }, "east": { "to": "rust_egyptianblue" }, "south": { "to": "rust_barleygrits" } },
+      "exits": { "west": { "to": "rust_obsidian" }, "east": { "to": "rust_egyptianblue" }, "south": { "to": "rust_barleygrits" }, "north": { "to": "rust_durumhopper" } },
       "actions": [
         {
           "id": "pinch_siderite",
@@ -32626,6 +32626,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard siderite. They packed it on the obsidian and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumhopper": {
+      "name": "Rust Durumhopper",
+      "desc": "A dry durumhopper north of the siderite. Packed rust coats durumhopper.",
+      "brief": "Dry durumhopper, packed rust.",
+      "exits": { "south": { "to": "rust_siderite" } },
+      "actions": [
+        {
+          "id": "pinch_durumhopper",
+          "label": "pinch the durumhopper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumhopper. They packed it on the siderite and packed rust around it."]
           ]
         }
       ]
@@ -32651,7 +32668,7 @@
       "name": "Rust Egyptianblue",
       "desc": "A dry egyptianblue east of the siderite. Packed rust coats egyptianblue.",
       "brief": "Dry egyptianblue, packed rust.",
-      "exits": { "west": { "to": "rust_siderite" }, "east": { "to": "rust_nantokite" }, "south": { "to": "rust_wheatgrits" } },
+      "exits": { "west": { "to": "rust_siderite" }, "east": { "to": "rust_nantokite" }, "south": { "to": "rust_wheatgrits" }, "north": { "to": "rust_foniohopper" } },
       "actions": [
         {
           "id": "pinch_egyptianblue",
@@ -32660,6 +32677,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard egyptianblue. They packed it on the siderite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniohopper": {
+      "name": "Rust Foniohopper",
+      "desc": "A dry foniohopper north of the egyptianblue. Packed rust coats foniohopper.",
+      "brief": "Dry foniohopper, packed rust.",
+      "exits": { "south": { "to": "rust_egyptianblue" } },
+      "actions": [
+        {
+          "id": "pinch_foniohopper",
+          "label": "pinch the foniohopper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniohopper. They packed it on the egyptianblue and packed rust around it."]
           ]
         }
       ]
@@ -32685,7 +32719,7 @@
       "name": "Rust Nantokite",
       "desc": "A dry nantokite east of the egyptianblue. Packed rust coats nantokite.",
       "brief": "Dry nantokite, packed rust.",
-      "exits": { "west": { "to": "rust_egyptianblue" }, "east": { "to": "rust_breithauptite" }, "south": { "to": "rust_oatgrits" } },
+      "exits": { "west": { "to": "rust_egyptianblue" }, "east": { "to": "rust_breithauptite" }, "south": { "to": "rust_oatgrits" }, "north": { "to": "rust_teffhopper" } },
       "actions": [
         {
           "id": "pinch_nantokite",
@@ -32694,6 +32728,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nantokite. They packed it on the egyptianblue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffhopper": {
+      "name": "Rust Teffhopper",
+      "desc": "A dry teffhopper north of the nantokite. Packed rust coats teffhopper.",
+      "brief": "Dry teffhopper, packed rust.",
+      "exits": { "south": { "to": "rust_nantokite" } },
+      "actions": [
+        {
+          "id": "pinch_teffhopper",
+          "label": "pinch the teffhopper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffhopper. They packed it on the nantokite and packed rust around it."]
           ]
         }
       ]
@@ -32787,7 +32838,7 @@
       "name": "Rust Leadline",
       "desc": "A dry leadline east of the timberhead. Packed rust coats a leadline.",
       "brief": "Dry leadline, packed rust.",
-      "exits": { "west": { "to": "rust_timberhead" }, "east": { "to": "rust_peakrope" }, "south": { "to": "rust_ryegrits" } },
+      "exits": { "west": { "to": "rust_timberhead" }, "east": { "to": "rust_peakrope" }, "south": { "to": "rust_ryegrits" }, "north": { "to": "rust_barleyhopper" } },
       "actions": [
         {
           "id": "pinch_leadline",
@@ -32796,6 +32847,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard leadline. They bent it on the timberhead and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyhopper": {
+      "name": "Rust Barleyhopper",
+      "desc": "A dry barleyhopper north of the leadline. Packed rust coats barleyhopper.",
+      "brief": "Dry barleyhopper, packed rust.",
+      "exits": { "south": { "to": "rust_leadline" } },
+      "actions": [
+        {
+          "id": "pinch_barleyhopper",
+          "label": "pinch the barleyhopper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyhopper. They packed it on the leadline and packed rust around it."]
           ]
         }
       ]
@@ -32821,7 +32889,7 @@
       "name": "Rust Peakrope",
       "desc": "A dry peakrope east of the leadline. Packed rust coats a peakrope.",
       "brief": "Dry peakrope, packed rust.",
-      "exits": { "west": { "to": "rust_leadline" }, "east": { "to": "rust_graphite" }, "south": { "to": "rust_sorghumgrits" } },
+      "exits": { "west": { "to": "rust_leadline" }, "east": { "to": "rust_graphite" }, "south": { "to": "rust_sorghumgrits" }, "north": { "to": "rust_sorghumhopper" } },
       "actions": [
         {
           "id": "pinch_peakrope",
@@ -32830,6 +32898,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard peakrope. They rove it on the leadline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumhopper": {
+      "name": "Rust Sorghumhopper",
+      "desc": "A dry sorghumhopper north of the peakrope. Packed rust coats sorghumhopper.",
+      "brief": "Dry sorghumhopper, packed rust.",
+      "exits": { "south": { "to": "rust_peakrope" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumhopper",
+          "label": "pinch the sorghumhopper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumhopper. They packed it on the peakrope and packed rust around it."]
           ]
         }
       ]
@@ -32855,7 +32940,7 @@
       "name": "Rust Graphite",
       "desc": "A dry graphite east of the peakrope. Packed rust coats graphite.",
       "brief": "Dry graphite, packed rust.",
-      "exits": { "west": { "to": "rust_peakrope" }, "east": { "to": "rust_dolomite" }, "south": { "to": "rust_milletgrits" } },
+      "exits": { "west": { "to": "rust_peakrope" }, "east": { "to": "rust_dolomite" }, "south": { "to": "rust_milletgrits" }, "north": { "to": "rust_millethopper" } },
       "actions": [
         {
           "id": "pinch_graphite",
@@ -32864,6 +32949,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard graphite. They packed it on the peakrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millethopper": {
+      "name": "Rust Millethopper",
+      "desc": "A dry millethopper north of the graphite. Packed rust coats millethopper.",
+      "brief": "Dry millethopper, packed rust.",
+      "exits": { "south": { "to": "rust_graphite" } },
+      "actions": [
+        {
+          "id": "pinch_millethopper",
+          "label": "pinch the millethopper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millethopper. They packed it on the graphite and packed rust around it."]
           ]
         }
       ]
@@ -32889,7 +32991,7 @@
       "name": "Rust Dolomite",
       "desc": "A dry dolomite east of the graphite. Packed rust coats dolomite.",
       "brief": "Dry dolomite, packed rust.",
-      "exits": { "west": { "to": "rust_graphite" }, "east": { "to": "rust_steatite" }, "south": { "to": "rust_steelcutoats" } },
+      "exits": { "west": { "to": "rust_graphite" }, "east": { "to": "rust_steatite" }, "south": { "to": "rust_steelcutoats" }, "north": { "to": "rust_cornhopper" } },
       "actions": [
         {
           "id": "pinch_dolomite",
@@ -32898,6 +33000,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dolomite. They packed it on the graphite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornhopper": {
+      "name": "Rust Cornhopper",
+      "desc": "A dry cornhopper north of the dolomite. Packed rust coats cornhopper.",
+      "brief": "Dry cornhopper, packed rust.",
+      "exits": { "south": { "to": "rust_dolomite" } },
+      "actions": [
+        {
+          "id": "pinch_cornhopper",
+          "label": "pinch the cornhopper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornhopper. They packed it on the dolomite and packed rust around it."]
           ]
         }
       ]
@@ -32923,7 +33042,7 @@
       "name": "Rust Steatite",
       "desc": "A dry steatite east of the dolomite. Packed rust coats steatite.",
       "brief": "Dry steatite, packed rust.",
-      "exits": { "west": { "to": "rust_dolomite" }, "east": { "to": "rust_colcothar" }, "south": { "to": "rust_farina" } },
+      "exits": { "west": { "to": "rust_dolomite" }, "east": { "to": "rust_colcothar" }, "south": { "to": "rust_farina" }, "north": { "to": "rust_oathopper" } },
       "actions": [
         {
           "id": "pinch_steatite",
@@ -32932,6 +33051,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard steatite. They packed it on the dolomite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oathopper": {
+      "name": "Rust Oathopper",
+      "desc": "A dry oathopper north of the steatite. Packed rust coats oathopper.",
+      "brief": "Dry oathopper, packed rust.",
+      "exits": { "south": { "to": "rust_steatite" } },
+      "actions": [
+        {
+          "id": "pinch_oathopper",
+          "label": "pinch the oathopper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oathopper. They packed it on the steatite and packed rust around it."]
           ]
         }
       ]
@@ -51772,16 +51908,25 @@
     "go north",
     "go east",
     "pinch the siderite",
+    "go north",
+    "pinch the durumhopper",
+    "go south",
     "go south",
     "pinch the barleygrits",
     "go north",
     "go east",
     "pinch the egyptianblue",
+    "go north",
+    "pinch the foniohopper",
+    "go south",
     "go south",
     "pinch the wheatgrits",
     "go north",
     "go east",
     "pinch the nantokite",
+    "go north",
+    "pinch the teffhopper",
+    "go south",
     "go south",
     "pinch the oatgrits",
     "go north",
@@ -51807,26 +51952,41 @@
     "pinch the timberhead",
     "go east",
     "pinch the leadline",
+    "go north",
+    "pinch the barleyhopper",
+    "go south",
     "go south",
     "pinch the ryegrits",
     "go north",
     "go east",
     "pinch the peakrope",
+    "go north",
+    "pinch the sorghumhopper",
+    "go south",
     "go south",
     "pinch the sorghumgrits",
     "go north",
     "go east",
     "pinch the graphite",
+    "go north",
+    "pinch the millethopper",
+    "go south",
     "go south",
     "pinch the milletgrits",
     "go north",
     "go east",
     "pinch the dolomite",
+    "go north",
+    "pinch the cornhopper",
+    "go south",
     "go south",
     "pinch the steelcutoats",
     "go north",
     "go east",
     "pinch the steatite",
+    "go north",
+    "pinch the oathopper",
+    "go south",
     "go south",
     "pinch the farina",
     "go north",
