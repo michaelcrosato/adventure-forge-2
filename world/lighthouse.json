@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14650,
+  "maxScore": 14690,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -24015,7 +24015,7 @@
       "name": "Rust Okan",
       "desc": "A dry okan east of the cabreuva. Packed rust coats okan.",
       "brief": "Dry okan, packed rust.",
-      "exits": { "west": { "to": "rust_cabreuva" }, "east": { "to": "rust_kempas" }, "south": { "to": "rust_oatgermflake" } },
+      "exits": { "west": { "to": "rust_cabreuva" }, "east": { "to": "rust_kempas" }, "south": { "to": "rust_oatgermflake" }, "north": { "to": "rust_durumdemijohn" } },
       "actions": [
         {
           "id": "pinch_okan",
@@ -24024,6 +24024,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard okan. They packed it on the cabreuva and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumdemijohn": {
+      "name": "Rust Durumdemijohn",
+      "desc": "A dry durumdemijohn north of the okan. Packed rust coats durumdemijohn.",
+      "brief": "Dry durumdemijohn, packed rust.",
+      "exits": { "south": { "to": "rust_okan" } },
+      "actions": [
+        {
+          "id": "pinch_durumdemijohn",
+          "label": "pinch the durumdemijohn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumdemijohn. They packed it on the okan and packed rust around it."]
           ]
         }
       ]
@@ -24049,7 +24066,7 @@
       "name": "Rust Kempas",
       "desc": "A dry kempas east of the okan. Packed rust coats kempas.",
       "brief": "Dry kempas, packed rust.",
-      "exits": { "west": { "to": "rust_okan" }, "east": { "to": "rust_mayapis" }, "south": { "to": "rust_ryegermflake" } },
+      "exits": { "west": { "to": "rust_okan" }, "east": { "to": "rust_mayapis" }, "south": { "to": "rust_ryegermflake" }, "north": { "to": "rust_foniodemijohn" } },
       "actions": [
         {
           "id": "pinch_kempas",
@@ -24058,6 +24075,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kempas. They packed it on the okan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniodemijohn": {
+      "name": "Rust Foniodemijohn",
+      "desc": "A dry foniodemijohn north of the kempas. Packed rust coats foniodemijohn.",
+      "brief": "Dry foniodemijohn, packed rust.",
+      "exits": { "south": { "to": "rust_kempas" } },
+      "actions": [
+        {
+          "id": "pinch_foniodemijohn",
+          "label": "pinch the foniodemijohn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniodemijohn. They packed it on the kempas and packed rust around it."]
           ]
         }
       ]
@@ -24083,7 +24117,7 @@
       "name": "Rust Mayapis",
       "desc": "A dry mayapis east of the kempas. Packed rust coats mayapis.",
       "brief": "Dry mayapis, packed rust.",
-      "exits": { "west": { "to": "rust_kempas" }, "east": { "to": "rust_babul" }, "south": { "to": "rust_wheatgermflake" } },
+      "exits": { "west": { "to": "rust_kempas" }, "east": { "to": "rust_babul" }, "south": { "to": "rust_wheatgermflake" }, "north": { "to": "rust_teffdemijohn" } },
       "actions": [
         {
           "id": "pinch_mayapis",
@@ -24092,6 +24126,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mayapis. They packed it on the kempas and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffdemijohn": {
+      "name": "Rust Teffdemijohn",
+      "desc": "A dry teffdemijohn north of the mayapis. Packed rust coats teffdemijohn.",
+      "brief": "Dry teffdemijohn, packed rust.",
+      "exits": { "south": { "to": "rust_mayapis" } },
+      "actions": [
+        {
+          "id": "pinch_teffdemijohn",
+          "label": "pinch the teffdemijohn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffdemijohn. They packed it on the mayapis and packed rust around it."]
           ]
         }
       ]
@@ -24117,7 +24168,7 @@
       "name": "Rust Babul",
       "desc": "A dry babul east of the mayapis. Packed rust coats babul.",
       "brief": "Dry babul, packed rust.",
-      "exits": { "west": { "to": "rust_mayapis" }, "east": { "to": "rust_tallowwood" }, "south": { "to": "rust_durumfeedflake" } },
+      "exits": { "west": { "to": "rust_mayapis" }, "east": { "to": "rust_tallowwood" }, "south": { "to": "rust_durumfeedflake" }, "north": { "to": "rust_barleydemijohn" } },
       "actions": [
         {
           "id": "pinch_babul",
@@ -24126,6 +24177,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard babul. They packed it on the mayapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleydemijohn": {
+      "name": "Rust Barleydemijohn",
+      "desc": "A dry barleydemijohn north of the babul. Packed rust coats barleydemijohn.",
+      "brief": "Dry barleydemijohn, packed rust.",
+      "exits": { "south": { "to": "rust_babul" } },
+      "actions": [
+        {
+          "id": "pinch_barleydemijohn",
+          "label": "pinch the barleydemijohn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleydemijohn. They packed it on the babul and packed rust around it."]
           ]
         }
       ]
@@ -24185,7 +24253,7 @@
       "name": "Rust Pintle",
       "desc": "A dry pintle east of the hilt. Packed rust coats a pintle.",
       "brief": "Dry pintle, packed rust.",
-      "exits": { "west": { "to": "rust_hilt" }, "east": { "to": "rust_splice" }, "south": { "to": "rust_foniofeedflake" } },
+      "exits": { "west": { "to": "rust_hilt" }, "east": { "to": "rust_splice" }, "south": { "to": "rust_foniofeedflake" }, "north": { "to": "rust_sorghumdemijohn" } },
       "actions": [
         {
           "id": "pinch_pintle",
@@ -24194,6 +24262,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pintle. They pinned it through the hilt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumdemijohn": {
+      "name": "Rust Sorghumdemijohn",
+      "desc": "A dry sorghumdemijohn north of the pintle. Packed rust coats sorghumdemijohn.",
+      "brief": "Dry sorghumdemijohn, packed rust.",
+      "exits": { "south": { "to": "rust_pintle" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumdemijohn",
+          "label": "pinch the sorghumdemijohn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumdemijohn. They packed it on the pintle and packed rust around it."]
           ]
         }
       ]
@@ -24219,7 +24304,7 @@
       "name": "Rust Splice",
       "desc": "A dry splice east of the pintle. Packed rust coats a splice.",
       "brief": "Dry splice, packed rust.",
-      "exits": { "west": { "to": "rust_pintle" }, "east": { "to": "rust_tungoil" }, "south": { "to": "rust_tefffeedflake" } },
+      "exits": { "west": { "to": "rust_pintle" }, "east": { "to": "rust_tungoil" }, "south": { "to": "rust_tefffeedflake" }, "north": { "to": "rust_milletdemijohn" } },
       "actions": [
         {
           "id": "pinch_splice",
@@ -24228,6 +24313,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard splice. They joined it on the pintle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletdemijohn": {
+      "name": "Rust Milletdemijohn",
+      "desc": "A dry milletdemijohn north of the splice. Packed rust coats milletdemijohn.",
+      "brief": "Dry milletdemijohn, packed rust.",
+      "exits": { "south": { "to": "rust_splice" } },
+      "actions": [
+        {
+          "id": "pinch_milletdemijohn",
+          "label": "pinch the milletdemijohn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletdemijohn. They packed it on the splice and packed rust around it."]
           ]
         }
       ]
@@ -24661,7 +24763,7 @@
       "name": "Rust Spunyarn",
       "desc": "A dry spunyarn east of the scuttle. Packed rust coats spunyarn.",
       "brief": "Dry spunyarn, packed rust.",
-      "exits": { "west": { "to": "rust_scuttle" }, "east": { "to": "rust_houndband" }, "south": { "to": "rust_barleyfeedflake" } },
+      "exits": { "west": { "to": "rust_scuttle" }, "east": { "to": "rust_houndband" }, "south": { "to": "rust_barleyfeedflake" }, "north": { "to": "rust_corndemijohn" } },
       "actions": [
         {
           "id": "pinch_spunyarn",
@@ -24670,6 +24772,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spunyarn. They laid it on the scuttle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corndemijohn": {
+      "name": "Rust Corndemijohn",
+      "desc": "A dry corndemijohn north of the spunyarn. Packed rust coats corndemijohn.",
+      "brief": "Dry corndemijohn, packed rust.",
+      "exits": { "south": { "to": "rust_spunyarn" } },
+      "actions": [
+        {
+          "id": "pinch_corndemijohn",
+          "label": "pinch the corndemijohn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corndemijohn. They packed it on the spunyarn and packed rust around it."]
           ]
         }
       ]
@@ -24695,7 +24814,7 @@
       "name": "Rust Houndband",
       "desc": "A dry houndband east of the spunyarn. Packed rust coats a houndband.",
       "brief": "Dry houndband, packed rust.",
-      "exits": { "west": { "to": "rust_spunyarn" }, "east": { "to": "rust_copaiba" }, "south": { "to": "rust_sorghumfeedflake" } },
+      "exits": { "west": { "to": "rust_spunyarn" }, "east": { "to": "rust_copaiba" }, "south": { "to": "rust_sorghumfeedflake" }, "north": { "to": "rust_oatdemijohn" } },
       "actions": [
         {
           "id": "pinch_houndband",
@@ -24704,6 +24823,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard houndband. They banded it on the spunyarn and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatdemijohn": {
+      "name": "Rust Oatdemijohn",
+      "desc": "A dry oatdemijohn north of the houndband. Packed rust coats oatdemijohn.",
+      "brief": "Dry oatdemijohn, packed rust.",
+      "exits": { "south": { "to": "rust_houndband" } },
+      "actions": [
+        {
+          "id": "pinch_oatdemijohn",
+          "label": "pinch the oatdemijohn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatdemijohn. They packed it on the houndband and packed rust around it."]
           ]
         }
       ]
@@ -54001,21 +54137,33 @@
     "go north",
     "go east",
     "pinch the okan",
+    "go north",
+    "pinch the durumdemijohn",
+    "go south",
     "go south",
     "pinch the oatgermflake",
     "go north",
     "go east",
     "pinch the kempas",
+    "go north",
+    "pinch the foniodemijohn",
+    "go south",
     "go south",
     "pinch the ryegermflake",
     "go north",
     "go east",
     "pinch the mayapis",
+    "go north",
+    "pinch the teffdemijohn",
+    "go south",
     "go south",
     "pinch the wheatgermflake",
     "go north",
     "go east",
     "pinch the babul",
+    "go north",
+    "pinch the barleydemijohn",
+    "go south",
     "go south",
     "pinch the durumfeedflake",
     "go north",
@@ -54036,11 +54184,17 @@
     "go east",
     "go east",
     "pinch the pintle",
+    "go north",
+    "pinch the sorghumdemijohn",
+    "go south",
     "go south",
     "pinch the foniofeedflake",
     "go north",
     "go east",
     "pinch the splice",
+    "go north",
+    "pinch the milletdemijohn",
+    "go south",
     "go south",
     "pinch the tefffeedflake",
     "go north",
@@ -54061,11 +54215,17 @@
     "pinch the scuttle",
     "go east",
     "pinch the spunyarn",
+    "go north",
+    "pinch the corndemijohn",
+    "go south",
     "go south",
     "pinch the barleyfeedflake",
     "go north",
     "go east",
     "pinch the houndband",
+    "go north",
+    "pinch the oatdemijohn",
+    "go south",
     "go south",
     "pinch the sorghumfeedflake",
     "go north",
