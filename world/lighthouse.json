@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 16050,
+  "maxScore": 16090,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13203,7 +13203,7 @@
       "name": "Rust Cidergum",
       "desc": "A dry cidergum east of the jetblack. Packed rust coats cidergum.",
       "brief": "Dry cidergum, packed rust.",
-      "exits": { "west": { "to": "rust_jetblack" }, "east": { "to": "rust_bottlebrush" }, "south": { "to": "rust_oats" } },
+      "exits": { "west": { "to": "rust_jetblack" }, "east": { "to": "rust_bottlebrush" }, "south": { "to": "rust_oats" }, "north": { "to": "rust_durumsovereign" } },
       "actions": [
         {
           "id": "pinch_cidergum",
@@ -13212,6 +13212,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cidergum. They packed it on the jetblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumsovereign": {
+      "name": "Rust Durumsovereign",
+      "desc": "A dry durumsovereign north of the cidergum. Packed rust coats durumsovereign.",
+      "brief": "Dry durumsovereign, packed rust.",
+      "exits": { "south": { "to": "rust_cidergum" } },
+      "actions": [
+        {
+          "id": "pinch_durumsovereign",
+          "label": "pinch the durumsovereign",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumsovereign. They packed it on the cidergum and packed rust around it."]
           ]
         }
       ]
@@ -13237,7 +13254,7 @@
       "name": "Rust Bottlebrush",
       "desc": "A dry bottlebrush east of the cidergum. Packed rust coats bottlebrush.",
       "brief": "Dry bottlebrush, packed rust.",
-      "exits": { "west": { "to": "rust_cidergum" }, "east": { "to": "rust_radiatapine" }, "south": { "to": "rust_rye" } },
+      "exits": { "west": { "to": "rust_cidergum" }, "east": { "to": "rust_radiatapine" }, "south": { "to": "rust_rye" }, "north": { "to": "rust_foniosovereign" } },
       "actions": [
         {
           "id": "pinch_bottlebrush",
@@ -13246,6 +13263,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bottlebrush. They packed it on the cidergum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniosovereign": {
+      "name": "Rust Foniosovereign",
+      "desc": "A dry foniosovereign north of the bottlebrush. Packed rust coats foniosovereign.",
+      "brief": "Dry foniosovereign, packed rust.",
+      "exits": { "south": { "to": "rust_bottlebrush" } },
+      "actions": [
+        {
+          "id": "pinch_foniosovereign",
+          "label": "pinch the foniosovereign",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniosovereign. They packed it on the bottlebrush and packed rust around it."]
           ]
         }
       ]
@@ -13271,7 +13305,7 @@
       "name": "Rust Radiatapine",
       "desc": "A dry radiatapine east of the bottlebrush. Packed rust coats radiatapine.",
       "brief": "Dry radiatapine, packed rust.",
-      "exits": { "west": { "to": "rust_bottlebrush" }, "east": { "to": "rust_dawnredwood" }, "south": { "to": "rust_millet" } },
+      "exits": { "west": { "to": "rust_bottlebrush" }, "east": { "to": "rust_dawnredwood" }, "south": { "to": "rust_millet" }, "north": { "to": "rust_teffsovereign" } },
       "actions": [
         {
           "id": "pinch_radiatapine",
@@ -13280,6 +13314,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard radiatapine. They packed it on the bottlebrush and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffsovereign": {
+      "name": "Rust Teffsovereign",
+      "desc": "A dry teffsovereign north of the radiatapine. Packed rust coats teffsovereign.",
+      "brief": "Dry teffsovereign, packed rust.",
+      "exits": { "south": { "to": "rust_radiatapine" } },
+      "actions": [
+        {
+          "id": "pinch_teffsovereign",
+          "label": "pinch the teffsovereign",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffsovereign. They packed it on the radiatapine and packed rust around it."]
           ]
         }
       ]
@@ -13305,7 +13356,7 @@
       "name": "Rust Dawnredwood",
       "desc": "A dry dawnredwood east of the radiatapine. Packed rust coats dawnredwood.",
       "brief": "Dry dawnredwood, packed rust.",
-      "exits": { "west": { "to": "rust_radiatapine" }, "east": { "to": "rust_kanuka" }, "south": { "to": "rust_milo" } },
+      "exits": { "west": { "to": "rust_radiatapine" }, "east": { "to": "rust_kanuka" }, "south": { "to": "rust_milo" }, "north": { "to": "rust_barleysovereign" } },
       "actions": [
         {
           "id": "pinch_dawnredwood",
@@ -13314,6 +13365,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dawnredwood. They packed it on the radiatapine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleysovereign": {
+      "name": "Rust Barleysovereign",
+      "desc": "A dry barleysovereign north of the dawnredwood. Packed rust coats barleysovereign.",
+      "brief": "Dry barleysovereign, packed rust.",
+      "exits": { "south": { "to": "rust_dawnredwood" } },
+      "actions": [
+        {
+          "id": "pinch_barleysovereign",
+          "label": "pinch the barleysovereign",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleysovereign. They packed it on the dawnredwood and packed rust around it."]
           ]
         }
       ]
@@ -13390,7 +13458,7 @@
       "name": "Rust Belaying",
       "desc": "A dry belaying east of the lizard. Packed rust coats belaying.",
       "brief": "Dry belaying, packed rust.",
-      "exits": { "west": { "to": "rust_lizard" }, "east": { "to": "rust_olibanum" }, "south": { "to": "rust_sorghum" } },
+      "exits": { "west": { "to": "rust_lizard" }, "east": { "to": "rust_olibanum" }, "south": { "to": "rust_sorghum" }, "north": { "to": "rust_sorghumsovereign" } },
       "actions": [
         {
           "id": "pinch_belaying",
@@ -13399,6 +13467,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard belaying. They made it on the lizard and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumsovereign": {
+      "name": "Rust Sorghumsovereign",
+      "desc": "A dry sorghumsovereign north of the belaying. Packed rust coats sorghumsovereign.",
+      "brief": "Dry sorghumsovereign, packed rust.",
+      "exits": { "south": { "to": "rust_belaying" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumsovereign",
+          "label": "pinch the sorghumsovereign",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumsovereign. They packed it on the belaying and packed rust around it."]
           ]
         }
       ]
@@ -13424,7 +13509,7 @@
       "name": "Rust Olibanum",
       "desc": "A dry olibanum east of the belaying. Packed rust coats olibanum.",
       "brief": "Dry olibanum, packed rust.",
-      "exits": { "west": { "to": "rust_belaying" }, "east": { "to": "rust_ribbongum" }, "south": { "to": "rust_quinoa" } },
+      "exits": { "west": { "to": "rust_belaying" }, "east": { "to": "rust_ribbongum" }, "south": { "to": "rust_quinoa" }, "north": { "to": "rust_milletsovereign" } },
       "actions": [
         {
           "id": "pinch_olibanum",
@@ -13433,6 +13518,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard olibanum. They packed it on the belaying and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletsovereign": {
+      "name": "Rust Milletsovereign",
+      "desc": "A dry milletsovereign north of the olibanum. Packed rust coats milletsovereign.",
+      "brief": "Dry milletsovereign, packed rust.",
+      "exits": { "south": { "to": "rust_olibanum" } },
+      "actions": [
+        {
+          "id": "pinch_milletsovereign",
+          "label": "pinch the milletsovereign",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletsovereign. They packed it on the olibanum and packed rust around it."]
           ]
         }
       ]
@@ -13458,7 +13560,7 @@
       "name": "Rust Ribbongum",
       "desc": "A dry ribbongum east of the olibanum. Packed rust coats ribbongum.",
       "brief": "Dry ribbongum, packed rust.",
-      "exits": { "west": { "to": "rust_olibanum" }, "east": { "to": "rust_acacia" }, "south": { "to": "rust_raffia" } },
+      "exits": { "west": { "to": "rust_olibanum" }, "east": { "to": "rust_acacia" }, "south": { "to": "rust_raffia" }, "north": { "to": "rust_cornsovereign" } },
       "actions": [
         {
           "id": "pinch_ribbongum",
@@ -13467,6 +13569,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ribbongum. They packed it on the olibanum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornsovereign": {
+      "name": "Rust Cornsovereign",
+      "desc": "A dry cornsovereign north of the ribbongum. Packed rust coats cornsovereign.",
+      "brief": "Dry cornsovereign, packed rust.",
+      "exits": { "south": { "to": "rust_ribbongum" } },
+      "actions": [
+        {
+          "id": "pinch_cornsovereign",
+          "label": "pinch the cornsovereign",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornsovereign. They packed it on the ribbongum and packed rust around it."]
           ]
         }
       ]
@@ -13492,7 +13611,7 @@
       "name": "Rust Acacia",
       "desc": "A dry acacia east of the ribbongum. Packed rust coats acacia.",
       "brief": "Dry acacia, packed rust.",
-      "exits": { "west": { "to": "rust_ribbongum" }, "east": { "to": "rust_blackpine" }, "south": { "to": "rust_bast" } },
+      "exits": { "west": { "to": "rust_ribbongum" }, "east": { "to": "rust_blackpine" }, "south": { "to": "rust_bast" }, "north": { "to": "rust_oatsovereign" } },
       "actions": [
         {
           "id": "pinch_acacia",
@@ -13501,6 +13620,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard acacia. They packed it on the ribbongum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatsovereign": {
+      "name": "Rust Oatsovereign",
+      "desc": "A dry oatsovereign north of the acacia. Packed rust coats oatsovereign.",
+      "brief": "Dry oatsovereign, packed rust.",
+      "exits": { "south": { "to": "rust_acacia" } },
+      "actions": [
+        {
+          "id": "pinch_oatsovereign",
+          "label": "pinch the oatsovereign",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatsovereign. They packed it on the acacia and packed rust around it."]
           ]
         }
       ]
@@ -56796,21 +56932,33 @@
     "go north",
     "go east",
     "pinch the cidergum",
+    "go north",
+    "pinch the durumsovereign",
+    "go south",
     "go south",
     "pinch the oats",
     "go north",
     "go east",
     "pinch the bottlebrush",
+    "go north",
+    "pinch the foniosovereign",
+    "go south",
     "go south",
     "pinch the rye",
     "go north",
     "go east",
     "pinch the radiatapine",
+    "go north",
+    "pinch the teffsovereign",
+    "go south",
     "go south",
     "pinch the millet",
     "go north",
     "go east",
     "pinch the dawnredwood",
+    "go north",
+    "pinch the barleysovereign",
+    "go south",
     "go south",
     "pinch the milo",
     "go north",
@@ -56832,21 +56980,33 @@
     "pinch the lizard",
     "go east",
     "pinch the belaying",
+    "go north",
+    "pinch the sorghumsovereign",
+    "go south",
     "go south",
     "pinch the sorghum",
     "go north",
     "go east",
     "pinch the olibanum",
+    "go north",
+    "pinch the milletsovereign",
+    "go south",
     "go south",
     "pinch the quinoa",
     "go north",
     "go east",
     "pinch the ribbongum",
+    "go north",
+    "pinch the cornsovereign",
+    "go south",
     "go south",
     "pinch the raffia",
     "go north",
     "go east",
     "pinch the acacia",
+    "go north",
+    "pinch the oatsovereign",
+    "go south",
     "go south",
     "pinch the bast",
     "go north",
