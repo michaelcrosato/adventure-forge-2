@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14970,
+  "maxScore": 15010,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -21618,7 +21618,7 @@
       "name": "Rust Parcelling",
       "desc": "A dry parcelling east of the striker. Packed rust coats parcelling.",
       "brief": "Dry parcelling, packed rust.",
-      "exits": { "west": { "to": "rust_striker" }, "east": { "to": "rust_throatseizing" }, "south": { "to": "rust_sorghumbreak" } },
+      "exits": { "west": { "to": "rust_striker" }, "east": { "to": "rust_throatseizing" }, "south": { "to": "rust_sorghumbreak" }, "north": { "to": "rust_teffhogshead" } },
       "actions": [
         {
           "id": "pinch_parcelling",
@@ -21627,6 +21627,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard parcelling. They wrapped it on the striker and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffhogshead": {
+      "name": "Rust Teffhogshead",
+      "desc": "A dry teffhogshead north of the parcelling. Packed rust coats teffhogshead.",
+      "brief": "Dry teffhogshead, packed rust.",
+      "exits": { "south": { "to": "rust_parcelling" } },
+      "actions": [
+        {
+          "id": "pinch_teffhogshead",
+          "label": "pinch the teffhogshead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffhogshead. They packed it on the parcelling and packed rust around it."]
           ]
         }
       ]
@@ -21652,7 +21669,7 @@
       "name": "Rust Throatseizing",
       "desc": "A dry throatseizing east of the parcelling. Packed rust coats a throatseizing.",
       "brief": "Dry throatseizing, packed rust.",
-      "exits": { "west": { "to": "rust_parcelling" }, "east": { "to": "rust_fishglue" }, "south": { "to": "rust_milletbreak" } },
+      "exits": { "west": { "to": "rust_parcelling" }, "east": { "to": "rust_fishglue" }, "south": { "to": "rust_milletbreak" }, "north": { "to": "rust_barleyhogshead" } },
       "actions": [
         {
           "id": "pinch_throatseizing",
@@ -21661,6 +21678,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard throatseizing. They bound it on the parcelling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyhogshead": {
+      "name": "Rust Barleyhogshead",
+      "desc": "A dry barleyhogshead north of the throatseizing. Packed rust coats barleyhogshead.",
+      "brief": "Dry barleyhogshead, packed rust.",
+      "exits": { "south": { "to": "rust_throatseizing" } },
+      "actions": [
+        {
+          "id": "pinch_barleyhogshead",
+          "label": "pinch the barleyhogshead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyhogshead. They packed it on the throatseizing and packed rust around it."]
           ]
         }
       ]
@@ -21686,7 +21720,7 @@
       "name": "Rust Fishglue",
       "desc": "A dry fishglue east of the throatseizing. Packed rust coats fishglue.",
       "brief": "Dry fishglue, packed rust.",
-      "exits": { "west": { "to": "rust_throatseizing" }, "east": { "to": "rust_aniegre" }, "south": { "to": "rust_cornbreak" } },
+      "exits": { "west": { "to": "rust_throatseizing" }, "east": { "to": "rust_aniegre" }, "south": { "to": "rust_cornbreak" }, "north": { "to": "rust_sorghumhogshead" } },
       "actions": [
         {
           "id": "pinch_fishglue",
@@ -21695,6 +21729,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fishglue. They packed it on the throatseizing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumhogshead": {
+      "name": "Rust Sorghumhogshead",
+      "desc": "A dry sorghumhogshead north of the fishglue. Packed rust coats sorghumhogshead.",
+      "brief": "Dry sorghumhogshead, packed rust.",
+      "exits": { "south": { "to": "rust_fishglue" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumhogshead",
+          "label": "pinch the sorghumhogshead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumhogshead. They packed it on the fishglue and packed rust around it."]
           ]
         }
       ]
@@ -21720,7 +21771,7 @@
       "name": "Rust Aniegre",
       "desc": "A dry aniegre east of the fishglue. Packed rust coats aniegre.",
       "brief": "Dry aniegre, packed rust.",
-      "exits": { "west": { "to": "rust_fishglue" }, "east": { "to": "rust_ucuuba" }, "south": { "to": "rust_oatbreak" } },
+      "exits": { "west": { "to": "rust_fishglue" }, "east": { "to": "rust_ucuuba" }, "south": { "to": "rust_oatbreak" }, "north": { "to": "rust_millethogshead" } },
       "actions": [
         {
           "id": "pinch_aniegre",
@@ -21729,6 +21780,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard aniegre. They packed it on the fishglue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millethogshead": {
+      "name": "Rust Millethogshead",
+      "desc": "A dry millethogshead north of the aniegre. Packed rust coats millethogshead.",
+      "brief": "Dry millethogshead, packed rust.",
+      "exits": { "south": { "to": "rust_aniegre" } },
+      "actions": [
+        {
+          "id": "pinch_millethogshead",
+          "label": "pinch the millethogshead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millethogshead. They packed it on the aniegre and packed rust around it."]
           ]
         }
       ]
@@ -21754,7 +21822,7 @@
       "name": "Rust Ucuuba",
       "desc": "A dry ucuuba east of the aniegre. Packed rust coats ucuuba.",
       "brief": "Dry ucuuba, packed rust.",
-      "exits": { "west": { "to": "rust_aniegre" }, "east": { "to": "rust_mersawa" }, "south": { "to": "rust_ryebreak" } },
+      "exits": { "west": { "to": "rust_aniegre" }, "east": { "to": "rust_mersawa" }, "south": { "to": "rust_ryebreak" }, "north": { "to": "rust_cornhogshead" } },
       "actions": [
         {
           "id": "pinch_ucuuba",
@@ -21763,6 +21831,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ucuuba. They packed it on the aniegre and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornhogshead": {
+      "name": "Rust Cornhogshead",
+      "desc": "A dry cornhogshead north of the ucuuba. Packed rust coats cornhogshead.",
+      "brief": "Dry cornhogshead, packed rust.",
+      "exits": { "south": { "to": "rust_ucuuba" } },
+      "actions": [
+        {
+          "id": "pinch_cornhogshead",
+          "label": "pinch the cornhogshead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornhogshead. They packed it on the ucuuba and packed rust around it."]
           ]
         }
       ]
@@ -21788,7 +21873,7 @@
       "name": "Rust Mersawa",
       "desc": "A dry mersawa east of the ucuuba. Packed rust coats mersawa.",
       "brief": "Dry mersawa, packed rust.",
-      "exits": { "west": { "to": "rust_ucuuba" }, "east": { "to": "rust_petaling" }, "south": { "to": "rust_wheatbreak" } },
+      "exits": { "west": { "to": "rust_ucuuba" }, "east": { "to": "rust_petaling" }, "south": { "to": "rust_wheatbreak" }, "north": { "to": "rust_oathogshead" } },
       "actions": [
         {
           "id": "pinch_mersawa",
@@ -21797,6 +21882,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mersawa. They packed it on the ucuuba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oathogshead": {
+      "name": "Rust Oathogshead",
+      "desc": "A dry oathogshead north of the mersawa. Packed rust coats oathogshead.",
+      "brief": "Dry oathogshead, packed rust.",
+      "exits": { "south": { "to": "rust_mersawa" } },
+      "actions": [
+        {
+          "id": "pinch_oathogshead",
+          "label": "pinch the oathogshead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oathogshead. They packed it on the mersawa and packed rust around it."]
           ]
         }
       ]
@@ -25596,7 +25698,7 @@
       "name": "Rust Leatherwood",
       "desc": "A dry leatherwood east of the callistemon. Packed rust coats leatherwood.",
       "brief": "Dry leatherwood, packed rust.",
-      "exits": { "west": { "to": "rust_callistemon" }, "east": { "to": "rust_lodgepole" }, "south": { "to": "rust_teffbreak" } },
+      "exits": { "west": { "to": "rust_callistemon" }, "east": { "to": "rust_lodgepole" }, "south": { "to": "rust_teffbreak" }, "north": { "to": "rust_durumhogshead" } },
       "actions": [
         {
           "id": "pinch_leatherwood",
@@ -25605,6 +25707,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard leatherwood. They packed it on the callistemon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumhogshead": {
+      "name": "Rust Durumhogshead",
+      "desc": "A dry durumhogshead north of the leatherwood. Packed rust coats durumhogshead.",
+      "brief": "Dry durumhogshead, packed rust.",
+      "exits": { "south": { "to": "rust_leatherwood" } },
+      "actions": [
+        {
+          "id": "pinch_durumhogshead",
+          "label": "pinch the durumhogshead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumhogshead. They packed it on the leatherwood and packed rust around it."]
           ]
         }
       ]
@@ -25630,7 +25749,7 @@
       "name": "Rust Lodgepole",
       "desc": "A dry lodgepole east of the leatherwood. Packed rust coats lodgepole.",
       "brief": "Dry lodgepole, packed rust.",
-      "exits": { "west": { "to": "rust_leatherwood" }, "east": { "to": "rust_westernred" }, "south": { "to": "rust_barleybreak" } },
+      "exits": { "west": { "to": "rust_leatherwood" }, "east": { "to": "rust_westernred" }, "south": { "to": "rust_barleybreak" }, "north": { "to": "rust_foniohogshead" } },
       "actions": [
         {
           "id": "pinch_lodgepole",
@@ -25639,6 +25758,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lodgepole. They packed it on the leatherwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniohogshead": {
+      "name": "Rust Foniohogshead",
+      "desc": "A dry foniohogshead north of the lodgepole. Packed rust coats foniohogshead.",
+      "brief": "Dry foniohogshead, packed rust.",
+      "exits": { "south": { "to": "rust_lodgepole" } },
+      "actions": [
+        {
+          "id": "pinch_foniohogshead",
+          "label": "pinch the foniohogshead",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniohogshead. They packed it on the lodgepole and packed rust around it."]
           ]
         }
       ]
@@ -54645,11 +54781,17 @@
     "go north",
     "go east",
     "pinch the leatherwood",
+    "go north",
+    "pinch the durumhogshead",
+    "go south",
     "go south",
     "pinch the teffbreak",
     "go north",
     "go east",
     "pinch the lodgepole",
+    "go north",
+    "pinch the foniohogshead",
+    "go south",
     "go south",
     "pinch the barleybreak",
     "go north",
@@ -54674,31 +54816,49 @@
     "pinch the striker",
     "go east",
     "pinch the parcelling",
+    "go north",
+    "pinch the teffhogshead",
+    "go south",
     "go south",
     "pinch the sorghumbreak",
     "go north",
     "go east",
     "pinch the throatseizing",
+    "go north",
+    "pinch the barleyhogshead",
+    "go south",
     "go south",
     "pinch the milletbreak",
     "go north",
     "go east",
     "pinch the fishglue",
+    "go north",
+    "pinch the sorghumhogshead",
+    "go south",
     "go south",
     "pinch the cornbreak",
     "go north",
     "go east",
     "pinch the aniegre",
+    "go north",
+    "pinch the millethogshead",
+    "go south",
     "go south",
     "pinch the oatbreak",
     "go north",
     "go east",
     "pinch the ucuuba",
+    "go north",
+    "pinch the cornhogshead",
+    "go south",
     "go south",
     "pinch the ryebreak",
     "go north",
     "go east",
     "pinch the mersawa",
+    "go north",
+    "pinch the oathogshead",
+    "go south",
     "go south",
     "pinch the wheatbreak",
     "go north",
