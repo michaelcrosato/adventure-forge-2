@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9370,
+  "maxScore": 9410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -28928,7 +28928,7 @@
       "name": "Rust Boxwood",
       "desc": "A dry boxwood east of the copra. Packed rust coats boxwood.",
       "brief": "Dry boxwood, packed rust.",
-      "exits": { "west": { "to": "rust_copra" }, "east": { "to": "rust_sycamore" } },
+      "exits": { "west": { "to": "rust_copra" }, "east": { "to": "rust_sycamore" }, "south": { "to": "rust_pistia" } },
       "actions": [
         {
           "id": "pinch_boxwood",
@@ -28941,11 +28941,28 @@
         }
       ]
     },
+    "rust_pistia": {
+      "name": "Rust Pistia",
+      "desc": "A dry pistia south of the boxwood. Packed rust coats pistia.",
+      "brief": "Dry pistia, packed rust.",
+      "exits": { "north": { "to": "rust_boxwood" } },
+      "actions": [
+        {
+          "id": "pinch_pistia",
+          "label": "pinch the pistia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pistia. They packed it on the boxwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sycamore": {
       "name": "Rust Sycamore",
       "desc": "A dry sycamore east of the boxwood. Packed rust coats sycamore.",
       "brief": "Dry sycamore, packed rust.",
-      "exits": { "west": { "to": "rust_boxwood" }, "east": { "to": "rust_caulk" } },
+      "exits": { "west": { "to": "rust_boxwood" }, "east": { "to": "rust_caulk" }, "south": { "to": "rust_wolffia" } },
       "actions": [
         {
           "id": "pinch_sycamore",
@@ -28958,11 +28975,28 @@
         }
       ]
     },
+    "rust_wolffia": {
+      "name": "Rust Wolffia",
+      "desc": "A dry wolffia south of the sycamore. Packed rust coats wolffia.",
+      "brief": "Dry wolffia, packed rust.",
+      "exits": { "north": { "to": "rust_sycamore" } },
+      "actions": [
+        {
+          "id": "pinch_wolffia",
+          "label": "pinch the wolffia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wolffia. They packed it on the sycamore and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_caulk": {
       "name": "Rust Caulk",
       "desc": "A dry caulk east of the sycamore. Packed rust coats caulk.",
       "brief": "Dry caulk, packed rust.",
-      "exits": { "west": { "to": "rust_sycamore" }, "east": { "to": "rust_leadwhite" } },
+      "exits": { "west": { "to": "rust_sycamore" }, "east": { "to": "rust_leadwhite" }, "south": { "to": "rust_lemna" } },
       "actions": [
         {
           "id": "pinch_caulk",
@@ -28975,11 +29009,28 @@
         }
       ]
     },
+    "rust_lemna": {
+      "name": "Rust Lemna",
+      "desc": "A dry lemna south of the caulk. Packed rust coats lemna.",
+      "brief": "Dry lemna, packed rust.",
+      "exits": { "north": { "to": "rust_caulk" } },
+      "actions": [
+        {
+          "id": "pinch_lemna",
+          "label": "pinch the lemna",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lemna. They packed it on the caulk and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_leadwhite": {
       "name": "Rust Leadwhite",
       "desc": "A dry leadwhite east of the caulk. Packed rust coats leadwhite.",
       "brief": "Dry leadwhite, packed rust.",
-      "exits": { "west": { "to": "rust_caulk" }, "east": { "to": "rust_aurichalcite" } },
+      "exits": { "west": { "to": "rust_caulk" }, "east": { "to": "rust_aurichalcite" }, "south": { "to": "rust_riccia" } },
       "actions": [
         {
           "id": "pinch_leadwhite",
@@ -28992,11 +29043,28 @@
         }
       ]
     },
+    "rust_riccia": {
+      "name": "Rust Riccia",
+      "desc": "A dry riccia south of the leadwhite. Packed rust coats riccia.",
+      "brief": "Dry riccia, packed rust.",
+      "exits": { "north": { "to": "rust_leadwhite" } },
+      "actions": [
+        {
+          "id": "pinch_riccia",
+          "label": "pinch the riccia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard riccia. They packed it on the leadwhite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_aurichalcite": {
       "name": "Rust Aurichalcite",
       "desc": "A dry aurichalcite east of the leadwhite. Packed rust coats aurichalcite.",
       "brief": "Dry aurichalcite, packed rust.",
-      "exits": { "west": { "to": "rust_leadwhite" }, "east": { "to": "rust_psilomelane" } },
+      "exits": { "west": { "to": "rust_leadwhite" }, "east": { "to": "rust_psilomelane" }, "south": { "to": "rust_nitella" } },
       "actions": [
         {
           "id": "pinch_aurichalcite",
@@ -29005,6 +29073,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard aurichalcite. They packed it on the leadwhite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_nitella": {
+      "name": "Rust Nitella",
+      "desc": "A dry nitella south of the aurichalcite. Packed rust coats nitella.",
+      "brief": "Dry nitella, packed rust.",
+      "exits": { "north": { "to": "rust_aurichalcite" } },
+      "actions": [
+        {
+          "id": "pinch_nitella",
+          "label": "pinch the nitella",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nitella. They packed it on the aurichalcite and packed rust around it."]
           ]
         }
       ]
@@ -29047,7 +29132,7 @@
       "name": "Rust Whipping",
       "desc": "A dry whipping east of the wale. Packed rust coats whipping.",
       "brief": "Dry whipping, packed rust.",
-      "exits": { "west": { "to": "rust_wale" }, "east": { "to": "rust_clewgasket" } },
+      "exits": { "west": { "to": "rust_wale" }, "east": { "to": "rust_clewgasket" }, "south": { "to": "rust_chara" } },
       "actions": [
         {
           "id": "pinch_whipping",
@@ -29060,11 +29145,28 @@
         }
       ]
     },
+    "rust_chara": {
+      "name": "Rust Chara",
+      "desc": "A dry chara south of the whipping. Packed rust coats chara.",
+      "brief": "Dry chara, packed rust.",
+      "exits": { "north": { "to": "rust_whipping" } },
+      "actions": [
+        {
+          "id": "pinch_chara",
+          "label": "pinch the chara",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard chara. They packed it on the whipping and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_clewgasket": {
       "name": "Rust Clewgasket",
       "desc": "A dry clewgasket east of the whipping. Packed rust coats a clewgasket.",
       "brief": "Dry clewgasket, packed rust.",
-      "exits": { "west": { "to": "rust_whipping" }, "east": { "to": "rust_wool" } },
+      "exits": { "west": { "to": "rust_whipping" }, "east": { "to": "rust_wool" }, "south": { "to": "rust_hydrilla" } },
       "actions": [
         {
           "id": "pinch_clewgasket",
@@ -29077,11 +29179,28 @@
         }
       ]
     },
+    "rust_hydrilla": {
+      "name": "Rust Hydrilla",
+      "desc": "A dry hydrilla south of the clewgasket. Packed rust coats hydrilla.",
+      "brief": "Dry hydrilla, packed rust.",
+      "exits": { "north": { "to": "rust_clewgasket" } },
+      "actions": [
+        {
+          "id": "pinch_hydrilla",
+          "label": "pinch the hydrilla",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hydrilla. They packed it on the clewgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_wool": {
       "name": "Rust Wool",
       "desc": "A dry wool east of the clewgasket. Packed rust coats wool.",
       "brief": "Dry wool, packed rust.",
-      "exits": { "west": { "to": "rust_clewgasket" }, "east": { "to": "rust_bamboo" } },
+      "exits": { "west": { "to": "rust_clewgasket" }, "east": { "to": "rust_bamboo" }, "south": { "to": "rust_vallisneria" } },
       "actions": [
         {
           "id": "pinch_wool",
@@ -29090,6 +29209,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wool. They packed it on the clewgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_vallisneria": {
+      "name": "Rust Vallisneria",
+      "desc": "A dry vallisneria south of the wool. Packed rust coats vallisneria.",
+      "brief": "Dry vallisneria, packed rust.",
+      "exits": { "north": { "to": "rust_wool" } },
+      "actions": [
+        {
+          "id": "pinch_vallisneria",
+          "label": "pinch the vallisneria",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard vallisneria. They packed it on the wool and packed rust around it."]
           ]
         }
       ]
@@ -36859,14 +36995,29 @@
     "pinch the copra",
     "go east",
     "pinch the boxwood",
+    "go south",
+    "pinch the pistia",
+    "go north",
     "go east",
     "pinch the sycamore",
+    "go south",
+    "pinch the wolffia",
+    "go north",
     "go east",
     "pinch the caulk",
+    "go south",
+    "pinch the lemna",
+    "go north",
     "go east",
     "pinch the leadwhite",
+    "go south",
+    "pinch the riccia",
+    "go north",
     "go east",
     "pinch the aurichalcite",
+    "go south",
+    "pinch the nitella",
+    "go north",
     "go east",
     "pinch the psilomelane",
     "go west",
@@ -36884,10 +37035,19 @@
     "pinch the wale",
     "go east",
     "pinch the whipping",
+    "go south",
+    "pinch the chara",
+    "go north",
     "go east",
     "pinch the clewgasket",
+    "go south",
+    "pinch the hydrilla",
+    "go north",
     "go east",
     "pinch the wool",
+    "go south",
+    "pinch the vallisneria",
+    "go north",
     "go east",
     "pinch the bamboo",
     "go south",
