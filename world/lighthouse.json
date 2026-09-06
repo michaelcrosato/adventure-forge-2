@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12370,
+  "maxScore": 12410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -14546,7 +14546,7 @@
       "name": "Rust Peat",
       "desc": "A dry peat east of the litmus. Packed rust coats peat.",
       "brief": "Dry peat, packed rust.",
-      "exits": { "west": { "to": "rust_litmus" }, "east": { "to": "rust_redbox" } },
+      "exits": { "west": { "to": "rust_litmus" }, "east": { "to": "rust_redbox" }, "south": { "to": "rust_durumchoice" } },
       "actions": [
         {
           "id": "pinch_peat",
@@ -14559,11 +14559,28 @@
         }
       ]
     },
+    "rust_durumchoice": {
+      "name": "Rust Durumchoice",
+      "desc": "A dry durumchoice south of the peat. Packed rust coats durumchoice.",
+      "brief": "Dry durumchoice, packed rust.",
+      "exits": { "north": { "to": "rust_peat" } },
+      "actions": [
+        {
+          "id": "pinch_durumchoice",
+          "label": "pinch the durumchoice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumchoice. They packed it on the peat and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_redbox": {
       "name": "Rust Redbox",
       "desc": "A dry redbox east of the peat. Packed rust coats redbox.",
       "brief": "Dry redbox, packed rust.",
-      "exits": { "west": { "to": "rust_peat" }, "east": { "to": "rust_geebung" } },
+      "exits": { "west": { "to": "rust_peat" }, "east": { "to": "rust_geebung" }, "south": { "to": "rust_foniochoice" } },
       "actions": [
         {
           "id": "pinch_redbox",
@@ -14576,11 +14593,28 @@
         }
       ]
     },
+    "rust_foniochoice": {
+      "name": "Rust Foniochoice",
+      "desc": "A dry foniochoice south of the redbox. Packed rust coats foniochoice.",
+      "brief": "Dry foniochoice, packed rust.",
+      "exits": { "north": { "to": "rust_redbox" } },
+      "actions": [
+        {
+          "id": "pinch_foniochoice",
+          "label": "pinch the foniochoice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniochoice. They packed it on the redbox and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_geebung": {
       "name": "Rust Geebung",
       "desc": "A dry geebung east of the redbox. Packed rust coats geebung.",
       "brief": "Dry geebung, packed rust.",
-      "exits": { "west": { "to": "rust_redbox" }, "east": { "to": "rust_sitkaspruce" } },
+      "exits": { "west": { "to": "rust_redbox" }, "east": { "to": "rust_sitkaspruce" }, "south": { "to": "rust_teffchoice" } },
       "actions": [
         {
           "id": "pinch_geebung",
@@ -14589,6 +14623,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard geebung. They packed it on the redbox and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffchoice": {
+      "name": "Rust Teffchoice",
+      "desc": "A dry teffchoice south of the geebung. Packed rust coats teffchoice.",
+      "brief": "Dry teffchoice, packed rust.",
+      "exits": { "north": { "to": "rust_geebung" } },
+      "actions": [
+        {
+          "id": "pinch_teffchoice",
+          "label": "pinch the teffchoice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffchoice. They packed it on the geebung and packed rust around it."]
           ]
         }
       ]
@@ -14699,7 +14750,7 @@
       "name": "Rust Cowhitch",
       "desc": "A dry cowhitch east of the hog. Packed rust coats a cowhitch.",
       "brief": "Dry cowhitch, packed rust.",
-      "exits": { "west": { "to": "rust_hog" }, "east": { "to": "rust_storax" } },
+      "exits": { "west": { "to": "rust_hog" }, "east": { "to": "rust_storax" }, "south": { "to": "rust_barleychoice" } },
       "actions": [
         {
           "id": "pinch_cowhitch",
@@ -14712,11 +14763,28 @@
         }
       ]
     },
+    "rust_barleychoice": {
+      "name": "Rust Barleychoice",
+      "desc": "A dry barleychoice south of the cowhitch. Packed rust coats barleychoice.",
+      "brief": "Dry barleychoice, packed rust.",
+      "exits": { "north": { "to": "rust_cowhitch" } },
+      "actions": [
+        {
+          "id": "pinch_barleychoice",
+          "label": "pinch the barleychoice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleychoice. They packed it on the cowhitch and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_storax": {
       "name": "Rust Storax",
       "desc": "A dry storax east of the cowhitch. Packed rust coats storax.",
       "brief": "Dry storax, packed rust.",
-      "exits": { "west": { "to": "rust_cowhitch" }, "east": { "to": "rust_orchil" } },
+      "exits": { "west": { "to": "rust_cowhitch" }, "east": { "to": "rust_orchil" }, "south": { "to": "rust_sorghumchoice" } },
       "actions": [
         {
           "id": "pinch_storax",
@@ -14729,11 +14797,28 @@
         }
       ]
     },
+    "rust_sorghumchoice": {
+      "name": "Rust Sorghumchoice",
+      "desc": "A dry sorghumchoice south of the storax. Packed rust coats sorghumchoice.",
+      "brief": "Dry sorghumchoice, packed rust.",
+      "exits": { "north": { "to": "rust_storax" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumchoice",
+          "label": "pinch the sorghumchoice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumchoice. They packed it on the storax and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_orchil": {
       "name": "Rust Orchil",
       "desc": "A dry orchil east of the storax. Packed rust coats orchil.",
       "brief": "Dry orchil, packed rust.",
-      "exits": { "west": { "to": "rust_storax" }, "east": { "to": "rust_lignite" } },
+      "exits": { "west": { "to": "rust_storax" }, "east": { "to": "rust_lignite" }, "south": { "to": "rust_milletchoice" } },
       "actions": [
         {
           "id": "pinch_orchil",
@@ -14746,11 +14831,28 @@
         }
       ]
     },
+    "rust_milletchoice": {
+      "name": "Rust Milletchoice",
+      "desc": "A dry milletchoice south of the orchil. Packed rust coats milletchoice.",
+      "brief": "Dry milletchoice, packed rust.",
+      "exits": { "north": { "to": "rust_orchil" } },
+      "actions": [
+        {
+          "id": "pinch_milletchoice",
+          "label": "pinch the milletchoice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletchoice. They packed it on the orchil and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_lignite": {
       "name": "Rust Lignite",
       "desc": "A dry lignite east of the orchil. Packed rust coats lignite.",
       "brief": "Dry lignite, packed rust.",
-      "exits": { "west": { "to": "rust_orchil" }, "east": { "to": "rust_blackbox" } },
+      "exits": { "west": { "to": "rust_orchil" }, "east": { "to": "rust_blackbox" }, "south": { "to": "rust_cornchoice" } },
       "actions": [
         {
           "id": "pinch_lignite",
@@ -14763,11 +14865,28 @@
         }
       ]
     },
+    "rust_cornchoice": {
+      "name": "Rust Cornchoice",
+      "desc": "A dry cornchoice south of the lignite. Packed rust coats cornchoice.",
+      "brief": "Dry cornchoice, packed rust.",
+      "exits": { "north": { "to": "rust_lignite" } },
+      "actions": [
+        {
+          "id": "pinch_cornchoice",
+          "label": "pinch the cornchoice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornchoice. They packed it on the lignite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_blackbox": {
       "name": "Rust Blackbox",
       "desc": "A dry blackbox east of the lignite. Packed rust coats blackbox.",
       "brief": "Dry blackbox, packed rust.",
-      "exits": { "west": { "to": "rust_lignite" }, "east": { "to": "rust_grevillea" } },
+      "exits": { "west": { "to": "rust_lignite" }, "east": { "to": "rust_grevillea" }, "south": { "to": "rust_oatchoice" } },
       "actions": [
         {
           "id": "pinch_blackbox",
@@ -14776,6 +14895,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackbox. They packed it on the lignite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatchoice": {
+      "name": "Rust Oatchoice",
+      "desc": "A dry oatchoice south of the blackbox. Packed rust coats oatchoice.",
+      "brief": "Dry oatchoice, packed rust.",
+      "exits": { "north": { "to": "rust_blackbox" } },
+      "actions": [
+        {
+          "id": "pinch_oatchoice",
+          "label": "pinch the oatchoice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatchoice. They packed it on the blackbox and packed rust around it."]
           ]
         }
       ]
@@ -44516,10 +44652,19 @@
     "pinch the litmus",
     "go east",
     "pinch the peat",
+    "go south",
+    "pinch the durumchoice",
+    "go north",
     "go east",
     "pinch the redbox",
+    "go south",
+    "pinch the foniochoice",
+    "go north",
     "go east",
     "pinch the geebung",
+    "go south",
+    "pinch the teffchoice",
+    "go north",
     "go east",
     "pinch the sitkaspruce",
     "go south",
@@ -44546,14 +44691,29 @@
     "pinch the hog",
     "go east",
     "pinch the cowhitch",
+    "go south",
+    "pinch the barleychoice",
+    "go north",
     "go east",
     "pinch the storax",
+    "go south",
+    "pinch the sorghumchoice",
+    "go north",
     "go east",
     "pinch the orchil",
+    "go south",
+    "pinch the milletchoice",
+    "go north",
     "go east",
     "pinch the lignite",
+    "go south",
+    "pinch the cornchoice",
+    "go north",
     "go east",
     "pinch the blackbox",
+    "go south",
+    "pinch the oatchoice",
+    "go north",
     "go east",
     "pinch the grevillea",
     "go south",
