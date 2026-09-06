@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13610,
+  "maxScore": 13650,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -37105,7 +37105,7 @@
       "name": "Rust Chrysocolla",
       "desc": "A dry chrysocolla east of the burntumber. Packed rust coats chrysocolla.",
       "brief": "Dry chrysocolla, packed rust.",
-      "exits": { "west": { "to": "rust_burntumber" }, "east": { "to": "rust_paratacamite" }, "south": { "to": "rust_glutinous" } },
+      "exits": { "west": { "to": "rust_burntumber" }, "east": { "to": "rust_paratacamite" }, "south": { "to": "rust_glutinous" }, "north": { "to": "rust_durumpress" } },
       "actions": [
         {
           "id": "pinch_chrysocolla",
@@ -37114,6 +37114,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chrysocolla. They packed it on the burntumber and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumpress": {
+      "name": "Rust Durumpress",
+      "desc": "A dry durumpress north of the chrysocolla. Packed rust coats durumpress.",
+      "brief": "Dry durumpress, packed rust.",
+      "exits": { "south": { "to": "rust_chrysocolla" } },
+      "actions": [
+        {
+          "id": "pinch_durumpress",
+          "label": "pinch the durumpress",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumpress. They packed it on the chrysocolla and packed rust around it."]
           ]
         }
       ]
@@ -37139,7 +37156,7 @@
       "name": "Rust Paratacamite",
       "desc": "A dry paratacamite east of the chrysocolla. Packed rust coats paratacamite.",
       "brief": "Dry paratacamite, packed rust.",
-      "exits": { "west": { "to": "rust_chrysocolla" }, "east": { "to": "rust_rammelsbergite" }, "south": { "to": "rust_japonica" } },
+      "exits": { "west": { "to": "rust_chrysocolla" }, "east": { "to": "rust_rammelsbergite" }, "south": { "to": "rust_japonica" }, "north": { "to": "rust_foniopress" } },
       "actions": [
         {
           "id": "pinch_paratacamite",
@@ -37148,6 +37165,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard paratacamite. They packed it on the chrysocolla and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniopress": {
+      "name": "Rust Foniopress",
+      "desc": "A dry foniopress north of the paratacamite. Packed rust coats foniopress.",
+      "brief": "Dry foniopress, packed rust.",
+      "exits": { "south": { "to": "rust_paratacamite" } },
+      "actions": [
+        {
+          "id": "pinch_foniopress",
+          "label": "pinch the foniopress",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniopress. They packed it on the paratacamite and packed rust around it."]
           ]
         }
       ]
@@ -37207,7 +37241,7 @@
       "name": "Rust Tarpaulin",
       "desc": "A dry tarpaulin east of the grid. Packed rust coats a tarpaulin.",
       "brief": "Dry tarpaulin, packed rust.",
-      "exits": { "west": { "to": "rust_grid" }, "east": { "to": "rust_whiting" }, "south": { "to": "rust_chia" } },
+      "exits": { "west": { "to": "rust_grid" }, "east": { "to": "rust_whiting" }, "south": { "to": "rust_chia" }, "north": { "to": "rust_teffpress" } },
       "actions": [
         {
           "id": "pinch_tarpaulin",
@@ -37216,6 +37250,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tarpaulin. They spread it on the grid and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffpress": {
+      "name": "Rust Teffpress",
+      "desc": "A dry teffpress north of the tarpaulin. Packed rust coats teffpress.",
+      "brief": "Dry teffpress, packed rust.",
+      "exits": { "south": { "to": "rust_tarpaulin" } },
+      "actions": [
+        {
+          "id": "pinch_teffpress",
+          "label": "pinch the teffpress",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffpress. They packed it on the tarpaulin and packed rust around it."]
           ]
         }
       ]
@@ -37241,7 +37292,7 @@
       "name": "Rust Whiting",
       "desc": "A dry whiting east of the tarpaulin. Packed rust coats whiting.",
       "brief": "Dry whiting, packed rust.",
-      "exits": { "west": { "to": "rust_tarpaulin" }, "east": { "to": "rust_rottenstone" }, "south": { "to": "rust_hempseed" } },
+      "exits": { "west": { "to": "rust_tarpaulin" }, "east": { "to": "rust_rottenstone" }, "south": { "to": "rust_hempseed" }, "north": { "to": "rust_barleypress" } },
       "actions": [
         {
           "id": "pinch_whiting",
@@ -37250,6 +37301,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whiting. They packed it on the tarpaulin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleypress": {
+      "name": "Rust Barleypress",
+      "desc": "A dry barleypress north of the whiting. Packed rust coats barleypress.",
+      "brief": "Dry barleypress, packed rust.",
+      "exits": { "south": { "to": "rust_whiting" } },
+      "actions": [
+        {
+          "id": "pinch_barleypress",
+          "label": "pinch the barleypress",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleypress. They packed it on the whiting and packed rust around it."]
           ]
         }
       ]
@@ -37275,7 +37343,7 @@
       "name": "Rust Rottenstone",
       "desc": "A dry rottenstone east of the whiting. Packed rust coats rottenstone.",
       "brief": "Dry rottenstone, packed rust.",
-      "exits": { "west": { "to": "rust_whiting" }, "east": { "to": "rust_meerschaum" }, "south": { "to": "rust_pumpkinseed" } },
+      "exits": { "west": { "to": "rust_whiting" }, "east": { "to": "rust_meerschaum" }, "south": { "to": "rust_pumpkinseed" }, "north": { "to": "rust_sorghumpress" } },
       "actions": [
         {
           "id": "pinch_rottenstone",
@@ -37284,6 +37352,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rottenstone. They packed it on the whiting and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumpress": {
+      "name": "Rust Sorghumpress",
+      "desc": "A dry sorghumpress north of the rottenstone. Packed rust coats sorghumpress.",
+      "brief": "Dry sorghumpress, packed rust.",
+      "exits": { "south": { "to": "rust_rottenstone" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumpress",
+          "label": "pinch the sorghumpress",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumpress. They packed it on the rottenstone and packed rust around it."]
           ]
         }
       ]
@@ -37309,7 +37394,7 @@
       "name": "Rust Meerschaum",
       "desc": "A dry meerschaum east of the rottenstone. Packed rust coats meerschaum.",
       "brief": "Dry meerschaum, packed rust.",
-      "exits": { "west": { "to": "rust_rottenstone" }, "east": { "to": "rust_magnetite" }, "south": { "to": "rust_flaxseed" } },
+      "exits": { "west": { "to": "rust_rottenstone" }, "east": { "to": "rust_magnetite" }, "south": { "to": "rust_flaxseed" }, "north": { "to": "rust_milletpress" } },
       "actions": [
         {
           "id": "pinch_meerschaum",
@@ -37318,6 +37403,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard meerschaum. They packed it on the rottenstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletpress": {
+      "name": "Rust Milletpress",
+      "desc": "A dry milletpress north of the meerschaum. Packed rust coats milletpress.",
+      "brief": "Dry milletpress, packed rust.",
+      "exits": { "south": { "to": "rust_meerschaum" } },
+      "actions": [
+        {
+          "id": "pinch_milletpress",
+          "label": "pinch the milletpress",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletpress. They packed it on the meerschaum and packed rust around it."]
           ]
         }
       ]
@@ -37343,7 +37445,7 @@
       "name": "Rust Magnetite",
       "desc": "A dry magnetite east of the meerschaum. Packed rust coats magnetite.",
       "brief": "Dry magnetite, packed rust.",
-      "exits": { "west": { "to": "rust_meerschaum" }, "east": { "to": "rust_yellowochre" }, "south": { "to": "rust_nigella" } },
+      "exits": { "west": { "to": "rust_meerschaum" }, "east": { "to": "rust_yellowochre" }, "south": { "to": "rust_nigella" }, "north": { "to": "rust_cornpress" } },
       "actions": [
         {
           "id": "pinch_magnetite",
@@ -37352,6 +37454,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard magnetite. They packed it on the meerschaum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornpress": {
+      "name": "Rust Cornpress",
+      "desc": "A dry cornpress north of the magnetite. Packed rust coats cornpress.",
+      "brief": "Dry cornpress, packed rust.",
+      "exits": { "south": { "to": "rust_magnetite" } },
+      "actions": [
+        {
+          "id": "pinch_cornpress",
+          "label": "pinch the cornpress",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornpress. They packed it on the magnetite and packed rust around it."]
           ]
         }
       ]
@@ -37377,7 +37496,7 @@
       "name": "Rust Yellowochre",
       "desc": "A dry yellowochre east of the magnetite. Packed rust coats yellowochre.",
       "brief": "Dry yellowochre, packed rust.",
-      "exits": { "west": { "to": "rust_magnetite" }, "east": { "to": "rust_turquoise" }, "south": { "to": "rust_poppyseed" } },
+      "exits": { "west": { "to": "rust_magnetite" }, "east": { "to": "rust_turquoise" }, "south": { "to": "rust_poppyseed" }, "north": { "to": "rust_oatpress" } },
       "actions": [
         {
           "id": "pinch_yellowochre",
@@ -37386,6 +37505,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yellowochre. They packed it on the magnetite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatpress": {
+      "name": "Rust Oatpress",
+      "desc": "A dry oatpress north of the yellowochre. Packed rust coats oatpress.",
+      "brief": "Dry oatpress, packed rust.",
+      "exits": { "south": { "to": "rust_yellowochre" } },
+      "actions": [
+        {
+          "id": "pinch_oatpress",
+          "label": "pinch the oatpress",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatpress. They packed it on the yellowochre and packed rust around it."]
           ]
         }
       ]
@@ -51932,11 +52068,17 @@
     "go north",
     "go east",
     "pinch the chrysocolla",
+    "go north",
+    "pinch the durumpress",
+    "go south",
     "go south",
     "pinch the glutinous",
     "go north",
     "go east",
     "pinch the paratacamite",
+    "go north",
+    "pinch the foniopress",
+    "go south",
     "go south",
     "pinch the japonica",
     "go north",
@@ -51957,31 +52099,49 @@
     "pinch the tab",
     "go east",
     "pinch the tarpaulin",
+    "go north",
+    "pinch the teffpress",
+    "go south",
     "go south",
     "pinch the chia",
     "go north",
     "go east",
     "pinch the whiting",
+    "go north",
+    "pinch the barleypress",
+    "go south",
     "go south",
     "pinch the hempseed",
     "go north",
     "go east",
     "pinch the rottenstone",
+    "go north",
+    "pinch the sorghumpress",
+    "go south",
     "go south",
     "pinch the pumpkinseed",
     "go north",
     "go east",
     "pinch the meerschaum",
+    "go north",
+    "pinch the milletpress",
+    "go south",
     "go south",
     "pinch the flaxseed",
     "go north",
     "go east",
     "pinch the magnetite",
+    "go north",
+    "pinch the cornpress",
+    "go south",
     "go south",
     "pinch the nigella",
     "go north",
     "go east",
     "pinch the yellowochre",
+    "go north",
+    "pinch the oatpress",
+    "go south",
     "go south",
     "pinch the poppyseed",
     "go north",
