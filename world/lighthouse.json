@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12770,
+  "maxScore": 12810,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -39298,7 +39298,7 @@
       "name": "Rust Cotton",
       "desc": "A dry cotton east of the boomgasket. Packed rust coats cotton.",
       "brief": "Dry cotton, packed rust.",
-      "exits": { "west": { "to": "rust_boomgasket" }, "east": { "to": "rust_copra" }, "south": { "to": "rust_oregano" } },
+      "exits": { "west": { "to": "rust_boomgasket" }, "east": { "to": "rust_copra" }, "south": { "to": "rust_oregano" }, "north": { "to": "rust_durumbale" } },
       "actions": [
         {
           "id": "pinch_cotton",
@@ -39307,6 +39307,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cotton. They stuffed it on the boomgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbale": {
+      "name": "Rust Durumbale",
+      "desc": "A dry durumbale north of the cotton. Packed rust coats durumbale.",
+      "brief": "Dry durumbale, packed rust.",
+      "exits": { "south": { "to": "rust_cotton" } },
+      "actions": [
+        {
+          "id": "pinch_durumbale",
+          "label": "pinch the durumbale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbale. They packed it on the cotton and packed rust around it."]
           ]
         }
       ]
@@ -39332,7 +39349,7 @@
       "name": "Rust Copra",
       "desc": "A dry copra east of the cotton. Packed rust coats copra.",
       "brief": "Dry copra, packed rust.",
-      "exits": { "west": { "to": "rust_cotton" }, "east": { "to": "rust_boxwood" }, "south": { "to": "rust_marjoram" } },
+      "exits": { "west": { "to": "rust_cotton" }, "east": { "to": "rust_boxwood" }, "south": { "to": "rust_marjoram" }, "north": { "to": "rust_foniobale" } },
       "actions": [
         {
           "id": "pinch_copra",
@@ -39341,6 +39358,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard copra. They packed it on the cotton and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobale": {
+      "name": "Rust Foniobale",
+      "desc": "A dry foniobale north of the copra. Packed rust coats foniobale.",
+      "brief": "Dry foniobale, packed rust.",
+      "exits": { "south": { "to": "rust_copra" } },
+      "actions": [
+        {
+          "id": "pinch_foniobale",
+          "label": "pinch the foniobale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobale. They packed it on the copra and packed rust around it."]
           ]
         }
       ]
@@ -39366,7 +39400,7 @@
       "name": "Rust Boxwood",
       "desc": "A dry boxwood east of the copra. Packed rust coats boxwood.",
       "brief": "Dry boxwood, packed rust.",
-      "exits": { "west": { "to": "rust_copra" }, "east": { "to": "rust_sycamore" }, "south": { "to": "rust_pistia" } },
+      "exits": { "west": { "to": "rust_copra" }, "east": { "to": "rust_sycamore" }, "south": { "to": "rust_pistia" }, "north": { "to": "rust_teffbale" } },
       "actions": [
         {
           "id": "pinch_boxwood",
@@ -39375,6 +39409,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boxwood. They cut it on the copra and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbale": {
+      "name": "Rust Teffbale",
+      "desc": "A dry teffbale north of the boxwood. Packed rust coats teffbale.",
+      "brief": "Dry teffbale, packed rust.",
+      "exits": { "south": { "to": "rust_boxwood" } },
+      "actions": [
+        {
+          "id": "pinch_teffbale",
+          "label": "pinch the teffbale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbale. They packed it on the boxwood and packed rust around it."]
           ]
         }
       ]
@@ -39400,7 +39451,7 @@
       "name": "Rust Sycamore",
       "desc": "A dry sycamore east of the boxwood. Packed rust coats sycamore.",
       "brief": "Dry sycamore, packed rust.",
-      "exits": { "west": { "to": "rust_boxwood" }, "east": { "to": "rust_caulk" }, "south": { "to": "rust_wolffia" } },
+      "exits": { "west": { "to": "rust_boxwood" }, "east": { "to": "rust_caulk" }, "south": { "to": "rust_wolffia" }, "north": { "to": "rust_barleybale" } },
       "actions": [
         {
           "id": "pinch_sycamore",
@@ -39409,6 +39460,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sycamore. They cut it on the boxwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybale": {
+      "name": "Rust Barleybale",
+      "desc": "A dry barleybale north of the sycamore. Packed rust coats barleybale.",
+      "brief": "Dry barleybale, packed rust.",
+      "exits": { "south": { "to": "rust_sycamore" } },
+      "actions": [
+        {
+          "id": "pinch_barleybale",
+          "label": "pinch the barleybale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybale. They packed it on the sycamore and packed rust around it."]
           ]
         }
       ]
@@ -39434,7 +39502,7 @@
       "name": "Rust Caulk",
       "desc": "A dry caulk east of the sycamore. Packed rust coats caulk.",
       "brief": "Dry caulk, packed rust.",
-      "exits": { "west": { "to": "rust_sycamore" }, "east": { "to": "rust_leadwhite" }, "south": { "to": "rust_lemna" } },
+      "exits": { "west": { "to": "rust_sycamore" }, "east": { "to": "rust_leadwhite" }, "south": { "to": "rust_lemna" }, "north": { "to": "rust_sorghumbale" } },
       "actions": [
         {
           "id": "pinch_caulk",
@@ -39443,6 +39511,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard caulk. They packed it on the sycamore and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbale": {
+      "name": "Rust Sorghumbale",
+      "desc": "A dry sorghumbale north of the caulk. Packed rust coats sorghumbale.",
+      "brief": "Dry sorghumbale, packed rust.",
+      "exits": { "south": { "to": "rust_caulk" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbale",
+          "label": "pinch the sorghumbale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbale. They packed it on the caulk and packed rust around it."]
           ]
         }
       ]
@@ -39468,7 +39553,7 @@
       "name": "Rust Leadwhite",
       "desc": "A dry leadwhite east of the caulk. Packed rust coats leadwhite.",
       "brief": "Dry leadwhite, packed rust.",
-      "exits": { "west": { "to": "rust_caulk" }, "east": { "to": "rust_aurichalcite" }, "south": { "to": "rust_riccia" } },
+      "exits": { "west": { "to": "rust_caulk" }, "east": { "to": "rust_aurichalcite" }, "south": { "to": "rust_riccia" }, "north": { "to": "rust_milletbale" } },
       "actions": [
         {
           "id": "pinch_leadwhite",
@@ -39477,6 +39562,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard leadwhite. They packed it on the caulk and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbale": {
+      "name": "Rust Milletbale",
+      "desc": "A dry milletbale north of the leadwhite. Packed rust coats milletbale.",
+      "brief": "Dry milletbale, packed rust.",
+      "exits": { "south": { "to": "rust_leadwhite" } },
+      "actions": [
+        {
+          "id": "pinch_milletbale",
+          "label": "pinch the milletbale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbale. They packed it on the leadwhite and packed rust around it."]
           ]
         }
       ]
@@ -39502,7 +39604,7 @@
       "name": "Rust Aurichalcite",
       "desc": "A dry aurichalcite east of the leadwhite. Packed rust coats aurichalcite.",
       "brief": "Dry aurichalcite, packed rust.",
-      "exits": { "west": { "to": "rust_leadwhite" }, "east": { "to": "rust_psilomelane" }, "south": { "to": "rust_nitella" } },
+      "exits": { "west": { "to": "rust_leadwhite" }, "east": { "to": "rust_psilomelane" }, "south": { "to": "rust_nitella" }, "north": { "to": "rust_cornbale" } },
       "actions": [
         {
           "id": "pinch_aurichalcite",
@@ -39511,6 +39613,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard aurichalcite. They packed it on the leadwhite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbale": {
+      "name": "Rust Cornbale",
+      "desc": "A dry cornbale north of the aurichalcite. Packed rust coats cornbale.",
+      "brief": "Dry cornbale, packed rust.",
+      "exits": { "south": { "to": "rust_aurichalcite" } },
+      "actions": [
+        {
+          "id": "pinch_cornbale",
+          "label": "pinch the cornbale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbale. They packed it on the aurichalcite and packed rust around it."]
           ]
         }
       ]
@@ -39570,7 +39689,7 @@
       "name": "Rust Whipping",
       "desc": "A dry whipping east of the wale. Packed rust coats whipping.",
       "brief": "Dry whipping, packed rust.",
-      "exits": { "west": { "to": "rust_wale" }, "east": { "to": "rust_clewgasket" }, "south": { "to": "rust_chara" } },
+      "exits": { "west": { "to": "rust_wale" }, "east": { "to": "rust_clewgasket" }, "south": { "to": "rust_chara" }, "north": { "to": "rust_oatbale" } },
       "actions": [
         {
           "id": "pinch_whipping",
@@ -39579,6 +39698,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whipping. They bound it on the wale and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbale": {
+      "name": "Rust Oatbale",
+      "desc": "A dry oatbale north of the whipping. Packed rust coats oatbale.",
+      "brief": "Dry oatbale, packed rust.",
+      "exits": { "south": { "to": "rust_whipping" } },
+      "actions": [
+        {
+          "id": "pinch_oatbale",
+          "label": "pinch the oatbale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbale. They packed it on the whipping and packed rust around it."]
           ]
         }
       ]
@@ -50251,36 +50387,57 @@
     "go north",
     "go east",
     "pinch the cotton",
+    "go north",
+    "pinch the durumbale",
+    "go south",
     "go south",
     "pinch the oregano",
     "go north",
     "go east",
     "pinch the copra",
+    "go north",
+    "pinch the foniobale",
+    "go south",
     "go south",
     "pinch the marjoram",
     "go north",
     "go east",
     "pinch the boxwood",
+    "go north",
+    "pinch the teffbale",
+    "go south",
     "go south",
     "pinch the pistia",
     "go north",
     "go east",
     "pinch the sycamore",
+    "go north",
+    "pinch the barleybale",
+    "go south",
     "go south",
     "pinch the wolffia",
     "go north",
     "go east",
     "pinch the caulk",
+    "go north",
+    "pinch the sorghumbale",
+    "go south",
     "go south",
     "pinch the lemna",
     "go north",
     "go east",
     "pinch the leadwhite",
+    "go north",
+    "pinch the milletbale",
+    "go south",
     "go south",
     "pinch the riccia",
     "go north",
     "go east",
     "pinch the aurichalcite",
+    "go north",
+    "pinch the cornbale",
+    "go south",
     "go south",
     "pinch the nitella",
     "go north",
@@ -50301,6 +50458,9 @@
     "pinch the wale",
     "go east",
     "pinch the whipping",
+    "go north",
+    "pinch the oatbale",
+    "go south",
     "go south",
     "pinch the chara",
     "go north",
