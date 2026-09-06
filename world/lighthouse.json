@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11530,
+  "maxScore": 11570,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -18966,7 +18966,7 @@
       "name": "Rust Sheetbend",
       "desc": "A dry sheetbend east of the bunt. Packed rust coats a sheetbend.",
       "brief": "Dry sheetbend, packed rust.",
-      "exits": { "west": { "to": "rust_bunt" }, "east": { "to": "rust_casein" } },
+      "exits": { "west": { "to": "rust_bunt" }, "east": { "to": "rust_casein" }, "south": { "to": "rust_tefflowgrade" } },
       "actions": [
         {
           "id": "pinch_sheetbend",
@@ -18979,11 +18979,28 @@
         }
       ]
     },
+    "rust_tefflowgrade": {
+      "name": "Rust Tefflowgrade",
+      "desc": "A dry tefflowgrade south of the sheetbend. Packed rust coats tefflowgrade.",
+      "brief": "Dry tefflowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_sheetbend" } },
+      "actions": [
+        {
+          "id": "pinch_tefflowgrade",
+          "label": "pinch the tefflowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefflowgrade. They packed it on the sheetbend and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_casein": {
       "name": "Rust Casein",
       "desc": "A dry casein east of the sheetbend. Packed rust coats casein.",
       "brief": "Dry casein, packed rust.",
-      "exits": { "west": { "to": "rust_sheetbend" }, "east": { "to": "rust_okoume" } },
+      "exits": { "west": { "to": "rust_sheetbend" }, "east": { "to": "rust_okoume" }, "south": { "to": "rust_barleylowgrade" } },
       "actions": [
         {
           "id": "pinch_casein",
@@ -18996,11 +19013,28 @@
         }
       ]
     },
+    "rust_barleylowgrade": {
+      "name": "Rust Barleylowgrade",
+      "desc": "A dry barleylowgrade south of the casein. Packed rust coats barleylowgrade.",
+      "brief": "Dry barleylowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_casein" } },
+      "actions": [
+        {
+          "id": "pinch_barleylowgrade",
+          "label": "pinch the barleylowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleylowgrade. They packed it on the casein and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_okoume": {
       "name": "Rust Okoume",
       "desc": "A dry okoume east of the casein. Packed rust coats okoume.",
       "brief": "Dry okoume, packed rust.",
-      "exits": { "west": { "to": "rust_casein" }, "east": { "to": "rust_cupiuba" } },
+      "exits": { "west": { "to": "rust_casein" }, "east": { "to": "rust_cupiuba" }, "south": { "to": "rust_sorghumlowgrade" } },
       "actions": [
         {
           "id": "pinch_okoume",
@@ -19013,11 +19047,28 @@
         }
       ]
     },
+    "rust_sorghumlowgrade": {
+      "name": "Rust Sorghumlowgrade",
+      "desc": "A dry sorghumlowgrade south of the okoume. Packed rust coats sorghumlowgrade.",
+      "brief": "Dry sorghumlowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_okoume" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumlowgrade",
+          "label": "pinch the sorghumlowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumlowgrade. They packed it on the okoume and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cupiuba": {
       "name": "Rust Cupiuba",
       "desc": "A dry cupiuba east of the okoume. Packed rust coats cupiuba.",
       "brief": "Dry cupiuba, packed rust.",
-      "exits": { "west": { "to": "rust_okoume" }, "east": { "to": "rust_bocote" } },
+      "exits": { "west": { "to": "rust_okoume" }, "east": { "to": "rust_bocote" }, "south": { "to": "rust_milletlowgrade" } },
       "actions": [
         {
           "id": "pinch_cupiuba",
@@ -19030,11 +19081,28 @@
         }
       ]
     },
+    "rust_milletlowgrade": {
+      "name": "Rust Milletlowgrade",
+      "desc": "A dry milletlowgrade south of the cupiuba. Packed rust coats milletlowgrade.",
+      "brief": "Dry milletlowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_cupiuba" } },
+      "actions": [
+        {
+          "id": "pinch_milletlowgrade",
+          "label": "pinch the milletlowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletlowgrade. They packed it on the cupiuba and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bocote": {
       "name": "Rust Bocote",
       "desc": "A dry bocote east of the cupiuba. Packed rust coats bocote.",
       "brief": "Dry bocote, packed rust.",
-      "exits": { "west": { "to": "rust_cupiuba" }, "east": { "to": "rust_punah" } },
+      "exits": { "west": { "to": "rust_cupiuba" }, "east": { "to": "rust_punah" }, "south": { "to": "rust_cornlowgrade" } },
       "actions": [
         {
           "id": "pinch_bocote",
@@ -19047,11 +19115,28 @@
         }
       ]
     },
+    "rust_cornlowgrade": {
+      "name": "Rust Cornlowgrade",
+      "desc": "A dry cornlowgrade south of the bocote. Packed rust coats cornlowgrade.",
+      "brief": "Dry cornlowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_bocote" } },
+      "actions": [
+        {
+          "id": "pinch_cornlowgrade",
+          "label": "pinch the cornlowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornlowgrade. They packed it on the bocote and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_punah": {
       "name": "Rust Punah",
       "desc": "A dry punah east of the bocote. Packed rust coats punah.",
       "brief": "Dry punah, packed rust.",
-      "exits": { "west": { "to": "rust_bocote" }, "east": { "to": "rust_deodar" } },
+      "exits": { "west": { "to": "rust_bocote" }, "east": { "to": "rust_deodar" }, "south": { "to": "rust_oatlowgrade" } },
       "actions": [
         {
           "id": "pinch_punah",
@@ -19064,11 +19149,28 @@
         }
       ]
     },
+    "rust_oatlowgrade": {
+      "name": "Rust Oatlowgrade",
+      "desc": "A dry oatlowgrade south of the punah. Packed rust coats oatlowgrade.",
+      "brief": "Dry oatlowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_punah" } },
+      "actions": [
+        {
+          "id": "pinch_oatlowgrade",
+          "label": "pinch the oatlowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatlowgrade. They packed it on the punah and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_deodar": {
       "name": "Rust Deodar",
       "desc": "A dry deodar east of the punah. Packed rust coats deodar.",
       "brief": "Dry deodar, packed rust.",
-      "exits": { "west": { "to": "rust_punah" }, "east": { "to": "rust_salai" } },
+      "exits": { "west": { "to": "rust_punah" }, "east": { "to": "rust_salai" }, "south": { "to": "rust_ryelowgrade" } },
       "actions": [
         {
           "id": "pinch_deodar",
@@ -19081,11 +19183,28 @@
         }
       ]
     },
+    "rust_ryelowgrade": {
+      "name": "Rust Ryelowgrade",
+      "desc": "A dry ryelowgrade south of the deodar. Packed rust coats ryelowgrade.",
+      "brief": "Dry ryelowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_deodar" } },
+      "actions": [
+        {
+          "id": "pinch_ryelowgrade",
+          "label": "pinch the ryelowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryelowgrade. They packed it on the deodar and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_salai": {
       "name": "Rust Salai",
       "desc": "A dry salai east of the deodar. Packed rust coats salai.",
       "brief": "Dry salai, packed rust.",
-      "exits": { "west": { "to": "rust_deodar" }, "east": { "to": "rust_stringybark" } },
+      "exits": { "west": { "to": "rust_deodar" }, "east": { "to": "rust_stringybark" }, "south": { "to": "rust_wheatlowgrade" } },
       "actions": [
         {
           "id": "pinch_salai",
@@ -19094,6 +19213,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard salai. They packed it on the deodar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wheatlowgrade": {
+      "name": "Rust Wheatlowgrade",
+      "desc": "A dry wheatlowgrade south of the salai. Packed rust coats wheatlowgrade.",
+      "brief": "Dry wheatlowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_salai" } },
+      "actions": [
+        {
+          "id": "pinch_wheatlowgrade",
+          "label": "pinch the wheatlowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatlowgrade. They packed it on the salai and packed rust around it."]
           ]
         }
       ]
@@ -42486,20 +42622,44 @@
     "pinch the bunt",
     "go east",
     "pinch the sheetbend",
+    "go south",
+    "pinch the tefflowgrade",
+    "go north",
     "go east",
     "pinch the casein",
+    "go south",
+    "pinch the barleylowgrade",
+    "go north",
     "go east",
     "pinch the okoume",
+    "go south",
+    "pinch the sorghumlowgrade",
+    "go north",
     "go east",
     "pinch the cupiuba",
+    "go south",
+    "pinch the milletlowgrade",
+    "go north",
     "go east",
     "pinch the bocote",
+    "go south",
+    "pinch the cornlowgrade",
+    "go north",
     "go east",
     "pinch the punah",
+    "go south",
+    "pinch the oatlowgrade",
+    "go north",
     "go east",
     "pinch the deodar",
+    "go south",
+    "pinch the ryelowgrade",
+    "go north",
     "go east",
     "pinch the salai",
+    "go south",
+    "pinch the wheatlowgrade",
+    "go north",
     "go east",
     "pinch the stringybark",
     "go west",
