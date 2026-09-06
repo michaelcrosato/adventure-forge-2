@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8810,
+  "maxScore": 8850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -10721,7 +10721,7 @@
       "name": "Rust Spanishfir",
       "desc": "A dry spanishfir east of the alerce. Packed rust coats spanishfir.",
       "brief": "Dry spanishfir, packed rust.",
-      "exits": { "west": { "to": "rust_alerce" }, "east": { "to": "rust_rata" } },
+      "exits": { "west": { "to": "rust_alerce" }, "east": { "to": "rust_rata" }, "south": { "to": "rust_banana" } },
       "actions": [
         {
           "id": "pinch_spanishfir",
@@ -10730,6 +10730,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spanishfir. They packed it on the alerce and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_banana": {
+      "name": "Rust Banana",
+      "desc": "A dry banana south of the spanishfir. Packed rust coats banana.",
+      "brief": "Dry banana, packed rust.",
+      "exits": { "north": { "to": "rust_spanishfir" } },
+      "actions": [
+        {
+          "id": "pinch_banana",
+          "label": "pinch the banana",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard banana. They packed it on the spanishfir and packed rust around it."]
           ]
         }
       ]
@@ -10755,7 +10772,7 @@
       "name": "Rust Gammon",
       "desc": "A dry gammon east of the eye. Packed rust coats a gammon.",
       "brief": "Dry gammon, packed rust.",
-      "exits": { "west": { "to": "rust_eye" }, "east": { "to": "rust_tautline" } },
+      "exits": { "west": { "to": "rust_eye" }, "east": { "to": "rust_tautline" }, "south": { "to": "rust_plantain" } },
       "actions": [
         {
           "id": "pinch_gammon",
@@ -10768,11 +10785,28 @@
         }
       ]
     },
+    "rust_plantain": {
+      "name": "Rust Plantain",
+      "desc": "A dry plantain south of the gammon. Packed rust coats plantain.",
+      "brief": "Dry plantain, packed rust.",
+      "exits": { "north": { "to": "rust_gammon" } },
+      "actions": [
+        {
+          "id": "pinch_plantain",
+          "label": "pinch the plantain",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard plantain. They packed it on the gammon and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tautline": {
       "name": "Rust Tautline",
       "desc": "A dry tautline east of the gammon. Packed rust coats a tautline.",
       "brief": "Dry tautline, packed rust.",
-      "exits": { "west": { "to": "rust_gammon" }, "east": { "to": "rust_smalt" } },
+      "exits": { "west": { "to": "rust_gammon" }, "east": { "to": "rust_smalt" }, "south": { "to": "rust_coconut" } },
       "actions": [
         {
           "id": "pinch_tautline",
@@ -10785,11 +10819,28 @@
         }
       ]
     },
+    "rust_coconut": {
+      "name": "Rust Coconut",
+      "desc": "A dry coconut south of the tautline. Packed rust coats coconut.",
+      "brief": "Dry coconut, packed rust.",
+      "exits": { "north": { "to": "rust_tautline" } },
+      "actions": [
+        {
+          "id": "pinch_coconut",
+          "label": "pinch the coconut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard coconut. They packed it on the tautline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_smalt": {
       "name": "Rust Smalt",
       "desc": "A dry smalt east of the tautline. Packed rust coats smalt.",
       "brief": "Dry smalt, packed rust.",
-      "exits": { "west": { "to": "rust_tautline" }, "east": { "to": "rust_ultramarine" } },
+      "exits": { "west": { "to": "rust_tautline" }, "east": { "to": "rust_ultramarine" }, "south": { "to": "rust_pineapple" } },
       "actions": [
         {
           "id": "pinch_smalt",
@@ -10802,11 +10853,28 @@
         }
       ]
     },
+    "rust_pineapple": {
+      "name": "Rust Pineapple",
+      "desc": "A dry pineapple south of the smalt. Packed rust coats pineapple.",
+      "brief": "Dry pineapple, packed rust.",
+      "exits": { "north": { "to": "rust_smalt" } },
+      "actions": [
+        {
+          "id": "pinch_pineapple",
+          "label": "pinch the pineapple",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pineapple. They packed it on the smalt and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ultramarine": {
       "name": "Rust Ultramarine",
       "desc": "A dry ultramarine east of the smalt. Packed rust coats ultramarine.",
       "brief": "Dry ultramarine, packed rust.",
-      "exits": { "west": { "to": "rust_smalt" }, "east": { "to": "rust_alizarin" } },
+      "exits": { "west": { "to": "rust_smalt" }, "east": { "to": "rust_alizarin" }, "south": { "to": "rust_passionfruit" } },
       "actions": [
         {
           "id": "pinch_ultramarine",
@@ -10819,11 +10887,28 @@
         }
       ]
     },
+    "rust_passionfruit": {
+      "name": "Rust Passionfruit",
+      "desc": "A dry passionfruit south of the ultramarine. Packed rust coats passionfruit.",
+      "brief": "Dry passionfruit, packed rust.",
+      "exits": { "north": { "to": "rust_ultramarine" } },
+      "actions": [
+        {
+          "id": "pinch_passionfruit",
+          "label": "pinch the passionfruit",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard passionfruit. They packed it on the ultramarine and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_alizarin": {
       "name": "Rust Alizarin",
       "desc": "A dry alizarin east of the ultramarine. Packed rust coats alizarin.",
       "brief": "Dry alizarin, packed rust.",
-      "exits": { "west": { "to": "rust_ultramarine" }, "east": { "to": "rust_baldcypress" } },
+      "exits": { "west": { "to": "rust_ultramarine" }, "east": { "to": "rust_baldcypress" }, "south": { "to": "rust_starfruit" } },
       "actions": [
         {
           "id": "pinch_alizarin",
@@ -10836,11 +10921,28 @@
         }
       ]
     },
+    "rust_starfruit": {
+      "name": "Rust Starfruit",
+      "desc": "A dry starfruit south of the alizarin. Packed rust coats starfruit.",
+      "brief": "Dry starfruit, packed rust.",
+      "exits": { "north": { "to": "rust_alizarin" } },
+      "actions": [
+        {
+          "id": "pinch_starfruit",
+          "label": "pinch the starfruit",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard starfruit. They packed it on the alizarin and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_baldcypress": {
       "name": "Rust Baldcypress",
       "desc": "A dry baldcypress east of the alizarin. Packed rust coats baldcypress.",
       "brief": "Dry baldcypress, packed rust.",
-      "exits": { "west": { "to": "rust_alizarin" }, "east": { "to": "rust_kamahi" } },
+      "exits": { "west": { "to": "rust_alizarin" }, "east": { "to": "rust_kamahi" }, "south": { "to": "rust_dragonfruit" } },
       "actions": [
         {
           "id": "pinch_baldcypress",
@@ -10849,6 +10951,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard baldcypress. They packed it on the alizarin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_dragonfruit": {
+      "name": "Rust Dragonfruit",
+      "desc": "A dry dragonfruit south of the baldcypress. Packed rust coats dragonfruit.",
+      "brief": "Dry dragonfruit, packed rust.",
+      "exits": { "north": { "to": "rust_baldcypress" } },
+      "actions": [
+        {
+          "id": "pinch_dragonfruit",
+          "label": "pinch the dragonfruit",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard dragonfruit. They packed it on the baldcypress and packed rust around it."]
           ]
         }
       ]
@@ -10908,7 +11027,7 @@
       "name": "Rust Pendant",
       "desc": "A dry pendant east of the vang. Packed rust coats a pendant.",
       "brief": "Dry pendant, packed rust.",
-      "exits": { "west": { "to": "rust_vang" }, "east": { "to": "rust_waterknot" } },
+      "exits": { "west": { "to": "rust_vang" }, "east": { "to": "rust_waterknot" }, "south": { "to": "rust_kiwi" } },
       "actions": [
         {
           "id": "pinch_pendant",
@@ -10917,6 +11036,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pendant. They hung it on the vang and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kiwi": {
+      "name": "Rust Kiwi",
+      "desc": "A dry kiwi south of the pendant. Packed rust coats kiwi.",
+      "brief": "Dry kiwi, packed rust.",
+      "exits": { "north": { "to": "rust_pendant" } },
+      "actions": [
+        {
+          "id": "pinch_kiwi",
+          "label": "pinch the kiwi",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kiwi. They packed it on the pendant and packed rust around it."]
           ]
         }
       ]
@@ -31774,6 +31910,9 @@
     "go north",
     "go east",
     "pinch the spanishfir",
+    "go south",
+    "pinch the banana",
+    "go north",
     "go east",
     "pinch the rata",
     "go west",
@@ -31788,16 +31927,34 @@
     "go south",
     "go east",
     "pinch the gammon",
+    "go south",
+    "pinch the plantain",
+    "go north",
     "go east",
     "pinch the tautline",
+    "go south",
+    "pinch the coconut",
+    "go north",
     "go east",
     "pinch the smalt",
+    "go south",
+    "pinch the pineapple",
+    "go north",
     "go east",
     "pinch the ultramarine",
+    "go south",
+    "pinch the passionfruit",
+    "go north",
     "go east",
     "pinch the alizarin",
+    "go south",
+    "pinch the starfruit",
+    "go north",
     "go east",
     "pinch the baldcypress",
+    "go south",
+    "pinch the dragonfruit",
+    "go north",
     "go east",
     "pinch the kamahi",
     "go west",
@@ -31816,6 +31973,9 @@
     "pinch the vang",
     "go east",
     "pinch the pendant",
+    "go south",
+    "pinch the kiwi",
+    "go north",
     "go east",
     "pinch the waterknot",
     "go east",
