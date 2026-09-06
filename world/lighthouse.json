@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10730,
+  "maxScore": 10770,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -22842,7 +22842,7 @@
       "name": "Rust Yardarm",
       "desc": "A dry yardarm east of the stirrup. Packed rust coats a yardarm.",
       "brief": "Dry yardarm, packed rust.",
-      "exits": { "west": { "to": "rust_stirrup" }, "east": { "to": "rust_yardsling" } },
+      "exits": { "west": { "to": "rust_stirrup" }, "east": { "to": "rust_yardsling" }, "south": { "to": "rust_crackedwheat" } },
       "actions": [
         {
           "id": "pinch_yardarm",
@@ -22855,11 +22855,28 @@
         }
       ]
     },
+    "rust_crackedwheat": {
+      "name": "Rust Crackedwheat",
+      "desc": "A dry crackedwheat south of the yardarm. Packed rust coats crackedwheat.",
+      "brief": "Dry crackedwheat, packed rust.",
+      "exits": { "north": { "to": "rust_yardarm" } },
+      "actions": [
+        {
+          "id": "pinch_crackedwheat",
+          "label": "pinch the crackedwheat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard crackedwheat. They packed it on the yardarm and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_yardsling": {
       "name": "Rust Yardsling",
       "desc": "A dry yardsling east of the yardarm. Packed rust coats a yardsling.",
       "brief": "Dry yardsling, packed rust.",
-      "exits": { "west": { "to": "rust_yardarm" }, "east": { "to": "rust_purpleheart" } },
+      "exits": { "west": { "to": "rust_yardarm" }, "east": { "to": "rust_purpleheart" }, "south": { "to": "rust_buckwheatbran" } },
       "actions": [
         {
           "id": "pinch_yardsling",
@@ -22872,11 +22889,28 @@
         }
       ]
     },
+    "rust_buckwheatbran": {
+      "name": "Rust Buckwheatbran",
+      "desc": "A dry buckwheatbran south of the yardsling. Packed rust coats buckwheatbran.",
+      "brief": "Dry buckwheatbran, packed rust.",
+      "exits": { "north": { "to": "rust_yardsling" } },
+      "actions": [
+        {
+          "id": "pinch_buckwheatbran",
+          "label": "pinch the buckwheatbran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard buckwheatbran. They packed it on the yardsling and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_purpleheart": {
       "name": "Rust Purpleheart",
       "desc": "A dry purpleheart east of the yardsling. Packed rust coats purpleheart.",
       "brief": "Dry purpleheart, packed rust.",
-      "exits": { "west": { "to": "rust_yardsling" }, "east": { "to": "rust_snakewood" } },
+      "exits": { "west": { "to": "rust_yardsling" }, "east": { "to": "rust_snakewood" }, "south": { "to": "rust_amaranthflour" } },
       "actions": [
         {
           "id": "pinch_purpleheart",
@@ -22889,11 +22923,28 @@
         }
       ]
     },
+    "rust_amaranthflour": {
+      "name": "Rust Amaranthflour",
+      "desc": "A dry amaranthflour south of the purpleheart. Packed rust coats amaranthflour.",
+      "brief": "Dry amaranthflour, packed rust.",
+      "exits": { "north": { "to": "rust_purpleheart" } },
+      "actions": [
+        {
+          "id": "pinch_amaranthflour",
+          "label": "pinch the amaranthflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard amaranthflour. They packed it on the purpleheart and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_snakewood": {
       "name": "Rust Snakewood",
       "desc": "A dry snakewood east of the purpleheart. Packed rust coats snakewood.",
       "brief": "Dry snakewood, packed rust.",
-      "exits": { "west": { "to": "rust_purpleheart" }, "east": { "to": "rust_dibetou" } },
+      "exits": { "west": { "to": "rust_purpleheart" }, "east": { "to": "rust_dibetou" }, "south": { "to": "rust_quinoaflour" } },
       "actions": [
         {
           "id": "pinch_snakewood",
@@ -22906,11 +22957,28 @@
         }
       ]
     },
+    "rust_quinoaflour": {
+      "name": "Rust Quinoaflour",
+      "desc": "A dry quinoaflour south of the snakewood. Packed rust coats quinoaflour.",
+      "brief": "Dry quinoaflour, packed rust.",
+      "exits": { "north": { "to": "rust_snakewood" } },
+      "actions": [
+        {
+          "id": "pinch_quinoaflour",
+          "label": "pinch the quinoaflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard quinoaflour. They packed it on the snakewood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_dibetou": {
       "name": "Rust Dibetou",
       "desc": "A dry dibetou east of the snakewood. Packed rust coats dibetou.",
       "brief": "Dry dibetou, packed rust.",
-      "exits": { "west": { "to": "rust_snakewood" }, "east": { "to": "rust_faveira" } },
+      "exits": { "west": { "to": "rust_snakewood" }, "east": { "to": "rust_faveira" }, "south": { "to": "rust_foniomeal" } },
       "actions": [
         {
           "id": "pinch_dibetou",
@@ -22923,11 +22991,28 @@
         }
       ]
     },
+    "rust_foniomeal": {
+      "name": "Rust Foniomeal",
+      "desc": "A dry foniomeal south of the dibetou. Packed rust coats foniomeal.",
+      "brief": "Dry foniomeal, packed rust.",
+      "exits": { "north": { "to": "rust_dibetou" } },
+      "actions": [
+        {
+          "id": "pinch_foniomeal",
+          "label": "pinch the foniomeal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniomeal. They packed it on the dibetou and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_faveira": {
       "name": "Rust Faveira",
       "desc": "A dry faveira east of the dibetou. Packed rust coats faveira.",
       "brief": "Dry faveira, packed rust.",
-      "exits": { "west": { "to": "rust_dibetou" }, "east": { "to": "rust_seraya" } },
+      "exits": { "west": { "to": "rust_dibetou" }, "east": { "to": "rust_seraya" }, "south": { "to": "rust_teffmeal" } },
       "actions": [
         {
           "id": "pinch_faveira",
@@ -22940,11 +23025,28 @@
         }
       ]
     },
+    "rust_teffmeal": {
+      "name": "Rust Teffmeal",
+      "desc": "A dry teffmeal south of the faveira. Packed rust coats teffmeal.",
+      "brief": "Dry teffmeal, packed rust.",
+      "exits": { "north": { "to": "rust_faveira" } },
+      "actions": [
+        {
+          "id": "pinch_teffmeal",
+          "label": "pinch the teffmeal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffmeal. They packed it on the faveira and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_seraya": {
       "name": "Rust Seraya",
       "desc": "A dry seraya east of the faveira. Packed rust coats seraya.",
       "brief": "Dry seraya, packed rust.",
-      "exits": { "west": { "to": "rust_faveira" }, "east": { "to": "rust_keladan" } },
+      "exits": { "west": { "to": "rust_faveira" }, "east": { "to": "rust_keladan" }, "south": { "to": "rust_fonioflour" } },
       "actions": [
         {
           "id": "pinch_seraya",
@@ -22957,11 +23059,28 @@
         }
       ]
     },
+    "rust_fonioflour": {
+      "name": "Rust Fonioflour",
+      "desc": "A dry fonioflour south of the seraya. Packed rust coats fonioflour.",
+      "brief": "Dry fonioflour, packed rust.",
+      "exits": { "north": { "to": "rust_seraya" } },
+      "actions": [
+        {
+          "id": "pinch_fonioflour",
+          "label": "pinch the fonioflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioflour. They packed it on the seraya and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_keladan": {
       "name": "Rust Keladan",
       "desc": "A dry keladan east of the seraya. Packed rust coats keladan.",
       "brief": "Dry keladan, packed rust.",
-      "exits": { "west": { "to": "rust_seraya" }, "east": { "to": "rust_haldu" } },
+      "exits": { "west": { "to": "rust_seraya" }, "east": { "to": "rust_haldu" }, "south": { "to": "rust_teffflour" } },
       "actions": [
         {
           "id": "pinch_keladan",
@@ -22970,6 +23089,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard keladan. They packed it on the seraya and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffflour": {
+      "name": "Rust Teffflour",
+      "desc": "A dry teffflour south of the keladan. Packed rust coats teffflour.",
+      "brief": "Dry teffflour, packed rust.",
+      "exits": { "north": { "to": "rust_keladan" } },
+      "actions": [
+        {
+          "id": "pinch_teffflour",
+          "label": "pinch the teffflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffflour. They packed it on the keladan and packed rust around it."]
           ]
         }
       ]
@@ -40411,20 +40547,44 @@
     "pinch the stirrup",
     "go east",
     "pinch the yardarm",
+    "go south",
+    "pinch the crackedwheat",
+    "go north",
     "go east",
     "pinch the yardsling",
+    "go south",
+    "pinch the buckwheatbran",
+    "go north",
     "go east",
     "pinch the purpleheart",
+    "go south",
+    "pinch the amaranthflour",
+    "go north",
     "go east",
     "pinch the snakewood",
+    "go south",
+    "pinch the quinoaflour",
+    "go north",
     "go east",
     "pinch the dibetou",
+    "go south",
+    "pinch the foniomeal",
+    "go north",
     "go east",
     "pinch the faveira",
+    "go south",
+    "pinch the teffmeal",
+    "go north",
     "go east",
     "pinch the seraya",
+    "go south",
+    "pinch the fonioflour",
+    "go north",
     "go east",
     "pinch the keladan",
+    "go south",
+    "pinch the teffflour",
+    "go north",
     "go east",
     "pinch the haldu",
     "go west",
