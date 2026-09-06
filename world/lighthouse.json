@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9010,
+  "maxScore": 9050,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13458,7 +13458,7 @@
       "name": "Rust Ribbongum",
       "desc": "A dry ribbongum east of the olibanum. Packed rust coats ribbongum.",
       "brief": "Dry ribbongum, packed rust.",
-      "exits": { "west": { "to": "rust_olibanum" }, "east": { "to": "rust_acacia" } },
+      "exits": { "west": { "to": "rust_olibanum" }, "east": { "to": "rust_acacia" }, "south": { "to": "rust_raffia" } },
       "actions": [
         {
           "id": "pinch_ribbongum",
@@ -13471,11 +13471,28 @@
         }
       ]
     },
+    "rust_raffia": {
+      "name": "Rust Raffia",
+      "desc": "A dry raffia south of the ribbongum. Packed rust coats raffia.",
+      "brief": "Dry raffia, packed rust.",
+      "exits": { "north": { "to": "rust_ribbongum" } },
+      "actions": [
+        {
+          "id": "pinch_raffia",
+          "label": "pinch the raffia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard raffia. They packed it on the ribbongum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_acacia": {
       "name": "Rust Acacia",
       "desc": "A dry acacia east of the ribbongum. Packed rust coats acacia.",
       "brief": "Dry acacia, packed rust.",
-      "exits": { "west": { "to": "rust_ribbongum" }, "east": { "to": "rust_blackpine" } },
+      "exits": { "west": { "to": "rust_ribbongum" }, "east": { "to": "rust_blackpine" }, "south": { "to": "rust_bast" } },
       "actions": [
         {
           "id": "pinch_acacia",
@@ -13488,11 +13505,28 @@
         }
       ]
     },
+    "rust_bast": {
+      "name": "Rust Bast",
+      "desc": "A dry bast south of the acacia. Packed rust coats bast.",
+      "brief": "Dry bast, packed rust.",
+      "exits": { "north": { "to": "rust_acacia" } },
+      "actions": [
+        {
+          "id": "pinch_bast",
+          "label": "pinch the bast",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bast. They packed it on the acacia and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_blackpine": {
       "name": "Rust Blackpine",
       "desc": "A dry blackpine east of the acacia. Packed rust coats blackpine.",
       "brief": "Dry blackpine, packed rust.",
-      "exits": { "west": { "to": "rust_acacia" }, "east": { "to": "rust_stonepine" } },
+      "exits": { "west": { "to": "rust_acacia" }, "east": { "to": "rust_stonepine" }, "south": { "to": "rust_kapok" } },
       "actions": [
         {
           "id": "pinch_blackpine",
@@ -13505,11 +13539,28 @@
         }
       ]
     },
+    "rust_kapok": {
+      "name": "Rust Kapok",
+      "desc": "A dry kapok south of the blackpine. Packed rust coats kapok.",
+      "brief": "Dry kapok, packed rust.",
+      "exits": { "north": { "to": "rust_blackpine" } },
+      "actions": [
+        {
+          "id": "pinch_kapok",
+          "label": "pinch the kapok",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kapok. They packed it on the blackpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_stonepine": {
       "name": "Rust Stonepine",
       "desc": "A dry stonepine east of the blackpine. Packed rust coats stonepine.",
       "brief": "Dry stonepine, packed rust.",
-      "exits": { "west": { "to": "rust_blackpine" }, "east": { "to": "rust_lawson" } },
+      "exits": { "west": { "to": "rust_blackpine" }, "east": { "to": "rust_lawson" }, "south": { "to": "rust_ramie" } },
       "actions": [
         {
           "id": "pinch_stonepine",
@@ -13518,6 +13569,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stonepine. They packed it on the blackpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ramie": {
+      "name": "Rust Ramie",
+      "desc": "A dry ramie south of the stonepine. Packed rust coats ramie.",
+      "brief": "Dry ramie, packed rust.",
+      "exits": { "north": { "to": "rust_stonepine" } },
+      "actions": [
+        {
+          "id": "pinch_ramie",
+          "label": "pinch the ramie",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ramie. They packed it on the stonepine and packed rust around it."]
           ]
         }
       ]
@@ -13628,7 +13696,7 @@
       "name": "Rust Marline",
       "desc": "A dry marline east of the knighthead. Packed rust coats marline.",
       "brief": "Dry marline, packed rust.",
-      "exits": { "west": { "to": "rust_knighthead" }, "east": { "to": "rust_klemheist" } },
+      "exits": { "west": { "to": "rust_knighthead" }, "east": { "to": "rust_klemheist" }, "south": { "to": "rust_nettle" } },
       "actions": [
         {
           "id": "pinch_marline",
@@ -13641,11 +13709,28 @@
         }
       ]
     },
+    "rust_nettle": {
+      "name": "Rust Nettle",
+      "desc": "A dry nettle south of the marline. Packed rust coats nettle.",
+      "brief": "Dry nettle, packed rust.",
+      "exits": { "north": { "to": "rust_marline" } },
+      "actions": [
+        {
+          "id": "pinch_nettle",
+          "label": "pinch the nettle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nettle. They packed it on the marline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_klemheist": {
       "name": "Rust Klemheist",
       "desc": "A dry klemheist east of the marline. Packed rust coats a klemheist.",
       "brief": "Dry klemheist, packed rust.",
-      "exits": { "west": { "to": "rust_marline" }, "east": { "to": "rust_pectin" } },
+      "exits": { "west": { "to": "rust_marline" }, "east": { "to": "rust_pectin" }, "south": { "to": "rust_abaca" } },
       "actions": [
         {
           "id": "pinch_klemheist",
@@ -13658,11 +13743,28 @@
         }
       ]
     },
+    "rust_abaca": {
+      "name": "Rust Abaca",
+      "desc": "A dry abaca south of the klemheist. Packed rust coats abaca.",
+      "brief": "Dry abaca, packed rust.",
+      "exits": { "north": { "to": "rust_klemheist" } },
+      "actions": [
+        {
+          "id": "pinch_abaca",
+          "label": "pinch the abaca",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard abaca. They packed it on the klemheist and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_pectin": {
       "name": "Rust Pectin",
       "desc": "A dry pectin east of the klemheist. Packed rust coats pectin.",
       "brief": "Dry pectin, packed rust.",
-      "exits": { "west": { "to": "rust_klemheist" }, "east": { "to": "rust_cutch" } },
+      "exits": { "west": { "to": "rust_klemheist" }, "east": { "to": "rust_cutch" }, "south": { "to": "rust_kenaf" } },
       "actions": [
         {
           "id": "pinch_pectin",
@@ -13675,11 +13777,28 @@
         }
       ]
     },
+    "rust_kenaf": {
+      "name": "Rust Kenaf",
+      "desc": "A dry kenaf south of the pectin. Packed rust coats kenaf.",
+      "brief": "Dry kenaf, packed rust.",
+      "exits": { "north": { "to": "rust_pectin" } },
+      "actions": [
+        {
+          "id": "pinch_kenaf",
+          "label": "pinch the kenaf",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kenaf. They packed it on the pectin and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cutch": {
       "name": "Rust Cutch",
       "desc": "A dry cutch east of the pectin. Packed rust coats cutch.",
       "brief": "Dry cutch, packed rust.",
-      "exits": { "west": { "to": "rust_pectin" }, "east": { "to": "rust_sootblack" } },
+      "exits": { "west": { "to": "rust_pectin" }, "east": { "to": "rust_sootblack" }, "south": { "to": "rust_sunn" } },
       "actions": [
         {
           "id": "pinch_cutch",
@@ -13688,6 +13807,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cutch. They packed it on the pectin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sunn": {
+      "name": "Rust Sunn",
+      "desc": "A dry sunn south of the cutch. Packed rust coats sunn.",
+      "brief": "Dry sunn, packed rust.",
+      "exits": { "north": { "to": "rust_cutch" } },
+      "actions": [
+        {
+          "id": "pinch_sunn",
+          "label": "pinch the sunn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sunn. They packed it on the cutch and packed rust around it."]
           ]
         }
       ]
@@ -32906,12 +33042,24 @@
     "go north",
     "go east",
     "pinch the ribbongum",
+    "go south",
+    "pinch the raffia",
+    "go north",
     "go east",
     "pinch the acacia",
+    "go south",
+    "pinch the bast",
+    "go north",
     "go east",
     "pinch the blackpine",
+    "go south",
+    "pinch the kapok",
+    "go north",
     "go east",
     "pinch the stonepine",
+    "go south",
+    "pinch the ramie",
+    "go north",
     "go east",
     "pinch the lawson",
     "go south",
@@ -32935,12 +33083,24 @@
     "pinch the knighthead",
     "go east",
     "pinch the marline",
+    "go south",
+    "pinch the nettle",
+    "go north",
     "go east",
     "pinch the klemheist",
+    "go south",
+    "pinch the abaca",
+    "go north",
     "go east",
     "pinch the pectin",
+    "go south",
+    "pinch the kenaf",
+    "go north",
     "go east",
     "pinch the cutch",
+    "go south",
+    "pinch the sunn",
+    "go north",
     "go east",
     "pinch the sootblack",
     "go east",
