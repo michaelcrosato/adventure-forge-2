@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13570,
+  "maxScore": 13610,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -32413,7 +32413,7 @@
       "name": "Rust Logline",
       "desc": "A dry logline east of the leechline. Packed rust coats a logline.",
       "brief": "Dry logline, packed rust.",
-      "exits": { "west": { "to": "rust_leechline" }, "east": { "to": "rust_clewrope" }, "south": { "to": "rust_vialone" } },
+      "exits": { "west": { "to": "rust_leechline" }, "east": { "to": "rust_clewrope" }, "south": { "to": "rust_vialone" }, "north": { "to": "rust_teffsilo" } },
       "actions": [
         {
           "id": "pinch_logline",
@@ -32422,6 +32422,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard logline. They coiled it on the leechline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffsilo": {
+      "name": "Rust Teffsilo",
+      "desc": "A dry teffsilo north of the logline. Packed rust coats teffsilo.",
+      "brief": "Dry teffsilo, packed rust.",
+      "exits": { "south": { "to": "rust_logline" } },
+      "actions": [
+        {
+          "id": "pinch_teffsilo",
+          "label": "pinch the teffsilo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffsilo. They packed it on the logline and packed rust around it."]
           ]
         }
       ]
@@ -32447,7 +32464,7 @@
       "name": "Rust Clewrope",
       "desc": "A dry clewrope east of the logline. Packed rust coats a clewrope.",
       "brief": "Dry clewrope, packed rust.",
-      "exits": { "west": { "to": "rust_logline" }, "east": { "to": "rust_chalk" }, "south": { "to": "rust_carnaroli" } },
+      "exits": { "west": { "to": "rust_logline" }, "east": { "to": "rust_chalk" }, "south": { "to": "rust_carnaroli" }, "north": { "to": "rust_barleysilo" } },
       "actions": [
         {
           "id": "pinch_clewrope",
@@ -32456,6 +32473,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clewrope. They made it on the logline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleysilo": {
+      "name": "Rust Barleysilo",
+      "desc": "A dry barleysilo north of the clewrope. Packed rust coats barleysilo.",
+      "brief": "Dry barleysilo, packed rust.",
+      "exits": { "south": { "to": "rust_clewrope" } },
+      "actions": [
+        {
+          "id": "pinch_barleysilo",
+          "label": "pinch the barleysilo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleysilo. They packed it on the clewrope and packed rust around it."]
           ]
         }
       ]
@@ -32481,7 +32515,7 @@
       "name": "Rust Chalk",
       "desc": "A dry chalk east of the clewrope. Packed rust coats chalk.",
       "brief": "Dry chalk, packed rust.",
-      "exits": { "west": { "to": "rust_clewrope" }, "east": { "to": "rust_magnesia" }, "south": { "to": "rust_arborio" } },
+      "exits": { "west": { "to": "rust_clewrope" }, "east": { "to": "rust_magnesia" }, "south": { "to": "rust_arborio" }, "north": { "to": "rust_sorghumsilo" } },
       "actions": [
         {
           "id": "pinch_chalk",
@@ -32490,6 +32524,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chalk. They packed it on the clewrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumsilo": {
+      "name": "Rust Sorghumsilo",
+      "desc": "A dry sorghumsilo north of the chalk. Packed rust coats sorghumsilo.",
+      "brief": "Dry sorghumsilo, packed rust.",
+      "exits": { "south": { "to": "rust_chalk" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumsilo",
+          "label": "pinch the sorghumsilo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumsilo. They packed it on the chalk and packed rust around it."]
           ]
         }
       ]
@@ -32515,7 +32566,7 @@
       "name": "Rust Magnesia",
       "desc": "A dry magnesia east of the chalk. Packed rust coats magnesia.",
       "brief": "Dry magnesia, packed rust.",
-      "exits": { "west": { "to": "rust_chalk" }, "east": { "to": "rust_feldspar" }, "south": { "to": "rust_orzo" } },
+      "exits": { "west": { "to": "rust_chalk" }, "east": { "to": "rust_feldspar" }, "south": { "to": "rust_orzo" }, "north": { "to": "rust_milletsilo" } },
       "actions": [
         {
           "id": "pinch_magnesia",
@@ -32524,6 +32575,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard magnesia. They packed it on the chalk and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletsilo": {
+      "name": "Rust Milletsilo",
+      "desc": "A dry milletsilo north of the magnesia. Packed rust coats milletsilo.",
+      "brief": "Dry milletsilo, packed rust.",
+      "exits": { "south": { "to": "rust_magnesia" } },
+      "actions": [
+        {
+          "id": "pinch_milletsilo",
+          "label": "pinch the milletsilo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletsilo. They packed it on the magnesia and packed rust around it."]
           ]
         }
       ]
@@ -32549,7 +32617,7 @@
       "name": "Rust Feldspar",
       "desc": "A dry feldspar east of the magnesia. Packed rust coats feldspar.",
       "brief": "Dry feldspar, packed rust.",
-      "exits": { "west": { "to": "rust_magnesia" }, "east": { "to": "rust_obsidian" }, "south": { "to": "rust_polentameal" } },
+      "exits": { "west": { "to": "rust_magnesia" }, "east": { "to": "rust_obsidian" }, "south": { "to": "rust_polentameal" }, "north": { "to": "rust_cornsilo" } },
       "actions": [
         {
           "id": "pinch_feldspar",
@@ -32558,6 +32626,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard feldspar. They packed it on the magnesia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornsilo": {
+      "name": "Rust Cornsilo",
+      "desc": "A dry cornsilo north of the feldspar. Packed rust coats cornsilo.",
+      "brief": "Dry cornsilo, packed rust.",
+      "exits": { "south": { "to": "rust_feldspar" } },
+      "actions": [
+        {
+          "id": "pinch_cornsilo",
+          "label": "pinch the cornsilo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornsilo. They packed it on the feldspar and packed rust around it."]
           ]
         }
       ]
@@ -32583,7 +32668,7 @@
       "name": "Rust Obsidian",
       "desc": "A dry obsidian east of the feldspar. Packed rust coats obsidian.",
       "brief": "Dry obsidian, packed rust.",
-      "exits": { "west": { "to": "rust_feldspar" }, "east": { "to": "rust_siderite" }, "south": { "to": "rust_semolinaflour" } },
+      "exits": { "west": { "to": "rust_feldspar" }, "east": { "to": "rust_siderite" }, "south": { "to": "rust_semolinaflour" }, "north": { "to": "rust_oatsilo" } },
       "actions": [
         {
           "id": "pinch_obsidian",
@@ -32592,6 +32677,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard obsidian. They packed it on the feldspar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatsilo": {
+      "name": "Rust Oatsilo",
+      "desc": "A dry oatsilo north of the obsidian. Packed rust coats oatsilo.",
+      "brief": "Dry oatsilo, packed rust.",
+      "exits": { "south": { "to": "rust_obsidian" } },
+      "actions": [
+        {
+          "id": "pinch_oatsilo",
+          "label": "pinch the oatsilo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatsilo. They packed it on the obsidian and packed rust around it."]
           ]
         }
       ]
@@ -37309,7 +37411,7 @@
       "name": "Rust Turquoise",
       "desc": "A dry turquoise east of the yellowochre. Packed rust coats turquoise.",
       "brief": "Dry turquoise, packed rust.",
-      "exits": { "west": { "to": "rust_yellowochre" }, "east": { "to": "rust_botallackite" }, "south": { "to": "rust_sunflower" } },
+      "exits": { "west": { "to": "rust_yellowochre" }, "east": { "to": "rust_botallackite" }, "south": { "to": "rust_sunflower" }, "north": { "to": "rust_durumsilo" } },
       "actions": [
         {
           "id": "pinch_turquoise",
@@ -37318,6 +37420,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard turquoise. They packed it on the yellowochre and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumsilo": {
+      "name": "Rust Durumsilo",
+      "desc": "A dry durumsilo north of the turquoise. Packed rust coats durumsilo.",
+      "brief": "Dry durumsilo, packed rust.",
+      "exits": { "south": { "to": "rust_turquoise" } },
+      "actions": [
+        {
+          "id": "pinch_durumsilo",
+          "label": "pinch the durumsilo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumsilo. They packed it on the turquoise and packed rust around it."]
           ]
         }
       ]
@@ -37343,7 +37462,7 @@
       "name": "Rust Botallackite",
       "desc": "A dry botallackite east of the turquoise. Packed rust coats botallackite.",
       "brief": "Dry botallackite, packed rust.",
-      "exits": { "west": { "to": "rust_turquoise" }, "east": { "to": "rust_maucherite" }, "south": { "to": "rust_sesame" } },
+      "exits": { "west": { "to": "rust_turquoise" }, "east": { "to": "rust_maucherite" }, "south": { "to": "rust_sesame" }, "north": { "to": "rust_foniosilo" } },
       "actions": [
         {
           "id": "pinch_botallackite",
@@ -37352,6 +37471,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard botallackite. They packed it on the turquoise and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniosilo": {
+      "name": "Rust Foniosilo",
+      "desc": "A dry foniosilo north of the botallackite. Packed rust coats foniosilo.",
+      "brief": "Dry foniosilo, packed rust.",
+      "exits": { "south": { "to": "rust_botallackite" } },
+      "actions": [
+        {
+          "id": "pinch_foniosilo",
+          "label": "pinch the foniosilo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniosilo. They packed it on the botallackite and packed rust around it."]
           ]
         }
       ]
@@ -51851,11 +51987,17 @@
     "go north",
     "go east",
     "pinch the turquoise",
+    "go north",
+    "pinch the durumsilo",
+    "go south",
     "go south",
     "pinch the sunflower",
     "go north",
     "go east",
     "pinch the botallackite",
+    "go north",
+    "pinch the foniosilo",
+    "go south",
     "go south",
     "pinch the sesame",
     "go north",
@@ -51878,31 +52020,49 @@
     "pinch the leechline",
     "go east",
     "pinch the logline",
+    "go north",
+    "pinch the teffsilo",
+    "go south",
     "go south",
     "pinch the vialone",
     "go north",
     "go east",
     "pinch the clewrope",
+    "go north",
+    "pinch the barleysilo",
+    "go south",
     "go south",
     "pinch the carnaroli",
     "go north",
     "go east",
     "pinch the chalk",
+    "go north",
+    "pinch the sorghumsilo",
+    "go south",
     "go south",
     "pinch the arborio",
     "go north",
     "go east",
     "pinch the magnesia",
+    "go north",
+    "pinch the milletsilo",
+    "go south",
     "go south",
     "pinch the orzo",
     "go north",
     "go east",
     "pinch the feldspar",
+    "go north",
+    "pinch the cornsilo",
+    "go south",
     "go south",
     "pinch the polentameal",
     "go north",
     "go east",
     "pinch the obsidian",
+    "go north",
+    "pinch the oatsilo",
+    "go south",
     "go south",
     "pinch the semolinaflour",
     "go north",
