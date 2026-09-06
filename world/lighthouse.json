@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12890,
+  "maxScore": 12930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -38346,7 +38346,7 @@
       "name": "Rust Serving",
       "desc": "A dry serving east of the boom. Packed rust coats serving.",
       "brief": "Dry serving, packed rust.",
-      "exits": { "west": { "to": "rust_boom" }, "east": { "to": "rust_parrelbead" }, "south": { "to": "rust_lemonbalm" } },
+      "exits": { "west": { "to": "rust_boom" }, "east": { "to": "rust_parrelbead" }, "south": { "to": "rust_lemonbalm" }, "north": { "to": "rust_durumcrate" } },
       "actions": [
         {
           "id": "pinch_serving",
@@ -38355,6 +38355,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard serving. They wrapped it on the boom and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumcrate": {
+      "name": "Rust Durumcrate",
+      "desc": "A dry durumcrate north of the serving. Packed rust coats durumcrate.",
+      "brief": "Dry durumcrate, packed rust.",
+      "exits": { "south": { "to": "rust_serving" } },
+      "actions": [
+        {
+          "id": "pinch_durumcrate",
+          "label": "pinch the durumcrate",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumcrate. They packed it on the serving and packed rust around it."]
           ]
         }
       ]
@@ -38380,7 +38397,7 @@
       "name": "Rust Parrelbead",
       "desc": "A dry parrelbead east of the serving. Packed rust coats a parrelbead.",
       "brief": "Dry parrelbead, packed rust.",
-      "exits": { "west": { "to": "rust_serving" }, "east": { "to": "rust_hawserline" }, "south": { "to": "rust_wintersavory" } },
+      "exits": { "west": { "to": "rust_serving" }, "east": { "to": "rust_hawserline" }, "south": { "to": "rust_wintersavory" }, "north": { "to": "rust_foniocrate" } },
       "actions": [
         {
           "id": "pinch_parrelbead",
@@ -38389,6 +38406,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard parrelbead. They strung it on the serving and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniocrate": {
+      "name": "Rust Foniocrate",
+      "desc": "A dry foniocrate north of the parrelbead. Packed rust coats foniocrate.",
+      "brief": "Dry foniocrate, packed rust.",
+      "exits": { "south": { "to": "rust_parrelbead" } },
+      "actions": [
+        {
+          "id": "pinch_foniocrate",
+          "label": "pinch the foniocrate",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniocrate. They packed it on the parrelbead and packed rust around it."]
           ]
         }
       ]
@@ -38414,7 +38448,7 @@
       "name": "Rust Hawserline",
       "desc": "A dry hawserline east of the parrelbead. Packed rust coats a hawserline.",
       "brief": "Dry hawserline, packed rust.",
-      "exits": { "west": { "to": "rust_parrelbead" }, "east": { "to": "rust_rubber" }, "south": { "to": "rust_shallot" } },
+      "exits": { "west": { "to": "rust_parrelbead" }, "east": { "to": "rust_rubber" }, "south": { "to": "rust_shallot" }, "north": { "to": "rust_teffcrate" } },
       "actions": [
         {
           "id": "pinch_hawserline",
@@ -38423,6 +38457,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hawserline. They rove it on the parrelbead and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffcrate": {
+      "name": "Rust Teffcrate",
+      "desc": "A dry teffcrate north of the hawserline. Packed rust coats teffcrate.",
+      "brief": "Dry teffcrate, packed rust.",
+      "exits": { "south": { "to": "rust_hawserline" } },
+      "actions": [
+        {
+          "id": "pinch_teffcrate",
+          "label": "pinch the teffcrate",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffcrate. They packed it on the hawserline and packed rust around it."]
           ]
         }
       ]
@@ -38448,7 +38499,7 @@
       "name": "Rust Rubber",
       "desc": "A dry rubber east of the hawserline. Packed rust coats rubber.",
       "brief": "Dry rubber, packed rust.",
-      "exits": { "west": { "to": "rust_hawserline" }, "east": { "to": "rust_damar" }, "south": { "to": "rust_onion" } },
+      "exits": { "west": { "to": "rust_hawserline" }, "east": { "to": "rust_damar" }, "south": { "to": "rust_onion" }, "north": { "to": "rust_barleycrate" } },
       "actions": [
         {
           "id": "pinch_rubber",
@@ -38457,6 +38508,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rubber. They laid it on the hawserline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleycrate": {
+      "name": "Rust Barleycrate",
+      "desc": "A dry barleycrate north of the rubber. Packed rust coats barleycrate.",
+      "brief": "Dry barleycrate, packed rust.",
+      "exits": { "south": { "to": "rust_rubber" } },
+      "actions": [
+        {
+          "id": "pinch_barleycrate",
+          "label": "pinch the barleycrate",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleycrate. They packed it on the rubber and packed rust around it."]
           ]
         }
       ]
@@ -38482,7 +38550,7 @@
       "name": "Rust Damar",
       "desc": "A dry damar east of the rubber. Packed rust coats damar.",
       "brief": "Dry damar, packed rust.",
-      "exits": { "west": { "to": "rust_rubber" }, "east": { "to": "rust_walnut" }, "south": { "to": "rust_garlic" } },
+      "exits": { "west": { "to": "rust_rubber" }, "east": { "to": "rust_walnut" }, "south": { "to": "rust_garlic" }, "north": { "to": "rust_sorghumcrate" } },
       "actions": [
         {
           "id": "pinch_damar",
@@ -38491,6 +38559,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard damar. They smeared it on the rubber and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumcrate": {
+      "name": "Rust Sorghumcrate",
+      "desc": "A dry sorghumcrate north of the damar. Packed rust coats sorghumcrate.",
+      "brief": "Dry sorghumcrate, packed rust.",
+      "exits": { "south": { "to": "rust_damar" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumcrate",
+          "label": "pinch the sorghumcrate",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumcrate. They packed it on the damar and packed rust around it."]
           ]
         }
       ]
@@ -38516,7 +38601,7 @@
       "name": "Rust Walnut",
       "desc": "A dry walnut east of the damar. Packed rust coats walnut.",
       "brief": "Dry walnut, packed rust.",
-      "exits": { "west": { "to": "rust_damar" }, "east": { "to": "rust_dogwood" }, "south": { "to": "rust_chives" } },
+      "exits": { "west": { "to": "rust_damar" }, "east": { "to": "rust_dogwood" }, "south": { "to": "rust_chives" }, "north": { "to": "rust_milletcrate" } },
       "actions": [
         {
           "id": "pinch_walnut",
@@ -38525,6 +38610,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard walnut. They set it on the damar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletcrate": {
+      "name": "Rust Milletcrate",
+      "desc": "A dry milletcrate north of the walnut. Packed rust coats milletcrate.",
+      "brief": "Dry milletcrate, packed rust.",
+      "exits": { "south": { "to": "rust_walnut" } },
+      "actions": [
+        {
+          "id": "pinch_milletcrate",
+          "label": "pinch the milletcrate",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletcrate. They packed it on the walnut and packed rust around it."]
           ]
         }
       ]
@@ -38550,7 +38652,7 @@
       "name": "Rust Dogwood",
       "desc": "A dry dogwood east of the walnut. Packed rust coats dogwood.",
       "brief": "Dry dogwood, packed rust.",
-      "exits": { "west": { "to": "rust_walnut" }, "east": { "to": "rust_talc" }, "south": { "to": "rust_sage" } },
+      "exits": { "west": { "to": "rust_walnut" }, "east": { "to": "rust_talc" }, "south": { "to": "rust_sage" }, "north": { "to": "rust_corncrate" } },
       "actions": [
         {
           "id": "pinch_dogwood",
@@ -38559,6 +38661,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dogwood. They set it on the walnut and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corncrate": {
+      "name": "Rust Corncrate",
+      "desc": "A dry corncrate north of the dogwood. Packed rust coats corncrate.",
+      "brief": "Dry corncrate, packed rust.",
+      "exits": { "south": { "to": "rust_dogwood" } },
+      "actions": [
+        {
+          "id": "pinch_corncrate",
+          "label": "pinch the corncrate",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corncrate. They packed it on the dogwood and packed rust around it."]
           ]
         }
       ]
@@ -38584,7 +38703,7 @@
       "name": "Rust Talc",
       "desc": "A dry talc east of the dogwood. Packed rust coats talc.",
       "brief": "Dry talc, packed rust.",
-      "exits": { "west": { "to": "rust_dogwood" }, "east": { "to": "rust_hemimorphite" }, "south": { "to": "rust_basil" } },
+      "exits": { "west": { "to": "rust_dogwood" }, "east": { "to": "rust_hemimorphite" }, "south": { "to": "rust_basil" }, "north": { "to": "rust_oatcrate" } },
       "actions": [
         {
           "id": "pinch_talc",
@@ -38593,6 +38712,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard talc. They packed it on the dogwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatcrate": {
+      "name": "Rust Oatcrate",
+      "desc": "A dry oatcrate north of the talc. Packed rust coats oatcrate.",
+      "brief": "Dry oatcrate, packed rust.",
+      "exits": { "south": { "to": "rust_talc" } },
+      "actions": [
+        {
+          "id": "pinch_oatcrate",
+          "label": "pinch the oatcrate",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatcrate. They packed it on the talc and packed rust around it."]
           ]
         }
       ]
@@ -50489,41 +50625,65 @@
     "go north",
     "go east",
     "pinch the serving",
+    "go north",
+    "pinch the durumcrate",
+    "go south",
     "go south",
     "pinch the lemonbalm",
     "go north",
     "go east",
     "pinch the parrelbead",
+    "go north",
+    "pinch the foniocrate",
+    "go south",
     "go south",
     "pinch the wintersavory",
     "go north",
     "go east",
     "pinch the hawserline",
+    "go north",
+    "pinch the teffcrate",
+    "go south",
     "go south",
     "pinch the shallot",
     "go north",
     "go east",
     "pinch the rubber",
+    "go north",
+    "pinch the barleycrate",
+    "go south",
     "go south",
     "pinch the onion",
     "go north",
     "go east",
     "pinch the damar",
+    "go north",
+    "pinch the sorghumcrate",
+    "go south",
     "go south",
     "pinch the garlic",
     "go north",
     "go east",
     "pinch the walnut",
+    "go north",
+    "pinch the milletcrate",
+    "go south",
     "go south",
     "pinch the chives",
     "go north",
     "go east",
     "pinch the dogwood",
+    "go north",
+    "pinch the corncrate",
+    "go south",
     "go south",
     "pinch the sage",
     "go north",
     "go east",
     "pinch the talc",
+    "go north",
+    "pinch the oatcrate",
+    "go south",
     "go south",
     "pinch the basil",
     "go north",
