@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14290,
+  "maxScore": 14330,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -27245,7 +27245,7 @@
       "name": "Rust Abachi",
       "desc": "A dry abachi east of the cocobolo. Packed rust coats abachi.",
       "brief": "Dry abachi, packed rust.",
-      "exits": { "west": { "to": "rust_cocobolo" }, "east": { "to": "rust_jatoba" }, "south": { "to": "rust_sorghumgerm" } },
+      "exits": { "west": { "to": "rust_cocobolo" }, "east": { "to": "rust_jatoba" }, "south": { "to": "rust_sorghumgerm" }, "north": { "to": "rust_durumvial" } },
       "actions": [
         {
           "id": "pinch_abachi",
@@ -27254,6 +27254,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard abachi. They packed it on the cocobolo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumvial": {
+      "name": "Rust Durumvial",
+      "desc": "A dry durumvial north of the abachi. Packed rust coats durumvial.",
+      "brief": "Dry durumvial, packed rust.",
+      "exits": { "south": { "to": "rust_abachi" } },
+      "actions": [
+        {
+          "id": "pinch_durumvial",
+          "label": "pinch the durumvial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumvial. They packed it on the abachi and packed rust around it."]
           ]
         }
       ]
@@ -27279,7 +27296,7 @@
       "name": "Rust Jatoba",
       "desc": "A dry jatoba east of the abachi. Packed rust coats jatoba.",
       "brief": "Dry jatoba, packed rust.",
-      "exits": { "west": { "to": "rust_abachi" }, "east": { "to": "rust_muiracatiara" }, "south": { "to": "rust_milletgerm" } },
+      "exits": { "west": { "to": "rust_abachi" }, "east": { "to": "rust_muiracatiara" }, "south": { "to": "rust_milletgerm" }, "north": { "to": "rust_foniovial" } },
       "actions": [
         {
           "id": "pinch_jatoba",
@@ -27288,6 +27305,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jatoba. They packed it on the abachi and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniovial": {
+      "name": "Rust Foniovial",
+      "desc": "A dry foniovial north of the jatoba. Packed rust coats foniovial.",
+      "brief": "Dry foniovial, packed rust.",
+      "exits": { "south": { "to": "rust_jatoba" } },
+      "actions": [
+        {
+          "id": "pinch_foniovial",
+          "label": "pinch the foniovial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniovial. They packed it on the jatoba and packed rust around it."]
           ]
         }
       ]
@@ -27313,7 +27347,7 @@
       "name": "Rust Muiracatiara",
       "desc": "A dry muiracatiara east of the jatoba. Packed rust coats muiracatiara.",
       "brief": "Dry muiracatiara, packed rust.",
-      "exits": { "west": { "to": "rust_jatoba" }, "east": { "to": "rust_apitong" }, "south": { "to": "rust_cornsemolina" } },
+      "exits": { "west": { "to": "rust_jatoba" }, "east": { "to": "rust_apitong" }, "south": { "to": "rust_cornsemolina" }, "north": { "to": "rust_teffvial" } },
       "actions": [
         {
           "id": "pinch_muiracatiara",
@@ -27322,6 +27356,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard muiracatiara. They packed it on the jatoba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffvial": {
+      "name": "Rust Teffvial",
+      "desc": "A dry teffvial north of the muiracatiara. Packed rust coats teffvial.",
+      "brief": "Dry teffvial, packed rust.",
+      "exits": { "south": { "to": "rust_muiracatiara" } },
+      "actions": [
+        {
+          "id": "pinch_teffvial",
+          "label": "pinch the teffvial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffvial. They packed it on the muiracatiara and packed rust around it."]
           ]
         }
       ]
@@ -27347,7 +27398,7 @@
       "name": "Rust Apitong",
       "desc": "A dry apitong east of the muiracatiara. Packed rust coats apitong.",
       "brief": "Dry apitong, packed rust.",
-      "exits": { "west": { "to": "rust_muiracatiara" }, "east": { "to": "rust_dao" }, "south": { "to": "rust_oatsemolina" } },
+      "exits": { "west": { "to": "rust_muiracatiara" }, "east": { "to": "rust_dao" }, "south": { "to": "rust_oatsemolina" }, "north": { "to": "rust_barleyvial" } },
       "actions": [
         {
           "id": "pinch_apitong",
@@ -27356,6 +27407,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard apitong. They packed it on the muiracatiara and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyvial": {
+      "name": "Rust Barleyvial",
+      "desc": "A dry barleyvial north of the apitong. Packed rust coats barleyvial.",
+      "brief": "Dry barleyvial, packed rust.",
+      "exits": { "south": { "to": "rust_apitong" } },
+      "actions": [
+        {
+          "id": "pinch_barleyvial",
+          "label": "pinch the barleyvial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyvial. They packed it on the apitong and packed rust around it."]
           ]
         }
       ]
@@ -27381,7 +27449,7 @@
       "name": "Rust Dao",
       "desc": "A dry dao east of the apitong. Packed rust coats dao.",
       "brief": "Dry dao, packed rust.",
-      "exits": { "west": { "to": "rust_apitong" }, "east": { "to": "rust_alpineash" }, "south": { "to": "rust_ryesemolina" } },
+      "exits": { "west": { "to": "rust_apitong" }, "east": { "to": "rust_alpineash" }, "south": { "to": "rust_ryesemolina" }, "north": { "to": "rust_sorghumvial" } },
       "actions": [
         {
           "id": "pinch_dao",
@@ -27390,6 +27458,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dao. They packed it on the apitong and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumvial": {
+      "name": "Rust Sorghumvial",
+      "desc": "A dry sorghumvial north of the dao. Packed rust coats sorghumvial.",
+      "brief": "Dry sorghumvial, packed rust.",
+      "exits": { "south": { "to": "rust_dao" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumvial",
+          "label": "pinch the sorghumvial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumvial. They packed it on the dao and packed rust around it."]
           ]
         }
       ]
@@ -27466,7 +27551,7 @@
       "name": "Rust Stay",
       "desc": "A dry stay east of the pommel. Packed rust coats a stay.",
       "brief": "Dry stay, packed rust.",
-      "exits": { "west": { "to": "rust_pommel" }, "east": { "to": "rust_shortsplice" }, "south": { "to": "rust_wheatmidds" } },
+      "exits": { "west": { "to": "rust_pommel" }, "east": { "to": "rust_shortsplice" }, "south": { "to": "rust_wheatmidds" }, "north": { "to": "rust_milletvial" } },
       "actions": [
         {
           "id": "pinch_stay",
@@ -27475,6 +27560,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stay. They guyed it from the pommel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletvial": {
+      "name": "Rust Milletvial",
+      "desc": "A dry milletvial north of the stay. Packed rust coats milletvial.",
+      "brief": "Dry milletvial, packed rust.",
+      "exits": { "south": { "to": "rust_stay" } },
+      "actions": [
+        {
+          "id": "pinch_milletvial",
+          "label": "pinch the milletvial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletvial. They packed it on the stay and packed rust around it."]
           ]
         }
       ]
@@ -27500,7 +27602,7 @@
       "name": "Rust Shortsplice",
       "desc": "A dry shortsplice east of the stay. Packed rust coats a shortsplice.",
       "brief": "Dry shortsplice, packed rust.",
-      "exits": { "west": { "to": "rust_stay" }, "east": { "to": "rust_bubinga" }, "south": { "to": "rust_cornbranflake" } },
+      "exits": { "west": { "to": "rust_stay" }, "east": { "to": "rust_bubinga" }, "south": { "to": "rust_cornbranflake" }, "north": { "to": "rust_cornvial" } },
       "actions": [
         {
           "id": "pinch_shortsplice",
@@ -27509,6 +27611,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shortsplice. They joined it on the stay and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornvial": {
+      "name": "Rust Cornvial",
+      "desc": "A dry cornvial north of the shortsplice. Packed rust coats cornvial.",
+      "brief": "Dry cornvial, packed rust.",
+      "exits": { "south": { "to": "rust_shortsplice" } },
+      "actions": [
+        {
+          "id": "pinch_cornvial",
+          "label": "pinch the cornvial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornvial. They packed it on the shortsplice and packed rust around it."]
           ]
         }
       ]
@@ -27534,7 +27653,7 @@
       "name": "Rust Bubinga",
       "desc": "A dry bubinga east of the shortsplice. Packed rust coats bubinga.",
       "brief": "Dry bubinga, packed rust.",
-      "exits": { "west": { "to": "rust_shortsplice" }, "east": { "to": "rust_obeche" }, "south": { "to": "rust_branflake" } },
+      "exits": { "west": { "to": "rust_shortsplice" }, "east": { "to": "rust_obeche" }, "south": { "to": "rust_branflake" }, "north": { "to": "rust_oatvial" } },
       "actions": [
         {
           "id": "pinch_bubinga",
@@ -27543,6 +27662,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bubinga. They set it on the shortsplice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatvial": {
+      "name": "Rust Oatvial",
+      "desc": "A dry oatvial north of the bubinga. Packed rust coats oatvial.",
+      "brief": "Dry oatvial, packed rust.",
+      "exits": { "south": { "to": "rust_bubinga" } },
+      "actions": [
+        {
+          "id": "pinch_oatvial",
+          "label": "pinch the oatvial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatvial. They packed it on the bubinga and packed rust around it."]
           ]
         }
       ]
@@ -53289,26 +53425,41 @@
     "go north",
     "go east",
     "pinch the abachi",
+    "go north",
+    "pinch the durumvial",
+    "go south",
     "go south",
     "pinch the sorghumgerm",
     "go north",
     "go east",
     "pinch the jatoba",
+    "go north",
+    "pinch the foniovial",
+    "go south",
     "go south",
     "pinch the milletgerm",
     "go north",
     "go east",
     "pinch the muiracatiara",
+    "go north",
+    "pinch the teffvial",
+    "go south",
     "go south",
     "pinch the cornsemolina",
     "go north",
     "go east",
     "pinch the apitong",
+    "go north",
+    "pinch the barleyvial",
+    "go south",
     "go south",
     "pinch the oatsemolina",
     "go north",
     "go east",
     "pinch the dao",
+    "go north",
+    "pinch the sorghumvial",
+    "go south",
     "go south",
     "pinch the ryesemolina",
     "go north",
@@ -53330,16 +53481,25 @@
     "go east",
     "go east",
     "pinch the stay",
+    "go north",
+    "pinch the milletvial",
+    "go south",
     "go south",
     "pinch the wheatmidds",
     "go north",
     "go east",
     "pinch the shortsplice",
+    "go north",
+    "pinch the cornvial",
+    "go south",
     "go south",
     "pinch the cornbranflake",
     "go north",
     "go east",
     "pinch the bubinga",
+    "go north",
+    "pinch the oatvial",
+    "go south",
     "go south",
     "pinch the branflake",
     "go north",
