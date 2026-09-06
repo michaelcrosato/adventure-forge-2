@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9050,
+  "maxScore": 9090,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13832,7 +13832,7 @@
       "name": "Rust Sootblack",
       "desc": "A dry sootblack east of the cutch. Packed rust coats sootblack.",
       "brief": "Dry sootblack, packed rust.",
-      "exits": { "west": { "to": "rust_cutch" }, "east": { "to": "rust_shininggum" } },
+      "exits": { "west": { "to": "rust_cutch" }, "east": { "to": "rust_shininggum" }, "south": { "to": "rust_henequen" } },
       "actions": [
         {
           "id": "pinch_sootblack",
@@ -13845,11 +13845,28 @@
         }
       ]
     },
+    "rust_henequen": {
+      "name": "Rust Henequen",
+      "desc": "A dry henequen south of the sootblack. Packed rust coats henequen.",
+      "brief": "Dry henequen, packed rust.",
+      "exits": { "north": { "to": "rust_sootblack" } },
+      "actions": [
+        {
+          "id": "pinch_henequen",
+          "label": "pinch the henequen",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard henequen. They packed it on the sootblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_shininggum": {
       "name": "Rust Shininggum",
       "desc": "A dry shininggum east of the sootblack. Packed rust coats shininggum.",
       "brief": "Dry shininggum, packed rust.",
-      "exits": { "west": { "to": "rust_sootblack" }, "east": { "to": "rust_kurrajong" } },
+      "exits": { "west": { "to": "rust_sootblack" }, "east": { "to": "rust_kurrajong" }, "south": { "to": "rust_istle" } },
       "actions": [
         {
           "id": "pinch_shininggum",
@@ -13862,11 +13879,28 @@
         }
       ]
     },
+    "rust_istle": {
+      "name": "Rust Istle",
+      "desc": "A dry istle south of the shininggum. Packed rust coats istle.",
+      "brief": "Dry istle, packed rust.",
+      "exits": { "north": { "to": "rust_shininggum" } },
+      "actions": [
+        {
+          "id": "pinch_istle",
+          "label": "pinch the istle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard istle. They packed it on the shininggum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kurrajong": {
       "name": "Rust Kurrajong",
       "desc": "A dry kurrajong east of the shininggum. Packed rust coats kurrajong.",
       "brief": "Dry kurrajong, packed rust.",
-      "exits": { "west": { "to": "rust_shininggum" }, "east": { "to": "rust_norfolkpine" } },
+      "exits": { "west": { "to": "rust_shininggum" }, "east": { "to": "rust_norfolkpine" }, "south": { "to": "rust_maguey" } },
       "actions": [
         {
           "id": "pinch_kurrajong",
@@ -13875,6 +13909,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kurrajong. They packed it on the shininggum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_maguey": {
+      "name": "Rust Maguey",
+      "desc": "A dry maguey south of the kurrajong. Packed rust coats maguey.",
+      "brief": "Dry maguey, packed rust.",
+      "exits": { "north": { "to": "rust_kurrajong" } },
+      "actions": [
+        {
+          "id": "pinch_maguey",
+          "label": "pinch the maguey",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard maguey. They packed it on the kurrajong and packed rust around it."]
           ]
         }
       ]
@@ -13951,7 +14002,7 @@
       "name": "Rust Larkhead",
       "desc": "A dry larkhead east of the leech. Packed rust coats a larkhead.",
       "brief": "Dry larkhead, packed rust.",
-      "exits": { "west": { "to": "rust_leech" }, "east": { "to": "rust_xanthan" } },
+      "exits": { "west": { "to": "rust_leech" }, "east": { "to": "rust_xanthan" }, "south": { "to": "rust_pita" } },
       "actions": [
         {
           "id": "pinch_larkhead",
@@ -13964,11 +14015,28 @@
         }
       ]
     },
+    "rust_pita": {
+      "name": "Rust Pita",
+      "desc": "A dry pita south of the larkhead. Packed rust coats pita.",
+      "brief": "Dry pita, packed rust.",
+      "exits": { "north": { "to": "rust_larkhead" } },
+      "actions": [
+        {
+          "id": "pinch_pita",
+          "label": "pinch the pita",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pita. They packed it on the larkhead and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_xanthan": {
       "name": "Rust Xanthan",
       "desc": "A dry xanthan east of the larkhead. Packed rust coats xanthan.",
       "brief": "Dry xanthan, packed rust.",
-      "exits": { "west": { "to": "rust_larkhead" }, "east": { "to": "rust_annotto" } },
+      "exits": { "west": { "to": "rust_larkhead" }, "east": { "to": "rust_annotto" }, "south": { "to": "rust_agave" } },
       "actions": [
         {
           "id": "pinch_xanthan",
@@ -13981,11 +14049,28 @@
         }
       ]
     },
+    "rust_agave": {
+      "name": "Rust Agave",
+      "desc": "A dry agave south of the xanthan. Packed rust coats agave.",
+      "brief": "Dry agave, packed rust.",
+      "exits": { "north": { "to": "rust_xanthan" } },
+      "actions": [
+        {
+          "id": "pinch_agave",
+          "label": "pinch the agave",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard agave. They packed it on the xanthan and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_annotto": {
       "name": "Rust Annotto",
       "desc": "A dry annotto east of the xanthan. Packed rust coats annotto.",
       "brief": "Dry annotto, packed rust.",
-      "exits": { "west": { "to": "rust_xanthan" }, "east": { "to": "rust_carbon" } },
+      "exits": { "west": { "to": "rust_xanthan" }, "east": { "to": "rust_carbon" }, "south": { "to": "rust_yucca" } },
       "actions": [
         {
           "id": "pinch_annotto",
@@ -13998,11 +14083,28 @@
         }
       ]
     },
+    "rust_yucca": {
+      "name": "Rust Yucca",
+      "desc": "A dry yucca south of the annotto. Packed rust coats yucca.",
+      "brief": "Dry yucca, packed rust.",
+      "exits": { "north": { "to": "rust_annotto" } },
+      "actions": [
+        {
+          "id": "pinch_yucca",
+          "label": "pinch the yucca",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard yucca. They packed it on the annotto and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_carbon": {
       "name": "Rust Carbon",
       "desc": "A dry carbon east of the annotto. Packed rust coats carbon.",
       "brief": "Dry carbon, packed rust.",
-      "exits": { "west": { "to": "rust_annotto" }, "east": { "to": "rust_scribblygum" } },
+      "exits": { "west": { "to": "rust_annotto" }, "east": { "to": "rust_scribblygum" }, "south": { "to": "rust_phormium" } },
       "actions": [
         {
           "id": "pinch_carbon",
@@ -14015,11 +14117,28 @@
         }
       ]
     },
+    "rust_phormium": {
+      "name": "Rust Phormium",
+      "desc": "A dry phormium south of the carbon. Packed rust coats phormium.",
+      "brief": "Dry phormium, packed rust.",
+      "exits": { "north": { "to": "rust_carbon" } },
+      "actions": [
+        {
+          "id": "pinch_phormium",
+          "label": "pinch the phormium",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard phormium. They packed it on the carbon and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_scribblygum": {
       "name": "Rust Scribblygum",
       "desc": "A dry scribblygum east of the carbon. Packed rust coats scribblygum.",
       "brief": "Dry scribblygum, packed rust.",
-      "exits": { "west": { "to": "rust_carbon" }, "east": { "to": "rust_gympie" } },
+      "exits": { "west": { "to": "rust_carbon" }, "east": { "to": "rust_gympie" }, "south": { "to": "rust_harakeke" } },
       "actions": [
         {
           "id": "pinch_scribblygum",
@@ -14028,6 +14147,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard scribblygum. They packed it on the carbon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_harakeke": {
+      "name": "Rust Harakeke",
+      "desc": "A dry harakeke south of the scribblygum. Packed rust coats harakeke.",
+      "brief": "Dry harakeke, packed rust.",
+      "exits": { "north": { "to": "rust_scribblygum" } },
+      "actions": [
+        {
+          "id": "pinch_harakeke",
+          "label": "pinch the harakeke",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard harakeke. They packed it on the scribblygum and packed rust around it."]
           ]
         }
       ]
@@ -33103,10 +33239,19 @@
     "go north",
     "go east",
     "pinch the sootblack",
+    "go south",
+    "pinch the henequen",
+    "go north",
     "go east",
     "pinch the shininggum",
+    "go south",
+    "pinch the istle",
+    "go north",
     "go east",
     "pinch the kurrajong",
+    "go south",
+    "pinch the maguey",
+    "go north",
     "go east",
     "pinch the norfolkpine",
     "go south",
@@ -33128,14 +33273,29 @@
     "pinch the leech",
     "go east",
     "pinch the larkhead",
+    "go south",
+    "pinch the pita",
+    "go north",
     "go east",
     "pinch the xanthan",
+    "go south",
+    "pinch the agave",
+    "go north",
     "go east",
     "pinch the annotto",
+    "go south",
+    "pinch the yucca",
+    "go north",
     "go east",
     "pinch the carbon",
+    "go south",
+    "pinch the phormium",
+    "go north",
     "go east",
     "pinch the scribblygum",
+    "go south",
+    "pinch the harakeke",
+    "go north",
     "go east",
     "pinch the gympie",
     "go east",
