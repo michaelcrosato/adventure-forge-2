@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12410,
+  "maxScore": 12450,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -14342,7 +14342,7 @@
       "name": "Rust Coal",
       "desc": "A dry coal east of the fustic. Packed rust coats coal.",
       "brief": "Dry coal, packed rust.",
-      "exits": { "west": { "to": "rust_fustic" }, "east": { "to": "rust_applebox" } },
+      "exits": { "west": { "to": "rust_fustic" }, "east": { "to": "rust_applebox" }, "south": { "to": "rust_durumgrade" } },
       "actions": [
         {
           "id": "pinch_coal",
@@ -14355,11 +14355,28 @@
         }
       ]
     },
+    "rust_durumgrade": {
+      "name": "Rust Durumgrade",
+      "desc": "A dry durumgrade south of the coal. Packed rust coats durumgrade.",
+      "brief": "Dry durumgrade, packed rust.",
+      "exits": { "north": { "to": "rust_coal" } },
+      "actions": [
+        {
+          "id": "pinch_durumgrade",
+          "label": "pinch the durumgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumgrade. They packed it on the coal and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_applebox": {
       "name": "Rust Applebox",
       "desc": "A dry applebox east of the coal. Packed rust coats applebox.",
       "brief": "Dry applebox, packed rust.",
-      "exits": { "west": { "to": "rust_coal" }, "east": { "to": "rust_lillypilly" } },
+      "exits": { "west": { "to": "rust_coal" }, "east": { "to": "rust_lillypilly" }, "south": { "to": "rust_foniograde" } },
       "actions": [
         {
           "id": "pinch_applebox",
@@ -14372,11 +14389,28 @@
         }
       ]
     },
+    "rust_foniograde": {
+      "name": "Rust Foniograde",
+      "desc": "A dry foniograde south of the applebox. Packed rust coats foniograde.",
+      "brief": "Dry foniograde, packed rust.",
+      "exits": { "north": { "to": "rust_applebox" } },
+      "actions": [
+        {
+          "id": "pinch_foniograde",
+          "label": "pinch the foniograde",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniograde. They packed it on the applebox and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_lillypilly": {
       "name": "Rust Lillypilly",
       "desc": "A dry lillypilly east of the applebox. Packed rust coats lillypilly.",
       "brief": "Dry lillypilly, packed rust.",
-      "exits": { "west": { "to": "rust_applebox" }, "east": { "to": "rust_loblolly" } },
+      "exits": { "west": { "to": "rust_applebox" }, "east": { "to": "rust_loblolly" }, "south": { "to": "rust_teffgrade" } },
       "actions": [
         {
           "id": "pinch_lillypilly",
@@ -14389,11 +14423,28 @@
         }
       ]
     },
+    "rust_teffgrade": {
+      "name": "Rust Teffgrade",
+      "desc": "A dry teffgrade south of the lillypilly. Packed rust coats teffgrade.",
+      "brief": "Dry teffgrade, packed rust.",
+      "exits": { "north": { "to": "rust_lillypilly" } },
+      "actions": [
+        {
+          "id": "pinch_teffgrade",
+          "label": "pinch the teffgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffgrade. They packed it on the lillypilly and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_loblolly": {
       "name": "Rust Loblolly",
       "desc": "A dry loblolly east of the lillypilly. Packed rust coats loblolly.",
       "brief": "Dry loblolly, packed rust.",
-      "exits": { "west": { "to": "rust_lillypilly" }, "east": { "to": "rust_engelmann" } },
+      "exits": { "west": { "to": "rust_lillypilly" }, "east": { "to": "rust_engelmann" }, "south": { "to": "rust_barleygrade" } },
       "actions": [
         {
           "id": "pinch_loblolly",
@@ -14402,6 +14453,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard loblolly. They packed it on the lillypilly and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleygrade": {
+      "name": "Rust Barleygrade",
+      "desc": "A dry barleygrade south of the loblolly. Packed rust coats barleygrade.",
+      "brief": "Dry barleygrade, packed rust.",
+      "exits": { "north": { "to": "rust_loblolly" } },
+      "actions": [
+        {
+          "id": "pinch_barleygrade",
+          "label": "pinch the barleygrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleygrade. They packed it on the loblolly and packed rust around it."]
           ]
         }
       ]
@@ -14478,7 +14546,7 @@
       "name": "Rust Catharpin",
       "desc": "A dry catharpin east of the stringer. Packed rust coats a catharpin.",
       "brief": "Dry catharpin, packed rust.",
-      "exits": { "west": { "to": "rust_stringer" }, "east": { "to": "rust_munter" } },
+      "exits": { "west": { "to": "rust_stringer" }, "east": { "to": "rust_munter" }, "south": { "to": "rust_sorghumgrade" } },
       "actions": [
         {
           "id": "pinch_catharpin",
@@ -14491,11 +14559,28 @@
         }
       ]
     },
+    "rust_sorghumgrade": {
+      "name": "Rust Sorghumgrade",
+      "desc": "A dry sorghumgrade south of the catharpin. Packed rust coats sorghumgrade.",
+      "brief": "Dry sorghumgrade, packed rust.",
+      "exits": { "north": { "to": "rust_catharpin" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumgrade",
+          "label": "pinch the sorghumgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumgrade. They packed it on the catharpin and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_munter": {
       "name": "Rust Munter",
       "desc": "A dry munter east of the catharpin. Packed rust coats a munter.",
       "brief": "Dry munter, packed rust.",
-      "exits": { "west": { "to": "rust_catharpin" }, "east": { "to": "rust_karaya" } },
+      "exits": { "west": { "to": "rust_catharpin" }, "east": { "to": "rust_karaya" }, "south": { "to": "rust_milletgrade" } },
       "actions": [
         {
           "id": "pinch_munter",
@@ -14508,11 +14593,28 @@
         }
       ]
     },
+    "rust_milletgrade": {
+      "name": "Rust Milletgrade",
+      "desc": "A dry milletgrade south of the munter. Packed rust coats milletgrade.",
+      "brief": "Dry milletgrade, packed rust.",
+      "exits": { "north": { "to": "rust_munter" } },
+      "actions": [
+        {
+          "id": "pinch_milletgrade",
+          "label": "pinch the milletgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletgrade. They packed it on the munter and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_karaya": {
       "name": "Rust Karaya",
       "desc": "A dry karaya east of the munter. Packed rust coats karaya.",
       "brief": "Dry karaya, packed rust.",
-      "exits": { "west": { "to": "rust_munter" }, "east": { "to": "rust_litmus" } },
+      "exits": { "west": { "to": "rust_munter" }, "east": { "to": "rust_litmus" }, "south": { "to": "rust_corngrade" } },
       "actions": [
         {
           "id": "pinch_karaya",
@@ -14525,11 +14627,28 @@
         }
       ]
     },
+    "rust_corngrade": {
+      "name": "Rust Corngrade",
+      "desc": "A dry corngrade south of the karaya. Packed rust coats corngrade.",
+      "brief": "Dry corngrade, packed rust.",
+      "exits": { "north": { "to": "rust_karaya" } },
+      "actions": [
+        {
+          "id": "pinch_corngrade",
+          "label": "pinch the corngrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corngrade. They packed it on the karaya and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_litmus": {
       "name": "Rust Litmus",
       "desc": "A dry litmus east of the karaya. Packed rust coats litmus.",
       "brief": "Dry litmus, packed rust.",
-      "exits": { "west": { "to": "rust_karaya" }, "east": { "to": "rust_peat" } },
+      "exits": { "west": { "to": "rust_karaya" }, "east": { "to": "rust_peat" }, "south": { "to": "rust_oatgrade" } },
       "actions": [
         {
           "id": "pinch_litmus",
@@ -14538,6 +14657,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard litmus. They packed it on the karaya and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatgrade": {
+      "name": "Rust Oatgrade",
+      "desc": "A dry oatgrade south of the litmus. Packed rust coats oatgrade.",
+      "brief": "Dry oatgrade, packed rust.",
+      "exits": { "north": { "to": "rust_litmus" } },
+      "actions": [
+        {
+          "id": "pinch_oatgrade",
+          "label": "pinch the oatgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatgrade. They packed it on the litmus and packed rust around it."]
           ]
         }
       ]
@@ -44617,12 +44753,24 @@
     "pinch the fustic",
     "go east",
     "pinch the coal",
+    "go south",
+    "pinch the durumgrade",
+    "go north",
     "go east",
     "pinch the applebox",
+    "go south",
+    "pinch the foniograde",
+    "go north",
     "go east",
     "pinch the lillypilly",
+    "go south",
+    "pinch the teffgrade",
+    "go north",
     "go east",
     "pinch the loblolly",
+    "go south",
+    "pinch the barleygrade",
+    "go north",
     "go east",
     "pinch the engelmann",
     "go south",
@@ -44644,12 +44792,24 @@
     "pinch the stringer",
     "go east",
     "pinch the catharpin",
+    "go south",
+    "pinch the sorghumgrade",
+    "go north",
     "go east",
     "pinch the munter",
+    "go south",
+    "pinch the milletgrade",
+    "go north",
     "go east",
     "pinch the karaya",
+    "go south",
+    "pinch the corngrade",
+    "go north",
     "go east",
     "pinch the litmus",
+    "go south",
+    "pinch the oatgrade",
+    "go north",
     "go east",
     "pinch the peat",
     "go south",
