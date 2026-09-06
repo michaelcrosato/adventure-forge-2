@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10210,
+  "maxScore": 10250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -28282,7 +28282,7 @@
       "name": "Rust Tarpaulin",
       "desc": "A dry tarpaulin east of the grid. Packed rust coats a tarpaulin.",
       "brief": "Dry tarpaulin, packed rust.",
-      "exits": { "west": { "to": "rust_grid" }, "east": { "to": "rust_whiting" } },
+      "exits": { "west": { "to": "rust_grid" }, "east": { "to": "rust_whiting" }, "south": { "to": "rust_chia" } },
       "actions": [
         {
           "id": "pinch_tarpaulin",
@@ -28295,11 +28295,28 @@
         }
       ]
     },
+    "rust_chia": {
+      "name": "Rust Chia",
+      "desc": "A dry chia south of the tarpaulin. Packed rust coats chia.",
+      "brief": "Dry chia, packed rust.",
+      "exits": { "north": { "to": "rust_tarpaulin" } },
+      "actions": [
+        {
+          "id": "pinch_chia",
+          "label": "pinch the chia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard chia. They packed it on the tarpaulin and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_whiting": {
       "name": "Rust Whiting",
       "desc": "A dry whiting east of the tarpaulin. Packed rust coats whiting.",
       "brief": "Dry whiting, packed rust.",
-      "exits": { "west": { "to": "rust_tarpaulin" }, "east": { "to": "rust_rottenstone" } },
+      "exits": { "west": { "to": "rust_tarpaulin" }, "east": { "to": "rust_rottenstone" }, "south": { "to": "rust_hempseed" } },
       "actions": [
         {
           "id": "pinch_whiting",
@@ -28312,11 +28329,28 @@
         }
       ]
     },
+    "rust_hempseed": {
+      "name": "Rust Hempseed",
+      "desc": "A dry hempseed south of the whiting. Packed rust coats hempseed.",
+      "brief": "Dry hempseed, packed rust.",
+      "exits": { "north": { "to": "rust_whiting" } },
+      "actions": [
+        {
+          "id": "pinch_hempseed",
+          "label": "pinch the hempseed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hempseed. They packed it on the whiting and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_rottenstone": {
       "name": "Rust Rottenstone",
       "desc": "A dry rottenstone east of the whiting. Packed rust coats rottenstone.",
       "brief": "Dry rottenstone, packed rust.",
-      "exits": { "west": { "to": "rust_whiting" }, "east": { "to": "rust_meerschaum" } },
+      "exits": { "west": { "to": "rust_whiting" }, "east": { "to": "rust_meerschaum" }, "south": { "to": "rust_pumpkinseed" } },
       "actions": [
         {
           "id": "pinch_rottenstone",
@@ -28329,11 +28363,28 @@
         }
       ]
     },
+    "rust_pumpkinseed": {
+      "name": "Rust Pumpkinseed",
+      "desc": "A dry pumpkinseed south of the rottenstone. Packed rust coats pumpkinseed.",
+      "brief": "Dry pumpkinseed, packed rust.",
+      "exits": { "north": { "to": "rust_rottenstone" } },
+      "actions": [
+        {
+          "id": "pinch_pumpkinseed",
+          "label": "pinch the pumpkinseed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pumpkinseed. They packed it on the rottenstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_meerschaum": {
       "name": "Rust Meerschaum",
       "desc": "A dry meerschaum east of the rottenstone. Packed rust coats meerschaum.",
       "brief": "Dry meerschaum, packed rust.",
-      "exits": { "west": { "to": "rust_rottenstone" }, "east": { "to": "rust_magnetite" } },
+      "exits": { "west": { "to": "rust_rottenstone" }, "east": { "to": "rust_magnetite" }, "south": { "to": "rust_flaxseed" } },
       "actions": [
         {
           "id": "pinch_meerschaum",
@@ -28346,11 +28397,28 @@
         }
       ]
     },
+    "rust_flaxseed": {
+      "name": "Rust Flaxseed",
+      "desc": "A dry flaxseed south of the meerschaum. Packed rust coats flaxseed.",
+      "brief": "Dry flaxseed, packed rust.",
+      "exits": { "north": { "to": "rust_meerschaum" } },
+      "actions": [
+        {
+          "id": "pinch_flaxseed",
+          "label": "pinch the flaxseed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard flaxseed. They packed it on the meerschaum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_magnetite": {
       "name": "Rust Magnetite",
       "desc": "A dry magnetite east of the meerschaum. Packed rust coats magnetite.",
       "brief": "Dry magnetite, packed rust.",
-      "exits": { "west": { "to": "rust_meerschaum" }, "east": { "to": "rust_yellowochre" } },
+      "exits": { "west": { "to": "rust_meerschaum" }, "east": { "to": "rust_yellowochre" }, "south": { "to": "rust_nigella" } },
       "actions": [
         {
           "id": "pinch_magnetite",
@@ -28363,11 +28431,28 @@
         }
       ]
     },
+    "rust_nigella": {
+      "name": "Rust Nigella",
+      "desc": "A dry nigella south of the magnetite. Packed rust coats nigella.",
+      "brief": "Dry nigella, packed rust.",
+      "exits": { "north": { "to": "rust_magnetite" } },
+      "actions": [
+        {
+          "id": "pinch_nigella",
+          "label": "pinch the nigella",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nigella. They packed it on the magnetite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_yellowochre": {
       "name": "Rust Yellowochre",
       "desc": "A dry yellowochre east of the magnetite. Packed rust coats yellowochre.",
       "brief": "Dry yellowochre, packed rust.",
-      "exits": { "west": { "to": "rust_magnetite" }, "east": { "to": "rust_turquoise" } },
+      "exits": { "west": { "to": "rust_magnetite" }, "east": { "to": "rust_turquoise" }, "south": { "to": "rust_poppyseed" } },
       "actions": [
         {
           "id": "pinch_yellowochre",
@@ -28380,11 +28465,28 @@
         }
       ]
     },
+    "rust_poppyseed": {
+      "name": "Rust Poppyseed",
+      "desc": "A dry poppyseed south of the yellowochre. Packed rust coats poppyseed.",
+      "brief": "Dry poppyseed, packed rust.",
+      "exits": { "north": { "to": "rust_yellowochre" } },
+      "actions": [
+        {
+          "id": "pinch_poppyseed",
+          "label": "pinch the poppyseed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard poppyseed. They packed it on the yellowochre and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_turquoise": {
       "name": "Rust Turquoise",
       "desc": "A dry turquoise east of the yellowochre. Packed rust coats turquoise.",
       "brief": "Dry turquoise, packed rust.",
-      "exits": { "west": { "to": "rust_yellowochre" }, "east": { "to": "rust_botallackite" } },
+      "exits": { "west": { "to": "rust_yellowochre" }, "east": { "to": "rust_botallackite" }, "south": { "to": "rust_sunflower" } },
       "actions": [
         {
           "id": "pinch_turquoise",
@@ -28397,11 +28499,28 @@
         }
       ]
     },
+    "rust_sunflower": {
+      "name": "Rust Sunflower",
+      "desc": "A dry sunflower south of the turquoise. Packed rust coats sunflower.",
+      "brief": "Dry sunflower, packed rust.",
+      "exits": { "north": { "to": "rust_turquoise" } },
+      "actions": [
+        {
+          "id": "pinch_sunflower",
+          "label": "pinch the sunflower",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sunflower. They packed it on the turquoise and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_botallackite": {
       "name": "Rust Botallackite",
       "desc": "A dry botallackite east of the turquoise. Packed rust coats botallackite.",
       "brief": "Dry botallackite, packed rust.",
-      "exits": { "west": { "to": "rust_turquoise" }, "east": { "to": "rust_maucherite" } },
+      "exits": { "west": { "to": "rust_turquoise" }, "east": { "to": "rust_maucherite" }, "south": { "to": "rust_sesame" } },
       "actions": [
         {
           "id": "pinch_botallackite",
@@ -28410,6 +28529,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard botallackite. They packed it on the turquoise and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sesame": {
+      "name": "Rust Sesame",
+      "desc": "A dry sesame south of the botallackite. Packed rust coats sesame.",
+      "brief": "Dry sesame, packed rust.",
+      "exits": { "north": { "to": "rust_botallackite" } },
+      "actions": [
+        {
+          "id": "pinch_sesame",
+          "label": "pinch the sesame",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sesame. They packed it on the botallackite and packed rust around it."]
           ]
         }
       ]
@@ -39059,20 +39195,44 @@
     "pinch the tab",
     "go east",
     "pinch the tarpaulin",
+    "go south",
+    "pinch the chia",
+    "go north",
     "go east",
     "pinch the whiting",
+    "go south",
+    "pinch the hempseed",
+    "go north",
     "go east",
     "pinch the rottenstone",
+    "go south",
+    "pinch the pumpkinseed",
+    "go north",
     "go east",
     "pinch the meerschaum",
+    "go south",
+    "pinch the flaxseed",
+    "go north",
     "go east",
     "pinch the magnetite",
+    "go south",
+    "pinch the nigella",
+    "go north",
     "go east",
     "pinch the yellowochre",
+    "go south",
+    "pinch the poppyseed",
+    "go north",
     "go east",
     "pinch the turquoise",
+    "go south",
+    "pinch the sunflower",
+    "go north",
     "go east",
     "pinch the botallackite",
+    "go south",
+    "pinch the sesame",
+    "go north",
     "go east",
     "pinch the maucherite",
     "go west",
