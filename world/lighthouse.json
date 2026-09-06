@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15090,
+  "maxScore": 15130,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -20819,7 +20819,7 @@
       "name": "Rust Sugarpine",
       "desc": "A dry sugarpine east of the paperbark. Packed rust coats sugarpine.",
       "brief": "Dry sugarpine, packed rust.",
-      "exits": { "west": { "to": "rust_paperbark" }, "east": { "to": "rust_whau" }, "south": { "to": "rust_iliahi" } },
+      "exits": { "west": { "to": "rust_paperbark" }, "east": { "to": "rust_whau" }, "south": { "to": "rust_iliahi" }, "north": { "to": "rust_durumpipe" } },
       "actions": [
         {
           "id": "pinch_sugarpine",
@@ -20828,6 +20828,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sugarpine. They packed it on the paperbark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumpipe": {
+      "name": "Rust Durumpipe",
+      "desc": "A dry durumpipe north of the sugarpine. Packed rust coats durumpipe.",
+      "brief": "Dry durumpipe, packed rust.",
+      "exits": { "south": { "to": "rust_sugarpine" } },
+      "actions": [
+        {
+          "id": "pinch_durumpipe",
+          "label": "pinch the durumpipe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumpipe. They packed it on the sugarpine and packed rust around it."]
           ]
         }
       ]
@@ -20870,7 +20887,7 @@
       "name": "Rust Bitt",
       "desc": "A dry bitt east of the sleeve. Packed rust coats a bitt.",
       "brief": "Dry bitt, packed rust.",
-      "exits": { "west": { "to": "rust_sleeve" }, "east": { "to": "rust_sternpost" }, "south": { "to": "rust_wheatsecondclear" } },
+      "exits": { "west": { "to": "rust_sleeve" }, "east": { "to": "rust_sternpost" }, "south": { "to": "rust_wheatsecondclear" }, "north": { "to": "rust_foniopipe" } },
       "actions": [
         {
           "id": "pinch_bitt",
@@ -20879,6 +20896,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bitt. They tied off on the sleeve and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniopipe": {
+      "name": "Rust Foniopipe",
+      "desc": "A dry foniopipe north of the bitt. Packed rust coats foniopipe.",
+      "brief": "Dry foniopipe, packed rust.",
+      "exits": { "south": { "to": "rust_bitt" } },
+      "actions": [
+        {
+          "id": "pinch_foniopipe",
+          "label": "pinch the foniopipe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniopipe. They packed it on the bitt and packed rust around it."]
           ]
         }
       ]
@@ -20904,7 +20938,7 @@
       "name": "Rust Sternpost",
       "desc": "A dry sternpost east of the bitt. Packed rust coats a sternpost.",
       "brief": "Dry sternpost, packed rust.",
-      "exits": { "west": { "to": "rust_bitt" }, "east": { "to": "rust_heavingknot" }, "south": { "to": "rust_durumfirstclear" } },
+      "exits": { "west": { "to": "rust_bitt" }, "east": { "to": "rust_heavingknot" }, "south": { "to": "rust_durumfirstclear" }, "north": { "to": "rust_teffpipe" } },
       "actions": [
         {
           "id": "pinch_sternpost",
@@ -20913,6 +20947,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sternpost. They stepped it on the bitt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffpipe": {
+      "name": "Rust Teffpipe",
+      "desc": "A dry teffpipe north of the sternpost. Packed rust coats teffpipe.",
+      "brief": "Dry teffpipe, packed rust.",
+      "exits": { "south": { "to": "rust_sternpost" } },
+      "actions": [
+        {
+          "id": "pinch_teffpipe",
+          "label": "pinch the teffpipe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffpipe. They packed it on the sternpost and packed rust around it."]
           ]
         }
       ]
@@ -20938,7 +20989,7 @@
       "name": "Rust Heavingknot",
       "desc": "A dry heavingknot east of the sternpost. Packed rust coats a heavingknot.",
       "brief": "Dry heavingknot, packed rust.",
-      "exits": { "west": { "to": "rust_sternpost" }, "east": { "to": "rust_hideglue" }, "south": { "to": "rust_foniofirstclear" } },
+      "exits": { "west": { "to": "rust_sternpost" }, "east": { "to": "rust_hideglue" }, "south": { "to": "rust_foniofirstclear" }, "north": { "to": "rust_barleypipe" } },
       "actions": [
         {
           "id": "pinch_heavingknot",
@@ -20947,6 +20998,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard heavingknot. They threw it on the sternpost and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleypipe": {
+      "name": "Rust Barleypipe",
+      "desc": "A dry barleypipe north of the heavingknot. Packed rust coats barleypipe.",
+      "brief": "Dry barleypipe, packed rust.",
+      "exits": { "south": { "to": "rust_heavingknot" } },
+      "actions": [
+        {
+          "id": "pinch_barleypipe",
+          "label": "pinch the barleypipe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleypipe. They packed it on the heavingknot and packed rust around it."]
           ]
         }
       ]
@@ -20972,7 +21040,7 @@
       "name": "Rust Hideglue",
       "desc": "A dry hideglue east of the heavingknot. Packed rust coats hideglue.",
       "brief": "Dry hideglue, packed rust.",
-      "exits": { "west": { "to": "rust_heavingknot" }, "east": { "to": "rust_catechu" }, "south": { "to": "rust_tefffirstclear" } },
+      "exits": { "west": { "to": "rust_heavingknot" }, "east": { "to": "rust_catechu" }, "south": { "to": "rust_tefffirstclear" }, "north": { "to": "rust_sorghumpipe" } },
       "actions": [
         {
           "id": "pinch_hideglue",
@@ -20981,6 +21049,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hideglue. They packed it on the heavingknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumpipe": {
+      "name": "Rust Sorghumpipe",
+      "desc": "A dry sorghumpipe north of the hideglue. Packed rust coats sorghumpipe.",
+      "brief": "Dry sorghumpipe, packed rust.",
+      "exits": { "south": { "to": "rust_hideglue" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumpipe",
+          "label": "pinch the sorghumpipe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumpipe. They packed it on the hideglue and packed rust around it."]
           ]
         }
       ]
@@ -21006,7 +21091,7 @@
       "name": "Rust Catechu",
       "desc": "A dry catechu east of the hideglue. Packed rust coats catechu.",
       "brief": "Dry catechu, packed rust.",
-      "exits": { "west": { "to": "rust_hideglue" }, "east": { "to": "rust_lampwick" }, "south": { "to": "rust_barleyfirstclear" } },
+      "exits": { "west": { "to": "rust_hideglue" }, "east": { "to": "rust_lampwick" }, "south": { "to": "rust_barleyfirstclear" }, "north": { "to": "rust_milletpipe" } },
       "actions": [
         {
           "id": "pinch_catechu",
@@ -21015,6 +21100,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard catechu. They packed it on the hideglue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletpipe": {
+      "name": "Rust Milletpipe",
+      "desc": "A dry milletpipe north of the catechu. Packed rust coats milletpipe.",
+      "brief": "Dry milletpipe, packed rust.",
+      "exits": { "south": { "to": "rust_catechu" } },
+      "actions": [
+        {
+          "id": "pinch_milletpipe",
+          "label": "pinch the milletpipe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletpipe. They packed it on the catechu and packed rust around it."]
           ]
         }
       ]
@@ -21040,7 +21142,7 @@
       "name": "Rust Lampwick",
       "desc": "A dry lampwick east of the catechu. Packed rust coats lampwick.",
       "brief": "Dry lampwick, packed rust.",
-      "exits": { "west": { "to": "rust_catechu" }, "east": { "to": "rust_candlebark" }, "south": { "to": "rust_sorghumfirstclear" } },
+      "exits": { "west": { "to": "rust_catechu" }, "east": { "to": "rust_candlebark" }, "south": { "to": "rust_sorghumfirstclear" }, "north": { "to": "rust_cornpipe" } },
       "actions": [
         {
           "id": "pinch_lampwick",
@@ -21049,6 +21151,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lampwick. They packed it on the catechu and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornpipe": {
+      "name": "Rust Cornpipe",
+      "desc": "A dry cornpipe north of the lampwick. Packed rust coats cornpipe.",
+      "brief": "Dry cornpipe, packed rust.",
+      "exits": { "south": { "to": "rust_lampwick" } },
+      "actions": [
+        {
+          "id": "pinch_cornpipe",
+          "label": "pinch the cornpipe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornpipe. They packed it on the lampwick and packed rust around it."]
           ]
         }
       ]
@@ -21074,7 +21193,7 @@
       "name": "Rust Candlebark",
       "desc": "A dry candlebark east of the lampwick. Packed rust coats candlebark.",
       "brief": "Dry candlebark, packed rust.",
-      "exits": { "west": { "to": "rust_lampwick" }, "east": { "to": "rust_lemongum" }, "south": { "to": "rust_milletfirstclear" } },
+      "exits": { "west": { "to": "rust_lampwick" }, "east": { "to": "rust_lemongum" }, "south": { "to": "rust_milletfirstclear" }, "north": { "to": "rust_oatpipe" } },
       "actions": [
         {
           "id": "pinch_candlebark",
@@ -21083,6 +21202,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard candlebark. They packed it on the lampwick and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatpipe": {
+      "name": "Rust Oatpipe",
+      "desc": "A dry oatpipe north of the candlebark. Packed rust coats oatpipe.",
+      "brief": "Dry oatpipe, packed rust.",
+      "exits": { "south": { "to": "rust_candlebark" } },
+      "actions": [
+        {
+          "id": "pinch_oatpipe",
+          "label": "pinch the oatpipe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatpipe. They packed it on the candlebark and packed rust around it."]
           ]
         }
       ]
@@ -54867,6 +55003,9 @@
     "go north",
     "go east",
     "pinch the sugarpine",
+    "go north",
+    "pinch the durumpipe",
+    "go south",
     "go south",
     "pinch the iliahi",
     "go north",
@@ -54884,36 +55023,57 @@
     "go north",
     "go east",
     "pinch the bitt",
+    "go north",
+    "pinch the foniopipe",
+    "go south",
     "go south",
     "pinch the wheatsecondclear",
     "go north",
     "go east",
     "pinch the sternpost",
+    "go north",
+    "pinch the teffpipe",
+    "go south",
     "go south",
     "pinch the durumfirstclear",
     "go north",
     "go east",
     "pinch the heavingknot",
+    "go north",
+    "pinch the barleypipe",
+    "go south",
     "go south",
     "pinch the foniofirstclear",
     "go north",
     "go east",
     "pinch the hideglue",
+    "go north",
+    "pinch the sorghumpipe",
+    "go south",
     "go south",
     "pinch the tefffirstclear",
     "go north",
     "go east",
     "pinch the catechu",
+    "go north",
+    "pinch the milletpipe",
+    "go south",
     "go south",
     "pinch the barleyfirstclear",
     "go north",
     "go east",
     "pinch the lampwick",
+    "go north",
+    "pinch the cornpipe",
+    "go south",
     "go south",
     "pinch the sorghumfirstclear",
     "go north",
     "go east",
     "pinch the candlebark",
+    "go north",
+    "pinch the oatpipe",
+    "go south",
     "go south",
     "pinch the milletfirstclear",
     "go north",
