@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12570,
+  "maxScore": 12610,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -40828,7 +40828,7 @@
       "name": "Rust Bornite",
       "desc": "A dry bornite east of the zincwhite. Packed rust coats bornite.",
       "brief": "Dry bornite, packed rust.",
-      "exits": { "west": { "to": "rust_zincwhite" }, "east": { "to": "rust_crednerite" }, "south": { "to": "rust_stipe" } },
+      "exits": { "west": { "to": "rust_zincwhite" }, "east": { "to": "rust_crednerite" }, "south": { "to": "rust_stipe" }, "north": { "to": "rust_durumbin" } },
       "actions": [
         {
           "id": "pinch_bornite",
@@ -40837,6 +40837,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bornite. They packed it on the zincwhite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbin": {
+      "name": "Rust Durumbin",
+      "desc": "A dry durumbin north of the bornite. Packed rust coats durumbin.",
+      "brief": "Dry durumbin, packed rust.",
+      "exits": { "south": { "to": "rust_bornite" } },
+      "actions": [
+        {
+          "id": "pinch_durumbin",
+          "label": "pinch the durumbin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbin. They packed it on the bornite and packed rust around it."]
           ]
         }
       ]
@@ -40862,7 +40879,7 @@
       "name": "Rust Crednerite",
       "desc": "A dry crednerite east of the bornite. Packed rust coats crednerite.",
       "brief": "Dry crednerite, packed rust.",
-      "exits": { "west": { "to": "rust_bornite" }, "east": { "to": "rust_nickeline" }, "south": { "to": "rust_spore" } },
+      "exits": { "west": { "to": "rust_bornite" }, "east": { "to": "rust_nickeline" }, "south": { "to": "rust_spore" }, "north": { "to": "rust_foniobin" } },
       "actions": [
         {
           "id": "pinch_crednerite",
@@ -40871,6 +40888,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard crednerite. They packed it on the bornite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobin": {
+      "name": "Rust Foniobin",
+      "desc": "A dry foniobin north of the crednerite. Packed rust coats foniobin.",
+      "brief": "Dry foniobin, packed rust.",
+      "exits": { "south": { "to": "rust_crednerite" } },
+      "actions": [
+        {
+          "id": "pinch_foniobin",
+          "label": "pinch the foniobin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobin. They packed it on the crednerite and packed rust around it."]
           ]
         }
       ]
@@ -40947,7 +40981,7 @@
       "name": "Rust Paunch",
       "desc": "A dry paunch east of the floor. Packed rust coats a paunch.",
       "brief": "Dry paunch, packed rust.",
-      "exits": { "west": { "to": "rust_floor" }, "east": { "to": "rust_jibgasket" }, "south": { "to": "rust_frond" } },
+      "exits": { "west": { "to": "rust_floor" }, "east": { "to": "rust_jibgasket" }, "south": { "to": "rust_frond" }, "north": { "to": "rust_teffbin" } },
       "actions": [
         {
           "id": "pinch_paunch",
@@ -40956,6 +40990,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard paunch. They padded it on the floor and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbin": {
+      "name": "Rust Teffbin",
+      "desc": "A dry teffbin north of the paunch. Packed rust coats teffbin.",
+      "brief": "Dry teffbin, packed rust.",
+      "exits": { "south": { "to": "rust_paunch" } },
+      "actions": [
+        {
+          "id": "pinch_teffbin",
+          "label": "pinch the teffbin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbin. They packed it on the paunch and packed rust around it."]
           ]
         }
       ]
@@ -40981,7 +41032,7 @@
       "name": "Rust Jibgasket",
       "desc": "A dry jibgasket east of the paunch. Packed rust coats a jibgasket.",
       "brief": "Dry jibgasket, packed rust.",
-      "exits": { "west": { "to": "rust_paunch" }, "east": { "to": "rust_linseed" }, "south": { "to": "rust_fern" } },
+      "exits": { "west": { "to": "rust_paunch" }, "east": { "to": "rust_linseed" }, "south": { "to": "rust_fern" }, "north": { "to": "rust_barleybin" } },
       "actions": [
         {
           "id": "pinch_jibgasket",
@@ -40990,6 +41041,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jibgasket. They sewed it on the paunch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybin": {
+      "name": "Rust Barleybin",
+      "desc": "A dry barleybin north of the jibgasket. Packed rust coats barleybin.",
+      "brief": "Dry barleybin, packed rust.",
+      "exits": { "south": { "to": "rust_jibgasket" } },
+      "actions": [
+        {
+          "id": "pinch_barleybin",
+          "label": "pinch the barleybin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybin. They packed it on the jibgasket and packed rust around it."]
           ]
         }
       ]
@@ -41015,7 +41083,7 @@
       "name": "Rust Linseed",
       "desc": "A dry linseed east of the jibgasket. Packed rust coats linseed.",
       "brief": "Dry linseed, packed rust.",
-      "exits": { "west": { "to": "rust_jibgasket" }, "east": { "to": "rust_turpentine" }, "south": { "to": "rust_turf" } },
+      "exits": { "west": { "to": "rust_jibgasket" }, "east": { "to": "rust_turpentine" }, "south": { "to": "rust_turf" }, "north": { "to": "rust_sorghumbin" } },
       "actions": [
         {
           "id": "pinch_linseed",
@@ -41024,6 +41092,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard linseed. They soaked it on the jibgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbin": {
+      "name": "Rust Sorghumbin",
+      "desc": "A dry sorghumbin north of the linseed. Packed rust coats sorghumbin.",
+      "brief": "Dry sorghumbin, packed rust.",
+      "exits": { "south": { "to": "rust_linseed" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbin",
+          "label": "pinch the sorghumbin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbin. They packed it on the linseed and packed rust around it."]
           ]
         }
       ]
@@ -41049,7 +41134,7 @@
       "name": "Rust Turpentine",
       "desc": "A dry turpentine east of the linseed. Packed rust coats turpentine.",
       "brief": "Dry turpentine, packed rust.",
-      "exits": { "west": { "to": "rust_linseed" }, "east": { "to": "rust_cedar" }, "south": { "to": "rust_hay" } },
+      "exits": { "west": { "to": "rust_linseed" }, "east": { "to": "rust_cedar" }, "south": { "to": "rust_hay" }, "north": { "to": "rust_milletbin" } },
       "actions": [
         {
           "id": "pinch_turpentine",
@@ -41058,6 +41143,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard turpentine. They soaked it on the linseed and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbin": {
+      "name": "Rust Milletbin",
+      "desc": "A dry milletbin north of the turpentine. Packed rust coats milletbin.",
+      "brief": "Dry milletbin, packed rust.",
+      "exits": { "south": { "to": "rust_turpentine" } },
+      "actions": [
+        {
+          "id": "pinch_milletbin",
+          "label": "pinch the milletbin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbin. They packed it on the turpentine and packed rust around it."]
           ]
         }
       ]
@@ -41083,7 +41185,7 @@
       "name": "Rust Cedar",
       "desc": "A dry cedar east of the turpentine. Packed rust coats cedar.",
       "brief": "Dry cedar, packed rust.",
-      "exits": { "west": { "to": "rust_turpentine" }, "east": { "to": "rust_hickory" }, "south": { "to": "rust_furze" } },
+      "exits": { "west": { "to": "rust_turpentine" }, "east": { "to": "rust_hickory" }, "south": { "to": "rust_furze" }, "north": { "to": "rust_cornbin" } },
       "actions": [
         {
           "id": "pinch_cedar",
@@ -41092,6 +41194,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cedar. They laid it on the turpentine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbin": {
+      "name": "Rust Cornbin",
+      "desc": "A dry cornbin north of the cedar. Packed rust coats cornbin.",
+      "brief": "Dry cornbin, packed rust.",
+      "exits": { "south": { "to": "rust_cedar" } },
+      "actions": [
+        {
+          "id": "pinch_cornbin",
+          "label": "pinch the cornbin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbin. They packed it on the cedar and packed rust around it."]
           ]
         }
       ]
@@ -41117,7 +41236,7 @@
       "name": "Rust Hickory",
       "desc": "A dry hickory east of the cedar. Packed rust coats hickory.",
       "brief": "Dry hickory, packed rust.",
-      "exits": { "west": { "to": "rust_cedar" }, "east": { "to": "rust_redwood" }, "south": { "to": "rust_cane" } },
+      "exits": { "west": { "to": "rust_cedar" }, "east": { "to": "rust_redwood" }, "south": { "to": "rust_cane" }, "north": { "to": "rust_oatbin" } },
       "actions": [
         {
           "id": "pinch_hickory",
@@ -41126,6 +41245,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hickory. They laid it on the cedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbin": {
+      "name": "Rust Oatbin",
+      "desc": "A dry oatbin north of the hickory. Packed rust coats oatbin.",
+      "brief": "Dry oatbin, packed rust.",
+      "exits": { "south": { "to": "rust_hickory" } },
+      "actions": [
+        {
+          "id": "pinch_oatbin",
+          "label": "pinch the oatbin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbin. They packed it on the hickory and packed rust around it."]
           ]
         }
       ]
@@ -49836,11 +49972,17 @@
     "go north",
     "go east",
     "pinch the bornite",
+    "go north",
+    "pinch the durumbin",
+    "go south",
     "go south",
     "pinch the stipe",
     "go north",
     "go east",
     "pinch the crednerite",
+    "go north",
+    "pinch the foniobin",
+    "go south",
     "go south",
     "pinch the spore",
     "go north",
@@ -49863,31 +50005,49 @@
     "pinch the floor",
     "go east",
     "pinch the paunch",
+    "go north",
+    "pinch the teffbin",
+    "go south",
     "go south",
     "pinch the frond",
     "go north",
     "go east",
     "pinch the jibgasket",
+    "go north",
+    "pinch the barleybin",
+    "go south",
     "go south",
     "pinch the fern",
     "go north",
     "go east",
     "pinch the linseed",
+    "go north",
+    "pinch the sorghumbin",
+    "go south",
     "go south",
     "pinch the turf",
     "go north",
     "go east",
     "pinch the turpentine",
+    "go north",
+    "pinch the milletbin",
+    "go south",
     "go south",
     "pinch the hay",
     "go north",
     "go east",
     "pinch the cedar",
+    "go north",
+    "pinch the cornbin",
+    "go south",
     "go south",
     "pinch the furze",
     "go north",
     "go east",
     "pinch the hickory",
+    "go north",
+    "pinch the oatbin",
+    "go south",
     "go south",
     "pinch the cane",
     "go north",
