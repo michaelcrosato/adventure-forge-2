@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9770,
+  "maxScore": 9810,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -27143,7 +27143,7 @@
       "name": "Rust Reefgasket",
       "desc": "A dry reefgasket east of the messenger. Packed rust coats a reefgasket.",
       "brief": "Dry reefgasket, packed rust.",
-      "exits": { "west": { "to": "rust_messenger" }, "east": { "to": "rust_jute" } },
+      "exits": { "west": { "to": "rust_messenger" }, "east": { "to": "rust_jute" }, "south": { "to": "rust_navybean" } },
       "actions": [
         {
           "id": "pinch_reefgasket",
@@ -27156,11 +27156,28 @@
         }
       ]
     },
+    "rust_navybean": {
+      "name": "Rust Navybean",
+      "desc": "A dry navybean south of the reefgasket. Packed rust coats navybean.",
+      "brief": "Dry navybean, packed rust.",
+      "exits": { "north": { "to": "rust_reefgasket" } },
+      "actions": [
+        {
+          "id": "pinch_navybean",
+          "label": "pinch the navybean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard navybean. They packed it on the reefgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_jute": {
       "name": "Rust Jute",
       "desc": "A dry jute east of the reefgasket. Packed rust coats jute.",
       "brief": "Dry jute, packed rust.",
-      "exits": { "west": { "to": "rust_reefgasket" }, "east": { "to": "rust_lignum" } },
+      "exits": { "west": { "to": "rust_reefgasket" }, "east": { "to": "rust_lignum" }, "south": { "to": "rust_lima" } },
       "actions": [
         {
           "id": "pinch_jute",
@@ -27173,11 +27190,28 @@
         }
       ]
     },
+    "rust_lima": {
+      "name": "Rust Lima",
+      "desc": "A dry lima south of the jute. Packed rust coats lima.",
+      "brief": "Dry lima, packed rust.",
+      "exits": { "north": { "to": "rust_jute" } },
+      "actions": [
+        {
+          "id": "pinch_lima",
+          "label": "pinch the lima",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lima. They packed it on the jute and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_lignum": {
       "name": "Rust Lignum",
       "desc": "A dry lignum east of the jute. Packed rust coats lignum.",
       "brief": "Dry lignum, packed rust.",
-      "exits": { "west": { "to": "rust_jute" }, "east": { "to": "rust_hemlock" } },
+      "exits": { "west": { "to": "rust_jute" }, "east": { "to": "rust_hemlock" }, "south": { "to": "rust_cowpea" } },
       "actions": [
         {
           "id": "pinch_lignum",
@@ -27190,11 +27224,28 @@
         }
       ]
     },
+    "rust_cowpea": {
+      "name": "Rust Cowpea",
+      "desc": "A dry cowpea south of the lignum. Packed rust coats cowpea.",
+      "brief": "Dry cowpea, packed rust.",
+      "exits": { "north": { "to": "rust_lignum" } },
+      "actions": [
+        {
+          "id": "pinch_cowpea",
+          "label": "pinch the cowpea",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cowpea. They packed it on the lignum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_hemlock": {
       "name": "Rust Hemlock",
       "desc": "A dry hemlock east of the lignum. Packed rust coats hemlock.",
       "brief": "Dry hemlock, packed rust.",
-      "exits": { "west": { "to": "rust_lignum" }, "east": { "to": "rust_whaleoil" } },
+      "exits": { "west": { "to": "rust_lignum" }, "east": { "to": "rust_whaleoil" }, "south": { "to": "rust_soybean" } },
       "actions": [
         {
           "id": "pinch_hemlock",
@@ -27207,11 +27258,28 @@
         }
       ]
     },
+    "rust_soybean": {
+      "name": "Rust Soybean",
+      "desc": "A dry soybean south of the hemlock. Packed rust coats soybean.",
+      "brief": "Dry soybean, packed rust.",
+      "exits": { "north": { "to": "rust_hemlock" } },
+      "actions": [
+        {
+          "id": "pinch_soybean",
+          "label": "pinch the soybean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard soybean. They packed it on the hemlock and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_whaleoil": {
       "name": "Rust Whaleoil",
       "desc": "A dry whaleoil east of the hemlock. Packed rust coats whaleoil.",
       "brief": "Dry whaleoil, packed rust.",
-      "exits": { "west": { "to": "rust_hemlock" }, "east": { "to": "rust_alumina" } },
+      "exits": { "west": { "to": "rust_hemlock" }, "east": { "to": "rust_alumina" }, "south": { "to": "rust_adzuki" } },
       "actions": [
         {
           "id": "pinch_whaleoil",
@@ -27224,11 +27292,28 @@
         }
       ]
     },
+    "rust_adzuki": {
+      "name": "Rust Adzuki",
+      "desc": "A dry adzuki south of the whaleoil. Packed rust coats adzuki.",
+      "brief": "Dry adzuki, packed rust.",
+      "exits": { "north": { "to": "rust_whaleoil" } },
+      "actions": [
+        {
+          "id": "pinch_adzuki",
+          "label": "pinch the adzuki",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard adzuki. They packed it on the whaleoil and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_alumina": {
       "name": "Rust Alumina",
       "desc": "A dry alumina east of the whaleoil. Packed rust coats alumina.",
       "brief": "Dry alumina, packed rust.",
-      "exits": { "west": { "to": "rust_whaleoil" }, "east": { "to": "rust_olivenite" } },
+      "exits": { "west": { "to": "rust_whaleoil" }, "east": { "to": "rust_olivenite" }, "south": { "to": "rust_mung" } },
       "actions": [
         {
           "id": "pinch_alumina",
@@ -27241,11 +27326,28 @@
         }
       ]
     },
+    "rust_mung": {
+      "name": "Rust Mung",
+      "desc": "A dry mung south of the alumina. Packed rust coats mung.",
+      "brief": "Dry mung, packed rust.",
+      "exits": { "north": { "to": "rust_alumina" } },
+      "actions": [
+        {
+          "id": "pinch_mung",
+          "label": "pinch the mung",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mung. They packed it on the alumina and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_olivenite": {
       "name": "Rust Olivenite",
       "desc": "A dry olivenite east of the alumina. Packed rust coats olivenite.",
       "brief": "Dry olivenite, packed rust.",
-      "exits": { "west": { "to": "rust_alumina" }, "east": { "to": "rust_hawleyite" } },
+      "exits": { "west": { "to": "rust_alumina" }, "east": { "to": "rust_hawleyite" }, "south": { "to": "rust_fava" } },
       "actions": [
         {
           "id": "pinch_olivenite",
@@ -27254,6 +27356,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard olivenite. They packed it on the alumina and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fava": {
+      "name": "Rust Fava",
+      "desc": "A dry fava south of the olivenite. Packed rust coats fava.",
+      "brief": "Dry fava, packed rust.",
+      "exits": { "north": { "to": "rust_olivenite" } },
+      "actions": [
+        {
+          "id": "pinch_fava",
+          "label": "pinch the fava",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fava. They packed it on the olivenite and packed rust around it."]
           ]
         }
       ]
@@ -27330,7 +27449,7 @@
       "name": "Rust Stopper",
       "desc": "A dry stopper east of the brail. Packed rust coats a stopper.",
       "brief": "Dry stopper, packed rust.",
-      "exits": { "west": { "to": "rust_brail" }, "east": { "to": "rust_buntgasket" } },
+      "exits": { "west": { "to": "rust_brail" }, "east": { "to": "rust_buntgasket" }, "south": { "to": "rust_chickpea" } },
       "actions": [
         {
           "id": "pinch_stopper",
@@ -27339,6 +27458,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stopper. They seized it on the brail and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_chickpea": {
+      "name": "Rust Chickpea",
+      "desc": "A dry chickpea south of the stopper. Packed rust coats chickpea.",
+      "brief": "Dry chickpea, packed rust.",
+      "exits": { "north": { "to": "rust_stopper" } },
+      "actions": [
+        {
+          "id": "pinch_chickpea",
+          "label": "pinch the chickpea",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard chickpea. They packed it on the stopper and packed rust around it."]
           ]
         }
       ]
@@ -37907,18 +38043,39 @@
     "pinch the messenger",
     "go east",
     "pinch the reefgasket",
+    "go south",
+    "pinch the navybean",
+    "go north",
     "go east",
     "pinch the jute",
+    "go south",
+    "pinch the lima",
+    "go north",
     "go east",
     "pinch the lignum",
+    "go south",
+    "pinch the cowpea",
+    "go north",
     "go east",
     "pinch the hemlock",
+    "go south",
+    "pinch the soybean",
+    "go north",
     "go east",
     "pinch the whaleoil",
+    "go south",
+    "pinch the adzuki",
+    "go north",
     "go east",
     "pinch the alumina",
+    "go south",
+    "pinch the mung",
+    "go north",
     "go east",
     "pinch the olivenite",
+    "go south",
+    "pinch the fava",
+    "go north",
     "go east",
     "pinch the hawleyite",
     "go west",
@@ -37940,6 +38097,9 @@
     "pinch the brail",
     "go east",
     "pinch the stopper",
+    "go south",
+    "pinch the chickpea",
+    "go north",
     "go east",
     "pinch the buntgasket",
     "go south",
