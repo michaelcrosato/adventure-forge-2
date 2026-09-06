@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14930,
+  "maxScore": 14970,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -21822,7 +21822,7 @@
       "name": "Rust Petaling",
       "desc": "A dry petaling east of the mersawa. Packed rust coats petaling.",
       "brief": "Dry petaling, packed rust.",
-      "exits": { "west": { "to": "rust_mersawa" }, "east": { "to": "rust_neem" }, "south": { "to": "rust_durumlowgrade" } },
+      "exits": { "west": { "to": "rust_mersawa" }, "east": { "to": "rust_neem" }, "south": { "to": "rust_durumlowgrade" }, "north": { "to": "rust_durumtierce" } },
       "actions": [
         {
           "id": "pinch_petaling",
@@ -21831,6 +21831,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard petaling. They packed it on the mersawa and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumtierce": {
+      "name": "Rust Durumtierce",
+      "desc": "A dry durumtierce north of the petaling. Packed rust coats durumtierce.",
+      "brief": "Dry durumtierce, packed rust.",
+      "exits": { "south": { "to": "rust_petaling" } },
+      "actions": [
+        {
+          "id": "pinch_durumtierce",
+          "label": "pinch the durumtierce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumtierce. They packed it on the petaling and packed rust around it."]
           ]
         }
       ]
@@ -21856,7 +21873,7 @@
       "name": "Rust Neem",
       "desc": "A dry neem east of the petaling. Packed rust coats neem.",
       "brief": "Dry neem, packed rust.",
-      "exits": { "west": { "to": "rust_petaling" }, "east": { "to": "rust_bluegum" }, "south": { "to": "rust_foniolowgrade" } },
+      "exits": { "west": { "to": "rust_petaling" }, "east": { "to": "rust_bluegum" }, "south": { "to": "rust_foniolowgrade" }, "north": { "to": "rust_foniotierce" } },
       "actions": [
         {
           "id": "pinch_neem",
@@ -21865,6 +21882,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard neem. They packed it on the petaling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniotierce": {
+      "name": "Rust Foniotierce",
+      "desc": "A dry foniotierce north of the neem. Packed rust coats foniotierce.",
+      "brief": "Dry foniotierce, packed rust.",
+      "exits": { "south": { "to": "rust_neem" } },
+      "actions": [
+        {
+          "id": "pinch_foniotierce",
+          "label": "pinch the foniotierce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniotierce. They packed it on the neem and packed rust around it."]
           ]
         }
       ]
@@ -21924,7 +21958,7 @@
       "name": "Rust Sheetbend",
       "desc": "A dry sheetbend east of the bunt. Packed rust coats a sheetbend.",
       "brief": "Dry sheetbend, packed rust.",
-      "exits": { "west": { "to": "rust_bunt" }, "east": { "to": "rust_casein" }, "south": { "to": "rust_tefflowgrade" } },
+      "exits": { "west": { "to": "rust_bunt" }, "east": { "to": "rust_casein" }, "south": { "to": "rust_tefflowgrade" }, "north": { "to": "rust_tefftierce" } },
       "actions": [
         {
           "id": "pinch_sheetbend",
@@ -21933,6 +21967,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheetbend. They tied it on the bunt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefftierce": {
+      "name": "Rust Tefftierce",
+      "desc": "A dry tefftierce north of the sheetbend. Packed rust coats tefftierce.",
+      "brief": "Dry tefftierce, packed rust.",
+      "exits": { "south": { "to": "rust_sheetbend" } },
+      "actions": [
+        {
+          "id": "pinch_tefftierce",
+          "label": "pinch the tefftierce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefftierce. They packed it on the sheetbend and packed rust around it."]
           ]
         }
       ]
@@ -21958,7 +22009,7 @@
       "name": "Rust Casein",
       "desc": "A dry casein east of the sheetbend. Packed rust coats casein.",
       "brief": "Dry casein, packed rust.",
-      "exits": { "west": { "to": "rust_sheetbend" }, "east": { "to": "rust_okoume" }, "south": { "to": "rust_barleylowgrade" } },
+      "exits": { "west": { "to": "rust_sheetbend" }, "east": { "to": "rust_okoume" }, "south": { "to": "rust_barleylowgrade" }, "north": { "to": "rust_barleytierce" } },
       "actions": [
         {
           "id": "pinch_casein",
@@ -21967,6 +22018,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard casein. They packed it on the sheetbend and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleytierce": {
+      "name": "Rust Barleytierce",
+      "desc": "A dry barleytierce north of the casein. Packed rust coats barleytierce.",
+      "brief": "Dry barleytierce, packed rust.",
+      "exits": { "south": { "to": "rust_casein" } },
+      "actions": [
+        {
+          "id": "pinch_barleytierce",
+          "label": "pinch the barleytierce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleytierce. They packed it on the casein and packed rust around it."]
           ]
         }
       ]
@@ -21992,7 +22060,7 @@
       "name": "Rust Okoume",
       "desc": "A dry okoume east of the casein. Packed rust coats okoume.",
       "brief": "Dry okoume, packed rust.",
-      "exits": { "west": { "to": "rust_casein" }, "east": { "to": "rust_cupiuba" }, "south": { "to": "rust_sorghumlowgrade" } },
+      "exits": { "west": { "to": "rust_casein" }, "east": { "to": "rust_cupiuba" }, "south": { "to": "rust_sorghumlowgrade" }, "north": { "to": "rust_sorghumtierce" } },
       "actions": [
         {
           "id": "pinch_okoume",
@@ -22001,6 +22069,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard okoume. They packed it on the casein and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumtierce": {
+      "name": "Rust Sorghumtierce",
+      "desc": "A dry sorghumtierce north of the okoume. Packed rust coats sorghumtierce.",
+      "brief": "Dry sorghumtierce, packed rust.",
+      "exits": { "south": { "to": "rust_okoume" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumtierce",
+          "label": "pinch the sorghumtierce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumtierce. They packed it on the okoume and packed rust around it."]
           ]
         }
       ]
@@ -22026,7 +22111,7 @@
       "name": "Rust Cupiuba",
       "desc": "A dry cupiuba east of the okoume. Packed rust coats cupiuba.",
       "brief": "Dry cupiuba, packed rust.",
-      "exits": { "west": { "to": "rust_okoume" }, "east": { "to": "rust_bocote" }, "south": { "to": "rust_milletlowgrade" } },
+      "exits": { "west": { "to": "rust_okoume" }, "east": { "to": "rust_bocote" }, "south": { "to": "rust_milletlowgrade" }, "north": { "to": "rust_millettierce" } },
       "actions": [
         {
           "id": "pinch_cupiuba",
@@ -22035,6 +22120,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cupiuba. They packed it on the okoume and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millettierce": {
+      "name": "Rust Millettierce",
+      "desc": "A dry millettierce north of the cupiuba. Packed rust coats millettierce.",
+      "brief": "Dry millettierce, packed rust.",
+      "exits": { "south": { "to": "rust_cupiuba" } },
+      "actions": [
+        {
+          "id": "pinch_millettierce",
+          "label": "pinch the millettierce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millettierce. They packed it on the cupiuba and packed rust around it."]
           ]
         }
       ]
@@ -22060,7 +22162,7 @@
       "name": "Rust Bocote",
       "desc": "A dry bocote east of the cupiuba. Packed rust coats bocote.",
       "brief": "Dry bocote, packed rust.",
-      "exits": { "west": { "to": "rust_cupiuba" }, "east": { "to": "rust_punah" }, "south": { "to": "rust_cornlowgrade" } },
+      "exits": { "west": { "to": "rust_cupiuba" }, "east": { "to": "rust_punah" }, "south": { "to": "rust_cornlowgrade" }, "north": { "to": "rust_corntierce" } },
       "actions": [
         {
           "id": "pinch_bocote",
@@ -22069,6 +22171,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bocote. They packed it on the cupiuba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corntierce": {
+      "name": "Rust Corntierce",
+      "desc": "A dry corntierce north of the bocote. Packed rust coats corntierce.",
+      "brief": "Dry corntierce, packed rust.",
+      "exits": { "south": { "to": "rust_bocote" } },
+      "actions": [
+        {
+          "id": "pinch_corntierce",
+          "label": "pinch the corntierce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corntierce. They packed it on the bocote and packed rust around it."]
           ]
         }
       ]
@@ -22094,7 +22213,7 @@
       "name": "Rust Punah",
       "desc": "A dry punah east of the bocote. Packed rust coats punah.",
       "brief": "Dry punah, packed rust.",
-      "exits": { "west": { "to": "rust_bocote" }, "east": { "to": "rust_deodar" }, "south": { "to": "rust_oatlowgrade" } },
+      "exits": { "west": { "to": "rust_bocote" }, "east": { "to": "rust_deodar" }, "south": { "to": "rust_oatlowgrade" }, "north": { "to": "rust_oattierce" } },
       "actions": [
         {
           "id": "pinch_punah",
@@ -22103,6 +22222,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard punah. They packed it on the bocote and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oattierce": {
+      "name": "Rust Oattierce",
+      "desc": "A dry oattierce north of the punah. Packed rust coats oattierce.",
+      "brief": "Dry oattierce, packed rust.",
+      "exits": { "south": { "to": "rust_punah" } },
+      "actions": [
+        {
+          "id": "pinch_oattierce",
+          "label": "pinch the oattierce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oattierce. They packed it on the punah and packed rust around it."]
           ]
         }
       ]
@@ -54568,11 +54704,17 @@
     "go north",
     "go east",
     "pinch the petaling",
+    "go north",
+    "pinch the durumtierce",
+    "go south",
     "go south",
     "pinch the durumlowgrade",
     "go north",
     "go east",
     "pinch the neem",
+    "go north",
+    "pinch the foniotierce",
+    "go south",
     "go south",
     "pinch the foniolowgrade",
     "go north",
@@ -54592,31 +54734,49 @@
     "pinch the bunt",
     "go east",
     "pinch the sheetbend",
+    "go north",
+    "pinch the tefftierce",
+    "go south",
     "go south",
     "pinch the tefflowgrade",
     "go north",
     "go east",
     "pinch the casein",
+    "go north",
+    "pinch the barleytierce",
+    "go south",
     "go south",
     "pinch the barleylowgrade",
     "go north",
     "go east",
     "pinch the okoume",
+    "go north",
+    "pinch the sorghumtierce",
+    "go south",
     "go south",
     "pinch the sorghumlowgrade",
     "go north",
     "go east",
     "pinch the cupiuba",
+    "go north",
+    "pinch the millettierce",
+    "go south",
     "go south",
     "pinch the milletlowgrade",
     "go north",
     "go east",
     "pinch the bocote",
+    "go north",
+    "pinch the corntierce",
+    "go south",
     "go south",
     "pinch the cornlowgrade",
     "go north",
     "go east",
     "pinch the punah",
+    "go north",
+    "pinch the oattierce",
+    "go south",
     "go south",
     "pinch the oatlowgrade",
     "go north",
