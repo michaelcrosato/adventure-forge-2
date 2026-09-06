@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12450,
+  "maxScore": 12490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -14172,7 +14172,7 @@
       "name": "Rust Gympie",
       "desc": "A dry gympie east of the scribblygum. Packed rust coats gympie.",
       "brief": "Dry gympie, packed rust.",
-      "exits": { "west": { "to": "rust_scribblygum" }, "east": { "to": "rust_ponderosa" } },
+      "exits": { "west": { "to": "rust_scribblygum" }, "east": { "to": "rust_ponderosa" }, "south": { "to": "rust_teffcut" } },
       "actions": [
         {
           "id": "pinch_gympie",
@@ -14185,11 +14185,28 @@
         }
       ]
     },
+    "rust_teffcut": {
+      "name": "Rust Teffcut",
+      "desc": "A dry teffcut south of the gympie. Packed rust coats teffcut.",
+      "brief": "Dry teffcut, packed rust.",
+      "exits": { "north": { "to": "rust_gympie" } },
+      "actions": [
+        {
+          "id": "pinch_teffcut",
+          "label": "pinch the teffcut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffcut. They packed it on the gympie and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ponderosa": {
       "name": "Rust Ponderosa",
       "desc": "A dry ponderosa east of the gympie. Packed rust coats ponderosa.",
       "brief": "Dry ponderosa, packed rust.",
-      "exits": { "west": { "to": "rust_gympie" }, "east": { "to": "rust_blackhills" } },
+      "exits": { "west": { "to": "rust_gympie" }, "east": { "to": "rust_blackhills" }, "south": { "to": "rust_barleycut" } },
       "actions": [
         {
           "id": "pinch_ponderosa",
@@ -14198,6 +14215,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ponderosa. They packed it on the gympie and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleycut": {
+      "name": "Rust Barleycut",
+      "desc": "A dry barleycut south of the ponderosa. Packed rust coats barleycut.",
+      "brief": "Dry barleycut, packed rust.",
+      "exits": { "north": { "to": "rust_ponderosa" } },
+      "actions": [
+        {
+          "id": "pinch_barleycut",
+          "label": "pinch the barleycut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleycut. They packed it on the ponderosa and packed rust around it."]
           ]
         }
       ]
@@ -14274,7 +14308,7 @@
       "name": "Rust Fish",
       "desc": "A dry fish east of the claw. Packed rust coats a fish.",
       "brief": "Dry fish, packed rust.",
-      "exits": { "west": { "to": "rust_claw" }, "east": { "to": "rust_alpine" } },
+      "exits": { "west": { "to": "rust_claw" }, "east": { "to": "rust_alpine" }, "south": { "to": "rust_sorghumcut" } },
       "actions": [
         {
           "id": "pinch_fish",
@@ -14287,11 +14321,28 @@
         }
       ]
     },
+    "rust_sorghumcut": {
+      "name": "Rust Sorghumcut",
+      "desc": "A dry sorghumcut south of the fish. Packed rust coats sorghumcut.",
+      "brief": "Dry sorghumcut, packed rust.",
+      "exits": { "north": { "to": "rust_fish" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumcut",
+          "label": "pinch the sorghumcut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumcut. They packed it on the fish and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_alpine": {
       "name": "Rust Alpine",
       "desc": "A dry alpine east of the fish. Packed rust coats an alpine.",
       "brief": "Dry alpine, packed rust.",
-      "exits": { "west": { "to": "rust_fish" }, "east": { "to": "rust_ghatti" } },
+      "exits": { "west": { "to": "rust_fish" }, "east": { "to": "rust_ghatti" }, "south": { "to": "rust_milletcut" } },
       "actions": [
         {
           "id": "pinch_alpine",
@@ -14304,11 +14355,28 @@
         }
       ]
     },
+    "rust_milletcut": {
+      "name": "Rust Milletcut",
+      "desc": "A dry milletcut south of the alpine. Packed rust coats milletcut.",
+      "brief": "Dry milletcut, packed rust.",
+      "exits": { "north": { "to": "rust_alpine" } },
+      "actions": [
+        {
+          "id": "pinch_milletcut",
+          "label": "pinch the milletcut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletcut. They packed it on the alpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ghatti": {
       "name": "Rust Ghatti",
       "desc": "A dry ghatti east of the alpine. Packed rust coats ghatti.",
       "brief": "Dry ghatti, packed rust.",
-      "exits": { "west": { "to": "rust_alpine" }, "east": { "to": "rust_fustic" } },
+      "exits": { "west": { "to": "rust_alpine" }, "east": { "to": "rust_fustic" }, "south": { "to": "rust_corncut" } },
       "actions": [
         {
           "id": "pinch_ghatti",
@@ -14321,11 +14389,28 @@
         }
       ]
     },
+    "rust_corncut": {
+      "name": "Rust Corncut",
+      "desc": "A dry corncut south of the ghatti. Packed rust coats corncut.",
+      "brief": "Dry corncut, packed rust.",
+      "exits": { "north": { "to": "rust_ghatti" } },
+      "actions": [
+        {
+          "id": "pinch_corncut",
+          "label": "pinch the corncut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corncut. They packed it on the ghatti and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_fustic": {
       "name": "Rust Fustic",
       "desc": "A dry fustic east of the ghatti. Packed rust coats fustic.",
       "brief": "Dry fustic, packed rust.",
-      "exits": { "west": { "to": "rust_ghatti" }, "east": { "to": "rust_coal" } },
+      "exits": { "west": { "to": "rust_ghatti" }, "east": { "to": "rust_coal" }, "south": { "to": "rust_oatcut" } },
       "actions": [
         {
           "id": "pinch_fustic",
@@ -14334,6 +14419,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fustic. They packed it on the ghatti and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatcut": {
+      "name": "Rust Oatcut",
+      "desc": "A dry oatcut south of the fustic. Packed rust coats oatcut.",
+      "brief": "Dry oatcut, packed rust.",
+      "exits": { "north": { "to": "rust_fustic" } },
+      "actions": [
+        {
+          "id": "pinch_oatcut",
+          "label": "pinch the oatcut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatcut. They packed it on the fustic and packed rust around it."]
           ]
         }
       ]
@@ -41661,7 +41763,7 @@
       "name": "Rust Willow",
       "desc": "A dry willow east of the birch. Packed rust coats willow.",
       "brief": "Dry willow, packed rust.",
-      "exits": { "west": { "to": "rust_birch" }, "east": { "to": "rust_cadmium" }, "south": { "to": "rust_piassava" } },
+      "exits": { "west": { "to": "rust_birch" }, "east": { "to": "rust_cadmium" }, "south": { "to": "rust_piassava" }, "north": { "to": "rust_durumcut" } },
       "actions": [
         {
           "id": "pinch_willow",
@@ -41670,6 +41772,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard willow. They stacked it on the birch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumcut": {
+      "name": "Rust Durumcut",
+      "desc": "A dry durumcut north of the willow. Packed rust coats durumcut.",
+      "brief": "Dry durumcut, packed rust.",
+      "exits": { "south": { "to": "rust_willow" } },
+      "actions": [
+        {
+          "id": "pinch_durumcut",
+          "label": "pinch the durumcut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumcut. They packed it on the willow and packed rust around it."]
           ]
         }
       ]
@@ -41695,7 +41814,7 @@
       "name": "Rust Cadmium",
       "desc": "A dry cadmium east of the willow. Packed rust coats cadmium.",
       "brief": "Dry cadmium, packed rust.",
-      "exits": { "west": { "to": "rust_willow" }, "east": { "to": "rust_antlerite" }, "south": { "to": "rust_esparto" } },
+      "exits": { "west": { "to": "rust_willow" }, "east": { "to": "rust_antlerite" }, "south": { "to": "rust_esparto" }, "north": { "to": "rust_foniocut" } },
       "actions": [
         {
           "id": "pinch_cadmium",
@@ -41704,6 +41823,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cadmium. They packed it on the willow and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniocut": {
+      "name": "Rust Foniocut",
+      "desc": "A dry foniocut north of the cadmium. Packed rust coats foniocut.",
+      "brief": "Dry foniocut, packed rust.",
+      "exits": { "south": { "to": "rust_cadmium" } },
+      "actions": [
+        {
+          "id": "pinch_foniocut",
+          "label": "pinch the foniocut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniocut. They packed it on the cadmium and packed rust around it."]
           ]
         }
       ]
@@ -44722,8 +44858,14 @@
     "go north",
     "go east",
     "pinch the gympie",
+    "go south",
+    "pinch the teffcut",
+    "go north",
     "go east",
     "pinch the ponderosa",
+    "go south",
+    "pinch the barleycut",
+    "go north",
     "go east",
     "pinch the blackhills",
     "go south",
@@ -44745,12 +44887,24 @@
     "pinch the claw",
     "go east",
     "pinch the fish",
+    "go south",
+    "pinch the sorghumcut",
+    "go north",
     "go east",
     "pinch the alpine",
+    "go south",
+    "pinch the milletcut",
+    "go north",
     "go east",
     "pinch the ghatti",
+    "go south",
+    "pinch the corncut",
+    "go north",
     "go east",
     "pinch the fustic",
+    "go south",
+    "pinch the oatcut",
+    "go north",
     "go east",
     "pinch the coal",
     "go south",
@@ -49577,11 +49731,17 @@
     "go north",
     "go east",
     "pinch the willow",
+    "go north",
+    "pinch the durumcut",
+    "go south",
     "go south",
     "pinch the piassava",
     "go north",
     "go east",
     "pinch the cadmium",
+    "go north",
+    "pinch the foniocut",
+    "go south",
     "go south",
     "pinch the esparto",
     "go north",
