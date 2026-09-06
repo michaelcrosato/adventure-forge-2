@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15130,
+  "maxScore": 15170,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -20479,7 +20479,7 @@
       "name": "Rust Kauripine",
       "desc": "A dry kauripine east of the sheoak. Packed rust coats kauripine.",
       "brief": "Dry kauripine, packed rust.",
-      "exits": { "west": { "to": "rust_sheoak" }, "east": { "to": "rust_puka" }, "south": { "to": "rust_noni" } },
+      "exits": { "west": { "to": "rust_sheoak" }, "east": { "to": "rust_puka" }, "south": { "to": "rust_noni" }, "north": { "to": "rust_durumcistern" } },
       "actions": [
         {
           "id": "pinch_kauripine",
@@ -20488,6 +20488,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kauripine. They packed it on the sheoak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumcistern": {
+      "name": "Rust Durumcistern",
+      "desc": "A dry durumcistern north of the kauripine. Packed rust coats durumcistern.",
+      "brief": "Dry durumcistern, packed rust.",
+      "exits": { "south": { "to": "rust_kauripine" } },
+      "actions": [
+        {
+          "id": "pinch_durumcistern",
+          "label": "pinch the durumcistern",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumcistern. They packed it on the kauripine and packed rust around it."]
           ]
         }
       ]
@@ -20581,7 +20598,7 @@
       "name": "Rust Footwale",
       "desc": "A dry footwale east of the spreader. Packed rust coats a footwale.",
       "brief": "Dry footwale, packed rust.",
-      "exits": { "west": { "to": "rust_spreader" }, "east": { "to": "rust_wagoners" }, "south": { "to": "rust_teffsecondclear" } },
+      "exits": { "west": { "to": "rust_spreader" }, "east": { "to": "rust_wagoners" }, "south": { "to": "rust_teffsecondclear" }, "north": { "to": "rust_foniocistern" } },
       "actions": [
         {
           "id": "pinch_footwale",
@@ -20590,6 +20607,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard footwale. They laid it on the spreader and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniocistern": {
+      "name": "Rust Foniocistern",
+      "desc": "A dry foniocistern north of the footwale. Packed rust coats foniocistern.",
+      "brief": "Dry foniocistern, packed rust.",
+      "exits": { "south": { "to": "rust_footwale" } },
+      "actions": [
+        {
+          "id": "pinch_foniocistern",
+          "label": "pinch the foniocistern",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniocistern. They packed it on the footwale and packed rust around it."]
           ]
         }
       ]
@@ -20615,7 +20649,7 @@
       "name": "Rust Wagoners",
       "desc": "A dry wagoners east of the footwale. Packed rust coats a wagoners.",
       "brief": "Dry wagoners, packed rust.",
-      "exits": { "west": { "to": "rust_footwale" }, "east": { "to": "rust_boneglue" }, "south": { "to": "rust_barleysecondclear" } },
+      "exits": { "west": { "to": "rust_footwale" }, "east": { "to": "rust_boneglue" }, "south": { "to": "rust_barleysecondclear" }, "north": { "to": "rust_teffcistern" } },
       "actions": [
         {
           "id": "pinch_wagoners",
@@ -20624,6 +20658,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wagoners. They hauled it on the footwale and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffcistern": {
+      "name": "Rust Teffcistern",
+      "desc": "A dry teffcistern north of the wagoners. Packed rust coats teffcistern.",
+      "brief": "Dry teffcistern, packed rust.",
+      "exits": { "south": { "to": "rust_wagoners" } },
+      "actions": [
+        {
+          "id": "pinch_teffcistern",
+          "label": "pinch the teffcistern",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffcistern. They packed it on the wagoners and packed rust around it."]
           ]
         }
       ]
@@ -20649,7 +20700,7 @@
       "name": "Rust Boneglue",
       "desc": "A dry boneglue east of the wagoners. Packed rust coats boneglue.",
       "brief": "Dry boneglue, packed rust.",
-      "exits": { "west": { "to": "rust_wagoners" }, "east": { "to": "rust_sumac" }, "south": { "to": "rust_sorghumsecondclear" } },
+      "exits": { "west": { "to": "rust_wagoners" }, "east": { "to": "rust_sumac" }, "south": { "to": "rust_sorghumsecondclear" }, "north": { "to": "rust_barleycistern" } },
       "actions": [
         {
           "id": "pinch_boneglue",
@@ -20658,6 +20709,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boneglue. They packed it on the wagoners and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleycistern": {
+      "name": "Rust Barleycistern",
+      "desc": "A dry barleycistern north of the boneglue. Packed rust coats barleycistern.",
+      "brief": "Dry barleycistern, packed rust.",
+      "exits": { "south": { "to": "rust_boneglue" } },
+      "actions": [
+        {
+          "id": "pinch_barleycistern",
+          "label": "pinch the barleycistern",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleycistern. They packed it on the boneglue and packed rust around it."]
           ]
         }
       ]
@@ -20683,7 +20751,7 @@
       "name": "Rust Sumac",
       "desc": "A dry sumac east of the boneglue. Packed rust coats sumac.",
       "brief": "Dry sumac, packed rust.",
-      "exits": { "west": { "to": "rust_boneglue" }, "east": { "to": "rust_anthracite" }, "south": { "to": "rust_milletsecondclear" } },
+      "exits": { "west": { "to": "rust_boneglue" }, "east": { "to": "rust_anthracite" }, "south": { "to": "rust_milletsecondclear" }, "north": { "to": "rust_sorghumcistern" } },
       "actions": [
         {
           "id": "pinch_sumac",
@@ -20692,6 +20760,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sumac. They packed it on the boneglue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumcistern": {
+      "name": "Rust Sorghumcistern",
+      "desc": "A dry sorghumcistern north of the sumac. Packed rust coats sorghumcistern.",
+      "brief": "Dry sorghumcistern, packed rust.",
+      "exits": { "south": { "to": "rust_sumac" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumcistern",
+          "label": "pinch the sorghumcistern",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumcistern. They packed it on the sumac and packed rust around it."]
           ]
         }
       ]
@@ -20717,7 +20802,7 @@
       "name": "Rust Anthracite",
       "desc": "A dry anthracite east of the sumac. Packed rust coats anthracite.",
       "brief": "Dry anthracite, packed rust.",
-      "exits": { "west": { "to": "rust_sumac" }, "east": { "to": "rust_woollybutt" }, "south": { "to": "rust_cornsecondclear" } },
+      "exits": { "west": { "to": "rust_sumac" }, "east": { "to": "rust_woollybutt" }, "south": { "to": "rust_cornsecondclear" }, "north": { "to": "rust_milletcistern" } },
       "actions": [
         {
           "id": "pinch_anthracite",
@@ -20726,6 +20811,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard anthracite. They packed it on the sumac and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletcistern": {
+      "name": "Rust Milletcistern",
+      "desc": "A dry milletcistern north of the anthracite. Packed rust coats milletcistern.",
+      "brief": "Dry milletcistern, packed rust.",
+      "exits": { "south": { "to": "rust_anthracite" } },
+      "actions": [
+        {
+          "id": "pinch_milletcistern",
+          "label": "pinch the milletcistern",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletcistern. They packed it on the anthracite and packed rust around it."]
           ]
         }
       ]
@@ -20751,7 +20853,7 @@
       "name": "Rust Woollybutt",
       "desc": "A dry woollybutt east of the anthracite. Packed rust coats woollybutt.",
       "brief": "Dry woollybutt, packed rust.",
-      "exits": { "west": { "to": "rust_anthracite" }, "east": { "to": "rust_paperbark" }, "south": { "to": "rust_oatsecondclear" } },
+      "exits": { "west": { "to": "rust_anthracite" }, "east": { "to": "rust_paperbark" }, "south": { "to": "rust_oatsecondclear" }, "north": { "to": "rust_corncistern" } },
       "actions": [
         {
           "id": "pinch_woollybutt",
@@ -20760,6 +20862,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard woollybutt. They packed it on the anthracite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corncistern": {
+      "name": "Rust Corncistern",
+      "desc": "A dry corncistern north of the woollybutt. Packed rust coats corncistern.",
+      "brief": "Dry corncistern, packed rust.",
+      "exits": { "south": { "to": "rust_woollybutt" } },
+      "actions": [
+        {
+          "id": "pinch_corncistern",
+          "label": "pinch the corncistern",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corncistern. They packed it on the woollybutt and packed rust around it."]
           ]
         }
       ]
@@ -20785,7 +20904,7 @@
       "name": "Rust Paperbark",
       "desc": "A dry paperbark east of the woollybutt. Packed rust coats paperbark.",
       "brief": "Dry paperbark, packed rust.",
-      "exits": { "west": { "to": "rust_woollybutt" }, "east": { "to": "rust_sugarpine" }, "south": { "to": "rust_ryesecondclear" } },
+      "exits": { "west": { "to": "rust_woollybutt" }, "east": { "to": "rust_sugarpine" }, "south": { "to": "rust_ryesecondclear" }, "north": { "to": "rust_oatcistern" } },
       "actions": [
         {
           "id": "pinch_paperbark",
@@ -20794,6 +20913,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard paperbark. They packed it on the woollybutt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatcistern": {
+      "name": "Rust Oatcistern",
+      "desc": "A dry oatcistern north of the paperbark. Packed rust coats oatcistern.",
+      "brief": "Dry oatcistern, packed rust.",
+      "exits": { "south": { "to": "rust_paperbark" } },
+      "actions": [
+        {
+          "id": "pinch_oatcistern",
+          "label": "pinch the oatcistern",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatcistern. They packed it on the paperbark and packed rust around it."]
           ]
         }
       ]
@@ -54944,6 +55080,9 @@
     "go north",
     "go east",
     "pinch the kauripine",
+    "go north",
+    "pinch the durumcistern",
+    "go south",
     "go south",
     "pinch the noni",
     "go north",
@@ -54968,36 +55107,57 @@
     "pinch the spreader",
     "go east",
     "pinch the footwale",
+    "go north",
+    "pinch the foniocistern",
+    "go south",
     "go south",
     "pinch the teffsecondclear",
     "go north",
     "go east",
     "pinch the wagoners",
+    "go north",
+    "pinch the teffcistern",
+    "go south",
     "go south",
     "pinch the barleysecondclear",
     "go north",
     "go east",
     "pinch the boneglue",
+    "go north",
+    "pinch the barleycistern",
+    "go south",
     "go south",
     "pinch the sorghumsecondclear",
     "go north",
     "go east",
     "pinch the sumac",
+    "go north",
+    "pinch the sorghumcistern",
+    "go south",
     "go south",
     "pinch the milletsecondclear",
     "go north",
     "go east",
     "pinch the anthracite",
+    "go north",
+    "pinch the milletcistern",
+    "go south",
     "go south",
     "pinch the cornsecondclear",
     "go north",
     "go east",
     "pinch the woollybutt",
+    "go north",
+    "pinch the corncistern",
+    "go south",
     "go south",
     "pinch the oatsecondclear",
     "go north",
     "go east",
     "pinch the paperbark",
+    "go north",
+    "pinch the oatcistern",
+    "go south",
     "go south",
     "pinch the ryesecondclear",
     "go north",
