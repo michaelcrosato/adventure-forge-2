@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12050,
+  "maxScore": 12090,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -16365,7 +16365,7 @@
       "name": "Rust Midshipman",
       "desc": "A dry midshipman east of the kedge. Packed rust coats a midshipman.",
       "brief": "Dry midshipman, packed rust.",
-      "exits": { "west": { "to": "rust_kedge" }, "east": { "to": "rust_tragacanth" } },
+      "exits": { "west": { "to": "rust_kedge" }, "east": { "to": "rust_tragacanth" }, "south": { "to": "rust_durumhousehold" } },
       "actions": [
         {
           "id": "pinch_midshipman",
@@ -16378,11 +16378,28 @@
         }
       ]
     },
+    "rust_durumhousehold": {
+      "name": "Rust Durumhousehold",
+      "desc": "A dry durumhousehold south of the midshipman. Packed rust coats durumhousehold.",
+      "brief": "Dry durumhousehold, packed rust.",
+      "exits": { "north": { "to": "rust_midshipman" } },
+      "actions": [
+        {
+          "id": "pinch_durumhousehold",
+          "label": "pinch the durumhousehold",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumhousehold. They packed it on the midshipman and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tragacanth": {
       "name": "Rust Tragacanth",
       "desc": "A dry tragacanth east of the midshipman. Packed rust coats tragacanth.",
       "brief": "Dry tragacanth, packed rust.",
-      "exits": { "west": { "to": "rust_midshipman" }, "east": { "to": "rust_litharge" } },
+      "exits": { "west": { "to": "rust_midshipman" }, "east": { "to": "rust_litharge" }, "south": { "to": "rust_foniohousehold" } },
       "actions": [
         {
           "id": "pinch_tragacanth",
@@ -16395,11 +16412,28 @@
         }
       ]
     },
+    "rust_foniohousehold": {
+      "name": "Rust Foniohousehold",
+      "desc": "A dry foniohousehold south of the tragacanth. Packed rust coats foniohousehold.",
+      "brief": "Dry foniohousehold, packed rust.",
+      "exits": { "north": { "to": "rust_tragacanth" } },
+      "actions": [
+        {
+          "id": "pinch_foniohousehold",
+          "label": "pinch the foniohousehold",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniohousehold. They packed it on the tragacanth and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_litharge": {
       "name": "Rust Litharge",
       "desc": "A dry litharge east of the tragacanth. Packed rust coats litharge.",
       "brief": "Dry litharge, packed rust.",
-      "exits": { "west": { "to": "rust_tragacanth" }, "east": { "to": "rust_yorkgum" } },
+      "exits": { "west": { "to": "rust_tragacanth" }, "east": { "to": "rust_yorkgum" }, "south": { "to": "rust_teffhousehold" } },
       "actions": [
         {
           "id": "pinch_litharge",
@@ -16412,11 +16446,28 @@
         }
       ]
     },
+    "rust_teffhousehold": {
+      "name": "Rust Teffhousehold",
+      "desc": "A dry teffhousehold south of the litharge. Packed rust coats teffhousehold.",
+      "brief": "Dry teffhousehold, packed rust.",
+      "exits": { "north": { "to": "rust_litharge" } },
+      "actions": [
+        {
+          "id": "pinch_teffhousehold",
+          "label": "pinch the teffhousehold",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffhousehold. They packed it on the litharge and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_yorkgum": {
       "name": "Rust Yorkgum",
       "desc": "A dry yorkgum east of the litharge. Packed rust coats yorkgum.",
       "brief": "Dry yorkgum, packed rust.",
-      "exits": { "west": { "to": "rust_litharge" }, "east": { "to": "rust_casuarina" } },
+      "exits": { "west": { "to": "rust_litharge" }, "east": { "to": "rust_casuarina" }, "south": { "to": "rust_barleyhousehold" } },
       "actions": [
         {
           "id": "pinch_yorkgum",
@@ -16429,11 +16480,28 @@
         }
       ]
     },
+    "rust_barleyhousehold": {
+      "name": "Rust Barleyhousehold",
+      "desc": "A dry barleyhousehold south of the yorkgum. Packed rust coats barleyhousehold.",
+      "brief": "Dry barleyhousehold, packed rust.",
+      "exits": { "north": { "to": "rust_yorkgum" } },
+      "actions": [
+        {
+          "id": "pinch_barleyhousehold",
+          "label": "pinch the barleyhousehold",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyhousehold. They packed it on the yorkgum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_casuarina": {
       "name": "Rust Casuarina",
       "desc": "A dry casuarina east of the yorkgum. Packed rust coats casuarina.",
       "brief": "Dry casuarina, packed rust.",
-      "exits": { "west": { "to": "rust_yorkgum" }, "east": { "to": "rust_brigalow" } },
+      "exits": { "west": { "to": "rust_yorkgum" }, "east": { "to": "rust_brigalow" }, "south": { "to": "rust_sorghumhousehold" } },
       "actions": [
         {
           "id": "pinch_casuarina",
@@ -16446,11 +16514,28 @@
         }
       ]
     },
+    "rust_sorghumhousehold": {
+      "name": "Rust Sorghumhousehold",
+      "desc": "A dry sorghumhousehold south of the casuarina. Packed rust coats sorghumhousehold.",
+      "brief": "Dry sorghumhousehold, packed rust.",
+      "exits": { "north": { "to": "rust_casuarina" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumhousehold",
+          "label": "pinch the sorghumhousehold",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumhousehold. They packed it on the casuarina and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_brigalow": {
       "name": "Rust Brigalow",
       "desc": "A dry brigalow east of the casuarina. Packed rust coats brigalow.",
       "brief": "Dry brigalow, packed rust.",
-      "exits": { "west": { "to": "rust_casuarina" }, "east": { "to": "rust_douglasfir" } },
+      "exits": { "west": { "to": "rust_casuarina" }, "east": { "to": "rust_douglasfir" }, "south": { "to": "rust_millethousehold" } },
       "actions": [
         {
           "id": "pinch_brigalow",
@@ -16459,6 +16544,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard brigalow. They packed it on the casuarina and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millethousehold": {
+      "name": "Rust Millethousehold",
+      "desc": "A dry millethousehold south of the brigalow. Packed rust coats millethousehold.",
+      "brief": "Dry millethousehold, packed rust.",
+      "exits": { "north": { "to": "rust_brigalow" } },
+      "actions": [
+        {
+          "id": "pinch_millethousehold",
+          "label": "pinch the millethousehold",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millethousehold. They packed it on the brigalow and packed rust around it."]
           ]
         }
       ]
@@ -16552,7 +16654,7 @@
       "name": "Rust Fluke",
       "desc": "A dry fluke east of the dolphin. Packed rust coats a fluke.",
       "brief": "Dry fluke, packed rust.",
-      "exits": { "west": { "to": "rust_dolphin" }, "east": { "to": "rust_palstek" } },
+      "exits": { "west": { "to": "rust_dolphin" }, "east": { "to": "rust_palstek" }, "south": { "to": "rust_cornhousehold" } },
       "actions": [
         {
           "id": "pinch_fluke",
@@ -16565,11 +16667,28 @@
         }
       ]
     },
+    "rust_cornhousehold": {
+      "name": "Rust Cornhousehold",
+      "desc": "A dry cornhousehold south of the fluke. Packed rust coats cornhousehold.",
+      "brief": "Dry cornhousehold, packed rust.",
+      "exits": { "north": { "to": "rust_fluke" } },
+      "actions": [
+        {
+          "id": "pinch_cornhousehold",
+          "label": "pinch the cornhousehold",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornhousehold. They packed it on the fluke and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_palstek": {
       "name": "Rust Palstek",
       "desc": "A dry palstek east of the fluke. Packed rust coats a palstek.",
       "brief": "Dry palstek, packed rust.",
-      "exits": { "west": { "to": "rust_fluke" }, "east": { "to": "rust_gumarabic" } },
+      "exits": { "west": { "to": "rust_fluke" }, "east": { "to": "rust_gumarabic" }, "south": { "to": "rust_oathousehold" } },
       "actions": [
         {
           "id": "pinch_palstek",
@@ -16578,6 +16697,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palstek. They tied it on the fluke and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oathousehold": {
+      "name": "Rust Oathousehold",
+      "desc": "A dry oathousehold south of the palstek. Packed rust coats oathousehold.",
+      "brief": "Dry oathousehold, packed rust.",
+      "exits": { "north": { "to": "rust_palstek" } },
+      "actions": [
+        {
+          "id": "pinch_oathousehold",
+          "label": "pinch the oathousehold",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oathousehold. They packed it on the palstek and packed rust around it."]
           ]
         }
       ]
@@ -43754,16 +43890,34 @@
     "pinch the kedge",
     "go east",
     "pinch the midshipman",
+    "go south",
+    "pinch the durumhousehold",
+    "go north",
     "go east",
     "pinch the tragacanth",
+    "go south",
+    "pinch the foniohousehold",
+    "go north",
     "go east",
     "pinch the litharge",
+    "go south",
+    "pinch the teffhousehold",
+    "go north",
     "go east",
     "pinch the yorkgum",
+    "go south",
+    "pinch the barleyhousehold",
+    "go north",
     "go east",
     "pinch the casuarina",
+    "go south",
+    "pinch the sorghumhousehold",
+    "go north",
     "go east",
     "pinch the brigalow",
+    "go south",
+    "pinch the millethousehold",
+    "go north",
     "go east",
     "pinch the douglasfir",
     "go south",
@@ -43790,8 +43944,14 @@
     "pinch the dolphin",
     "go east",
     "pinch the fluke",
+    "go south",
+    "pinch the cornhousehold",
+    "go north",
     "go east",
     "pinch the palstek",
+    "go south",
+    "pinch the oathousehold",
+    "go north",
     "go east",
     "pinch the gumarabic",
     "go south",
