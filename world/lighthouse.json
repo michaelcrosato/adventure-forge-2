@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11650,
+  "maxScore": 11690,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -18541,7 +18541,7 @@
       "name": "Rust Roundseizing",
       "desc": "A dry roundseizing east of the stemson. Packed rust coats a roundseizing.",
       "brief": "Dry roundseizing, packed rust.",
-      "exits": { "west": { "to": "rust_stemson" }, "east": { "to": "rust_anime" } },
+      "exits": { "west": { "to": "rust_stemson" }, "east": { "to": "rust_anime" }, "south": { "to": "rust_ryefirstclear" } },
       "actions": [
         {
           "id": "pinch_roundseizing",
@@ -18554,11 +18554,28 @@
         }
       ]
     },
+    "rust_ryefirstclear": {
+      "name": "Rust Ryefirstclear",
+      "desc": "A dry ryefirstclear south of the roundseizing. Packed rust coats ryefirstclear.",
+      "brief": "Dry ryefirstclear, packed rust.",
+      "exits": { "north": { "to": "rust_roundseizing" } },
+      "actions": [
+        {
+          "id": "pinch_ryefirstclear",
+          "label": "pinch the ryefirstclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryefirstclear. They packed it on the roundseizing and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_anime": {
       "name": "Rust Anime",
       "desc": "A dry anime east of the roundseizing. Packed rust coats anime.",
       "brief": "Dry anime, packed rust.",
-      "exits": { "west": { "to": "rust_roundseizing" }, "east": { "to": "rust_snowgum" } },
+      "exits": { "west": { "to": "rust_roundseizing" }, "east": { "to": "rust_snowgum" }, "south": { "to": "rust_wheatfirstclear" } },
       "actions": [
         {
           "id": "pinch_anime",
@@ -18571,11 +18588,28 @@
         }
       ]
     },
+    "rust_wheatfirstclear": {
+      "name": "Rust Wheatfirstclear",
+      "desc": "A dry wheatfirstclear south of the anime. Packed rust coats wheatfirstclear.",
+      "brief": "Dry wheatfirstclear, packed rust.",
+      "exits": { "north": { "to": "rust_anime" } },
+      "actions": [
+        {
+          "id": "pinch_wheatfirstclear",
+          "label": "pinch the wheatfirstclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatfirstclear. They packed it on the anime and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_snowgum": {
       "name": "Rust Snowgum",
       "desc": "A dry snowgum east of the anime. Packed rust coats snowgum.",
       "brief": "Dry snowgum, packed rust.",
-      "exits": { "west": { "to": "rust_anime" }, "east": { "to": "rust_whitemahogany" } },
+      "exits": { "west": { "to": "rust_anime" }, "east": { "to": "rust_whitemahogany" }, "south": { "to": "rust_durumpatent" } },
       "actions": [
         {
           "id": "pinch_snowgum",
@@ -18588,11 +18622,28 @@
         }
       ]
     },
+    "rust_durumpatent": {
+      "name": "Rust Durumpatent",
+      "desc": "A dry durumpatent south of the snowgum. Packed rust coats durumpatent.",
+      "brief": "Dry durumpatent, packed rust.",
+      "exits": { "north": { "to": "rust_snowgum" } },
+      "actions": [
+        {
+          "id": "pinch_durumpatent",
+          "label": "pinch the durumpatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumpatent. They packed it on the snowgum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_whitemahogany": {
       "name": "Rust Whitemahogany",
       "desc": "A dry whitemahogany east of the snowgum. Packed rust coats whitemahogany.",
       "brief": "Dry whitemahogany, packed rust.",
-      "exits": { "west": { "to": "rust_snowgum" }, "east": { "to": "rust_waratah" } },
+      "exits": { "west": { "to": "rust_snowgum" }, "east": { "to": "rust_waratah" }, "south": { "to": "rust_foniopatent" } },
       "actions": [
         {
           "id": "pinch_whitemahogany",
@@ -18605,11 +18656,28 @@
         }
       ]
     },
+    "rust_foniopatent": {
+      "name": "Rust Foniopatent",
+      "desc": "A dry foniopatent south of the whitemahogany. Packed rust coats foniopatent.",
+      "brief": "Dry foniopatent, packed rust.",
+      "exits": { "north": { "to": "rust_whitemahogany" } },
+      "actions": [
+        {
+          "id": "pinch_foniopatent",
+          "label": "pinch the foniopatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniopatent. They packed it on the whitemahogany and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_waratah": {
       "name": "Rust Waratah",
       "desc": "A dry waratah east of the whitemahogany. Packed rust coats waratah.",
       "brief": "Dry waratah, packed rust.",
-      "exits": { "west": { "to": "rust_whitemahogany" }, "east": { "to": "rust_slashpine" } },
+      "exits": { "west": { "to": "rust_whitemahogany" }, "east": { "to": "rust_slashpine" }, "south": { "to": "rust_teffpatent" } },
       "actions": [
         {
           "id": "pinch_waratah",
@@ -18622,11 +18690,28 @@
         }
       ]
     },
+    "rust_teffpatent": {
+      "name": "Rust Teffpatent",
+      "desc": "A dry teffpatent south of the waratah. Packed rust coats teffpatent.",
+      "brief": "Dry teffpatent, packed rust.",
+      "exits": { "north": { "to": "rust_waratah" } },
+      "actions": [
+        {
+          "id": "pinch_teffpatent",
+          "label": "pinch the teffpatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffpatent. They packed it on the waratah and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_slashpine": {
       "name": "Rust Slashpine",
       "desc": "A dry slashpine east of the waratah. Packed rust coats slashpine.",
       "brief": "Dry slashpine, packed rust.",
-      "exits": { "west": { "to": "rust_waratah" }, "east": { "to": "rust_austrianpine" } },
+      "exits": { "west": { "to": "rust_waratah" }, "east": { "to": "rust_austrianpine" }, "south": { "to": "rust_barleypatent" } },
       "actions": [
         {
           "id": "pinch_slashpine",
@@ -18635,6 +18720,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard slashpine. They packed it on the waratah and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleypatent": {
+      "name": "Rust Barleypatent",
+      "desc": "A dry barleypatent south of the slashpine. Packed rust coats barleypatent.",
+      "brief": "Dry barleypatent, packed rust.",
+      "exits": { "north": { "to": "rust_slashpine" } },
+      "actions": [
+        {
+          "id": "pinch_barleypatent",
+          "label": "pinch the barleypatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleypatent. They packed it on the slashpine and packed rust around it."]
           ]
         }
       ]
@@ -18677,7 +18779,7 @@
       "name": "Rust Oar",
       "desc": "A dry oar east of the spar. Packed rust coats an oar.",
       "brief": "Dry oar, packed rust.",
-      "exits": { "west": { "to": "rust_spar" }, "east": { "to": "rust_clove" } },
+      "exits": { "west": { "to": "rust_spar" }, "east": { "to": "rust_clove" }, "south": { "to": "rust_sorghumpatent" } },
       "actions": [
         {
           "id": "pinch_oar",
@@ -18690,11 +18792,28 @@
         }
       ]
     },
+    "rust_sorghumpatent": {
+      "name": "Rust Sorghumpatent",
+      "desc": "A dry sorghumpatent south of the oar. Packed rust coats sorghumpatent.",
+      "brief": "Dry sorghumpatent, packed rust.",
+      "exits": { "north": { "to": "rust_oar" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumpatent",
+          "label": "pinch the sorghumpatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumpatent. They packed it on the oar and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_clove": {
       "name": "Rust Clove",
       "desc": "A dry clove east of the oar. Packed rust coats a clove.",
       "brief": "Dry clove, packed rust.",
-      "exits": { "west": { "to": "rust_oar" }, "east": { "to": "rust_copalite" } },
+      "exits": { "west": { "to": "rust_oar" }, "east": { "to": "rust_copalite" }, "south": { "to": "rust_milletpatent" } },
       "actions": [
         {
           "id": "pinch_clove",
@@ -18703,6 +18822,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clove. They hitched it on the oar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletpatent": {
+      "name": "Rust Milletpatent",
+      "desc": "A dry milletpatent south of the clove. Packed rust coats milletpatent.",
+      "brief": "Dry milletpatent, packed rust.",
+      "exits": { "north": { "to": "rust_clove" } },
+      "actions": [
+        {
+          "id": "pinch_milletpatent",
+          "label": "pinch the milletpatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletpatent. They packed it on the clove and packed rust around it."]
           ]
         }
       ]
@@ -42774,16 +42910,34 @@
     "pinch the stemson",
     "go east",
     "pinch the roundseizing",
+    "go south",
+    "pinch the ryefirstclear",
+    "go north",
     "go east",
     "pinch the anime",
+    "go south",
+    "pinch the wheatfirstclear",
+    "go north",
     "go east",
     "pinch the snowgum",
+    "go south",
+    "pinch the durumpatent",
+    "go north",
     "go east",
     "pinch the whitemahogany",
+    "go south",
+    "pinch the foniopatent",
+    "go north",
     "go east",
     "pinch the waratah",
+    "go south",
+    "pinch the teffpatent",
+    "go north",
     "go east",
     "pinch the slashpine",
+    "go south",
+    "pinch the barleypatent",
+    "go north",
     "go east",
     "pinch the austrianpine",
     "go west",
@@ -42800,8 +42954,14 @@
     "go east",
     "go east",
     "pinch the oar",
+    "go south",
+    "pinch the sorghumpatent",
+    "go north",
     "go east",
     "pinch the clove",
+    "go south",
+    "pinch the milletpatent",
+    "go north",
     "go east",
     "pinch the copalite",
     "go west",
