@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11450,
+  "maxScore": 11490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -19306,7 +19306,7 @@
       "name": "Rust Sprit",
       "desc": "A dry sprit east of the rod. Packed rust coats a sprit.",
       "brief": "Dry sprit, packed rust.",
-      "exits": { "west": { "to": "rust_rod" }, "east": { "to": "rust_sheepshank" } },
+      "exits": { "west": { "to": "rust_rod" }, "east": { "to": "rust_sheepshank" }, "south": { "to": "rust_ryeclear" } },
       "actions": [
         {
           "id": "pinch_sprit",
@@ -19319,11 +19319,28 @@
         }
       ]
     },
+    "rust_ryeclear": {
+      "name": "Rust Ryeclear",
+      "desc": "A dry ryeclear south of the sprit. Packed rust coats ryeclear.",
+      "brief": "Dry ryeclear, packed rust.",
+      "exits": { "north": { "to": "rust_sprit" } },
+      "actions": [
+        {
+          "id": "pinch_ryeclear",
+          "label": "pinch the ryeclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryeclear. They packed it on the sprit and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sheepshank": {
       "name": "Rust Sheepshank",
       "desc": "A dry sheepshank east of the sprit. Packed rust coats a sheepshank.",
       "brief": "Dry sheepshank, packed rust.",
-      "exits": { "west": { "to": "rust_sprit" }, "east": { "to": "rust_distemper" } },
+      "exits": { "west": { "to": "rust_sprit" }, "east": { "to": "rust_distemper" }, "south": { "to": "rust_wheatclear" } },
       "actions": [
         {
           "id": "pinch_sheepshank",
@@ -19336,11 +19353,28 @@
         }
       ]
     },
+    "rust_wheatclear": {
+      "name": "Rust Wheatclear",
+      "desc": "A dry wheatclear south of the sheepshank. Packed rust coats wheatclear.",
+      "brief": "Dry wheatclear, packed rust.",
+      "exits": { "north": { "to": "rust_sheepshank" } },
+      "actions": [
+        {
+          "id": "pinch_wheatclear",
+          "label": "pinch the wheatclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatclear. They packed it on the sheepshank and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_distemper": {
       "name": "Rust Distemper",
       "desc": "A dry distemper east of the sheepshank. Packed rust coats distemper.",
       "brief": "Dry distemper, packed rust.",
-      "exits": { "west": { "to": "rust_sheepshank" }, "east": { "to": "rust_mansonia" } },
+      "exits": { "west": { "to": "rust_sheepshank" }, "east": { "to": "rust_mansonia" }, "south": { "to": "rust_durumreddog" } },
       "actions": [
         {
           "id": "pinch_distemper",
@@ -19353,11 +19387,28 @@
         }
       ]
     },
+    "rust_durumreddog": {
+      "name": "Rust Durumreddog",
+      "desc": "A dry durumreddog south of the distemper. Packed rust coats durumreddog.",
+      "brief": "Dry durumreddog, packed rust.",
+      "exits": { "north": { "to": "rust_distemper" } },
+      "actions": [
+        {
+          "id": "pinch_durumreddog",
+          "label": "pinch the durumreddog",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumreddog. They packed it on the distemper and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_mansonia": {
       "name": "Rust Mansonia",
       "desc": "A dry mansonia east of the distemper. Packed rust coats mansonia.",
       "brief": "Dry mansonia, packed rust.",
-      "exits": { "west": { "to": "rust_distemper" }, "east": { "to": "rust_vinhatico" } },
+      "exits": { "west": { "to": "rust_distemper" }, "east": { "to": "rust_vinhatico" }, "south": { "to": "rust_fonioreddog" } },
       "actions": [
         {
           "id": "pinch_mansonia",
@@ -19370,11 +19421,28 @@
         }
       ]
     },
+    "rust_fonioreddog": {
+      "name": "Rust Fonioreddog",
+      "desc": "A dry fonioreddog south of the mansonia. Packed rust coats fonioreddog.",
+      "brief": "Dry fonioreddog, packed rust.",
+      "exits": { "north": { "to": "rust_mansonia" } },
+      "actions": [
+        {
+          "id": "pinch_fonioreddog",
+          "label": "pinch the fonioreddog",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioreddog. They packed it on the mansonia and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_vinhatico": {
       "name": "Rust Vinhatico",
       "desc": "A dry vinhatico east of the mansonia. Packed rust coats vinhatico.",
       "brief": "Dry vinhatico, packed rust.",
-      "exits": { "west": { "to": "rust_mansonia" }, "east": { "to": "rust_palosanto" } },
+      "exits": { "west": { "to": "rust_mansonia" }, "east": { "to": "rust_palosanto" }, "south": { "to": "rust_teffreddog" } },
       "actions": [
         {
           "id": "pinch_vinhatico",
@@ -19387,11 +19455,28 @@
         }
       ]
     },
+    "rust_teffreddog": {
+      "name": "Rust Teffreddog",
+      "desc": "A dry teffreddog south of the vinhatico. Packed rust coats teffreddog.",
+      "brief": "Dry teffreddog, packed rust.",
+      "exits": { "north": { "to": "rust_vinhatico" } },
+      "actions": [
+        {
+          "id": "pinch_teffreddog",
+          "label": "pinch the teffreddog",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffreddog. They packed it on the vinhatico and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_palosanto": {
       "name": "Rust Palosanto",
       "desc": "A dry palosanto east of the vinhatico. Packed rust coats palosanto.",
       "brief": "Dry palosanto, packed rust.",
-      "exits": { "west": { "to": "rust_vinhatico" }, "east": { "to": "rust_chengal" } },
+      "exits": { "west": { "to": "rust_vinhatico" }, "east": { "to": "rust_chengal" }, "south": { "to": "rust_barleyreddog" } },
       "actions": [
         {
           "id": "pinch_palosanto",
@@ -19404,11 +19489,28 @@
         }
       ]
     },
+    "rust_barleyreddog": {
+      "name": "Rust Barleyreddog",
+      "desc": "A dry barleyreddog south of the palosanto. Packed rust coats barleyreddog.",
+      "brief": "Dry barleyreddog, packed rust.",
+      "exits": { "north": { "to": "rust_palosanto" } },
+      "actions": [
+        {
+          "id": "pinch_barleyreddog",
+          "label": "pinch the barleyreddog",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyreddog. They packed it on the palosanto and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_chengal": {
       "name": "Rust Chengal",
       "desc": "A dry chengal east of the palosanto. Packed rust coats chengal.",
       "brief": "Dry chengal, packed rust.",
-      "exits": { "west": { "to": "rust_palosanto" }, "east": { "to": "rust_kekatong" } },
+      "exits": { "west": { "to": "rust_palosanto" }, "east": { "to": "rust_kekatong" }, "south": { "to": "rust_sorghumreddog" } },
       "actions": [
         {
           "id": "pinch_chengal",
@@ -19421,11 +19523,28 @@
         }
       ]
     },
+    "rust_sorghumreddog": {
+      "name": "Rust Sorghumreddog",
+      "desc": "A dry sorghumreddog south of the chengal. Packed rust coats sorghumreddog.",
+      "brief": "Dry sorghumreddog, packed rust.",
+      "exits": { "north": { "to": "rust_chengal" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumreddog",
+          "label": "pinch the sorghumreddog",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumreddog. They packed it on the chengal and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kekatong": {
       "name": "Rust Kekatong",
       "desc": "A dry kekatong east of the chengal. Packed rust coats kekatong.",
       "brief": "Dry kekatong, packed rust.",
-      "exits": { "west": { "to": "rust_chengal" }, "east": { "to": "rust_bija" } },
+      "exits": { "west": { "to": "rust_chengal" }, "east": { "to": "rust_bija" }, "south": { "to": "rust_milletreddog" } },
       "actions": [
         {
           "id": "pinch_kekatong",
@@ -19434,6 +19553,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kekatong. They packed it on the chengal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletreddog": {
+      "name": "Rust Milletreddog",
+      "desc": "A dry milletreddog south of the kekatong. Packed rust coats milletreddog.",
+      "brief": "Dry milletreddog, packed rust.",
+      "exits": { "north": { "to": "rust_kekatong" } },
+      "actions": [
+        {
+          "id": "pinch_milletreddog",
+          "label": "pinch the milletreddog",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletreddog. They packed it on the kekatong and packed rust around it."]
           ]
         }
       ]
@@ -42274,20 +42410,44 @@
     "go north",
     "go east",
     "pinch the sprit",
+    "go south",
+    "pinch the ryeclear",
+    "go north",
     "go east",
     "pinch the sheepshank",
+    "go south",
+    "pinch the wheatclear",
+    "go north",
     "go east",
     "pinch the distemper",
+    "go south",
+    "pinch the durumreddog",
+    "go north",
     "go east",
     "pinch the mansonia",
+    "go south",
+    "pinch the fonioreddog",
+    "go north",
     "go east",
     "pinch the vinhatico",
+    "go south",
+    "pinch the teffreddog",
+    "go north",
     "go east",
     "pinch the palosanto",
+    "go south",
+    "pinch the barleyreddog",
+    "go north",
     "go east",
     "pinch the chengal",
+    "go south",
+    "pinch the sorghumreddog",
+    "go north",
     "go east",
     "pinch the kekatong",
+    "go south",
+    "pinch the milletreddog",
+    "go north",
     "go east",
     "pinch the bija",
     "go south",
