@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10970,
+  "maxScore": 11010,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -21703,7 +21703,7 @@
       "name": "Rust Itauba",
       "desc": "A dry itauba east of the sucupira. Packed rust coats itauba.",
       "brief": "Dry itauba, packed rust.",
-      "exits": { "west": { "to": "rust_sucupira" }, "east": { "to": "rust_narra" } },
+      "exits": { "west": { "to": "rust_sucupira" }, "east": { "to": "rust_narra" }, "south": { "to": "rust_tefffeed" } },
       "actions": [
         {
           "id": "pinch_itauba",
@@ -21716,11 +21716,28 @@
         }
       ]
     },
+    "rust_tefffeed": {
+      "name": "Rust Tefffeed",
+      "desc": "A dry tefffeed south of the itauba. Packed rust coats tefffeed.",
+      "brief": "Dry tefffeed, packed rust.",
+      "exits": { "north": { "to": "rust_itauba" } },
+      "actions": [
+        {
+          "id": "pinch_tefffeed",
+          "label": "pinch the tefffeed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefffeed. They packed it on the itauba and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_narra": {
       "name": "Rust Narra",
       "desc": "A dry narra east of the itauba. Packed rust coats narra.",
       "brief": "Dry narra, packed rust.",
-      "exits": { "west": { "to": "rust_itauba" }, "east": { "to": "rust_bagras" } },
+      "exits": { "west": { "to": "rust_itauba" }, "east": { "to": "rust_bagras" }, "south": { "to": "rust_barleyfeed" } },
       "actions": [
         {
           "id": "pinch_narra",
@@ -21733,11 +21750,28 @@
         }
       ]
     },
+    "rust_barleyfeed": {
+      "name": "Rust Barleyfeed",
+      "desc": "A dry barleyfeed south of the narra. Packed rust coats barleyfeed.",
+      "brief": "Dry barleyfeed, packed rust.",
+      "exits": { "north": { "to": "rust_narra" } },
+      "actions": [
+        {
+          "id": "pinch_barleyfeed",
+          "label": "pinch the barleyfeed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyfeed. They packed it on the narra and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bagras": {
       "name": "Rust Bagras",
       "desc": "A dry bagras east of the narra. Packed rust coats bagras.",
       "brief": "Dry bagras, packed rust.",
-      "exits": { "west": { "to": "rust_narra" }, "east": { "to": "rust_silvertop" } },
+      "exits": { "west": { "to": "rust_narra" }, "east": { "to": "rust_silvertop" }, "south": { "to": "rust_sorghumfeed" } },
       "actions": [
         {
           "id": "pinch_bagras",
@@ -21746,6 +21780,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bagras. They packed it on the narra and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumfeed": {
+      "name": "Rust Sorghumfeed",
+      "desc": "A dry sorghumfeed south of the bagras. Packed rust coats sorghumfeed.",
+      "brief": "Dry sorghumfeed, packed rust.",
+      "exits": { "north": { "to": "rust_bagras" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumfeed",
+          "label": "pinch the sorghumfeed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumfeed. They packed it on the bagras and packed rust around it."]
           ]
         }
       ]
@@ -21805,7 +21856,7 @@
       "name": "Rust Lazyjack",
       "desc": "A dry lazyjack east of the trysail. Packed rust coats a lazyjack.",
       "brief": "Dry lazyjack, packed rust.",
-      "exits": { "west": { "to": "rust_trysail" }, "east": { "to": "rust_woolding" } },
+      "exits": { "west": { "to": "rust_trysail" }, "east": { "to": "rust_woolding" }, "south": { "to": "rust_milletfeed" } },
       "actions": [
         {
           "id": "pinch_lazyjack",
@@ -21818,11 +21869,28 @@
         }
       ]
     },
+    "rust_milletfeed": {
+      "name": "Rust Milletfeed",
+      "desc": "A dry milletfeed south of the lazyjack. Packed rust coats milletfeed.",
+      "brief": "Dry milletfeed, packed rust.",
+      "exits": { "north": { "to": "rust_lazyjack" } },
+      "actions": [
+        {
+          "id": "pinch_milletfeed",
+          "label": "pinch the milletfeed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletfeed. They packed it on the lazyjack and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_woolding": {
       "name": "Rust Woolding",
       "desc": "A dry woolding east of the lazyjack. Packed rust coats a woolding.",
       "brief": "Dry woolding, packed rust.",
-      "exits": { "west": { "to": "rust_lazyjack" }, "east": { "to": "rust_sapele" } },
+      "exits": { "west": { "to": "rust_lazyjack" }, "east": { "to": "rust_sapele" }, "south": { "to": "rust_cornfeed" } },
       "actions": [
         {
           "id": "pinch_woolding",
@@ -21835,11 +21903,28 @@
         }
       ]
     },
+    "rust_cornfeed": {
+      "name": "Rust Cornfeed",
+      "desc": "A dry cornfeed south of the woolding. Packed rust coats cornfeed.",
+      "brief": "Dry cornfeed, packed rust.",
+      "exits": { "north": { "to": "rust_woolding" } },
+      "actions": [
+        {
+          "id": "pinch_cornfeed",
+          "label": "pinch the cornfeed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornfeed. They packed it on the woolding and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sapele": {
       "name": "Rust Sapele",
       "desc": "A dry sapele east of the woolding. Packed rust coats sapele.",
       "brief": "Dry sapele, packed rust.",
-      "exits": { "west": { "to": "rust_woolding" }, "east": { "to": "rust_koto" } },
+      "exits": { "west": { "to": "rust_woolding" }, "east": { "to": "rust_koto" }, "south": { "to": "rust_oatfeed" } },
       "actions": [
         {
           "id": "pinch_sapele",
@@ -21852,11 +21937,28 @@
         }
       ]
     },
+    "rust_oatfeed": {
+      "name": "Rust Oatfeed",
+      "desc": "A dry oatfeed south of the sapele. Packed rust coats oatfeed.",
+      "brief": "Dry oatfeed, packed rust.",
+      "exits": { "north": { "to": "rust_sapele" } },
+      "actions": [
+        {
+          "id": "pinch_oatfeed",
+          "label": "pinch the oatfeed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatfeed. They packed it on the sapele and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_koto": {
       "name": "Rust Koto",
       "desc": "A dry koto east of the sapele. Packed rust coats koto.",
       "brief": "Dry koto, packed rust.",
-      "exits": { "west": { "to": "rust_sapele" }, "east": { "to": "rust_cumaru" } },
+      "exits": { "west": { "to": "rust_sapele" }, "east": { "to": "rust_cumaru" }, "south": { "to": "rust_ryefeed" } },
       "actions": [
         {
           "id": "pinch_koto",
@@ -21869,11 +21971,28 @@
         }
       ]
     },
+    "rust_ryefeed": {
+      "name": "Rust Ryefeed",
+      "desc": "A dry ryefeed south of the koto. Packed rust coats ryefeed.",
+      "brief": "Dry ryefeed, packed rust.",
+      "exits": { "north": { "to": "rust_koto" } },
+      "actions": [
+        {
+          "id": "pinch_ryefeed",
+          "label": "pinch the ryefeed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryefeed. They packed it on the koto and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cumaru": {
       "name": "Rust Cumaru",
       "desc": "A dry cumaru east of the koto. Packed rust coats cumaru.",
       "brief": "Dry cumaru, packed rust.",
-      "exits": { "west": { "to": "rust_koto" }, "east": { "to": "rust_goncalo" } },
+      "exits": { "west": { "to": "rust_koto" }, "east": { "to": "rust_goncalo" }, "south": { "to": "rust_wheatfeed" } },
       "actions": [
         {
           "id": "pinch_cumaru",
@@ -21882,6 +22001,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cumaru. They packed it on the koto and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wheatfeed": {
+      "name": "Rust Wheatfeed",
+      "desc": "A dry wheatfeed south of the cumaru. Packed rust coats wheatfeed.",
+      "brief": "Dry wheatfeed, packed rust.",
+      "exits": { "north": { "to": "rust_cumaru" } },
+      "actions": [
+        {
+          "id": "pinch_wheatfeed",
+          "label": "pinch the wheatfeed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatfeed. They packed it on the cumaru and packed rust around it."]
           ]
         }
       ]
@@ -41021,10 +41157,19 @@
     "pinch the sucupira",
     "go east",
     "pinch the itauba",
+    "go south",
+    "pinch the tefffeed",
+    "go north",
     "go east",
     "pinch the narra",
+    "go south",
+    "pinch the barleyfeed",
+    "go north",
     "go east",
     "pinch the bagras",
+    "go south",
+    "pinch the sorghumfeed",
+    "go north",
     "go east",
     "pinch the silvertop",
     "go west",
@@ -41043,14 +41188,29 @@
     "pinch the trysail",
     "go east",
     "pinch the lazyjack",
+    "go south",
+    "pinch the milletfeed",
+    "go north",
     "go east",
     "pinch the woolding",
+    "go south",
+    "pinch the cornfeed",
+    "go north",
     "go east",
     "pinch the sapele",
+    "go south",
+    "pinch the oatfeed",
+    "go north",
     "go east",
     "pinch the koto",
+    "go south",
+    "pinch the ryefeed",
+    "go north",
     "go east",
     "pinch the cumaru",
+    "go south",
+    "pinch the wheatfeed",
+    "go north",
     "go east",
     "pinch the goncalo",
     "go south",
