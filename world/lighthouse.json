@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11330,
+  "maxScore": 11370,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -19833,7 +19833,7 @@
       "name": "Rust Palash",
       "desc": "A dry palash east of the terap. Packed rust coats palash.",
       "brief": "Dry palash, packed rust.",
-      "exits": { "west": { "to": "rust_terap" }, "east": { "to": "rust_blackbutt" } },
+      "exits": { "west": { "to": "rust_terap" }, "east": { "to": "rust_blackbutt" }, "south": { "to": "rust_teffscreenings" } },
       "actions": [
         {
           "id": "pinch_palash",
@@ -19842,6 +19842,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palash. They packed it on the terap and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffscreenings": {
+      "name": "Rust Teffscreenings",
+      "desc": "A dry teffscreenings south of the palash. Packed rust coats teffscreenings.",
+      "brief": "Dry teffscreenings, packed rust.",
+      "exits": { "north": { "to": "rust_palash" } },
+      "actions": [
+        {
+          "id": "pinch_teffscreenings",
+          "label": "pinch the teffscreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffscreenings. They packed it on the palash and packed rust around it."]
           ]
         }
       ]
@@ -19867,7 +19884,7 @@
       "name": "Rust Gunnel",
       "desc": "A dry gunnel east of the tooth. Packed rust coats a gunnel.",
       "brief": "Dry gunnel, packed rust.",
-      "exits": { "west": { "to": "rust_tooth" }, "east": { "to": "rust_bending" } },
+      "exits": { "west": { "to": "rust_tooth" }, "east": { "to": "rust_bending" }, "south": { "to": "rust_barleyscreenings" } },
       "actions": [
         {
           "id": "pinch_gunnel",
@@ -19880,11 +19897,28 @@
         }
       ]
     },
+    "rust_barleyscreenings": {
+      "name": "Rust Barleyscreenings",
+      "desc": "A dry barleyscreenings south of the gunnel. Packed rust coats barleyscreenings.",
+      "brief": "Dry barleyscreenings, packed rust.",
+      "exits": { "north": { "to": "rust_gunnel" } },
+      "actions": [
+        {
+          "id": "pinch_barleyscreenings",
+          "label": "pinch the barleyscreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyscreenings. They packed it on the gunnel and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bending": {
       "name": "Rust Bending",
       "desc": "A dry bending east of the gunnel. Packed rust coats bending.",
       "brief": "Dry bending, packed rust.",
-      "exits": { "west": { "to": "rust_gunnel" }, "east": { "to": "rust_spermaceti" } },
+      "exits": { "west": { "to": "rust_gunnel" }, "east": { "to": "rust_spermaceti" }, "south": { "to": "rust_sorghumscreenings" } },
       "actions": [
         {
           "id": "pinch_bending",
@@ -19897,11 +19931,28 @@
         }
       ]
     },
+    "rust_sorghumscreenings": {
+      "name": "Rust Sorghumscreenings",
+      "desc": "A dry sorghumscreenings south of the bending. Packed rust coats sorghumscreenings.",
+      "brief": "Dry sorghumscreenings, packed rust.",
+      "exits": { "north": { "to": "rust_bending" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumscreenings",
+          "label": "pinch the sorghumscreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumscreenings. They packed it on the bending and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_spermaceti": {
       "name": "Rust Spermaceti",
       "desc": "A dry spermaceti east of the bending. Packed rust coats spermaceti.",
       "brief": "Dry spermaceti, packed rust.",
-      "exits": { "west": { "to": "rust_bending" }, "east": { "to": "rust_anigre" } },
+      "exits": { "west": { "to": "rust_bending" }, "east": { "to": "rust_anigre" }, "south": { "to": "rust_milletscreenings" } },
       "actions": [
         {
           "id": "pinch_spermaceti",
@@ -19914,11 +19965,28 @@
         }
       ]
     },
+    "rust_milletscreenings": {
+      "name": "Rust Milletscreenings",
+      "desc": "A dry milletscreenings south of the spermaceti. Packed rust coats milletscreenings.",
+      "brief": "Dry milletscreenings, packed rust.",
+      "exits": { "north": { "to": "rust_spermaceti" } },
+      "actions": [
+        {
+          "id": "pinch_milletscreenings",
+          "label": "pinch the milletscreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletscreenings. They packed it on the spermaceti and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_anigre": {
       "name": "Rust Anigre",
       "desc": "A dry anigre east of the spermaceti. Packed rust coats anigre.",
       "brief": "Dry anigre, packed rust.",
-      "exits": { "west": { "to": "rust_spermaceti" }, "east": { "to": "rust_guatambu" } },
+      "exits": { "west": { "to": "rust_spermaceti" }, "east": { "to": "rust_guatambu" }, "south": { "to": "rust_cornscreenings" } },
       "actions": [
         {
           "id": "pinch_anigre",
@@ -19931,11 +19999,28 @@
         }
       ]
     },
+    "rust_cornscreenings": {
+      "name": "Rust Cornscreenings",
+      "desc": "A dry cornscreenings south of the anigre. Packed rust coats cornscreenings.",
+      "brief": "Dry cornscreenings, packed rust.",
+      "exits": { "north": { "to": "rust_anigre" } },
+      "actions": [
+        {
+          "id": "pinch_cornscreenings",
+          "label": "pinch the cornscreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornscreenings. They packed it on the anigre and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_guatambu": {
       "name": "Rust Guatambu",
       "desc": "A dry guatambu east of the anigre. Packed rust coats guatambu.",
       "brief": "Dry guatambu, packed rust.",
-      "exits": { "west": { "to": "rust_anigre" }, "east": { "to": "rust_missanda" } },
+      "exits": { "west": { "to": "rust_anigre" }, "east": { "to": "rust_missanda" }, "south": { "to": "rust_oatscreenings" } },
       "actions": [
         {
           "id": "pinch_guatambu",
@@ -19948,11 +20033,28 @@
         }
       ]
     },
+    "rust_oatscreenings": {
+      "name": "Rust Oatscreenings",
+      "desc": "A dry oatscreenings south of the guatambu. Packed rust coats oatscreenings.",
+      "brief": "Dry oatscreenings, packed rust.",
+      "exits": { "north": { "to": "rust_guatambu" } },
+      "actions": [
+        {
+          "id": "pinch_oatscreenings",
+          "label": "pinch the oatscreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatscreenings. They packed it on the guatambu and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_missanda": {
       "name": "Rust Missanda",
       "desc": "A dry missanda east of the guatambu. Packed rust coats missanda.",
       "brief": "Dry missanda, packed rust.",
-      "exits": { "west": { "to": "rust_guatambu" }, "east": { "to": "rust_sepetir" } },
+      "exits": { "west": { "to": "rust_guatambu" }, "east": { "to": "rust_sepetir" }, "south": { "to": "rust_wheatscreenings" } },
       "actions": [
         {
           "id": "pinch_missanda",
@@ -19965,11 +20067,28 @@
         }
       ]
     },
+    "rust_wheatscreenings": {
+      "name": "Rust Wheatscreenings",
+      "desc": "A dry wheatscreenings south of the missanda. Packed rust coats wheatscreenings.",
+      "brief": "Dry wheatscreenings, packed rust.",
+      "exits": { "north": { "to": "rust_missanda" } },
+      "actions": [
+        {
+          "id": "pinch_wheatscreenings",
+          "label": "pinch the wheatscreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatscreenings. They packed it on the missanda and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sepetir": {
       "name": "Rust Sepetir",
       "desc": "A dry sepetir east of the missanda. Packed rust coats sepetir.",
       "brief": "Dry sepetir, packed rust.",
-      "exits": { "west": { "to": "rust_missanda" }, "east": { "to": "rust_palosapis" } },
+      "exits": { "west": { "to": "rust_missanda" }, "east": { "to": "rust_palosapis" }, "south": { "to": "rust_durumgermflake" } },
       "actions": [
         {
           "id": "pinch_sepetir",
@@ -19978,6 +20097,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sepetir. They packed it on the missanda and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumgermflake": {
+      "name": "Rust Durumgermflake",
+      "desc": "A dry durumgermflake south of the sepetir. Packed rust coats durumgermflake.",
+      "brief": "Dry durumgermflake, packed rust.",
+      "exits": { "north": { "to": "rust_sepetir" } },
+      "actions": [
+        {
+          "id": "pinch_durumgermflake",
+          "label": "pinch the durumgermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumgermflake. They packed it on the sepetir and packed rust around it."]
           ]
         }
       ]
@@ -41949,6 +42085,9 @@
     "pinch the terap",
     "go east",
     "pinch the palash",
+    "go south",
+    "pinch the teffscreenings",
+    "go north",
     "go east",
     "pinch the blackbutt",
     "go west",
@@ -41963,18 +42102,39 @@
     "go north",
     "go east",
     "pinch the gunnel",
+    "go south",
+    "pinch the barleyscreenings",
+    "go north",
     "go east",
     "pinch the bending",
+    "go south",
+    "pinch the sorghumscreenings",
+    "go north",
     "go east",
     "pinch the spermaceti",
+    "go south",
+    "pinch the milletscreenings",
+    "go north",
     "go east",
     "pinch the anigre",
+    "go south",
+    "pinch the cornscreenings",
+    "go north",
     "go east",
     "pinch the guatambu",
+    "go south",
+    "pinch the oatscreenings",
+    "go north",
     "go east",
     "pinch the missanda",
+    "go south",
+    "pinch the wheatscreenings",
+    "go north",
     "go east",
     "pinch the sepetir",
+    "go south",
+    "pinch the durumgermflake",
+    "go north",
     "go east",
     "pinch the palosapis",
     "go south",
