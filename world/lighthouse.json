@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9530,
+  "maxScore": 9570,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -28231,7 +28231,7 @@
       "name": "Rust Whitelead",
       "desc": "A dry whitelead east of the shellac. Packed rust coats whitelead.",
       "brief": "Dry whitelead, packed rust.",
-      "exits": { "west": { "to": "rust_shellac" }, "east": { "to": "rust_alder" } },
+      "exits": { "west": { "to": "rust_shellac" }, "east": { "to": "rust_alder" }, "south": { "to": "rust_parsnip" } },
       "actions": [
         {
           "id": "pinch_whitelead",
@@ -28244,11 +28244,28 @@
         }
       ]
     },
+    "rust_parsnip": {
+      "name": "Rust Parsnip",
+      "desc": "A dry parsnip south of the whitelead. Packed rust coats parsnip.",
+      "brief": "Dry parsnip, packed rust.",
+      "exits": { "north": { "to": "rust_whitelead" } },
+      "actions": [
+        {
+          "id": "pinch_parsnip",
+          "label": "pinch the parsnip",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard parsnip. They packed it on the whitelead and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_alder": {
       "name": "Rust Alder",
       "desc": "A dry alder east of the whitelead. Packed rust coats alder.",
       "brief": "Dry alder, packed rust.",
-      "exits": { "west": { "to": "rust_whitelead" }, "east": { "to": "rust_ironwood" } },
+      "exits": { "west": { "to": "rust_whitelead" }, "east": { "to": "rust_ironwood" }, "south": { "to": "rust_celeriac" } },
       "actions": [
         {
           "id": "pinch_alder",
@@ -28261,11 +28278,28 @@
         }
       ]
     },
+    "rust_celeriac": {
+      "name": "Rust Celeriac",
+      "desc": "A dry celeriac south of the alder. Packed rust coats celeriac.",
+      "brief": "Dry celeriac, packed rust.",
+      "exits": { "north": { "to": "rust_alder" } },
+      "actions": [
+        {
+          "id": "pinch_celeriac",
+          "label": "pinch the celeriac",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard celeriac. They packed it on the alder and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ironwood": {
       "name": "Rust Ironwood",
       "desc": "A dry ironwood east of the alder. Packed rust coats ironwood.",
       "brief": "Dry ironwood, packed rust.",
-      "exits": { "west": { "to": "rust_alder" }, "east": { "to": "rust_mica" } },
+      "exits": { "west": { "to": "rust_alder" }, "east": { "to": "rust_mica" }, "south": { "to": "rust_ramson" } },
       "actions": [
         {
           "id": "pinch_ironwood",
@@ -28278,11 +28312,28 @@
         }
       ]
     },
+    "rust_ramson": {
+      "name": "Rust Ramson",
+      "desc": "A dry ramson south of the ironwood. Packed rust coats ramson.",
+      "brief": "Dry ramson, packed rust.",
+      "exits": { "north": { "to": "rust_ironwood" } },
+      "actions": [
+        {
+          "id": "pinch_ramson",
+          "label": "pinch the ramson",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ramson. They packed it on the ironwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_mica": {
       "name": "Rust Mica",
       "desc": "A dry mica east of the ironwood. Packed rust coats mica.",
       "brief": "Dry mica, packed rust.",
-      "exits": { "west": { "to": "rust_ironwood" }, "east": { "to": "rust_willemite" } },
+      "exits": { "west": { "to": "rust_ironwood" }, "east": { "to": "rust_willemite" }, "south": { "to": "rust_scallion" } },
       "actions": [
         {
           "id": "pinch_mica",
@@ -28295,11 +28346,28 @@
         }
       ]
     },
+    "rust_scallion": {
+      "name": "Rust Scallion",
+      "desc": "A dry scallion south of the mica. Packed rust coats scallion.",
+      "brief": "Dry scallion, packed rust.",
+      "exits": { "north": { "to": "rust_mica" } },
+      "actions": [
+        {
+          "id": "pinch_scallion",
+          "label": "pinch the scallion",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard scallion. They packed it on the mica and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_willemite": {
       "name": "Rust Willemite",
       "desc": "A dry willemite east of the mica. Packed rust coats willemite.",
       "brief": "Dry willemite, packed rust.",
-      "exits": { "west": { "to": "rust_mica" }, "east": { "to": "rust_gahnite" } },
+      "exits": { "west": { "to": "rust_mica" }, "east": { "to": "rust_gahnite" }, "south": { "to": "rust_leek" } },
       "actions": [
         {
           "id": "pinch_willemite",
@@ -28308,6 +28376,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard willemite. They packed it on the mica and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_leek": {
+      "name": "Rust Leek",
+      "desc": "A dry leek south of the willemite. Packed rust coats leek.",
+      "brief": "Dry leek, packed rust.",
+      "exits": { "north": { "to": "rust_willemite" } },
+      "actions": [
+        {
+          "id": "pinch_leek",
+          "label": "pinch the leek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard leek. They packed it on the willemite and packed rust around it."]
           ]
         }
       ]
@@ -28333,7 +28418,7 @@
       "name": "Rust Boom",
       "desc": "A dry boom east of the fang. Packed rust coats a boom.",
       "brief": "Dry boom, packed rust.",
-      "exits": { "west": { "to": "rust_fang" }, "east": { "to": "rust_serving" } },
+      "exits": { "west": { "to": "rust_fang" }, "east": { "to": "rust_serving" }, "south": { "to": "rust_sorrel" } },
       "actions": [
         {
           "id": "pinch_boom",
@@ -28346,11 +28431,28 @@
         }
       ]
     },
+    "rust_sorrel": {
+      "name": "Rust Sorrel",
+      "desc": "A dry sorrel south of the boom. Packed rust coats sorrel.",
+      "brief": "Dry sorrel, packed rust.",
+      "exits": { "north": { "to": "rust_boom" } },
+      "actions": [
+        {
+          "id": "pinch_sorrel",
+          "label": "pinch the sorrel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorrel. They packed it on the boom and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_serving": {
       "name": "Rust Serving",
       "desc": "A dry serving east of the boom. Packed rust coats serving.",
       "brief": "Dry serving, packed rust.",
-      "exits": { "west": { "to": "rust_boom" }, "east": { "to": "rust_parrelbead" } },
+      "exits": { "west": { "to": "rust_boom" }, "east": { "to": "rust_parrelbead" }, "south": { "to": "rust_lemonbalm" } },
       "actions": [
         {
           "id": "pinch_serving",
@@ -28363,11 +28465,28 @@
         }
       ]
     },
+    "rust_lemonbalm": {
+      "name": "Rust Lemonbalm",
+      "desc": "A dry lemonbalm south of the serving. Packed rust coats lemonbalm.",
+      "brief": "Dry lemonbalm, packed rust.",
+      "exits": { "north": { "to": "rust_serving" } },
+      "actions": [
+        {
+          "id": "pinch_lemonbalm",
+          "label": "pinch the lemonbalm",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lemonbalm. They packed it on the serving and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_parrelbead": {
       "name": "Rust Parrelbead",
       "desc": "A dry parrelbead east of the serving. Packed rust coats a parrelbead.",
       "brief": "Dry parrelbead, packed rust.",
-      "exits": { "west": { "to": "rust_serving" }, "east": { "to": "rust_hawserline" } },
+      "exits": { "west": { "to": "rust_serving" }, "east": { "to": "rust_hawserline" }, "south": { "to": "rust_wintersavory" } },
       "actions": [
         {
           "id": "pinch_parrelbead",
@@ -28376,6 +28495,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard parrelbead. They strung it on the serving and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wintersavory": {
+      "name": "Rust Wintersavory",
+      "desc": "A dry wintersavory south of the parrelbead. Packed rust coats wintersavory.",
+      "brief": "Dry wintersavory, packed rust.",
+      "exits": { "north": { "to": "rust_parrelbead" } },
+      "actions": [
+        {
+          "id": "pinch_wintersavory",
+          "label": "pinch the wintersavory",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wintersavory. They packed it on the parrelbead and packed rust around it."]
           ]
         }
       ]
@@ -37276,14 +37412,29 @@
     "pinch the shellac",
     "go east",
     "pinch the whitelead",
+    "go south",
+    "pinch the parsnip",
+    "go north",
     "go east",
     "pinch the alder",
+    "go south",
+    "pinch the celeriac",
+    "go north",
     "go east",
     "pinch the ironwood",
+    "go south",
+    "pinch the ramson",
+    "go north",
     "go east",
     "pinch the mica",
+    "go south",
+    "pinch the scallion",
+    "go north",
     "go east",
     "pinch the willemite",
+    "go south",
+    "pinch the leek",
+    "go north",
     "go east",
     "pinch the gahnite",
     "go west",
@@ -37299,10 +37450,19 @@
     "go north",
     "go east",
     "pinch the boom",
+    "go south",
+    "pinch the sorrel",
+    "go north",
     "go east",
     "pinch the serving",
+    "go south",
+    "pinch the lemonbalm",
+    "go north",
     "go east",
     "pinch the parrelbead",
+    "go south",
+    "pinch the wintersavory",
+    "go north",
     "go east",
     "pinch the hawserline",
     "go south",
