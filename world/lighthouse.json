@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13330,
+  "maxScore": 13370,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -34198,7 +34198,7 @@
       "name": "Rust Chock",
       "desc": "A dry chock east of the hide. Packed rust coats a chock.",
       "brief": "Dry chock, packed rust.",
-      "exits": { "west": { "to": "rust_hide" }, "east": { "to": "rust_frapping" }, "south": { "to": "rust_spelt" } },
+      "exits": { "west": { "to": "rust_hide" }, "east": { "to": "rust_frapping" }, "south": { "to": "rust_spelt" }, "north": { "to": "rust_durumlocker" } },
       "actions": [
         {
           "id": "pinch_chock",
@@ -34207,6 +34207,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chock. They wedged it on the hide and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumlocker": {
+      "name": "Rust Durumlocker",
+      "desc": "A dry durumlocker north of the chock. Packed rust coats durumlocker.",
+      "brief": "Dry durumlocker, packed rust.",
+      "exits": { "south": { "to": "rust_chock" } },
+      "actions": [
+        {
+          "id": "pinch_durumlocker",
+          "label": "pinch the durumlocker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumlocker. They packed it on the chock and packed rust around it."]
           ]
         }
       ]
@@ -34232,7 +34249,7 @@
       "name": "Rust Frapping",
       "desc": "A dry frapping east of the chock. Packed rust coats frapping.",
       "brief": "Dry frapping, packed rust.",
-      "exits": { "west": { "to": "rust_chock" }, "east": { "to": "rust_clewcringle" }, "south": { "to": "rust_farro" } },
+      "exits": { "west": { "to": "rust_chock" }, "east": { "to": "rust_clewcringle" }, "south": { "to": "rust_farro" }, "north": { "to": "rust_foniolocker" } },
       "actions": [
         {
           "id": "pinch_frapping",
@@ -34241,6 +34258,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard frapping. They bound it on the chock and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniolocker": {
+      "name": "Rust Foniolocker",
+      "desc": "A dry foniolocker north of the frapping. Packed rust coats foniolocker.",
+      "brief": "Dry foniolocker, packed rust.",
+      "exits": { "south": { "to": "rust_frapping" } },
+      "actions": [
+        {
+          "id": "pinch_foniolocker",
+          "label": "pinch the foniolocker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniolocker. They packed it on the frapping and packed rust around it."]
           ]
         }
       ]
@@ -34266,7 +34300,7 @@
       "name": "Rust Clewcringle",
       "desc": "A dry clewcringle east of the frapping. Packed rust coats a clewcringle.",
       "brief": "Dry clewcringle, packed rust.",
-      "exits": { "west": { "to": "rust_frapping" }, "east": { "to": "rust_camphor" }, "south": { "to": "rust_buckwheat" } },
+      "exits": { "west": { "to": "rust_frapping" }, "east": { "to": "rust_camphor" }, "south": { "to": "rust_buckwheat" }, "north": { "to": "rust_tefflocker" } },
       "actions": [
         {
           "id": "pinch_clewcringle",
@@ -34275,6 +34309,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clewcringle. They made it on the frapping and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefflocker": {
+      "name": "Rust Tefflocker",
+      "desc": "A dry tefflocker north of the clewcringle. Packed rust coats tefflocker.",
+      "brief": "Dry tefflocker, packed rust.",
+      "exits": { "south": { "to": "rust_clewcringle" } },
+      "actions": [
+        {
+          "id": "pinch_tefflocker",
+          "label": "pinch the tefflocker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefflocker. They packed it on the clewcringle and packed rust around it."]
           ]
         }
       ]
@@ -34300,7 +34351,7 @@
       "name": "Rust Camphor",
       "desc": "A dry camphor east of the clewcringle. Packed rust coats camphor.",
       "brief": "Dry camphor, packed rust.",
-      "exits": { "west": { "to": "rust_clewcringle" }, "east": { "to": "rust_drier" }, "south": { "to": "rust_gramflour" } },
+      "exits": { "west": { "to": "rust_clewcringle" }, "east": { "to": "rust_drier" }, "south": { "to": "rust_gramflour" }, "north": { "to": "rust_barleylocker" } },
       "actions": [
         {
           "id": "pinch_camphor",
@@ -34309,6 +34360,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard camphor. They packed it on the clewcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleylocker": {
+      "name": "Rust Barleylocker",
+      "desc": "A dry barleylocker north of the camphor. Packed rust coats barleylocker.",
+      "brief": "Dry barleylocker, packed rust.",
+      "exits": { "south": { "to": "rust_camphor" } },
+      "actions": [
+        {
+          "id": "pinch_barleylocker",
+          "label": "pinch the barleylocker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleylocker. They packed it on the camphor and packed rust around it."]
           ]
         }
       ]
@@ -34334,7 +34402,7 @@
       "name": "Rust Drier",
       "desc": "A dry drier east of the camphor. Packed rust coats drier.",
       "brief": "Dry drier, packed rust.",
-      "exits": { "west": { "to": "rust_camphor" }, "east": { "to": "rust_crocus" }, "south": { "to": "rust_soyflour" } },
+      "exits": { "west": { "to": "rust_camphor" }, "east": { "to": "rust_crocus" }, "south": { "to": "rust_soyflour" }, "north": { "to": "rust_sorghumlocker" } },
       "actions": [
         {
           "id": "pinch_drier",
@@ -34343,6 +34411,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard drier. They packed it on the camphor and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumlocker": {
+      "name": "Rust Sorghumlocker",
+      "desc": "A dry sorghumlocker north of the drier. Packed rust coats sorghumlocker.",
+      "brief": "Dry sorghumlocker, packed rust.",
+      "exits": { "south": { "to": "rust_drier" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumlocker",
+          "label": "pinch the sorghumlocker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumlocker. They packed it on the drier and packed rust around it."]
           ]
         }
       ]
@@ -34368,7 +34453,7 @@
       "name": "Rust Crocus",
       "desc": "A dry crocus east of the drier. Packed rust coats crocus.",
       "brief": "Dry crocus, packed rust.",
-      "exits": { "west": { "to": "rust_drier" }, "east": { "to": "rust_whetstone" }, "south": { "to": "rust_peaflour" } },
+      "exits": { "west": { "to": "rust_drier" }, "east": { "to": "rust_whetstone" }, "south": { "to": "rust_peaflour" }, "north": { "to": "rust_milletlocker" } },
       "actions": [
         {
           "id": "pinch_crocus",
@@ -34377,6 +34462,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard crocus. They packed it on the drier and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletlocker": {
+      "name": "Rust Milletlocker",
+      "desc": "A dry milletlocker north of the crocus. Packed rust coats milletlocker.",
+      "brief": "Dry milletlocker, packed rust.",
+      "exits": { "south": { "to": "rust_crocus" } },
+      "actions": [
+        {
+          "id": "pinch_milletlocker",
+          "label": "pinch the milletlocker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletlocker. They packed it on the crocus and packed rust around it."]
           ]
         }
       ]
@@ -34402,7 +34504,7 @@
       "name": "Rust Whetstone",
       "desc": "A dry whetstone east of the crocus. Packed rust coats whetstone.",
       "brief": "Dry whetstone, packed rust.",
-      "exits": { "west": { "to": "rust_crocus" }, "east": { "to": "rust_galena" }, "south": { "to": "rust_azuki" } },
+      "exits": { "west": { "to": "rust_crocus" }, "east": { "to": "rust_galena" }, "south": { "to": "rust_azuki" }, "north": { "to": "rust_cornlocker" } },
       "actions": [
         {
           "id": "pinch_whetstone",
@@ -34411,6 +34513,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whetstone. They packed it on the crocus and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornlocker": {
+      "name": "Rust Cornlocker",
+      "desc": "A dry cornlocker north of the whetstone. Packed rust coats cornlocker.",
+      "brief": "Dry cornlocker, packed rust.",
+      "exits": { "south": { "to": "rust_whetstone" } },
+      "actions": [
+        {
+          "id": "pinch_cornlocker",
+          "label": "pinch the cornlocker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornlocker. They packed it on the whetstone and packed rust around it."]
           ]
         }
       ]
@@ -34436,7 +34555,7 @@
       "name": "Rust Galena",
       "desc": "A dry galena east of the whetstone. Packed rust coats galena.",
       "brief": "Dry galena, packed rust.",
-      "exits": { "west": { "to": "rust_whetstone" }, "east": { "to": "rust_celadonite" }, "south": { "to": "rust_soymeal" } },
+      "exits": { "west": { "to": "rust_whetstone" }, "east": { "to": "rust_celadonite" }, "south": { "to": "rust_soymeal" }, "north": { "to": "rust_oatlocker" } },
       "actions": [
         {
           "id": "pinch_galena",
@@ -34445,6 +34564,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard galena. They packed it on the whetstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatlocker": {
+      "name": "Rust Oatlocker",
+      "desc": "A dry oatlocker north of the galena. Packed rust coats oatlocker.",
+      "brief": "Dry oatlocker, packed rust.",
+      "exits": { "south": { "to": "rust_galena" } },
+      "actions": [
+        {
+          "id": "pinch_oatlocker",
+          "label": "pinch the oatlocker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatlocker. They packed it on the galena and packed rust around it."]
           ]
         }
       ]
@@ -51375,41 +51511,65 @@
     "go north",
     "go east",
     "pinch the chock",
+    "go north",
+    "pinch the durumlocker",
+    "go south",
     "go south",
     "pinch the spelt",
     "go north",
     "go east",
     "pinch the frapping",
+    "go north",
+    "pinch the foniolocker",
+    "go south",
     "go south",
     "pinch the farro",
     "go north",
     "go east",
     "pinch the clewcringle",
+    "go north",
+    "pinch the tefflocker",
+    "go south",
     "go south",
     "pinch the buckwheat",
     "go north",
     "go east",
     "pinch the camphor",
+    "go north",
+    "pinch the barleylocker",
+    "go south",
     "go south",
     "pinch the gramflour",
     "go north",
     "go east",
     "pinch the drier",
+    "go north",
+    "pinch the sorghumlocker",
+    "go south",
     "go south",
     "pinch the soyflour",
     "go north",
     "go east",
     "pinch the crocus",
+    "go north",
+    "pinch the milletlocker",
+    "go south",
     "go south",
     "pinch the peaflour",
     "go north",
     "go east",
     "pinch the whetstone",
+    "go north",
+    "pinch the cornlocker",
+    "go south",
     "go south",
     "pinch the azuki",
     "go north",
     "go east",
     "pinch the galena",
+    "go north",
+    "pinch the oatlocker",
+    "go south",
     "go south",
     "pinch the soymeal",
     "go north",
