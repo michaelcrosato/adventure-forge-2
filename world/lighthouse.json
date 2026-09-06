@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 16090,
+  "maxScore": 16130,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -12506,7 +12506,7 @@
       "name": "Rust Sitka",
       "desc": "A dry sitka east of the fraserfir. Packed rust coats sitka.",
       "brief": "Dry sitka, packed rust.",
-      "exits": { "west": { "to": "rust_fraserfir" }, "east": { "to": "rust_kawakami" }, "south": { "to": "rust_marrow" } },
+      "exits": { "west": { "to": "rust_fraserfir" }, "east": { "to": "rust_kawakami" }, "south": { "to": "rust_marrow" }, "north": { "to": "rust_durumprimat" } },
       "actions": [
         {
           "id": "pinch_sitka",
@@ -12515,6 +12515,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sitka. They packed it on the fraserfir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumprimat": {
+      "name": "Rust Durumprimat",
+      "desc": "A dry durumprimat north of the sitka. Packed rust coats durumprimat.",
+      "brief": "Dry durumprimat, packed rust.",
+      "exits": { "south": { "to": "rust_sitka" } },
+      "actions": [
+        {
+          "id": "pinch_durumprimat",
+          "label": "pinch the durumprimat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumprimat. They packed it on the sitka and packed rust around it."]
           ]
         }
       ]
@@ -12540,7 +12557,7 @@
       "name": "Rust Kawakami",
       "desc": "A dry kawakami east of the sitka. Packed rust coats kawakami.",
       "brief": "Dry kawakami, packed rust.",
-      "exits": { "west": { "to": "rust_sitka" }, "east": { "to": "rust_manuka" }, "south": { "to": "rust_koa" } },
+      "exits": { "west": { "to": "rust_sitka" }, "east": { "to": "rust_manuka" }, "south": { "to": "rust_koa" }, "north": { "to": "rust_fonioprimat" } },
       "actions": [
         {
           "id": "pinch_kawakami",
@@ -12549,6 +12566,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kawakami. They packed it on the sitka and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioprimat": {
+      "name": "Rust Fonioprimat",
+      "desc": "A dry fonioprimat north of the kawakami. Packed rust coats fonioprimat.",
+      "brief": "Dry fonioprimat, packed rust.",
+      "exits": { "south": { "to": "rust_kawakami" } },
+      "actions": [
+        {
+          "id": "pinch_fonioprimat",
+          "label": "pinch the fonioprimat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioprimat. They packed it on the kawakami and packed rust around it."]
           ]
         }
       ]
@@ -12591,7 +12625,7 @@
       "name": "Rust Cleat",
       "desc": "A dry cleat east of the bush. Packed rust coats a cleat.",
       "brief": "Dry cleat, packed rust.",
-      "exits": { "west": { "to": "rust_bush" }, "east": { "to": "rust_fid" }, "south": { "to": "rust_pattypan" } },
+      "exits": { "west": { "to": "rust_bush" }, "east": { "to": "rust_fid" }, "south": { "to": "rust_pattypan" }, "north": { "to": "rust_teffprimat" } },
       "actions": [
         {
           "id": "pinch_cleat",
@@ -12600,6 +12634,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cleat. They bolted it to the bush and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffprimat": {
+      "name": "Rust Teffprimat",
+      "desc": "A dry teffprimat north of the cleat. Packed rust coats teffprimat.",
+      "brief": "Dry teffprimat, packed rust.",
+      "exits": { "south": { "to": "rust_cleat" } },
+      "actions": [
+        {
+          "id": "pinch_teffprimat",
+          "label": "pinch the teffprimat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffprimat. They packed it on the cleat and packed rust around it."]
           ]
         }
       ]
@@ -12625,7 +12676,7 @@
       "name": "Rust Fid",
       "desc": "A dry fid east of the cleat. Packed rust coats a fid.",
       "brief": "Dry fid, packed rust.",
-      "exits": { "west": { "to": "rust_cleat" }, "east": { "to": "rust_dragonblood" }, "south": { "to": "rust_delicata" } },
+      "exits": { "west": { "to": "rust_cleat" }, "east": { "to": "rust_dragonblood" }, "south": { "to": "rust_delicata" }, "north": { "to": "rust_barleyprimat" } },
       "actions": [
         {
           "id": "pinch_fid",
@@ -12634,6 +12685,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fid. They drove it on the cleat and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyprimat": {
+      "name": "Rust Barleyprimat",
+      "desc": "A dry barleyprimat north of the fid. Packed rust coats barleyprimat.",
+      "brief": "Dry barleyprimat, packed rust.",
+      "exits": { "south": { "to": "rust_fid" } },
+      "actions": [
+        {
+          "id": "pinch_barleyprimat",
+          "label": "pinch the barleyprimat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyprimat. They packed it on the fid and packed rust around it."]
           ]
         }
       ]
@@ -13067,7 +13135,7 @@
       "name": "Rust Coiling",
       "desc": "A dry coiling east of the covering. Packed rust coats coiling.",
       "brief": "Dry coiling, packed rust.",
-      "exits": { "west": { "to": "rust_covering" }, "east": { "to": "rust_labdanum" }, "south": { "to": "rust_lentil" } },
+      "exits": { "west": { "to": "rust_covering" }, "east": { "to": "rust_labdanum" }, "south": { "to": "rust_lentil" }, "north": { "to": "rust_sorghumprimat" } },
       "actions": [
         {
           "id": "pinch_coiling",
@@ -13076,6 +13144,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coiling. They laid it on the covering and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumprimat": {
+      "name": "Rust Sorghumprimat",
+      "desc": "A dry sorghumprimat north of the coiling. Packed rust coats sorghumprimat.",
+      "brief": "Dry sorghumprimat, packed rust.",
+      "exits": { "south": { "to": "rust_coiling" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumprimat",
+          "label": "pinch the sorghumprimat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumprimat. They packed it on the coiling and packed rust around it."]
           ]
         }
       ]
@@ -13101,7 +13186,7 @@
       "name": "Rust Labdanum",
       "desc": "A dry labdanum east of the coiling. Packed rust coats labdanum.",
       "brief": "Dry labdanum, packed rust.",
-      "exits": { "west": { "to": "rust_coiling" }, "east": { "to": "rust_oakgall" }, "south": { "to": "rust_rice" } },
+      "exits": { "west": { "to": "rust_coiling" }, "east": { "to": "rust_oakgall" }, "south": { "to": "rust_rice" }, "north": { "to": "rust_milletprimat" } },
       "actions": [
         {
           "id": "pinch_labdanum",
@@ -13110,6 +13195,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard labdanum. They packed it on the coiling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletprimat": {
+      "name": "Rust Milletprimat",
+      "desc": "A dry milletprimat north of the labdanum. Packed rust coats milletprimat.",
+      "brief": "Dry milletprimat, packed rust.",
+      "exits": { "south": { "to": "rust_labdanum" } },
+      "actions": [
+        {
+          "id": "pinch_milletprimat",
+          "label": "pinch the milletprimat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletprimat. They packed it on the labdanum and packed rust around it."]
           ]
         }
       ]
@@ -13135,7 +13237,7 @@
       "name": "Rust Oakgall",
       "desc": "A dry oakgall east of the labdanum. Packed rust coats oakgall.",
       "brief": "Dry oakgall, packed rust.",
-      "exits": { "west": { "to": "rust_labdanum" }, "east": { "to": "rust_jetblack" }, "south": { "to": "rust_wheat" } },
+      "exits": { "west": { "to": "rust_labdanum" }, "east": { "to": "rust_jetblack" }, "south": { "to": "rust_wheat" }, "north": { "to": "rust_cornprimat" } },
       "actions": [
         {
           "id": "pinch_oakgall",
@@ -13144,6 +13246,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard oakgall. They packed it on the labdanum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornprimat": {
+      "name": "Rust Cornprimat",
+      "desc": "A dry cornprimat north of the oakgall. Packed rust coats cornprimat.",
+      "brief": "Dry cornprimat, packed rust.",
+      "exits": { "south": { "to": "rust_oakgall" } },
+      "actions": [
+        {
+          "id": "pinch_cornprimat",
+          "label": "pinch the cornprimat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornprimat. They packed it on the oakgall and packed rust around it."]
           ]
         }
       ]
@@ -13169,7 +13288,7 @@
       "name": "Rust Jetblack",
       "desc": "A dry jetblack east of the oakgall. Packed rust coats jetblack.",
       "brief": "Dry jetblack, packed rust.",
-      "exits": { "west": { "to": "rust_oakgall" }, "east": { "to": "rust_cidergum" }, "south": { "to": "rust_barley" } },
+      "exits": { "west": { "to": "rust_oakgall" }, "east": { "to": "rust_cidergum" }, "south": { "to": "rust_barley" }, "north": { "to": "rust_oatprimat" } },
       "actions": [
         {
           "id": "pinch_jetblack",
@@ -13178,6 +13297,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jetblack. They packed it on the oakgall and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatprimat": {
+      "name": "Rust Oatprimat",
+      "desc": "A dry oatprimat north of the jetblack. Packed rust coats oatprimat.",
+      "brief": "Dry oatprimat, packed rust.",
+      "exits": { "south": { "to": "rust_jetblack" } },
+      "actions": [
+        {
+          "id": "pinch_oatprimat",
+          "label": "pinch the oatprimat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatprimat. They packed it on the jetblack and packed rust around it."]
           ]
         }
       ]
@@ -56863,11 +56999,17 @@
     "go north",
     "go east",
     "pinch the sitka",
+    "go north",
+    "pinch the durumprimat",
+    "go south",
     "go south",
     "pinch the marrow",
     "go north",
     "go east",
     "pinch the kawakami",
+    "go north",
+    "pinch the fonioprimat",
+    "go south",
     "go south",
     "pinch the koa",
     "go north",
@@ -56885,11 +57027,17 @@
     "go east",
     "go east",
     "pinch the cleat",
+    "go north",
+    "pinch the teffprimat",
+    "go south",
     "go south",
     "pinch the pattypan",
     "go north",
     "go east",
     "pinch the fid",
+    "go north",
+    "pinch the barleyprimat",
+    "go south",
     "go south",
     "pinch the delicata",
     "go north",
@@ -56912,21 +57060,33 @@
     "pinch the covering",
     "go east",
     "pinch the coiling",
+    "go north",
+    "pinch the sorghumprimat",
+    "go south",
     "go south",
     "pinch the lentil",
     "go north",
     "go east",
     "pinch the labdanum",
+    "go north",
+    "pinch the milletprimat",
+    "go south",
     "go south",
     "pinch the rice",
     "go north",
     "go east",
     "pinch the oakgall",
+    "go north",
+    "pinch the cornprimat",
+    "go south",
     "go south",
     "pinch the wheat",
     "go north",
     "go east",
     "pinch the jetblack",
+    "go north",
+    "pinch the oatprimat",
+    "go south",
     "go south",
     "pinch the barley",
     "go north",
