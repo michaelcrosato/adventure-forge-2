@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7570,
+  "maxScore": 7610,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6709,7 +6709,7 @@
       "name": "Rust Greypine",
       "desc": "A dry greypine east of the sepia. Packed rust coats greypine.",
       "brief": "Dry greypine, packed rust.",
-      "exits": { "west": { "to": "rust_sepia" } },
+      "exits": { "west": { "to": "rust_sepia" }, "east": { "to": "rust_nobelfir" } },
       "actions": [
         {
           "id": "pinch_greypine",
@@ -6718,6 +6718,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard greypine. They packed it on the sepia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_nobelfir": {
+      "name": "Rust Nobelfir",
+      "desc": "A dry nobelfir east of the greypine. Packed rust coats nobelfir.",
+      "brief": "Dry nobelfir, packed rust.",
+      "exits": { "west": { "to": "rust_greypine" } },
+      "actions": [
+        {
+          "id": "pinch_nobelfir",
+          "label": "pinch the nobelfir",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nobelfir. They packed it on the greypine and packed rust around it."]
           ]
         }
       ]
@@ -6930,7 +6947,7 @@
       "name": "Rust Knobcone",
       "desc": "A dry knobcone east of the peachblack. Packed rust coats knobcone.",
       "brief": "Dry knobcone, packed rust.",
-      "exits": { "west": { "to": "rust_peachblack" } },
+      "exits": { "west": { "to": "rust_peachblack" }, "east": { "to": "rust_grandfir" } },
       "actions": [
         {
           "id": "pinch_knobcone",
@@ -6939,6 +6956,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard knobcone. They packed it on the peachblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_grandfir": {
+      "name": "Rust Grandfir",
+      "desc": "A dry grandfir east of the knobcone. Packed rust coats grandfir.",
+      "brief": "Dry grandfir, packed rust.",
+      "exits": { "west": { "to": "rust_knobcone" } },
+      "actions": [
+        {
+          "id": "pinch_grandfir",
+          "label": "pinch the grandfir",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard grandfir. They packed it on the knobcone and packed rust around it."]
           ]
         }
       ]
@@ -7083,7 +7117,7 @@
       "name": "Rust Bishoppine",
       "desc": "A dry bishoppine east of the marsblack. Packed rust coats bishoppine.",
       "brief": "Dry bishoppine, packed rust.",
-      "exits": { "west": { "to": "rust_marsblack" } },
+      "exits": { "west": { "to": "rust_marsblack" }, "east": { "to": "rust_whitefir" } },
       "actions": [
         {
           "id": "pinch_bishoppine",
@@ -7092,6 +7126,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bishoppine. They packed it on the marsblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_whitefir": {
+      "name": "Rust Whitefir",
+      "desc": "A dry whitefir east of the bishoppine. Packed rust coats whitefir.",
+      "brief": "Dry whitefir, packed rust.",
+      "exits": { "west": { "to": "rust_bishoppine" } },
+      "actions": [
+        {
+          "id": "pinch_whitefir",
+          "label": "pinch the whitefir",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard whitefir. They packed it on the bishoppine and packed rust around it."]
           ]
         }
       ]
@@ -7219,7 +7270,7 @@
       "name": "Rust Coulter",
       "desc": "A dry coulter east of the vineblack. Packed rust coats coulter.",
       "brief": "Dry coulter, packed rust.",
-      "exits": { "west": { "to": "rust_vineblack" } },
+      "exits": { "west": { "to": "rust_vineblack" }, "east": { "to": "rust_balsamfir" } },
       "actions": [
         {
           "id": "pinch_coulter",
@@ -7228,6 +7279,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coulter. They packed it on the vineblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_balsamfir": {
+      "name": "Rust Balsamfir",
+      "desc": "A dry balsamfir east of the coulter. Packed rust coats balsamfir.",
+      "brief": "Dry balsamfir, packed rust.",
+      "exits": { "west": { "to": "rust_coulter" } },
+      "actions": [
+        {
+          "id": "pinch_balsamfir",
+          "label": "pinch the balsamfir",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard balsamfir. They packed it on the coulter and packed rust around it."]
           ]
         }
       ]
@@ -7984,7 +8052,7 @@
       "name": "Rust Pondpine",
       "desc": "A dry pondpine east of the phthalo. Packed rust coats pondpine.",
       "brief": "Dry pondpine, packed rust.",
-      "exits": { "west": { "to": "rust_phthalo" } },
+      "exits": { "west": { "to": "rust_phthalo" }, "east": { "to": "rust_arborvitae" } },
       "actions": [
         {
           "id": "pinch_pondpine",
@@ -7993,6 +8061,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pondpine. They packed it on the phthalo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_arborvitae": {
+      "name": "Rust Arborvitae",
+      "desc": "A dry arborvitae east of the pondpine. Packed rust coats arborvitae.",
+      "brief": "Dry arborvitae, packed rust.",
+      "exits": { "west": { "to": "rust_pondpine" } },
+      "actions": [
+        {
+          "id": "pinch_arborvitae",
+          "label": "pinch the arborvitae",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard arborvitae. They packed it on the pondpine and packed rust around it."]
           ]
         }
       ]
@@ -8256,7 +8341,7 @@
       "name": "Rust Torrey",
       "desc": "A dry torrey east of the carmine. Packed rust coats torrey.",
       "brief": "Dry torrey, packed rust.",
-      "exits": { "west": { "to": "rust_carmine" } },
+      "exits": { "west": { "to": "rust_carmine" }, "east": { "to": "rust_alerce" } },
       "actions": [
         {
           "id": "pinch_torrey",
@@ -8265,6 +8350,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard torrey. They packed it on the carmine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_alerce": {
+      "name": "Rust Alerce",
+      "desc": "A dry alerce east of the torrey. Packed rust coats alerce.",
+      "brief": "Dry alerce, packed rust.",
+      "exits": { "west": { "to": "rust_torrey" } },
+      "actions": [
+        {
+          "id": "pinch_alerce",
+          "label": "pinch the alerce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard alerce. They packed it on the torrey and packed rust around it."]
           ]
         }
       ]
@@ -8477,7 +8579,7 @@
       "name": "Rust Tablemountain",
       "desc": "A dry tablemountain east of the graphiteblack. Packed rust coats tablemountain.",
       "brief": "Dry tablemountain, packed rust.",
-      "exits": { "west": { "to": "rust_graphiteblack" } },
+      "exits": { "west": { "to": "rust_graphiteblack" }, "east": { "to": "rust_portorford" } },
       "actions": [
         {
           "id": "pinch_tablemountain",
@@ -8486,6 +8588,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tablemountain. They packed it on the graphiteblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_portorford": {
+      "name": "Rust Portorford",
+      "desc": "A dry portorford east of the tablemountain. Packed rust coats portorford.",
+      "brief": "Dry portorford, packed rust.",
+      "exits": { "west": { "to": "rust_tablemountain" } },
+      "actions": [
+        {
+          "id": "pinch_portorford",
+          "label": "pinch the portorford",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard portorford. They packed it on the tablemountain and packed rust around it."]
           ]
         }
       ]
@@ -9123,7 +9242,7 @@
       "name": "Rust Westernwhite",
       "desc": "A dry westernwhite east of the cassel. Packed rust coats westernwhite.",
       "brief": "Dry westernwhite, packed rust.",
-      "exits": { "west": { "to": "rust_cassel" } },
+      "exits": { "west": { "to": "rust_cassel" }, "east": { "to": "rust_incensecedar" } },
       "actions": [
         {
           "id": "pinch_westernwhite",
@@ -9132,6 +9251,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard westernwhite. They packed it on the cassel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_incensecedar": {
+      "name": "Rust Incensecedar",
+      "desc": "A dry incensecedar east of the westernwhite. Packed rust coats incensecedar.",
+      "brief": "Dry incensecedar, packed rust.",
+      "exits": { "west": { "to": "rust_westernwhite" } },
+      "actions": [
+        {
+          "id": "pinch_incensecedar",
+          "label": "pinch the incensecedar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard incensecedar. They packed it on the westernwhite and packed rust around it."]
           ]
         }
       ]
@@ -26818,6 +26954,9 @@
     "pinch the cassel",
     "go east",
     "pinch the westernwhite",
+    "go east",
+    "pinch the incensecedar",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26841,6 +26980,9 @@
     "pinch the sepia",
     "go east",
     "pinch the greypine",
+    "go east",
+    "pinch the nobelfir",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26879,6 +27021,9 @@
     "pinch the peachblack",
     "go east",
     "pinch the knobcone",
+    "go east",
+    "pinch the grandfir",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26905,6 +27050,9 @@
     "pinch the marsblack",
     "go east",
     "pinch the bishoppine",
+    "go east",
+    "pinch the whitefir",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26927,6 +27075,9 @@
     "pinch the vineblack",
     "go east",
     "pinch the coulter",
+    "go east",
+    "pinch the balsamfir",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27060,6 +27211,9 @@
     "pinch the phthalo",
     "go east",
     "pinch the pondpine",
+    "go east",
+    "pinch the arborvitae",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27107,6 +27261,9 @@
     "pinch the carmine",
     "go east",
     "pinch the torrey",
+    "go east",
+    "pinch the alerce",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27148,6 +27305,9 @@
     "pinch the graphiteblack",
     "go east",
     "pinch the tablemountain",
+    "go east",
+    "pinch the portorford",
+    "go west",
     "go west",
     "go west",
     "go west",
