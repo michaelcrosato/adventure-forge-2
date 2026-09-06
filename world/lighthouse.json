@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8850,
+  "maxScore": 8890,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -11061,7 +11061,7 @@
       "name": "Rust Waterknot",
       "desc": "A dry waterknot east of the pendant. Packed rust coats a waterknot.",
       "brief": "Dry waterknot, packed rust.",
-      "exits": { "west": { "to": "rust_pendant" }, "east": { "to": "rust_bole" } },
+      "exits": { "west": { "to": "rust_pendant" }, "east": { "to": "rust_bole" }, "south": { "to": "rust_watermelon" } },
       "actions": [
         {
           "id": "pinch_waterknot",
@@ -11074,11 +11074,28 @@
         }
       ]
     },
+    "rust_watermelon": {
+      "name": "Rust Watermelon",
+      "desc": "A dry watermelon south of the waterknot. Packed rust coats watermelon.",
+      "brief": "Dry watermelon, packed rust.",
+      "exits": { "north": { "to": "rust_waterknot" } },
+      "actions": [
+        {
+          "id": "pinch_watermelon",
+          "label": "pinch the watermelon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard watermelon. They packed it on the waterknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bole": {
       "name": "Rust Bole",
       "desc": "A dry bole east of the waterknot. Packed rust coats bole.",
       "brief": "Dry bole, packed rust.",
-      "exits": { "west": { "to": "rust_waterknot" }, "east": { "to": "rust_dividivi" } },
+      "exits": { "west": { "to": "rust_waterknot" }, "east": { "to": "rust_dividivi" }, "south": { "to": "rust_cantaloupe" } },
       "actions": [
         {
           "id": "pinch_bole",
@@ -11091,11 +11108,28 @@
         }
       ]
     },
+    "rust_cantaloupe": {
+      "name": "Rust Cantaloupe",
+      "desc": "A dry cantaloupe south of the bole. Packed rust coats cantaloupe.",
+      "brief": "Dry cantaloupe, packed rust.",
+      "exits": { "north": { "to": "rust_bole" } },
+      "actions": [
+        {
+          "id": "pinch_cantaloupe",
+          "label": "pinch the cantaloupe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cantaloupe. They packed it on the bole and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_dividivi": {
       "name": "Rust Dividivi",
       "desc": "A dry dividivi east of the bole. Packed rust coats dividivi.",
       "brief": "Dry dividivi, packed rust.",
-      "exits": { "west": { "to": "rust_bole" }, "east": { "to": "rust_graphiteblack" } },
+      "exits": { "west": { "to": "rust_bole" }, "east": { "to": "rust_graphiteblack" }, "south": { "to": "rust_honeydew" } },
       "actions": [
         {
           "id": "pinch_dividivi",
@@ -11108,11 +11142,28 @@
         }
       ]
     },
+    "rust_honeydew": {
+      "name": "Rust Honeydew",
+      "desc": "A dry honeydew south of the dividivi. Packed rust coats honeydew.",
+      "brief": "Dry honeydew, packed rust.",
+      "exits": { "north": { "to": "rust_dividivi" } },
+      "actions": [
+        {
+          "id": "pinch_honeydew",
+          "label": "pinch the honeydew",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard honeydew. They packed it on the dividivi and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_graphiteblack": {
       "name": "Rust Graphiteblack",
       "desc": "A dry graphiteblack east of the dividivi. Packed rust coats graphiteblack.",
       "brief": "Dry graphiteblack, packed rust.",
-      "exits": { "west": { "to": "rust_dividivi" }, "east": { "to": "rust_tablemountain" } },
+      "exits": { "west": { "to": "rust_dividivi" }, "east": { "to": "rust_tablemountain" }, "south": { "to": "rust_casaba" } },
       "actions": [
         {
           "id": "pinch_graphiteblack",
@@ -11121,6 +11172,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard graphiteblack. They packed it on the dividivi and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_casaba": {
+      "name": "Rust Casaba",
+      "desc": "A dry casaba south of the graphiteblack. Packed rust coats casaba.",
+      "brief": "Dry casaba, packed rust.",
+      "exits": { "north": { "to": "rust_graphiteblack" } },
+      "actions": [
+        {
+          "id": "pinch_casaba",
+          "label": "pinch the casaba",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard casaba. They packed it on the graphiteblack and packed rust around it."]
           ]
         }
       ]
@@ -11163,7 +11231,7 @@
       "name": "Rust Portorford",
       "desc": "A dry portorford east of the tablemountain. Packed rust coats portorford.",
       "brief": "Dry portorford, packed rust.",
-      "exits": { "west": { "to": "rust_tablemountain" }, "east": { "to": "rust_greekfir" } },
+      "exits": { "west": { "to": "rust_tablemountain" }, "east": { "to": "rust_greekfir" }, "south": { "to": "rust_crenshaw" } },
       "actions": [
         {
           "id": "pinch_portorford",
@@ -11176,11 +11244,28 @@
         }
       ]
     },
+    "rust_crenshaw": {
+      "name": "Rust Crenshaw",
+      "desc": "A dry crenshaw south of the portorford. Packed rust coats crenshaw.",
+      "brief": "Dry crenshaw, packed rust.",
+      "exits": { "north": { "to": "rust_portorford" } },
+      "actions": [
+        {
+          "id": "pinch_crenshaw",
+          "label": "pinch the crenshaw",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard crenshaw. They packed it on the portorford and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_greekfir": {
       "name": "Rust Greekfir",
       "desc": "A dry greekfir east of the portorford. Packed rust coats greekfir.",
       "brief": "Dry greekfir, packed rust.",
-      "exits": { "west": { "to": "rust_portorford" }, "east": { "to": "rust_maire" } },
+      "exits": { "west": { "to": "rust_portorford" }, "east": { "to": "rust_maire" }, "south": { "to": "rust_galia" } },
       "actions": [
         {
           "id": "pinch_greekfir",
@@ -11189,6 +11274,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard greekfir. They packed it on the portorford and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_galia": {
+      "name": "Rust Galia",
+      "desc": "A dry galia south of the greekfir. Packed rust coats galia.",
+      "brief": "Dry galia, packed rust.",
+      "exits": { "north": { "to": "rust_greekfir" } },
+      "actions": [
+        {
+          "id": "pinch_galia",
+          "label": "pinch the galia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard galia. They packed it on the greekfir and packed rust around it."]
           ]
         }
       ]
@@ -11265,7 +11367,7 @@
       "name": "Rust Jeer",
       "desc": "A dry jeer east of the preventer. Packed rust coats a jeer.",
       "brief": "Dry jeer, packed rust.",
-      "exits": { "west": { "to": "rust_preventer" }, "east": { "to": "rust_barrelknot" } },
+      "exits": { "west": { "to": "rust_preventer" }, "east": { "to": "rust_barrelknot" }, "south": { "to": "rust_charentais" } },
       "actions": [
         {
           "id": "pinch_jeer",
@@ -11274,6 +11376,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jeer. They hoisted it on the preventer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_charentais": {
+      "name": "Rust Charentais",
+      "desc": "A dry charentais south of the jeer. Packed rust coats charentais.",
+      "brief": "Dry charentais, packed rust.",
+      "exits": { "north": { "to": "rust_jeer" } },
+      "actions": [
+        {
+          "id": "pinch_charentais",
+          "label": "pinch the charentais",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard charentais. They packed it on the jeer and packed rust around it."]
           ]
         }
       ]
@@ -11452,7 +11571,7 @@
       "name": "Rust Veitchfir",
       "desc": "A dry veitchfir east of the yellowcedar. Packed rust coats veitchfir.",
       "brief": "Dry veitchfir, packed rust.",
-      "exits": { "west": { "to": "rust_yellowcedar" }, "east": { "to": "rust_sachalin" } },
+      "exits": { "west": { "to": "rust_yellowcedar" }, "east": { "to": "rust_sachalin" }, "south": { "to": "rust_canary" } },
       "actions": [
         {
           "id": "pinch_veitchfir",
@@ -11461,6 +11580,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard veitchfir. They packed it on the yellowcedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_canary": {
+      "name": "Rust Canary",
+      "desc": "A dry canary south of the veitchfir. Packed rust coats canary.",
+      "brief": "Dry canary, packed rust.",
+      "exits": { "north": { "to": "rust_veitchfir" } },
+      "actions": [
+        {
+          "id": "pinch_canary",
+          "label": "pinch the canary",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard canary. They packed it on the veitchfir and packed rust around it."]
           ]
         }
       ]
@@ -31978,12 +32114,24 @@
     "go north",
     "go east",
     "pinch the waterknot",
+    "go south",
+    "pinch the watermelon",
+    "go north",
     "go east",
     "pinch the bole",
+    "go south",
+    "pinch the cantaloupe",
+    "go north",
     "go east",
     "pinch the dividivi",
+    "go south",
+    "pinch the honeydew",
+    "go north",
     "go east",
     "pinch the graphiteblack",
+    "go south",
+    "pinch the casaba",
+    "go north",
     "go east",
     "pinch the tablemountain",
     "go south",
@@ -31991,8 +32139,14 @@
     "go north",
     "go east",
     "pinch the portorford",
+    "go south",
+    "pinch the crenshaw",
+    "go north",
     "go east",
     "pinch the greekfir",
+    "go south",
+    "pinch the galia",
+    "go north",
     "go east",
     "pinch the maire",
     "go west",
@@ -32014,6 +32168,9 @@
     "pinch the preventer",
     "go east",
     "pinch the jeer",
+    "go south",
+    "pinch the charentais",
+    "go north",
     "go east",
     "pinch the barrelknot",
     "go south",
@@ -32041,6 +32198,9 @@
     "go north",
     "go east",
     "pinch the veitchfir",
+    "go south",
+    "pinch the canary",
+    "go north",
     "go east",
     "pinch the sachalin",
     "go south",
