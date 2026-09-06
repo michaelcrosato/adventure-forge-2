@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13210,
+  "maxScore": 13250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -35116,7 +35116,7 @@
       "name": "Rust Quartz",
       "desc": "A dry quartz east of the celestine. Packed rust coats quartz.",
       "brief": "Dry quartz, packed rust.",
-      "exits": { "west": { "to": "rust_celestine" }, "east": { "to": "rust_basalt" }, "south": { "to": "rust_flageolet" } },
+      "exits": { "west": { "to": "rust_celestine" }, "east": { "to": "rust_basalt" }, "south": { "to": "rust_flageolet" }, "north": { "to": "rust_durumcan" } },
       "actions": [
         {
           "id": "pinch_quartz",
@@ -35125,6 +35125,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard quartz. They packed it on the celestine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumcan": {
+      "name": "Rust Durumcan",
+      "desc": "A dry durumcan north of the quartz. Packed rust coats durumcan.",
+      "brief": "Dry durumcan, packed rust.",
+      "exits": { "south": { "to": "rust_quartz" } },
+      "actions": [
+        {
+          "id": "pinch_durumcan",
+          "label": "pinch the durumcan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumcan. They packed it on the quartz and packed rust around it."]
           ]
         }
       ]
@@ -35150,7 +35167,7 @@
       "name": "Rust Basalt",
       "desc": "A dry basalt east of the quartz. Packed rust coats basalt.",
       "brief": "Dry basalt, packed rust.",
-      "exits": { "west": { "to": "rust_quartz" }, "east": { "to": "rust_limonite" }, "south": { "to": "rust_haricot" } },
+      "exits": { "west": { "to": "rust_quartz" }, "east": { "to": "rust_limonite" }, "south": { "to": "rust_haricot" }, "north": { "to": "rust_foniocan" } },
       "actions": [
         {
           "id": "pinch_basalt",
@@ -35159,6 +35176,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard basalt. They packed it on the quartz and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniocan": {
+      "name": "Rust Foniocan",
+      "desc": "A dry foniocan north of the basalt. Packed rust coats foniocan.",
+      "brief": "Dry foniocan, packed rust.",
+      "exits": { "south": { "to": "rust_basalt" } },
+      "actions": [
+        {
+          "id": "pinch_foniocan",
+          "label": "pinch the foniocan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniocan. They packed it on the basalt and packed rust around it."]
           ]
         }
       ]
@@ -35184,7 +35218,7 @@
       "name": "Rust Limonite",
       "desc": "A dry limonite east of the basalt. Packed rust coats limonite.",
       "brief": "Dry limonite, packed rust.",
-      "exits": { "west": { "to": "rust_basalt" }, "east": { "to": "rust_prussian" }, "south": { "to": "rust_samphire" } },
+      "exits": { "west": { "to": "rust_basalt" }, "east": { "to": "rust_prussian" }, "south": { "to": "rust_samphire" }, "north": { "to": "rust_teffcan" } },
       "actions": [
         {
           "id": "pinch_limonite",
@@ -35193,6 +35227,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard limonite. They packed it on the basalt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffcan": {
+      "name": "Rust Teffcan",
+      "desc": "A dry teffcan north of the limonite. Packed rust coats teffcan.",
+      "brief": "Dry teffcan, packed rust.",
+      "exits": { "south": { "to": "rust_limonite" } },
+      "actions": [
+        {
+          "id": "pinch_teffcan",
+          "label": "pinch the teffcan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffcan. They packed it on the limonite and packed rust around it."]
           ]
         }
       ]
@@ -35218,7 +35269,7 @@
       "name": "Rust Prussian",
       "desc": "A dry prussian east of the limonite. Packed rust coats prussian.",
       "brief": "Dry prussian, packed rust.",
-      "exits": { "west": { "to": "rust_limonite" }, "east": { "to": "rust_libethenite" }, "south": { "to": "rust_gram" } },
+      "exits": { "west": { "to": "rust_limonite" }, "east": { "to": "rust_libethenite" }, "south": { "to": "rust_gram" }, "north": { "to": "rust_barleycan" } },
       "actions": [
         {
           "id": "pinch_prussian",
@@ -35227,6 +35278,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard prussian. They packed it on the limonite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleycan": {
+      "name": "Rust Barleycan",
+      "desc": "A dry barleycan north of the prussian. Packed rust coats barleycan.",
+      "brief": "Dry barleycan, packed rust.",
+      "exits": { "south": { "to": "rust_prussian" } },
+      "actions": [
+        {
+          "id": "pinch_barleycan",
+          "label": "pinch the barleycan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleycan. They packed it on the prussian and packed rust around it."]
           ]
         }
       ]
@@ -35252,7 +35320,7 @@
       "name": "Rust Libethenite",
       "desc": "A dry libethenite east of the prussian. Packed rust coats libethenite.",
       "brief": "Dry libethenite, packed rust.",
-      "exits": { "west": { "to": "rust_prussian" }, "east": { "to": "rust_millerite" }, "south": { "to": "rust_fenugreek" } },
+      "exits": { "west": { "to": "rust_prussian" }, "east": { "to": "rust_millerite" }, "south": { "to": "rust_fenugreek" }, "north": { "to": "rust_sorghumcan" } },
       "actions": [
         {
           "id": "pinch_libethenite",
@@ -35261,6 +35329,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard libethenite. They packed it on the prussian and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumcan": {
+      "name": "Rust Sorghumcan",
+      "desc": "A dry sorghumcan north of the libethenite. Packed rust coats sorghumcan.",
+      "brief": "Dry sorghumcan, packed rust.",
+      "exits": { "south": { "to": "rust_libethenite" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumcan",
+          "label": "pinch the sorghumcan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumcan. They packed it on the libethenite and packed rust around it."]
           ]
         }
       ]
@@ -35320,7 +35405,7 @@
       "name": "Rust Gaff",
       "desc": "A dry gaff east of the joist. Packed rust coats a gaff.",
       "brief": "Dry gaff, packed rust.",
-      "exits": { "west": { "to": "rust_joist" }, "east": { "to": "rust_warp" }, "south": { "to": "rust_lupin" } },
+      "exits": { "west": { "to": "rust_joist" }, "east": { "to": "rust_warp" }, "south": { "to": "rust_lupin" }, "north": { "to": "rust_milletcan" } },
       "actions": [
         {
           "id": "pinch_gaff",
@@ -35329,6 +35414,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gaff. They hooked it on the joist and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletcan": {
+      "name": "Rust Milletcan",
+      "desc": "A dry milletcan north of the gaff. Packed rust coats milletcan.",
+      "brief": "Dry milletcan, packed rust.",
+      "exits": { "south": { "to": "rust_gaff" } },
+      "actions": [
+        {
+          "id": "pinch_milletcan",
+          "label": "pinch the milletcan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletcan. They packed it on the gaff and packed rust around it."]
           ]
         }
       ]
@@ -35354,7 +35456,7 @@
       "name": "Rust Warp",
       "desc": "A dry warp east of the gaff. Packed rust coats a warp.",
       "brief": "Dry warp, packed rust.",
-      "exits": { "west": { "to": "rust_gaff" }, "east": { "to": "rust_footline" }, "south": { "to": "rust_pigeonpea" } },
+      "exits": { "west": { "to": "rust_gaff" }, "east": { "to": "rust_footline" }, "south": { "to": "rust_pigeonpea" }, "north": { "to": "rust_corncan" } },
       "actions": [
         {
           "id": "pinch_warp",
@@ -35363,6 +35465,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard warp. They bent it on the gaff and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corncan": {
+      "name": "Rust Corncan",
+      "desc": "A dry corncan north of the warp. Packed rust coats corncan.",
+      "brief": "Dry corncan, packed rust.",
+      "exits": { "south": { "to": "rust_warp" } },
+      "actions": [
+        {
+          "id": "pinch_corncan",
+          "label": "pinch the corncan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corncan. They packed it on the warp and packed rust around it."]
           ]
         }
       ]
@@ -35388,7 +35507,7 @@
       "name": "Rust Footline",
       "desc": "A dry footline east of the warp. Packed rust coats a footline.",
       "brief": "Dry footline, packed rust.",
-      "exits": { "west": { "to": "rust_warp" }, "east": { "to": "rust_coir" }, "south": { "to": "rust_blackbean" } },
+      "exits": { "west": { "to": "rust_warp" }, "east": { "to": "rust_coir" }, "south": { "to": "rust_blackbean" }, "north": { "to": "rust_oatcan" } },
       "actions": [
         {
           "id": "pinch_footline",
@@ -35397,6 +35516,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard footline. They laced it on the warp and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatcan": {
+      "name": "Rust Oatcan",
+      "desc": "A dry oatcan north of the footline. Packed rust coats oatcan.",
+      "brief": "Dry oatcan, packed rust.",
+      "exits": { "south": { "to": "rust_footline" } },
+      "actions": [
+        {
+          "id": "pinch_oatcan",
+          "label": "pinch the oatcan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatcan. They packed it on the footline and packed rust around it."]
           ]
         }
       ]
@@ -51122,26 +51258,41 @@
     "go north",
     "go east",
     "pinch the quartz",
+    "go north",
+    "pinch the durumcan",
+    "go south",
     "go south",
     "pinch the flageolet",
     "go north",
     "go east",
     "pinch the basalt",
+    "go north",
+    "pinch the foniocan",
+    "go south",
     "go south",
     "pinch the haricot",
     "go north",
     "go east",
     "pinch the limonite",
+    "go north",
+    "pinch the teffcan",
+    "go south",
     "go south",
     "pinch the samphire",
     "go north",
     "go east",
     "pinch the prussian",
+    "go north",
+    "pinch the barleycan",
+    "go south",
     "go south",
     "pinch the gram",
     "go north",
     "go east",
     "pinch the libethenite",
+    "go north",
+    "pinch the sorghumcan",
+    "go south",
     "go south",
     "pinch the fenugreek",
     "go north",
@@ -51163,16 +51314,25 @@
     "go east",
     "go east",
     "pinch the gaff",
+    "go north",
+    "pinch the milletcan",
+    "go south",
     "go south",
     "pinch the lupin",
     "go north",
     "go east",
     "pinch the warp",
+    "go north",
+    "pinch the corncan",
+    "go south",
     "go south",
     "pinch the pigeonpea",
     "go north",
     "go east",
     "pinch the footline",
+    "go north",
+    "pinch the oatcan",
+    "go south",
     "go south",
     "pinch the blackbean",
     "go north",
