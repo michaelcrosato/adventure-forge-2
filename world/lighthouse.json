@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10290,
+  "maxScore": 10330,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -24763,7 +24763,7 @@
       "name": "Rust Dioptase",
       "desc": "A dry dioptase east of the burntsienna. Packed rust coats dioptase.",
       "brief": "Dry dioptase, packed rust.",
-      "exits": { "west": { "to": "rust_burntsienna" }, "east": { "to": "rust_clinoatacamite" } },
+      "exits": { "west": { "to": "rust_burntsienna" }, "east": { "to": "rust_clinoatacamite" }, "south": { "to": "rust_wheatflour" } },
       "actions": [
         {
           "id": "pinch_dioptase",
@@ -24776,11 +24776,28 @@
         }
       ]
     },
+    "rust_wheatflour": {
+      "name": "Rust Wheatflour",
+      "desc": "A dry wheatflour south of the dioptase. Packed rust coats wheatflour.",
+      "brief": "Dry wheatflour, packed rust.",
+      "exits": { "north": { "to": "rust_dioptase" } },
+      "actions": [
+        {
+          "id": "pinch_wheatflour",
+          "label": "pinch the wheatflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatflour. They packed it on the dioptase and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_clinoatacamite": {
       "name": "Rust Clinoatacamite",
       "desc": "A dry clinoatacamite east of the dioptase. Packed rust coats clinoatacamite.",
       "brief": "Dry clinoatacamite, packed rust.",
-      "exits": { "west": { "to": "rust_dioptase" }, "east": { "to": "rust_safflorite" } },
+      "exits": { "west": { "to": "rust_dioptase" }, "east": { "to": "rust_safflorite" }, "south": { "to": "rust_barleyflour" } },
       "actions": [
         {
           "id": "pinch_clinoatacamite",
@@ -24789,6 +24806,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clinoatacamite. They packed it on the dioptase and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyflour": {
+      "name": "Rust Barleyflour",
+      "desc": "A dry barleyflour south of the clinoatacamite. Packed rust coats barleyflour.",
+      "brief": "Dry barleyflour, packed rust.",
+      "exits": { "north": { "to": "rust_clinoatacamite" } },
+      "actions": [
+        {
+          "id": "pinch_barleyflour",
+          "label": "pinch the barleyflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyflour. They packed it on the clinoatacamite and packed rust around it."]
           ]
         }
       ]
@@ -24831,7 +24865,7 @@
       "name": "Rust Yarn",
       "desc": "A dry yarn east of the plate. Packed rust coats yarn.",
       "brief": "Dry yarn, packed rust.",
-      "exits": { "west": { "to": "rust_plate" }, "east": { "to": "rust_limewash" } },
+      "exits": { "west": { "to": "rust_plate" }, "east": { "to": "rust_limewash" }, "south": { "to": "rust_oatflour" } },
       "actions": [
         {
           "id": "pinch_yarn",
@@ -24844,11 +24878,28 @@
         }
       ]
     },
+    "rust_oatflour": {
+      "name": "Rust Oatflour",
+      "desc": "A dry oatflour south of the yarn. Packed rust coats oatflour.",
+      "brief": "Dry oatflour, packed rust.",
+      "exits": { "north": { "to": "rust_yarn" } },
+      "actions": [
+        {
+          "id": "pinch_oatflour",
+          "label": "pinch the oatflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatflour. They packed it on the yarn and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_limewash": {
       "name": "Rust Limewash",
       "desc": "A dry limewash east of the yarn. Packed rust coats limewash.",
       "brief": "Dry limewash, packed rust.",
-      "exits": { "west": { "to": "rust_yarn" }, "east": { "to": "rust_fullersearth" } },
+      "exits": { "west": { "to": "rust_yarn" }, "east": { "to": "rust_fullersearth" }, "south": { "to": "rust_ryeflour" } },
       "actions": [
         {
           "id": "pinch_limewash",
@@ -24861,11 +24912,28 @@
         }
       ]
     },
+    "rust_ryeflour": {
+      "name": "Rust Ryeflour",
+      "desc": "A dry ryeflour south of the limewash. Packed rust coats ryeflour.",
+      "brief": "Dry ryeflour, packed rust.",
+      "exits": { "north": { "to": "rust_limewash" } },
+      "actions": [
+        {
+          "id": "pinch_ryeflour",
+          "label": "pinch the ryeflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryeflour. They packed it on the limewash and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_fullersearth": {
       "name": "Rust Fullersearth",
       "desc": "A dry fullersearth east of the limewash. Packed rust coats fullersearth.",
       "brief": "Dry fullersearth, packed rust.",
-      "exits": { "west": { "to": "rust_limewash" }, "east": { "to": "rust_terraalba" } },
+      "exits": { "west": { "to": "rust_limewash" }, "east": { "to": "rust_terraalba" }, "south": { "to": "rust_milletflour" } },
       "actions": [
         {
           "id": "pinch_fullersearth",
@@ -24878,11 +24946,28 @@
         }
       ]
     },
+    "rust_milletflour": {
+      "name": "Rust Milletflour",
+      "desc": "A dry milletflour south of the fullersearth. Packed rust coats milletflour.",
+      "brief": "Dry milletflour, packed rust.",
+      "exits": { "north": { "to": "rust_fullersearth" } },
+      "actions": [
+        {
+          "id": "pinch_milletflour",
+          "label": "pinch the milletflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletflour. They packed it on the fullersearth and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_terraalba": {
       "name": "Rust Terraalba",
       "desc": "A dry terraalba east of the fullersearth. Packed rust coats terraalba.",
       "brief": "Dry terraalba, packed rust.",
-      "exits": { "west": { "to": "rust_fullersearth" }, "east": { "to": "rust_novaculite" } },
+      "exits": { "west": { "to": "rust_fullersearth" }, "east": { "to": "rust_novaculite" }, "south": { "to": "rust_sorghumflour" } },
       "actions": [
         {
           "id": "pinch_terraalba",
@@ -24895,11 +24980,28 @@
         }
       ]
     },
+    "rust_sorghumflour": {
+      "name": "Rust Sorghumflour",
+      "desc": "A dry sorghumflour south of the terraalba. Packed rust coats sorghumflour.",
+      "brief": "Dry sorghumflour, packed rust.",
+      "exits": { "north": { "to": "rust_terraalba" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumflour",
+          "label": "pinch the sorghumflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumflour. They packed it on the terraalba and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_novaculite": {
       "name": "Rust Novaculite",
       "desc": "A dry novaculite east of the terraalba. Packed rust coats novaculite.",
       "brief": "Dry novaculite, packed rust.",
-      "exits": { "west": { "to": "rust_terraalba" }, "east": { "to": "rust_rawsienna" } },
+      "exits": { "west": { "to": "rust_terraalba" }, "east": { "to": "rust_rawsienna" }, "south": { "to": "rust_freekeh" } },
       "actions": [
         {
           "id": "pinch_novaculite",
@@ -24908,6 +25010,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard novaculite. They packed it on the terraalba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_freekeh": {
+      "name": "Rust Freekeh",
+      "desc": "A dry freekeh south of the novaculite. Packed rust coats freekeh.",
+      "brief": "Dry freekeh, packed rust.",
+      "exits": { "north": { "to": "rust_novaculite" } },
+      "actions": [
+        {
+          "id": "pinch_freekeh",
+          "label": "pinch the freekeh",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard freekeh. They packed it on the novaculite and packed rust around it."]
           ]
         }
       ]
@@ -28095,7 +28214,7 @@
       "name": "Rust Roundline",
       "desc": "A dry roundline east of the stem. Packed rust coats a roundline.",
       "brief": "Dry roundline, packed rust.",
-      "exits": { "west": { "to": "rust_stem" }, "east": { "to": "rust_sailgasket" } },
+      "exits": { "west": { "to": "rust_stem" }, "east": { "to": "rust_sailgasket" }, "south": { "to": "rust_kamut" } },
       "actions": [
         {
           "id": "pinch_roundline",
@@ -28104,6 +28223,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard roundline. They rove it on the stem and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kamut": {
+      "name": "Rust Kamut",
+      "desc": "A dry kamut south of the roundline. Packed rust coats kamut.",
+      "brief": "Dry kamut, packed rust.",
+      "exits": { "north": { "to": "rust_roundline" } },
+      "actions": [
+        {
+          "id": "pinch_kamut",
+          "label": "pinch the kamut",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kamut. They packed it on the roundline and packed rust around it."]
           ]
         }
       ]
@@ -39247,8 +39383,14 @@
     "pinch the burntsienna",
     "go east",
     "pinch the dioptase",
+    "go south",
+    "pinch the wheatflour",
+    "go north",
     "go east",
     "pinch the clinoatacamite",
+    "go south",
+    "pinch the barleyflour",
+    "go north",
     "go east",
     "pinch the safflorite",
     "go west",
@@ -39266,14 +39408,29 @@
     "pinch the boss",
     "go east",
     "pinch the yarn",
+    "go south",
+    "pinch the oatflour",
+    "go north",
     "go east",
     "pinch the limewash",
+    "go south",
+    "pinch the ryeflour",
+    "go north",
     "go east",
     "pinch the fullersearth",
+    "go south",
+    "pinch the milletflour",
+    "go north",
     "go east",
     "pinch the terraalba",
+    "go south",
+    "pinch the sorghumflour",
+    "go north",
     "go east",
     "pinch the novaculite",
+    "go south",
+    "pinch the freekeh",
+    "go north",
     "go east",
     "pinch the rawsienna",
     "go west",
@@ -39298,6 +39455,9 @@
     "pinch the stem",
     "go east",
     "pinch the roundline",
+    "go south",
+    "pinch the kamut",
+    "go north",
     "go east",
     "pinch the sailgasket",
     "go south",

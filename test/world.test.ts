@@ -25,6 +25,54 @@ test("walkthrough still wins with score === maxScore after growth", () => {
   assert.equal(r.state?.score, world.maxScore);
 });
 
+test("walkthrough includes pinching the rust-wheatflour wheatflour", () => {
+  assert.ok(world.rooms.rust_wheatflour, "rust_wheatflour room missing");
+  const labels = world.walkthrough.filter((w): w is string => typeof w === "string");
+  assert.ok(labels.includes("pinch the wheatflour"), `labels: ${labels.join(" | ")}`);
+});
+
+test("walkthrough includes pinching the rust-barleyflour barleyflour", () => {
+  assert.ok(world.rooms.rust_barleyflour, "rust_barleyflour room missing");
+  const labels = world.walkthrough.filter((w): w is string => typeof w === "string");
+  assert.ok(labels.includes("pinch the barleyflour"), `labels: ${labels.join(" | ")}`);
+});
+
+test("walkthrough includes pinching the rust-oatflour oatflour", () => {
+  assert.ok(world.rooms.rust_oatflour, "rust_oatflour room missing");
+  const labels = world.walkthrough.filter((w): w is string => typeof w === "string");
+  assert.ok(labels.includes("pinch the oatflour"), `labels: ${labels.join(" | ")}`);
+});
+
+test("walkthrough includes pinching the rust-ryeflour ryeflour", () => {
+  assert.ok(world.rooms.rust_ryeflour, "rust_ryeflour room missing");
+  const labels = world.walkthrough.filter((w): w is string => typeof w === "string");
+  assert.ok(labels.includes("pinch the ryeflour"), `labels: ${labels.join(" | ")}`);
+});
+
+test("walkthrough includes pinching the rust-milletflour milletflour", () => {
+  assert.ok(world.rooms.rust_milletflour, "rust_milletflour room missing");
+  const labels = world.walkthrough.filter((w): w is string => typeof w === "string");
+  assert.ok(labels.includes("pinch the milletflour"), `labels: ${labels.join(" | ")}`);
+});
+
+test("walkthrough includes pinching the rust-sorghumflour sorghumflour", () => {
+  assert.ok(world.rooms.rust_sorghumflour, "rust_sorghumflour room missing");
+  const labels = world.walkthrough.filter((w): w is string => typeof w === "string");
+  assert.ok(labels.includes("pinch the sorghumflour"), `labels: ${labels.join(" | ")}`);
+});
+
+test("walkthrough includes pinching the rust-freekeh freekeh", () => {
+  assert.ok(world.rooms.rust_freekeh, "rust_freekeh room missing");
+  const labels = world.walkthrough.filter((w): w is string => typeof w === "string");
+  assert.ok(labels.includes("pinch the freekeh"), `labels: ${labels.join(" | ")}`);
+});
+
+test("walkthrough includes pinching the rust-kamut kamut", () => {
+  assert.ok(world.rooms.rust_kamut, "rust_kamut room missing");
+  const labels = world.walkthrough.filter((w): w is string => typeof w === "string");
+  assert.ok(labels.includes("pinch the kamut"), `labels: ${labels.join(" | ")}`);
+});
+
 test("walkthrough includes pinching the rust-sticky sticky", () => {
   assert.ok(world.rooms.rust_sticky, "rust_sticky room missing");
   const labels = world.walkthrough.filter((w): w is string => typeof w === "string");
