@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14170,
+  "maxScore": 14210,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -28197,7 +28197,7 @@
       "name": "Rust Canvas",
       "desc": "A dry canvas east of the turkshead. Packed rust coats a canvas.",
       "brief": "Dry canvas, packed rust.",
-      "exits": { "west": { "to": "rust_turkshead" }, "east": { "to": "rust_zebrawood" }, "south": { "to": "rust_amaranthberry" } },
+      "exits": { "west": { "to": "rust_turkshead" }, "east": { "to": "rust_zebrawood" }, "south": { "to": "rust_amaranthberry" }, "north": { "to": "rust_durumscoop" } },
       "actions": [
         {
           "id": "pinch_canvas",
@@ -28206,6 +28206,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard canvas. They spread it on the turkshead and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumscoop": {
+      "name": "Rust Durumscoop",
+      "desc": "A dry durumscoop north of the canvas. Packed rust coats durumscoop.",
+      "brief": "Dry durumscoop, packed rust.",
+      "exits": { "south": { "to": "rust_canvas" } },
+      "actions": [
+        {
+          "id": "pinch_durumscoop",
+          "label": "pinch the durumscoop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumscoop. They packed it on the canvas and packed rust around it."]
           ]
         }
       ]
@@ -28231,7 +28248,7 @@
       "name": "Rust Zebrawood",
       "desc": "A dry zebrawood east of the canvas. Packed rust coats zebrawood.",
       "brief": "Dry zebrawood, packed rust.",
-      "exits": { "west": { "to": "rust_canvas" }, "east": { "to": "rust_lacewood" }, "south": { "to": "rust_quinoaberry" } },
+      "exits": { "west": { "to": "rust_canvas" }, "east": { "to": "rust_lacewood" }, "south": { "to": "rust_quinoaberry" }, "north": { "to": "rust_fonioscoop" } },
       "actions": [
         {
           "id": "pinch_zebrawood",
@@ -28240,6 +28257,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard zebrawood. They stacked it on the canvas and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioscoop": {
+      "name": "Rust Fonioscoop",
+      "desc": "A dry fonioscoop north of the zebrawood. Packed rust coats fonioscoop.",
+      "brief": "Dry fonioscoop, packed rust.",
+      "exits": { "south": { "to": "rust_zebrawood" } },
+      "actions": [
+        {
+          "id": "pinch_fonioscoop",
+          "label": "pinch the fonioscoop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioscoop. They packed it on the zebrawood and packed rust around it."]
           ]
         }
       ]
@@ -28316,7 +28350,7 @@
       "name": "Rust Walker",
       "desc": "A dry walker east of the timber. Packed rust coats a walker.",
       "brief": "Dry walker, packed rust.",
-      "exits": { "west": { "to": "rust_timber" }, "east": { "to": "rust_roping" }, "south": { "to": "rust_kamutmeal" } },
+      "exits": { "west": { "to": "rust_timber" }, "east": { "to": "rust_roping" }, "south": { "to": "rust_kamutmeal" }, "north": { "to": "rust_teffscoop" } },
       "actions": [
         {
           "id": "pinch_walker",
@@ -28325,6 +28359,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard walker. They tied it on the timber and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffscoop": {
+      "name": "Rust Teffscoop",
+      "desc": "A dry teffscoop north of the walker. Packed rust coats teffscoop.",
+      "brief": "Dry teffscoop, packed rust.",
+      "exits": { "south": { "to": "rust_walker" } },
+      "actions": [
+        {
+          "id": "pinch_teffscoop",
+          "label": "pinch the teffscoop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffscoop. They packed it on the walker and packed rust around it."]
           ]
         }
       ]
@@ -28350,7 +28401,7 @@
       "name": "Rust Roping",
       "desc": "A dry roping east of the walker. Packed rust coats a roping.",
       "brief": "Dry roping, packed rust.",
-      "exits": { "west": { "to": "rust_walker" }, "east": { "to": "rust_teakwood" }, "south": { "to": "rust_einkornflour" } },
+      "exits": { "west": { "to": "rust_walker" }, "east": { "to": "rust_teakwood" }, "south": { "to": "rust_einkornflour" }, "north": { "to": "rust_barleyscoop" } },
       "actions": [
         {
           "id": "pinch_roping",
@@ -28359,6 +28410,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard roping. They sewed it on the walker and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyscoop": {
+      "name": "Rust Barleyscoop",
+      "desc": "A dry barleyscoop north of the roping. Packed rust coats barleyscoop.",
+      "brief": "Dry barleyscoop, packed rust.",
+      "exits": { "south": { "to": "rust_roping" } },
+      "actions": [
+        {
+          "id": "pinch_barleyscoop",
+          "label": "pinch the barleyscoop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyscoop. They packed it on the roping and packed rust around it."]
           ]
         }
       ]
@@ -28384,7 +28452,7 @@
       "name": "Rust Teakwood",
       "desc": "A dry teakwood east of the roping. Packed rust coats teakwood.",
       "brief": "Dry teakwood, packed rust.",
-      "exits": { "west": { "to": "rust_roping" }, "east": { "to": "rust_bloodwood" }, "south": { "to": "rust_emmerflour" } },
+      "exits": { "west": { "to": "rust_roping" }, "east": { "to": "rust_bloodwood" }, "south": { "to": "rust_emmerflour" }, "north": { "to": "rust_sorghumscoop" } },
       "actions": [
         {
           "id": "pinch_teakwood",
@@ -28393,6 +28461,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard teakwood. They stacked it on the roping and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumscoop": {
+      "name": "Rust Sorghumscoop",
+      "desc": "A dry sorghumscoop north of the teakwood. Packed rust coats sorghumscoop.",
+      "brief": "Dry sorghumscoop, packed rust.",
+      "exits": { "south": { "to": "rust_teakwood" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumscoop",
+          "label": "pinch the sorghumscoop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumscoop. They packed it on the teakwood and packed rust around it."]
           ]
         }
       ]
@@ -28418,7 +28503,7 @@
       "name": "Rust Bloodwood",
       "desc": "A dry bloodwood east of the teakwood. Packed rust coats bloodwood.",
       "brief": "Dry bloodwood, packed rust.",
-      "exits": { "west": { "to": "rust_teakwood" }, "east": { "to": "rust_kosipo" }, "south": { "to": "rust_freekehflour" } },
+      "exits": { "west": { "to": "rust_teakwood" }, "east": { "to": "rust_kosipo" }, "south": { "to": "rust_freekehflour" }, "north": { "to": "rust_milletscoop" } },
       "actions": [
         {
           "id": "pinch_bloodwood",
@@ -28427,6 +28512,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bloodwood. They packed it on the teakwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletscoop": {
+      "name": "Rust Milletscoop",
+      "desc": "A dry milletscoop north of the bloodwood. Packed rust coats milletscoop.",
+      "brief": "Dry milletscoop, packed rust.",
+      "exits": { "south": { "to": "rust_bloodwood" } },
+      "actions": [
+        {
+          "id": "pinch_milletscoop",
+          "label": "pinch the milletscoop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletscoop. They packed it on the bloodwood and packed rust around it."]
           ]
         }
       ]
@@ -28452,7 +28554,7 @@
       "name": "Rust Kosipo",
       "desc": "A dry kosipo east of the bloodwood. Packed rust coats kosipo.",
       "brief": "Dry kosipo, packed rust.",
-      "exits": { "west": { "to": "rust_bloodwood" }, "east": { "to": "rust_louropreto" }, "south": { "to": "rust_farinagrit" } },
+      "exits": { "west": { "to": "rust_bloodwood" }, "east": { "to": "rust_louropreto" }, "south": { "to": "rust_farinagrit" }, "north": { "to": "rust_cornscoop" } },
       "actions": [
         {
           "id": "pinch_kosipo",
@@ -28461,6 +28563,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kosipo. They packed it on the bloodwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornscoop": {
+      "name": "Rust Cornscoop",
+      "desc": "A dry cornscoop north of the kosipo. Packed rust coats cornscoop.",
+      "brief": "Dry cornscoop, packed rust.",
+      "exits": { "south": { "to": "rust_kosipo" } },
+      "actions": [
+        {
+          "id": "pinch_cornscoop",
+          "label": "pinch the cornscoop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornscoop. They packed it on the kosipo and packed rust around it."]
           ]
         }
       ]
@@ -28486,7 +28605,7 @@
       "name": "Rust Louropreto",
       "desc": "A dry louropreto east of the kosipo. Packed rust coats louropreto.",
       "brief": "Dry louropreto, packed rust.",
-      "exits": { "west": { "to": "rust_kosipo" }, "east": { "to": "rust_nyatoh" }, "south": { "to": "rust_semolinagrit" } },
+      "exits": { "west": { "to": "rust_kosipo" }, "east": { "to": "rust_nyatoh" }, "south": { "to": "rust_semolinagrit" }, "north": { "to": "rust_oatscoop" } },
       "actions": [
         {
           "id": "pinch_louropreto",
@@ -28495,6 +28614,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard louropreto. They packed it on the kosipo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatscoop": {
+      "name": "Rust Oatscoop",
+      "desc": "A dry oatscoop north of the louropreto. Packed rust coats oatscoop.",
+      "brief": "Dry oatscoop, packed rust.",
+      "exits": { "south": { "to": "rust_louropreto" } },
+      "actions": [
+        {
+          "id": "pinch_oatscoop",
+          "label": "pinch the oatscoop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatscoop. They packed it on the louropreto and packed rust around it."]
           ]
         }
       ]
@@ -53048,11 +53184,17 @@
     "go north",
     "go east",
     "pinch the canvas",
+    "go north",
+    "pinch the durumscoop",
+    "go south",
     "go south",
     "pinch the amaranthberry",
     "go north",
     "go east",
     "pinch the zebrawood",
+    "go north",
+    "pinch the fonioscoop",
+    "go south",
     "go south",
     "pinch the quinoaberry",
     "go north",
@@ -53074,31 +53216,49 @@
     "pinch the timber",
     "go east",
     "pinch the walker",
+    "go north",
+    "pinch the teffscoop",
+    "go south",
     "go south",
     "pinch the kamutmeal",
     "go north",
     "go east",
     "pinch the roping",
+    "go north",
+    "pinch the barleyscoop",
+    "go south",
     "go south",
     "pinch the einkornflour",
     "go north",
     "go east",
     "pinch the teakwood",
+    "go north",
+    "pinch the sorghumscoop",
+    "go south",
     "go south",
     "pinch the emmerflour",
     "go north",
     "go east",
     "pinch the bloodwood",
+    "go north",
+    "pinch the milletscoop",
+    "go south",
     "go south",
     "pinch the freekehflour",
     "go north",
     "go east",
     "pinch the kosipo",
+    "go north",
+    "pinch the cornscoop",
+    "go south",
     "go south",
     "pinch the farinagrit",
     "go north",
     "go east",
     "pinch the louropreto",
+    "go north",
+    "pinch the oatscoop",
+    "go south",
     "go south",
     "pinch the semolinagrit",
     "go north",
