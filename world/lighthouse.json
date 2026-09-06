@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11250,
+  "maxScore": 11290,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -20173,7 +20173,7 @@
       "name": "Rust Mayapis",
       "desc": "A dry mayapis east of the kempas. Packed rust coats mayapis.",
       "brief": "Dry mayapis, packed rust.",
-      "exits": { "west": { "to": "rust_kempas" }, "east": { "to": "rust_babul" } },
+      "exits": { "west": { "to": "rust_kempas" }, "east": { "to": "rust_babul" }, "south": { "to": "rust_wheatgermflake" } },
       "actions": [
         {
           "id": "pinch_mayapis",
@@ -20186,11 +20186,28 @@
         }
       ]
     },
+    "rust_wheatgermflake": {
+      "name": "Rust Wheatgermflake",
+      "desc": "A dry wheatgermflake south of the mayapis. Packed rust coats wheatgermflake.",
+      "brief": "Dry wheatgermflake, packed rust.",
+      "exits": { "north": { "to": "rust_mayapis" } },
+      "actions": [
+        {
+          "id": "pinch_wheatgermflake",
+          "label": "pinch the wheatgermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatgermflake. They packed it on the mayapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_babul": {
       "name": "Rust Babul",
       "desc": "A dry babul east of the mayapis. Packed rust coats babul.",
       "brief": "Dry babul, packed rust.",
-      "exits": { "west": { "to": "rust_mayapis" }, "east": { "to": "rust_tallowwood" } },
+      "exits": { "west": { "to": "rust_mayapis" }, "east": { "to": "rust_tallowwood" }, "south": { "to": "rust_durumfeedflake" } },
       "actions": [
         {
           "id": "pinch_babul",
@@ -20199,6 +20216,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard babul. They packed it on the mayapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumfeedflake": {
+      "name": "Rust Durumfeedflake",
+      "desc": "A dry durumfeedflake south of the babul. Packed rust coats durumfeedflake.",
+      "brief": "Dry durumfeedflake, packed rust.",
+      "exits": { "north": { "to": "rust_babul" } },
+      "actions": [
+        {
+          "id": "pinch_durumfeedflake",
+          "label": "pinch the durumfeedflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumfeedflake. They packed it on the babul and packed rust around it."]
           ]
         }
       ]
@@ -20241,7 +20275,7 @@
       "name": "Rust Pintle",
       "desc": "A dry pintle east of the hilt. Packed rust coats a pintle.",
       "brief": "Dry pintle, packed rust.",
-      "exits": { "west": { "to": "rust_hilt" }, "east": { "to": "rust_splice" } },
+      "exits": { "west": { "to": "rust_hilt" }, "east": { "to": "rust_splice" }, "south": { "to": "rust_foniofeedflake" } },
       "actions": [
         {
           "id": "pinch_pintle",
@@ -20254,11 +20288,28 @@
         }
       ]
     },
+    "rust_foniofeedflake": {
+      "name": "Rust Foniofeedflake",
+      "desc": "A dry foniofeedflake south of the pintle. Packed rust coats foniofeedflake.",
+      "brief": "Dry foniofeedflake, packed rust.",
+      "exits": { "north": { "to": "rust_pintle" } },
+      "actions": [
+        {
+          "id": "pinch_foniofeedflake",
+          "label": "pinch the foniofeedflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniofeedflake. They packed it on the pintle and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_splice": {
       "name": "Rust Splice",
       "desc": "A dry splice east of the pintle. Packed rust coats a splice.",
       "brief": "Dry splice, packed rust.",
-      "exits": { "west": { "to": "rust_pintle" }, "east": { "to": "rust_tungoil" } },
+      "exits": { "west": { "to": "rust_pintle" }, "east": { "to": "rust_tungoil" }, "south": { "to": "rust_tefffeedflake" } },
       "actions": [
         {
           "id": "pinch_splice",
@@ -20267,6 +20318,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard splice. They joined it on the pintle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefffeedflake": {
+      "name": "Rust Tefffeedflake",
+      "desc": "A dry tefffeedflake south of the splice. Packed rust coats tefffeedflake.",
+      "brief": "Dry tefffeedflake, packed rust.",
+      "exits": { "north": { "to": "rust_splice" } },
+      "actions": [
+        {
+          "id": "pinch_tefffeedflake",
+          "label": "pinch the tefffeedflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefffeedflake. They packed it on the splice and packed rust around it."]
           ]
         }
       ]
@@ -20547,7 +20615,7 @@
       "name": "Rust Spunyarn",
       "desc": "A dry spunyarn east of the scuttle. Packed rust coats spunyarn.",
       "brief": "Dry spunyarn, packed rust.",
-      "exits": { "west": { "to": "rust_scuttle" }, "east": { "to": "rust_houndband" } },
+      "exits": { "west": { "to": "rust_scuttle" }, "east": { "to": "rust_houndband" }, "south": { "to": "rust_barleyfeedflake" } },
       "actions": [
         {
           "id": "pinch_spunyarn",
@@ -20560,11 +20628,28 @@
         }
       ]
     },
+    "rust_barleyfeedflake": {
+      "name": "Rust Barleyfeedflake",
+      "desc": "A dry barleyfeedflake south of the spunyarn. Packed rust coats barleyfeedflake.",
+      "brief": "Dry barleyfeedflake, packed rust.",
+      "exits": { "north": { "to": "rust_spunyarn" } },
+      "actions": [
+        {
+          "id": "pinch_barleyfeedflake",
+          "label": "pinch the barleyfeedflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyfeedflake. They packed it on the spunyarn and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_houndband": {
       "name": "Rust Houndband",
       "desc": "A dry houndband east of the spunyarn. Packed rust coats a houndband.",
       "brief": "Dry houndband, packed rust.",
-      "exits": { "west": { "to": "rust_spunyarn" }, "east": { "to": "rust_copaiba" } },
+      "exits": { "west": { "to": "rust_spunyarn" }, "east": { "to": "rust_copaiba" }, "south": { "to": "rust_sorghumfeedflake" } },
       "actions": [
         {
           "id": "pinch_houndband",
@@ -20577,11 +20662,28 @@
         }
       ]
     },
+    "rust_sorghumfeedflake": {
+      "name": "Rust Sorghumfeedflake",
+      "desc": "A dry sorghumfeedflake south of the houndband. Packed rust coats sorghumfeedflake.",
+      "brief": "Dry sorghumfeedflake, packed rust.",
+      "exits": { "north": { "to": "rust_houndband" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumfeedflake",
+          "label": "pinch the sorghumfeedflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumfeedflake. They packed it on the houndband and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_copaiba": {
       "name": "Rust Copaiba",
       "desc": "A dry copaiba east of the houndband. Packed rust coats copaiba.",
       "brief": "Dry copaiba, packed rust.",
-      "exits": { "west": { "to": "rust_houndband" }, "east": { "to": "rust_agba" } },
+      "exits": { "west": { "to": "rust_houndband" }, "east": { "to": "rust_agba" }, "south": { "to": "rust_milletfeedflake" } },
       "actions": [
         {
           "id": "pinch_copaiba",
@@ -20594,11 +20696,28 @@
         }
       ]
     },
+    "rust_milletfeedflake": {
+      "name": "Rust Milletfeedflake",
+      "desc": "A dry milletfeedflake south of the copaiba. Packed rust coats milletfeedflake.",
+      "brief": "Dry milletfeedflake, packed rust.",
+      "exits": { "north": { "to": "rust_copaiba" } },
+      "actions": [
+        {
+          "id": "pinch_milletfeedflake",
+          "label": "pinch the milletfeedflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletfeedflake. They packed it on the copaiba and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_agba": {
       "name": "Rust Agba",
       "desc": "A dry agba east of the copaiba. Packed rust coats agba.",
       "brief": "Dry agba, packed rust.",
-      "exits": { "west": { "to": "rust_copaiba" }, "east": { "to": "rust_pauferro" } },
+      "exits": { "west": { "to": "rust_copaiba" }, "east": { "to": "rust_pauferro" }, "south": { "to": "rust_cornfeedflake" } },
       "actions": [
         {
           "id": "pinch_agba",
@@ -20607,6 +20726,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard agba. They packed it on the copaiba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornfeedflake": {
+      "name": "Rust Cornfeedflake",
+      "desc": "A dry cornfeedflake south of the agba. Packed rust coats cornfeedflake.",
+      "brief": "Dry cornfeedflake, packed rust.",
+      "exits": { "north": { "to": "rust_agba" } },
+      "actions": [
+        {
+          "id": "pinch_cornfeedflake",
+          "label": "pinch the cornfeedflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornfeedflake. They packed it on the agba and packed rust around it."]
           ]
         }
       ]
@@ -41737,8 +41873,14 @@
     "pinch the kempas",
     "go east",
     "pinch the mayapis",
+    "go south",
+    "pinch the wheatgermflake",
+    "go north",
     "go east",
     "pinch the babul",
+    "go south",
+    "pinch the durumfeedflake",
+    "go north",
     "go east",
     "pinch the tallowwood",
     "go west",
@@ -41756,8 +41898,14 @@
     "go east",
     "go east",
     "pinch the pintle",
+    "go south",
+    "pinch the foniofeedflake",
+    "go north",
     "go east",
     "pinch the splice",
+    "go south",
+    "pinch the tefffeedflake",
+    "go north",
     "go east",
     "pinch the tungoil",
     "go west",
@@ -41775,12 +41923,24 @@
     "pinch the scuttle",
     "go east",
     "pinch the spunyarn",
+    "go south",
+    "pinch the barleyfeedflake",
+    "go north",
     "go east",
     "pinch the houndband",
+    "go south",
+    "pinch the sorghumfeedflake",
+    "go north",
     "go east",
     "pinch the copaiba",
+    "go south",
+    "pinch the milletfeedflake",
+    "go north",
     "go east",
     "pinch the agba",
+    "go south",
+    "pinch the cornfeedflake",
+    "go north",
     "go east",
     "pinch the pauferro",
     "go south",
