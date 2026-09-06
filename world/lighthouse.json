@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10810,
+  "maxScore": 10850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -22417,7 +22417,7 @@
       "name": "Rust Ovangkol",
       "desc": "A dry ovangkol east of the limba. Packed rust coats ovangkol.",
       "brief": "Dry ovangkol, packed rust.",
-      "exits": { "west": { "to": "rust_limba" }, "east": { "to": "rust_cancharana" } },
+      "exits": { "west": { "to": "rust_limba" }, "east": { "to": "rust_cancharana" }, "south": { "to": "rust_fonioflake" } },
       "actions": [
         {
           "id": "pinch_ovangkol",
@@ -22430,11 +22430,28 @@
         }
       ]
     },
+    "rust_fonioflake": {
+      "name": "Rust Fonioflake",
+      "desc": "A dry fonioflake south of the ovangkol. Packed rust coats fonioflake.",
+      "brief": "Dry fonioflake, packed rust.",
+      "exits": { "north": { "to": "rust_ovangkol" } },
+      "actions": [
+        {
+          "id": "pinch_fonioflake",
+          "label": "pinch the fonioflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioflake. They packed it on the ovangkol and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cancharana": {
       "name": "Rust Cancharana",
       "desc": "A dry cancharana east of the ovangkol. Packed rust coats cancharana.",
       "brief": "Dry cancharana, packed rust.",
-      "exits": { "west": { "to": "rust_ovangkol" }, "east": { "to": "rust_bintangor" } },
+      "exits": { "west": { "to": "rust_ovangkol" }, "east": { "to": "rust_bintangor" }, "south": { "to": "rust_teffflake" } },
       "actions": [
         {
           "id": "pinch_cancharana",
@@ -22447,11 +22464,28 @@
         }
       ]
     },
+    "rust_teffflake": {
+      "name": "Rust Teffflake",
+      "desc": "A dry teffflake south of the cancharana. Packed rust coats teffflake.",
+      "brief": "Dry teffflake, packed rust.",
+      "exits": { "north": { "to": "rust_cancharana" } },
+      "actions": [
+        {
+          "id": "pinch_teffflake",
+          "label": "pinch the teffflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffflake. They packed it on the cancharana and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bintangor": {
       "name": "Rust Bintangor",
       "desc": "A dry bintangor east of the cancharana. Packed rust coats bintangor.",
       "brief": "Dry bintangor, packed rust.",
-      "exits": { "west": { "to": "rust_cancharana" }, "east": { "to": "rust_tembesu" } },
+      "exits": { "west": { "to": "rust_cancharana" }, "east": { "to": "rust_tembesu" }, "south": { "to": "rust_triticaleflour" } },
       "actions": [
         {
           "id": "pinch_bintangor",
@@ -22464,11 +22498,28 @@
         }
       ]
     },
+    "rust_triticaleflour": {
+      "name": "Rust Triticaleflour",
+      "desc": "A dry triticaleflour south of the bintangor. Packed rust coats triticaleflour.",
+      "brief": "Dry triticaleflour, packed rust.",
+      "exits": { "north": { "to": "rust_bintangor" } },
+      "actions": [
+        {
+          "id": "pinch_triticaleflour",
+          "label": "pinch the triticaleflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard triticaleflour. They packed it on the bintangor and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tembesu": {
       "name": "Rust Tembesu",
       "desc": "A dry tembesu east of the bintangor. Packed rust coats tembesu.",
       "brief": "Dry tembesu, packed rust.",
-      "exits": { "west": { "to": "rust_bintangor" }, "east": { "to": "rust_champak" } },
+      "exits": { "west": { "to": "rust_bintangor" }, "east": { "to": "rust_champak" }, "south": { "to": "rust_einkornmeal" } },
       "actions": [
         {
           "id": "pinch_tembesu",
@@ -22477,6 +22528,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tembesu. They packed it on the bintangor and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_einkornmeal": {
+      "name": "Rust Einkornmeal",
+      "desc": "A dry einkornmeal south of the tembesu. Packed rust coats einkornmeal.",
+      "brief": "Dry einkornmeal, packed rust.",
+      "exits": { "north": { "to": "rust_tembesu" } },
+      "actions": [
+        {
+          "id": "pinch_einkornmeal",
+          "label": "pinch the einkornmeal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard einkornmeal. They packed it on the tembesu and packed rust around it."]
           ]
         }
       ]
@@ -22519,7 +22587,7 @@
       "name": "Rust Knee",
       "desc": "A dry knee east of the keel. Packed rust coats a knee.",
       "brief": "Dry knee, packed rust.",
-      "exits": { "west": { "to": "rust_keel" }, "east": { "to": "rust_turkshead" } },
+      "exits": { "west": { "to": "rust_keel" }, "east": { "to": "rust_turkshead" }, "south": { "to": "rust_emmermeal" } },
       "actions": [
         {
           "id": "pinch_knee",
@@ -22532,11 +22600,28 @@
         }
       ]
     },
+    "rust_emmermeal": {
+      "name": "Rust Emmermeal",
+      "desc": "A dry emmermeal south of the knee. Packed rust coats emmermeal.",
+      "brief": "Dry emmermeal, packed rust.",
+      "exits": { "north": { "to": "rust_knee" } },
+      "actions": [
+        {
+          "id": "pinch_emmermeal",
+          "label": "pinch the emmermeal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard emmermeal. They packed it on the knee and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_turkshead": {
       "name": "Rust Turkshead",
       "desc": "A dry turkshead east of the knee. Packed rust coats a turkshead.",
       "brief": "Dry turkshead, packed rust.",
-      "exits": { "west": { "to": "rust_knee" }, "east": { "to": "rust_canvas" } },
+      "exits": { "west": { "to": "rust_knee" }, "east": { "to": "rust_canvas" }, "south": { "to": "rust_buckwheatberry" } },
       "actions": [
         {
           "id": "pinch_turkshead",
@@ -22549,11 +22634,28 @@
         }
       ]
     },
+    "rust_buckwheatberry": {
+      "name": "Rust Buckwheatberry",
+      "desc": "A dry buckwheatberry south of the turkshead. Packed rust coats buckwheatberry.",
+      "brief": "Dry buckwheatberry, packed rust.",
+      "exits": { "north": { "to": "rust_turkshead" } },
+      "actions": [
+        {
+          "id": "pinch_buckwheatberry",
+          "label": "pinch the buckwheatberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard buckwheatberry. They packed it on the turkshead and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_canvas": {
       "name": "Rust Canvas",
       "desc": "A dry canvas east of the turkshead. Packed rust coats a canvas.",
       "brief": "Dry canvas, packed rust.",
-      "exits": { "west": { "to": "rust_turkshead" }, "east": { "to": "rust_zebrawood" } },
+      "exits": { "west": { "to": "rust_turkshead" }, "east": { "to": "rust_zebrawood" }, "south": { "to": "rust_amaranthberry" } },
       "actions": [
         {
           "id": "pinch_canvas",
@@ -22566,11 +22668,28 @@
         }
       ]
     },
+    "rust_amaranthberry": {
+      "name": "Rust Amaranthberry",
+      "desc": "A dry amaranthberry south of the canvas. Packed rust coats amaranthberry.",
+      "brief": "Dry amaranthberry, packed rust.",
+      "exits": { "north": { "to": "rust_canvas" } },
+      "actions": [
+        {
+          "id": "pinch_amaranthberry",
+          "label": "pinch the amaranthberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard amaranthberry. They packed it on the canvas and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_zebrawood": {
       "name": "Rust Zebrawood",
       "desc": "A dry zebrawood east of the canvas. Packed rust coats zebrawood.",
       "brief": "Dry zebrawood, packed rust.",
-      "exits": { "west": { "to": "rust_canvas" }, "east": { "to": "rust_lacewood" } },
+      "exits": { "west": { "to": "rust_canvas" }, "east": { "to": "rust_lacewood" }, "south": { "to": "rust_quinoaberry" } },
       "actions": [
         {
           "id": "pinch_zebrawood",
@@ -22579,6 +22698,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard zebrawood. They stacked it on the canvas and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_quinoaberry": {
+      "name": "Rust Quinoaberry",
+      "desc": "A dry quinoaberry south of the zebrawood. Packed rust coats quinoaberry.",
+      "brief": "Dry quinoaberry, packed rust.",
+      "exits": { "north": { "to": "rust_zebrawood" } },
+      "actions": [
+        {
+          "id": "pinch_quinoaberry",
+          "label": "pinch the quinoaberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard quinoaberry. They packed it on the zebrawood and packed rust around it."]
           ]
         }
       ]
@@ -40601,12 +40737,24 @@
     "pinch the limba",
     "go east",
     "pinch the ovangkol",
+    "go south",
+    "pinch the fonioflake",
+    "go north",
     "go east",
     "pinch the cancharana",
+    "go south",
+    "pinch the teffflake",
+    "go north",
     "go east",
     "pinch the bintangor",
+    "go south",
+    "pinch the triticaleflour",
+    "go north",
     "go east",
     "pinch the tembesu",
+    "go south",
+    "pinch the einkornmeal",
+    "go north",
     "go east",
     "pinch the champak",
     "go west",
@@ -40624,12 +40772,24 @@
     "go east",
     "go east",
     "pinch the knee",
+    "go south",
+    "pinch the emmermeal",
+    "go north",
     "go east",
     "pinch the turkshead",
+    "go south",
+    "pinch the buckwheatberry",
+    "go north",
     "go east",
     "pinch the canvas",
+    "go south",
+    "pinch the amaranthberry",
+    "go north",
     "go east",
     "pinch the zebrawood",
+    "go south",
+    "pinch the quinoaberry",
+    "go north",
     "go east",
     "pinch the lacewood",
     "go west",
