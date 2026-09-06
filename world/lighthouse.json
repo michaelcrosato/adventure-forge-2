@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10450,
+  "maxScore": 10490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -24049,7 +24049,7 @@
       "name": "Rust Bice",
       "desc": "A dry bice east of the glasspaper. Packed rust coats bice.",
       "brief": "Dry bice, packed rust.",
-      "exits": { "west": { "to": "rust_glasspaper" }, "east": { "to": "rust_mayanblue" } },
+      "exits": { "west": { "to": "rust_glasspaper" }, "east": { "to": "rust_mayanblue" }, "south": { "to": "rust_sunflowerflour" } },
       "actions": [
         {
           "id": "pinch_bice",
@@ -24062,11 +24062,28 @@
         }
       ]
     },
+    "rust_sunflowerflour": {
+      "name": "Rust Sunflowerflour",
+      "desc": "A dry sunflowerflour south of the bice. Packed rust coats sunflowerflour.",
+      "brief": "Dry sunflowerflour, packed rust.",
+      "exits": { "north": { "to": "rust_bice" } },
+      "actions": [
+        {
+          "id": "pinch_sunflowerflour",
+          "label": "pinch the sunflowerflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sunflowerflour. They packed it on the bice and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_mayanblue": {
       "name": "Rust Mayanblue",
       "desc": "A dry mayanblue east of the bice. Packed rust coats mayanblue.",
       "brief": "Dry mayanblue, packed rust.",
-      "exits": { "west": { "to": "rust_bice" }, "east": { "to": "rust_calumetite" } },
+      "exits": { "west": { "to": "rust_bice" }, "east": { "to": "rust_calumetite" }, "south": { "to": "rust_sesameflour" } },
       "actions": [
         {
           "id": "pinch_mayanblue",
@@ -24079,11 +24096,28 @@
         }
       ]
     },
+    "rust_sesameflour": {
+      "name": "Rust Sesameflour",
+      "desc": "A dry sesameflour south of the mayanblue. Packed rust coats sesameflour.",
+      "brief": "Dry sesameflour, packed rust.",
+      "exits": { "north": { "to": "rust_mayanblue" } },
+      "actions": [
+        {
+          "id": "pinch_sesameflour",
+          "label": "pinch the sesameflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sesameflour. They packed it on the mayanblue and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_calumetite": {
       "name": "Rust Calumetite",
       "desc": "A dry calumetite east of the mayanblue. Packed rust coats calumetite.",
       "brief": "Dry calumetite, packed rust.",
-      "exits": { "west": { "to": "rust_mayanblue" }, "east": { "to": "rust_ullmannite" } },
+      "exits": { "west": { "to": "rust_mayanblue" }, "east": { "to": "rust_ullmannite" }, "south": { "to": "rust_barleybran" } },
       "actions": [
         {
           "id": "pinch_calumetite",
@@ -24092,6 +24126,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard calumetite. They packed it on the mayanblue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybran": {
+      "name": "Rust Barleybran",
+      "desc": "A dry barleybran south of the calumetite. Packed rust coats barleybran.",
+      "brief": "Dry barleybran, packed rust.",
+      "exits": { "north": { "to": "rust_calumetite" } },
+      "actions": [
+        {
+          "id": "pinch_barleybran",
+          "label": "pinch the barleybran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybran. They packed it on the calumetite and packed rust around it."]
           ]
         }
       ]
@@ -24151,7 +24202,7 @@
       "name": "Rust Sennit",
       "desc": "A dry sennit east of the samson. Packed rust coats sennit.",
       "brief": "Dry sennit, packed rust.",
-      "exits": { "west": { "to": "rust_samson" }, "east": { "to": "rust_footband" } },
+      "exits": { "west": { "to": "rust_samson" }, "east": { "to": "rust_footband" }, "south": { "to": "rust_sorghumbran" } },
       "actions": [
         {
           "id": "pinch_sennit",
@@ -24164,11 +24215,28 @@
         }
       ]
     },
+    "rust_sorghumbran": {
+      "name": "Rust Sorghumbran",
+      "desc": "A dry sorghumbran south of the sennit. Packed rust coats sorghumbran.",
+      "brief": "Dry sorghumbran, packed rust.",
+      "exits": { "north": { "to": "rust_sennit" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbran",
+          "label": "pinch the sorghumbran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbran. They packed it on the sennit and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_footband": {
       "name": "Rust Footband",
       "desc": "A dry footband east of the sennit. Packed rust coats a footband.",
       "brief": "Dry footband, packed rust.",
-      "exits": { "west": { "to": "rust_sennit" }, "east": { "to": "rust_jarrah" } },
+      "exits": { "west": { "to": "rust_sennit" }, "east": { "to": "rust_jarrah" }, "south": { "to": "rust_milletbran" } },
       "actions": [
         {
           "id": "pinch_footband",
@@ -24181,11 +24249,28 @@
         }
       ]
     },
+    "rust_milletbran": {
+      "name": "Rust Milletbran",
+      "desc": "A dry milletbran south of the footband. Packed rust coats milletbran.",
+      "brief": "Dry milletbran, packed rust.",
+      "exits": { "north": { "to": "rust_footband" } },
+      "actions": [
+        {
+          "id": "pinch_milletbran",
+          "label": "pinch the milletbran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbran. They packed it on the footband and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_jarrah": {
       "name": "Rust Jarrah",
       "desc": "A dry jarrah east of the footband. Packed rust coats jarrah.",
       "brief": "Dry jarrah, packed rust.",
-      "exits": { "west": { "to": "rust_footband" }, "east": { "to": "rust_soapstone" } },
+      "exits": { "west": { "to": "rust_footband" }, "east": { "to": "rust_soapstone" }, "south": { "to": "rust_speltberry" } },
       "actions": [
         {
           "id": "pinch_jarrah",
@@ -24198,11 +24283,28 @@
         }
       ]
     },
+    "rust_speltberry": {
+      "name": "Rust Speltberry",
+      "desc": "A dry speltberry south of the jarrah. Packed rust coats speltberry.",
+      "brief": "Dry speltberry, packed rust.",
+      "exits": { "north": { "to": "rust_jarrah" } },
+      "actions": [
+        {
+          "id": "pinch_speltberry",
+          "label": "pinch the speltberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard speltberry. They packed it on the jarrah and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_soapstone": {
       "name": "Rust Soapstone",
       "desc": "A dry soapstone east of the jarrah. Packed rust coats soapstone.",
       "brief": "Dry soapstone, packed rust.",
-      "exits": { "west": { "to": "rust_jarrah" }, "east": { "to": "rust_flint" } },
+      "exits": { "west": { "to": "rust_jarrah" }, "east": { "to": "rust_flint" }, "south": { "to": "rust_buckwheatgroat" } },
       "actions": [
         {
           "id": "pinch_soapstone",
@@ -24215,11 +24317,28 @@
         }
       ]
     },
+    "rust_buckwheatgroat": {
+      "name": "Rust Buckwheatgroat",
+      "desc": "A dry buckwheatgroat south of the soapstone. Packed rust coats buckwheatgroat.",
+      "brief": "Dry buckwheatgroat, packed rust.",
+      "exits": { "north": { "to": "rust_soapstone" } },
+      "actions": [
+        {
+          "id": "pinch_buckwheatgroat",
+          "label": "pinch the buckwheatgroat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard buckwheatgroat. They packed it on the soapstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_flint": {
       "name": "Rust Flint",
       "desc": "A dry flint east of the soapstone. Packed rust coats flint.",
       "brief": "Dry flint, packed rust.",
-      "exits": { "west": { "to": "rust_soapstone" }, "east": { "to": "rust_sandpaper" } },
+      "exits": { "west": { "to": "rust_soapstone" }, "east": { "to": "rust_sandpaper" }, "south": { "to": "rust_quinoaflake" } },
       "actions": [
         {
           "id": "pinch_flint",
@@ -24228,6 +24347,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard flint. They packed it on the soapstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_quinoaflake": {
+      "name": "Rust Quinoaflake",
+      "desc": "A dry quinoaflake south of the flint. Packed rust coats quinoaflake.",
+      "brief": "Dry quinoaflake, packed rust.",
+      "exits": { "north": { "to": "rust_flint" } },
+      "actions": [
+        {
+          "id": "pinch_quinoaflake",
+          "label": "pinch the quinoaflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard quinoaflake. They packed it on the flint and packed rust around it."]
           ]
         }
       ]
@@ -39662,10 +39798,19 @@
     "pinch the glasspaper",
     "go east",
     "pinch the bice",
+    "go south",
+    "pinch the sunflowerflour",
+    "go north",
     "go east",
     "pinch the mayanblue",
+    "go south",
+    "pinch the sesameflour",
+    "go north",
     "go east",
     "pinch the calumetite",
+    "go south",
+    "pinch the barleybran",
+    "go north",
     "go east",
     "pinch the ullmannite",
     "go west",
@@ -39685,14 +39830,29 @@
     "pinch the samson",
     "go east",
     "pinch the sennit",
+    "go south",
+    "pinch the sorghumbran",
+    "go north",
     "go east",
     "pinch the footband",
+    "go south",
+    "pinch the milletbran",
+    "go north",
     "go east",
     "pinch the jarrah",
+    "go south",
+    "pinch the speltberry",
+    "go north",
     "go east",
     "pinch the soapstone",
+    "go south",
+    "pinch the buckwheatgroat",
+    "go north",
     "go east",
     "pinch the flint",
+    "go south",
+    "pinch the quinoaflake",
+    "go north",
     "go east",
     "pinch the sandpaper",
     "go south",
