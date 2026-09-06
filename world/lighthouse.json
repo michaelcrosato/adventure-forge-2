@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14890,
+  "maxScore": 14930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -22128,7 +22128,7 @@
       "name": "Rust Deodar",
       "desc": "A dry deodar east of the punah. Packed rust coats deodar.",
       "brief": "Dry deodar, packed rust.",
-      "exits": { "west": { "to": "rust_punah" }, "east": { "to": "rust_salai" }, "south": { "to": "rust_ryelowgrade" } },
+      "exits": { "west": { "to": "rust_punah" }, "east": { "to": "rust_salai" }, "south": { "to": "rust_ryelowgrade" }, "north": { "to": "rust_durumrundlet" } },
       "actions": [
         {
           "id": "pinch_deodar",
@@ -22137,6 +22137,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard deodar. They packed it on the punah and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumrundlet": {
+      "name": "Rust Durumrundlet",
+      "desc": "A dry durumrundlet north of the deodar. Packed rust coats durumrundlet.",
+      "brief": "Dry durumrundlet, packed rust.",
+      "exits": { "south": { "to": "rust_deodar" } },
+      "actions": [
+        {
+          "id": "pinch_durumrundlet",
+          "label": "pinch the durumrundlet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumrundlet. They packed it on the deodar and packed rust around it."]
           ]
         }
       ]
@@ -22162,7 +22179,7 @@
       "name": "Rust Salai",
       "desc": "A dry salai east of the deodar. Packed rust coats salai.",
       "brief": "Dry salai, packed rust.",
-      "exits": { "west": { "to": "rust_deodar" }, "east": { "to": "rust_stringybark" }, "south": { "to": "rust_wheatlowgrade" } },
+      "exits": { "west": { "to": "rust_deodar" }, "east": { "to": "rust_stringybark" }, "south": { "to": "rust_wheatlowgrade" }, "north": { "to": "rust_foniorundlet" } },
       "actions": [
         {
           "id": "pinch_salai",
@@ -22171,6 +22188,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard salai. They packed it on the deodar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniorundlet": {
+      "name": "Rust Foniorundlet",
+      "desc": "A dry foniorundlet north of the salai. Packed rust coats foniorundlet.",
+      "brief": "Dry foniorundlet, packed rust.",
+      "exits": { "south": { "to": "rust_salai" } },
+      "actions": [
+        {
+          "id": "pinch_foniorundlet",
+          "label": "pinch the foniorundlet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniorundlet. They packed it on the salai and packed rust around it."]
           ]
         }
       ]
@@ -22247,7 +22281,7 @@
       "name": "Rust Worming",
       "desc": "A dry worming east of the tabernacle. Packed rust coats worming.",
       "brief": "Dry worming, packed rust.",
-      "exits": { "west": { "to": "rust_tabernacle" }, "east": { "to": "rust_rackseizing" }, "south": { "to": "rust_durumclear" } },
+      "exits": { "west": { "to": "rust_tabernacle" }, "east": { "to": "rust_rackseizing" }, "south": { "to": "rust_durumclear" }, "north": { "to": "rust_teffrundlet" } },
       "actions": [
         {
           "id": "pinch_worming",
@@ -22256,6 +22290,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard worming. They laid it on the tabernacle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffrundlet": {
+      "name": "Rust Teffrundlet",
+      "desc": "A dry teffrundlet north of the worming. Packed rust coats teffrundlet.",
+      "brief": "Dry teffrundlet, packed rust.",
+      "exits": { "south": { "to": "rust_worming" } },
+      "actions": [
+        {
+          "id": "pinch_teffrundlet",
+          "label": "pinch the teffrundlet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffrundlet. They packed it on the worming and packed rust around it."]
           ]
         }
       ]
@@ -22281,7 +22332,7 @@
       "name": "Rust Rackseizing",
       "desc": "A dry rackseizing east of the worming. Packed rust coats a rackseizing.",
       "brief": "Dry rackseizing, packed rust.",
-      "exits": { "west": { "to": "rust_worming" }, "east": { "to": "rust_isinglass" }, "south": { "to": "rust_fonioclear" } },
+      "exits": { "west": { "to": "rust_worming" }, "east": { "to": "rust_isinglass" }, "south": { "to": "rust_fonioclear" }, "north": { "to": "rust_barleyrundlet" } },
       "actions": [
         {
           "id": "pinch_rackseizing",
@@ -22290,6 +22341,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rackseizing. They racked it on the worming and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyrundlet": {
+      "name": "Rust Barleyrundlet",
+      "desc": "A dry barleyrundlet north of the rackseizing. Packed rust coats barleyrundlet.",
+      "brief": "Dry barleyrundlet, packed rust.",
+      "exits": { "south": { "to": "rust_rackseizing" } },
+      "actions": [
+        {
+          "id": "pinch_barleyrundlet",
+          "label": "pinch the barleyrundlet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyrundlet. They packed it on the rackseizing and packed rust around it."]
           ]
         }
       ]
@@ -22315,7 +22383,7 @@
       "name": "Rust Isinglass",
       "desc": "A dry isinglass east of the rackseizing. Packed rust coats isinglass.",
       "brief": "Dry isinglass, packed rust.",
-      "exits": { "west": { "to": "rust_rackseizing" }, "east": { "to": "rust_movingui" }, "south": { "to": "rust_teffclear" } },
+      "exits": { "west": { "to": "rust_rackseizing" }, "east": { "to": "rust_movingui" }, "south": { "to": "rust_teffclear" }, "north": { "to": "rust_sorghumrundlet" } },
       "actions": [
         {
           "id": "pinch_isinglass",
@@ -22324,6 +22392,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard isinglass. They packed it on the rackseizing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumrundlet": {
+      "name": "Rust Sorghumrundlet",
+      "desc": "A dry sorghumrundlet north of the isinglass. Packed rust coats sorghumrundlet.",
+      "brief": "Dry sorghumrundlet, packed rust.",
+      "exits": { "south": { "to": "rust_isinglass" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumrundlet",
+          "label": "pinch the sorghumrundlet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumrundlet. They packed it on the isinglass and packed rust around it."]
           ]
         }
       ]
@@ -22349,7 +22434,7 @@
       "name": "Rust Movingui",
       "desc": "A dry movingui east of the isinglass. Packed rust coats movingui.",
       "brief": "Dry movingui, packed rust.",
-      "exits": { "west": { "to": "rust_isinglass" }, "east": { "to": "rust_tauari" }, "south": { "to": "rust_barleyclear" } },
+      "exits": { "west": { "to": "rust_isinglass" }, "east": { "to": "rust_tauari" }, "south": { "to": "rust_barleyclear" }, "north": { "to": "rust_milletrundlet" } },
       "actions": [
         {
           "id": "pinch_movingui",
@@ -22358,6 +22443,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard movingui. They packed it on the isinglass and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletrundlet": {
+      "name": "Rust Milletrundlet",
+      "desc": "A dry milletrundlet north of the movingui. Packed rust coats milletrundlet.",
+      "brief": "Dry milletrundlet, packed rust.",
+      "exits": { "south": { "to": "rust_movingui" } },
+      "actions": [
+        {
+          "id": "pinch_milletrundlet",
+          "label": "pinch the milletrundlet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletrundlet. They packed it on the movingui and packed rust around it."]
           ]
         }
       ]
@@ -22383,7 +22485,7 @@
       "name": "Rust Tauari",
       "desc": "A dry tauari east of the movingui. Packed rust coats tauari.",
       "brief": "Dry tauari, packed rust.",
-      "exits": { "west": { "to": "rust_movingui" }, "east": { "to": "rust_ziricote" }, "south": { "to": "rust_sorghumclear" } },
+      "exits": { "west": { "to": "rust_movingui" }, "east": { "to": "rust_ziricote" }, "south": { "to": "rust_sorghumclear" }, "north": { "to": "rust_cornrundlet" } },
       "actions": [
         {
           "id": "pinch_tauari",
@@ -22392,6 +22494,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tauari. They packed it on the movingui and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornrundlet": {
+      "name": "Rust Cornrundlet",
+      "desc": "A dry cornrundlet north of the tauari. Packed rust coats cornrundlet.",
+      "brief": "Dry cornrundlet, packed rust.",
+      "exits": { "south": { "to": "rust_tauari" } },
+      "actions": [
+        {
+          "id": "pinch_cornrundlet",
+          "label": "pinch the cornrundlet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornrundlet. They packed it on the tauari and packed rust around it."]
           ]
         }
       ]
@@ -22417,7 +22536,7 @@
       "name": "Rust Ziricote",
       "desc": "A dry ziricote east of the tauari. Packed rust coats ziricote.",
       "brief": "Dry ziricote, packed rust.",
-      "exits": { "west": { "to": "rust_tauari" }, "east": { "to": "rust_belian" }, "south": { "to": "rust_milletclear" } },
+      "exits": { "west": { "to": "rust_tauari" }, "east": { "to": "rust_belian" }, "south": { "to": "rust_milletclear" }, "north": { "to": "rust_oatrundlet" } },
       "actions": [
         {
           "id": "pinch_ziricote",
@@ -22426,6 +22545,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ziricote. They packed it on the tauari and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatrundlet": {
+      "name": "Rust Oatrundlet",
+      "desc": "A dry oatrundlet north of the ziricote. Packed rust coats oatrundlet.",
+      "brief": "Dry oatrundlet, packed rust.",
+      "exits": { "south": { "to": "rust_ziricote" } },
+      "actions": [
+        {
+          "id": "pinch_oatrundlet",
+          "label": "pinch the oatrundlet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatrundlet. They packed it on the ziricote and packed rust around it."]
           ]
         }
       ]
@@ -54486,11 +54622,17 @@
     "go north",
     "go east",
     "pinch the deodar",
+    "go north",
+    "pinch the durumrundlet",
+    "go south",
     "go south",
     "pinch the ryelowgrade",
     "go north",
     "go east",
     "pinch the salai",
+    "go north",
+    "pinch the foniorundlet",
+    "go south",
     "go south",
     "pinch the wheatlowgrade",
     "go north",
@@ -54512,31 +54654,49 @@
     "pinch the tabernacle",
     "go east",
     "pinch the worming",
+    "go north",
+    "pinch the teffrundlet",
+    "go south",
     "go south",
     "pinch the durumclear",
     "go north",
     "go east",
     "pinch the rackseizing",
+    "go north",
+    "pinch the barleyrundlet",
+    "go south",
     "go south",
     "pinch the fonioclear",
     "go north",
     "go east",
     "pinch the isinglass",
+    "go north",
+    "pinch the sorghumrundlet",
+    "go south",
     "go south",
     "pinch the teffclear",
     "go north",
     "go east",
     "pinch the movingui",
+    "go north",
+    "pinch the milletrundlet",
+    "go south",
     "go south",
     "pinch the barleyclear",
     "go north",
     "go east",
     "pinch the tauari",
+    "go north",
+    "pinch the cornrundlet",
+    "go south",
     "go south",
     "pinch the sorghumclear",
     "go north",
     "go east",
     "pinch the ziricote",
+    "go north",
+    "pinch the oatrundlet",
+    "go south",
     "go south",
     "pinch the milletclear",
     "go north",
