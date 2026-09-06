@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14490,
+  "maxScore": 14530,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -25664,7 +25664,7 @@
       "name": "Rust Crowfoot",
       "desc": "A dry crowfoot east of the tabling. Packed rust coats a crowfoot.",
       "brief": "Dry crowfoot, packed rust.",
-      "exits": { "west": { "to": "rust_tabling" }, "east": { "to": "rust_mastic" }, "south": { "to": "rust_foniobran" } },
+      "exits": { "west": { "to": "rust_tabling" }, "east": { "to": "rust_mastic" }, "south": { "to": "rust_foniobran" }, "north": { "to": "rust_durumflagon" } },
       "actions": [
         {
           "id": "pinch_crowfoot",
@@ -25673,6 +25673,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard crowfoot. They spread it on the tabling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumflagon": {
+      "name": "Rust Durumflagon",
+      "desc": "A dry durumflagon north of the crowfoot. Packed rust coats durumflagon.",
+      "brief": "Dry durumflagon, packed rust.",
+      "exits": { "south": { "to": "rust_crowfoot" } },
+      "actions": [
+        {
+          "id": "pinch_durumflagon",
+          "label": "pinch the durumflagon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumflagon. They packed it on the crowfoot and packed rust around it."]
           ]
         }
       ]
@@ -25698,7 +25715,7 @@
       "name": "Rust Mastic",
       "desc": "A dry mastic east of the crowfoot. Packed rust coats mastic.",
       "brief": "Dry mastic, packed rust.",
-      "exits": { "west": { "to": "rust_crowfoot" }, "east": { "to": "rust_opepe" }, "south": { "to": "rust_teffbran" } },
+      "exits": { "west": { "to": "rust_crowfoot" }, "east": { "to": "rust_opepe" }, "south": { "to": "rust_teffbran" }, "north": { "to": "rust_fonioflagon" } },
       "actions": [
         {
           "id": "pinch_mastic",
@@ -25707,6 +25724,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mastic. They packed it on the crowfoot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioflagon": {
+      "name": "Rust Fonioflagon",
+      "desc": "A dry fonioflagon north of the mastic. Packed rust coats fonioflagon.",
+      "brief": "Dry fonioflagon, packed rust.",
+      "exits": { "south": { "to": "rust_mastic" } },
+      "actions": [
+        {
+          "id": "pinch_fonioflagon",
+          "label": "pinch the fonioflagon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioflagon. They packed it on the mastic and packed rust around it."]
           ]
         }
       ]
@@ -25732,7 +25766,7 @@
       "name": "Rust Opepe",
       "desc": "A dry opepe east of the mastic. Packed rust coats opepe.",
       "brief": "Dry opepe, packed rust.",
-      "exits": { "west": { "to": "rust_mastic" }, "east": { "to": "rust_tatajuba" }, "south": { "to": "rust_barleybranflake" } },
+      "exits": { "west": { "to": "rust_mastic" }, "east": { "to": "rust_tatajuba" }, "south": { "to": "rust_barleybranflake" }, "north": { "to": "rust_teffflagon" } },
       "actions": [
         {
           "id": "pinch_opepe",
@@ -25741,6 +25775,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard opepe. They packed it on the mastic and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffflagon": {
+      "name": "Rust Teffflagon",
+      "desc": "A dry teffflagon north of the opepe. Packed rust coats teffflagon.",
+      "brief": "Dry teffflagon, packed rust.",
+      "exits": { "south": { "to": "rust_opepe" } },
+      "actions": [
+        {
+          "id": "pinch_teffflagon",
+          "label": "pinch the teffflagon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffflagon. They packed it on the opepe and packed rust around it."]
           ]
         }
       ]
@@ -25766,7 +25817,7 @@
       "name": "Rust Tatajuba",
       "desc": "A dry tatajuba east of the opepe. Packed rust coats tatajuba.",
       "brief": "Dry tatajuba, packed rust.",
-      "exits": { "west": { "to": "rust_opepe" }, "east": { "to": "rust_quaruba" }, "south": { "to": "rust_sorghumbranflake" } },
+      "exits": { "west": { "to": "rust_opepe" }, "east": { "to": "rust_quaruba" }, "south": { "to": "rust_sorghumbranflake" }, "north": { "to": "rust_barleyflagon" } },
       "actions": [
         {
           "id": "pinch_tatajuba",
@@ -25775,6 +25826,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tatajuba. They packed it on the opepe and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyflagon": {
+      "name": "Rust Barleyflagon",
+      "desc": "A dry barleyflagon north of the tatajuba. Packed rust coats barleyflagon.",
+      "brief": "Dry barleyflagon, packed rust.",
+      "exits": { "south": { "to": "rust_tatajuba" } },
+      "actions": [
+        {
+          "id": "pinch_barleyflagon",
+          "label": "pinch the barleyflagon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyflagon. They packed it on the tatajuba and packed rust around it."]
           ]
         }
       ]
@@ -25800,7 +25868,7 @@
       "name": "Rust Quaruba",
       "desc": "A dry quaruba east of the tatajuba. Packed rust coats quaruba.",
       "brief": "Dry quaruba, packed rust.",
-      "exits": { "west": { "to": "rust_tatajuba" }, "east": { "to": "rust_kamagong" }, "south": { "to": "rust_milletbranflake" } },
+      "exits": { "west": { "to": "rust_tatajuba" }, "east": { "to": "rust_kamagong" }, "south": { "to": "rust_milletbranflake" }, "north": { "to": "rust_sorghumflagon" } },
       "actions": [
         {
           "id": "pinch_quaruba",
@@ -25809,6 +25877,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard quaruba. They packed it on the tatajuba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumflagon": {
+      "name": "Rust Sorghumflagon",
+      "desc": "A dry sorghumflagon north of the quaruba. Packed rust coats sorghumflagon.",
+      "brief": "Dry sorghumflagon, packed rust.",
+      "exits": { "south": { "to": "rust_quaruba" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumflagon",
+          "label": "pinch the sorghumflagon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumflagon. They packed it on the quaruba and packed rust around it."]
           ]
         }
       ]
@@ -25902,7 +25987,7 @@
       "name": "Rust Earing",
       "desc": "A dry earing east of the jumper. Packed rust coats an earing.",
       "brief": "Dry earing, packed rust.",
-      "exits": { "west": { "to": "rust_jumper" }, "east": { "to": "rust_jigger" }, "south": { "to": "rust_oatbranflake" } },
+      "exits": { "west": { "to": "rust_jumper" }, "east": { "to": "rust_jigger" }, "south": { "to": "rust_oatbranflake" }, "north": { "to": "rust_milletflagon" } },
       "actions": [
         {
           "id": "pinch_earing",
@@ -25911,6 +25996,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard earing. They seized it on the jumper and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletflagon": {
+      "name": "Rust Milletflagon",
+      "desc": "A dry milletflagon north of the earing. Packed rust coats milletflagon.",
+      "brief": "Dry milletflagon, packed rust.",
+      "exits": { "south": { "to": "rust_earing" } },
+      "actions": [
+        {
+          "id": "pinch_milletflagon",
+          "label": "pinch the milletflagon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletflagon. They packed it on the earing and packed rust around it."]
           ]
         }
       ]
@@ -25936,7 +26038,7 @@
       "name": "Rust Jigger",
       "desc": "A dry jigger east of the earing. Packed rust coats a jigger.",
       "brief": "Dry jigger, packed rust.",
-      "exits": { "west": { "to": "rust_earing" }, "east": { "to": "rust_jelutong" }, "south": { "to": "rust_ryebranflake" } },
+      "exits": { "west": { "to": "rust_earing" }, "east": { "to": "rust_jelutong" }, "south": { "to": "rust_ryebranflake" }, "north": { "to": "rust_cornflagon" } },
       "actions": [
         {
           "id": "pinch_jigger",
@@ -25945,6 +26047,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jigger. They hung it on the earing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornflagon": {
+      "name": "Rust Cornflagon",
+      "desc": "A dry cornflagon north of the jigger. Packed rust coats cornflagon.",
+      "brief": "Dry cornflagon, packed rust.",
+      "exits": { "south": { "to": "rust_jigger" } },
+      "actions": [
+        {
+          "id": "pinch_cornflagon",
+          "label": "pinch the cornflagon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornflagon. They packed it on the jigger and packed rust around it."]
           ]
         }
       ]
@@ -25970,7 +26089,7 @@
       "name": "Rust Jelutong",
       "desc": "A dry jelutong east of the jigger. Packed rust coats jelutong.",
       "brief": "Dry jelutong, packed rust.",
-      "exits": { "west": { "to": "rust_jigger" }, "east": { "to": "rust_danta" }, "south": { "to": "rust_wheatbranflake" } },
+      "exits": { "west": { "to": "rust_jigger" }, "east": { "to": "rust_danta" }, "south": { "to": "rust_wheatbranflake" }, "north": { "to": "rust_oatflagon" } },
       "actions": [
         {
           "id": "pinch_jelutong",
@@ -25979,6 +26098,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jelutong. They stacked it on the jigger and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatflagon": {
+      "name": "Rust Oatflagon",
+      "desc": "A dry oatflagon north of the jelutong. Packed rust coats oatflagon.",
+      "brief": "Dry oatflagon, packed rust.",
+      "exits": { "south": { "to": "rust_jelutong" } },
+      "actions": [
+        {
+          "id": "pinch_oatflagon",
+          "label": "pinch the oatflagon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatflagon. They packed it on the jelutong and packed rust around it."]
           ]
         }
       ]
@@ -53692,26 +53828,41 @@
     "go north",
     "go east",
     "pinch the crowfoot",
+    "go north",
+    "pinch the durumflagon",
+    "go south",
     "go south",
     "pinch the foniobran",
     "go north",
     "go east",
     "pinch the mastic",
+    "go north",
+    "pinch the fonioflagon",
+    "go south",
     "go south",
     "pinch the teffbran",
     "go north",
     "go east",
     "pinch the opepe",
+    "go north",
+    "pinch the teffflagon",
+    "go south",
     "go south",
     "pinch the barleybranflake",
     "go north",
     "go east",
     "pinch the tatajuba",
+    "go north",
+    "pinch the barleyflagon",
+    "go south",
     "go south",
     "pinch the sorghumbranflake",
     "go north",
     "go east",
     "pinch the quaruba",
+    "go north",
+    "pinch the sorghumflagon",
+    "go south",
     "go south",
     "pinch the milletbranflake",
     "go north",
@@ -53736,16 +53887,25 @@
     "pinch the jumper",
     "go east",
     "pinch the earing",
+    "go north",
+    "pinch the milletflagon",
+    "go south",
     "go south",
     "pinch the oatbranflake",
     "go north",
     "go east",
     "pinch the jigger",
+    "go north",
+    "pinch the cornflagon",
+    "go south",
     "go south",
     "pinch the ryebranflake",
     "go north",
     "go east",
     "pinch the jelutong",
+    "go north",
+    "pinch the oatflagon",
+    "go south",
     "go south",
     "pinch the wheatbranflake",
     "go north",
