@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9690,
+  "maxScore": 9730,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -27534,7 +27534,7 @@
       "name": "Rust Orlop",
       "desc": "A dry orlop east of the pipe. Packed rust coats an orlop.",
       "brief": "Dry orlop, packed rust.",
-      "exits": { "west": { "to": "rust_pipe" }, "east": { "to": "rust_lashing" } },
+      "exits": { "west": { "to": "rust_pipe" }, "east": { "to": "rust_lashing" }, "south": { "to": "rust_orach" } },
       "actions": [
         {
           "id": "pinch_orlop",
@@ -27547,11 +27547,28 @@
         }
       ]
     },
+    "rust_orach": {
+      "name": "Rust Orach",
+      "desc": "A dry orach south of the orlop. Packed rust coats orach.",
+      "brief": "Dry orach, packed rust.",
+      "exits": { "north": { "to": "rust_orlop" } },
+      "actions": [
+        {
+          "id": "pinch_orach",
+          "label": "pinch the orach",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard orach. They packed it on the orlop and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_lashing": {
       "name": "Rust Lashing",
       "desc": "A dry lashing east of the orlop. Packed rust coats a lashing.",
       "brief": "Dry lashing, packed rust.",
-      "exits": { "west": { "to": "rust_orlop" }, "east": { "to": "rust_leechgasket" } },
+      "exits": { "west": { "to": "rust_orlop" }, "east": { "to": "rust_leechgasket" }, "south": { "to": "rust_cilantro" } },
       "actions": [
         {
           "id": "pinch_lashing",
@@ -27564,11 +27581,28 @@
         }
       ]
     },
+    "rust_cilantro": {
+      "name": "Rust Cilantro",
+      "desc": "A dry cilantro south of the lashing. Packed rust coats cilantro.",
+      "brief": "Dry cilantro, packed rust.",
+      "exits": { "north": { "to": "rust_lashing" } },
+      "actions": [
+        {
+          "id": "pinch_cilantro",
+          "label": "pinch the cilantro",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cilantro. They packed it on the lashing and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_leechgasket": {
       "name": "Rust Leechgasket",
       "desc": "A dry leechgasket east of the lashing. Packed rust coats a leechgasket.",
       "brief": "Dry leechgasket, packed rust.",
-      "exits": { "west": { "to": "rust_lashing" }, "east": { "to": "rust_oilskin" } },
+      "exits": { "west": { "to": "rust_lashing" }, "east": { "to": "rust_oilskin" }, "south": { "to": "rust_dandelion" } },
       "actions": [
         {
           "id": "pinch_leechgasket",
@@ -27581,11 +27615,28 @@
         }
       ]
     },
+    "rust_dandelion": {
+      "name": "Rust Dandelion",
+      "desc": "A dry dandelion south of the leechgasket. Packed rust coats dandelion.",
+      "brief": "Dry dandelion, packed rust.",
+      "exits": { "north": { "to": "rust_leechgasket" } },
+      "actions": [
+        {
+          "id": "pinch_dandelion",
+          "label": "pinch the dandelion",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard dandelion. They packed it on the leechgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_oilskin": {
       "name": "Rust Oilskin",
       "desc": "A dry oilskin east of the leechgasket. Packed rust coats oilskin.",
       "brief": "Dry oilskin, packed rust.",
-      "exits": { "west": { "to": "rust_leechgasket" }, "east": { "to": "rust_copal" } },
+      "exits": { "west": { "to": "rust_leechgasket" }, "east": { "to": "rust_copal" }, "south": { "to": "rust_purslane" } },
       "actions": [
         {
           "id": "pinch_oilskin",
@@ -27598,11 +27649,28 @@
         }
       ]
     },
+    "rust_purslane": {
+      "name": "Rust Purslane",
+      "desc": "A dry purslane south of the oilskin. Packed rust coats purslane.",
+      "brief": "Dry purslane, packed rust.",
+      "exits": { "north": { "to": "rust_oilskin" } },
+      "actions": [
+        {
+          "id": "pinch_purslane",
+          "label": "pinch the purslane",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard purslane. They packed it on the oilskin and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_copal": {
       "name": "Rust Copal",
       "desc": "A dry copal east of the oilskin. Packed rust coats copal.",
       "brief": "Dry copal, packed rust.",
-      "exits": { "west": { "to": "rust_oilskin" }, "east": { "to": "rust_teak" } },
+      "exits": { "west": { "to": "rust_oilskin" }, "east": { "to": "rust_teak" }, "south": { "to": "rust_bokchoy" } },
       "actions": [
         {
           "id": "pinch_copal",
@@ -27615,11 +27683,28 @@
         }
       ]
     },
+    "rust_bokchoy": {
+      "name": "Rust Bokchoy",
+      "desc": "A dry bokchoy south of the copal. Packed rust coats bokchoy.",
+      "brief": "Dry bokchoy, packed rust.",
+      "exits": { "north": { "to": "rust_copal" } },
+      "actions": [
+        {
+          "id": "pinch_bokchoy",
+          "label": "pinch the bokchoy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bokchoy. They packed it on the copal and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_teak": {
       "name": "Rust Teak",
       "desc": "A dry teak east of the copal. Packed rust coats teak.",
       "brief": "Dry teak, packed rust.",
-      "exits": { "west": { "to": "rust_copal" }, "east": { "to": "rust_larch" } },
+      "exits": { "west": { "to": "rust_copal" }, "east": { "to": "rust_larch" }, "south": { "to": "rust_mustard" } },
       "actions": [
         {
           "id": "pinch_teak",
@@ -27632,11 +27717,28 @@
         }
       ]
     },
+    "rust_mustard": {
+      "name": "Rust Mustard",
+      "desc": "A dry mustard south of the teak. Packed rust coats mustard.",
+      "brief": "Dry mustard, packed rust.",
+      "exits": { "north": { "to": "rust_teak" } },
+      "actions": [
+        {
+          "id": "pinch_mustard",
+          "label": "pinch the mustard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mustard. They packed it on the teak and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_larch": {
       "name": "Rust Larch",
       "desc": "A dry larch east of the teak. Packed rust coats larch.",
       "brief": "Dry larch, packed rust.",
-      "exits": { "west": { "to": "rust_teak" }, "east": { "to": "rust_cottonwood" } },
+      "exits": { "west": { "to": "rust_teak" }, "east": { "to": "rust_cottonwood" }, "south": { "to": "rust_cress" } },
       "actions": [
         {
           "id": "pinch_larch",
@@ -27649,11 +27751,28 @@
         }
       ]
     },
+    "rust_cress": {
+      "name": "Rust Cress",
+      "desc": "A dry cress south of the larch. Packed rust coats cress.",
+      "brief": "Dry cress, packed rust.",
+      "exits": { "north": { "to": "rust_larch" } },
+      "actions": [
+        {
+          "id": "pinch_cress",
+          "label": "pinch the cress",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cress. They packed it on the larch and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cottonwood": {
       "name": "Rust Cottonwood",
       "desc": "A dry cottonwood east of the larch. Packed rust coats cottonwood.",
       "brief": "Dry cottonwood, packed rust.",
-      "exits": { "west": { "to": "rust_larch" }, "east": { "to": "rust_emery" } },
+      "exits": { "west": { "to": "rust_larch" }, "east": { "to": "rust_emery" }, "south": { "to": "rust_sprout" } },
       "actions": [
         {
           "id": "pinch_cottonwood",
@@ -27662,6 +27781,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cottonwood. They laid it on the larch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sprout": {
+      "name": "Rust Sprout",
+      "desc": "A dry sprout south of the cottonwood. Packed rust coats sprout.",
+      "brief": "Dry sprout, packed rust.",
+      "exits": { "north": { "to": "rust_cottonwood" } },
+      "actions": [
+        {
+          "id": "pinch_sprout",
+          "label": "pinch the sprout",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sprout. They packed it on the cottonwood and packed rust around it."]
           ]
         }
       ]
@@ -37704,20 +37840,44 @@
     "pinch the pipe",
     "go east",
     "pinch the orlop",
+    "go south",
+    "pinch the orach",
+    "go north",
     "go east",
     "pinch the lashing",
+    "go south",
+    "pinch the cilantro",
+    "go north",
     "go east",
     "pinch the leechgasket",
+    "go south",
+    "pinch the dandelion",
+    "go north",
     "go east",
     "pinch the oilskin",
+    "go south",
+    "pinch the purslane",
+    "go north",
     "go east",
     "pinch the copal",
+    "go south",
+    "pinch the bokchoy",
+    "go north",
     "go east",
     "pinch the teak",
+    "go south",
+    "pinch the mustard",
+    "go north",
     "go east",
     "pinch the larch",
+    "go south",
+    "pinch the cress",
+    "go north",
     "go east",
     "pinch the cottonwood",
+    "go south",
+    "pinch the sprout",
+    "go north",
     "go east",
     "pinch the emery",
     "go south",

@@ -147,6 +147,62 @@ test("successful oiling consumes the oil flask", () => {
   assert.equal(state.itemLoc.oil_flask, "nowhere");
 });
 
+test("rust orach is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_orach);
+  assert.ok(state.visited.includes("rust_orach"));
+});
+
+test("rust cilantro is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_cilantro);
+  assert.ok(state.visited.includes("rust_cilantro"));
+});
+
+test("rust dandelion is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_dandelion);
+  assert.ok(state.visited.includes("rust_dandelion"));
+});
+
+test("rust purslane is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_purslane);
+  assert.ok(state.visited.includes("rust_purslane"));
+});
+
+test("rust bokchoy is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_bokchoy);
+  assert.ok(state.visited.includes("rust_bokchoy"));
+});
+
+test("rust mustard is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_mustard);
+  assert.ok(state.visited.includes("rust_mustard"));
+});
+
+test("rust cress is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_cress);
+  assert.ok(state.visited.includes("rust_cress"));
+});
+
+test("rust sprout is scored on the proven path", () => {
+  const { state } = playWalkthrough(1);
+  assert.equal(state.ended?.id, "beacon_lit");
+  assert.ok(state.flags.did_pinch_sprout);
+  assert.ok(state.visited.includes("rust_sprout"));
+});
+
 test("rust tatsoi is scored on the proven path", () => {
   const { state } = playWalkthrough(1);
   assert.equal(state.ended?.id, "beacon_lit");
