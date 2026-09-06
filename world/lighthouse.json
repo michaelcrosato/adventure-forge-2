@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9490,
+  "maxScore": 9530,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -28384,7 +28384,7 @@
       "name": "Rust Hawserline",
       "desc": "A dry hawserline east of the parrelbead. Packed rust coats a hawserline.",
       "brief": "Dry hawserline, packed rust.",
-      "exits": { "west": { "to": "rust_parrelbead" }, "east": { "to": "rust_rubber" } },
+      "exits": { "west": { "to": "rust_parrelbead" }, "east": { "to": "rust_rubber" }, "south": { "to": "rust_shallot" } },
       "actions": [
         {
           "id": "pinch_hawserline",
@@ -28397,11 +28397,28 @@
         }
       ]
     },
+    "rust_shallot": {
+      "name": "Rust Shallot",
+      "desc": "A dry shallot south of the hawserline. Packed rust coats shallot.",
+      "brief": "Dry shallot, packed rust.",
+      "exits": { "north": { "to": "rust_hawserline" } },
+      "actions": [
+        {
+          "id": "pinch_shallot",
+          "label": "pinch the shallot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard shallot. They packed it on the hawserline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_rubber": {
       "name": "Rust Rubber",
       "desc": "A dry rubber east of the hawserline. Packed rust coats rubber.",
       "brief": "Dry rubber, packed rust.",
-      "exits": { "west": { "to": "rust_hawserline" }, "east": { "to": "rust_damar" } },
+      "exits": { "west": { "to": "rust_hawserline" }, "east": { "to": "rust_damar" }, "south": { "to": "rust_onion" } },
       "actions": [
         {
           "id": "pinch_rubber",
@@ -28414,11 +28431,28 @@
         }
       ]
     },
+    "rust_onion": {
+      "name": "Rust Onion",
+      "desc": "A dry onion south of the rubber. Packed rust coats onion.",
+      "brief": "Dry onion, packed rust.",
+      "exits": { "north": { "to": "rust_rubber" } },
+      "actions": [
+        {
+          "id": "pinch_onion",
+          "label": "pinch the onion",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard onion. They packed it on the rubber and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_damar": {
       "name": "Rust Damar",
       "desc": "A dry damar east of the rubber. Packed rust coats damar.",
       "brief": "Dry damar, packed rust.",
-      "exits": { "west": { "to": "rust_rubber" }, "east": { "to": "rust_walnut" } },
+      "exits": { "west": { "to": "rust_rubber" }, "east": { "to": "rust_walnut" }, "south": { "to": "rust_garlic" } },
       "actions": [
         {
           "id": "pinch_damar",
@@ -28431,11 +28465,28 @@
         }
       ]
     },
+    "rust_garlic": {
+      "name": "Rust Garlic",
+      "desc": "A dry garlic south of the damar. Packed rust coats garlic.",
+      "brief": "Dry garlic, packed rust.",
+      "exits": { "north": { "to": "rust_damar" } },
+      "actions": [
+        {
+          "id": "pinch_garlic",
+          "label": "pinch the garlic",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard garlic. They packed it on the damar and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_walnut": {
       "name": "Rust Walnut",
       "desc": "A dry walnut east of the damar. Packed rust coats walnut.",
       "brief": "Dry walnut, packed rust.",
-      "exits": { "west": { "to": "rust_damar" }, "east": { "to": "rust_dogwood" } },
+      "exits": { "west": { "to": "rust_damar" }, "east": { "to": "rust_dogwood" }, "south": { "to": "rust_chives" } },
       "actions": [
         {
           "id": "pinch_walnut",
@@ -28448,11 +28499,28 @@
         }
       ]
     },
+    "rust_chives": {
+      "name": "Rust Chives",
+      "desc": "A dry chives south of the walnut. Packed rust coats chives.",
+      "brief": "Dry chives, packed rust.",
+      "exits": { "north": { "to": "rust_walnut" } },
+      "actions": [
+        {
+          "id": "pinch_chives",
+          "label": "pinch the chives",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard chives. They packed it on the walnut and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_dogwood": {
       "name": "Rust Dogwood",
       "desc": "A dry dogwood east of the walnut. Packed rust coats dogwood.",
       "brief": "Dry dogwood, packed rust.",
-      "exits": { "west": { "to": "rust_walnut" }, "east": { "to": "rust_talc" } },
+      "exits": { "west": { "to": "rust_walnut" }, "east": { "to": "rust_talc" }, "south": { "to": "rust_sage" } },
       "actions": [
         {
           "id": "pinch_dogwood",
@@ -28465,11 +28533,28 @@
         }
       ]
     },
+    "rust_sage": {
+      "name": "Rust Sage",
+      "desc": "A dry sage south of the dogwood. Packed rust coats sage.",
+      "brief": "Dry sage, packed rust.",
+      "exits": { "north": { "to": "rust_dogwood" } },
+      "actions": [
+        {
+          "id": "pinch_sage",
+          "label": "pinch the sage",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sage. They packed it on the dogwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_talc": {
       "name": "Rust Talc",
       "desc": "A dry talc east of the dogwood. Packed rust coats talc.",
       "brief": "Dry talc, packed rust.",
-      "exits": { "west": { "to": "rust_dogwood" }, "east": { "to": "rust_hemimorphite" } },
+      "exits": { "west": { "to": "rust_dogwood" }, "east": { "to": "rust_hemimorphite" }, "south": { "to": "rust_basil" } },
       "actions": [
         {
           "id": "pinch_talc",
@@ -28482,11 +28567,28 @@
         }
       ]
     },
+    "rust_basil": {
+      "name": "Rust Basil",
+      "desc": "A dry basil south of the talc. Packed rust coats basil.",
+      "brief": "Dry basil, packed rust.",
+      "exits": { "north": { "to": "rust_talc" } },
+      "actions": [
+        {
+          "id": "pinch_basil",
+          "label": "pinch the basil",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard basil. They packed it on the talc and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_hemimorphite": {
       "name": "Rust Hemimorphite",
       "desc": "A dry hemimorphite east of the talc. Packed rust coats hemimorphite.",
       "brief": "Dry hemimorphite, packed rust.",
-      "exits": { "west": { "to": "rust_talc" }, "east": { "to": "rust_zincite" } },
+      "exits": { "west": { "to": "rust_talc" }, "east": { "to": "rust_zincite" }, "south": { "to": "rust_mint" } },
       "actions": [
         {
           "id": "pinch_hemimorphite",
@@ -28495,6 +28597,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hemimorphite. They packed it on the talc and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_mint": {
+      "name": "Rust Mint",
+      "desc": "A dry mint south of the hemimorphite. Packed rust coats mint.",
+      "brief": "Dry mint, packed rust.",
+      "exits": { "north": { "to": "rust_hemimorphite" } },
+      "actions": [
+        {
+          "id": "pinch_mint",
+          "label": "pinch the mint",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mint. They packed it on the hemimorphite and packed rust around it."]
           ]
         }
       ]
@@ -28554,7 +28673,7 @@
       "name": "Rust Rounding",
       "desc": "A dry rounding east of the becket. Packed rust coats rounding.",
       "brief": "Dry rounding, packed rust.",
-      "exits": { "west": { "to": "rust_becket" }, "east": { "to": "rust_yardgasket" } },
+      "exits": { "west": { "to": "rust_becket" }, "east": { "to": "rust_yardgasket" }, "south": { "to": "rust_thyme" } },
       "actions": [
         {
           "id": "pinch_rounding",
@@ -28563,6 +28682,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rounding. They served it on the becket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_thyme": {
+      "name": "Rust Thyme",
+      "desc": "A dry thyme south of the rounding. Packed rust coats thyme.",
+      "brief": "Dry thyme, packed rust.",
+      "exits": { "north": { "to": "rust_rounding" } },
+      "actions": [
+        {
+          "id": "pinch_thyme",
+          "label": "pinch the thyme",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard thyme. They packed it on the rounding and packed rust around it."]
           ]
         }
       ]
@@ -37169,18 +37305,39 @@
     "pinch the parrelbead",
     "go east",
     "pinch the hawserline",
+    "go south",
+    "pinch the shallot",
+    "go north",
     "go east",
     "pinch the rubber",
+    "go south",
+    "pinch the onion",
+    "go north",
     "go east",
     "pinch the damar",
+    "go south",
+    "pinch the garlic",
+    "go north",
     "go east",
     "pinch the walnut",
+    "go south",
+    "pinch the chives",
+    "go north",
     "go east",
     "pinch the dogwood",
+    "go south",
+    "pinch the sage",
+    "go north",
     "go east",
     "pinch the talc",
+    "go south",
+    "pinch the basil",
+    "go north",
     "go east",
     "pinch the hemimorphite",
+    "go south",
+    "pinch the mint",
+    "go north",
     "go east",
     "pinch the zincite",
     "go west",
@@ -37200,6 +37357,9 @@
     "pinch the becket",
     "go east",
     "pinch the rounding",
+    "go south",
+    "pinch the thyme",
+    "go north",
     "go east",
     "pinch the yardgasket",
     "go south",
