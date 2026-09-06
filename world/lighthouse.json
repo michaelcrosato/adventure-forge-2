@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11170,
+  "maxScore": 11210,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -20819,7 +20819,7 @@
       "name": "Rust Angelim",
       "desc": "A dry angelim east of the makore. Packed rust coats angelim.",
       "brief": "Dry angelim, packed rust.",
-      "exits": { "west": { "to": "rust_makore" }, "east": { "to": "rust_breu" } },
+      "exits": { "west": { "to": "rust_makore" }, "east": { "to": "rust_breu" }, "south": { "to": "rust_milletshorts" } },
       "actions": [
         {
           "id": "pinch_angelim",
@@ -20832,11 +20832,28 @@
         }
       ]
     },
+    "rust_milletshorts": {
+      "name": "Rust Milletshorts",
+      "desc": "A dry milletshorts south of the angelim. Packed rust coats milletshorts.",
+      "brief": "Dry milletshorts, packed rust.",
+      "exits": { "north": { "to": "rust_angelim" } },
+      "actions": [
+        {
+          "id": "pinch_milletshorts",
+          "label": "pinch the milletshorts",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletshorts. They packed it on the angelim and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_breu": {
       "name": "Rust Breu",
       "desc": "A dry breu east of the angelim. Packed rust coats breu.",
       "brief": "Dry breu, packed rust.",
-      "exits": { "west": { "to": "rust_angelim" }, "east": { "to": "rust_almon" } },
+      "exits": { "west": { "to": "rust_angelim" }, "east": { "to": "rust_almon" }, "south": { "to": "rust_oatshorts" } },
       "actions": [
         {
           "id": "pinch_breu",
@@ -20849,11 +20866,28 @@
         }
       ]
     },
+    "rust_oatshorts": {
+      "name": "Rust Oatshorts",
+      "desc": "A dry oatshorts south of the breu. Packed rust coats oatshorts.",
+      "brief": "Dry oatshorts, packed rust.",
+      "exits": { "north": { "to": "rust_breu" } },
+      "actions": [
+        {
+          "id": "pinch_oatshorts",
+          "label": "pinch the oatshorts",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatshorts. They packed it on the breu and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_almon": {
       "name": "Rust Almon",
       "desc": "A dry almon east of the breu. Packed rust coats almon.",
       "brief": "Dry almon, packed rust.",
-      "exits": { "west": { "to": "rust_breu" }, "east": { "to": "rust_gisok" } },
+      "exits": { "west": { "to": "rust_breu" }, "east": { "to": "rust_gisok" }, "south": { "to": "rust_ryeshorts" } },
       "actions": [
         {
           "id": "pinch_almon",
@@ -20866,11 +20900,28 @@
         }
       ]
     },
+    "rust_ryeshorts": {
+      "name": "Rust Ryeshorts",
+      "desc": "A dry ryeshorts south of the almon. Packed rust coats ryeshorts.",
+      "brief": "Dry ryeshorts, packed rust.",
+      "exits": { "north": { "to": "rust_almon" } },
+      "actions": [
+        {
+          "id": "pinch_ryeshorts",
+          "label": "pinch the ryeshorts",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryeshorts. They packed it on the almon and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_gisok": {
       "name": "Rust Gisok",
       "desc": "A dry gisok east of the almon. Packed rust coats gisok.",
       "brief": "Dry gisok, packed rust.",
-      "exits": { "west": { "to": "rust_almon" }, "east": { "to": "rust_greybox" } },
+      "exits": { "west": { "to": "rust_almon" }, "east": { "to": "rust_greybox" }, "south": { "to": "rust_durummiddlings" } },
       "actions": [
         {
           "id": "pinch_gisok",
@@ -20879,6 +20930,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gisok. They packed it on the almon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durummiddlings": {
+      "name": "Rust Durummiddlings",
+      "desc": "A dry durummiddlings south of the gisok. Packed rust coats durummiddlings.",
+      "brief": "Dry durummiddlings, packed rust.",
+      "exits": { "north": { "to": "rust_gisok" } },
+      "actions": [
+        {
+          "id": "pinch_durummiddlings",
+          "label": "pinch the durummiddlings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durummiddlings. They packed it on the gisok and packed rust around it."]
           ]
         }
       ]
@@ -20904,7 +20972,7 @@
       "name": "Rust Keelson",
       "desc": "A dry keelson east of the rib. Packed rust coats a keelson.",
       "brief": "Dry keelson, packed rust.",
-      "exits": { "west": { "to": "rust_rib" }, "east": { "to": "rust_boltrope" } },
+      "exits": { "west": { "to": "rust_rib" }, "east": { "to": "rust_boltrope" }, "south": { "to": "rust_foniomiddlings" } },
       "actions": [
         {
           "id": "pinch_keelson",
@@ -20917,11 +20985,28 @@
         }
       ]
     },
+    "rust_foniomiddlings": {
+      "name": "Rust Foniomiddlings",
+      "desc": "A dry foniomiddlings south of the keelson. Packed rust coats foniomiddlings.",
+      "brief": "Dry foniomiddlings, packed rust.",
+      "exits": { "north": { "to": "rust_keelson" } },
+      "actions": [
+        {
+          "id": "pinch_foniomiddlings",
+          "label": "pinch the foniomiddlings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniomiddlings. They packed it on the keelson and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_boltrope": {
       "name": "Rust Boltrope",
       "desc": "A dry boltrope east of the keelson. Packed rust coats a boltrope.",
       "brief": "Dry boltrope, packed rust.",
-      "exits": { "west": { "to": "rust_keelson" }, "east": { "to": "rust_futtockband" } },
+      "exits": { "west": { "to": "rust_keelson" }, "east": { "to": "rust_futtockband" }, "south": { "to": "rust_teffmiddlings" } },
       "actions": [
         {
           "id": "pinch_boltrope",
@@ -20934,11 +21019,28 @@
         }
       ]
     },
+    "rust_teffmiddlings": {
+      "name": "Rust Teffmiddlings",
+      "desc": "A dry teffmiddlings south of the boltrope. Packed rust coats teffmiddlings.",
+      "brief": "Dry teffmiddlings, packed rust.",
+      "exits": { "north": { "to": "rust_boltrope" } },
+      "actions": [
+        {
+          "id": "pinch_teffmiddlings",
+          "label": "pinch the teffmiddlings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffmiddlings. They packed it on the boltrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_futtockband": {
       "name": "Rust Futtockband",
       "desc": "A dry futtockband east of the boltrope. Packed rust coats a futtockband.",
       "brief": "Dry futtockband, packed rust.",
-      "exits": { "west": { "to": "rust_boltrope" }, "east": { "to": "rust_sandarac" } },
+      "exits": { "west": { "to": "rust_boltrope" }, "east": { "to": "rust_sandarac" }, "south": { "to": "rust_barleymiddlings" } },
       "actions": [
         {
           "id": "pinch_futtockband",
@@ -20951,11 +21053,28 @@
         }
       ]
     },
+    "rust_barleymiddlings": {
+      "name": "Rust Barleymiddlings",
+      "desc": "A dry barleymiddlings south of the futtockband. Packed rust coats barleymiddlings.",
+      "brief": "Dry barleymiddlings, packed rust.",
+      "exits": { "north": { "to": "rust_futtockband" } },
+      "actions": [
+        {
+          "id": "pinch_barleymiddlings",
+          "label": "pinch the barleymiddlings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleymiddlings. They packed it on the futtockband and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sandarac": {
       "name": "Rust Sandarac",
       "desc": "A dry sandarac east of the futtockband. Packed rust coats sandarac.",
       "brief": "Dry sandarac, packed rust.",
-      "exits": { "west": { "to": "rust_futtockband" }, "east": { "to": "rust_afzelia" } },
+      "exits": { "west": { "to": "rust_futtockband" }, "east": { "to": "rust_afzelia" }, "south": { "to": "rust_sorghimmiddlings" } },
       "actions": [
         {
           "id": "pinch_sandarac",
@@ -20964,6 +21083,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sandarac. They laid it on the futtockband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghimmiddlings": {
+      "name": "Rust Sorghimmiddlings",
+      "desc": "A dry sorghimmiddlings south of the sandarac. Packed rust coats sorghimmiddlings.",
+      "brief": "Dry sorghimmiddlings, packed rust.",
+      "exits": { "north": { "to": "rust_sandarac" } },
+      "actions": [
+        {
+          "id": "pinch_sorghimmiddlings",
+          "label": "pinch the sorghimmiddlings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghimmiddlings. They packed it on the sandarac and packed rust around it."]
           ]
         }
       ]
@@ -41546,12 +41682,24 @@
     "pinch the makore",
     "go east",
     "pinch the angelim",
+    "go south",
+    "pinch the milletshorts",
+    "go north",
     "go east",
     "pinch the breu",
+    "go south",
+    "pinch the oatshorts",
+    "go north",
     "go east",
     "pinch the almon",
+    "go south",
+    "pinch the ryeshorts",
+    "go north",
     "go east",
     "pinch the gisok",
+    "go south",
+    "pinch the durummiddlings",
+    "go north",
     "go east",
     "pinch the greybox",
     "go west",
@@ -41566,12 +41714,24 @@
     "go north",
     "go east",
     "pinch the keelson",
+    "go south",
+    "pinch the foniomiddlings",
+    "go north",
     "go east",
     "pinch the boltrope",
+    "go south",
+    "pinch the teffmiddlings",
+    "go north",
     "go east",
     "pinch the futtockband",
+    "go south",
+    "pinch the barleymiddlings",
+    "go north",
     "go east",
     "pinch the sandarac",
+    "go south",
+    "pinch the sorghimmiddlings",
+    "go north",
     "go east",
     "pinch the afzelia",
     "go south",
