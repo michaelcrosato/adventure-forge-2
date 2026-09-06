@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15570,
+  "maxScore": 15610,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -17011,7 +17011,7 @@
       "name": "Rust Pinegum",
       "desc": "A dry pinegum east of the running. Packed rust coats pinegum.",
       "brief": "Dry pinegum, packed rust.",
-      "exits": { "west": { "to": "rust_running" }, "east": { "to": "rust_minium" }, "south": { "to": "rust_teffstrong" } },
+      "exits": { "west": { "to": "rust_running" }, "east": { "to": "rust_minium" }, "south": { "to": "rust_teffstrong" }, "north": { "to": "rust_durumpint" } },
       "actions": [
         {
           "id": "pinch_pinegum",
@@ -17020,6 +17020,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pinegum. They packed it on the running and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumpint": {
+      "name": "Rust Durumpint",
+      "desc": "A dry durumpint north of the pinegum. Packed rust coats durumpint.",
+      "brief": "Dry durumpint, packed rust.",
+      "exits": { "south": { "to": "rust_pinegum" } },
+      "actions": [
+        {
+          "id": "pinch_durumpint",
+          "label": "pinch the durumpint",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumpint. They packed it on the pinegum and packed rust around it."]
           ]
         }
       ]
@@ -17045,7 +17062,7 @@
       "name": "Rust Minium",
       "desc": "A dry minium east of the pinegum. Packed rust coats minium.",
       "brief": "Dry minium, packed rust.",
-      "exits": { "west": { "to": "rust_pinegum" }, "east": { "to": "rust_wandoo" }, "south": { "to": "rust_barleystrong" } },
+      "exits": { "west": { "to": "rust_pinegum" }, "east": { "to": "rust_wandoo" }, "south": { "to": "rust_barleystrong" }, "north": { "to": "rust_foniopint" } },
       "actions": [
         {
           "id": "pinch_minium",
@@ -17054,6 +17071,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard minium. They packed it on the pinegum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniopint": {
+      "name": "Rust Foniopint",
+      "desc": "A dry foniopint north of the minium. Packed rust coats foniopint.",
+      "brief": "Dry foniopint, packed rust.",
+      "exits": { "south": { "to": "rust_minium" } },
+      "actions": [
+        {
+          "id": "pinch_foniopint",
+          "label": "pinch the foniopint",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniopint. They packed it on the minium and packed rust around it."]
           ]
         }
       ]
@@ -17079,7 +17113,7 @@
       "name": "Rust Wandoo",
       "desc": "A dry wandoo east of the minium. Packed rust coats wandoo.",
       "brief": "Dry wandoo, packed rust.",
-      "exits": { "west": { "to": "rust_minium" }, "east": { "to": "rust_teatree" }, "south": { "to": "rust_sorghumstrong" } },
+      "exits": { "west": { "to": "rust_minium" }, "east": { "to": "rust_teatree" }, "south": { "to": "rust_sorghumstrong" }, "north": { "to": "rust_teffpint" } },
       "actions": [
         {
           "id": "pinch_wandoo",
@@ -17088,6 +17122,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wandoo. They packed it on the minium and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffpint": {
+      "name": "Rust Teffpint",
+      "desc": "A dry teffpint north of the wandoo. Packed rust coats teffpint.",
+      "brief": "Dry teffpint, packed rust.",
+      "exits": { "south": { "to": "rust_wandoo" } },
+      "actions": [
+        {
+          "id": "pinch_teffpint",
+          "label": "pinch the teffpint",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffpint. They packed it on the wandoo and packed rust around it."]
           ]
         }
       ]
@@ -17113,7 +17164,7 @@
       "name": "Rust Teatree",
       "desc": "A dry teatree east of the wandoo. Packed rust coats teatree.",
       "brief": "Dry teatree, packed rust.",
-      "exits": { "west": { "to": "rust_wandoo" }, "east": { "to": "rust_macadamia" }, "south": { "to": "rust_milletstrong" } },
+      "exits": { "west": { "to": "rust_wandoo" }, "east": { "to": "rust_macadamia" }, "south": { "to": "rust_milletstrong" }, "north": { "to": "rust_barleypint" } },
       "actions": [
         {
           "id": "pinch_teatree",
@@ -17122,6 +17173,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard teatree. They packed it on the wandoo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleypint": {
+      "name": "Rust Barleypint",
+      "desc": "A dry barleypint north of the teatree. Packed rust coats barleypint.",
+      "brief": "Dry barleypint, packed rust.",
+      "exits": { "south": { "to": "rust_teatree" } },
+      "actions": [
+        {
+          "id": "pinch_barleypint",
+          "label": "pinch the barleypint",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleypint. They packed it on the teatree and packed rust around it."]
           ]
         }
       ]
@@ -17147,7 +17215,7 @@
       "name": "Rust Macadamia",
       "desc": "A dry macadamia east of the teatree. Packed rust coats macadamia.",
       "brief": "Dry macadamia, packed rust.",
-      "exits": { "west": { "to": "rust_teatree" }, "east": { "to": "rust_bristlecone" }, "south": { "to": "rust_cornstrong" } },
+      "exits": { "west": { "to": "rust_teatree" }, "east": { "to": "rust_bristlecone" }, "south": { "to": "rust_cornstrong" }, "north": { "to": "rust_sorghumpint" } },
       "actions": [
         {
           "id": "pinch_macadamia",
@@ -17156,6 +17224,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard macadamia. They packed it on the teatree and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumpint": {
+      "name": "Rust Sorghumpint",
+      "desc": "A dry sorghumpint north of the macadamia. Packed rust coats sorghumpint.",
+      "brief": "Dry sorghumpint, packed rust.",
+      "exits": { "south": { "to": "rust_macadamia" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumpint",
+          "label": "pinch the sorghumpint",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumpint. They packed it on the macadamia and packed rust around it."]
           ]
         }
       ]
@@ -17181,7 +17266,7 @@
       "name": "Rust Bristlecone",
       "desc": "A dry bristlecone east of the macadamia. Packed rust coats bristlecone.",
       "brief": "Dry bristlecone, packed rust.",
-      "exits": { "west": { "to": "rust_macadamia" }, "east": { "to": "rust_houhere" }, "south": { "to": "rust_wineberry" } },
+      "exits": { "west": { "to": "rust_macadamia" }, "east": { "to": "rust_houhere" }, "south": { "to": "rust_wineberry" }, "north": { "to": "rust_milletpint" } },
       "actions": [
         {
           "id": "pinch_bristlecone",
@@ -17190,6 +17275,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bristlecone. They packed it on the macadamia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletpint": {
+      "name": "Rust Milletpint",
+      "desc": "A dry milletpint north of the bristlecone. Packed rust coats milletpint.",
+      "brief": "Dry milletpint, packed rust.",
+      "exits": { "south": { "to": "rust_bristlecone" } },
+      "actions": [
+        {
+          "id": "pinch_milletpint",
+          "label": "pinch the milletpint",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletpint. They packed it on the bristlecone and packed rust around it."]
           ]
         }
       ]
@@ -17266,7 +17368,7 @@
       "name": "Rust Icicle",
       "desc": "A dry icicle east of the hawser. Packed rust coats an icicle.",
       "brief": "Dry icicle, packed rust.",
-      "exits": { "west": { "to": "rust_hawser" }, "east": { "to": "rust_galipot" }, "south": { "to": "rust_oatstrong" } },
+      "exits": { "west": { "to": "rust_hawser" }, "east": { "to": "rust_galipot" }, "south": { "to": "rust_oatstrong" }, "north": { "to": "rust_cornpint" } },
       "actions": [
         {
           "id": "pinch_icicle",
@@ -17275,6 +17377,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard icicle. They hung it on the hawser and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornpint": {
+      "name": "Rust Cornpint",
+      "desc": "A dry cornpint north of the icicle. Packed rust coats cornpint.",
+      "brief": "Dry cornpint, packed rust.",
+      "exits": { "south": { "to": "rust_icicle" } },
+      "actions": [
+        {
+          "id": "pinch_cornpint",
+          "label": "pinch the cornpint",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornpint. They packed it on the icicle and packed rust around it."]
           ]
         }
       ]
@@ -17300,7 +17419,7 @@
       "name": "Rust Galipot",
       "desc": "A dry galipot east of the icicle. Packed rust coats galipot.",
       "brief": "Dry galipot, packed rust.",
-      "exits": { "west": { "to": "rust_icicle" }, "east": { "to": "rust_ceruse" }, "south": { "to": "rust_durumfamily" } },
+      "exits": { "west": { "to": "rust_icicle" }, "east": { "to": "rust_ceruse" }, "south": { "to": "rust_durumfamily" }, "north": { "to": "rust_oatpint" } },
       "actions": [
         {
           "id": "pinch_galipot",
@@ -17309,6 +17428,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard galipot. They packed it on the icicle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatpint": {
+      "name": "Rust Oatpint",
+      "desc": "A dry oatpint north of the galipot. Packed rust coats oatpint.",
+      "brief": "Dry oatpint, packed rust.",
+      "exits": { "south": { "to": "rust_galipot" } },
+      "actions": [
+        {
+          "id": "pinch_oatpint",
+          "label": "pinch the oatpint",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatpint. They packed it on the galipot and packed rust around it."]
           ]
         }
       ]
@@ -55828,31 +55964,49 @@
     "go north",
     "go east",
     "pinch the pinegum",
+    "go north",
+    "pinch the durumpint",
+    "go south",
     "go south",
     "pinch the teffstrong",
     "go north",
     "go east",
     "pinch the minium",
+    "go north",
+    "pinch the foniopint",
+    "go south",
     "go south",
     "pinch the barleystrong",
     "go north",
     "go east",
     "pinch the wandoo",
+    "go north",
+    "pinch the teffpint",
+    "go south",
     "go south",
     "pinch the sorghumstrong",
     "go north",
     "go east",
     "pinch the teatree",
+    "go north",
+    "pinch the barleypint",
+    "go south",
     "go south",
     "pinch the milletstrong",
     "go north",
     "go east",
     "pinch the macadamia",
+    "go north",
+    "pinch the sorghumpint",
+    "go south",
     "go south",
     "pinch the cornstrong",
     "go north",
     "go east",
     "pinch the bristlecone",
+    "go north",
+    "pinch the milletpint",
+    "go south",
     "go south",
     "pinch the wineberry",
     "go north",
@@ -55874,11 +56028,17 @@
     "pinch the hawser",
     "go east",
     "pinch the icicle",
+    "go north",
+    "pinch the cornpint",
+    "go south",
     "go south",
     "pinch the oatstrong",
     "go north",
     "go east",
     "pinch the galipot",
+    "go north",
+    "pinch the oatpint",
+    "go south",
     "go south",
     "pinch the durumfamily",
     "go north",
