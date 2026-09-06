@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12090,
+  "maxScore": 12130,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -16110,7 +16110,7 @@
       "name": "Rust Galipot",
       "desc": "A dry galipot east of the icicle. Packed rust coats galipot.",
       "brief": "Dry galipot, packed rust.",
-      "exits": { "west": { "to": "rust_icicle" }, "east": { "to": "rust_ceruse" } },
+      "exits": { "west": { "to": "rust_icicle" }, "east": { "to": "rust_ceruse" }, "south": { "to": "rust_durumfamily" } },
       "actions": [
         {
           "id": "pinch_galipot",
@@ -16123,11 +16123,28 @@
         }
       ]
     },
+    "rust_durumfamily": {
+      "name": "Rust Durumfamily",
+      "desc": "A dry durumfamily south of the galipot. Packed rust coats durumfamily.",
+      "brief": "Dry durumfamily, packed rust.",
+      "exits": { "north": { "to": "rust_galipot" } },
+      "actions": [
+        {
+          "id": "pinch_durumfamily",
+          "label": "pinch the durumfamily",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumfamily. They packed it on the galipot and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ceruse": {
       "name": "Rust Ceruse",
       "desc": "A dry ceruse east of the galipot. Packed rust coats ceruse.",
       "brief": "Dry ceruse, packed rust.",
-      "exits": { "west": { "to": "rust_galipot" }, "east": { "to": "rust_gimlet" } },
+      "exits": { "west": { "to": "rust_galipot" }, "east": { "to": "rust_gimlet" }, "south": { "to": "rust_foniofamily" } },
       "actions": [
         {
           "id": "pinch_ceruse",
@@ -16140,11 +16157,28 @@
         }
       ]
     },
+    "rust_foniofamily": {
+      "name": "Rust Foniofamily",
+      "desc": "A dry foniofamily south of the ceruse. Packed rust coats foniofamily.",
+      "brief": "Dry foniofamily, packed rust.",
+      "exits": { "north": { "to": "rust_ceruse" } },
+      "actions": [
+        {
+          "id": "pinch_foniofamily",
+          "label": "pinch the foniofamily",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniofamily. They packed it on the ceruse and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_gimlet": {
       "name": "Rust Gimlet",
       "desc": "A dry gimlet east of the ceruse. Packed rust coats gimlet.",
       "brief": "Dry gimlet, packed rust.",
-      "exits": { "west": { "to": "rust_ceruse" }, "east": { "to": "rust_banksia" } },
+      "exits": { "west": { "to": "rust_ceruse" }, "east": { "to": "rust_banksia" }, "south": { "to": "rust_tefffamily" } },
       "actions": [
         {
           "id": "pinch_gimlet",
@@ -16157,11 +16191,28 @@
         }
       ]
     },
+    "rust_tefffamily": {
+      "name": "Rust Tefffamily",
+      "desc": "A dry tefffamily south of the gimlet. Packed rust coats tefffamily.",
+      "brief": "Dry tefffamily, packed rust.",
+      "exits": { "north": { "to": "rust_gimlet" } },
+      "actions": [
+        {
+          "id": "pinch_tefffamily",
+          "label": "pinch the tefffamily",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefffamily. They packed it on the gimlet and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_banksia": {
       "name": "Rust Banksia",
       "desc": "A dry banksia east of the gimlet. Packed rust coats banksia.",
       "brief": "Dry banksia, packed rust.",
-      "exits": { "west": { "to": "rust_gimlet" }, "east": { "to": "rust_hooppine" } },
+      "exits": { "west": { "to": "rust_gimlet" }, "east": { "to": "rust_hooppine" }, "south": { "to": "rust_barleyfamily" } },
       "actions": [
         {
           "id": "pinch_banksia",
@@ -16174,11 +16225,28 @@
         }
       ]
     },
+    "rust_barleyfamily": {
+      "name": "Rust Barleyfamily",
+      "desc": "A dry barleyfamily south of the banksia. Packed rust coats barleyfamily.",
+      "brief": "Dry barleyfamily, packed rust.",
+      "exits": { "north": { "to": "rust_banksia" } },
+      "actions": [
+        {
+          "id": "pinch_barleyfamily",
+          "label": "pinch the barleyfamily",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyfamily. They packed it on the banksia and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_hooppine": {
       "name": "Rust Hooppine",
       "desc": "A dry hooppine east of the banksia. Packed rust coats hooppine.",
       "brief": "Dry hooppine, packed rust.",
-      "exits": { "west": { "to": "rust_banksia" }, "east": { "to": "rust_jeffreypine" } },
+      "exits": { "west": { "to": "rust_banksia" }, "east": { "to": "rust_jeffreypine" }, "south": { "to": "rust_sorghumfamily" } },
       "actions": [
         {
           "id": "pinch_hooppine",
@@ -16187,6 +16255,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hooppine. They packed it on the banksia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumfamily": {
+      "name": "Rust Sorghumfamily",
+      "desc": "A dry sorghumfamily south of the hooppine. Packed rust coats sorghumfamily.",
+      "brief": "Dry sorghumfamily, packed rust.",
+      "exits": { "north": { "to": "rust_hooppine" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumfamily",
+          "label": "pinch the sorghumfamily",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumfamily. They packed it on the hooppine and packed rust around it."]
           ]
         }
       ]
@@ -16246,7 +16331,7 @@
       "name": "Rust Thole",
       "desc": "A dry thole east of the grommet. Packed rust coats a thole.",
       "brief": "Dry thole, packed rust.",
-      "exits": { "west": { "to": "rust_grommet" }, "east": { "to": "rust_carrick" } },
+      "exits": { "west": { "to": "rust_grommet" }, "east": { "to": "rust_carrick" }, "south": { "to": "rust_milletfamily" } },
       "actions": [
         {
           "id": "pinch_thole",
@@ -16259,11 +16344,28 @@
         }
       ]
     },
+    "rust_milletfamily": {
+      "name": "Rust Milletfamily",
+      "desc": "A dry milletfamily south of the thole. Packed rust coats milletfamily.",
+      "brief": "Dry milletfamily, packed rust.",
+      "exits": { "north": { "to": "rust_thole" } },
+      "actions": [
+        {
+          "id": "pinch_milletfamily",
+          "label": "pinch the milletfamily",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletfamily. They packed it on the thole and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_carrick": {
       "name": "Rust Carrick",
       "desc": "A dry carrick east of the thole. Packed rust coats a carrick.",
       "brief": "Dry carrick, packed rust.",
-      "exits": { "west": { "to": "rust_thole" }, "east": { "to": "rust_rosin" } },
+      "exits": { "west": { "to": "rust_thole" }, "east": { "to": "rust_rosin" }, "south": { "to": "rust_cornfamily" } },
       "actions": [
         {
           "id": "pinch_carrick",
@@ -16272,6 +16374,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard carrick. They bent it on the thole and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornfamily": {
+      "name": "Rust Cornfamily",
+      "desc": "A dry cornfamily south of the carrick. Packed rust coats cornfamily.",
+      "brief": "Dry cornfamily, packed rust.",
+      "exits": { "north": { "to": "rust_carrick" } },
+      "actions": [
+        {
+          "id": "pinch_cornfamily",
+          "label": "pinch the cornfamily",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornfamily. They packed it on the carrick and packed rust around it."]
           ]
         }
       ]
@@ -16348,7 +16467,7 @@
       "name": "Rust Kedge",
       "desc": "A dry kedge east of the boomkin. Packed rust coats a kedge.",
       "brief": "Dry kedge, packed rust.",
-      "exits": { "west": { "to": "rust_boomkin" }, "east": { "to": "rust_midshipman" } },
+      "exits": { "west": { "to": "rust_boomkin" }, "east": { "to": "rust_midshipman" }, "south": { "to": "rust_oatfamily" } },
       "actions": [
         {
           "id": "pinch_kedge",
@@ -16357,6 +16476,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kedge. They laid it on the boomkin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatfamily": {
+      "name": "Rust Oatfamily",
+      "desc": "A dry oatfamily south of the kedge. Packed rust coats oatfamily.",
+      "brief": "Dry oatfamily, packed rust.",
+      "exits": { "north": { "to": "rust_kedge" } },
+      "actions": [
+        {
+          "id": "pinch_oatfamily",
+          "label": "pinch the oatfamily",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatfamily. They packed it on the kedge and packed rust around it."]
           ]
         }
       ]
@@ -43837,14 +43973,29 @@
     "pinch the icicle",
     "go east",
     "pinch the galipot",
+    "go south",
+    "pinch the durumfamily",
+    "go north",
     "go east",
     "pinch the ceruse",
+    "go south",
+    "pinch the foniofamily",
+    "go north",
     "go east",
     "pinch the gimlet",
+    "go south",
+    "pinch the tefffamily",
+    "go north",
     "go east",
     "pinch the banksia",
+    "go south",
+    "pinch the barleyfamily",
+    "go north",
     "go east",
     "pinch the hooppine",
+    "go south",
+    "pinch the sorghumfamily",
+    "go north",
     "go east",
     "pinch the jeffreypine",
     "go south",
@@ -43864,8 +44015,14 @@
     "go east",
     "go east",
     "pinch the thole",
+    "go south",
+    "pinch the milletfamily",
+    "go north",
     "go east",
     "pinch the carrick",
+    "go south",
+    "pinch the cornfamily",
+    "go north",
     "go east",
     "pinch the rosin",
     "go west",
@@ -43888,6 +44045,9 @@
     "pinch the boomkin",
     "go east",
     "pinch the kedge",
+    "go south",
+    "pinch the oatfamily",
+    "go north",
     "go east",
     "pinch the midshipman",
     "go south",
