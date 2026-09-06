@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12170,
+  "maxScore": 12210,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -15668,7 +15668,7 @@
       "name": "Rust Deadeye",
       "desc": "A dry deadeye east of the shim. Packed rust coats a deadeye.",
       "brief": "Dry deadeye, packed rust.",
-      "exits": { "west": { "to": "rust_shim" }, "east": { "to": "rust_gantline" } },
+      "exits": { "west": { "to": "rust_shim" }, "east": { "to": "rust_gantline" }, "south": { "to": "rust_durumweak" } },
       "actions": [
         {
           "id": "pinch_deadeye",
@@ -15681,11 +15681,28 @@
         }
       ]
     },
+    "rust_durumweak": {
+      "name": "Rust Durumweak",
+      "desc": "A dry durumweak south of the deadeye. Packed rust coats durumweak.",
+      "brief": "Dry durumweak, packed rust.",
+      "exits": { "north": { "to": "rust_deadeye" } },
+      "actions": [
+        {
+          "id": "pinch_durumweak",
+          "label": "pinch the durumweak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumweak. They packed it on the deadeye and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_gantline": {
       "name": "Rust Gantline",
       "desc": "A dry gantline east of the deadeye. Packed rust coats a gantline.",
       "brief": "Dry gantline, packed rust.",
-      "exits": { "west": { "to": "rust_deadeye" }, "east": { "to": "rust_trucker" } },
+      "exits": { "west": { "to": "rust_deadeye" }, "east": { "to": "rust_trucker" }, "south": { "to": "rust_fonioweak" } },
       "actions": [
         {
           "id": "pinch_gantline",
@@ -15698,11 +15715,28 @@
         }
       ]
     },
+    "rust_fonioweak": {
+      "name": "Rust Fonioweak",
+      "desc": "A dry fonioweak south of the gantline. Packed rust coats fonioweak.",
+      "brief": "Dry fonioweak, packed rust.",
+      "exits": { "north": { "to": "rust_gantline" } },
+      "actions": [
+        {
+          "id": "pinch_fonioweak",
+          "label": "pinch the fonioweak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioweak. They packed it on the gantline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_trucker": {
       "name": "Rust Trucker",
       "desc": "A dry trucker east of the gantline. Packed rust coats a trucker.",
       "brief": "Dry trucker, packed rust.",
-      "exits": { "west": { "to": "rust_gantline" }, "east": { "to": "rust_burgundy" } },
+      "exits": { "west": { "to": "rust_gantline" }, "east": { "to": "rust_burgundy" }, "south": { "to": "rust_teffweak" } },
       "actions": [
         {
           "id": "pinch_trucker",
@@ -15715,11 +15749,28 @@
         }
       ]
     },
+    "rust_teffweak": {
+      "name": "Rust Teffweak",
+      "desc": "A dry teffweak south of the trucker. Packed rust coats teffweak.",
+      "brief": "Dry teffweak, packed rust.",
+      "exits": { "north": { "to": "rust_trucker" } },
+      "actions": [
+        {
+          "id": "pinch_teffweak",
+          "label": "pinch the teffweak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffweak. They packed it on the trucker and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_burgundy": {
       "name": "Rust Burgundy",
       "desc": "A dry burgundy east of the trucker. Packed rust coats burgundy.",
       "brief": "Dry burgundy, packed rust.",
-      "exits": { "west": { "to": "rust_trucker" }, "east": { "to": "rust_safflower" } },
+      "exits": { "west": { "to": "rust_trucker" }, "east": { "to": "rust_safflower" }, "south": { "to": "rust_barleyweak" } },
       "actions": [
         {
           "id": "pinch_burgundy",
@@ -15732,11 +15783,28 @@
         }
       ]
     },
+    "rust_barleyweak": {
+      "name": "Rust Barleyweak",
+      "desc": "A dry barleyweak south of the burgundy. Packed rust coats barleyweak.",
+      "brief": "Dry barleyweak, packed rust.",
+      "exits": { "north": { "to": "rust_burgundy" } },
+      "actions": [
+        {
+          "id": "pinch_barleyweak",
+          "label": "pinch the barleyweak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyweak. They packed it on the burgundy and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_safflower": {
       "name": "Rust Safflower",
       "desc": "A dry safflower east of the burgundy. Packed rust coats safflower.",
       "brief": "Dry safflower, packed rust.",
-      "exits": { "west": { "to": "rust_burgundy" }, "east": { "to": "rust_mugga" } },
+      "exits": { "west": { "to": "rust_burgundy" }, "east": { "to": "rust_mugga" }, "south": { "to": "rust_sorghumweak" } },
       "actions": [
         {
           "id": "pinch_safflower",
@@ -15749,11 +15817,28 @@
         }
       ]
     },
+    "rust_sorghumweak": {
+      "name": "Rust Sorghumweak",
+      "desc": "A dry sorghumweak south of the safflower. Packed rust coats sorghumweak.",
+      "brief": "Dry sorghumweak, packed rust.",
+      "exits": { "north": { "to": "rust_safflower" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumweak",
+          "label": "pinch the sorghumweak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumweak. They packed it on the safflower and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_mugga": {
       "name": "Rust Mugga",
       "desc": "A dry mugga east of the safflower. Packed rust coats mugga.",
       "brief": "Dry mugga, packed rust.",
-      "exits": { "west": { "to": "rust_safflower" }, "east": { "to": "rust_melaleuca" } },
+      "exits": { "west": { "to": "rust_safflower" }, "east": { "to": "rust_melaleuca" }, "south": { "to": "rust_milletweak" } },
       "actions": [
         {
           "id": "pinch_mugga",
@@ -15766,11 +15851,28 @@
         }
       ]
     },
+    "rust_milletweak": {
+      "name": "Rust Milletweak",
+      "desc": "A dry milletweak south of the mugga. Packed rust coats milletweak.",
+      "brief": "Dry milletweak, packed rust.",
+      "exits": { "north": { "to": "rust_mugga" } },
+      "actions": [
+        {
+          "id": "pinch_milletweak",
+          "label": "pinch the milletweak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletweak. They packed it on the mugga and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_melaleuca": {
       "name": "Rust Melaleuca",
       "desc": "A dry melaleuca east of the mugga. Packed rust coats melaleuca.",
       "brief": "Dry melaleuca, packed rust.",
-      "exits": { "west": { "to": "rust_mugga" }, "east": { "to": "rust_cypresspine" } },
+      "exits": { "west": { "to": "rust_mugga" }, "east": { "to": "rust_cypresspine" }, "south": { "to": "rust_cornweak" } },
       "actions": [
         {
           "id": "pinch_melaleuca",
@@ -15783,11 +15885,28 @@
         }
       ]
     },
+    "rust_cornweak": {
+      "name": "Rust Cornweak",
+      "desc": "A dry cornweak south of the melaleuca. Packed rust coats cornweak.",
+      "brief": "Dry cornweak, packed rust.",
+      "exits": { "north": { "to": "rust_melaleuca" } },
+      "actions": [
+        {
+          "id": "pinch_cornweak",
+          "label": "pinch the cornweak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornweak. They packed it on the melaleuca and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cypresspine": {
       "name": "Rust Cypresspine",
       "desc": "A dry cypresspine east of the melaleuca. Packed rust coats cypresspine.",
       "brief": "Dry cypresspine, packed rust.",
-      "exits": { "west": { "to": "rust_melaleuca" }, "east": { "to": "rust_aleppo" } },
+      "exits": { "west": { "to": "rust_melaleuca" }, "east": { "to": "rust_aleppo" }, "south": { "to": "rust_oatweak" } },
       "actions": [
         {
           "id": "pinch_cypresspine",
@@ -15796,6 +15915,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cypresspine. They packed it on the melaleuca and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatweak": {
+      "name": "Rust Oatweak",
+      "desc": "A dry oatweak south of the cypresspine. Packed rust coats oatweak.",
+      "brief": "Dry oatweak, packed rust.",
+      "exits": { "north": { "to": "rust_cypresspine" } },
+      "actions": [
+        {
+          "id": "pinch_oatweak",
+          "label": "pinch the oatweak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatweak. They packed it on the cypresspine and packed rust around it."]
           ]
         }
       ]
@@ -44035,20 +44171,44 @@
     "go north",
     "go east",
     "pinch the deadeye",
+    "go south",
+    "pinch the durumweak",
+    "go north",
     "go east",
     "pinch the gantline",
+    "go south",
+    "pinch the fonioweak",
+    "go north",
     "go east",
     "pinch the trucker",
+    "go south",
+    "pinch the teffweak",
+    "go north",
     "go east",
     "pinch the burgundy",
+    "go south",
+    "pinch the barleyweak",
+    "go north",
     "go east",
     "pinch the safflower",
+    "go south",
+    "pinch the sorghumweak",
+    "go north",
     "go east",
     "pinch the mugga",
+    "go south",
+    "pinch the milletweak",
+    "go north",
     "go east",
     "pinch the melaleuca",
+    "go south",
+    "pinch the cornweak",
+    "go north",
     "go east",
     "pinch the cypresspine",
+    "go south",
+    "pinch the oatweak",
+    "go north",
     "go east",
     "pinch the aleppo",
     "go south",
