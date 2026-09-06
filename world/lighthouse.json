@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7770,
+  "maxScore": 7810,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6896,7 +6896,7 @@
       "name": "Rust Momifir",
       "desc": "A dry momifir east of the sugi. Packed rust coats momifir.",
       "brief": "Dry momifir, packed rust.",
-      "exits": { "west": { "to": "rust_sugi" } },
+      "exits": { "west": { "to": "rust_sugi" }, "east": { "to": "rust_nephrolepis" } },
       "actions": [
         {
           "id": "pinch_momifir",
@@ -6905,6 +6905,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard momifir. They packed it on the sugi and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_nephrolepis": {
+      "name": "Rust Nephrolepis",
+      "desc": "A dry nephrolepis east of the momifir. Packed rust coats nephrolepis.",
+      "brief": "Dry nephrolepis, packed rust.",
+      "exits": { "west": { "to": "rust_momifir" } },
+      "actions": [
+        {
+          "id": "pinch_nephrolepis",
+          "label": "pinch the nephrolepis",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nephrolepis. They packed it on the momifir and packed rust around it."]
           ]
         }
       ]
@@ -7219,7 +7236,7 @@
       "name": "Rust Subalpine",
       "desc": "A dry subalpine east of the whitefir. Packed rust coats subalpine.",
       "brief": "Dry subalpine, packed rust.",
-      "exits": { "west": { "to": "rust_whitefir" } },
+      "exits": { "west": { "to": "rust_whitefir" }, "east": { "to": "rust_sieboldii" } },
       "actions": [
         {
           "id": "pinch_subalpine",
@@ -7228,6 +7245,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard subalpine. They packed it on the whitefir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sieboldii": {
+      "name": "Rust Sieboldii",
+      "desc": "A dry sieboldii east of the subalpine. Packed rust coats sieboldii.",
+      "brief": "Dry sieboldii, packed rust.",
+      "exits": { "west": { "to": "rust_subalpine" } },
+      "actions": [
+        {
+          "id": "pinch_sieboldii",
+          "label": "pinch the sieboldii",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sieboldii. They packed it on the subalpine and packed rust around it."]
           ]
         }
       ]
@@ -7389,7 +7423,7 @@
       "name": "Rust Shastafir",
       "desc": "A dry shastafir east of the balsamfir. Packed rust coats shastafir.",
       "brief": "Dry shastafir, packed rust.",
-      "exits": { "west": { "to": "rust_balsamfir" } },
+      "exits": { "west": { "to": "rust_balsamfir" }, "east": { "to": "rust_firma" } },
       "actions": [
         {
           "id": "pinch_shastafir",
@@ -7398,6 +7432,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shastafir. They packed it on the balsamfir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_firma": {
+      "name": "Rust Firma",
+      "desc": "A dry firma east of the shastafir. Packed rust coats firma.",
+      "brief": "Dry firma, packed rust.",
+      "exits": { "west": { "to": "rust_shastafir" } },
+      "actions": [
+        {
+          "id": "pinch_firma",
+          "label": "pinch the firma",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard firma. They packed it on the shastafir and packed rust around it."]
           ]
         }
       ]
@@ -7576,7 +7627,7 @@
       "name": "Rust Nikkofir",
       "desc": "A dry nikkofir east of the hinoki. Packed rust coats nikkofir.",
       "brief": "Dry nikkofir, packed rust.",
-      "exits": { "west": { "to": "rust_hinoki" } },
+      "exits": { "west": { "to": "rust_hinoki" }, "east": { "to": "rust_koreana" } },
       "actions": [
         {
           "id": "pinch_nikkofir",
@@ -7585,6 +7636,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nikkofir. They packed it on the hinoki and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_koreana": {
+      "name": "Rust Koreana",
+      "desc": "A dry koreana east of the nikkofir. Packed rust coats koreana.",
+      "brief": "Dry koreana, packed rust.",
+      "exits": { "west": { "to": "rust_nikkofir" } },
+      "actions": [
+        {
+          "id": "pinch_koreana",
+          "label": "pinch the koreana",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard koreana. They packed it on the nikkofir and packed rust around it."]
           ]
         }
       ]
@@ -9089,7 +9157,7 @@
       "name": "Rust Veitchfir",
       "desc": "A dry veitchfir east of the yellowcedar. Packed rust coats veitchfir.",
       "brief": "Dry veitchfir, packed rust.",
-      "exits": { "west": { "to": "rust_yellowcedar" } },
+      "exits": { "west": { "to": "rust_yellowcedar" }, "east": { "to": "rust_sachalin" } },
       "actions": [
         {
           "id": "pinch_veitchfir",
@@ -9098,6 +9166,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard veitchfir. They packed it on the yellowcedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sachalin": {
+      "name": "Rust Sachalin",
+      "desc": "A dry sachalin east of the veitchfir. Packed rust coats sachalin.",
+      "brief": "Dry sachalin, packed rust.",
+      "exits": { "west": { "to": "rust_veitchfir" } },
+      "actions": [
+        {
+          "id": "pinch_sachalin",
+          "label": "pinch the sachalin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sachalin. They packed it on the veitchfir and packed rust around it."]
           ]
         }
       ]
@@ -9225,7 +9310,7 @@
       "name": "Rust Corkbark",
       "desc": "A dry corkbark east of the redcedar. Packed rust coats corkbark.",
       "brief": "Dry corkbark, packed rust.",
-      "exits": { "west": { "to": "rust_redcedar" } },
+      "exits": { "west": { "to": "rust_redcedar" }, "east": { "to": "rust_homolepis" } },
       "actions": [
         {
           "id": "pinch_corkbark",
@@ -9234,6 +9319,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard corkbark. They packed it on the redcedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_homolepis": {
+      "name": "Rust Homolepis",
+      "desc": "A dry homolepis east of the corkbark. Packed rust coats homolepis.",
+      "brief": "Dry homolepis, packed rust.",
+      "exits": { "west": { "to": "rust_corkbark" } },
+      "actions": [
+        {
+          "id": "pinch_homolepis",
+          "label": "pinch the homolepis",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard homolepis. They packed it on the corkbark and packed rust around it."]
           ]
         }
       ]
@@ -9378,7 +9480,7 @@
       "name": "Rust Nordmann",
       "desc": "A dry nordmann east of the amabilis. Packed rust coats nordmann.",
       "brief": "Dry nordmann, packed rust.",
-      "exits": { "west": { "to": "rust_amabilis" } },
+      "exits": { "west": { "to": "rust_amabilis" }, "east": { "to": "rust_maries" } },
       "actions": [
         {
           "id": "pinch_nordmann",
@@ -9387,6 +9489,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nordmann. They packed it on the amabilis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_maries": {
+      "name": "Rust Maries",
+      "desc": "A dry maries east of the nordmann. Packed rust coats maries.",
+      "brief": "Dry maries, packed rust.",
+      "exits": { "west": { "to": "rust_nordmann" } },
+      "actions": [
+        {
+          "id": "pinch_maries",
+          "label": "pinch the maries",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard maries. They packed it on the nordmann and packed rust around it."]
           ]
         }
       ]
@@ -9514,7 +9633,7 @@
       "name": "Rust Sitka",
       "desc": "A dry sitka east of the fraserfir. Packed rust coats sitka.",
       "brief": "Dry sitka, packed rust.",
-      "exits": { "west": { "to": "rust_fraserfir" } },
+      "exits": { "west": { "to": "rust_fraserfir" }, "east": { "to": "rust_kawakami" } },
       "actions": [
         {
           "id": "pinch_sitka",
@@ -9523,6 +9642,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sitka. They packed it on the fraserfir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kawakami": {
+      "name": "Rust Kawakami",
+      "desc": "A dry kawakami east of the sitka. Packed rust coats kawakami.",
+      "brief": "Dry kawakami, packed rust.",
+      "exits": { "west": { "to": "rust_sitka" } },
+      "actions": [
+        {
+          "id": "pinch_kawakami",
+          "label": "pinch the kawakami",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kawakami. They packed it on the sitka and packed rust around it."]
           ]
         }
       ]
@@ -27557,6 +27693,9 @@
     "pinch the sugi",
     "go east",
     "pinch the momifir",
+    "go east",
+    "pinch the nephrolepis",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27613,6 +27752,9 @@
     "pinch the whitefir",
     "go east",
     "pinch the subalpine",
+    "go east",
+    "pinch the sieboldii",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27641,6 +27783,9 @@
     "pinch the balsamfir",
     "go east",
     "pinch the shastafir",
+    "go east",
+    "pinch the firma",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27673,6 +27818,9 @@
     "pinch the hinoki",
     "go east",
     "pinch the nikkofir",
+    "go east",
+    "pinch the koreana",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27940,6 +28088,9 @@
     "pinch the yellowcedar",
     "go east",
     "pinch the veitchfir",
+    "go east",
+    "pinch the sachalin",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27964,6 +28115,9 @@
     "pinch the redcedar",
     "go east",
     "pinch the corkbark",
+    "go east",
+    "pinch the homolepis",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27990,6 +28144,9 @@
     "pinch the amabilis",
     "go east",
     "pinch the nordmann",
+    "go east",
+    "pinch the maries",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28014,6 +28171,9 @@
     "pinch the fraserfir",
     "go east",
     "pinch the sitka",
+    "go east",
+    "pinch the kawakami",
+    "go west",
     "go west",
     "go west",
     "go west",
