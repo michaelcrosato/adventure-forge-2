@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9610,
+  "maxScore": 9650,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -27840,7 +27840,7 @@
       "name": "Rust Butternut",
       "desc": "A dry butternut east of the fir. Packed rust coats butternut.",
       "brief": "Dry butternut, packed rust.",
-      "exits": { "west": { "to": "rust_fir" }, "east": { "to": "rust_pumice" } },
+      "exits": { "west": { "to": "rust_fir" }, "east": { "to": "rust_pumice" }, "south": { "to": "rust_lettuce" } },
       "actions": [
         {
           "id": "pinch_butternut",
@@ -27853,11 +27853,28 @@
         }
       ]
     },
+    "rust_lettuce": {
+      "name": "Rust Lettuce",
+      "desc": "A dry lettuce south of the butternut. Packed rust coats lettuce.",
+      "brief": "Dry lettuce, packed rust.",
+      "exits": { "north": { "to": "rust_butternut" } },
+      "actions": [
+        {
+          "id": "pinch_lettuce",
+          "label": "pinch the lettuce",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lettuce. They packed it on the butternut and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_pumice": {
       "name": "Rust Pumice",
       "desc": "A dry pumice east of the butternut. Packed rust coats pumice.",
       "brief": "Dry pumice, packed rust.",
-      "exits": { "west": { "to": "rust_butternut" }, "east": { "to": "rust_chalcocite" } },
+      "exits": { "west": { "to": "rust_butternut" }, "east": { "to": "rust_chalcocite" }, "south": { "to": "rust_brussels" } },
       "actions": [
         {
           "id": "pinch_pumice",
@@ -27870,11 +27887,28 @@
         }
       ]
     },
+    "rust_brussels": {
+      "name": "Rust Brussels",
+      "desc": "A dry brussels south of the pumice. Packed rust coats brussels.",
+      "brief": "Dry brussels, packed rust.",
+      "exits": { "north": { "to": "rust_pumice" } },
+      "actions": [
+        {
+          "id": "pinch_brussels",
+          "label": "pinch the brussels",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard brussels. They packed it on the pumice and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_chalcocite": {
       "name": "Rust Chalcocite",
       "desc": "A dry chalcocite east of the pumice. Packed rust coats chalcocite.",
       "brief": "Dry chalcocite, packed rust.",
-      "exits": { "west": { "to": "rust_pumice" }, "east": { "to": "rust_franklinite" } },
+      "exits": { "west": { "to": "rust_pumice" }, "east": { "to": "rust_franklinite" }, "south": { "to": "rust_cauliflower" } },
       "actions": [
         {
           "id": "pinch_chalcocite",
@@ -27883,6 +27917,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chalcocite. They packed it on the pumice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cauliflower": {
+      "name": "Rust Cauliflower",
+      "desc": "A dry cauliflower south of the chalcocite. Packed rust coats cauliflower.",
+      "brief": "Dry cauliflower, packed rust.",
+      "exits": { "north": { "to": "rust_chalcocite" } },
+      "actions": [
+        {
+          "id": "pinch_cauliflower",
+          "label": "pinch the cauliflower",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cauliflower. They packed it on the chalcocite and packed rust around it."]
           ]
         }
       ]
@@ -27959,7 +28010,7 @@
       "name": "Rust Hambroline",
       "desc": "A dry hambroline east of the sheer. Packed rust coats hambroline.",
       "brief": "Dry hambroline, packed rust.",
-      "exits": { "west": { "to": "rust_sheer" }, "east": { "to": "rust_headcringle" } },
+      "exits": { "west": { "to": "rust_sheer" }, "east": { "to": "rust_headcringle" }, "south": { "to": "rust_broccoli" } },
       "actions": [
         {
           "id": "pinch_hambroline",
@@ -27972,11 +28023,28 @@
         }
       ]
     },
+    "rust_broccoli": {
+      "name": "Rust Broccoli",
+      "desc": "A dry broccoli south of the hambroline. Packed rust coats broccoli.",
+      "brief": "Dry broccoli, packed rust.",
+      "exits": { "north": { "to": "rust_hambroline" } },
+      "actions": [
+        {
+          "id": "pinch_broccoli",
+          "label": "pinch the broccoli",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard broccoli. They packed it on the hambroline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_headcringle": {
       "name": "Rust Headcringle",
       "desc": "A dry headcringle east of the hambroline. Packed rust coats a headcringle.",
       "brief": "Dry headcringle, packed rust.",
-      "exits": { "west": { "to": "rust_hambroline" }, "east": { "to": "rust_burlap" } },
+      "exits": { "west": { "to": "rust_hambroline" }, "east": { "to": "rust_burlap" }, "south": { "to": "rust_collard" } },
       "actions": [
         {
           "id": "pinch_headcringle",
@@ -27989,11 +28057,28 @@
         }
       ]
     },
+    "rust_collard": {
+      "name": "Rust Collard",
+      "desc": "A dry collard south of the headcringle. Packed rust coats collard.",
+      "brief": "Dry collard, packed rust.",
+      "exits": { "north": { "to": "rust_headcringle" } },
+      "actions": [
+        {
+          "id": "pinch_collard",
+          "label": "pinch the collard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard collard. They packed it on the headcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_burlap": {
       "name": "Rust Burlap",
       "desc": "A dry burlap east of the headcringle. Packed rust coats burlap.",
       "brief": "Dry burlap, packed rust.",
-      "exits": { "west": { "to": "rust_headcringle" }, "east": { "to": "rust_lacquer" } },
+      "exits": { "west": { "to": "rust_headcringle" }, "east": { "to": "rust_lacquer" }, "south": { "to": "rust_kale" } },
       "actions": [
         {
           "id": "pinch_burlap",
@@ -28006,11 +28091,28 @@
         }
       ]
     },
+    "rust_kale": {
+      "name": "Rust Kale",
+      "desc": "A dry kale south of the burlap. Packed rust coats kale.",
+      "brief": "Dry kale, packed rust.",
+      "exits": { "north": { "to": "rust_burlap" } },
+      "actions": [
+        {
+          "id": "pinch_kale",
+          "label": "pinch the kale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kale. They packed it on the burlap and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_lacquer": {
       "name": "Rust Lacquer",
       "desc": "A dry lacquer east of the burlap. Packed rust coats lacquer.",
       "brief": "Dry lacquer, packed rust.",
-      "exits": { "west": { "to": "rust_burlap" }, "east": { "to": "rust_redlead" } },
+      "exits": { "west": { "to": "rust_burlap" }, "east": { "to": "rust_redlead" }, "south": { "to": "rust_chard" } },
       "actions": [
         {
           "id": "pinch_lacquer",
@@ -28023,11 +28125,28 @@
         }
       ]
     },
+    "rust_chard": {
+      "name": "Rust Chard",
+      "desc": "A dry chard south of the lacquer. Packed rust coats chard.",
+      "brief": "Dry chard, packed rust.",
+      "exits": { "north": { "to": "rust_lacquer" } },
+      "actions": [
+        {
+          "id": "pinch_chard",
+          "label": "pinch the chard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard chard. They packed it on the lacquer and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_redlead": {
       "name": "Rust Redlead",
       "desc": "A dry redlead east of the lacquer. Packed rust coats redlead.",
       "brief": "Dry redlead, packed rust.",
-      "exits": { "west": { "to": "rust_lacquer" }, "east": { "to": "rust_poplar" } },
+      "exits": { "west": { "to": "rust_lacquer" }, "east": { "to": "rust_poplar" }, "south": { "to": "rust_spinach" } },
       "actions": [
         {
           "id": "pinch_redlead",
@@ -28036,6 +28155,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redlead. They coated it on the lacquer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_spinach": {
+      "name": "Rust Spinach",
+      "desc": "A dry spinach south of the redlead. Packed rust coats spinach.",
+      "brief": "Dry spinach, packed rust.",
+      "exits": { "north": { "to": "rust_redlead" } },
+      "actions": [
+        {
+          "id": "pinch_spinach",
+          "label": "pinch the spinach",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard spinach. They packed it on the redlead and packed rust around it."]
           ]
         }
       ]
@@ -37479,10 +37615,19 @@
     "pinch the fir",
     "go east",
     "pinch the butternut",
+    "go south",
+    "pinch the lettuce",
+    "go north",
     "go east",
     "pinch the pumice",
+    "go south",
+    "pinch the brussels",
+    "go north",
     "go east",
     "pinch the chalcocite",
+    "go south",
+    "pinch the cauliflower",
+    "go north",
     "go east",
     "pinch the franklinite",
     "go west",
@@ -37505,14 +37650,29 @@
     "pinch the sheer",
     "go east",
     "pinch the hambroline",
+    "go south",
+    "pinch the broccoli",
+    "go north",
     "go east",
     "pinch the headcringle",
+    "go south",
+    "pinch the collard",
+    "go north",
     "go east",
     "pinch the burlap",
+    "go south",
+    "pinch the kale",
+    "go north",
     "go east",
     "pinch the lacquer",
+    "go south",
+    "pinch the chard",
+    "go north",
     "go east",
     "pinch the redlead",
+    "go south",
+    "pinch the spinach",
+    "go north",
     "go east",
     "pinch the poplar",
     "go south",
