@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8450,
+  "maxScore": 8490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6879,7 +6879,7 @@
       "name": "Rust Cochineal",
       "desc": "A dry cochineal east of the timberhitch. Packed rust coats cochineal.",
       "brief": "Dry cochineal, packed rust.",
-      "exits": { "west": { "to": "rust_timberhitch" }, "east": { "to": "rust_bistre" } },
+      "exits": { "west": { "to": "rust_timberhitch" }, "east": { "to": "rust_bistre" }, "south": { "to": "rust_chokeberry" } },
       "actions": [
         {
           "id": "pinch_cochineal",
@@ -6888,6 +6888,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cochineal. They packed it on the timberhitch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_chokeberry": {
+      "name": "Rust Chokeberry",
+      "desc": "A dry chokeberry south of the cochineal. Packed rust coats chokeberry.",
+      "brief": "Dry chokeberry, packed rust.",
+      "exits": { "north": { "to": "rust_cochineal" } },
+      "actions": [
+        {
+          "id": "pinch_chokeberry",
+          "label": "pinch the chokeberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard chokeberry. They packed it on the cochineal and packed rust around it."]
           ]
         }
       ]
@@ -7916,7 +7933,7 @@
       "name": "Rust Indigo",
       "desc": "A dry indigo east of the overhand. Packed rust coats indigo.",
       "brief": "Dry indigo, packed rust.",
-      "exits": { "west": { "to": "rust_overhand" }, "east": { "to": "rust_ivoryblack" } },
+      "exits": { "west": { "to": "rust_overhand" }, "east": { "to": "rust_ivoryblack" }, "south": { "to": "rust_inkberry" } },
       "actions": [
         {
           "id": "pinch_indigo",
@@ -7925,6 +7942,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard indigo. They packed it on the overhand and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_inkberry": {
+      "name": "Rust Inkberry",
+      "desc": "A dry inkberry south of the indigo. Packed rust coats inkberry.",
+      "brief": "Dry inkberry, packed rust.",
+      "exits": { "north": { "to": "rust_indigo" } },
+      "actions": [
+        {
+          "id": "pinch_inkberry",
+          "label": "pinch the inkberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard inkberry. They packed it on the indigo and packed rust around it."]
           ]
         }
       ]
@@ -8188,7 +8222,7 @@
       "name": "Rust Gamboge",
       "desc": "A dry gamboge east of the squareknot. Packed rust coats gamboge.",
       "brief": "Dry gamboge, packed rust.",
-      "exits": { "west": { "to": "rust_squareknot" }, "east": { "to": "rust_boneblack" } },
+      "exits": { "west": { "to": "rust_squareknot" }, "east": { "to": "rust_boneblack" }, "south": { "to": "rust_bayberry" } },
       "actions": [
         {
           "id": "pinch_gamboge",
@@ -8197,6 +8231,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gamboge. They packed it on the squareknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bayberry": {
+      "name": "Rust Bayberry",
+      "desc": "A dry bayberry south of the gamboge. Packed rust coats bayberry.",
+      "brief": "Dry bayberry, packed rust.",
+      "exits": { "north": { "to": "rust_gamboge" } },
+      "actions": [
+        {
+          "id": "pinch_bayberry",
+          "label": "pinch the bayberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bayberry. They packed it on the gamboge and packed rust around it."]
           ]
         }
       ]
@@ -9225,7 +9276,7 @@
       "name": "Rust Cerulean",
       "desc": "A dry cerulean east of the terreverte. Packed rust coats cerulean.",
       "brief": "Dry cerulean, packed rust.",
-      "exits": { "west": { "to": "rust_terreverte" }, "east": { "to": "rust_vermilion" } },
+      "exits": { "west": { "to": "rust_terreverte" }, "east": { "to": "rust_vermilion" }, "south": { "to": "rust_bearberry" } },
       "actions": [
         {
           "id": "pinch_cerulean",
@@ -9234,6 +9285,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cerulean. They packed it on the terreverte and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bearberry": {
+      "name": "Rust Bearberry",
+      "desc": "A dry bearberry south of the cerulean. Packed rust coats bearberry.",
+      "brief": "Dry bearberry, packed rust.",
+      "exits": { "north": { "to": "rust_cerulean" } },
+      "actions": [
+        {
+          "id": "pinch_bearberry",
+          "label": "pinch the bearberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bearberry. They packed it on the cerulean and packed rust around it."]
           ]
         }
       ]
@@ -9990,7 +10058,7 @@
       "name": "Rust Barrelknot",
       "desc": "A dry barrelknot east of the jeer. Packed rust coats a barrelknot.",
       "brief": "Dry barrelknot, packed rust.",
-      "exits": { "west": { "to": "rust_jeer" }, "east": { "to": "rust_carrageen" } },
+      "exits": { "west": { "to": "rust_jeer" }, "east": { "to": "rust_carrageen" }, "south": { "to": "rust_winterberry" } },
       "actions": [
         {
           "id": "pinch_barrelknot",
@@ -9999,6 +10067,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard barrelknot. They seized it on the jeer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_winterberry": {
+      "name": "Rust Winterberry",
+      "desc": "A dry winterberry south of the barrelknot. Packed rust coats winterberry.",
+      "brief": "Dry winterberry, packed rust.",
+      "exits": { "north": { "to": "rust_barrelknot" } },
+      "actions": [
+        {
+          "id": "pinch_winterberry",
+          "label": "pinch the winterberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard winterberry. They packed it on the barrelknot and packed rust around it."]
           ]
         }
       ]
@@ -10245,7 +10330,7 @@
       "name": "Rust Diamondknot",
       "desc": "A dry diamondknot east of the tye. Packed rust coats a diamondknot.",
       "brief": "Dry diamondknot, packed rust.",
-      "exits": { "west": { "to": "rust_tye" }, "east": { "to": "rust_algin" } },
+      "exits": { "west": { "to": "rust_tye" }, "east": { "to": "rust_algin" }, "south": { "to": "rust_coralberry" } },
       "actions": [
         {
           "id": "pinch_diamondknot",
@@ -10254,6 +10339,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard diamondknot. They wove it on the tye and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_coralberry": {
+      "name": "Rust Coralberry",
+      "desc": "A dry coralberry south of the diamondknot. Packed rust coats coralberry.",
+      "brief": "Dry coralberry, packed rust.",
+      "exits": { "north": { "to": "rust_diamondknot" } },
+      "actions": [
+        {
+          "id": "pinch_coralberry",
+          "label": "pinch the coralberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard coralberry. They packed it on the diamondknot and packed rust around it."]
           ]
         }
       ]
@@ -10517,7 +10619,7 @@
       "name": "Rust Stopperknot",
       "desc": "A dry stopperknot east of the truss. Packed rust coats a stopperknot.",
       "brief": "Dry stopperknot, packed rust.",
-      "exits": { "west": { "to": "rust_truss" }, "east": { "to": "rust_carob" } },
+      "exits": { "west": { "to": "rust_truss" }, "east": { "to": "rust_carob" }, "south": { "to": "rust_snowberry" } },
       "actions": [
         {
           "id": "pinch_stopperknot",
@@ -10526,6 +10628,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stopperknot. They stopped it on the truss and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_snowberry": {
+      "name": "Rust Snowberry",
+      "desc": "A dry snowberry south of the stopperknot. Packed rust coats snowberry.",
+      "brief": "Dry snowberry, packed rust.",
+      "exits": { "north": { "to": "rust_stopperknot" } },
+      "actions": [
+        {
+          "id": "pinch_snowberry",
+          "label": "pinch the snowberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard snowberry. They packed it on the stopperknot and packed rust around it."]
           ]
         }
       ]
@@ -10772,7 +10891,7 @@
       "name": "Rust Roundturn",
       "desc": "A dry roundturn east of the sling. Packed rust coats a roundturn.",
       "brief": "Dry roundturn, packed rust.",
-      "exits": { "west": { "to": "rust_sling" }, "east": { "to": "rust_locustbean" } },
+      "exits": { "west": { "to": "rust_sling" }, "east": { "to": "rust_locustbean" }, "south": { "to": "rust_elderberry" } },
       "actions": [
         {
           "id": "pinch_roundturn",
@@ -10781,6 +10900,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard roundturn. They took it on the sling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_elderberry": {
+      "name": "Rust Elderberry",
+      "desc": "A dry elderberry south of the roundturn. Packed rust coats elderberry.",
+      "brief": "Dry elderberry, packed rust.",
+      "exits": { "north": { "to": "rust_roundturn" } },
+      "actions": [
+        {
+          "id": "pinch_elderberry",
+          "label": "pinch the elderberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard elderberry. They packed it on the roundturn and packed rust around it."]
           ]
         }
       ]
@@ -29883,6 +30019,9 @@
     "pinch the timberhitch",
     "go east",
     "pinch the cochineal",
+    "go south",
+    "pinch the chokeberry",
+    "go north",
     "go east",
     "pinch the bistre",
     "go south",
@@ -30062,6 +30201,9 @@
     "pinch the overhand",
     "go east",
     "pinch the indigo",
+    "go south",
+    "pinch the inkberry",
+    "go north",
     "go east",
     "pinch the ivoryblack",
     "go south",
@@ -30109,6 +30251,9 @@
     "pinch the squareknot",
     "go east",
     "pinch the gamboge",
+    "go south",
+    "pinch the bayberry",
+    "go north",
     "go east",
     "pinch the boneblack",
     "go south",
@@ -30291,6 +30436,9 @@
     "pinch the terreverte",
     "go east",
     "pinch the cerulean",
+    "go south",
+    "pinch the bearberry",
+    "go north",
     "go east",
     "pinch the vermilion",
     "go south",
@@ -30428,6 +30576,9 @@
     "pinch the jeer",
     "go east",
     "pinch the barrelknot",
+    "go south",
+    "pinch the winterberry",
+    "go north",
     "go east",
     "pinch the carrageen",
     "go south",
@@ -30473,6 +30624,9 @@
     "pinch the tye",
     "go east",
     "pinch the diamondknot",
+    "go south",
+    "pinch the coralberry",
+    "go north",
     "go east",
     "pinch the algin",
     "go south",
@@ -30520,6 +30674,9 @@
     "pinch the truss",
     "go east",
     "pinch the stopperknot",
+    "go south",
+    "pinch the snowberry",
+    "go north",
     "go east",
     "pinch the carob",
     "go south",
@@ -30565,6 +30722,9 @@
     "pinch the sling",
     "go east",
     "pinch the roundturn",
+    "go south",
+    "pinch the elderberry",
+    "go north",
     "go east",
     "pinch the locustbean",
     "go south",
