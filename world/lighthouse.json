@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13730,
+  "maxScore": 13770,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -31699,7 +31699,7 @@
       "name": "Rust Greenearth",
       "desc": "A dry greenearth east of the oilstone. Packed rust coats greenearth.",
       "brief": "Dry greenearth, packed rust.",
-      "exits": { "west": { "to": "rust_oilstone" }, "east": { "to": "rust_atacamite" }, "south": { "to": "rust_durumflour" } },
+      "exits": { "west": { "to": "rust_oilstone" }, "east": { "to": "rust_atacamite" }, "south": { "to": "rust_durumflour" }, "north": { "to": "rust_durumtank" } },
       "actions": [
         {
           "id": "pinch_greenearth",
@@ -31708,6 +31708,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard greenearth. They packed it on the oilstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumtank": {
+      "name": "Rust Durumtank",
+      "desc": "A dry durumtank north of the greenearth. Packed rust coats durumtank.",
+      "brief": "Dry durumtank, packed rust.",
+      "exits": { "south": { "to": "rust_greenearth" } },
+      "actions": [
+        {
+          "id": "pinch_durumtank",
+          "label": "pinch the durumtank",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumtank. They packed it on the greenearth and packed rust around it."]
           ]
         }
       ]
@@ -31733,7 +31750,7 @@
       "name": "Rust Atacamite",
       "desc": "A dry atacamite east of the greenearth. Packed rust coats atacamite.",
       "brief": "Dry atacamite, packed rust.",
-      "exits": { "west": { "to": "rust_greenearth" }, "east": { "to": "rust_cumengeite" }, "south": { "to": "rust_breadflour" } },
+      "exits": { "west": { "to": "rust_greenearth" }, "east": { "to": "rust_cumengeite" }, "south": { "to": "rust_breadflour" }, "north": { "to": "rust_foniotank" } },
       "actions": [
         {
           "id": "pinch_atacamite",
@@ -31742,6 +31759,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard atacamite. They packed it on the greenearth and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniotank": {
+      "name": "Rust Foniotank",
+      "desc": "A dry foniotank north of the atacamite. Packed rust coats foniotank.",
+      "brief": "Dry foniotank, packed rust.",
+      "exits": { "south": { "to": "rust_atacamite" } },
+      "actions": [
+        {
+          "id": "pinch_foniotank",
+          "label": "pinch the foniotank",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniotank. They packed it on the atacamite and packed rust around it."]
           ]
         }
       ]
@@ -31767,7 +31801,7 @@
       "name": "Rust Cumengeite",
       "desc": "A dry cumengeite east of the atacamite. Packed rust coats cumengeite.",
       "brief": "Dry cumengeite, packed rust.",
-      "exits": { "west": { "to": "rust_atacamite" }, "east": { "to": "rust_skutterudite" }, "south": { "to": "rust_pastryflour" } },
+      "exits": { "west": { "to": "rust_atacamite" }, "east": { "to": "rust_skutterudite" }, "south": { "to": "rust_pastryflour" }, "north": { "to": "rust_tefftank" } },
       "actions": [
         {
           "id": "pinch_cumengeite",
@@ -31776,6 +31810,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cumengeite. They packed it on the atacamite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefftank": {
+      "name": "Rust Tefftank",
+      "desc": "A dry tefftank north of the cumengeite. Packed rust coats tefftank.",
+      "brief": "Dry tefftank, packed rust.",
+      "exits": { "south": { "to": "rust_cumengeite" } },
+      "actions": [
+        {
+          "id": "pinch_tefftank",
+          "label": "pinch the tefftank",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefftank. They packed it on the cumengeite and packed rust around it."]
           ]
         }
       ]
@@ -31835,7 +31886,7 @@
       "name": "Rust Marling",
       "desc": "A dry marling east of the garboard. Packed rust coats marling.",
       "brief": "Dry marling, packed rust.",
-      "exits": { "west": { "to": "rust_garboard" }, "east": { "to": "rust_buntrope" }, "south": { "to": "rust_grahamflour" } },
+      "exits": { "west": { "to": "rust_garboard" }, "east": { "to": "rust_buntrope" }, "south": { "to": "rust_grahamflour" }, "north": { "to": "rust_barleytank" } },
       "actions": [
         {
           "id": "pinch_marling",
@@ -31844,6 +31895,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard marling. They hitched it on the garboard and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleytank": {
+      "name": "Rust Barleytank",
+      "desc": "A dry barleytank north of the marling. Packed rust coats barleytank.",
+      "brief": "Dry barleytank, packed rust.",
+      "exits": { "south": { "to": "rust_marling" } },
+      "actions": [
+        {
+          "id": "pinch_barleytank",
+          "label": "pinch the barleytank",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleytank. They packed it on the marling and packed rust around it."]
           ]
         }
       ]
@@ -31869,7 +31937,7 @@
       "name": "Rust Buntrope",
       "desc": "A dry buntrope east of the marling. Packed rust coats a buntrope.",
       "brief": "Dry buntrope, packed rust.",
-      "exits": { "west": { "to": "rust_marling" }, "east": { "to": "rust_whitewash" }, "south": { "to": "rust_arrowroot" } },
+      "exits": { "west": { "to": "rust_marling" }, "east": { "to": "rust_whitewash" }, "south": { "to": "rust_arrowroot" }, "north": { "to": "rust_sorghumtank" } },
       "actions": [
         {
           "id": "pinch_buntrope",
@@ -31878,6 +31946,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard buntrope. They hitched it on the marling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumtank": {
+      "name": "Rust Sorghumtank",
+      "desc": "A dry sorghumtank north of the buntrope. Packed rust coats sorghumtank.",
+      "brief": "Dry sorghumtank, packed rust.",
+      "exits": { "south": { "to": "rust_buntrope" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumtank",
+          "label": "pinch the sorghumtank",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumtank. They packed it on the buntrope and packed rust around it."]
           ]
         }
       ]
@@ -31903,7 +31988,7 @@
       "name": "Rust Whitewash",
       "desc": "A dry whitewash east of the buntrope. Packed rust coats whitewash.",
       "brief": "Dry whitewash, packed rust.",
-      "exits": { "west": { "to": "rust_buntrope" }, "east": { "to": "rust_pariswhite" }, "south": { "to": "rust_sago" } },
+      "exits": { "west": { "to": "rust_buntrope" }, "east": { "to": "rust_pariswhite" }, "south": { "to": "rust_sago" }, "north": { "to": "rust_millettank" } },
       "actions": [
         {
           "id": "pinch_whitewash",
@@ -31912,6 +31997,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whitewash. They packed it on the buntrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millettank": {
+      "name": "Rust Millettank",
+      "desc": "A dry millettank north of the whitewash. Packed rust coats millettank.",
+      "brief": "Dry millettank, packed rust.",
+      "exits": { "south": { "to": "rust_whitewash" } },
+      "actions": [
+        {
+          "id": "pinch_millettank",
+          "label": "pinch the millettank",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millettank. They packed it on the whitewash and packed rust around it."]
           ]
         }
       ]
@@ -31937,7 +32039,7 @@
       "name": "Rust Pariswhite",
       "desc": "A dry pariswhite east of the whitewash. Packed rust coats pariswhite.",
       "brief": "Dry pariswhite, packed rust.",
-      "exits": { "west": { "to": "rust_whitewash" }, "east": { "to": "rust_spanishwhite" }, "south": { "to": "rust_tapioca" } },
+      "exits": { "west": { "to": "rust_whitewash" }, "east": { "to": "rust_spanishwhite" }, "south": { "to": "rust_tapioca" }, "north": { "to": "rust_corntank" } },
       "actions": [
         {
           "id": "pinch_pariswhite",
@@ -31946,6 +32048,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pariswhite. They packed it on the whitewash and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corntank": {
+      "name": "Rust Corntank",
+      "desc": "A dry corntank north of the pariswhite. Packed rust coats corntank.",
+      "brief": "Dry corntank, packed rust.",
+      "exits": { "south": { "to": "rust_pariswhite" } },
+      "actions": [
+        {
+          "id": "pinch_corntank",
+          "label": "pinch the corntank",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corntank. They packed it on the pariswhite and packed rust around it."]
           ]
         }
       ]
@@ -31971,7 +32090,7 @@
       "name": "Rust Spanishwhite",
       "desc": "A dry spanishwhite east of the pariswhite. Packed rust coats spanishwhite.",
       "brief": "Dry spanishwhite, packed rust.",
-      "exits": { "west": { "to": "rust_pariswhite" }, "east": { "to": "rust_honestone" }, "south": { "to": "rust_cassava" } },
+      "exits": { "west": { "to": "rust_pariswhite" }, "east": { "to": "rust_honestone" }, "south": { "to": "rust_cassava" }, "north": { "to": "rust_oattank" } },
       "actions": [
         {
           "id": "pinch_spanishwhite",
@@ -31980,6 +32099,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spanishwhite. They packed it on the pariswhite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oattank": {
+      "name": "Rust Oattank",
+      "desc": "A dry oattank north of the spanishwhite. Packed rust coats oattank.",
+      "brief": "Dry oattank, packed rust.",
+      "exits": { "south": { "to": "rust_spanishwhite" } },
+      "actions": [
+        {
+          "id": "pinch_oattank",
+          "label": "pinch the oattank",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oattank. They packed it on the spanishwhite and packed rust around it."]
           ]
         }
       ]
@@ -52168,16 +52304,25 @@
     "go north",
     "go east",
     "pinch the greenearth",
+    "go north",
+    "pinch the durumtank",
+    "go south",
     "go south",
     "pinch the durumflour",
     "go north",
     "go east",
     "pinch the atacamite",
+    "go north",
+    "pinch the foniotank",
+    "go south",
     "go south",
     "pinch the breadflour",
     "go north",
     "go east",
     "pinch the cumengeite",
+    "go north",
+    "pinch the tefftank",
+    "go south",
     "go south",
     "pinch the pastryflour",
     "go north",
@@ -52198,26 +52343,41 @@
     "pinch the garboard",
     "go east",
     "pinch the marling",
+    "go north",
+    "pinch the barleytank",
+    "go south",
     "go south",
     "pinch the grahamflour",
     "go north",
     "go east",
     "pinch the buntrope",
+    "go north",
+    "pinch the sorghumtank",
+    "go south",
     "go south",
     "pinch the arrowroot",
     "go north",
     "go east",
     "pinch the whitewash",
+    "go north",
+    "pinch the millettank",
+    "go south",
     "go south",
     "pinch the sago",
     "go north",
     "go east",
     "pinch the pariswhite",
+    "go north",
+    "pinch the corntank",
+    "go south",
     "go south",
     "pinch the tapioca",
     "go north",
     "go east",
     "pinch the spanishwhite",
+    "go north",
+    "pinch the oattank",
+    "go south",
     "go south",
     "pinch the cassava",
     "go north",
