@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7890,
+  "maxScore": 7930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6760,7 +6760,7 @@
       "name": "Rust Morrison",
       "desc": "A dry morrison east of the cilician. Packed rust coats morrison.",
       "brief": "Dry morrison, packed rust.",
-      "exits": { "west": { "to": "rust_cilician" } },
+      "exits": { "west": { "to": "rust_cilician" }, "east": { "to": "rust_tawa" } },
       "actions": [
         {
           "id": "pinch_morrison",
@@ -6769,6 +6769,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard morrison. They packed it on the cilician and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tawa": {
+      "name": "Rust Tawa",
+      "desc": "A dry tawa east of the morrison. Packed rust coats tawa.",
+      "brief": "Dry tawa, packed rust.",
+      "exits": { "west": { "to": "rust_morrison" } },
+      "actions": [
+        {
+          "id": "pinch_tawa",
+          "label": "pinch the tawa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tawa. They packed it on the morrison and packed rust around it."]
           ]
         }
       ]
@@ -7100,7 +7117,7 @@
       "name": "Rust Formosana",
       "desc": "A dry formosana east of the oyamel. Packed rust coats formosana.",
       "brief": "Dry formosana, packed rust.",
-      "exits": { "west": { "to": "rust_oyamel" } },
+      "exits": { "west": { "to": "rust_oyamel" }, "east": { "to": "rust_puriri" } },
       "actions": [
         {
           "id": "pinch_formosana",
@@ -7109,6 +7126,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard formosana. They packed it on the oyamel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_puriri": {
+      "name": "Rust Puriri",
+      "desc": "A dry puriri east of the formosana. Packed rust coats puriri.",
+      "brief": "Dry puriri, packed rust.",
+      "exits": { "west": { "to": "rust_formosana" } },
+      "actions": [
+        {
+          "id": "pinch_puriri",
+          "label": "pinch the puriri",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard puriri. They packed it on the formosana and packed rust around it."]
           ]
         }
       ]
@@ -8222,7 +8256,7 @@
       "name": "Rust Asunaro",
       "desc": "A dry asunaro east of the cypruscedar. Packed rust coats asunaro.",
       "brief": "Dry asunaro, packed rust.",
-      "exits": { "west": { "to": "rust_cypruscedar" } },
+      "exits": { "west": { "to": "rust_cypruscedar" }, "east": { "to": "rust_kohekohe" } },
       "actions": [
         {
           "id": "pinch_asunaro",
@@ -8231,6 +8265,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard asunaro. They packed it on the cypruscedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kohekohe": {
+      "name": "Rust Kohekohe",
+      "desc": "A dry kohekohe east of the asunaro. Packed rust coats kohekohe.",
+      "brief": "Dry kohekohe, packed rust.",
+      "exits": { "west": { "to": "rust_asunaro" } },
+      "actions": [
+        {
+          "id": "pinch_kohekohe",
+          "label": "pinch the kohekohe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kohekohe. They packed it on the asunaro and packed rust around it."]
           ]
         }
       ]
@@ -8375,7 +8426,7 @@
       "name": "Rust Hiba",
       "desc": "A dry hiba east of the lebanoncedar. Packed rust coats hiba.",
       "brief": "Dry hiba, packed rust.",
-      "exits": { "west": { "to": "rust_lebanoncedar" } },
+      "exits": { "west": { "to": "rust_lebanoncedar" }, "east": { "to": "rust_rewarewa" } },
       "actions": [
         {
           "id": "pinch_hiba",
@@ -8384,6 +8435,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hiba. They packed it on the lebanoncedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_rewarewa": {
+      "name": "Rust Rewarewa",
+      "desc": "A dry rewarewa east of the hiba. Packed rust coats rewarewa.",
+      "brief": "Dry rewarewa, packed rust.",
+      "exits": { "west": { "to": "rust_hiba" } },
+      "actions": [
+        {
+          "id": "pinch_rewarewa",
+          "label": "pinch the rewarewa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rewarewa. They packed it on the hiba and packed rust around it."]
           ]
         }
       ]
@@ -8919,7 +8987,7 @@
       "name": "Rust Spanishfir",
       "desc": "A dry spanishfir east of the alerce. Packed rust coats spanishfir.",
       "brief": "Dry spanishfir, packed rust.",
-      "exits": { "west": { "to": "rust_alerce" } },
+      "exits": { "west": { "to": "rust_alerce" }, "east": { "to": "rust_rata" } },
       "actions": [
         {
           "id": "pinch_spanishfir",
@@ -8928,6 +8996,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spanishfir. They packed it on the alerce and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_rata": {
+      "name": "Rust Rata",
+      "desc": "A dry rata east of the spanishfir. Packed rust coats rata.",
+      "brief": "Dry rata, packed rust.",
+      "exits": { "west": { "to": "rust_spanishfir" } },
+      "actions": [
+        {
+          "id": "pinch_rata",
+          "label": "pinch the rata",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rata. They packed it on the spanishfir and packed rust around it."]
           ]
         }
       ]
@@ -9021,7 +9106,7 @@
       "name": "Rust Baldcypress",
       "desc": "A dry baldcypress east of the alizarin. Packed rust coats baldcypress.",
       "brief": "Dry baldcypress, packed rust.",
-      "exits": { "west": { "to": "rust_alizarin" } },
+      "exits": { "west": { "to": "rust_alizarin" }, "east": { "to": "rust_kamahi" } },
       "actions": [
         {
           "id": "pinch_baldcypress",
@@ -9030,6 +9115,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard baldcypress. They packed it on the alizarin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kamahi": {
+      "name": "Rust Kamahi",
+      "desc": "A dry kamahi east of the baldcypress. Packed rust coats kamahi.",
+      "brief": "Dry kamahi, packed rust.",
+      "exits": { "west": { "to": "rust_baldcypress" } },
+      "actions": [
+        {
+          "id": "pinch_kamahi",
+          "label": "pinch the kamahi",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kamahi. They packed it on the baldcypress and packed rust around it."]
           ]
         }
       ]
@@ -9191,7 +9293,7 @@
       "name": "Rust Greekfir",
       "desc": "A dry greekfir east of the portorford. Packed rust coats greekfir.",
       "brief": "Dry greekfir, packed rust.",
-      "exits": { "west": { "to": "rust_portorford" } },
+      "exits": { "west": { "to": "rust_portorford" }, "east": { "to": "rust_maire" } },
       "actions": [
         {
           "id": "pinch_greekfir",
@@ -9200,6 +9302,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard greekfir. They packed it on the portorford and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_maire": {
+      "name": "Rust Maire",
+      "desc": "A dry maire east of the greekfir. Packed rust coats maire.",
+      "brief": "Dry maire, packed rust.",
+      "exits": { "west": { "to": "rust_greekfir" } },
+      "actions": [
+        {
+          "id": "pinch_maire",
+          "label": "pinch the maire",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard maire. They packed it on the greekfir and packed rust around it."]
           ]
         }
       ]
@@ -10092,7 +10211,7 @@
       "name": "Rust Keteleeria",
       "desc": "A dry keteleeria east of the bornmueller. Packed rust coats keteleeria.",
       "brief": "Dry keteleeria, packed rust.",
-      "exits": { "west": { "to": "rust_bornmueller" } },
+      "exits": { "west": { "to": "rust_bornmueller" }, "east": { "to": "rust_taraire" } },
       "actions": [
         {
           "id": "pinch_keteleeria",
@@ -10101,6 +10220,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard keteleeria. They packed it on the bornmueller and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_taraire": {
+      "name": "Rust Taraire",
+      "desc": "A dry taraire east of the keteleeria. Packed rust coats taraire.",
+      "brief": "Dry taraire, packed rust.",
+      "exits": { "west": { "to": "rust_keteleeria" } },
+      "actions": [
+        {
+          "id": "pinch_taraire",
+          "label": "pinch the taraire",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard taraire. They packed it on the keteleeria and packed rust around it."]
           ]
         }
       ]
@@ -27912,6 +28048,9 @@
     "pinch the bornmueller",
     "go east",
     "pinch the keteleeria",
+    "go east",
+    "pinch the taraire",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27944,6 +28083,9 @@
     "pinch the cilician",
     "go east",
     "pinch the morrison",
+    "go east",
+    "pinch the tawa",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28003,6 +28145,9 @@
     "pinch the oyamel",
     "go east",
     "pinch the formosana",
+    "go east",
+    "pinch the puriri",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28198,6 +28343,9 @@
     "pinch the cypruscedar",
     "go east",
     "pinch the asunaro",
+    "go east",
+    "pinch the kohekohe",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28225,6 +28373,9 @@
     "pinch the lebanoncedar",
     "go east",
     "pinch the hiba",
+    "go east",
+    "pinch the rewarewa",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28319,6 +28470,9 @@
     "pinch the alerce",
     "go east",
     "pinch the spanishfir",
+    "go east",
+    "pinch the rata",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28340,6 +28494,9 @@
     "pinch the alizarin",
     "go east",
     "pinch the baldcypress",
+    "go east",
+    "pinch the kamahi",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -28369,6 +28526,9 @@
     "pinch the portorford",
     "go east",
     "pinch the greekfir",
+    "go east",
+    "pinch the maire",
+    "go west",
     "go west",
     "go west",
     "go west",
