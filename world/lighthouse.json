@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11810,
+  "maxScore": 11850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -17657,7 +17657,7 @@
       "name": "Rust Mallet",
       "desc": "A dry mallet east of the floodedgum. Packed rust coats mallet.",
       "brief": "Dry mallet, packed rust.",
-      "exits": { "west": { "to": "rust_floodedgum" }, "east": { "to": "rust_quandong" } },
+      "exits": { "west": { "to": "rust_floodedgum" }, "east": { "to": "rust_quandong" }, "south": { "to": "rust_cornbaker" } },
       "actions": [
         {
           "id": "pinch_mallet",
@@ -17666,6 +17666,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mallet. They packed it on the floodedgum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbaker": {
+      "name": "Rust Cornbaker",
+      "desc": "A dry cornbaker south of the mallet. Packed rust coats cornbaker.",
+      "brief": "Dry cornbaker, packed rust.",
+      "exits": { "north": { "to": "rust_mallet" } },
+      "actions": [
+        {
+          "id": "pinch_cornbaker",
+          "label": "pinch the cornbaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbaker. They packed it on the mallet and packed rust around it."]
           ]
         }
       ]
@@ -17725,7 +17742,7 @@
       "name": "Rust Thwart",
       "desc": "A dry thwart east of the brow. Packed rust coats a thwart.",
       "brief": "Dry thwart, packed rust.",
-      "exits": { "west": { "to": "rust_brow" }, "east": { "to": "rust_eyebolt" } },
+      "exits": { "west": { "to": "rust_brow" }, "east": { "to": "rust_eyebolt" }, "south": { "to": "rust_oatbaker" } },
       "actions": [
         {
           "id": "pinch_thwart",
@@ -17738,11 +17755,28 @@
         }
       ]
     },
+    "rust_oatbaker": {
+      "name": "Rust Oatbaker",
+      "desc": "A dry oatbaker south of the thwart. Packed rust coats oatbaker.",
+      "brief": "Dry oatbaker, packed rust.",
+      "exits": { "north": { "to": "rust_thwart" } },
+      "actions": [
+        {
+          "id": "pinch_oatbaker",
+          "label": "pinch the oatbaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbaker. They packed it on the thwart and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_eyebolt": {
       "name": "Rust Eyebolt",
       "desc": "A dry eyebolt east of the thwart. Packed rust coats an eyebolt.",
       "brief": "Dry eyebolt, packed rust.",
-      "exits": { "west": { "to": "rust_thwart" }, "east": { "to": "rust_thief" } },
+      "exits": { "west": { "to": "rust_thwart" }, "east": { "to": "rust_thief" }, "south": { "to": "rust_ryebaker" } },
       "actions": [
         {
           "id": "pinch_eyebolt",
@@ -17755,11 +17789,28 @@
         }
       ]
     },
+    "rust_ryebaker": {
+      "name": "Rust Ryebaker",
+      "desc": "A dry ryebaker south of the eyebolt. Packed rust coats ryebaker.",
+      "brief": "Dry ryebaker, packed rust.",
+      "exits": { "north": { "to": "rust_eyebolt" } },
+      "actions": [
+        {
+          "id": "pinch_ryebaker",
+          "label": "pinch the ryebaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryebaker. They packed it on the eyebolt and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_thief": {
       "name": "Rust Thief",
       "desc": "A dry thief east of the eyebolt. Packed rust coats a thief.",
       "brief": "Dry thief, packed rust.",
-      "exits": { "west": { "to": "rust_eyebolt" }, "east": { "to": "rust_wheatpaste" } },
+      "exits": { "west": { "to": "rust_eyebolt" }, "east": { "to": "rust_wheatpaste" }, "south": { "to": "rust_wheatbaker" } },
       "actions": [
         {
           "id": "pinch_thief",
@@ -17772,11 +17823,28 @@
         }
       ]
     },
+    "rust_wheatbaker": {
+      "name": "Rust Wheatbaker",
+      "desc": "A dry wheatbaker south of the thief. Packed rust coats wheatbaker.",
+      "brief": "Dry wheatbaker, packed rust.",
+      "exits": { "north": { "to": "rust_thief" } },
+      "actions": [
+        {
+          "id": "pinch_wheatbaker",
+          "label": "pinch the wheatbaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatbaker. They packed it on the thief and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_wheatpaste": {
       "name": "Rust Wheatpaste",
       "desc": "A dry wheatpaste east of the thief. Packed rust coats wheatpaste.",
       "brief": "Dry wheatpaste, packed rust.",
-      "exits": { "west": { "to": "rust_thief" }, "east": { "to": "rust_myrobalan" } },
+      "exits": { "west": { "to": "rust_thief" }, "east": { "to": "rust_myrobalan" }, "south": { "to": "rust_durumstraight" } },
       "actions": [
         {
           "id": "pinch_wheatpaste",
@@ -17789,11 +17857,28 @@
         }
       ]
     },
+    "rust_durumstraight": {
+      "name": "Rust Durumstraight",
+      "desc": "A dry durumstraight south of the wheatpaste. Packed rust coats durumstraight.",
+      "brief": "Dry durumstraight, packed rust.",
+      "exits": { "north": { "to": "rust_wheatpaste" } },
+      "actions": [
+        {
+          "id": "pinch_durumstraight",
+          "label": "pinch the durumstraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumstraight. They packed it on the wheatpaste and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_myrobalan": {
       "name": "Rust Myrobalan",
       "desc": "A dry myrobalan east of the wheatpaste. Packed rust coats myrobalan.",
       "brief": "Dry myrobalan, packed rust.",
-      "exits": { "west": { "to": "rust_wheatpaste" }, "east": { "to": "rust_fusain" } },
+      "exits": { "west": { "to": "rust_wheatpaste" }, "east": { "to": "rust_fusain" }, "south": { "to": "rust_foniostraight" } },
       "actions": [
         {
           "id": "pinch_myrobalan",
@@ -17806,11 +17891,28 @@
         }
       ]
     },
+    "rust_foniostraight": {
+      "name": "Rust Foniostraight",
+      "desc": "A dry foniostraight south of the myrobalan. Packed rust coats foniostraight.",
+      "brief": "Dry foniostraight, packed rust.",
+      "exits": { "north": { "to": "rust_myrobalan" } },
+      "actions": [
+        {
+          "id": "pinch_foniostraight",
+          "label": "pinch the foniostraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniostraight. They packed it on the myrobalan and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_fusain": {
       "name": "Rust Fusain",
       "desc": "A dry fusain east of the myrobalan. Packed rust coats fusain.",
       "brief": "Dry fusain, packed rust.",
-      "exits": { "west": { "to": "rust_myrobalan" }, "east": { "to": "rust_sugargum" } },
+      "exits": { "west": { "to": "rust_myrobalan" }, "east": { "to": "rust_sugargum" }, "south": { "to": "rust_teffstraight" } },
       "actions": [
         {
           "id": "pinch_fusain",
@@ -17823,11 +17925,28 @@
         }
       ]
     },
+    "rust_teffstraight": {
+      "name": "Rust Teffstraight",
+      "desc": "A dry teffstraight south of the fusain. Packed rust coats teffstraight.",
+      "brief": "Dry teffstraight, packed rust.",
+      "exits": { "north": { "to": "rust_fusain" } },
+      "actions": [
+        {
+          "id": "pinch_teffstraight",
+          "label": "pinch the teffstraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffstraight. They packed it on the fusain and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sugargum": {
       "name": "Rust Sugargum",
       "desc": "A dry sugargum east of the fusain. Packed rust coats sugargum.",
       "brief": "Dry sugargum, packed rust.",
-      "exits": { "west": { "to": "rust_fusain" }, "east": { "to": "rust_yate" } },
+      "exits": { "west": { "to": "rust_fusain" }, "east": { "to": "rust_yate" }, "south": { "to": "rust_barleystraight" } },
       "actions": [
         {
           "id": "pinch_sugargum",
@@ -17836,6 +17955,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sugargum. They packed it on the fusain and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleystraight": {
+      "name": "Rust Barleystraight",
+      "desc": "A dry barleystraight south of the sugargum. Packed rust coats barleystraight.",
+      "brief": "Dry barleystraight, packed rust.",
+      "exits": { "north": { "to": "rust_sugargum" } },
+      "actions": [
+        {
+          "id": "pinch_barleystraight",
+          "label": "pinch the barleystraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleystraight. They packed it on the sugargum and packed rust around it."]
           ]
         }
       ]
@@ -43160,6 +43296,9 @@
     "pinch the floodedgum",
     "go east",
     "pinch the mallet",
+    "go south",
+    "pinch the cornbaker",
+    "go north",
     "go east",
     "pinch the quandong",
     "go south",
@@ -43179,18 +43318,39 @@
     "go north",
     "go east",
     "pinch the thwart",
+    "go south",
+    "pinch the oatbaker",
+    "go north",
     "go east",
     "pinch the eyebolt",
+    "go south",
+    "pinch the ryebaker",
+    "go north",
     "go east",
     "pinch the thief",
+    "go south",
+    "pinch the wheatbaker",
+    "go north",
     "go east",
     "pinch the wheatpaste",
+    "go south",
+    "pinch the durumstraight",
+    "go north",
     "go east",
     "pinch the myrobalan",
+    "go south",
+    "pinch the foniostraight",
+    "go north",
     "go east",
     "pinch the fusain",
+    "go south",
+    "pinch the teffstraight",
+    "go north",
     "go east",
     "pinch the sugargum",
+    "go south",
+    "pinch the barleystraight",
+    "go north",
     "go east",
     "pinch the yate",
     "go south",
