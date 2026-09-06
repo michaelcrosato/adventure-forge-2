@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12690,
+  "maxScore": 12730,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -39910,7 +39910,7 @@
       "name": "Rust Spangasket",
       "desc": "A dry spangasket east of the mesh. Packed rust coats a spangasket.",
       "brief": "Dry spangasket, packed rust.",
-      "exits": { "west": { "to": "rust_mesh" }, "east": { "to": "rust_tallow" }, "south": { "to": "rust_tapegrass" } },
+      "exits": { "west": { "to": "rust_mesh" }, "east": { "to": "rust_tallow" }, "south": { "to": "rust_tapegrass" }, "north": { "to": "rust_durumcrib" } },
       "actions": [
         {
           "id": "pinch_spangasket",
@@ -39919,6 +39919,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spangasket. They made it on the mesh and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumcrib": {
+      "name": "Rust Durumcrib",
+      "desc": "A dry durumcrib north of the spangasket. Packed rust coats durumcrib.",
+      "brief": "Dry durumcrib, packed rust.",
+      "exits": { "south": { "to": "rust_spangasket" } },
+      "actions": [
+        {
+          "id": "pinch_durumcrib",
+          "label": "pinch the durumcrib",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumcrib. They packed it on the spangasket and packed rust around it."]
           ]
         }
       ]
@@ -39944,7 +39961,7 @@
       "name": "Rust Tallow",
       "desc": "A dry tallow east of the spangasket. Packed rust coats tallow.",
       "brief": "Dry tallow, packed rust.",
-      "exits": { "west": { "to": "rust_spangasket" }, "east": { "to": "rust_rattan" }, "south": { "to": "rust_spikegrass" } },
+      "exits": { "west": { "to": "rust_spangasket" }, "east": { "to": "rust_rattan" }, "south": { "to": "rust_spikegrass" }, "north": { "to": "rust_foniocrib" } },
       "actions": [
         {
           "id": "pinch_tallow",
@@ -39953,6 +39970,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tallow. They smeared it on the spangasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniocrib": {
+      "name": "Rust Foniocrib",
+      "desc": "A dry foniocrib north of the tallow. Packed rust coats foniocrib.",
+      "brief": "Dry foniocrib, packed rust.",
+      "exits": { "south": { "to": "rust_tallow" } },
+      "actions": [
+        {
+          "id": "pinch_foniocrib",
+          "label": "pinch the foniocrib",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniocrib. They packed it on the tallow and packed rust around it."]
           ]
         }
       ]
@@ -39978,7 +40012,7 @@
       "name": "Rust Rattan",
       "desc": "A dry rattan east of the tallow. Packed rust coats rattan.",
       "brief": "Dry rattan, packed rust.",
-      "exits": { "west": { "to": "rust_tallow" }, "east": { "to": "rust_yew" }, "south": { "to": "rust_reedmace" } },
+      "exits": { "west": { "to": "rust_tallow" }, "east": { "to": "rust_yew" }, "south": { "to": "rust_reedmace" }, "north": { "to": "rust_teffcrib" } },
       "actions": [
         {
           "id": "pinch_rattan",
@@ -39987,6 +40021,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rattan. They laid it on the tallow and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffcrib": {
+      "name": "Rust Teffcrib",
+      "desc": "A dry teffcrib north of the rattan. Packed rust coats teffcrib.",
+      "brief": "Dry teffcrib, packed rust.",
+      "exits": { "south": { "to": "rust_rattan" } },
+      "actions": [
+        {
+          "id": "pinch_teffcrib",
+          "label": "pinch the teffcrib",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffcrib. They packed it on the rattan and packed rust around it."]
           ]
         }
       ]
@@ -40012,7 +40063,7 @@
       "name": "Rust Yew",
       "desc": "A dry yew east of the rattan. Packed rust coats yew.",
       "brief": "Dry yew, packed rust.",
-      "exits": { "west": { "to": "rust_rattan" }, "east": { "to": "rust_chestnut" }, "south": { "to": "rust_bladderwort" } },
+      "exits": { "west": { "to": "rust_rattan" }, "east": { "to": "rust_chestnut" }, "south": { "to": "rust_bladderwort" }, "north": { "to": "rust_barleycrib" } },
       "actions": [
         {
           "id": "pinch_yew",
@@ -40021,6 +40072,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yew. They bound it on the rattan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleycrib": {
+      "name": "Rust Barleycrib",
+      "desc": "A dry barleycrib north of the yew. Packed rust coats barleycrib.",
+      "brief": "Dry barleycrib, packed rust.",
+      "exits": { "south": { "to": "rust_yew" } },
+      "actions": [
+        {
+          "id": "pinch_barleycrib",
+          "label": "pinch the barleycrib",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleycrib. They packed it on the yew and packed rust around it."]
           ]
         }
       ]
@@ -40046,7 +40114,7 @@
       "name": "Rust Chestnut",
       "desc": "A dry chestnut east of the yew. Packed rust coats chestnut.",
       "brief": "Dry chestnut, packed rust.",
-      "exits": { "west": { "to": "rust_yew" }, "east": { "to": "rust_palm" }, "south": { "to": "rust_bulrush" } },
+      "exits": { "west": { "to": "rust_yew" }, "east": { "to": "rust_palm" }, "south": { "to": "rust_bulrush" }, "north": { "to": "rust_sorghumcrib" } },
       "actions": [
         {
           "id": "pinch_chestnut",
@@ -40055,6 +40123,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chestnut. They packed it on the yew and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumcrib": {
+      "name": "Rust Sorghumcrib",
+      "desc": "A dry sorghumcrib north of the chestnut. Packed rust coats sorghumcrib.",
+      "brief": "Dry sorghumcrib, packed rust.",
+      "exits": { "south": { "to": "rust_chestnut" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumcrib",
+          "label": "pinch the sorghumcrib",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumcrib. They packed it on the chestnut and packed rust around it."]
           ]
         }
       ]
@@ -40080,7 +40165,7 @@
       "name": "Rust Palm",
       "desc": "A dry palm east of the chestnut. Packed rust coats palm.",
       "brief": "Dry palm, packed rust.",
-      "exits": { "west": { "to": "rust_chestnut" }, "east": { "to": "rust_blancfixe" }, "south": { "to": "rust_cattail" } },
+      "exits": { "west": { "to": "rust_chestnut" }, "east": { "to": "rust_blancfixe" }, "south": { "to": "rust_cattail" }, "north": { "to": "rust_milletcrib" } },
       "actions": [
         {
           "id": "pinch_palm",
@@ -40089,6 +40174,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palm. They packed it on the chestnut and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletcrib": {
+      "name": "Rust Milletcrib",
+      "desc": "A dry milletcrib north of the palm. Packed rust coats milletcrib.",
+      "brief": "Dry milletcrib, packed rust.",
+      "exits": { "south": { "to": "rust_palm" } },
+      "actions": [
+        {
+          "id": "pinch_milletcrib",
+          "label": "pinch the milletcrib",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletcrib. They packed it on the palm and packed rust around it."]
           ]
         }
       ]
@@ -40114,7 +40216,7 @@
       "name": "Rust Blancfixe",
       "desc": "A dry blancfixe east of the palm. Packed rust coats blancfixe.",
       "brief": "Dry blancfixe, packed rust.",
-      "exits": { "west": { "to": "rust_palm" }, "east": { "to": "rust_tenorite" }, "south": { "to": "rust_waterlily" } },
+      "exits": { "west": { "to": "rust_palm" }, "east": { "to": "rust_tenorite" }, "south": { "to": "rust_waterlily" }, "north": { "to": "rust_corncrib" } },
       "actions": [
         {
           "id": "pinch_blancfixe",
@@ -40123,6 +40225,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blancfixe. They packed it on the palm and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corncrib": {
+      "name": "Rust Corncrib",
+      "desc": "A dry corncrib north of the blancfixe. Packed rust coats corncrib.",
+      "brief": "Dry corncrib, packed rust.",
+      "exits": { "south": { "to": "rust_blancfixe" } },
+      "actions": [
+        {
+          "id": "pinch_corncrib",
+          "label": "pinch the corncrib",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corncrib. They packed it on the blancfixe and packed rust around it."]
           ]
         }
       ]
@@ -40148,7 +40267,7 @@
       "name": "Rust Tenorite",
       "desc": "A dry tenorite east of the blancfixe. Packed rust coats tenorite.",
       "brief": "Dry tenorite, packed rust.",
-      "exits": { "west": { "to": "rust_blancfixe" }, "east": { "to": "rust_braunite" }, "south": { "to": "rust_watercress" } },
+      "exits": { "west": { "to": "rust_blancfixe" }, "east": { "to": "rust_braunite" }, "south": { "to": "rust_watercress" }, "north": { "to": "rust_oatcrib" } },
       "actions": [
         {
           "id": "pinch_tenorite",
@@ -40157,6 +40276,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tenorite. They packed it on the blancfixe and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatcrib": {
+      "name": "Rust Oatcrib",
+      "desc": "A dry oatcrib north of the tenorite. Packed rust coats oatcrib.",
+      "brief": "Dry oatcrib, packed rust.",
+      "exits": { "south": { "to": "rust_tenorite" } },
+      "actions": [
+        {
+          "id": "pinch_oatcrib",
+          "label": "pinch the oatcrib",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatcrib. They packed it on the tenorite and packed rust around it."]
           ]
         }
       ]
@@ -50089,41 +50225,65 @@
     "pinch the stud",
     "go east",
     "pinch the spangasket",
+    "go north",
+    "pinch the durumcrib",
+    "go south",
     "go south",
     "pinch the tapegrass",
     "go north",
     "go east",
     "pinch the tallow",
+    "go north",
+    "pinch the foniocrib",
+    "go south",
     "go south",
     "pinch the spikegrass",
     "go north",
     "go east",
     "pinch the rattan",
+    "go north",
+    "pinch the teffcrib",
+    "go south",
     "go south",
     "pinch the reedmace",
     "go north",
     "go east",
     "pinch the yew",
+    "go north",
+    "pinch the barleycrib",
+    "go south",
     "go south",
     "pinch the bladderwort",
     "go north",
     "go east",
     "pinch the chestnut",
+    "go north",
+    "pinch the sorghumcrib",
+    "go south",
     "go south",
     "pinch the bulrush",
     "go north",
     "go east",
     "pinch the palm",
+    "go north",
+    "pinch the milletcrib",
+    "go south",
     "go south",
     "pinch the cattail",
     "go north",
     "go east",
     "pinch the blancfixe",
+    "go north",
+    "pinch the corncrib",
+    "go south",
     "go south",
     "pinch the waterlily",
     "go north",
     "go east",
     "pinch the tenorite",
+    "go north",
+    "pinch the oatcrib",
+    "go south",
     "go south",
     "pinch the watercress",
     "go north",
