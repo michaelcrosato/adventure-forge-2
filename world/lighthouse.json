@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11610,
+  "maxScore": 11650,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -21516,7 +21516,7 @@
       "name": "Rust Girtline",
       "desc": "A dry girtline east of the mizzen. Packed rust coats a girtline.",
       "brief": "Dry girtline, packed rust.",
-      "exits": { "west": { "to": "rust_mizzen" }, "east": { "to": "rust_mastcap" } },
+      "exits": { "west": { "to": "rust_mizzen" }, "east": { "to": "rust_mastcap" }, "south": { "to": "rust_cornpatent" } },
       "actions": [
         {
           "id": "pinch_girtline",
@@ -21529,11 +21529,28 @@
         }
       ]
     },
+    "rust_cornpatent": {
+      "name": "Rust Cornpatent",
+      "desc": "A dry cornpatent south of the girtline. Packed rust coats cornpatent.",
+      "brief": "Dry cornpatent, packed rust.",
+      "exits": { "north": { "to": "rust_girtline" } },
+      "actions": [
+        {
+          "id": "pinch_cornpatent",
+          "label": "pinch the cornpatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornpatent. They packed it on the girtline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_mastcap": {
       "name": "Rust Mastcap",
       "desc": "A dry mastcap east of the girtline. Packed rust coats a mastcap.",
       "brief": "Dry mastcap, packed rust.",
-      "exits": { "west": { "to": "rust_girtline" }, "east": { "to": "rust_rabbitglue" } },
+      "exits": { "west": { "to": "rust_girtline" }, "east": { "to": "rust_rabbitglue" }, "south": { "to": "rust_oatpatent" } },
       "actions": [
         {
           "id": "pinch_mastcap",
@@ -21546,11 +21563,28 @@
         }
       ]
     },
+    "rust_oatpatent": {
+      "name": "Rust Oatpatent",
+      "desc": "A dry oatpatent south of the mastcap. Packed rust coats oatpatent.",
+      "brief": "Dry oatpatent, packed rust.",
+      "exits": { "north": { "to": "rust_mastcap" } },
+      "actions": [
+        {
+          "id": "pinch_oatpatent",
+          "label": "pinch the oatpatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatpatent. They packed it on the mastcap and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_rabbitglue": {
       "name": "Rust Rabbitglue",
       "desc": "A dry rabbitglue east of the mastcap. Packed rust coats rabbitglue.",
       "brief": "Dry rabbitglue, packed rust.",
-      "exits": { "west": { "to": "rust_mastcap" }, "east": { "to": "rust_riverredgum" } },
+      "exits": { "west": { "to": "rust_mastcap" }, "east": { "to": "rust_riverredgum" }, "south": { "to": "rust_ryepatent" } },
       "actions": [
         {
           "id": "pinch_rabbitglue",
@@ -21563,11 +21597,28 @@
         }
       ]
     },
+    "rust_ryepatent": {
+      "name": "Rust Ryepatent",
+      "desc": "A dry ryepatent south of the rabbitglue. Packed rust coats ryepatent.",
+      "brief": "Dry ryepatent, packed rust.",
+      "exits": { "north": { "to": "rust_rabbitglue" } },
+      "actions": [
+        {
+          "id": "pinch_ryepatent",
+          "label": "pinch the ryepatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryepatent. They packed it on the rabbitglue and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_riverredgum": {
       "name": "Rust Riverredgum",
       "desc": "A dry riverredgum east of the rabbitglue. Packed rust coats riverredgum.",
       "brief": "Dry riverredgum, packed rust.",
-      "exits": { "west": { "to": "rust_rabbitglue" }, "east": { "to": "rust_brownbarrel" } },
+      "exits": { "west": { "to": "rust_rabbitglue" }, "east": { "to": "rust_brownbarrel" }, "south": { "to": "rust_wheatpatent" } },
       "actions": [
         {
           "id": "pinch_riverredgum",
@@ -21580,11 +21631,28 @@
         }
       ]
     },
+    "rust_wheatpatent": {
+      "name": "Rust Wheatpatent",
+      "desc": "A dry wheatpatent south of the riverredgum. Packed rust coats wheatpatent.",
+      "brief": "Dry wheatpatent, packed rust.",
+      "exits": { "north": { "to": "rust_riverredgum" } },
+      "actions": [
+        {
+          "id": "pinch_wheatpatent",
+          "label": "pinch the wheatpatent",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatpatent. They packed it on the riverredgum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_brownbarrel": {
       "name": "Rust Brownbarrel",
       "desc": "A dry brownbarrel east of the riverredgum. Packed rust coats brownbarrel.",
       "brief": "Dry brownbarrel, packed rust.",
-      "exits": { "west": { "to": "rust_riverredgum" }, "east": { "to": "rust_callistemon" } },
+      "exits": { "west": { "to": "rust_riverredgum" }, "east": { "to": "rust_callistemon" }, "south": { "to": "rust_durumbreak" } },
       "actions": [
         {
           "id": "pinch_brownbarrel",
@@ -21597,11 +21665,28 @@
         }
       ]
     },
+    "rust_durumbreak": {
+      "name": "Rust Durumbreak",
+      "desc": "A dry durumbreak south of the brownbarrel. Packed rust coats durumbreak.",
+      "brief": "Dry durumbreak, packed rust.",
+      "exits": { "north": { "to": "rust_brownbarrel" } },
+      "actions": [
+        {
+          "id": "pinch_durumbreak",
+          "label": "pinch the durumbreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbreak. They packed it on the brownbarrel and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_callistemon": {
       "name": "Rust Callistemon",
       "desc": "A dry callistemon east of the brownbarrel. Packed rust coats callistemon.",
       "brief": "Dry callistemon, packed rust.",
-      "exits": { "west": { "to": "rust_brownbarrel" }, "east": { "to": "rust_leatherwood" } },
+      "exits": { "west": { "to": "rust_brownbarrel" }, "east": { "to": "rust_leatherwood" }, "south": { "to": "rust_foniobreak" } },
       "actions": [
         {
           "id": "pinch_callistemon",
@@ -21614,11 +21699,28 @@
         }
       ]
     },
+    "rust_foniobreak": {
+      "name": "Rust Foniobreak",
+      "desc": "A dry foniobreak south of the callistemon. Packed rust coats foniobreak.",
+      "brief": "Dry foniobreak, packed rust.",
+      "exits": { "north": { "to": "rust_callistemon" } },
+      "actions": [
+        {
+          "id": "pinch_foniobreak",
+          "label": "pinch the foniobreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobreak. They packed it on the callistemon and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_leatherwood": {
       "name": "Rust Leatherwood",
       "desc": "A dry leatherwood east of the callistemon. Packed rust coats leatherwood.",
       "brief": "Dry leatherwood, packed rust.",
-      "exits": { "west": { "to": "rust_callistemon" }, "east": { "to": "rust_lodgepole" } },
+      "exits": { "west": { "to": "rust_callistemon" }, "east": { "to": "rust_lodgepole" }, "south": { "to": "rust_teffbreak" } },
       "actions": [
         {
           "id": "pinch_leatherwood",
@@ -21631,11 +21733,28 @@
         }
       ]
     },
+    "rust_teffbreak": {
+      "name": "Rust Teffbreak",
+      "desc": "A dry teffbreak south of the leatherwood. Packed rust coats teffbreak.",
+      "brief": "Dry teffbreak, packed rust.",
+      "exits": { "north": { "to": "rust_leatherwood" } },
+      "actions": [
+        {
+          "id": "pinch_teffbreak",
+          "label": "pinch the teffbreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbreak. They packed it on the leatherwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_lodgepole": {
       "name": "Rust Lodgepole",
       "desc": "A dry lodgepole east of the leatherwood. Packed rust coats lodgepole.",
       "brief": "Dry lodgepole, packed rust.",
-      "exits": { "west": { "to": "rust_leatherwood" }, "east": { "to": "rust_westernred" } },
+      "exits": { "west": { "to": "rust_leatherwood" }, "east": { "to": "rust_westernred" }, "south": { "to": "rust_barleybreak" } },
       "actions": [
         {
           "id": "pinch_lodgepole",
@@ -21644,6 +21763,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lodgepole. They packed it on the leatherwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybreak": {
+      "name": "Rust Barleybreak",
+      "desc": "A dry barleybreak south of the lodgepole. Packed rust coats barleybreak.",
+      "brief": "Dry barleybreak, packed rust.",
+      "exits": { "north": { "to": "rust_lodgepole" } },
+      "actions": [
+        {
+          "id": "pinch_barleybreak",
+          "label": "pinch the barleybreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybreak. They packed it on the lodgepole and packed rust around it."]
           ]
         }
       ]
@@ -42693,20 +42829,44 @@
     "pinch the mizzen",
     "go east",
     "pinch the girtline",
+    "go south",
+    "pinch the cornpatent",
+    "go north",
     "go east",
     "pinch the mastcap",
+    "go south",
+    "pinch the oatpatent",
+    "go north",
     "go east",
     "pinch the rabbitglue",
+    "go south",
+    "pinch the ryepatent",
+    "go north",
     "go east",
     "pinch the riverredgum",
+    "go south",
+    "pinch the wheatpatent",
+    "go north",
     "go east",
     "pinch the brownbarrel",
+    "go south",
+    "pinch the durumbreak",
+    "go north",
     "go east",
     "pinch the callistemon",
+    "go south",
+    "pinch the foniobreak",
+    "go north",
     "go east",
     "pinch the leatherwood",
+    "go south",
+    "pinch the teffbreak",
+    "go north",
     "go east",
     "pinch the lodgepole",
+    "go south",
+    "pinch the barleybreak",
+    "go north",
     "go east",
     "pinch the westernred",
     "go west",
