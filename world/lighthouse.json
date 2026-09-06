@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15370,
+  "maxScore": 15410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -18626,7 +18626,7 @@
       "name": "Rust Surgeon",
       "desc": "A dry surgeon east of the grating. Packed rust coats a surgeon.",
       "brief": "Dry surgeon, packed rust.",
-      "exits": { "west": { "to": "rust_grating" }, "east": { "to": "rust_dextrin" }, "south": { "to": "rust_milletsifted" } },
+      "exits": { "west": { "to": "rust_grating" }, "east": { "to": "rust_dextrin" }, "south": { "to": "rust_milletsifted" }, "north": { "to": "rust_durumtumbler" } },
       "actions": [
         {
           "id": "pinch_surgeon",
@@ -18635,6 +18635,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard surgeon. They bound it on the grating and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumtumbler": {
+      "name": "Rust Durumtumbler",
+      "desc": "A dry durumtumbler north of the surgeon. Packed rust coats durumtumbler.",
+      "brief": "Dry durumtumbler, packed rust.",
+      "exits": { "south": { "to": "rust_surgeon" } },
+      "actions": [
+        {
+          "id": "pinch_durumtumbler",
+          "label": "pinch the durumtumbler",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumtumbler. They packed it on the surgeon and packed rust around it."]
           ]
         }
       ]
@@ -18660,7 +18677,7 @@
       "name": "Rust Dextrin",
       "desc": "A dry dextrin east of the surgeon. Packed rust coats dextrin.",
       "brief": "Dry dextrin, packed rust.",
-      "exits": { "west": { "to": "rust_surgeon" }, "east": { "to": "rust_realgar" }, "south": { "to": "rust_cornsifted" } },
+      "exits": { "west": { "to": "rust_surgeon" }, "east": { "to": "rust_realgar" }, "south": { "to": "rust_cornsifted" }, "north": { "to": "rust_foniotumbler" } },
       "actions": [
         {
           "id": "pinch_dextrin",
@@ -18669,6 +18686,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dextrin. They packed it on the surgeon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniotumbler": {
+      "name": "Rust Foniotumbler",
+      "desc": "A dry foniotumbler north of the dextrin. Packed rust coats foniotumbler.",
+      "brief": "Dry foniotumbler, packed rust.",
+      "exits": { "south": { "to": "rust_dextrin" } },
+      "actions": [
+        {
+          "id": "pinch_foniotumbler",
+          "label": "pinch the foniotumbler",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniotumbler. They packed it on the dextrin and packed rust around it."]
           ]
         }
       ]
@@ -18694,7 +18728,7 @@
       "name": "Rust Realgar",
       "desc": "A dry realgar east of the dextrin. Packed rust coats realgar.",
       "brief": "Dry realgar, packed rust.",
-      "exits": { "west": { "to": "rust_dextrin" }, "east": { "to": "rust_vinechar" }, "south": { "to": "rust_oatsifted" } },
+      "exits": { "west": { "to": "rust_dextrin" }, "east": { "to": "rust_vinechar" }, "south": { "to": "rust_oatsifted" }, "north": { "to": "rust_tefftumbler" } },
       "actions": [
         {
           "id": "pinch_realgar",
@@ -18703,6 +18737,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard realgar. They packed it on the dextrin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefftumbler": {
+      "name": "Rust Tefftumbler",
+      "desc": "A dry tefftumbler north of the realgar. Packed rust coats tefftumbler.",
+      "brief": "Dry tefftumbler, packed rust.",
+      "exits": { "south": { "to": "rust_realgar" } },
+      "actions": [
+        {
+          "id": "pinch_tefftumbler",
+          "label": "pinch the tefftumbler",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefftumbler. They packed it on the realgar and packed rust around it."]
           ]
         }
       ]
@@ -18728,7 +18779,7 @@
       "name": "Rust Vinechar",
       "desc": "A dry vinechar east of the realgar. Packed rust coats vinechar.",
       "brief": "Dry vinechar, packed rust.",
-      "exits": { "west": { "to": "rust_realgar" }, "east": { "to": "rust_redironbark" }, "south": { "to": "rust_durumplain" } },
+      "exits": { "west": { "to": "rust_realgar" }, "east": { "to": "rust_redironbark" }, "south": { "to": "rust_durumplain" }, "north": { "to": "rust_barleytumbler" } },
       "actions": [
         {
           "id": "pinch_vinechar",
@@ -18737,6 +18788,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard vinechar. They packed it on the realgar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleytumbler": {
+      "name": "Rust Barleytumbler",
+      "desc": "A dry barleytumbler north of the vinechar. Packed rust coats barleytumbler.",
+      "brief": "Dry barleytumbler, packed rust.",
+      "exits": { "south": { "to": "rust_vinechar" } },
+      "actions": [
+        {
+          "id": "pinch_barleytumbler",
+          "label": "pinch the barleytumbler",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleytumbler. They packed it on the vinechar and packed rust around it."]
           ]
         }
       ]
@@ -18762,7 +18830,7 @@
       "name": "Rust Redironbark",
       "desc": "A dry redironbark east of the vinechar. Packed rust coats redironbark.",
       "brief": "Dry redironbark, packed rust.",
-      "exits": { "west": { "to": "rust_vinechar" }, "east": { "to": "rust_spottedironbark" }, "south": { "to": "rust_fonioplain" } },
+      "exits": { "west": { "to": "rust_vinechar" }, "east": { "to": "rust_spottedironbark" }, "south": { "to": "rust_fonioplain" }, "north": { "to": "rust_sorghumtumbler" } },
       "actions": [
         {
           "id": "pinch_redironbark",
@@ -18771,6 +18839,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redironbark. They packed it on the vinechar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumtumbler": {
+      "name": "Rust Sorghumtumbler",
+      "desc": "A dry sorghumtumbler north of the redironbark. Packed rust coats sorghumtumbler.",
+      "brief": "Dry sorghumtumbler, packed rust.",
+      "exits": { "south": { "to": "rust_redironbark" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumtumbler",
+          "label": "pinch the sorghumtumbler",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumtumbler. They packed it on the redironbark and packed rust around it."]
           ]
         }
       ]
@@ -18796,7 +18881,7 @@
       "name": "Rust Spottedironbark",
       "desc": "A dry spottedironbark east of the redironbark. Packed rust coats spottedironbark.",
       "brief": "Dry spottedironbark, packed rust.",
-      "exits": { "west": { "to": "rust_redironbark" }, "east": { "to": "rust_blackwattle" }, "south": { "to": "rust_teffplain" } },
+      "exits": { "west": { "to": "rust_redironbark" }, "east": { "to": "rust_blackwattle" }, "south": { "to": "rust_teffplain" }, "north": { "to": "rust_millettumbler" } },
       "actions": [
         {
           "id": "pinch_spottedironbark",
@@ -18805,6 +18890,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spottedironbark. They packed it on the redironbark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millettumbler": {
+      "name": "Rust Millettumbler",
+      "desc": "A dry millettumbler north of the spottedironbark. Packed rust coats millettumbler.",
+      "brief": "Dry millettumbler, packed rust.",
+      "exits": { "south": { "to": "rust_spottedironbark" } },
+      "actions": [
+        {
+          "id": "pinch_millettumbler",
+          "label": "pinch the millettumbler",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millettumbler. They packed it on the spottedironbark and packed rust around it."]
           ]
         }
       ]
@@ -18830,7 +18932,7 @@
       "name": "Rust Blackwattle",
       "desc": "A dry blackwattle east of the spottedironbark. Packed rust coats blackwattle.",
       "brief": "Dry blackwattle, packed rust.",
-      "exits": { "west": { "to": "rust_spottedironbark" }, "east": { "to": "rust_yellowpine" }, "south": { "to": "rust_barleyplain" } },
+      "exits": { "west": { "to": "rust_spottedironbark" }, "east": { "to": "rust_yellowpine" }, "south": { "to": "rust_barleyplain" }, "north": { "to": "rust_corntumbler" } },
       "actions": [
         {
           "id": "pinch_blackwattle",
@@ -18839,6 +18941,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackwattle. They packed it on the spottedironbark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corntumbler": {
+      "name": "Rust Corntumbler",
+      "desc": "A dry corntumbler north of the blackwattle. Packed rust coats corntumbler.",
+      "brief": "Dry corntumbler, packed rust.",
+      "exits": { "south": { "to": "rust_blackwattle" } },
+      "actions": [
+        {
+          "id": "pinch_corntumbler",
+          "label": "pinch the corntumbler",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corntumbler. They packed it on the blackwattle and packed rust around it."]
           ]
         }
       ]
@@ -18864,7 +18983,7 @@
       "name": "Rust Yellowpine",
       "desc": "A dry yellowpine east of the blackwattle. Packed rust coats yellowpine.",
       "brief": "Dry yellowpine, packed rust.",
-      "exits": { "west": { "to": "rust_blackwattle" }, "east": { "to": "rust_karamu" }, "south": { "to": "rust_aalii" } },
+      "exits": { "west": { "to": "rust_blackwattle" }, "east": { "to": "rust_karamu" }, "south": { "to": "rust_aalii" }, "north": { "to": "rust_oattumbler" } },
       "actions": [
         {
           "id": "pinch_yellowpine",
@@ -18873,6 +18992,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yellowpine. They packed it on the blackwattle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oattumbler": {
+      "name": "Rust Oattumbler",
+      "desc": "A dry oattumbler north of the yellowpine. Packed rust coats oattumbler.",
+      "brief": "Dry oattumbler, packed rust.",
+      "exits": { "south": { "to": "rust_yellowpine" } },
+      "actions": [
+        {
+          "id": "pinch_oattumbler",
+          "label": "pinch the oattumbler",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oattumbler. They packed it on the yellowpine and packed rust around it."]
           ]
         }
       ]
@@ -55443,41 +55579,65 @@
     "go north",
     "go east",
     "pinch the surgeon",
+    "go north",
+    "pinch the durumtumbler",
+    "go south",
     "go south",
     "pinch the milletsifted",
     "go north",
     "go east",
     "pinch the dextrin",
+    "go north",
+    "pinch the foniotumbler",
+    "go south",
     "go south",
     "pinch the cornsifted",
     "go north",
     "go east",
     "pinch the realgar",
+    "go north",
+    "pinch the tefftumbler",
+    "go south",
     "go south",
     "pinch the oatsifted",
     "go north",
     "go east",
     "pinch the vinechar",
+    "go north",
+    "pinch the barleytumbler",
+    "go south",
     "go south",
     "pinch the durumplain",
     "go north",
     "go east",
     "pinch the redironbark",
+    "go north",
+    "pinch the sorghumtumbler",
+    "go south",
     "go south",
     "pinch the fonioplain",
     "go north",
     "go east",
     "pinch the spottedironbark",
+    "go north",
+    "pinch the millettumbler",
+    "go south",
     "go south",
     "pinch the teffplain",
     "go north",
     "go east",
     "pinch the blackwattle",
+    "go north",
+    "pinch the corntumbler",
+    "go south",
     "go south",
     "pinch the barleyplain",
     "go north",
     "go east",
     "pinch the yellowpine",
+    "go north",
+    "pinch the oattumbler",
+    "go south",
     "go south",
     "pinch the aalii",
     "go north",
