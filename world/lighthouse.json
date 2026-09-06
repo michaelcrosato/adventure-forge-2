@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13010,
+  "maxScore": 13050,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -37394,7 +37394,7 @@
       "name": "Rust Gypsum",
       "desc": "A dry gypsum east of the putty. Packed rust coats gypsum.",
       "brief": "Dry gypsum, packed rust.",
-      "exits": { "west": { "to": "rust_putty" }, "east": { "to": "rust_fir" }, "south": { "to": "rust_escarole" } },
+      "exits": { "west": { "to": "rust_putty" }, "east": { "to": "rust_fir" }, "south": { "to": "rust_escarole" }, "north": { "to": "rust_durumkeg" } },
       "actions": [
         {
           "id": "pinch_gypsum",
@@ -37403,6 +37403,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gypsum. They packed it on the putty and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumkeg": {
+      "name": "Rust Durumkeg",
+      "desc": "A dry durumkeg north of the gypsum. Packed rust coats durumkeg.",
+      "brief": "Dry durumkeg, packed rust.",
+      "exits": { "south": { "to": "rust_gypsum" } },
+      "actions": [
+        {
+          "id": "pinch_durumkeg",
+          "label": "pinch the durumkeg",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumkeg. They packed it on the gypsum and packed rust around it."]
           ]
         }
       ]
@@ -37428,7 +37445,7 @@
       "name": "Rust Fir",
       "desc": "A dry fir east of the gypsum. Packed rust coats fir.",
       "brief": "Dry fir, packed rust.",
-      "exits": { "west": { "to": "rust_gypsum" }, "east": { "to": "rust_butternut" }, "south": { "to": "rust_endive" } },
+      "exits": { "west": { "to": "rust_gypsum" }, "east": { "to": "rust_butternut" }, "south": { "to": "rust_endive" }, "north": { "to": "rust_foniokeg" } },
       "actions": [
         {
           "id": "pinch_fir",
@@ -37437,6 +37454,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fir. They stacked it on the gypsum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniokeg": {
+      "name": "Rust Foniokeg",
+      "desc": "A dry foniokeg north of the fir. Packed rust coats foniokeg.",
+      "brief": "Dry foniokeg, packed rust.",
+      "exits": { "south": { "to": "rust_fir" } },
+      "actions": [
+        {
+          "id": "pinch_foniokeg",
+          "label": "pinch the foniokeg",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniokeg. They packed it on the fir and packed rust around it."]
           ]
         }
       ]
@@ -37462,7 +37496,7 @@
       "name": "Rust Butternut",
       "desc": "A dry butternut east of the fir. Packed rust coats butternut.",
       "brief": "Dry butternut, packed rust.",
-      "exits": { "west": { "to": "rust_fir" }, "east": { "to": "rust_pumice" }, "south": { "to": "rust_lettuce" } },
+      "exits": { "west": { "to": "rust_fir" }, "east": { "to": "rust_pumice" }, "south": { "to": "rust_lettuce" }, "north": { "to": "rust_teffkeg" } },
       "actions": [
         {
           "id": "pinch_butternut",
@@ -37471,6 +37505,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard butternut. They cut it on the fir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffkeg": {
+      "name": "Rust Teffkeg",
+      "desc": "A dry teffkeg north of the butternut. Packed rust coats teffkeg.",
+      "brief": "Dry teffkeg, packed rust.",
+      "exits": { "south": { "to": "rust_butternut" } },
+      "actions": [
+        {
+          "id": "pinch_teffkeg",
+          "label": "pinch the teffkeg",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffkeg. They packed it on the butternut and packed rust around it."]
           ]
         }
       ]
@@ -37496,7 +37547,7 @@
       "name": "Rust Pumice",
       "desc": "A dry pumice east of the butternut. Packed rust coats pumice.",
       "brief": "Dry pumice, packed rust.",
-      "exits": { "west": { "to": "rust_butternut" }, "east": { "to": "rust_chalcocite" }, "south": { "to": "rust_brussels" } },
+      "exits": { "west": { "to": "rust_butternut" }, "east": { "to": "rust_chalcocite" }, "south": { "to": "rust_brussels" }, "north": { "to": "rust_barleykeg" } },
       "actions": [
         {
           "id": "pinch_pumice",
@@ -37505,6 +37556,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pumice. They packed it on the butternut and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleykeg": {
+      "name": "Rust Barleykeg",
+      "desc": "A dry barleykeg north of the pumice. Packed rust coats barleykeg.",
+      "brief": "Dry barleykeg, packed rust.",
+      "exits": { "south": { "to": "rust_pumice" } },
+      "actions": [
+        {
+          "id": "pinch_barleykeg",
+          "label": "pinch the barleykeg",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleykeg. They packed it on the pumice and packed rust around it."]
           ]
         }
       ]
@@ -37530,7 +37598,7 @@
       "name": "Rust Chalcocite",
       "desc": "A dry chalcocite east of the pumice. Packed rust coats chalcocite.",
       "brief": "Dry chalcocite, packed rust.",
-      "exits": { "west": { "to": "rust_pumice" }, "east": { "to": "rust_franklinite" }, "south": { "to": "rust_cauliflower" } },
+      "exits": { "west": { "to": "rust_pumice" }, "east": { "to": "rust_franklinite" }, "south": { "to": "rust_cauliflower" }, "north": { "to": "rust_sorghumkeg" } },
       "actions": [
         {
           "id": "pinch_chalcocite",
@@ -37539,6 +37607,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chalcocite. They packed it on the pumice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumkeg": {
+      "name": "Rust Sorghumkeg",
+      "desc": "A dry sorghumkeg north of the chalcocite. Packed rust coats sorghumkeg.",
+      "brief": "Dry sorghumkeg, packed rust.",
+      "exits": { "south": { "to": "rust_chalcocite" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumkeg",
+          "label": "pinch the sorghumkeg",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumkeg. They packed it on the chalcocite and packed rust around it."]
           ]
         }
       ]
@@ -37632,7 +37717,7 @@
       "name": "Rust Hambroline",
       "desc": "A dry hambroline east of the sheer. Packed rust coats hambroline.",
       "brief": "Dry hambroline, packed rust.",
-      "exits": { "west": { "to": "rust_sheer" }, "east": { "to": "rust_headcringle" }, "south": { "to": "rust_broccoli" } },
+      "exits": { "west": { "to": "rust_sheer" }, "east": { "to": "rust_headcringle" }, "south": { "to": "rust_broccoli" }, "north": { "to": "rust_milletkeg" } },
       "actions": [
         {
           "id": "pinch_hambroline",
@@ -37641,6 +37726,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hambroline. They rove it on the sheer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletkeg": {
+      "name": "Rust Milletkeg",
+      "desc": "A dry milletkeg north of the hambroline. Packed rust coats milletkeg.",
+      "brief": "Dry milletkeg, packed rust.",
+      "exits": { "south": { "to": "rust_hambroline" } },
+      "actions": [
+        {
+          "id": "pinch_milletkeg",
+          "label": "pinch the milletkeg",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletkeg. They packed it on the hambroline and packed rust around it."]
           ]
         }
       ]
@@ -37666,7 +37768,7 @@
       "name": "Rust Headcringle",
       "desc": "A dry headcringle east of the hambroline. Packed rust coats a headcringle.",
       "brief": "Dry headcringle, packed rust.",
-      "exits": { "west": { "to": "rust_hambroline" }, "east": { "to": "rust_burlap" }, "south": { "to": "rust_collard" } },
+      "exits": { "west": { "to": "rust_hambroline" }, "east": { "to": "rust_burlap" }, "south": { "to": "rust_collard" }, "north": { "to": "rust_cornkeg" } },
       "actions": [
         {
           "id": "pinch_headcringle",
@@ -37675,6 +37777,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard headcringle. They sewed it on the hambroline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornkeg": {
+      "name": "Rust Cornkeg",
+      "desc": "A dry cornkeg north of the headcringle. Packed rust coats cornkeg.",
+      "brief": "Dry cornkeg, packed rust.",
+      "exits": { "south": { "to": "rust_headcringle" } },
+      "actions": [
+        {
+          "id": "pinch_cornkeg",
+          "label": "pinch the cornkeg",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornkeg. They packed it on the headcringle and packed rust around it."]
           ]
         }
       ]
@@ -37700,7 +37819,7 @@
       "name": "Rust Burlap",
       "desc": "A dry burlap east of the headcringle. Packed rust coats burlap.",
       "brief": "Dry burlap, packed rust.",
-      "exits": { "west": { "to": "rust_headcringle" }, "east": { "to": "rust_lacquer" }, "south": { "to": "rust_kale" } },
+      "exits": { "west": { "to": "rust_headcringle" }, "east": { "to": "rust_lacquer" }, "south": { "to": "rust_kale" }, "north": { "to": "rust_oatkeg" } },
       "actions": [
         {
           "id": "pinch_burlap",
@@ -37709,6 +37828,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard burlap. They wrapped it on the headcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatkeg": {
+      "name": "Rust Oatkeg",
+      "desc": "A dry oatkeg north of the burlap. Packed rust coats oatkeg.",
+      "brief": "Dry oatkeg, packed rust.",
+      "exits": { "south": { "to": "rust_burlap" } },
+      "actions": [
+        {
+          "id": "pinch_oatkeg",
+          "label": "pinch the oatkeg",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatkeg. They packed it on the burlap and packed rust around it."]
           ]
         }
       ]
@@ -50727,26 +50863,41 @@
     "go north",
     "go east",
     "pinch the gypsum",
+    "go north",
+    "pinch the durumkeg",
+    "go south",
     "go south",
     "pinch the escarole",
     "go north",
     "go east",
     "pinch the fir",
+    "go north",
+    "pinch the foniokeg",
+    "go south",
     "go south",
     "pinch the endive",
     "go north",
     "go east",
     "pinch the butternut",
+    "go north",
+    "pinch the teffkeg",
+    "go south",
     "go south",
     "pinch the lettuce",
     "go north",
     "go east",
     "pinch the pumice",
+    "go north",
+    "pinch the barleykeg",
+    "go south",
     "go south",
     "pinch the brussels",
     "go north",
     "go east",
     "pinch the chalcocite",
+    "go north",
+    "pinch the sorghumkeg",
+    "go south",
     "go south",
     "pinch the cauliflower",
     "go north",
@@ -50772,16 +50923,25 @@
     "pinch the sheer",
     "go east",
     "pinch the hambroline",
+    "go north",
+    "pinch the milletkeg",
+    "go south",
     "go south",
     "pinch the broccoli",
     "go north",
     "go east",
     "pinch the headcringle",
+    "go north",
+    "pinch the cornkeg",
+    "go south",
     "go south",
     "pinch the collard",
     "go north",
     "go east",
     "pinch the burlap",
+    "go north",
+    "pinch the oatkeg",
+    "go south",
     "go south",
     "pinch the kale",
     "go north",
