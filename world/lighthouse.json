@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12290,
+  "maxScore": 12330,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -15005,7 +15005,7 @@
       "name": "Rust Hakea",
       "desc": "A dry hakea east of the bangalay. Packed rust coats hakea.",
       "brief": "Dry hakea, packed rust.",
-      "exits": { "west": { "to": "rust_bangalay" }, "east": { "to": "rust_kingbilly" } },
+      "exits": { "west": { "to": "rust_bangalay" }, "east": { "to": "rust_kingbilly" }, "south": { "to": "rust_durumselect" } },
       "actions": [
         {
           "id": "pinch_hakea",
@@ -15014,6 +15014,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hakea. They packed it on the bangalay and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumselect": {
+      "name": "Rust Durumselect",
+      "desc": "A dry durumselect south of the hakea. Packed rust coats durumselect.",
+      "brief": "Dry durumselect, packed rust.",
+      "exits": { "north": { "to": "rust_hakea" } },
+      "actions": [
+        {
+          "id": "pinch_durumselect",
+          "label": "pinch the durumselect",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumselect. They packed it on the hakea and packed rust around it."]
           ]
         }
       ]
@@ -15073,7 +15090,7 @@
       "name": "Rust Tiller",
       "desc": "A dry tiller east of the chin. Packed rust coats a tiller.",
       "brief": "Dry tiller, packed rust.",
-      "exits": { "west": { "to": "rust_chin" }, "east": { "to": "rust_halfhitch" } },
+      "exits": { "west": { "to": "rust_chin" }, "east": { "to": "rust_halfhitch" }, "south": { "to": "rust_fonioselect" } },
       "actions": [
         {
           "id": "pinch_tiller",
@@ -15086,11 +15103,28 @@
         }
       ]
     },
+    "rust_fonioselect": {
+      "name": "Rust Fonioselect",
+      "desc": "A dry fonioselect south of the tiller. Packed rust coats fonioselect.",
+      "brief": "Dry fonioselect, packed rust.",
+      "exits": { "north": { "to": "rust_tiller" } },
+      "actions": [
+        {
+          "id": "pinch_fonioselect",
+          "label": "pinch the fonioselect",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioselect. They packed it on the tiller and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_halfhitch": {
       "name": "Rust Halfhitch",
       "desc": "A dry halfhitch east of the tiller. Packed rust coats a halfhitch.",
       "brief": "Dry halfhitch, packed rust.",
-      "exits": { "west": { "to": "rust_tiller" }, "east": { "to": "rust_myrrh" } },
+      "exits": { "west": { "to": "rust_tiller" }, "east": { "to": "rust_myrrh" }, "south": { "to": "rust_teffselect" } },
       "actions": [
         {
           "id": "pinch_halfhitch",
@@ -15103,11 +15137,28 @@
         }
       ]
     },
+    "rust_teffselect": {
+      "name": "Rust Teffselect",
+      "desc": "A dry teffselect south of the halfhitch. Packed rust coats teffselect.",
+      "brief": "Dry teffselect, packed rust.",
+      "exits": { "north": { "to": "rust_halfhitch" } },
+      "actions": [
+        {
+          "id": "pinch_teffselect",
+          "label": "pinch the teffselect",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffselect. They packed it on the halfhitch and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_myrrh": {
       "name": "Rust Myrrh",
       "desc": "A dry myrrh east of the halfhitch. Packed rust coats myrrh.",
       "brief": "Dry myrrh, packed rust.",
-      "exits": { "west": { "to": "rust_halfhitch" }, "east": { "to": "rust_henna" } },
+      "exits": { "west": { "to": "rust_halfhitch" }, "east": { "to": "rust_henna" }, "south": { "to": "rust_barleyselect" } },
       "actions": [
         {
           "id": "pinch_myrrh",
@@ -15120,11 +15171,28 @@
         }
       ]
     },
+    "rust_barleyselect": {
+      "name": "Rust Barleyselect",
+      "desc": "A dry barleyselect south of the myrrh. Packed rust coats barleyselect.",
+      "brief": "Dry barleyselect, packed rust.",
+      "exits": { "north": { "to": "rust_myrrh" } },
+      "actions": [
+        {
+          "id": "pinch_barleyselect",
+          "label": "pinch the barleyselect",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyselect. They packed it on the myrrh and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_henna": {
       "name": "Rust Henna",
       "desc": "A dry henna east of the myrrh. Packed rust coats henna.",
       "brief": "Dry henna, packed rust.",
-      "exits": { "west": { "to": "rust_myrrh" }, "east": { "to": "rust_charcoal" } },
+      "exits": { "west": { "to": "rust_myrrh" }, "east": { "to": "rust_charcoal" }, "south": { "to": "rust_sorghumselect" } },
       "actions": [
         {
           "id": "pinch_henna",
@@ -15137,11 +15205,28 @@
         }
       ]
     },
+    "rust_sorghumselect": {
+      "name": "Rust Sorghumselect",
+      "desc": "A dry sorghumselect south of the henna. Packed rust coats sorghumselect.",
+      "brief": "Dry sorghumselect, packed rust.",
+      "exits": { "north": { "to": "rust_henna" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumselect",
+          "label": "pinch the sorghumselect",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumselect. They packed it on the henna and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_charcoal": {
       "name": "Rust Charcoal",
       "desc": "A dry charcoal east of the henna. Packed rust coats charcoal.",
       "brief": "Dry charcoal, packed rust.",
-      "exits": { "west": { "to": "rust_henna" }, "east": { "to": "rust_tuart" } },
+      "exits": { "west": { "to": "rust_henna" }, "east": { "to": "rust_tuart" }, "south": { "to": "rust_milletselect" } },
       "actions": [
         {
           "id": "pinch_charcoal",
@@ -15154,11 +15239,28 @@
         }
       ]
     },
+    "rust_milletselect": {
+      "name": "Rust Milletselect",
+      "desc": "A dry milletselect south of the charcoal. Packed rust coats milletselect.",
+      "brief": "Dry milletselect, packed rust.",
+      "exits": { "north": { "to": "rust_charcoal" } },
+      "actions": [
+        {
+          "id": "pinch_milletselect",
+          "label": "pinch the milletselect",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletselect. They packed it on the charcoal and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tuart": {
       "name": "Rust Tuart",
       "desc": "A dry tuart east of the charcoal. Packed rust coats tuart.",
       "brief": "Dry tuart, packed rust.",
-      "exits": { "west": { "to": "rust_charcoal" }, "east": { "to": "rust_redoak" } },
+      "exits": { "west": { "to": "rust_charcoal" }, "east": { "to": "rust_redoak" }, "south": { "to": "rust_cornselect" } },
       "actions": [
         {
           "id": "pinch_tuart",
@@ -15171,11 +15273,28 @@
         }
       ]
     },
+    "rust_cornselect": {
+      "name": "Rust Cornselect",
+      "desc": "A dry cornselect south of the tuart. Packed rust coats cornselect.",
+      "brief": "Dry cornselect, packed rust.",
+      "exits": { "north": { "to": "rust_tuart" } },
+      "actions": [
+        {
+          "id": "pinch_cornselect",
+          "label": "pinch the cornselect",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornselect. They packed it on the tuart and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_redoak": {
       "name": "Rust Redoak",
       "desc": "A dry redoak east of the tuart. Packed rust coats redoak.",
       "brief": "Dry redoak, packed rust.",
-      "exits": { "west": { "to": "rust_tuart" }, "east": { "to": "rust_sassafras" } },
+      "exits": { "west": { "to": "rust_tuart" }, "east": { "to": "rust_sassafras" }, "south": { "to": "rust_oatselect" } },
       "actions": [
         {
           "id": "pinch_redoak",
@@ -15184,6 +15303,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redoak. They packed it on the tuart and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatselect": {
+      "name": "Rust Oatselect",
+      "desc": "A dry oatselect south of the redoak. Packed rust coats oatselect.",
+      "brief": "Dry oatselect, packed rust.",
+      "exits": { "north": { "to": "rust_redoak" } },
+      "actions": [
+        {
+          "id": "pinch_oatselect",
+          "label": "pinch the oatselect",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatselect. They packed it on the redoak and packed rust around it."]
           ]
         }
       ]
@@ -44321,6 +44457,9 @@
     "pinch the bangalay",
     "go east",
     "pinch the hakea",
+    "go south",
+    "pinch the durumselect",
+    "go north",
     "go east",
     "pinch the kingbilly",
     "go south",
@@ -44340,18 +44479,39 @@
     "go north",
     "go east",
     "pinch the tiller",
+    "go south",
+    "pinch the fonioselect",
+    "go north",
     "go east",
     "pinch the halfhitch",
+    "go south",
+    "pinch the teffselect",
+    "go north",
     "go east",
     "pinch the myrrh",
+    "go south",
+    "pinch the barleyselect",
+    "go north",
     "go east",
     "pinch the henna",
+    "go south",
+    "pinch the sorghumselect",
+    "go north",
     "go east",
     "pinch the charcoal",
+    "go south",
+    "pinch the milletselect",
+    "go north",
     "go east",
     "pinch the tuart",
+    "go south",
+    "pinch the cornselect",
+    "go north",
     "go east",
     "pinch the redoak",
+    "go south",
+    "pinch the oatselect",
+    "go north",
     "go east",
     "pinch the sassafras",
     "go south",
