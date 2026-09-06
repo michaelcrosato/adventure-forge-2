@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13090,
+  "maxScore": 13130,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -36765,7 +36765,7 @@
       "name": "Rust Corundum",
       "desc": "A dry corundum east of the tamarack. Packed rust coats corundum.",
       "brief": "Dry corundum, packed rust.",
-      "exits": { "west": { "to": "rust_tamarack" }, "east": { "to": "rust_tetrahedrite" }, "south": { "to": "rust_waterleaf" } },
+      "exits": { "west": { "to": "rust_tamarack" }, "east": { "to": "rust_tetrahedrite" }, "south": { "to": "rust_waterleaf" }, "north": { "to": "rust_durumcask" } },
       "actions": [
         {
           "id": "pinch_corundum",
@@ -36774,6 +36774,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard corundum. They packed it on the tamarack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumcask": {
+      "name": "Rust Durumcask",
+      "desc": "A dry durumcask north of the corundum. Packed rust coats durumcask.",
+      "brief": "Dry durumcask, packed rust.",
+      "exits": { "south": { "to": "rust_corundum" } },
+      "actions": [
+        {
+          "id": "pinch_durumcask",
+          "label": "pinch the durumcask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumcask. They packed it on the corundum and packed rust around it."]
           ]
         }
       ]
@@ -36799,7 +36816,7 @@
       "name": "Rust Tetrahedrite",
       "desc": "A dry tetrahedrite east of the corundum. Packed rust coats tetrahedrite.",
       "brief": "Dry tetrahedrite, packed rust.",
-      "exits": { "west": { "to": "rust_corundum" }, "east": { "to": "rust_greenockite" }, "south": { "to": "rust_amaranth" } },
+      "exits": { "west": { "to": "rust_corundum" }, "east": { "to": "rust_greenockite" }, "south": { "to": "rust_amaranth" }, "north": { "to": "rust_foniocask" } },
       "actions": [
         {
           "id": "pinch_tetrahedrite",
@@ -36808,6 +36825,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tetrahedrite. They packed it on the corundum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniocask": {
+      "name": "Rust Foniocask",
+      "desc": "A dry foniocask north of the tetrahedrite. Packed rust coats foniocask.",
+      "brief": "Dry foniocask, packed rust.",
+      "exits": { "south": { "to": "rust_tetrahedrite" } },
+      "actions": [
+        {
+          "id": "pinch_foniocask",
+          "label": "pinch the foniocask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniocask. They packed it on the tetrahedrite and packed rust around it."]
           ]
         }
       ]
@@ -36884,7 +36918,7 @@
       "name": "Rust Orlop",
       "desc": "A dry orlop east of the pipe. Packed rust coats an orlop.",
       "brief": "Dry orlop, packed rust.",
-      "exits": { "west": { "to": "rust_pipe" }, "east": { "to": "rust_lashing" }, "south": { "to": "rust_orach" } },
+      "exits": { "west": { "to": "rust_pipe" }, "east": { "to": "rust_lashing" }, "south": { "to": "rust_orach" }, "north": { "to": "rust_teffcask" } },
       "actions": [
         {
           "id": "pinch_orlop",
@@ -36893,6 +36927,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard orlop. They decked it on the pipe and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffcask": {
+      "name": "Rust Teffcask",
+      "desc": "A dry teffcask north of the orlop. Packed rust coats teffcask.",
+      "brief": "Dry teffcask, packed rust.",
+      "exits": { "south": { "to": "rust_orlop" } },
+      "actions": [
+        {
+          "id": "pinch_teffcask",
+          "label": "pinch the teffcask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffcask. They packed it on the orlop and packed rust around it."]
           ]
         }
       ]
@@ -36918,7 +36969,7 @@
       "name": "Rust Lashing",
       "desc": "A dry lashing east of the orlop. Packed rust coats a lashing.",
       "brief": "Dry lashing, packed rust.",
-      "exits": { "west": { "to": "rust_orlop" }, "east": { "to": "rust_leechgasket" }, "south": { "to": "rust_cilantro" } },
+      "exits": { "west": { "to": "rust_orlop" }, "east": { "to": "rust_leechgasket" }, "south": { "to": "rust_cilantro" }, "north": { "to": "rust_barleycask" } },
       "actions": [
         {
           "id": "pinch_lashing",
@@ -36927,6 +36978,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lashing. They bound it on the orlop and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleycask": {
+      "name": "Rust Barleycask",
+      "desc": "A dry barleycask north of the lashing. Packed rust coats barleycask.",
+      "brief": "Dry barleycask, packed rust.",
+      "exits": { "south": { "to": "rust_lashing" } },
+      "actions": [
+        {
+          "id": "pinch_barleycask",
+          "label": "pinch the barleycask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleycask. They packed it on the lashing and packed rust around it."]
           ]
         }
       ]
@@ -36952,7 +37020,7 @@
       "name": "Rust Leechgasket",
       "desc": "A dry leechgasket east of the lashing. Packed rust coats a leechgasket.",
       "brief": "Dry leechgasket, packed rust.",
-      "exits": { "west": { "to": "rust_lashing" }, "east": { "to": "rust_oilskin" }, "south": { "to": "rust_dandelion" } },
+      "exits": { "west": { "to": "rust_lashing" }, "east": { "to": "rust_oilskin" }, "south": { "to": "rust_dandelion" }, "north": { "to": "rust_sorghumcask" } },
       "actions": [
         {
           "id": "pinch_leechgasket",
@@ -36961,6 +37029,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard leechgasket. They laced it on the lashing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumcask": {
+      "name": "Rust Sorghumcask",
+      "desc": "A dry sorghumcask north of the leechgasket. Packed rust coats sorghumcask.",
+      "brief": "Dry sorghumcask, packed rust.",
+      "exits": { "south": { "to": "rust_leechgasket" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumcask",
+          "label": "pinch the sorghumcask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumcask. They packed it on the leechgasket and packed rust around it."]
           ]
         }
       ]
@@ -36986,7 +37071,7 @@
       "name": "Rust Oilskin",
       "desc": "A dry oilskin east of the leechgasket. Packed rust coats oilskin.",
       "brief": "Dry oilskin, packed rust.",
-      "exits": { "west": { "to": "rust_leechgasket" }, "east": { "to": "rust_copal" }, "south": { "to": "rust_purslane" } },
+      "exits": { "west": { "to": "rust_leechgasket" }, "east": { "to": "rust_copal" }, "south": { "to": "rust_purslane" }, "north": { "to": "rust_milletcask" } },
       "actions": [
         {
           "id": "pinch_oilskin",
@@ -36995,6 +37080,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard oilskin. They spread it on the leechgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletcask": {
+      "name": "Rust Milletcask",
+      "desc": "A dry milletcask north of the oilskin. Packed rust coats milletcask.",
+      "brief": "Dry milletcask, packed rust.",
+      "exits": { "south": { "to": "rust_oilskin" } },
+      "actions": [
+        {
+          "id": "pinch_milletcask",
+          "label": "pinch the milletcask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletcask. They packed it on the oilskin and packed rust around it."]
           ]
         }
       ]
@@ -37020,7 +37122,7 @@
       "name": "Rust Copal",
       "desc": "A dry copal east of the oilskin. Packed rust coats copal.",
       "brief": "Dry copal, packed rust.",
-      "exits": { "west": { "to": "rust_oilskin" }, "east": { "to": "rust_teak" }, "south": { "to": "rust_bokchoy" } },
+      "exits": { "west": { "to": "rust_oilskin" }, "east": { "to": "rust_teak" }, "south": { "to": "rust_bokchoy" }, "north": { "to": "rust_corncask" } },
       "actions": [
         {
           "id": "pinch_copal",
@@ -37029,6 +37131,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard copal. They smeared it on the oilskin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corncask": {
+      "name": "Rust Corncask",
+      "desc": "A dry corncask north of the copal. Packed rust coats corncask.",
+      "brief": "Dry corncask, packed rust.",
+      "exits": { "south": { "to": "rust_copal" } },
+      "actions": [
+        {
+          "id": "pinch_corncask",
+          "label": "pinch the corncask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corncask. They packed it on the copal and packed rust around it."]
           ]
         }
       ]
@@ -37054,7 +37173,7 @@
       "name": "Rust Teak",
       "desc": "A dry teak east of the copal. Packed rust coats teak.",
       "brief": "Dry teak, packed rust.",
-      "exits": { "west": { "to": "rust_copal" }, "east": { "to": "rust_larch" }, "south": { "to": "rust_mustard" } },
+      "exits": { "west": { "to": "rust_copal" }, "east": { "to": "rust_larch" }, "south": { "to": "rust_mustard" }, "north": { "to": "rust_oatcask" } },
       "actions": [
         {
           "id": "pinch_teak",
@@ -37063,6 +37182,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard teak. They laid it on the copal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatcask": {
+      "name": "Rust Oatcask",
+      "desc": "A dry oatcask north of the teak. Packed rust coats oatcask.",
+      "brief": "Dry oatcask, packed rust.",
+      "exits": { "south": { "to": "rust_teak" } },
+      "actions": [
+        {
+          "id": "pinch_oatcask",
+          "label": "pinch the oatcask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatcask. They packed it on the teak and packed rust around it."]
           ]
         }
       ]
@@ -50886,11 +51022,17 @@
     "go north",
     "go east",
     "pinch the corundum",
+    "go north",
+    "pinch the durumcask",
+    "go south",
     "go south",
     "pinch the waterleaf",
     "go north",
     "go east",
     "pinch the tetrahedrite",
+    "go north",
+    "pinch the foniocask",
+    "go south",
     "go south",
     "pinch the amaranth",
     "go north",
@@ -50914,31 +51056,49 @@
     "pinch the pipe",
     "go east",
     "pinch the orlop",
+    "go north",
+    "pinch the teffcask",
+    "go south",
     "go south",
     "pinch the orach",
     "go north",
     "go east",
     "pinch the lashing",
+    "go north",
+    "pinch the barleycask",
+    "go south",
     "go south",
     "pinch the cilantro",
     "go north",
     "go east",
     "pinch the leechgasket",
+    "go north",
+    "pinch the sorghumcask",
+    "go south",
     "go south",
     "pinch the dandelion",
     "go north",
     "go east",
     "pinch the oilskin",
+    "go north",
+    "pinch the milletcask",
+    "go south",
     "go south",
     "pinch the purslane",
     "go north",
     "go east",
     "pinch the copal",
+    "go north",
+    "pinch the corncask",
+    "go south",
     "go south",
     "pinch the bokchoy",
     "go north",
     "go east",
     "pinch the teak",
+    "go north",
+    "pinch the oatcask",
+    "go south",
     "go south",
     "pinch the mustard",
     "go north",
