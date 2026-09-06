@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10850,
+  "maxScore": 10890,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -22230,7 +22230,7 @@
       "name": "Rust Marupa",
       "desc": "A dry marupa east of the gmelina. Packed rust coats marupa.",
       "brief": "Dry marupa, packed rust.",
-      "exits": { "west": { "to": "rust_gmelina" }, "east": { "to": "rust_geronggang" } },
+      "exits": { "west": { "to": "rust_gmelina" }, "east": { "to": "rust_geronggang" }, "south": { "to": "rust_durumgrits" } },
       "actions": [
         {
           "id": "pinch_marupa",
@@ -22243,11 +22243,28 @@
         }
       ]
     },
+    "rust_durumgrits": {
+      "name": "Rust Durumgrits",
+      "desc": "A dry durumgrits south of the marupa. Packed rust coats durumgrits.",
+      "brief": "Dry durumgrits, packed rust.",
+      "exits": { "north": { "to": "rust_marupa" } },
+      "actions": [
+        {
+          "id": "pinch_durumgrits",
+          "label": "pinch the durumgrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumgrits. They packed it on the marupa and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_geronggang": {
       "name": "Rust Geronggang",
       "desc": "A dry geronggang east of the marupa. Packed rust coats geronggang.",
       "brief": "Dry geronggang, packed rust.",
-      "exits": { "west": { "to": "rust_marupa" }, "east": { "to": "rust_keranji" } },
+      "exits": { "west": { "to": "rust_marupa" }, "east": { "to": "rust_keranji" }, "south": { "to": "rust_foniogrits" } },
       "actions": [
         {
           "id": "pinch_geronggang",
@@ -22260,11 +22277,28 @@
         }
       ]
     },
+    "rust_foniogrits": {
+      "name": "Rust Foniogrits",
+      "desc": "A dry foniogrits south of the geronggang. Packed rust coats foniogrits.",
+      "brief": "Dry foniogrits, packed rust.",
+      "exits": { "north": { "to": "rust_geronggang" } },
+      "actions": [
+        {
+          "id": "pinch_foniogrits",
+          "label": "pinch the foniogrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniogrits. They packed it on the geronggang and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_keranji": {
       "name": "Rust Keranji",
       "desc": "A dry keranji east of the geronggang. Packed rust coats keranji.",
       "brief": "Dry keranji, packed rust.",
-      "exits": { "west": { "to": "rust_geronggang" }, "east": { "to": "rust_palmyra" } },
+      "exits": { "west": { "to": "rust_geronggang" }, "east": { "to": "rust_palmyra" }, "south": { "to": "rust_teffgrits" } },
       "actions": [
         {
           "id": "pinch_keranji",
@@ -22277,11 +22311,28 @@
         }
       ]
     },
+    "rust_teffgrits": {
+      "name": "Rust Teffgrits",
+      "desc": "A dry teffgrits south of the keranji. Packed rust coats teffgrits.",
+      "brief": "Dry teffgrits, packed rust.",
+      "exits": { "north": { "to": "rust_keranji" } },
+      "actions": [
+        {
+          "id": "pinch_teffgrits",
+          "label": "pinch the teffgrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffgrits. They packed it on the keranji and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_palmyra": {
       "name": "Rust Palmyra",
       "desc": "A dry palmyra east of the keranji. Packed rust coats palmyra.",
       "brief": "Dry palmyra, packed rust.",
-      "exits": { "west": { "to": "rust_keranji" }, "east": { "to": "rust_karri" } },
+      "exits": { "west": { "to": "rust_keranji" }, "east": { "to": "rust_karri" }, "south": { "to": "rust_triticalegrits" } },
       "actions": [
         {
           "id": "pinch_palmyra",
@@ -22290,6 +22341,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palmyra. They packed it on the keranji and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_triticalegrits": {
+      "name": "Rust Triticalegrits",
+      "desc": "A dry triticalegrits south of the palmyra. Packed rust coats triticalegrits.",
+      "brief": "Dry triticalegrits, packed rust.",
+      "exits": { "north": { "to": "rust_palmyra" } },
+      "actions": [
+        {
+          "id": "pinch_triticalegrits",
+          "label": "pinch the triticalegrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard triticalegrits. They packed it on the palmyra and packed rust around it."]
           ]
         }
       ]
@@ -22349,7 +22417,7 @@
       "name": "Rust Wallknot",
       "desc": "A dry wallknot east of the cranse. Packed rust coats a wallknot.",
       "brief": "Dry wallknot, packed rust.",
-      "exits": { "west": { "to": "rust_cranse" }, "east": { "to": "rust_sailcloth" } },
+      "exits": { "west": { "to": "rust_cranse" }, "east": { "to": "rust_sailcloth" }, "south": { "to": "rust_einkorngrits" } },
       "actions": [
         {
           "id": "pinch_wallknot",
@@ -22362,11 +22430,28 @@
         }
       ]
     },
+    "rust_einkorngrits": {
+      "name": "Rust Einkorngrits",
+      "desc": "A dry einkorngrits south of the wallknot. Packed rust coats einkorngrits.",
+      "brief": "Dry einkorngrits, packed rust.",
+      "exits": { "north": { "to": "rust_wallknot" } },
+      "actions": [
+        {
+          "id": "pinch_einkorngrits",
+          "label": "pinch the einkorngrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard einkorngrits. They packed it on the wallknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sailcloth": {
       "name": "Rust Sailcloth",
       "desc": "A dry sailcloth east of the wallknot. Packed rust coats a sailcloth.",
       "brief": "Dry sailcloth, packed rust.",
-      "exits": { "west": { "to": "rust_wallknot" }, "east": { "to": "rust_wenge" } },
+      "exits": { "west": { "to": "rust_wallknot" }, "east": { "to": "rust_wenge" }, "south": { "to": "rust_emmergrits" } },
       "actions": [
         {
           "id": "pinch_sailcloth",
@@ -22379,11 +22464,28 @@
         }
       ]
     },
+    "rust_emmergrits": {
+      "name": "Rust Emmergrits",
+      "desc": "A dry emmergrits south of the sailcloth. Packed rust coats emmergrits.",
+      "brief": "Dry emmergrits, packed rust.",
+      "exits": { "north": { "to": "rust_sailcloth" } },
+      "actions": [
+        {
+          "id": "pinch_emmergrits",
+          "label": "pinch the emmergrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard emmergrits. They packed it on the sailcloth and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_wenge": {
       "name": "Rust Wenge",
       "desc": "A dry wenge east of the sailcloth. Packed rust coats wenge.",
       "brief": "Dry wenge, packed rust.",
-      "exits": { "west": { "to": "rust_sailcloth" }, "east": { "to": "rust_limba" } },
+      "exits": { "west": { "to": "rust_sailcloth" }, "east": { "to": "rust_limba" }, "south": { "to": "rust_kamutgrits" } },
       "actions": [
         {
           "id": "pinch_wenge",
@@ -22396,11 +22498,28 @@
         }
       ]
     },
+    "rust_kamutgrits": {
+      "name": "Rust Kamutgrits",
+      "desc": "A dry kamutgrits south of the wenge. Packed rust coats kamutgrits.",
+      "brief": "Dry kamutgrits, packed rust.",
+      "exits": { "north": { "to": "rust_wenge" } },
+      "actions": [
+        {
+          "id": "pinch_kamutgrits",
+          "label": "pinch the kamutgrits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kamutgrits. They packed it on the wenge and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_limba": {
       "name": "Rust Limba",
       "desc": "A dry limba east of the wenge. Packed rust coats limba.",
       "brief": "Dry limba, packed rust.",
-      "exits": { "west": { "to": "rust_wenge" }, "east": { "to": "rust_ovangkol" } },
+      "exits": { "west": { "to": "rust_wenge" }, "east": { "to": "rust_ovangkol" }, "south": { "to": "rust_durumflake" } },
       "actions": [
         {
           "id": "pinch_limba",
@@ -22409,6 +22528,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard limba. They packed it on the wenge and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumflake": {
+      "name": "Rust Durumflake",
+      "desc": "A dry durumflake south of the limba. Packed rust coats durumflake.",
+      "brief": "Dry durumflake, packed rust.",
+      "exits": { "north": { "to": "rust_limba" } },
+      "actions": [
+        {
+          "id": "pinch_durumflake",
+          "label": "pinch the durumflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumflake. They packed it on the limba and packed rust around it."]
           ]
         }
       ]
@@ -40705,12 +40841,24 @@
     "pinch the gmelina",
     "go east",
     "pinch the marupa",
+    "go south",
+    "pinch the durumgrits",
+    "go north",
     "go east",
     "pinch the geronggang",
+    "go south",
+    "pinch the foniogrits",
+    "go north",
     "go east",
     "pinch the keranji",
+    "go south",
+    "pinch the teffgrits",
+    "go north",
     "go east",
     "pinch the palmyra",
+    "go south",
+    "pinch the triticalegrits",
+    "go north",
     "go east",
     "pinch the karri",
     "go west",
@@ -40729,12 +40877,24 @@
     "pinch the cranse",
     "go east",
     "pinch the wallknot",
+    "go south",
+    "pinch the einkorngrits",
+    "go north",
     "go east",
     "pinch the sailcloth",
+    "go south",
+    "pinch the emmergrits",
+    "go north",
     "go east",
     "pinch the wenge",
+    "go south",
+    "pinch the kamutgrits",
+    "go north",
     "go east",
     "pinch the limba",
+    "go south",
+    "pinch the durumflake",
+    "go north",
     "go east",
     "pinch the ovangkol",
     "go south",
