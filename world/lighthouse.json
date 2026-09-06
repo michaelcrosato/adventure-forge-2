@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 16010,
+  "maxScore": 16050,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13526,7 +13526,7 @@
       "name": "Rust Blackpine",
       "desc": "A dry blackpine east of the acacia. Packed rust coats blackpine.",
       "brief": "Dry blackpine, packed rust.",
-      "exits": { "west": { "to": "rust_acacia" }, "east": { "to": "rust_stonepine" }, "south": { "to": "rust_kapok" } },
+      "exits": { "west": { "to": "rust_acacia" }, "east": { "to": "rust_stonepine" }, "south": { "to": "rust_kapok" }, "north": { "to": "rust_durumsolomon" } },
       "actions": [
         {
           "id": "pinch_blackpine",
@@ -13535,6 +13535,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackpine. They packed it on the acacia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumsolomon": {
+      "name": "Rust Durumsolomon",
+      "desc": "A dry durumsolomon north of the blackpine. Packed rust coats durumsolomon.",
+      "brief": "Dry durumsolomon, packed rust.",
+      "exits": { "south": { "to": "rust_blackpine" } },
+      "actions": [
+        {
+          "id": "pinch_durumsolomon",
+          "label": "pinch the durumsolomon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumsolomon. They packed it on the blackpine and packed rust around it."]
           ]
         }
       ]
@@ -13560,7 +13577,7 @@
       "name": "Rust Stonepine",
       "desc": "A dry stonepine east of the blackpine. Packed rust coats stonepine.",
       "brief": "Dry stonepine, packed rust.",
-      "exits": { "west": { "to": "rust_blackpine" }, "east": { "to": "rust_lawson" }, "south": { "to": "rust_ramie" } },
+      "exits": { "west": { "to": "rust_blackpine" }, "east": { "to": "rust_lawson" }, "south": { "to": "rust_ramie" }, "north": { "to": "rust_foniosolomon" } },
       "actions": [
         {
           "id": "pinch_stonepine",
@@ -13569,6 +13586,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stonepine. They packed it on the blackpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniosolomon": {
+      "name": "Rust Foniosolomon",
+      "desc": "A dry foniosolomon north of the stonepine. Packed rust coats foniosolomon.",
+      "brief": "Dry foniosolomon, packed rust.",
+      "exits": { "south": { "to": "rust_stonepine" } },
+      "actions": [
+        {
+          "id": "pinch_foniosolomon",
+          "label": "pinch the foniosolomon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniosolomon. They packed it on the stonepine and packed rust around it."]
           ]
         }
       ]
@@ -13594,7 +13628,7 @@
       "name": "Rust Lawson",
       "desc": "A dry lawson east of the stonepine. Packed rust coats lawson.",
       "brief": "Dry lawson, packed rust.",
-      "exits": { "west": { "to": "rust_stonepine" }, "east": { "to": "rust_ngaio" }, "south": { "to": "rust_kamani" } },
+      "exits": { "west": { "to": "rust_stonepine" }, "east": { "to": "rust_ngaio" }, "south": { "to": "rust_kamani" }, "north": { "to": "rust_teffsolomon" } },
       "actions": [
         {
           "id": "pinch_lawson",
@@ -13603,6 +13637,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lawson. They packed it on the stonepine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffsolomon": {
+      "name": "Rust Teffsolomon",
+      "desc": "A dry teffsolomon north of the lawson. Packed rust coats teffsolomon.",
+      "brief": "Dry teffsolomon, packed rust.",
+      "exits": { "south": { "to": "rust_lawson" } },
+      "actions": [
+        {
+          "id": "pinch_teffsolomon",
+          "label": "pinch the teffsolomon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffsolomon. They packed it on the lawson and packed rust around it."]
           ]
         }
       ]
@@ -13696,7 +13747,7 @@
       "name": "Rust Marline",
       "desc": "A dry marline east of the knighthead. Packed rust coats marline.",
       "brief": "Dry marline, packed rust.",
-      "exits": { "west": { "to": "rust_knighthead" }, "east": { "to": "rust_klemheist" }, "south": { "to": "rust_nettle" } },
+      "exits": { "west": { "to": "rust_knighthead" }, "east": { "to": "rust_klemheist" }, "south": { "to": "rust_nettle" }, "north": { "to": "rust_barleysolomon" } },
       "actions": [
         {
           "id": "pinch_marline",
@@ -13705,6 +13756,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard marline. They served it on the knighthead and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleysolomon": {
+      "name": "Rust Barleysolomon",
+      "desc": "A dry barleysolomon north of the marline. Packed rust coats barleysolomon.",
+      "brief": "Dry barleysolomon, packed rust.",
+      "exits": { "south": { "to": "rust_marline" } },
+      "actions": [
+        {
+          "id": "pinch_barleysolomon",
+          "label": "pinch the barleysolomon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleysolomon. They packed it on the marline and packed rust around it."]
           ]
         }
       ]
@@ -13730,7 +13798,7 @@
       "name": "Rust Klemheist",
       "desc": "A dry klemheist east of the marline. Packed rust coats a klemheist.",
       "brief": "Dry klemheist, packed rust.",
-      "exits": { "west": { "to": "rust_marline" }, "east": { "to": "rust_pectin" }, "south": { "to": "rust_abaca" } },
+      "exits": { "west": { "to": "rust_marline" }, "east": { "to": "rust_pectin" }, "south": { "to": "rust_abaca" }, "north": { "to": "rust_sorghumsolomon" } },
       "actions": [
         {
           "id": "pinch_klemheist",
@@ -13739,6 +13807,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard klemheist. They gripped it on the marline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumsolomon": {
+      "name": "Rust Sorghumsolomon",
+      "desc": "A dry sorghumsolomon north of the klemheist. Packed rust coats sorghumsolomon.",
+      "brief": "Dry sorghumsolomon, packed rust.",
+      "exits": { "south": { "to": "rust_klemheist" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumsolomon",
+          "label": "pinch the sorghumsolomon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumsolomon. They packed it on the klemheist and packed rust around it."]
           ]
         }
       ]
@@ -13764,7 +13849,7 @@
       "name": "Rust Pectin",
       "desc": "A dry pectin east of the klemheist. Packed rust coats pectin.",
       "brief": "Dry pectin, packed rust.",
-      "exits": { "west": { "to": "rust_klemheist" }, "east": { "to": "rust_cutch" }, "south": { "to": "rust_kenaf" } },
+      "exits": { "west": { "to": "rust_klemheist" }, "east": { "to": "rust_cutch" }, "south": { "to": "rust_kenaf" }, "north": { "to": "rust_milletsolomon" } },
       "actions": [
         {
           "id": "pinch_pectin",
@@ -13773,6 +13858,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pectin. They packed it on the klemheist and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletsolomon": {
+      "name": "Rust Milletsolomon",
+      "desc": "A dry milletsolomon north of the pectin. Packed rust coats milletsolomon.",
+      "brief": "Dry milletsolomon, packed rust.",
+      "exits": { "south": { "to": "rust_pectin" } },
+      "actions": [
+        {
+          "id": "pinch_milletsolomon",
+          "label": "pinch the milletsolomon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletsolomon. They packed it on the pectin and packed rust around it."]
           ]
         }
       ]
@@ -13798,7 +13900,7 @@
       "name": "Rust Cutch",
       "desc": "A dry cutch east of the pectin. Packed rust coats cutch.",
       "brief": "Dry cutch, packed rust.",
-      "exits": { "west": { "to": "rust_pectin" }, "east": { "to": "rust_sootblack" }, "south": { "to": "rust_sunn" } },
+      "exits": { "west": { "to": "rust_pectin" }, "east": { "to": "rust_sootblack" }, "south": { "to": "rust_sunn" }, "north": { "to": "rust_cornsolomon" } },
       "actions": [
         {
           "id": "pinch_cutch",
@@ -13807,6 +13909,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cutch. They packed it on the pectin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornsolomon": {
+      "name": "Rust Cornsolomon",
+      "desc": "A dry cornsolomon north of the cutch. Packed rust coats cornsolomon.",
+      "brief": "Dry cornsolomon, packed rust.",
+      "exits": { "south": { "to": "rust_cutch" } },
+      "actions": [
+        {
+          "id": "pinch_cornsolomon",
+          "label": "pinch the cornsolomon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornsolomon. They packed it on the cutch and packed rust around it."]
           ]
         }
       ]
@@ -13832,7 +13951,7 @@
       "name": "Rust Sootblack",
       "desc": "A dry sootblack east of the cutch. Packed rust coats sootblack.",
       "brief": "Dry sootblack, packed rust.",
-      "exits": { "west": { "to": "rust_cutch" }, "east": { "to": "rust_shininggum" }, "south": { "to": "rust_henequen" } },
+      "exits": { "west": { "to": "rust_cutch" }, "east": { "to": "rust_shininggum" }, "south": { "to": "rust_henequen" }, "north": { "to": "rust_oatsolomon" } },
       "actions": [
         {
           "id": "pinch_sootblack",
@@ -13841,6 +13960,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sootblack. They packed it on the cutch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatsolomon": {
+      "name": "Rust Oatsolomon",
+      "desc": "A dry oatsolomon north of the sootblack. Packed rust coats oatsolomon.",
+      "brief": "Dry oatsolomon, packed rust.",
+      "exits": { "south": { "to": "rust_sootblack" } },
+      "actions": [
+        {
+          "id": "pinch_oatsolomon",
+          "label": "pinch the oatsolomon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatsolomon. They packed it on the sootblack and packed rust around it."]
           ]
         }
       ]
@@ -56716,16 +56852,25 @@
     "go north",
     "go east",
     "pinch the blackpine",
+    "go north",
+    "pinch the durumsolomon",
+    "go south",
     "go south",
     "pinch the kapok",
     "go north",
     "go east",
     "pinch the stonepine",
+    "go north",
+    "pinch the foniosolomon",
+    "go south",
     "go south",
     "pinch the ramie",
     "go north",
     "go east",
     "pinch the lawson",
+    "go north",
+    "pinch the teffsolomon",
+    "go south",
     "go south",
     "pinch the kamani",
     "go north",
@@ -56747,26 +56892,41 @@
     "pinch the knighthead",
     "go east",
     "pinch the marline",
+    "go north",
+    "pinch the barleysolomon",
+    "go south",
     "go south",
     "pinch the nettle",
     "go north",
     "go east",
     "pinch the klemheist",
+    "go north",
+    "pinch the sorghumsolomon",
+    "go south",
     "go south",
     "pinch the abaca",
     "go north",
     "go east",
     "pinch the pectin",
+    "go north",
+    "pinch the milletsolomon",
+    "go south",
     "go south",
     "pinch the kenaf",
     "go north",
     "go east",
     "pinch the cutch",
+    "go north",
+    "pinch the cornsolomon",
+    "go south",
     "go south",
     "pinch the sunn",
     "go north",
     "go east",
     "pinch the sootblack",
+    "go north",
+    "pinch the oatsolomon",
+    "go south",
     "go south",
     "pinch the henequen",
     "go north",
