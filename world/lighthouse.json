@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14330,
+  "maxScore": 14370,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -26956,7 +26956,7 @@
       "name": "Rust Koto",
       "desc": "A dry koto east of the sapele. Packed rust coats koto.",
       "brief": "Dry koto, packed rust.",
-      "exits": { "west": { "to": "rust_sapele" }, "east": { "to": "rust_cumaru" }, "south": { "to": "rust_ryefeed" } },
+      "exits": { "west": { "to": "rust_sapele" }, "east": { "to": "rust_cumaru" }, "south": { "to": "rust_ryefeed" }, "north": { "to": "rust_durumbottle" } },
       "actions": [
         {
           "id": "pinch_koto",
@@ -26965,6 +26965,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard koto. They packed it on the sapele and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbottle": {
+      "name": "Rust Durumbottle",
+      "desc": "A dry durumbottle north of the koto. Packed rust coats durumbottle.",
+      "brief": "Dry durumbottle, packed rust.",
+      "exits": { "south": { "to": "rust_koto" } },
+      "actions": [
+        {
+          "id": "pinch_durumbottle",
+          "label": "pinch the durumbottle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbottle. They packed it on the koto and packed rust around it."]
           ]
         }
       ]
@@ -26990,7 +27007,7 @@
       "name": "Rust Cumaru",
       "desc": "A dry cumaru east of the koto. Packed rust coats cumaru.",
       "brief": "Dry cumaru, packed rust.",
-      "exits": { "west": { "to": "rust_koto" }, "east": { "to": "rust_goncalo" }, "south": { "to": "rust_wheatfeed" } },
+      "exits": { "west": { "to": "rust_koto" }, "east": { "to": "rust_goncalo" }, "south": { "to": "rust_wheatfeed" }, "north": { "to": "rust_foniobottle" } },
       "actions": [
         {
           "id": "pinch_cumaru",
@@ -26999,6 +27016,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cumaru. They packed it on the koto and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobottle": {
+      "name": "Rust Foniobottle",
+      "desc": "A dry foniobottle north of the cumaru. Packed rust coats foniobottle.",
+      "brief": "Dry foniobottle, packed rust.",
+      "exits": { "south": { "to": "rust_cumaru" } },
+      "actions": [
+        {
+          "id": "pinch_foniobottle",
+          "label": "pinch the foniobottle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobottle. They packed it on the cumaru and packed rust around it."]
           ]
         }
       ]
@@ -27024,7 +27058,7 @@
       "name": "Rust Goncalo",
       "desc": "A dry goncalo east of the cumaru. Packed rust coats goncalo.",
       "brief": "Dry goncalo, packed rust.",
-      "exits": { "west": { "to": "rust_cumaru" }, "east": { "to": "rust_yakal" }, "south": { "to": "rust_cornshorts" } },
+      "exits": { "west": { "to": "rust_cumaru" }, "east": { "to": "rust_yakal" }, "south": { "to": "rust_cornshorts" }, "north": { "to": "rust_teffbottle" } },
       "actions": [
         {
           "id": "pinch_goncalo",
@@ -27033,6 +27067,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard goncalo. They packed it on the cumaru and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbottle": {
+      "name": "Rust Teffbottle",
+      "desc": "A dry teffbottle north of the goncalo. Packed rust coats teffbottle.",
+      "brief": "Dry teffbottle, packed rust.",
+      "exits": { "south": { "to": "rust_goncalo" } },
+      "actions": [
+        {
+          "id": "pinch_teffbottle",
+          "label": "pinch the teffbottle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbottle. They packed it on the goncalo and packed rust around it."]
           ]
         }
       ]
@@ -27058,7 +27109,7 @@
       "name": "Rust Yakal",
       "desc": "A dry yakal east of the goncalo. Packed rust coats yakal.",
       "brief": "Dry yakal, packed rust.",
-      "exits": { "west": { "to": "rust_goncalo" }, "east": { "to": "rust_whiteapo" }, "south": { "to": "rust_oatmidds" } },
+      "exits": { "west": { "to": "rust_goncalo" }, "east": { "to": "rust_whiteapo" }, "south": { "to": "rust_oatmidds" }, "north": { "to": "rust_barleybottle" } },
       "actions": [
         {
           "id": "pinch_yakal",
@@ -27067,6 +27118,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yakal. They packed it on the goncalo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybottle": {
+      "name": "Rust Barleybottle",
+      "desc": "A dry barleybottle north of the yakal. Packed rust coats barleybottle.",
+      "brief": "Dry barleybottle, packed rust.",
+      "exits": { "south": { "to": "rust_yakal" } },
+      "actions": [
+        {
+          "id": "pinch_barleybottle",
+          "label": "pinch the barleybottle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybottle. They packed it on the yakal and packed rust around it."]
           ]
         }
       ]
@@ -27092,7 +27160,7 @@
       "name": "Rust Whiteapo",
       "desc": "A dry whiteapo east of the yakal. Packed rust coats whiteapo.",
       "brief": "Dry whiteapo, packed rust.",
-      "exits": { "west": { "to": "rust_yakal" }, "east": { "to": "rust_mountainash" }, "south": { "to": "rust_ryescreenings" } },
+      "exits": { "west": { "to": "rust_yakal" }, "east": { "to": "rust_mountainash" }, "south": { "to": "rust_ryescreenings" }, "north": { "to": "rust_sorghumbottle" } },
       "actions": [
         {
           "id": "pinch_whiteapo",
@@ -27101,6 +27169,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whiteapo. They packed it on the yakal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbottle": {
+      "name": "Rust Sorghumbottle",
+      "desc": "A dry sorghumbottle north of the whiteapo. Packed rust coats sorghumbottle.",
+      "brief": "Dry sorghumbottle, packed rust.",
+      "exits": { "south": { "to": "rust_whiteapo" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbottle",
+          "label": "pinch the sorghumbottle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbottle. They packed it on the whiteapo and packed rust around it."]
           ]
         }
       ]
@@ -27143,7 +27228,7 @@
       "name": "Rust Sheave",
       "desc": "A dry sheave east of the dross. Packed rust coats a sheave.",
       "brief": "Dry sheave, packed rust.",
-      "exits": { "west": { "to": "rust_dross" }, "east": { "to": "rust_eyeplice" }, "south": { "to": "rust_wheatshorts" } },
+      "exits": { "west": { "to": "rust_dross" }, "east": { "to": "rust_eyeplice" }, "south": { "to": "rust_wheatshorts" }, "north": { "to": "rust_milletbottle" } },
       "actions": [
         {
           "id": "pinch_sheave",
@@ -27152,6 +27237,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheave. They grooved it in the dross and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbottle": {
+      "name": "Rust Milletbottle",
+      "desc": "A dry milletbottle north of the sheave. Packed rust coats milletbottle.",
+      "brief": "Dry milletbottle, packed rust.",
+      "exits": { "south": { "to": "rust_sheave" } },
+      "actions": [
+        {
+          "id": "pinch_milletbottle",
+          "label": "pinch the milletbottle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbottle. They packed it on the sheave and packed rust around it."]
           ]
         }
       ]
@@ -27177,7 +27279,7 @@
       "name": "Rust Eyeplice",
       "desc": "A dry eyeplice east of the sheave. Packed rust coats an eyeplice.",
       "brief": "Dry eyeplice, packed rust.",
-      "exits": { "west": { "to": "rust_sheave" }, "east": { "to": "rust_cocobolo" }, "south": { "to": "rust_ryegrassseed" } },
+      "exits": { "west": { "to": "rust_sheave" }, "east": { "to": "rust_cocobolo" }, "south": { "to": "rust_ryegrassseed" }, "north": { "to": "rust_cornbottle" } },
       "actions": [
         {
           "id": "pinch_eyeplice",
@@ -27186,6 +27288,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard eyeplice. They tucked it on the sheave and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbottle": {
+      "name": "Rust Cornbottle",
+      "desc": "A dry cornbottle north of the eyeplice. Packed rust coats cornbottle.",
+      "brief": "Dry cornbottle, packed rust.",
+      "exits": { "south": { "to": "rust_eyeplice" } },
+      "actions": [
+        {
+          "id": "pinch_cornbottle",
+          "label": "pinch the cornbottle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbottle. They packed it on the eyeplice and packed rust around it."]
           ]
         }
       ]
@@ -27211,7 +27330,7 @@
       "name": "Rust Cocobolo",
       "desc": "A dry cocobolo east of the eyeplice. Packed rust coats cocobolo.",
       "brief": "Dry cocobolo, packed rust.",
-      "exits": { "west": { "to": "rust_eyeplice" }, "east": { "to": "rust_abachi" }, "south": { "to": "rust_barleygerm" } },
+      "exits": { "west": { "to": "rust_eyeplice" }, "east": { "to": "rust_abachi" }, "south": { "to": "rust_barleygerm" }, "north": { "to": "rust_oatbottle" } },
       "actions": [
         {
           "id": "pinch_cocobolo",
@@ -27220,6 +27339,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cocobolo. They packed it on the eyeplice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbottle": {
+      "name": "Rust Oatbottle",
+      "desc": "A dry oatbottle north of the cocobolo. Packed rust coats oatbottle.",
+      "brief": "Dry oatbottle, packed rust.",
+      "exits": { "south": { "to": "rust_cocobolo" } },
+      "actions": [
+        {
+          "id": "pinch_oatbottle",
+          "label": "pinch the oatbottle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbottle. They packed it on the cocobolo and packed rust around it."]
           ]
         }
       ]
@@ -53373,26 +53509,41 @@
     "go north",
     "go east",
     "pinch the koto",
+    "go north",
+    "pinch the durumbottle",
+    "go south",
     "go south",
     "pinch the ryefeed",
     "go north",
     "go east",
     "pinch the cumaru",
+    "go north",
+    "pinch the foniobottle",
+    "go south",
     "go south",
     "pinch the wheatfeed",
     "go north",
     "go east",
     "pinch the goncalo",
+    "go north",
+    "pinch the teffbottle",
+    "go south",
     "go south",
     "pinch the cornshorts",
     "go north",
     "go east",
     "pinch the yakal",
+    "go north",
+    "pinch the barleybottle",
+    "go south",
     "go south",
     "pinch the oatmidds",
     "go north",
     "go east",
     "pinch the whiteapo",
+    "go north",
+    "pinch the sorghumbottle",
+    "go south",
     "go south",
     "pinch the ryescreenings",
     "go north",
@@ -53410,16 +53561,25 @@
     "go north",
     "go east",
     "pinch the sheave",
+    "go north",
+    "pinch the milletbottle",
+    "go south",
     "go south",
     "pinch the wheatshorts",
     "go north",
     "go east",
     "pinch the eyeplice",
+    "go north",
+    "pinch the cornbottle",
+    "go south",
     "go south",
     "pinch the ryegrassseed",
     "go north",
     "go east",
     "pinch the cocobolo",
+    "go north",
+    "pinch the oatbottle",
+    "go south",
     "go south",
     "pinch the barleygerm",
     "go north",
