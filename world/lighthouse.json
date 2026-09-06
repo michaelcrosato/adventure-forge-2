@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15970,
+  "maxScore": 16010,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13866,7 +13866,7 @@
       "name": "Rust Shininggum",
       "desc": "A dry shininggum east of the sootblack. Packed rust coats shininggum.",
       "brief": "Dry shininggum, packed rust.",
-      "exits": { "west": { "to": "rust_sootblack" }, "east": { "to": "rust_kurrajong" }, "south": { "to": "rust_istle" } },
+      "exits": { "west": { "to": "rust_sootblack" }, "east": { "to": "rust_kurrajong" }, "south": { "to": "rust_istle" }, "north": { "to": "rust_durummelchior" } },
       "actions": [
         {
           "id": "pinch_shininggum",
@@ -13875,6 +13875,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shininggum. They packed it on the sootblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durummelchior": {
+      "name": "Rust Durummelchior",
+      "desc": "A dry durummelchior north of the shininggum. Packed rust coats durummelchior.",
+      "brief": "Dry durummelchior, packed rust.",
+      "exits": { "south": { "to": "rust_shininggum" } },
+      "actions": [
+        {
+          "id": "pinch_durummelchior",
+          "label": "pinch the durummelchior",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durummelchior. They packed it on the shininggum and packed rust around it."]
           ]
         }
       ]
@@ -13900,7 +13917,7 @@
       "name": "Rust Kurrajong",
       "desc": "A dry kurrajong east of the shininggum. Packed rust coats kurrajong.",
       "brief": "Dry kurrajong, packed rust.",
-      "exits": { "west": { "to": "rust_shininggum" }, "east": { "to": "rust_norfolkpine" }, "south": { "to": "rust_maguey" } },
+      "exits": { "west": { "to": "rust_shininggum" }, "east": { "to": "rust_norfolkpine" }, "south": { "to": "rust_maguey" }, "north": { "to": "rust_foniomelchior" } },
       "actions": [
         {
           "id": "pinch_kurrajong",
@@ -13909,6 +13926,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kurrajong. They packed it on the shininggum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniomelchior": {
+      "name": "Rust Foniomelchior",
+      "desc": "A dry foniomelchior north of the kurrajong. Packed rust coats foniomelchior.",
+      "brief": "Dry foniomelchior, packed rust.",
+      "exits": { "south": { "to": "rust_kurrajong" } },
+      "actions": [
+        {
+          "id": "pinch_foniomelchior",
+          "label": "pinch the foniomelchior",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniomelchior. They packed it on the kurrajong and packed rust around it."]
           ]
         }
       ]
@@ -13934,7 +13968,7 @@
       "name": "Rust Norfolkpine",
       "desc": "A dry norfolkpine east of the kurrajong. Packed rust coats norfolkpine.",
       "brief": "Dry norfolkpine, packed rust.",
-      "exits": { "west": { "to": "rust_kurrajong" }, "east": { "to": "rust_karaka" }, "south": { "to": "rust_wiliwili" } },
+      "exits": { "west": { "to": "rust_kurrajong" }, "east": { "to": "rust_karaka" }, "south": { "to": "rust_wiliwili" }, "north": { "to": "rust_teffmelchior" } },
       "actions": [
         {
           "id": "pinch_norfolkpine",
@@ -13943,6 +13977,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard norfolkpine. They packed it on the kurrajong and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffmelchior": {
+      "name": "Rust Teffmelchior",
+      "desc": "A dry teffmelchior north of the norfolkpine. Packed rust coats teffmelchior.",
+      "brief": "Dry teffmelchior, packed rust.",
+      "exits": { "south": { "to": "rust_norfolkpine" } },
+      "actions": [
+        {
+          "id": "pinch_teffmelchior",
+          "label": "pinch the teffmelchior",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffmelchior. They packed it on the norfolkpine and packed rust around it."]
           ]
         }
       ]
@@ -14002,7 +14053,7 @@
       "name": "Rust Larkhead",
       "desc": "A dry larkhead east of the leech. Packed rust coats a larkhead.",
       "brief": "Dry larkhead, packed rust.",
-      "exits": { "west": { "to": "rust_leech" }, "east": { "to": "rust_xanthan" }, "south": { "to": "rust_pita" } },
+      "exits": { "west": { "to": "rust_leech" }, "east": { "to": "rust_xanthan" }, "south": { "to": "rust_pita" }, "north": { "to": "rust_barleymelchior" } },
       "actions": [
         {
           "id": "pinch_larkhead",
@@ -14011,6 +14062,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard larkhead. They hitched it on the leech and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleymelchior": {
+      "name": "Rust Barleymelchior",
+      "desc": "A dry barleymelchior north of the larkhead. Packed rust coats barleymelchior.",
+      "brief": "Dry barleymelchior, packed rust.",
+      "exits": { "south": { "to": "rust_larkhead" } },
+      "actions": [
+        {
+          "id": "pinch_barleymelchior",
+          "label": "pinch the barleymelchior",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleymelchior. They packed it on the larkhead and packed rust around it."]
           ]
         }
       ]
@@ -14036,7 +14104,7 @@
       "name": "Rust Xanthan",
       "desc": "A dry xanthan east of the larkhead. Packed rust coats xanthan.",
       "brief": "Dry xanthan, packed rust.",
-      "exits": { "west": { "to": "rust_larkhead" }, "east": { "to": "rust_annotto" }, "south": { "to": "rust_agave" } },
+      "exits": { "west": { "to": "rust_larkhead" }, "east": { "to": "rust_annotto" }, "south": { "to": "rust_agave" }, "north": { "to": "rust_sorghummelchior" } },
       "actions": [
         {
           "id": "pinch_xanthan",
@@ -14045,6 +14113,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard xanthan. They packed it on the larkhead and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghummelchior": {
+      "name": "Rust Sorghummelchior",
+      "desc": "A dry sorghummelchior north of the xanthan. Packed rust coats sorghummelchior.",
+      "brief": "Dry sorghummelchior, packed rust.",
+      "exits": { "south": { "to": "rust_xanthan" } },
+      "actions": [
+        {
+          "id": "pinch_sorghummelchior",
+          "label": "pinch the sorghummelchior",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghummelchior. They packed it on the xanthan and packed rust around it."]
           ]
         }
       ]
@@ -14070,7 +14155,7 @@
       "name": "Rust Annotto",
       "desc": "A dry annotto east of the xanthan. Packed rust coats annotto.",
       "brief": "Dry annotto, packed rust.",
-      "exits": { "west": { "to": "rust_xanthan" }, "east": { "to": "rust_carbon" }, "south": { "to": "rust_yucca" } },
+      "exits": { "west": { "to": "rust_xanthan" }, "east": { "to": "rust_carbon" }, "south": { "to": "rust_yucca" }, "north": { "to": "rust_milletmelchior" } },
       "actions": [
         {
           "id": "pinch_annotto",
@@ -14079,6 +14164,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard annotto. They packed it on the xanthan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletmelchior": {
+      "name": "Rust Milletmelchior",
+      "desc": "A dry milletmelchior north of the annotto. Packed rust coats milletmelchior.",
+      "brief": "Dry milletmelchior, packed rust.",
+      "exits": { "south": { "to": "rust_annotto" } },
+      "actions": [
+        {
+          "id": "pinch_milletmelchior",
+          "label": "pinch the milletmelchior",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletmelchior. They packed it on the annotto and packed rust around it."]
           ]
         }
       ]
@@ -14104,7 +14206,7 @@
       "name": "Rust Carbon",
       "desc": "A dry carbon east of the annotto. Packed rust coats carbon.",
       "brief": "Dry carbon, packed rust.",
-      "exits": { "west": { "to": "rust_annotto" }, "east": { "to": "rust_scribblygum" }, "south": { "to": "rust_phormium" } },
+      "exits": { "west": { "to": "rust_annotto" }, "east": { "to": "rust_scribblygum" }, "south": { "to": "rust_phormium" }, "north": { "to": "rust_cornmelchior" } },
       "actions": [
         {
           "id": "pinch_carbon",
@@ -14113,6 +14215,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard carbon. They packed it on the annotto and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornmelchior": {
+      "name": "Rust Cornmelchior",
+      "desc": "A dry cornmelchior north of the carbon. Packed rust coats cornmelchior.",
+      "brief": "Dry cornmelchior, packed rust.",
+      "exits": { "south": { "to": "rust_carbon" } },
+      "actions": [
+        {
+          "id": "pinch_cornmelchior",
+          "label": "pinch the cornmelchior",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornmelchior. They packed it on the carbon and packed rust around it."]
           ]
         }
       ]
@@ -14138,7 +14257,7 @@
       "name": "Rust Scribblygum",
       "desc": "A dry scribblygum east of the carbon. Packed rust coats scribblygum.",
       "brief": "Dry scribblygum, packed rust.",
-      "exits": { "west": { "to": "rust_carbon" }, "east": { "to": "rust_gympie" }, "south": { "to": "rust_harakeke" } },
+      "exits": { "west": { "to": "rust_carbon" }, "east": { "to": "rust_gympie" }, "south": { "to": "rust_harakeke" }, "north": { "to": "rust_oatmelchior" } },
       "actions": [
         {
           "id": "pinch_scribblygum",
@@ -14147,6 +14266,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard scribblygum. They packed it on the carbon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatmelchior": {
+      "name": "Rust Oatmelchior",
+      "desc": "A dry oatmelchior north of the scribblygum. Packed rust coats oatmelchior.",
+      "brief": "Dry oatmelchior, packed rust.",
+      "exits": { "south": { "to": "rust_scribblygum" } },
+      "actions": [
+        {
+          "id": "pinch_oatmelchior",
+          "label": "pinch the oatmelchior",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatmelchior. They packed it on the scribblygum and packed rust around it."]
           ]
         }
       ]
@@ -56636,16 +56772,25 @@
     "go north",
     "go east",
     "pinch the shininggum",
+    "go north",
+    "pinch the durummelchior",
+    "go south",
     "go south",
     "pinch the istle",
     "go north",
     "go east",
     "pinch the kurrajong",
+    "go north",
+    "pinch the foniomelchior",
+    "go south",
     "go south",
     "pinch the maguey",
     "go north",
     "go east",
     "pinch the norfolkpine",
+    "go north",
+    "pinch the teffmelchior",
+    "go south",
     "go south",
     "pinch the wiliwili",
     "go north",
@@ -56665,26 +56810,41 @@
     "pinch the leech",
     "go east",
     "pinch the larkhead",
+    "go north",
+    "pinch the barleymelchior",
+    "go south",
     "go south",
     "pinch the pita",
     "go north",
     "go east",
     "pinch the xanthan",
+    "go north",
+    "pinch the sorghummelchior",
+    "go south",
     "go south",
     "pinch the agave",
     "go north",
     "go east",
     "pinch the annotto",
+    "go north",
+    "pinch the milletmelchior",
+    "go south",
     "go south",
     "pinch the yucca",
     "go north",
     "go east",
     "pinch the carbon",
+    "go north",
+    "pinch the cornmelchior",
+    "go south",
     "go south",
     "pinch the phormium",
     "go north",
     "go east",
     "pinch the scribblygum",
+    "go north",
+    "pinch the oatmelchior",
+    "go south",
     "go south",
     "pinch the harakeke",
     "go north",
