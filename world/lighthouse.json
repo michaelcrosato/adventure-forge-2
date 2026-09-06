@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8890,
+  "maxScore": 8930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -11656,7 +11656,7 @@
       "name": "Rust Shroud",
       "desc": "A dry shroud east of the wedge. Packed rust coats a shroud.",
       "brief": "Dry shroud, packed rust.",
-      "exits": { "west": { "to": "rust_wedge" }, "east": { "to": "rust_tye" } },
+      "exits": { "west": { "to": "rust_wedge" }, "east": { "to": "rust_tye" }, "south": { "to": "rust_pumpkin" } },
       "actions": [
         {
           "id": "pinch_shroud",
@@ -11669,11 +11669,28 @@
         }
       ]
     },
+    "rust_pumpkin": {
+      "name": "Rust Pumpkin",
+      "desc": "A dry pumpkin south of the shroud. Packed rust coats pumpkin.",
+      "brief": "Dry pumpkin, packed rust.",
+      "exits": { "north": { "to": "rust_shroud" } },
+      "actions": [
+        {
+          "id": "pinch_pumpkin",
+          "label": "pinch the pumpkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pumpkin. They packed it on the shroud and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tye": {
       "name": "Rust Tye",
       "desc": "A dry tye east of the shroud. Packed rust coats a tye.",
       "brief": "Dry tye, packed rust.",
-      "exits": { "west": { "to": "rust_shroud" }, "east": { "to": "rust_diamondknot" } },
+      "exits": { "west": { "to": "rust_shroud" }, "east": { "to": "rust_diamondknot" }, "south": { "to": "rust_squash" } },
       "actions": [
         {
           "id": "pinch_tye",
@@ -11682,6 +11699,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tye. They hung it on the shroud and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_squash": {
+      "name": "Rust Squash",
+      "desc": "A dry squash south of the tye. Packed rust coats squash.",
+      "brief": "Dry squash, packed rust.",
+      "exits": { "north": { "to": "rust_tye" } },
+      "actions": [
+        {
+          "id": "pinch_squash",
+          "label": "pinch the squash",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard squash. They packed it on the tye and packed rust around it."]
           ]
         }
       ]
@@ -11860,7 +11894,7 @@
       "name": "Rust Corkbark",
       "desc": "A dry corkbark east of the redcedar. Packed rust coats corkbark.",
       "brief": "Dry corkbark, packed rust.",
-      "exits": { "west": { "to": "rust_redcedar" }, "east": { "to": "rust_homolepis" } },
+      "exits": { "west": { "to": "rust_redcedar" }, "east": { "to": "rust_homolepis" }, "south": { "to": "rust_zucchini" } },
       "actions": [
         {
           "id": "pinch_corkbark",
@@ -11869,6 +11903,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard corkbark. They packed it on the redcedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_zucchini": {
+      "name": "Rust Zucchini",
+      "desc": "A dry zucchini south of the corkbark. Packed rust coats zucchini.",
+      "brief": "Dry zucchini, packed rust.",
+      "exits": { "north": { "to": "rust_corkbark" } },
+      "actions": [
+        {
+          "id": "pinch_zucchini",
+          "label": "pinch the zucchini",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard zucchini. They packed it on the corkbark and packed rust around it."]
           ]
         }
       ]
@@ -11962,7 +12013,7 @@
       "name": "Rust Truss",
       "desc": "A dry truss east of the backstay. Packed rust coats a truss.",
       "brief": "Dry truss, packed rust.",
-      "exits": { "west": { "to": "rust_backstay" }, "east": { "to": "rust_stopperknot" } },
+      "exits": { "west": { "to": "rust_backstay" }, "east": { "to": "rust_stopperknot" }, "south": { "to": "rust_cucumber" } },
       "actions": [
         {
           "id": "pinch_truss",
@@ -11971,6 +12022,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard truss. They slung it on the backstay and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cucumber": {
+      "name": "Rust Cucumber",
+      "desc": "A dry cucumber south of the truss. Packed rust coats cucumber.",
+      "brief": "Dry cucumber, packed rust.",
+      "exits": { "north": { "to": "rust_truss" } },
+      "actions": [
+        {
+          "id": "pinch_cucumber",
+          "label": "pinch the cucumber",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cucumber. They packed it on the truss and packed rust around it."]
           ]
         }
       ]
@@ -12149,7 +12217,7 @@
       "name": "Rust Nordmann",
       "desc": "A dry nordmann east of the amabilis. Packed rust coats nordmann.",
       "brief": "Dry nordmann, packed rust.",
-      "exits": { "west": { "to": "rust_amabilis" }, "east": { "to": "rust_maries" } },
+      "exits": { "west": { "to": "rust_amabilis" }, "east": { "to": "rust_maries" }, "south": { "to": "rust_gourd" } },
       "actions": [
         {
           "id": "pinch_nordmann",
@@ -12158,6 +12226,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nordmann. They packed it on the amabilis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_gourd": {
+      "name": "Rust Gourd",
+      "desc": "A dry gourd south of the nordmann. Packed rust coats gourd.",
+      "brief": "Dry gourd, packed rust.",
+      "exits": { "north": { "to": "rust_nordmann" } },
+      "actions": [
+        {
+          "id": "pinch_gourd",
+          "label": "pinch the gourd",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gourd. They packed it on the nordmann and packed rust around it."]
           ]
         }
       ]
@@ -12421,7 +12506,7 @@
       "name": "Rust Sitka",
       "desc": "A dry sitka east of the fraserfir. Packed rust coats sitka.",
       "brief": "Dry sitka, packed rust.",
-      "exits": { "west": { "to": "rust_fraserfir" }, "east": { "to": "rust_kawakami" } },
+      "exits": { "west": { "to": "rust_fraserfir" }, "east": { "to": "rust_kawakami" }, "south": { "to": "rust_marrow" } },
       "actions": [
         {
           "id": "pinch_sitka",
@@ -12430,6 +12515,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sitka. They packed it on the fraserfir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_marrow": {
+      "name": "Rust Marrow",
+      "desc": "A dry marrow south of the sitka. Packed rust coats marrow.",
+      "brief": "Dry marrow, packed rust.",
+      "exits": { "north": { "to": "rust_sitka" } },
+      "actions": [
+        {
+          "id": "pinch_marrow",
+          "label": "pinch the marrow",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard marrow. They packed it on the sitka and packed rust around it."]
           ]
         }
       ]
@@ -12489,7 +12591,7 @@
       "name": "Rust Cleat",
       "desc": "A dry cleat east of the bush. Packed rust coats a cleat.",
       "brief": "Dry cleat, packed rust.",
-      "exits": { "west": { "to": "rust_bush" }, "east": { "to": "rust_fid" } },
+      "exits": { "west": { "to": "rust_bush" }, "east": { "to": "rust_fid" }, "south": { "to": "rust_pattypan" } },
       "actions": [
         {
           "id": "pinch_cleat",
@@ -12502,11 +12604,28 @@
         }
       ]
     },
+    "rust_pattypan": {
+      "name": "Rust Pattypan",
+      "desc": "A dry pattypan south of the cleat. Packed rust coats pattypan.",
+      "brief": "Dry pattypan, packed rust.",
+      "exits": { "north": { "to": "rust_cleat" } },
+      "actions": [
+        {
+          "id": "pinch_pattypan",
+          "label": "pinch the pattypan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pattypan. They packed it on the cleat and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_fid": {
       "name": "Rust Fid",
       "desc": "A dry fid east of the cleat. Packed rust coats a fid.",
       "brief": "Dry fid, packed rust.",
-      "exits": { "west": { "to": "rust_cleat" }, "east": { "to": "rust_dragonblood" } },
+      "exits": { "west": { "to": "rust_cleat" }, "east": { "to": "rust_dragonblood" }, "south": { "to": "rust_delicata" } },
       "actions": [
         {
           "id": "pinch_fid",
@@ -12515,6 +12634,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fid. They drove it on the cleat and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_delicata": {
+      "name": "Rust Delicata",
+      "desc": "A dry delicata south of the fid. Packed rust coats delicata.",
+      "brief": "Dry delicata, packed rust.",
+      "exits": { "north": { "to": "rust_fid" } },
+      "actions": [
+        {
+          "id": "pinch_delicata",
+          "label": "pinch the delicata",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard delicata. They packed it on the fid and packed rust around it."]
           ]
         }
       ]
@@ -32220,8 +32356,14 @@
     "go north",
     "go east",
     "pinch the shroud",
+    "go south",
+    "pinch the pumpkin",
+    "go north",
     "go east",
     "pinch the tye",
+    "go south",
+    "pinch the squash",
+    "go north",
     "go east",
     "pinch the diamondknot",
     "go south",
@@ -32249,6 +32391,9 @@
     "go north",
     "go east",
     "pinch the corkbark",
+    "go south",
+    "pinch the zucchini",
+    "go north",
     "go east",
     "pinch the homolepis",
     "go south",
@@ -32272,6 +32417,9 @@
     "pinch the backstay",
     "go east",
     "pinch the truss",
+    "go south",
+    "pinch the cucumber",
+    "go north",
     "go east",
     "pinch the stopperknot",
     "go south",
@@ -32299,6 +32447,9 @@
     "go north",
     "go east",
     "pinch the nordmann",
+    "go south",
+    "pinch the gourd",
+    "go north",
     "go east",
     "pinch the maries",
     "go south",
@@ -32347,6 +32498,9 @@
     "go north",
     "go east",
     "pinch the sitka",
+    "go south",
+    "pinch the marrow",
+    "go north",
     "go east",
     "pinch the kawakami",
     "go south",
@@ -32366,8 +32520,14 @@
     "go east",
     "go east",
     "pinch the cleat",
+    "go south",
+    "pinch the pattypan",
+    "go north",
     "go east",
     "pinch the fid",
+    "go south",
+    "pinch the delicata",
+    "go north",
     "go east",
     "pinch the dragonblood",
     "go west",
