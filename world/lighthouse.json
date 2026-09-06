@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15450,
+  "maxScore": 15490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -18014,7 +18014,7 @@
       "name": "Rust Palstek",
       "desc": "A dry palstek east of the fluke. Packed rust coats a palstek.",
       "brief": "Dry palstek, packed rust.",
-      "exits": { "west": { "to": "rust_fluke" }, "east": { "to": "rust_gumarabic" }, "south": { "to": "rust_oathousehold" } },
+      "exits": { "west": { "to": "rust_fluke" }, "east": { "to": "rust_gumarabic" }, "south": { "to": "rust_oathousehold" }, "north": { "to": "rust_durumjorum" } },
       "actions": [
         {
           "id": "pinch_palstek",
@@ -18023,6 +18023,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palstek. They tied it on the fluke and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumjorum": {
+      "name": "Rust Durumjorum",
+      "desc": "A dry durumjorum north of the palstek. Packed rust coats durumjorum.",
+      "brief": "Dry durumjorum, packed rust.",
+      "exits": { "south": { "to": "rust_palstek" } },
+      "actions": [
+        {
+          "id": "pinch_durumjorum",
+          "label": "pinch the durumjorum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumjorum. They packed it on the palstek and packed rust around it."]
           ]
         }
       ]
@@ -18048,7 +18065,7 @@
       "name": "Rust Gumarabic",
       "desc": "A dry gumarabic east of the palstek. Packed rust coats gumarabic.",
       "brief": "Dry gumarabic, packed rust.",
-      "exits": { "west": { "to": "rust_palstek" }, "east": { "to": "rust_cinnabar" }, "south": { "to": "rust_durumbolted" } },
+      "exits": { "west": { "to": "rust_palstek" }, "east": { "to": "rust_cinnabar" }, "south": { "to": "rust_durumbolted" }, "north": { "to": "rust_foniojorum" } },
       "actions": [
         {
           "id": "pinch_gumarabic",
@@ -18057,6 +18074,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gumarabic. They packed it on the palstek and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniojorum": {
+      "name": "Rust Foniojorum",
+      "desc": "A dry foniojorum north of the gumarabic. Packed rust coats foniojorum.",
+      "brief": "Dry foniojorum, packed rust.",
+      "exits": { "south": { "to": "rust_gumarabic" } },
+      "actions": [
+        {
+          "id": "pinch_foniojorum",
+          "label": "pinch the foniojorum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniojorum. They packed it on the gumarabic and packed rust around it."]
           ]
         }
       ]
@@ -18082,7 +18116,7 @@
       "name": "Rust Cinnabar",
       "desc": "A dry cinnabar east of the gumarabic. Packed rust coats cinnabar.",
       "brief": "Dry cinnabar, packed rust.",
-      "exits": { "west": { "to": "rust_gumarabic" }, "east": { "to": "rust_salmongum" }, "south": { "to": "rust_foniobolted" } },
+      "exits": { "west": { "to": "rust_gumarabic" }, "east": { "to": "rust_salmongum" }, "south": { "to": "rust_foniobolted" }, "north": { "to": "rust_teffjorum" } },
       "actions": [
         {
           "id": "pinch_cinnabar",
@@ -18091,6 +18125,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cinnabar. They packed it on the gumarabic and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffjorum": {
+      "name": "Rust Teffjorum",
+      "desc": "A dry teffjorum north of the cinnabar. Packed rust coats teffjorum.",
+      "brief": "Dry teffjorum, packed rust.",
+      "exits": { "south": { "to": "rust_cinnabar" } },
+      "actions": [
+        {
+          "id": "pinch_teffjorum",
+          "label": "pinch the teffjorum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffjorum. They packed it on the cinnabar and packed rust around it."]
           ]
         }
       ]
@@ -18116,7 +18167,7 @@
       "name": "Rust Salmongum",
       "desc": "A dry salmongum east of the cinnabar. Packed rust coats salmongum.",
       "brief": "Dry salmongum, packed rust.",
-      "exits": { "west": { "to": "rust_cinnabar" }, "east": { "to": "rust_forestoak" }, "south": { "to": "rust_teffbolted" } },
+      "exits": { "west": { "to": "rust_cinnabar" }, "east": { "to": "rust_forestoak" }, "south": { "to": "rust_teffbolted" }, "north": { "to": "rust_barleyjorum" } },
       "actions": [
         {
           "id": "pinch_salmongum",
@@ -18125,6 +18176,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard salmongum. They packed it on the cinnabar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyjorum": {
+      "name": "Rust Barleyjorum",
+      "desc": "A dry barleyjorum north of the salmongum. Packed rust coats barleyjorum.",
+      "brief": "Dry barleyjorum, packed rust.",
+      "exits": { "south": { "to": "rust_salmongum" } },
+      "actions": [
+        {
+          "id": "pinch_barleyjorum",
+          "label": "pinch the barleyjorum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyjorum. They packed it on the salmongum and packed rust around it."]
           ]
         }
       ]
@@ -18150,7 +18218,7 @@
       "name": "Rust Forestoak",
       "desc": "A dry forestoak east of the salmongum. Packed rust coats forestoak.",
       "brief": "Dry forestoak, packed rust.",
-      "exits": { "west": { "to": "rust_salmongum" }, "east": { "to": "rust_myall" }, "south": { "to": "rust_barleybolted" } },
+      "exits": { "west": { "to": "rust_salmongum" }, "east": { "to": "rust_myall" }, "south": { "to": "rust_barleybolted" }, "north": { "to": "rust_sorghumjorum" } },
       "actions": [
         {
           "id": "pinch_forestoak",
@@ -18159,6 +18227,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard forestoak. They packed it on the salmongum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumjorum": {
+      "name": "Rust Sorghumjorum",
+      "desc": "A dry sorghumjorum north of the forestoak. Packed rust coats sorghumjorum.",
+      "brief": "Dry sorghumjorum, packed rust.",
+      "exits": { "south": { "to": "rust_forestoak" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumjorum",
+          "label": "pinch the sorghumjorum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumjorum. They packed it on the forestoak and packed rust around it."]
           ]
         }
       ]
@@ -18184,7 +18269,7 @@
       "name": "Rust Myall",
       "desc": "A dry myall east of the forestoak. Packed rust coats myall.",
       "brief": "Dry myall, packed rust.",
-      "exits": { "west": { "to": "rust_forestoak" }, "east": { "to": "rust_scotspine" }, "south": { "to": "rust_sorghumbolted" } },
+      "exits": { "west": { "to": "rust_forestoak" }, "east": { "to": "rust_scotspine" }, "south": { "to": "rust_sorghumbolted" }, "north": { "to": "rust_milletjorum" } },
       "actions": [
         {
           "id": "pinch_myall",
@@ -18193,6 +18278,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard myall. They packed it on the forestoak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletjorum": {
+      "name": "Rust Milletjorum",
+      "desc": "A dry milletjorum north of the myall. Packed rust coats milletjorum.",
+      "brief": "Dry milletjorum, packed rust.",
+      "exits": { "south": { "to": "rust_myall" } },
+      "actions": [
+        {
+          "id": "pinch_milletjorum",
+          "label": "pinch the milletjorum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletjorum. They packed it on the myall and packed rust around it."]
           ]
         }
       ]
@@ -18218,7 +18320,7 @@
       "name": "Rust Scotspine",
       "desc": "A dry scotspine east of the myall. Packed rust coats scotspine.",
       "brief": "Dry scotspine, packed rust.",
-      "exits": { "west": { "to": "rust_myall" }, "east": { "to": "rust_nikau" }, "south": { "to": "rust_ohia" } },
+      "exits": { "west": { "to": "rust_myall" }, "east": { "to": "rust_nikau" }, "south": { "to": "rust_ohia" }, "north": { "to": "rust_cornjorum" } },
       "actions": [
         {
           "id": "pinch_scotspine",
@@ -18227,6 +18329,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard scotspine. They packed it on the myall and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornjorum": {
+      "name": "Rust Cornjorum",
+      "desc": "A dry cornjorum north of the scotspine. Packed rust coats cornjorum.",
+      "brief": "Dry cornjorum, packed rust.",
+      "exits": { "south": { "to": "rust_scotspine" } },
+      "actions": [
+        {
+          "id": "pinch_cornjorum",
+          "label": "pinch the cornjorum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornjorum. They packed it on the scotspine and packed rust around it."]
           ]
         }
       ]
@@ -18286,7 +18405,7 @@
       "name": "Rust Constrictor",
       "desc": "A dry constrictor east of the luff. Packed rust coats a constrictor.",
       "brief": "Dry constrictor, packed rust.",
-      "exits": { "west": { "to": "rust_luff" }, "east": { "to": "rust_frankincense" }, "south": { "to": "rust_milletbolted" } },
+      "exits": { "west": { "to": "rust_luff" }, "east": { "to": "rust_frankincense" }, "south": { "to": "rust_milletbolted" }, "north": { "to": "rust_oatjorum" } },
       "actions": [
         {
           "id": "pinch_constrictor",
@@ -18295,6 +18414,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard constrictor. They bound it on the luff and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatjorum": {
+      "name": "Rust Oatjorum",
+      "desc": "A dry oatjorum north of the constrictor. Packed rust coats oatjorum.",
+      "brief": "Dry oatjorum, packed rust.",
+      "exits": { "south": { "to": "rust_constrictor" } },
+      "actions": [
+        {
+          "id": "pinch_oatjorum",
+          "label": "pinch the oatjorum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatjorum. They packed it on the constrictor and packed rust around it."]
           ]
         }
       ]
@@ -55607,36 +55743,57 @@
     "go north",
     "go east",
     "pinch the palstek",
+    "go north",
+    "pinch the durumjorum",
+    "go south",
     "go south",
     "pinch the oathousehold",
     "go north",
     "go east",
     "pinch the gumarabic",
+    "go north",
+    "pinch the foniojorum",
+    "go south",
     "go south",
     "pinch the durumbolted",
     "go north",
     "go east",
     "pinch the cinnabar",
+    "go north",
+    "pinch the teffjorum",
+    "go south",
     "go south",
     "pinch the foniobolted",
     "go north",
     "go east",
     "pinch the salmongum",
+    "go north",
+    "pinch the barleyjorum",
+    "go south",
     "go south",
     "pinch the teffbolted",
     "go north",
     "go east",
     "pinch the forestoak",
+    "go north",
+    "pinch the sorghumjorum",
+    "go south",
     "go south",
     "pinch the barleybolted",
     "go north",
     "go east",
     "pinch the myall",
+    "go north",
+    "pinch the milletjorum",
+    "go south",
     "go south",
     "pinch the sorghumbolted",
     "go north",
     "go east",
     "pinch the scotspine",
+    "go north",
+    "pinch the cornjorum",
+    "go south",
     "go south",
     "pinch the ohia",
     "go north",
@@ -55656,6 +55813,9 @@
     "pinch the luff",
     "go east",
     "pinch the constrictor",
+    "go north",
+    "pinch the oatjorum",
+    "go south",
     "go south",
     "pinch the milletbolted",
     "go north",
