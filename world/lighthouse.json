@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9850,
+  "maxScore": 9890,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -26344,7 +26344,7 @@
       "name": "Rust Vivianite",
       "desc": "A dry vivianite east of the goethite. Packed rust coats vivianite.",
       "brief": "Dry vivianite, packed rust.",
-      "exits": { "west": { "to": "rust_goethite" }, "east": { "to": "rust_shattuckite" } },
+      "exits": { "west": { "to": "rust_goethite" }, "east": { "to": "rust_shattuckite" }, "south": { "to": "rust_seabean" } },
       "actions": [
         {
           "id": "pinch_vivianite",
@@ -26357,11 +26357,28 @@
         }
       ]
     },
+    "rust_seabean": {
+      "name": "Rust Seabean",
+      "desc": "A dry seabean south of the vivianite. Packed rust coats seabean.",
+      "brief": "Dry seabean, packed rust.",
+      "exits": { "north": { "to": "rust_vivianite" } },
+      "actions": [
+        {
+          "id": "pinch_seabean",
+          "label": "pinch the seabean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard seabean. They packed it on the vivianite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_shattuckite": {
       "name": "Rust Shattuckite",
       "desc": "A dry shattuckite east of the vivianite. Packed rust coats shattuckite.",
       "brief": "Dry shattuckite, packed rust.",
-      "exits": { "west": { "to": "rust_vivianite" }, "east": { "to": "rust_pentlandite" } },
+      "exits": { "west": { "to": "rust_vivianite" }, "east": { "to": "rust_pentlandite" }, "south": { "to": "rust_glasswort" } },
       "actions": [
         {
           "id": "pinch_shattuckite",
@@ -26370,6 +26387,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shattuckite. They packed it on the vivianite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_glasswort": {
+      "name": "Rust Glasswort",
+      "desc": "A dry glasswort south of the shattuckite. Packed rust coats glasswort.",
+      "brief": "Dry glasswort, packed rust.",
+      "exits": { "north": { "to": "rust_shattuckite" } },
+      "actions": [
+        {
+          "id": "pinch_glasswort",
+          "label": "pinch the glasswort",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard glasswort. They packed it on the shattuckite and packed rust around it."]
           ]
         }
       ]
@@ -26429,7 +26463,7 @@
       "name": "Rust Breastline",
       "desc": "A dry breastline east of the reefpoint. Packed rust coats a breastline.",
       "brief": "Dry breastline, packed rust.",
-      "exits": { "west": { "to": "rust_reefpoint" }, "east": { "to": "rust_boltline" } },
+      "exits": { "west": { "to": "rust_reefpoint" }, "east": { "to": "rust_boltline" }, "south": { "to": "rust_splitpea" } },
       "actions": [
         {
           "id": "pinch_breastline",
@@ -26442,11 +26476,28 @@
         }
       ]
     },
+    "rust_splitpea": {
+      "name": "Rust Splitpea",
+      "desc": "A dry splitpea south of the breastline. Packed rust coats splitpea.",
+      "brief": "Dry splitpea, packed rust.",
+      "exits": { "north": { "to": "rust_breastline" } },
+      "actions": [
+        {
+          "id": "pinch_splitpea",
+          "label": "pinch the splitpea",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard splitpea. They packed it on the breastline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_boltline": {
       "name": "Rust Boltline",
       "desc": "A dry boltline east of the breastline. Packed rust coats a boltline.",
       "brief": "Dry boltline, packed rust.",
-      "exits": { "west": { "to": "rust_breastline" }, "east": { "to": "rust_rosewood" } },
+      "exits": { "west": { "to": "rust_breastline" }, "east": { "to": "rust_rosewood" }, "south": { "to": "rust_marrowfat" } },
       "actions": [
         {
           "id": "pinch_boltline",
@@ -26459,11 +26510,28 @@
         }
       ]
     },
+    "rust_marrowfat": {
+      "name": "Rust Marrowfat",
+      "desc": "A dry marrowfat south of the boltline. Packed rust coats marrowfat.",
+      "brief": "Dry marrowfat, packed rust.",
+      "exits": { "north": { "to": "rust_boltline" } },
+      "actions": [
+        {
+          "id": "pinch_marrowfat",
+          "label": "pinch the marrowfat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard marrowfat. They packed it on the boltline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_rosewood": {
       "name": "Rust Rosewood",
       "desc": "A dry rosewood east of the boltline. Packed rust coats rosewood.",
       "brief": "Dry rosewood, packed rust.",
-      "exits": { "west": { "to": "rust_boltline" }, "east": { "to": "rust_celestine" } },
+      "exits": { "west": { "to": "rust_boltline" }, "east": { "to": "rust_celestine" }, "south": { "to": "rust_cannellini" } },
       "actions": [
         {
           "id": "pinch_rosewood",
@@ -26476,11 +26544,28 @@
         }
       ]
     },
+    "rust_cannellini": {
+      "name": "Rust Cannellini",
+      "desc": "A dry cannellini south of the rosewood. Packed rust coats cannellini.",
+      "brief": "Dry cannellini, packed rust.",
+      "exits": { "north": { "to": "rust_rosewood" } },
+      "actions": [
+        {
+          "id": "pinch_cannellini",
+          "label": "pinch the cannellini",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cannellini. They packed it on the rosewood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_celestine": {
       "name": "Rust Celestine",
       "desc": "A dry celestine east of the rosewood. Packed rust coats celestine.",
       "brief": "Dry celestine, packed rust.",
-      "exits": { "west": { "to": "rust_rosewood" }, "east": { "to": "rust_quartz" } },
+      "exits": { "west": { "to": "rust_rosewood" }, "east": { "to": "rust_quartz" }, "south": { "to": "rust_borlotti" } },
       "actions": [
         {
           "id": "pinch_celestine",
@@ -26493,11 +26578,28 @@
         }
       ]
     },
+    "rust_borlotti": {
+      "name": "Rust Borlotti",
+      "desc": "A dry borlotti south of the celestine. Packed rust coats borlotti.",
+      "brief": "Dry borlotti, packed rust.",
+      "exits": { "north": { "to": "rust_celestine" } },
+      "actions": [
+        {
+          "id": "pinch_borlotti",
+          "label": "pinch the borlotti",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard borlotti. They packed it on the celestine and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_quartz": {
       "name": "Rust Quartz",
       "desc": "A dry quartz east of the celestine. Packed rust coats quartz.",
       "brief": "Dry quartz, packed rust.",
-      "exits": { "west": { "to": "rust_celestine" }, "east": { "to": "rust_basalt" } },
+      "exits": { "west": { "to": "rust_celestine" }, "east": { "to": "rust_basalt" }, "south": { "to": "rust_flageolet" } },
       "actions": [
         {
           "id": "pinch_quartz",
@@ -26510,11 +26612,28 @@
         }
       ]
     },
+    "rust_flageolet": {
+      "name": "Rust Flageolet",
+      "desc": "A dry flageolet south of the quartz. Packed rust coats flageolet.",
+      "brief": "Dry flageolet, packed rust.",
+      "exits": { "north": { "to": "rust_quartz" } },
+      "actions": [
+        {
+          "id": "pinch_flageolet",
+          "label": "pinch the flageolet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard flageolet. They packed it on the quartz and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_basalt": {
       "name": "Rust Basalt",
       "desc": "A dry basalt east of the quartz. Packed rust coats basalt.",
       "brief": "Dry basalt, packed rust.",
-      "exits": { "west": { "to": "rust_quartz" }, "east": { "to": "rust_limonite" } },
+      "exits": { "west": { "to": "rust_quartz" }, "east": { "to": "rust_limonite" }, "south": { "to": "rust_haricot" } },
       "actions": [
         {
           "id": "pinch_basalt",
@@ -26523,6 +26642,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard basalt. They packed it on the quartz and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_haricot": {
+      "name": "Rust Haricot",
+      "desc": "A dry haricot south of the basalt. Packed rust coats haricot.",
+      "brief": "Dry haricot, packed rust.",
+      "exits": { "north": { "to": "rust_basalt" } },
+      "actions": [
+        {
+          "id": "pinch_haricot",
+          "label": "pinch the haricot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard haricot. They packed it on the basalt and packed rust around it."]
           ]
         }
       ]
@@ -38097,8 +38233,14 @@
     "pinch the goethite",
     "go east",
     "pinch the vivianite",
+    "go south",
+    "pinch the seabean",
+    "go north",
     "go east",
     "pinch the shattuckite",
+    "go south",
+    "pinch the glasswort",
+    "go north",
     "go east",
     "pinch the pentlandite",
     "go west",
@@ -38118,16 +38260,34 @@
     "pinch the reefpoint",
     "go east",
     "pinch the breastline",
+    "go south",
+    "pinch the splitpea",
+    "go north",
     "go east",
     "pinch the boltline",
+    "go south",
+    "pinch the marrowfat",
+    "go north",
     "go east",
     "pinch the rosewood",
+    "go south",
+    "pinch the cannellini",
+    "go north",
     "go east",
     "pinch the celestine",
+    "go south",
+    "pinch the borlotti",
+    "go north",
     "go east",
     "pinch the quartz",
+    "go south",
+    "pinch the flageolet",
+    "go north",
     "go east",
     "pinch the basalt",
+    "go south",
+    "pinch the haricot",
+    "go north",
     "go east",
     "pinch the limonite",
     "go south",
