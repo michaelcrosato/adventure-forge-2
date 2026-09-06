@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9250,
+  "maxScore": 9290,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -29489,7 +29489,7 @@
       "name": "Rust Beeswax",
       "desc": "A dry beeswax east of the staygasket. Packed rust coats beeswax.",
       "brief": "Dry beeswax, packed rust.",
-      "exits": { "west": { "to": "rust_staygasket" }, "east": { "to": "rust_lanolin" } },
+      "exits": { "west": { "to": "rust_staygasket" }, "east": { "to": "rust_lanolin" }, "south": { "to": "rust_duckweed" } },
       "actions": [
         {
           "id": "pinch_beeswax",
@@ -29502,11 +29502,28 @@
         }
       ]
     },
+    "rust_duckweed": {
+      "name": "Rust Duckweed",
+      "desc": "A dry duckweed south of the beeswax. Packed rust coats duckweed.",
+      "brief": "Dry duckweed, packed rust.",
+      "exits": { "north": { "to": "rust_beeswax" } },
+      "actions": [
+        {
+          "id": "pinch_duckweed",
+          "label": "pinch the duckweed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard duckweed. They packed it on the beeswax and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_lanolin": {
       "name": "Rust Lanolin",
       "desc": "A dry lanolin east of the beeswax. Packed rust coats lanolin.",
       "brief": "Dry lanolin, packed rust.",
-      "exits": { "west": { "to": "rust_beeswax" }, "east": { "to": "rust_elm" } },
+      "exits": { "west": { "to": "rust_beeswax" }, "east": { "to": "rust_elm" }, "south": { "to": "rust_hornwort" } },
       "actions": [
         {
           "id": "pinch_lanolin",
@@ -29519,11 +29536,28 @@
         }
       ]
     },
+    "rust_hornwort": {
+      "name": "Rust Hornwort",
+      "desc": "A dry hornwort south of the lanolin. Packed rust coats hornwort.",
+      "brief": "Dry hornwort, packed rust.",
+      "exits": { "north": { "to": "rust_lanolin" } },
+      "actions": [
+        {
+          "id": "pinch_hornwort",
+          "label": "pinch the hornwort",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hornwort. They packed it on the lanolin and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_elm": {
       "name": "Rust Elm",
       "desc": "A dry elm east of the lanolin. Packed rust coats elm.",
       "brief": "Dry elm, packed rust.",
-      "exits": { "west": { "to": "rust_lanolin" }, "east": { "to": "rust_pecan" } },
+      "exits": { "west": { "to": "rust_lanolin" }, "east": { "to": "rust_pecan" }, "south": { "to": "rust_arame" } },
       "actions": [
         {
           "id": "pinch_elm",
@@ -29536,11 +29570,28 @@
         }
       ]
     },
+    "rust_arame": {
+      "name": "Rust Arame",
+      "desc": "A dry arame south of the elm. Packed rust coats arame.",
+      "brief": "Dry arame, packed rust.",
+      "exits": { "north": { "to": "rust_elm" } },
+      "actions": [
+        {
+          "id": "pinch_arame",
+          "label": "pinch the arame",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard arame. They packed it on the elm and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_pecan": {
       "name": "Rust Pecan",
       "desc": "A dry pecan east of the elm. Packed rust coats pecan.",
       "brief": "Dry pecan, packed rust.",
-      "exits": { "west": { "to": "rust_elm" }, "east": { "to": "rust_juniper" } },
+      "exits": { "west": { "to": "rust_elm" }, "east": { "to": "rust_juniper" }, "south": { "to": "rust_hijiki" } },
       "actions": [
         {
           "id": "pinch_pecan",
@@ -29553,11 +29604,28 @@
         }
       ]
     },
+    "rust_hijiki": {
+      "name": "Rust Hijiki",
+      "desc": "A dry hijiki south of the pecan. Packed rust coats hijiki.",
+      "brief": "Dry hijiki, packed rust.",
+      "exits": { "north": { "to": "rust_pecan" } },
+      "actions": [
+        {
+          "id": "pinch_hijiki",
+          "label": "pinch the hijiki",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hijiki. They packed it on the pecan and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_juniper": {
       "name": "Rust Juniper",
       "desc": "A dry juniper east of the pecan. Packed rust coats juniper.",
       "brief": "Dry juniper, packed rust.",
-      "exits": { "west": { "to": "rust_pecan" }, "east": { "to": "rust_barytes" } },
+      "exits": { "west": { "to": "rust_pecan" }, "east": { "to": "rust_barytes" }, "south": { "to": "rust_kombu" } },
       "actions": [
         {
           "id": "pinch_juniper",
@@ -29570,11 +29638,28 @@
         }
       ]
     },
+    "rust_kombu": {
+      "name": "Rust Kombu",
+      "desc": "A dry kombu south of the juniper. Packed rust coats kombu.",
+      "brief": "Dry kombu, packed rust.",
+      "exits": { "north": { "to": "rust_juniper" } },
+      "actions": [
+        {
+          "id": "pinch_kombu",
+          "label": "pinch the kombu",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kombu. They packed it on the juniper and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_barytes": {
       "name": "Rust Barytes",
       "desc": "A dry barytes east of the juniper. Packed rust coats barytes.",
       "brief": "Dry barytes, packed rust.",
-      "exits": { "west": { "to": "rust_juniper" }, "east": { "to": "rust_cuprite" } },
+      "exits": { "west": { "to": "rust_juniper" }, "east": { "to": "rust_cuprite" }, "south": { "to": "rust_wakame" } },
       "actions": [
         {
           "id": "pinch_barytes",
@@ -29587,11 +29672,28 @@
         }
       ]
     },
+    "rust_wakame": {
+      "name": "Rust Wakame",
+      "desc": "A dry wakame south of the barytes. Packed rust coats wakame.",
+      "brief": "Dry wakame, packed rust.",
+      "exits": { "north": { "to": "rust_barytes" } },
+      "actions": [
+        {
+          "id": "pinch_wakame",
+          "label": "pinch the wakame",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wakame. They packed it on the barytes and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cuprite": {
       "name": "Rust Cuprite",
       "desc": "A dry cuprite east of the barytes. Packed rust coats cuprite.",
       "brief": "Dry cuprite, packed rust.",
-      "exits": { "west": { "to": "rust_barytes" }, "east": { "to": "rust_hausmannite" } },
+      "exits": { "west": { "to": "rust_barytes" }, "east": { "to": "rust_hausmannite" }, "south": { "to": "rust_laminaria" } },
       "actions": [
         {
           "id": "pinch_cuprite",
@@ -29600,6 +29702,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cuprite. They packed it on the barytes and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_laminaria": {
+      "name": "Rust Laminaria",
+      "desc": "A dry laminaria south of the cuprite. Packed rust coats laminaria.",
+      "brief": "Dry laminaria, packed rust.",
+      "exits": { "north": { "to": "rust_cuprite" } },
+      "actions": [
+        {
+          "id": "pinch_laminaria",
+          "label": "pinch the laminaria",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard laminaria. They packed it on the cuprite and packed rust around it."]
           ]
         }
       ]
@@ -29625,7 +29744,7 @@
       "name": "Rust Shaft",
       "desc": "A dry shaft east of the tip. Packed rust coats a shaft.",
       "brief": "Dry shaft, packed rust.",
-      "exits": { "west": { "to": "rust_tip" }, "east": { "to": "rust_hemp" } },
+      "exits": { "west": { "to": "rust_tip" }, "east": { "to": "rust_hemp" }, "south": { "to": "rust_seagrass" } },
       "actions": [
         {
           "id": "pinch_shaft",
@@ -29634,6 +29753,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shaft. They set it at the tip and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_seagrass": {
+      "name": "Rust Seagrass",
+      "desc": "A dry seagrass south of the shaft. Packed rust coats seagrass.",
+      "brief": "Dry seagrass, packed rust.",
+      "exits": { "north": { "to": "rust_shaft" } },
+      "actions": [
+        {
+          "id": "pinch_seagrass",
+          "label": "pinch the seagrass",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard seagrass. They packed it on the shaft and packed rust around it."]
           ]
         }
       ]
@@ -36551,18 +36687,39 @@
     "pinch the staygasket",
     "go east",
     "pinch the beeswax",
+    "go south",
+    "pinch the duckweed",
+    "go north",
     "go east",
     "pinch the lanolin",
+    "go south",
+    "pinch the hornwort",
+    "go north",
     "go east",
     "pinch the elm",
+    "go south",
+    "pinch the arame",
+    "go north",
     "go east",
     "pinch the pecan",
+    "go south",
+    "pinch the hijiki",
+    "go north",
     "go east",
     "pinch the juniper",
+    "go south",
+    "pinch the kombu",
+    "go north",
     "go east",
     "pinch the barytes",
+    "go south",
+    "pinch the wakame",
+    "go north",
     "go east",
     "pinch the cuprite",
+    "go south",
+    "pinch the laminaria",
+    "go north",
     "go east",
     "pinch the hausmannite",
     "go west",
@@ -36578,6 +36735,9 @@
     "go south",
     "go east",
     "pinch the shaft",
+    "go south",
+    "pinch the seagrass",
+    "go north",
     "go east",
     "pinch the hemp",
     "go south",
