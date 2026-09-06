@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12210,
+  "maxScore": 12250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -15379,7 +15379,7 @@
       "name": "Rust Celerytop",
       "desc": "A dry celerytop east of the blackoak. Packed rust coats celerytop.",
       "brief": "Dry celerytop, packed rust.",
-      "exits": { "west": { "to": "rust_blackoak" }, "east": { "to": "rust_corsican" } },
+      "exits": { "west": { "to": "rust_blackoak" }, "east": { "to": "rust_corsican" }, "south": { "to": "rust_durumgeneral" } },
       "actions": [
         {
           "id": "pinch_celerytop",
@@ -15388,6 +15388,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard celerytop. They packed it on the blackoak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumgeneral": {
+      "name": "Rust Durumgeneral",
+      "desc": "A dry durumgeneral south of the celerytop. Packed rust coats durumgeneral.",
+      "brief": "Dry durumgeneral, packed rust.",
+      "exits": { "north": { "to": "rust_celerytop" } },
+      "actions": [
+        {
+          "id": "pinch_durumgeneral",
+          "label": "pinch the durumgeneral",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumgeneral. They packed it on the celerytop and packed rust around it."]
           ]
         }
       ]
@@ -15498,7 +15515,7 @@
       "name": "Rust Masthead",
       "desc": "A dry masthead east of the hounds. Packed rust coats a masthead.",
       "brief": "Dry masthead, packed rust.",
-      "exits": { "west": { "to": "rust_hounds" }, "east": { "to": "rust_italian" } },
+      "exits": { "west": { "to": "rust_hounds" }, "east": { "to": "rust_italian" }, "south": { "to": "rust_foniogeneral" } },
       "actions": [
         {
           "id": "pinch_masthead",
@@ -15511,11 +15528,28 @@
         }
       ]
     },
+    "rust_foniogeneral": {
+      "name": "Rust Foniogeneral",
+      "desc": "A dry foniogeneral south of the masthead. Packed rust coats foniogeneral.",
+      "brief": "Dry foniogeneral, packed rust.",
+      "exits": { "north": { "to": "rust_masthead" } },
+      "actions": [
+        {
+          "id": "pinch_foniogeneral",
+          "label": "pinch the foniogeneral",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniogeneral. They packed it on the masthead and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_italian": {
       "name": "Rust Italian",
       "desc": "A dry italian east of the masthead. Packed rust coats an italian.",
       "brief": "Dry italian, packed rust.",
-      "exits": { "west": { "to": "rust_masthead" }, "east": { "to": "rust_venice" } },
+      "exits": { "west": { "to": "rust_masthead" }, "east": { "to": "rust_venice" }, "south": { "to": "rust_teffgeneral" } },
       "actions": [
         {
           "id": "pinch_italian",
@@ -15528,11 +15562,28 @@
         }
       ]
     },
+    "rust_teffgeneral": {
+      "name": "Rust Teffgeneral",
+      "desc": "A dry teffgeneral south of the italian. Packed rust coats teffgeneral.",
+      "brief": "Dry teffgeneral, packed rust.",
+      "exits": { "north": { "to": "rust_italian" } },
+      "actions": [
+        {
+          "id": "pinch_teffgeneral",
+          "label": "pinch the teffgeneral",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffgeneral. They packed it on the italian and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_venice": {
       "name": "Rust Venice",
       "desc": "A dry venice east of the italian. Packed rust coats venice.",
       "brief": "Dry venice, packed rust.",
-      "exits": { "west": { "to": "rust_italian" }, "east": { "to": "rust_saffron" } },
+      "exits": { "west": { "to": "rust_italian" }, "east": { "to": "rust_saffron" }, "south": { "to": "rust_barleygeneral" } },
       "actions": [
         {
           "id": "pinch_venice",
@@ -15545,11 +15596,28 @@
         }
       ]
     },
+    "rust_barleygeneral": {
+      "name": "Rust Barleygeneral",
+      "desc": "A dry barleygeneral south of the venice. Packed rust coats barleygeneral.",
+      "brief": "Dry barleygeneral, packed rust.",
+      "exits": { "north": { "to": "rust_venice" } },
+      "actions": [
+        {
+          "id": "pinch_barleygeneral",
+          "label": "pinch the barleygeneral",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleygeneral. They packed it on the venice and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_saffron": {
       "name": "Rust Saffron",
       "desc": "A dry saffron east of the venice. Packed rust coats saffron.",
       "brief": "Dry saffron, packed rust.",
-      "exits": { "west": { "to": "rust_venice" }, "east": { "to": "rust_coolibah" } },
+      "exits": { "west": { "to": "rust_venice" }, "east": { "to": "rust_coolibah" }, "south": { "to": "rust_sorghumgeneral" } },
       "actions": [
         {
           "id": "pinch_saffron",
@@ -15562,11 +15630,28 @@
         }
       ]
     },
+    "rust_sorghumgeneral": {
+      "name": "Rust Sorghumgeneral",
+      "desc": "A dry sorghumgeneral south of the saffron. Packed rust coats sorghumgeneral.",
+      "brief": "Dry sorghumgeneral, packed rust.",
+      "exits": { "north": { "to": "rust_saffron" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumgeneral",
+          "label": "pinch the sorghumgeneral",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumgeneral. They packed it on the saffron and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_coolibah": {
       "name": "Rust Coolibah",
       "desc": "A dry coolibah east of the saffron. Packed rust coats coolibah.",
       "brief": "Dry coolibah, packed rust.",
-      "exits": { "west": { "to": "rust_saffron" }, "east": { "to": "rust_swampbox" } },
+      "exits": { "west": { "to": "rust_saffron" }, "east": { "to": "rust_swampbox" }, "south": { "to": "rust_milletgeneral" } },
       "actions": [
         {
           "id": "pinch_coolibah",
@@ -15579,11 +15664,28 @@
         }
       ]
     },
+    "rust_milletgeneral": {
+      "name": "Rust Milletgeneral",
+      "desc": "A dry milletgeneral south of the coolibah. Packed rust coats milletgeneral.",
+      "brief": "Dry milletgeneral, packed rust.",
+      "exits": { "north": { "to": "rust_coolibah" } },
+      "actions": [
+        {
+          "id": "pinch_milletgeneral",
+          "label": "pinch the milletgeneral",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletgeneral. They packed it on the coolibah and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_swampbox": {
       "name": "Rust Swampbox",
       "desc": "A dry swampbox east of the coolibah. Packed rust coats swampbox.",
       "brief": "Dry swampbox, packed rust.",
-      "exits": { "west": { "to": "rust_coolibah" }, "east": { "to": "rust_huonpine" } },
+      "exits": { "west": { "to": "rust_coolibah" }, "east": { "to": "rust_huonpine" }, "south": { "to": "rust_corngeneral" } },
       "actions": [
         {
           "id": "pinch_swampbox",
@@ -15596,11 +15698,28 @@
         }
       ]
     },
+    "rust_corngeneral": {
+      "name": "Rust Corngeneral",
+      "desc": "A dry corngeneral south of the swampbox. Packed rust coats corngeneral.",
+      "brief": "Dry corngeneral, packed rust.",
+      "exits": { "north": { "to": "rust_swampbox" } },
+      "actions": [
+        {
+          "id": "pinch_corngeneral",
+          "label": "pinch the corngeneral",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corngeneral. They packed it on the swampbox and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_huonpine": {
       "name": "Rust Huonpine",
       "desc": "A dry huonpine east of the swampbox. Packed rust coats huonpine.",
       "brief": "Dry huonpine, packed rust.",
-      "exits": { "west": { "to": "rust_swampbox" }, "east": { "to": "rust_maritime" } },
+      "exits": { "west": { "to": "rust_swampbox" }, "east": { "to": "rust_maritime" }, "south": { "to": "rust_oatgeneral" } },
       "actions": [
         {
           "id": "pinch_huonpine",
@@ -15609,6 +15728,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard huonpine. They packed it on the swampbox and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatgeneral": {
+      "name": "Rust Oatgeneral",
+      "desc": "A dry oatgeneral south of the huonpine. Packed rust coats oatgeneral.",
+      "brief": "Dry oatgeneral, packed rust.",
+      "exits": { "north": { "to": "rust_huonpine" } },
+      "actions": [
+        {
+          "id": "pinch_oatgeneral",
+          "label": "pinch the oatgeneral",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatgeneral. They packed it on the huonpine and packed rust around it."]
           ]
         }
       ]
@@ -44114,6 +44250,9 @@
     "pinch the blackoak",
     "go east",
     "pinch the celerytop",
+    "go south",
+    "pinch the durumgeneral",
+    "go north",
     "go east",
     "pinch the corsican",
     "go south",
@@ -44140,18 +44279,39 @@
     "pinch the hounds",
     "go east",
     "pinch the masthead",
+    "go south",
+    "pinch the foniogeneral",
+    "go north",
     "go east",
     "pinch the italian",
+    "go south",
+    "pinch the teffgeneral",
+    "go north",
     "go east",
     "pinch the venice",
+    "go south",
+    "pinch the barleygeneral",
+    "go north",
     "go east",
     "pinch the saffron",
+    "go south",
+    "pinch the sorghumgeneral",
+    "go north",
     "go east",
     "pinch the coolibah",
+    "go south",
+    "pinch the milletgeneral",
+    "go north",
     "go east",
     "pinch the swampbox",
+    "go south",
+    "pinch the corngeneral",
+    "go north",
     "go east",
     "pinch the huonpine",
+    "go south",
+    "pinch the oatgeneral",
+    "go north",
     "go east",
     "pinch the maritime",
     "go south",
