@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8210,
+  "maxScore": 8250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6743,7 +6743,7 @@
       "name": "Rust Cilician",
       "desc": "A dry cilician east of the nobelfir. Packed rust coats cilician.",
       "brief": "Dry cilician, packed rust.",
-      "exits": { "west": { "to": "rust_nobelfir" }, "east": { "to": "rust_morrison" } },
+      "exits": { "west": { "to": "rust_nobelfir" }, "east": { "to": "rust_morrison" }, "south": { "to": "rust_pilo" } },
       "actions": [
         {
           "id": "pinch_cilician",
@@ -6752,6 +6752,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cilician. They packed it on the nobelfir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_pilo": {
+      "name": "Rust Pilo",
+      "desc": "A dry pilo south of the cilician. Packed rust coats pilo.",
+      "brief": "Dry pilo, packed rust.",
+      "exits": { "north": { "to": "rust_cilician" } },
+      "actions": [
+        {
+          "id": "pinch_pilo",
+          "label": "pinch the pilo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pilo. They packed it on the cilician and packed rust around it."]
           ]
         }
       ]
@@ -7117,7 +7134,7 @@
       "name": "Rust Oyamel",
       "desc": "A dry oyamel east of the grandfir. Packed rust coats oyamel.",
       "brief": "Dry oyamel, packed rust.",
-      "exits": { "west": { "to": "rust_grandfir" }, "east": { "to": "rust_formosana" } },
+      "exits": { "west": { "to": "rust_grandfir" }, "east": { "to": "rust_formosana" }, "south": { "to": "rust_ohelo" } },
       "actions": [
         {
           "id": "pinch_oyamel",
@@ -7126,6 +7143,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard oyamel. They packed it on the grandfir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ohelo": {
+      "name": "Rust Ohelo",
+      "desc": "A dry ohelo south of the oyamel. Packed rust coats ohelo.",
+      "brief": "Dry ohelo, packed rust.",
+      "exits": { "north": { "to": "rust_oyamel" } },
+      "actions": [
+        {
+          "id": "pinch_ohelo",
+          "label": "pinch the ohelo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ohelo. They packed it on the oyamel and packed rust around it."]
           ]
         }
       ]
@@ -8341,7 +8375,7 @@
       "name": "Rust Cypruscedar",
       "desc": "A dry cypruscedar east of the sandpine. Packed rust coats cypruscedar.",
       "brief": "Dry cypruscedar, packed rust.",
-      "exits": { "west": { "to": "rust_sandpine" }, "east": { "to": "rust_asunaro" } },
+      "exits": { "west": { "to": "rust_sandpine" }, "east": { "to": "rust_asunaro" }, "south": { "to": "rust_ieie" } },
       "actions": [
         {
           "id": "pinch_cypruscedar",
@@ -8350,6 +8384,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cypruscedar. They packed it on the sandpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ieie": {
+      "name": "Rust Ieie",
+      "desc": "A dry ieie south of the cypruscedar. Packed rust coats ieie.",
+      "brief": "Dry ieie, packed rust.",
+      "exits": { "north": { "to": "rust_cypruscedar" } },
+      "actions": [
+        {
+          "id": "pinch_ieie",
+          "label": "pinch the ieie",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ieie. They packed it on the cypruscedar and packed rust around it."]
           ]
         }
       ]
@@ -8511,7 +8562,7 @@
       "name": "Rust Lebanoncedar",
       "desc": "A dry lebanoncedar east of the lacebark. Packed rust coats lebanoncedar.",
       "brief": "Dry lebanoncedar, packed rust.",
-      "exits": { "west": { "to": "rust_lacebark" }, "east": { "to": "rust_hiba" } },
+      "exits": { "west": { "to": "rust_lacebark" }, "east": { "to": "rust_hiba" }, "south": { "to": "rust_maile" } },
       "actions": [
         {
           "id": "pinch_lebanoncedar",
@@ -8520,6 +8571,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lebanoncedar. They packed it on the lacebark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_maile": {
+      "name": "Rust Maile",
+      "desc": "A dry maile south of the lebanoncedar. Packed rust coats maile.",
+      "brief": "Dry maile, packed rust.",
+      "exits": { "north": { "to": "rust_lebanoncedar" } },
+      "actions": [
+        {
+          "id": "pinch_maile",
+          "label": "pinch the maile",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard maile. They packed it on the lebanoncedar and packed rust around it."]
           ]
         }
       ]
@@ -10466,7 +10534,7 @@
       "name": "Rust Bornmueller",
       "desc": "A dry bornmueller east of the incensecedar. Packed rust coats bornmueller.",
       "brief": "Dry bornmueller, packed rust.",
-      "exits": { "west": { "to": "rust_incensecedar" }, "east": { "to": "rust_keteleeria" } },
+      "exits": { "west": { "to": "rust_incensecedar" }, "east": { "to": "rust_keteleeria" }, "south": { "to": "rust_aiea" } },
       "actions": [
         {
           "id": "pinch_bornmueller",
@@ -10475,6 +10543,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bornmueller. They packed it on the incensecedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_aiea": {
+      "name": "Rust Aiea",
+      "desc": "A dry aiea south of the bornmueller. Packed rust coats aiea.",
+      "brief": "Dry aiea, packed rust.",
+      "exits": { "north": { "to": "rust_bornmueller" } },
+      "actions": [
+        {
+          "id": "pinch_aiea",
+          "label": "pinch the aiea",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard aiea. They packed it on the bornmueller and packed rust around it."]
           ]
         }
       ]
@@ -12455,7 +12540,7 @@
       "name": "Rust Corsican",
       "desc": "A dry corsican east of the celerytop. Packed rust coats corsican.",
       "brief": "Dry corsican, packed rust.",
-      "exits": { "west": { "to": "rust_celerytop" }, "east": { "to": "rust_cunninghamia" } },
+      "exits": { "west": { "to": "rust_celerytop" }, "east": { "to": "rust_cunninghamia" }, "south": { "to": "rust_naupaka" } },
       "actions": [
         {
           "id": "pinch_corsican",
@@ -12464,6 +12549,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard corsican. They packed it on the celerytop and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_naupaka": {
+      "name": "Rust Naupaka",
+      "desc": "A dry naupaka south of the corsican. Packed rust coats naupaka.",
+      "brief": "Dry naupaka, packed rust.",
+      "exits": { "north": { "to": "rust_corsican" } },
+      "actions": [
+        {
+          "id": "pinch_naupaka",
+          "label": "pinch the naupaka",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard naupaka. They packed it on the corsican and packed rust around it."]
           ]
         }
       ]
@@ -12659,7 +12761,7 @@
       "name": "Rust Maritime",
       "desc": "A dry maritime east of the huonpine. Packed rust coats maritime.",
       "brief": "Dry maritime, packed rust.",
-      "exits": { "west": { "to": "rust_huonpine" }, "east": { "to": "rust_taiwania" } },
+      "exits": { "west": { "to": "rust_huonpine" }, "east": { "to": "rust_taiwania" }, "south": { "to": "rust_ilima" } },
       "actions": [
         {
           "id": "pinch_maritime",
@@ -12668,6 +12770,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard maritime. They packed it on the huonpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ilima": {
+      "name": "Rust Ilima",
+      "desc": "A dry ilima south of the maritime. Packed rust coats ilima.",
+      "brief": "Dry ilima, packed rust.",
+      "exits": { "north": { "to": "rust_maritime" } },
+      "actions": [
+        {
+          "id": "pinch_ilima",
+          "label": "pinch the ilima",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ilima. They packed it on the maritime and packed rust around it."]
           ]
         }
       ]
@@ -12829,7 +12948,7 @@
       "name": "Rust Aleppo",
       "desc": "A dry aleppo east of the cypresspine. Packed rust coats aleppo.",
       "brief": "Dry aleppo, packed rust.",
-      "exits": { "west": { "to": "rust_cypresspine" }, "east": { "to": "rust_cryptomeria" } },
+      "exits": { "west": { "to": "rust_cypresspine" }, "east": { "to": "rust_cryptomeria" }, "south": { "to": "rust_ohai" } },
       "actions": [
         {
           "id": "pinch_aleppo",
@@ -12838,6 +12957,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard aleppo. They packed it on the cypresspine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ohai": {
+      "name": "Rust Ohai",
+      "desc": "A dry ohai south of the aleppo. Packed rust coats ohai.",
+      "brief": "Dry ohai, packed rust.",
+      "exits": { "north": { "to": "rust_aleppo" } },
+      "actions": [
+        {
+          "id": "pinch_ohai",
+          "label": "pinch the ohai",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ohai. They packed it on the aleppo and packed rust around it."]
           ]
         }
       ]
@@ -28998,6 +29134,9 @@
     "pinch the incensecedar",
     "go east",
     "pinch the bornmueller",
+    "go south",
+    "pinch the aiea",
+    "go north",
     "go east",
     "pinch the keteleeria",
     "go east",
@@ -29033,6 +29172,9 @@
     "pinch the nobelfir",
     "go east",
     "pinch the cilician",
+    "go south",
+    "pinch the pilo",
+    "go north",
     "go east",
     "pinch the morrison",
     "go east",
@@ -29098,6 +29240,9 @@
     "pinch the grandfir",
     "go east",
     "pinch the oyamel",
+    "go south",
+    "pinch the ohelo",
+    "go north",
     "go east",
     "pinch the formosana",
     "go east",
@@ -29311,6 +29456,9 @@
     "pinch the sandpine",
     "go east",
     "pinch the cypruscedar",
+    "go south",
+    "pinch the ieie",
+    "go north",
     "go east",
     "pinch the asunaro",
     "go east",
@@ -29341,6 +29489,9 @@
     "pinch the lacebark",
     "go east",
     "pinch the lebanoncedar",
+    "go south",
+    "pinch the maile",
+    "go north",
     "go east",
     "pinch the hiba",
     "go east",
@@ -29997,6 +30148,9 @@
     "pinch the celerytop",
     "go east",
     "pinch the corsican",
+    "go south",
+    "pinch the naupaka",
+    "go north",
     "go east",
     "pinch the cunninghamia",
     "go west",
@@ -30032,6 +30186,9 @@
     "pinch the huonpine",
     "go east",
     "pinch the maritime",
+    "go south",
+    "pinch the ilima",
+    "go north",
     "go east",
     "pinch the taiwania",
     "go west",
@@ -30062,6 +30219,9 @@
     "pinch the cypresspine",
     "go east",
     "pinch the aleppo",
+    "go south",
+    "pinch the ohai",
+    "go north",
     "go east",
     "pinch the cryptomeria",
     "go west",
