@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 16210,
+  "maxScore": 16250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -11571,7 +11571,7 @@
       "name": "Rust Veitchfir",
       "desc": "A dry veitchfir east of the yellowcedar. Packed rust coats veitchfir.",
       "brief": "Dry veitchfir, packed rust.",
-      "exits": { "west": { "to": "rust_yellowcedar" }, "east": { "to": "rust_sachalin" }, "south": { "to": "rust_canary" } },
+      "exits": { "west": { "to": "rust_yellowcedar" }, "east": { "to": "rust_sachalin" }, "south": { "to": "rust_canary" }, "north": { "to": "rust_durummidas" } },
       "actions": [
         {
           "id": "pinch_veitchfir",
@@ -11580,6 +11580,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard veitchfir. They packed it on the yellowcedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durummidas": {
+      "name": "Rust Durummidas",
+      "desc": "A dry durummidas north of the veitchfir. Packed rust coats durummidas.",
+      "brief": "Dry durummidas, packed rust.",
+      "exits": { "south": { "to": "rust_veitchfir" } },
+      "actions": [
+        {
+          "id": "pinch_durummidas",
+          "label": "pinch the durummidas",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durummidas. They packed it on the veitchfir and packed rust around it."]
           ]
         }
       ]
@@ -11605,7 +11622,7 @@
       "name": "Rust Sachalin",
       "desc": "A dry sachalin east of the veitchfir. Packed rust coats sachalin.",
       "brief": "Dry sachalin, packed rust.",
-      "exits": { "west": { "to": "rust_veitchfir" }, "east": { "to": "rust_hinau" }, "south": { "to": "rust_ramarama" } },
+      "exits": { "west": { "to": "rust_veitchfir" }, "east": { "to": "rust_hinau" }, "south": { "to": "rust_ramarama" }, "north": { "to": "rust_foniomidas" } },
       "actions": [
         {
           "id": "pinch_sachalin",
@@ -11614,6 +11631,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sachalin. They packed it on the veitchfir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniomidas": {
+      "name": "Rust Foniomidas",
+      "desc": "A dry foniomidas north of the sachalin. Packed rust coats foniomidas.",
+      "brief": "Dry foniomidas, packed rust.",
+      "exits": { "south": { "to": "rust_sachalin" } },
+      "actions": [
+        {
+          "id": "pinch_foniomidas",
+          "label": "pinch the foniomidas",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniomidas. They packed it on the sachalin and packed rust around it."]
           ]
         }
       ]
@@ -11656,7 +11690,7 @@
       "name": "Rust Shroud",
       "desc": "A dry shroud east of the wedge. Packed rust coats a shroud.",
       "brief": "Dry shroud, packed rust.",
-      "exits": { "west": { "to": "rust_wedge" }, "east": { "to": "rust_tye" }, "south": { "to": "rust_pumpkin" } },
+      "exits": { "west": { "to": "rust_wedge" }, "east": { "to": "rust_tye" }, "south": { "to": "rust_pumpkin" }, "north": { "to": "rust_teffmidas" } },
       "actions": [
         {
           "id": "pinch_shroud",
@@ -11665,6 +11699,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shroud. They rigged it on the wedge and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffmidas": {
+      "name": "Rust Teffmidas",
+      "desc": "A dry teffmidas north of the shroud. Packed rust coats teffmidas.",
+      "brief": "Dry teffmidas, packed rust.",
+      "exits": { "south": { "to": "rust_shroud" } },
+      "actions": [
+        {
+          "id": "pinch_teffmidas",
+          "label": "pinch the teffmidas",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffmidas. They packed it on the shroud and packed rust around it."]
           ]
         }
       ]
@@ -11690,7 +11741,7 @@
       "name": "Rust Tye",
       "desc": "A dry tye east of the shroud. Packed rust coats a tye.",
       "brief": "Dry tye, packed rust.",
-      "exits": { "west": { "to": "rust_shroud" }, "east": { "to": "rust_diamondknot" }, "south": { "to": "rust_squash" } },
+      "exits": { "west": { "to": "rust_shroud" }, "east": { "to": "rust_diamondknot" }, "south": { "to": "rust_squash" }, "north": { "to": "rust_barleymidas" } },
       "actions": [
         {
           "id": "pinch_tye",
@@ -11699,6 +11750,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tye. They hung it on the shroud and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleymidas": {
+      "name": "Rust Barleymidas",
+      "desc": "A dry barleymidas north of the tye. Packed rust coats barleymidas.",
+      "brief": "Dry barleymidas, packed rust.",
+      "exits": { "south": { "to": "rust_tye" } },
+      "actions": [
+        {
+          "id": "pinch_barleymidas",
+          "label": "pinch the barleymidas",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleymidas. They packed it on the tye and packed rust around it."]
           ]
         }
       ]
@@ -11724,7 +11792,7 @@
       "name": "Rust Diamondknot",
       "desc": "A dry diamondknot east of the tye. Packed rust coats a diamondknot.",
       "brief": "Dry diamondknot, packed rust.",
-      "exits": { "west": { "to": "rust_tye" }, "east": { "to": "rust_algin" }, "south": { "to": "rust_coralberry" } },
+      "exits": { "west": { "to": "rust_tye" }, "east": { "to": "rust_algin" }, "south": { "to": "rust_coralberry" }, "north": { "to": "rust_sorghummidas" } },
       "actions": [
         {
           "id": "pinch_diamondknot",
@@ -11733,6 +11801,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard diamondknot. They wove it on the tye and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghummidas": {
+      "name": "Rust Sorghummidas",
+      "desc": "A dry sorghummidas north of the diamondknot. Packed rust coats sorghummidas.",
+      "brief": "Dry sorghummidas, packed rust.",
+      "exits": { "south": { "to": "rust_diamondknot" } },
+      "actions": [
+        {
+          "id": "pinch_sorghummidas",
+          "label": "pinch the sorghummidas",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghummidas. They packed it on the diamondknot and packed rust around it."]
           ]
         }
       ]
@@ -11758,7 +11843,7 @@
       "name": "Rust Algin",
       "desc": "A dry algin east of the diamondknot. Packed rust coats algin.",
       "brief": "Dry algin, packed rust.",
-      "exits": { "west": { "to": "rust_diamondknot" }, "east": { "to": "rust_macedonian" }, "south": { "to": "rust_pawpaw" } },
+      "exits": { "west": { "to": "rust_diamondknot" }, "east": { "to": "rust_macedonian" }, "south": { "to": "rust_pawpaw" }, "north": { "to": "rust_milletmidas" } },
       "actions": [
         {
           "id": "pinch_algin",
@@ -11767,6 +11852,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard algin. They packed it on the diamondknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletmidas": {
+      "name": "Rust Milletmidas",
+      "desc": "A dry milletmidas north of the algin. Packed rust coats milletmidas.",
+      "brief": "Dry milletmidas, packed rust.",
+      "exits": { "south": { "to": "rust_algin" } },
+      "actions": [
+        {
+          "id": "pinch_milletmidas",
+          "label": "pinch the milletmidas",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletmidas. They packed it on the algin and packed rust around it."]
           ]
         }
       ]
@@ -11792,7 +11894,7 @@
       "name": "Rust Macedonian",
       "desc": "A dry macedonian east of the algin. Packed rust coats macedonian.",
       "brief": "Dry macedonian, packed rust.",
-      "exits": { "west": { "to": "rust_algin" }, "east": { "to": "rust_norwayspruce" }, "south": { "to": "rust_ailanthus" } },
+      "exits": { "west": { "to": "rust_algin" }, "east": { "to": "rust_norwayspruce" }, "south": { "to": "rust_ailanthus" }, "north": { "to": "rust_cornmidas" } },
       "actions": [
         {
           "id": "pinch_macedonian",
@@ -11801,6 +11903,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard macedonian. They packed it on the algin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornmidas": {
+      "name": "Rust Cornmidas",
+      "desc": "A dry cornmidas north of the macedonian. Packed rust coats cornmidas.",
+      "brief": "Dry cornmidas, packed rust.",
+      "exits": { "south": { "to": "rust_macedonian" } },
+      "actions": [
+        {
+          "id": "pinch_cornmidas",
+          "label": "pinch the cornmidas",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornmidas. They packed it on the macedonian and packed rust around it."]
           ]
         }
       ]
@@ -11826,7 +11945,7 @@
       "name": "Rust Norwayspruce",
       "desc": "A dry norwayspruce east of the macedonian. Packed rust coats norwayspruce.",
       "brief": "Dry norwayspruce, packed rust.",
-      "exits": { "west": { "to": "rust_macedonian" }, "east": { "to": "rust_redcedar" }, "south": { "to": "rust_lonomea" } },
+      "exits": { "west": { "to": "rust_macedonian" }, "east": { "to": "rust_redcedar" }, "south": { "to": "rust_lonomea" }, "north": { "to": "rust_oatmidas" } },
       "actions": [
         {
           "id": "pinch_norwayspruce",
@@ -11835,6 +11954,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard norwayspruce. They packed it on the macedonian and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatmidas": {
+      "name": "Rust Oatmidas",
+      "desc": "A dry oatmidas north of the norwayspruce. Packed rust coats oatmidas.",
+      "brief": "Dry oatmidas, packed rust.",
+      "exits": { "south": { "to": "rust_norwayspruce" } },
+      "actions": [
+        {
+          "id": "pinch_oatmidas",
+          "label": "pinch the oatmidas",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatmidas. They packed it on the norwayspruce and packed rust around it."]
           ]
         }
       ]
@@ -57107,11 +57243,17 @@
     "go north",
     "go east",
     "pinch the veitchfir",
+    "go north",
+    "pinch the durummidas",
+    "go south",
     "go south",
     "pinch the canary",
     "go north",
     "go east",
     "pinch the sachalin",
+    "go north",
+    "pinch the foniomidas",
+    "go south",
     "go south",
     "pinch the ramarama",
     "go north",
@@ -57129,31 +57271,49 @@
     "go north",
     "go east",
     "pinch the shroud",
+    "go north",
+    "pinch the teffmidas",
+    "go south",
     "go south",
     "pinch the pumpkin",
     "go north",
     "go east",
     "pinch the tye",
+    "go north",
+    "pinch the barleymidas",
+    "go south",
     "go south",
     "pinch the squash",
     "go north",
     "go east",
     "pinch the diamondknot",
+    "go north",
+    "pinch the sorghummidas",
+    "go south",
     "go south",
     "pinch the coralberry",
     "go north",
     "go east",
     "pinch the algin",
+    "go north",
+    "pinch the milletmidas",
+    "go south",
     "go south",
     "pinch the pawpaw",
     "go north",
     "go east",
     "pinch the macedonian",
+    "go north",
+    "pinch the cornmidas",
+    "go south",
     "go south",
     "pinch the ailanthus",
     "go north",
     "go east",
     "pinch the norwayspruce",
+    "go north",
+    "pinch the oatmidas",
+    "go south",
     "go south",
     "pinch the lonomea",
     "go north",
