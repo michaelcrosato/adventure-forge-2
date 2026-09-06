@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15170,
+  "maxScore": 15210,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -20156,7 +20156,7 @@
       "name": "Rust Silverwattle",
       "desc": "A dry silverwattle east of the yate. Packed rust coats silverwattle.",
       "brief": "Dry silverwattle, packed rust.",
-      "exits": { "west": { "to": "rust_yate" }, "east": { "to": "rust_kohia" }, "south": { "to": "rust_kukui" } },
+      "exits": { "west": { "to": "rust_yate" }, "east": { "to": "rust_kohia" }, "south": { "to": "rust_kukui" }, "north": { "to": "rust_durumtankard" } },
       "actions": [
         {
           "id": "pinch_silverwattle",
@@ -20165,6 +20165,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard silverwattle. They packed it on the yate and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumtankard": {
+      "name": "Rust Durumtankard",
+      "desc": "A dry durumtankard north of the silverwattle. Packed rust coats durumtankard.",
+      "brief": "Dry durumtankard, packed rust.",
+      "exits": { "south": { "to": "rust_silverwattle" } },
+      "actions": [
+        {
+          "id": "pinch_durumtankard",
+          "label": "pinch the durumtankard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumtankard. They packed it on the silverwattle and packed rust around it."]
           ]
         }
       ]
@@ -20241,7 +20258,7 @@
       "name": "Rust Scarph",
       "desc": "A dry scarph east of the gasket. Packed rust coats a scarph.",
       "brief": "Dry scarph, packed rust.",
-      "exits": { "west": { "to": "rust_gasket" }, "east": { "to": "rust_packers" }, "south": { "to": "rust_milletstraight" } },
+      "exits": { "west": { "to": "rust_gasket" }, "east": { "to": "rust_packers" }, "south": { "to": "rust_milletstraight" }, "north": { "to": "rust_foniotankard" } },
       "actions": [
         {
           "id": "pinch_scarph",
@@ -20250,6 +20267,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard scarph. They joined it on the gasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniotankard": {
+      "name": "Rust Foniotankard",
+      "desc": "A dry foniotankard north of the scarph. Packed rust coats foniotankard.",
+      "brief": "Dry foniotankard, packed rust.",
+      "exits": { "south": { "to": "rust_scarph" } },
+      "actions": [
+        {
+          "id": "pinch_foniotankard",
+          "label": "pinch the foniotankard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniotankard. They packed it on the scarph and packed rust around it."]
           ]
         }
       ]
@@ -20275,7 +20309,7 @@
       "name": "Rust Packers",
       "desc": "A dry packers east of the scarph. Packed rust coats a packers.",
       "brief": "Dry packers, packed rust.",
-      "exits": { "west": { "to": "rust_scarph" }, "east": { "to": "rust_starchpaste" }, "south": { "to": "rust_cornstraight" } },
+      "exits": { "west": { "to": "rust_scarph" }, "east": { "to": "rust_starchpaste" }, "south": { "to": "rust_cornstraight" }, "north": { "to": "rust_tefftankard" } },
       "actions": [
         {
           "id": "pinch_packers",
@@ -20284,6 +20318,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard packers. They cinched it on the scarph and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefftankard": {
+      "name": "Rust Tefftankard",
+      "desc": "A dry tefftankard north of the packers. Packed rust coats tefftankard.",
+      "brief": "Dry tefftankard, packed rust.",
+      "exits": { "south": { "to": "rust_packers" } },
+      "actions": [
+        {
+          "id": "pinch_tefftankard",
+          "label": "pinch the tefftankard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefftankard. They packed it on the packers and packed rust around it."]
           ]
         }
       ]
@@ -20309,7 +20360,7 @@
       "name": "Rust Starchpaste",
       "desc": "A dry starchpaste east of the packers. Packed rust coats starchpaste.",
       "brief": "Dry starchpaste, packed rust.",
-      "exits": { "west": { "to": "rust_packers" }, "east": { "to": "rust_gallnut" }, "south": { "to": "rust_oatstraight" } },
+      "exits": { "west": { "to": "rust_packers" }, "east": { "to": "rust_gallnut" }, "south": { "to": "rust_oatstraight" }, "north": { "to": "rust_barleytankard" } },
       "actions": [
         {
           "id": "pinch_starchpaste",
@@ -20318,6 +20369,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard starchpaste. They packed it on the packers and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleytankard": {
+      "name": "Rust Barleytankard",
+      "desc": "A dry barleytankard north of the starchpaste. Packed rust coats barleytankard.",
+      "brief": "Dry barleytankard, packed rust.",
+      "exits": { "south": { "to": "rust_starchpaste" } },
+      "actions": [
+        {
+          "id": "pinch_barleytankard",
+          "label": "pinch the barleytankard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleytankard. They packed it on the starchpaste and packed rust around it."]
           ]
         }
       ]
@@ -20343,7 +20411,7 @@
       "name": "Rust Gallnut",
       "desc": "A dry gallnut east of the starchpaste. Packed rust coats gallnut.",
       "brief": "Dry gallnut, packed rust.",
-      "exits": { "west": { "to": "rust_starchpaste" }, "east": { "to": "rust_cannel" }, "south": { "to": "rust_ryestraight" } },
+      "exits": { "west": { "to": "rust_starchpaste" }, "east": { "to": "rust_cannel" }, "south": { "to": "rust_ryestraight" }, "north": { "to": "rust_sorghumtankard" } },
       "actions": [
         {
           "id": "pinch_gallnut",
@@ -20352,6 +20420,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gallnut. They packed it on the starchpaste and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumtankard": {
+      "name": "Rust Sorghumtankard",
+      "desc": "A dry sorghumtankard north of the gallnut. Packed rust coats sorghumtankard.",
+      "brief": "Dry sorghumtankard, packed rust.",
+      "exits": { "south": { "to": "rust_gallnut" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumtankard",
+          "label": "pinch the sorghumtankard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumtankard. They packed it on the gallnut and packed rust around it."]
           ]
         }
       ]
@@ -20377,7 +20462,7 @@
       "name": "Rust Cannel",
       "desc": "A dry cannel east of the gallnut. Packed rust coats cannel.",
       "brief": "Dry cannel, packed rust.",
-      "exits": { "west": { "to": "rust_gallnut" }, "east": { "to": "rust_mannagum" }, "south": { "to": "rust_wheatstraight" } },
+      "exits": { "west": { "to": "rust_gallnut" }, "east": { "to": "rust_mannagum" }, "south": { "to": "rust_wheatstraight" }, "north": { "to": "rust_millettankard" } },
       "actions": [
         {
           "id": "pinch_cannel",
@@ -20386,6 +20471,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cannel. They packed it on the gallnut and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millettankard": {
+      "name": "Rust Millettankard",
+      "desc": "A dry millettankard north of the cannel. Packed rust coats millettankard.",
+      "brief": "Dry millettankard, packed rust.",
+      "exits": { "south": { "to": "rust_cannel" } },
+      "actions": [
+        {
+          "id": "pinch_millettankard",
+          "label": "pinch the millettankard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millettankard. They packed it on the cannel and packed rust around it."]
           ]
         }
       ]
@@ -20411,7 +20513,7 @@
       "name": "Rust Mannagum",
       "desc": "A dry mannagum east of the cannel. Packed rust coats mannagum.",
       "brief": "Dry mannagum, packed rust.",
-      "exits": { "west": { "to": "rust_cannel" }, "east": { "to": "rust_sheoak" }, "south": { "to": "rust_durumsecondclear" } },
+      "exits": { "west": { "to": "rust_cannel" }, "east": { "to": "rust_sheoak" }, "south": { "to": "rust_durumsecondclear" }, "north": { "to": "rust_corntankard" } },
       "actions": [
         {
           "id": "pinch_mannagum",
@@ -20420,6 +20522,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mannagum. They packed it on the cannel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corntankard": {
+      "name": "Rust Corntankard",
+      "desc": "A dry corntankard north of the mannagum. Packed rust coats corntankard.",
+      "brief": "Dry corntankard, packed rust.",
+      "exits": { "south": { "to": "rust_mannagum" } },
+      "actions": [
+        {
+          "id": "pinch_corntankard",
+          "label": "pinch the corntankard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corntankard. They packed it on the mannagum and packed rust around it."]
           ]
         }
       ]
@@ -20445,7 +20564,7 @@
       "name": "Rust Sheoak",
       "desc": "A dry sheoak east of the mannagum. Packed rust coats sheoak.",
       "brief": "Dry sheoak, packed rust.",
-      "exits": { "west": { "to": "rust_mannagum" }, "east": { "to": "rust_kauripine" }, "south": { "to": "rust_foniosecondclear" } },
+      "exits": { "west": { "to": "rust_mannagum" }, "east": { "to": "rust_kauripine" }, "south": { "to": "rust_foniosecondclear" }, "north": { "to": "rust_oattankard" } },
       "actions": [
         {
           "id": "pinch_sheoak",
@@ -20454,6 +20573,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheoak. They packed it on the mannagum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oattankard": {
+      "name": "Rust Oattankard",
+      "desc": "A dry oattankard north of the sheoak. Packed rust coats oattankard.",
+      "brief": "Dry oattankard, packed rust.",
+      "exits": { "south": { "to": "rust_sheoak" } },
+      "actions": [
+        {
+          "id": "pinch_oattankard",
+          "label": "pinch the oattankard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oattankard. They packed it on the sheoak and packed rust around it."]
           ]
         }
       ]
@@ -55024,6 +55160,9 @@
     "go north",
     "go east",
     "pinch the silverwattle",
+    "go north",
+    "pinch the durumtankard",
+    "go south",
     "go south",
     "pinch the kukui",
     "go north",
@@ -55045,36 +55184,57 @@
     "pinch the gasket",
     "go east",
     "pinch the scarph",
+    "go north",
+    "pinch the foniotankard",
+    "go south",
     "go south",
     "pinch the milletstraight",
     "go north",
     "go east",
     "pinch the packers",
+    "go north",
+    "pinch the tefftankard",
+    "go south",
     "go south",
     "pinch the cornstraight",
     "go north",
     "go east",
     "pinch the starchpaste",
+    "go north",
+    "pinch the barleytankard",
+    "go south",
     "go south",
     "pinch the oatstraight",
     "go north",
     "go east",
     "pinch the gallnut",
+    "go north",
+    "pinch the sorghumtankard",
+    "go south",
     "go south",
     "pinch the ryestraight",
     "go north",
     "go east",
     "pinch the cannel",
+    "go north",
+    "pinch the millettankard",
+    "go south",
     "go south",
     "pinch the wheatstraight",
     "go north",
     "go east",
     "pinch the mannagum",
+    "go north",
+    "pinch the corntankard",
+    "go south",
     "go south",
     "pinch the durumsecondclear",
     "go north",
     "go east",
     "pinch the sheoak",
+    "go north",
+    "pinch the oattankard",
+    "go south",
     "go south",
     "pinch the foniosecondclear",
     "go north",
