@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8090,
+  "maxScore": 8130,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -9497,7 +9497,7 @@
       "name": "Rust Sachalin",
       "desc": "A dry sachalin east of the veitchfir. Packed rust coats sachalin.",
       "brief": "Dry sachalin, packed rust.",
-      "exits": { "west": { "to": "rust_veitchfir" }, "east": { "to": "rust_hinau" } },
+      "exits": { "west": { "to": "rust_veitchfir" }, "east": { "to": "rust_hinau" }, "south": { "to": "rust_ramarama" } },
       "actions": [
         {
           "id": "pinch_sachalin",
@@ -9506,6 +9506,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sachalin. They packed it on the veitchfir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ramarama": {
+      "name": "Rust Ramarama",
+      "desc": "A dry ramarama south of the sachalin. Packed rust coats ramarama.",
+      "brief": "Dry ramarama, packed rust.",
+      "exits": { "north": { "to": "rust_sachalin" } },
+      "actions": [
+        {
+          "id": "pinch_ramarama",
+          "label": "pinch the ramarama",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ramarama. They packed it on the sachalin and packed rust around it."]
           ]
         }
       ]
@@ -9667,7 +9684,7 @@
       "name": "Rust Homolepis",
       "desc": "A dry homolepis east of the corkbark. Packed rust coats homolepis.",
       "brief": "Dry homolepis, packed rust.",
-      "exits": { "west": { "to": "rust_corkbark" }, "east": { "to": "rust_titoki" } },
+      "exits": { "west": { "to": "rust_corkbark" }, "east": { "to": "rust_titoki" }, "south": { "to": "rust_kumarahou" } },
       "actions": [
         {
           "id": "pinch_homolepis",
@@ -9676,6 +9693,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard homolepis. They packed it on the corkbark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kumarahou": {
+      "name": "Rust Kumarahou",
+      "desc": "A dry kumarahou south of the homolepis. Packed rust coats kumarahou.",
+      "brief": "Dry kumarahou, packed rust.",
+      "exits": { "north": { "to": "rust_homolepis" } },
+      "actions": [
+        {
+          "id": "pinch_kumarahou",
+          "label": "pinch the kumarahou",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kumarahou. They packed it on the homolepis and packed rust around it."]
           ]
         }
       ]
@@ -9854,7 +9888,7 @@
       "name": "Rust Maries",
       "desc": "A dry maries east of the nordmann. Packed rust coats maries.",
       "brief": "Dry maries, packed rust.",
-      "exits": { "west": { "to": "rust_nordmann" }, "east": { "to": "rust_kowhai" } },
+      "exits": { "west": { "to": "rust_nordmann" }, "east": { "to": "rust_kowhai" }, "south": { "to": "rust_toropapa" } },
       "actions": [
         {
           "id": "pinch_maries",
@@ -9863,6 +9897,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard maries. They packed it on the nordmann and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_toropapa": {
+      "name": "Rust Toropapa",
+      "desc": "A dry toropapa south of the maries. Packed rust coats toropapa.",
+      "brief": "Dry toropapa, packed rust.",
+      "exits": { "north": { "to": "rust_maries" } },
+      "actions": [
+        {
+          "id": "pinch_toropapa",
+          "label": "pinch the toropapa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard toropapa. They packed it on the maries and packed rust around it."]
           ]
         }
       ]
@@ -10024,7 +10075,7 @@
       "name": "Rust Kawakami",
       "desc": "A dry kawakami east of the sitka. Packed rust coats kawakami.",
       "brief": "Dry kawakami, packed rust.",
-      "exits": { "west": { "to": "rust_sitka" }, "east": { "to": "rust_manuka" } },
+      "exits": { "west": { "to": "rust_sitka" }, "east": { "to": "rust_manuka" }, "south": { "to": "rust_koa" } },
       "actions": [
         {
           "id": "pinch_kawakami",
@@ -10033,6 +10084,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kawakami. They packed it on the sitka and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_koa": {
+      "name": "Rust Koa",
+      "desc": "A dry koa south of the kawakami. Packed rust coats koa.",
+      "brief": "Dry koa, packed rust.",
+      "exits": { "north": { "to": "rust_kawakami" } },
+      "actions": [
+        {
+          "id": "pinch_koa",
+          "label": "pinch the koa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard koa. They packed it on the kawakami and packed rust around it."]
           ]
         }
       ]
@@ -10466,7 +10534,7 @@
       "name": "Rust Dawnredwood",
       "desc": "A dry dawnredwood east of the radiatapine. Packed rust coats dawnredwood.",
       "brief": "Dry dawnredwood, packed rust.",
-      "exits": { "west": { "to": "rust_radiatapine" }, "east": { "to": "rust_kanuka" } },
+      "exits": { "west": { "to": "rust_radiatapine" }, "east": { "to": "rust_kanuka" }, "south": { "to": "rust_milo" } },
       "actions": [
         {
           "id": "pinch_dawnredwood",
@@ -10475,6 +10543,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dawnredwood. They packed it on the radiatapine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milo": {
+      "name": "Rust Milo",
+      "desc": "A dry milo south of the dawnredwood. Packed rust coats milo.",
+      "brief": "Dry milo, packed rust.",
+      "exits": { "north": { "to": "rust_dawnredwood" } },
+      "actions": [
+        {
+          "id": "pinch_milo",
+          "label": "pinch the milo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milo. They packed it on the dawnredwood and packed rust around it."]
           ]
         }
       ]
@@ -10636,7 +10721,7 @@
       "name": "Rust Lawson",
       "desc": "A dry lawson east of the stonepine. Packed rust coats lawson.",
       "brief": "Dry lawson, packed rust.",
-      "exits": { "west": { "to": "rust_stonepine" }, "east": { "to": "rust_ngaio" } },
+      "exits": { "west": { "to": "rust_stonepine" }, "east": { "to": "rust_ngaio" }, "south": { "to": "rust_kamani" } },
       "actions": [
         {
           "id": "pinch_lawson",
@@ -10645,6 +10730,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lawson. They packed it on the stonepine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kamani": {
+      "name": "Rust Kamani",
+      "desc": "A dry kamani south of the lawson. Packed rust coats kamani.",
+      "brief": "Dry kamani, packed rust.",
+      "exits": { "north": { "to": "rust_lawson" } },
+      "actions": [
+        {
+          "id": "pinch_kamani",
+          "label": "pinch the kamani",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kamani. They packed it on the lawson and packed rust around it."]
           ]
         }
       ]
@@ -10840,7 +10942,7 @@
       "name": "Rust Norfolkpine",
       "desc": "A dry norfolkpine east of the kurrajong. Packed rust coats norfolkpine.",
       "brief": "Dry norfolkpine, packed rust.",
-      "exits": { "west": { "to": "rust_kurrajong" }, "east": { "to": "rust_karaka" } },
+      "exits": { "west": { "to": "rust_kurrajong" }, "east": { "to": "rust_karaka" }, "south": { "to": "rust_wiliwili" } },
       "actions": [
         {
           "id": "pinch_norfolkpine",
@@ -10849,6 +10951,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard norfolkpine. They packed it on the kurrajong and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wiliwili": {
+      "name": "Rust Wiliwili",
+      "desc": "A dry wiliwili south of the norfolkpine. Packed rust coats wiliwili.",
+      "brief": "Dry wiliwili, packed rust.",
+      "exits": { "north": { "to": "rust_norfolkpine" } },
+      "actions": [
+        {
+          "id": "pinch_wiliwili",
+          "label": "pinch the wiliwili",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wiliwili. They packed it on the norfolkpine and packed rust around it."]
           ]
         }
       ]
@@ -11010,7 +11129,7 @@
       "name": "Rust Blackhills",
       "desc": "A dry blackhills east of the ponderosa. Packed rust coats blackhills.",
       "brief": "Dry blackhills, packed rust.",
-      "exits": { "west": { "to": "rust_ponderosa" }, "east": { "to": "rust_mahoe" } },
+      "exits": { "west": { "to": "rust_ponderosa" }, "east": { "to": "rust_mahoe" }, "south": { "to": "rust_hapuu" } },
       "actions": [
         {
           "id": "pinch_blackhills",
@@ -11019,6 +11138,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackhills. They packed it on the ponderosa and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_hapuu": {
+      "name": "Rust Hapuu",
+      "desc": "A dry hapuu south of the blackhills. Packed rust coats hapuu.",
+      "brief": "Dry hapuu, packed rust.",
+      "exits": { "north": { "to": "rust_blackhills" } },
+      "actions": [
+        {
+          "id": "pinch_hapuu",
+          "label": "pinch the hapuu",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hapuu. They packed it on the blackhills and packed rust around it."]
           ]
         }
       ]
@@ -29105,6 +29241,9 @@
     "pinch the veitchfir",
     "go east",
     "pinch the sachalin",
+    "go south",
+    "pinch the ramarama",
+    "go north",
     "go east",
     "pinch the hinau",
     "go west",
@@ -29135,6 +29274,9 @@
     "pinch the corkbark",
     "go east",
     "pinch the homolepis",
+    "go south",
+    "pinch the kumarahou",
+    "go north",
     "go east",
     "pinch the titoki",
     "go west",
@@ -29167,6 +29309,9 @@
     "pinch the nordmann",
     "go east",
     "pinch the maries",
+    "go south",
+    "pinch the toropapa",
+    "go north",
     "go east",
     "pinch the kowhai",
     "go west",
@@ -29197,6 +29342,9 @@
     "pinch the sitka",
     "go east",
     "pinch the kawakami",
+    "go south",
+    "pinch the koa",
+    "go north",
     "go east",
     "pinch the manuka",
     "go west",
@@ -29246,6 +29394,9 @@
     "pinch the radiatapine",
     "go east",
     "pinch the dawnredwood",
+    "go south",
+    "pinch the milo",
+    "go north",
     "go east",
     "pinch the kanuka",
     "go west",
@@ -29276,6 +29427,9 @@
     "pinch the stonepine",
     "go east",
     "pinch the lawson",
+    "go south",
+    "pinch the kamani",
+    "go north",
     "go east",
     "pinch the ngaio",
     "go west",
@@ -29308,6 +29462,9 @@
     "pinch the kurrajong",
     "go east",
     "pinch the norfolkpine",
+    "go south",
+    "pinch the wiliwili",
+    "go north",
     "go east",
     "pinch the karaka",
     "go west",
@@ -29338,6 +29495,9 @@
     "pinch the ponderosa",
     "go east",
     "pinch the blackhills",
+    "go south",
+    "pinch the hapuu",
+    "go north",
     "go east",
     "pinch the mahoe",
     "go west",
