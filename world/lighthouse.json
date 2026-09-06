@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10410,
+  "maxScore": 10450,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -24236,7 +24236,7 @@
       "name": "Rust Sandpaper",
       "desc": "A dry sandpaper east of the flint. Packed rust coats sandpaper.",
       "brief": "Dry sandpaper, packed rust.",
-      "exits": { "west": { "to": "rust_flint" }, "east": { "to": "rust_sapgreen" } },
+      "exits": { "west": { "to": "rust_flint" }, "east": { "to": "rust_sapgreen" }, "south": { "to": "rust_amaranthseed" } },
       "actions": [
         {
           "id": "pinch_sandpaper",
@@ -24249,11 +24249,28 @@
         }
       ]
     },
+    "rust_amaranthseed": {
+      "name": "Rust Amaranthseed",
+      "desc": "A dry amaranthseed south of the sandpaper. Packed rust coats amaranthseed.",
+      "brief": "Dry amaranthseed, packed rust.",
+      "exits": { "north": { "to": "rust_sandpaper" } },
+      "actions": [
+        {
+          "id": "pinch_amaranthseed",
+          "label": "pinch the amaranthseed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard amaranthseed. They packed it on the sandpaper and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sapgreen": {
       "name": "Rust Sapgreen",
       "desc": "A dry sapgreen east of the sandpaper. Packed rust coats sapgreen.",
       "brief": "Dry sapgreen, packed rust.",
-      "exits": { "west": { "to": "rust_sandpaper" }, "east": { "to": "rust_brochantite" } },
+      "exits": { "west": { "to": "rust_sandpaper" }, "east": { "to": "rust_brochantite" }, "south": { "to": "rust_farinaflour" } },
       "actions": [
         {
           "id": "pinch_sapgreen",
@@ -24266,11 +24283,28 @@
         }
       ]
     },
+    "rust_farinaflour": {
+      "name": "Rust Farinaflour",
+      "desc": "A dry farinaflour south of the sapgreen. Packed rust coats farinaflour.",
+      "brief": "Dry farinaflour, packed rust.",
+      "exits": { "north": { "to": "rust_sapgreen" } },
+      "actions": [
+        {
+          "id": "pinch_farinaflour",
+          "label": "pinch the farinaflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard farinaflour. They packed it on the sapgreen and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_brochantite": {
       "name": "Rust Brochantite",
       "desc": "A dry brochantite east of the sapgreen. Packed rust coats brochantite.",
       "brief": "Dry brochantite, packed rust.",
-      "exits": { "west": { "to": "rust_sapgreen" }, "east": { "to": "rust_percylite" } },
+      "exits": { "west": { "to": "rust_sapgreen" }, "east": { "to": "rust_percylite" }, "south": { "to": "rust_coconutflour" } },
       "actions": [
         {
           "id": "pinch_brochantite",
@@ -24283,11 +24317,28 @@
         }
       ]
     },
+    "rust_coconutflour": {
+      "name": "Rust Coconutflour",
+      "desc": "A dry coconutflour south of the brochantite. Packed rust coats coconutflour.",
+      "brief": "Dry coconutflour, packed rust.",
+      "exits": { "north": { "to": "rust_brochantite" } },
+      "actions": [
+        {
+          "id": "pinch_coconutflour",
+          "label": "pinch the coconutflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard coconutflour. They packed it on the brochantite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_percylite": {
       "name": "Rust Percylite",
       "desc": "A dry percylite east of the brochantite. Packed rust coats percylite.",
       "brief": "Dry percylite, packed rust.",
-      "exits": { "west": { "to": "rust_brochantite" }, "east": { "to": "rust_gersdorffite" } },
+      "exits": { "west": { "to": "rust_brochantite" }, "east": { "to": "rust_gersdorffite" }, "south": { "to": "rust_almondflour" } },
       "actions": [
         {
           "id": "pinch_percylite",
@@ -24296,6 +24347,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard percylite. They packed it on the brochantite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_almondflour": {
+      "name": "Rust Almondflour",
+      "desc": "A dry almondflour south of the percylite. Packed rust coats almondflour.",
+      "brief": "Dry almondflour, packed rust.",
+      "exits": { "north": { "to": "rust_percylite" } },
+      "actions": [
+        {
+          "id": "pinch_almondflour",
+          "label": "pinch the almondflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard almondflour. They packed it on the percylite and packed rust around it."]
           ]
         }
       ]
@@ -24338,7 +24406,7 @@
       "name": "Rust Eyelet",
       "desc": "A dry eyelet east of the beam. Packed rust coats an eyelet.",
       "brief": "Dry eyelet, packed rust.",
-      "exits": { "west": { "to": "rust_beam" }, "east": { "to": "rust_stevedore" } },
+      "exits": { "west": { "to": "rust_beam" }, "east": { "to": "rust_stevedore" }, "south": { "to": "rust_peanutflour" } },
       "actions": [
         {
           "id": "pinch_eyelet",
@@ -24351,11 +24419,28 @@
         }
       ]
     },
+    "rust_peanutflour": {
+      "name": "Rust Peanutflour",
+      "desc": "A dry peanutflour south of the eyelet. Packed rust coats peanutflour.",
+      "brief": "Dry peanutflour, packed rust.",
+      "exits": { "north": { "to": "rust_eyelet" } },
+      "actions": [
+        {
+          "id": "pinch_peanutflour",
+          "label": "pinch the peanutflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard peanutflour. They packed it on the eyelet and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_stevedore": {
       "name": "Rust Stevedore",
       "desc": "A dry stevedore east of the eyelet. Packed rust coats a stevedore.",
       "brief": "Dry stevedore, packed rust.",
-      "exits": { "west": { "to": "rust_eyelet" }, "east": { "to": "rust_sisal" } },
+      "exits": { "west": { "to": "rust_eyelet" }, "east": { "to": "rust_sisal" }, "south": { "to": "rust_lentilflour" } },
       "actions": [
         {
           "id": "pinch_stevedore",
@@ -24368,11 +24453,28 @@
         }
       ]
     },
+    "rust_lentilflour": {
+      "name": "Rust Lentilflour",
+      "desc": "A dry lentilflour south of the stevedore. Packed rust coats lentilflour.",
+      "brief": "Dry lentilflour, packed rust.",
+      "exits": { "north": { "to": "rust_stevedore" } },
+      "actions": [
+        {
+          "id": "pinch_lentilflour",
+          "label": "pinch the lentilflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lentilflour. They packed it on the stevedore and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sisal": {
       "name": "Rust Sisal",
       "desc": "A dry sisal east of the stevedore. Packed rust coats a sisal.",
       "brief": "Dry sisal, packed rust.",
-      "exits": { "west": { "to": "rust_stevedore" }, "east": { "to": "rust_kauri" } },
+      "exits": { "west": { "to": "rust_stevedore" }, "east": { "to": "rust_kauri" }, "south": { "to": "rust_chickpeaflour" } },
       "actions": [
         {
           "id": "pinch_sisal",
@@ -24385,11 +24487,28 @@
         }
       ]
     },
+    "rust_chickpeaflour": {
+      "name": "Rust Chickpeaflour",
+      "desc": "A dry chickpeaflour south of the sisal. Packed rust coats chickpeaflour.",
+      "brief": "Dry chickpeaflour, packed rust.",
+      "exits": { "north": { "to": "rust_sisal" } },
+      "actions": [
+        {
+          "id": "pinch_chickpeaflour",
+          "label": "pinch the chickpeaflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard chickpeaflour. They packed it on the sisal and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kauri": {
       "name": "Rust Kauri",
       "desc": "A dry kauri east of the sisal. Packed rust coats kauri.",
       "brief": "Dry kauri, packed rust.",
-      "exits": { "west": { "to": "rust_sisal" }, "east": { "to": "rust_calcite" } },
+      "exits": { "west": { "to": "rust_sisal" }, "east": { "to": "rust_calcite" }, "south": { "to": "rust_buckwheatflour" } },
       "actions": [
         {
           "id": "pinch_kauri",
@@ -24398,6 +24517,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kauri. They laid it on the sisal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_buckwheatflour": {
+      "name": "Rust Buckwheatflour",
+      "desc": "A dry buckwheatflour south of the kauri. Packed rust coats buckwheatflour.",
+      "brief": "Dry buckwheatflour, packed rust.",
+      "exits": { "north": { "to": "rust_kauri" } },
+      "actions": [
+        {
+          "id": "pinch_buckwheatflour",
+          "label": "pinch the buckwheatflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard buckwheatflour. They packed it on the kauri and packed rust around it."]
           ]
         }
       ]
@@ -39559,12 +39695,24 @@
     "pinch the flint",
     "go east",
     "pinch the sandpaper",
+    "go south",
+    "pinch the amaranthseed",
+    "go north",
     "go east",
     "pinch the sapgreen",
+    "go south",
+    "pinch the farinaflour",
+    "go north",
     "go east",
     "pinch the brochantite",
+    "go south",
+    "pinch the coconutflour",
+    "go north",
     "go east",
     "pinch the percylite",
+    "go south",
+    "pinch the almondflour",
+    "go north",
     "go east",
     "pinch the gersdorffite",
     "go west",
@@ -39583,12 +39731,24 @@
     "go east",
     "go east",
     "pinch the eyelet",
+    "go south",
+    "pinch the peanutflour",
+    "go north",
     "go east",
     "pinch the stevedore",
+    "go south",
+    "pinch the lentilflour",
+    "go north",
     "go east",
     "pinch the sisal",
+    "go south",
+    "pinch the chickpeaflour",
+    "go north",
     "go east",
     "pinch the kauri",
+    "go south",
+    "pinch the buckwheatflour",
+    "go north",
     "go east",
     "pinch the calcite",
     "go west",
