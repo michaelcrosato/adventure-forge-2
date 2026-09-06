@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13450,
+  "maxScore": 13490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -33246,7 +33246,7 @@
       "name": "Rust Bentonite",
       "desc": "A dry bentonite east of the asphalt. Packed rust coats bentonite.",
       "brief": "Dry bentonite, packed rust.",
-      "exits": { "west": { "to": "rust_asphalt" }, "east": { "to": "rust_marble" }, "south": { "to": "rust_sampmeal" } },
+      "exits": { "west": { "to": "rust_asphalt" }, "east": { "to": "rust_marble" }, "south": { "to": "rust_sampmeal" }, "north": { "to": "rust_durumcoffer" } },
       "actions": [
         {
           "id": "pinch_bentonite",
@@ -33255,6 +33255,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bentonite. They packed it on the asphalt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumcoffer": {
+      "name": "Rust Durumcoffer",
+      "desc": "A dry durumcoffer north of the bentonite. Packed rust coats durumcoffer.",
+      "brief": "Dry durumcoffer, packed rust.",
+      "exits": { "south": { "to": "rust_bentonite" } },
+      "actions": [
+        {
+          "id": "pinch_durumcoffer",
+          "label": "pinch the durumcoffer",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumcoffer. They packed it on the bentonite and packed rust around it."]
           ]
         }
       ]
@@ -33280,7 +33297,7 @@
       "name": "Rust Marble",
       "desc": "A dry marble east of the bentonite. Packed rust coats marble.",
       "brief": "Dry marble, packed rust.",
-      "exits": { "west": { "to": "rust_bentonite" }, "east": { "to": "rust_hematite" }, "south": { "to": "rust_nixtamal" } },
+      "exits": { "west": { "to": "rust_bentonite" }, "east": { "to": "rust_hematite" }, "south": { "to": "rust_nixtamal" }, "north": { "to": "rust_foniocoffer" } },
       "actions": [
         {
           "id": "pinch_marble",
@@ -33289,6 +33306,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard marble. They packed it on the bentonite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniocoffer": {
+      "name": "Rust Foniocoffer",
+      "desc": "A dry foniocoffer north of the marble. Packed rust coats foniocoffer.",
+      "brief": "Dry foniocoffer, packed rust.",
+      "exits": { "south": { "to": "rust_marble" } },
+      "actions": [
+        {
+          "id": "pinch_foniocoffer",
+          "label": "pinch the foniocoffer",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniocoffer. They packed it on the marble and packed rust around it."]
           ]
         }
       ]
@@ -33314,7 +33348,7 @@
       "name": "Rust Hematite",
       "desc": "A dry hematite east of the marble. Packed rust coats hematite.",
       "brief": "Dry hematite, packed rust.",
-      "exits": { "west": { "to": "rust_marble" }, "east": { "to": "rust_ruddle" }, "south": { "to": "rust_masa" } },
+      "exits": { "west": { "to": "rust_marble" }, "east": { "to": "rust_ruddle" }, "south": { "to": "rust_masa" }, "north": { "to": "rust_teffcoffer" } },
       "actions": [
         {
           "id": "pinch_hematite",
@@ -33323,6 +33357,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hematite. They packed it on the marble and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffcoffer": {
+      "name": "Rust Teffcoffer",
+      "desc": "A dry teffcoffer north of the hematite. Packed rust coats teffcoffer.",
+      "brief": "Dry teffcoffer, packed rust.",
+      "exits": { "south": { "to": "rust_hematite" } },
+      "actions": [
+        {
+          "id": "pinch_teffcoffer",
+          "label": "pinch the teffcoffer",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffcoffer. They packed it on the hematite and packed rust around it."]
           ]
         }
       ]
@@ -33348,7 +33399,7 @@
       "name": "Rust Ruddle",
       "desc": "A dry ruddle east of the hematite. Packed rust coats ruddle.",
       "brief": "Dry ruddle, packed rust.",
-      "exits": { "west": { "to": "rust_hematite" }, "east": { "to": "rust_rhodochrosite" }, "south": { "to": "rust_sorghummeal" } },
+      "exits": { "west": { "to": "rust_hematite" }, "east": { "to": "rust_rhodochrosite" }, "south": { "to": "rust_sorghummeal" }, "north": { "to": "rust_barleycoffer" } },
       "actions": [
         {
           "id": "pinch_ruddle",
@@ -33357,6 +33408,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ruddle. They packed it on the hematite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleycoffer": {
+      "name": "Rust Barleycoffer",
+      "desc": "A dry barleycoffer north of the ruddle. Packed rust coats barleycoffer.",
+      "brief": "Dry barleycoffer, packed rust.",
+      "exits": { "south": { "to": "rust_ruddle" } },
+      "actions": [
+        {
+          "id": "pinch_barleycoffer",
+          "label": "pinch the barleycoffer",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleycoffer. They packed it on the ruddle and packed rust around it."]
           ]
         }
       ]
@@ -33382,7 +33450,7 @@
       "name": "Rust Rhodochrosite",
       "desc": "A dry rhodochrosite east of the ruddle. Packed rust coats rhodochrosite.",
       "brief": "Dry rhodochrosite, packed rust.",
-      "exits": { "west": { "to": "rust_ruddle" }, "east": { "to": "rust_posnjakite" }, "south": { "to": "rust_milletmeal" } },
+      "exits": { "west": { "to": "rust_ruddle" }, "east": { "to": "rust_posnjakite" }, "south": { "to": "rust_milletmeal" }, "north": { "to": "rust_sorghumcoffer" } },
       "actions": [
         {
           "id": "pinch_rhodochrosite",
@@ -33391,6 +33459,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rhodochrosite. They packed it on the ruddle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumcoffer": {
+      "name": "Rust Sorghumcoffer",
+      "desc": "A dry sorghumcoffer north of the rhodochrosite. Packed rust coats sorghumcoffer.",
+      "brief": "Dry sorghumcoffer, packed rust.",
+      "exits": { "south": { "to": "rust_rhodochrosite" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumcoffer",
+          "label": "pinch the sorghumcoffer",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumcoffer. They packed it on the rhodochrosite and packed rust around it."]
           ]
         }
       ]
@@ -33416,7 +33501,7 @@
       "name": "Rust Posnjakite",
       "desc": "A dry posnjakite east of the rhodochrosite. Packed rust coats posnjakite.",
       "brief": "Dry posnjakite, packed rust.",
-      "exits": { "west": { "to": "rust_rhodochrosite" }, "east": { "to": "rust_mackinawite" }, "south": { "to": "rust_wheatmeal" } },
+      "exits": { "west": { "to": "rust_rhodochrosite" }, "east": { "to": "rust_mackinawite" }, "south": { "to": "rust_wheatmeal" }, "north": { "to": "rust_milletcoffer" } },
       "actions": [
         {
           "id": "pinch_posnjakite",
@@ -33425,6 +33510,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard posnjakite. They packed it on the rhodochrosite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletcoffer": {
+      "name": "Rust Milletcoffer",
+      "desc": "A dry milletcoffer north of the posnjakite. Packed rust coats milletcoffer.",
+      "brief": "Dry milletcoffer, packed rust.",
+      "exits": { "south": { "to": "rust_posnjakite" } },
+      "actions": [
+        {
+          "id": "pinch_milletcoffer",
+          "label": "pinch the milletcoffer",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletcoffer. They packed it on the posnjakite and packed rust around it."]
           ]
         }
       ]
@@ -33518,7 +33620,7 @@
       "name": "Rust Headfast",
       "desc": "A dry headfast east of the horse. Packed rust coats a headfast.",
       "brief": "Dry headfast, packed rust.",
-      "exits": { "west": { "to": "rust_horse" }, "east": { "to": "rust_reefcringle" }, "south": { "to": "rust_barleymeal" } },
+      "exits": { "west": { "to": "rust_horse" }, "east": { "to": "rust_reefcringle" }, "south": { "to": "rust_barleymeal" }, "north": { "to": "rust_corncoffer" } },
       "actions": [
         {
           "id": "pinch_headfast",
@@ -33527,6 +33629,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard headfast. They made it on the horse and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corncoffer": {
+      "name": "Rust Corncoffer",
+      "desc": "A dry corncoffer north of the headfast. Packed rust coats corncoffer.",
+      "brief": "Dry corncoffer, packed rust.",
+      "exits": { "south": { "to": "rust_headfast" } },
+      "actions": [
+        {
+          "id": "pinch_corncoffer",
+          "label": "pinch the corncoffer",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corncoffer. They packed it on the headfast and packed rust around it."]
           ]
         }
       ]
@@ -33552,7 +33671,7 @@
       "name": "Rust Reefcringle",
       "desc": "A dry reefcringle east of the headfast. Packed rust coats a reefcringle.",
       "brief": "Dry reefcringle, packed rust.",
-      "exits": { "west": { "to": "rust_headfast" }, "east": { "to": "rust_bitumen" }, "south": { "to": "rust_ryegrain" } },
+      "exits": { "west": { "to": "rust_headfast" }, "east": { "to": "rust_bitumen" }, "south": { "to": "rust_ryegrain" }, "north": { "to": "rust_oatcoffer" } },
       "actions": [
         {
           "id": "pinch_reefcringle",
@@ -33561,6 +33680,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard reefcringle. They seized it on the headfast and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatcoffer": {
+      "name": "Rust Oatcoffer",
+      "desc": "A dry oatcoffer north of the reefcringle. Packed rust coats oatcoffer.",
+      "brief": "Dry oatcoffer, packed rust.",
+      "exits": { "south": { "to": "rust_reefcringle" } },
+      "actions": [
+        {
+          "id": "pinch_oatcoffer",
+          "label": "pinch the oatcoffer",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatcoffer. They packed it on the reefcringle and packed rust around it."]
           ]
         }
       ]
@@ -51613,31 +51749,49 @@
     "go north",
     "go east",
     "pinch the bentonite",
+    "go north",
+    "pinch the durumcoffer",
+    "go south",
     "go south",
     "pinch the sampmeal",
     "go north",
     "go east",
     "pinch the marble",
+    "go north",
+    "pinch the foniocoffer",
+    "go south",
     "go south",
     "pinch the nixtamal",
     "go north",
     "go east",
     "pinch the hematite",
+    "go north",
+    "pinch the teffcoffer",
+    "go south",
     "go south",
     "pinch the masa",
     "go north",
     "go east",
     "pinch the ruddle",
+    "go north",
+    "pinch the barleycoffer",
+    "go south",
     "go south",
     "pinch the sorghummeal",
     "go north",
     "go east",
     "pinch the rhodochrosite",
+    "go north",
+    "pinch the sorghumcoffer",
+    "go south",
     "go south",
     "pinch the milletmeal",
     "go north",
     "go east",
     "pinch the posnjakite",
+    "go north",
+    "pinch the milletcoffer",
+    "go south",
     "go south",
     "pinch the wheatmeal",
     "go north",
@@ -51663,11 +51817,17 @@
     "pinch the horse",
     "go east",
     "pinch the headfast",
+    "go north",
+    "pinch the corncoffer",
+    "go south",
     "go south",
     "pinch the barleymeal",
     "go north",
     "go east",
     "pinch the reefcringle",
+    "go north",
+    "pinch the oatcoffer",
+    "go south",
     "go south",
     "pinch the ryegrain",
     "go north",
