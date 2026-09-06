@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13290,
+  "maxScore": 13330,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -34470,7 +34470,7 @@
       "name": "Rust Celadonite",
       "desc": "A dry celadonite east of the galena. Packed rust coats celadonite.",
       "brief": "Dry celadonite, packed rust.",
-      "exits": { "west": { "to": "rust_galena" }, "east": { "to": "rust_plancheite" }, "south": { "to": "rust_beanpod" } },
+      "exits": { "west": { "to": "rust_galena" }, "east": { "to": "rust_plancheite" }, "south": { "to": "rust_beanpod" }, "north": { "to": "rust_durumchest" } },
       "actions": [
         {
           "id": "pinch_celadonite",
@@ -34479,6 +34479,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard celadonite. They packed it on the galena and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumchest": {
+      "name": "Rust Durumchest",
+      "desc": "A dry durumchest north of the celadonite. Packed rust coats durumchest.",
+      "brief": "Dry durumchest, packed rust.",
+      "exits": { "south": { "to": "rust_celadonite" } },
+      "actions": [
+        {
+          "id": "pinch_durumchest",
+          "label": "pinch the durumchest",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumchest. They packed it on the celadonite and packed rust around it."]
           ]
         }
       ]
@@ -34504,7 +34521,7 @@
       "name": "Rust Plancheite",
       "desc": "A dry plancheite east of the celadonite. Packed rust coats plancheite.",
       "brief": "Dry plancheite, packed rust.",
-      "exits": { "west": { "to": "rust_celadonite" }, "east": { "to": "rust_pyrrhotite" }, "south": { "to": "rust_cardamom" } },
+      "exits": { "west": { "to": "rust_celadonite" }, "east": { "to": "rust_pyrrhotite" }, "south": { "to": "rust_cardamom" }, "north": { "to": "rust_foniochest" } },
       "actions": [
         {
           "id": "pinch_plancheite",
@@ -34513,6 +34530,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard plancheite. They packed it on the celadonite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniochest": {
+      "name": "Rust Foniochest",
+      "desc": "A dry foniochest north of the plancheite. Packed rust coats foniochest.",
+      "brief": "Dry foniochest, packed rust.",
+      "exits": { "south": { "to": "rust_plancheite" } },
+      "actions": [
+        {
+          "id": "pinch_foniochest",
+          "label": "pinch the foniochest",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniochest. They packed it on the plancheite and packed rust around it."]
           ]
         }
       ]
@@ -34589,7 +34623,7 @@
       "name": "Rust Bollard",
       "desc": "A dry bollard east of the flue. Packed rust coats a bollard.",
       "brief": "Dry bollard, packed rust.",
-      "exits": { "west": { "to": "rust_flue" }, "east": { "to": "rust_heavingline" }, "south": { "to": "rust_blackeye" } },
+      "exits": { "west": { "to": "rust_flue" }, "east": { "to": "rust_heavingline" }, "south": { "to": "rust_blackeye" }, "north": { "to": "rust_teffchest" } },
       "actions": [
         {
           "id": "pinch_bollard",
@@ -34598,6 +34632,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bollard. They moored line on the flue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffchest": {
+      "name": "Rust Teffchest",
+      "desc": "A dry teffchest north of the bollard. Packed rust coats teffchest.",
+      "brief": "Dry teffchest, packed rust.",
+      "exits": { "south": { "to": "rust_bollard" } },
+      "actions": [
+        {
+          "id": "pinch_teffchest",
+          "label": "pinch the teffchest",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffchest. They packed it on the bollard and packed rust around it."]
           ]
         }
       ]
@@ -34623,7 +34674,7 @@
       "name": "Rust Heavingline",
       "desc": "A dry heavingline east of the bollard. Packed rust coats a heavingline.",
       "brief": "Dry heavingline, packed rust.",
-      "exits": { "west": { "to": "rust_bollard" }, "east": { "to": "rust_sailtwine" }, "south": { "to": "rust_fieldpea" } },
+      "exits": { "west": { "to": "rust_bollard" }, "east": { "to": "rust_sailtwine" }, "south": { "to": "rust_fieldpea" }, "north": { "to": "rust_barleychest" } },
       "actions": [
         {
           "id": "pinch_heavingline",
@@ -34632,6 +34683,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard heavingline. They coiled it on the bollard and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleychest": {
+      "name": "Rust Barleychest",
+      "desc": "A dry barleychest north of the heavingline. Packed rust coats barleychest.",
+      "brief": "Dry barleychest, packed rust.",
+      "exits": { "south": { "to": "rust_heavingline" } },
+      "actions": [
+        {
+          "id": "pinch_barleychest",
+          "label": "pinch the barleychest",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleychest. They packed it on the heavingline and packed rust around it."]
           ]
         }
       ]
@@ -34657,7 +34725,7 @@
       "name": "Rust Sailtwine",
       "desc": "A dry sailtwine east of the heavingline. Packed rust coats a sailtwine.",
       "brief": "Dry sailtwine, packed rust.",
-      "exits": { "west": { "to": "rust_heavingline" }, "east": { "to": "rust_sandalwood" }, "south": { "to": "rust_lentilbean" } },
+      "exits": { "west": { "to": "rust_heavingline" }, "east": { "to": "rust_sandalwood" }, "south": { "to": "rust_lentilbean" }, "north": { "to": "rust_sorghumchest" } },
       "actions": [
         {
           "id": "pinch_sailtwine",
@@ -34666,6 +34734,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sailtwine. They whipped it on the heavingline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumchest": {
+      "name": "Rust Sorghumchest",
+      "desc": "A dry sorghumchest north of the sailtwine. Packed rust coats sorghumchest.",
+      "brief": "Dry sorghumchest, packed rust.",
+      "exits": { "south": { "to": "rust_sailtwine" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumchest",
+          "label": "pinch the sorghumchest",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumchest. They packed it on the sailtwine and packed rust around it."]
           ]
         }
       ]
@@ -34691,7 +34776,7 @@
       "name": "Rust Sandalwood",
       "desc": "A dry sandalwood east of the sailtwine. Packed rust coats sandalwood.",
       "brief": "Dry sandalwood, packed rust.",
-      "exits": { "west": { "to": "rust_sailtwine" }, "east": { "to": "rust_strontia" }, "south": { "to": "rust_mungbean" } },
+      "exits": { "west": { "to": "rust_sailtwine" }, "east": { "to": "rust_strontia" }, "south": { "to": "rust_mungbean" }, "north": { "to": "rust_milletchest" } },
       "actions": [
         {
           "id": "pinch_sandalwood",
@@ -34700,6 +34785,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sandalwood. They set it on the sailtwine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletchest": {
+      "name": "Rust Milletchest",
+      "desc": "A dry milletchest north of the sandalwood. Packed rust coats milletchest.",
+      "brief": "Dry milletchest, packed rust.",
+      "exits": { "south": { "to": "rust_sandalwood" } },
+      "actions": [
+        {
+          "id": "pinch_milletchest",
+          "label": "pinch the milletchest",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletchest. They packed it on the sandalwood and packed rust around it."]
           ]
         }
       ]
@@ -34725,7 +34827,7 @@
       "name": "Rust Strontia",
       "desc": "A dry strontia east of the sandalwood. Packed rust coats strontia.",
       "brief": "Dry strontia, packed rust.",
-      "exits": { "west": { "to": "rust_sandalwood" }, "east": { "to": "rust_garnet" }, "south": { "to": "rust_jackbean" } },
+      "exits": { "west": { "to": "rust_sandalwood" }, "east": { "to": "rust_garnet" }, "south": { "to": "rust_jackbean" }, "north": { "to": "rust_cornchest" } },
       "actions": [
         {
           "id": "pinch_strontia",
@@ -34734,6 +34836,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard strontia. They packed it on the sandalwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornchest": {
+      "name": "Rust Cornchest",
+      "desc": "A dry cornchest north of the strontia. Packed rust coats cornchest.",
+      "brief": "Dry cornchest, packed rust.",
+      "exits": { "south": { "to": "rust_strontia" } },
+      "actions": [
+        {
+          "id": "pinch_cornchest",
+          "label": "pinch the cornchest",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornchest. They packed it on the strontia and packed rust around it."]
           ]
         }
       ]
@@ -34759,7 +34878,7 @@
       "name": "Rust Garnet",
       "desc": "A dry garnet east of the strontia. Packed rust coats garnet.",
       "brief": "Dry garnet, packed rust.",
-      "exits": { "west": { "to": "rust_strontia" }, "east": { "to": "rust_granite" }, "south": { "to": "rust_velvetbean" } },
+      "exits": { "west": { "to": "rust_strontia" }, "east": { "to": "rust_granite" }, "south": { "to": "rust_velvetbean" }, "north": { "to": "rust_oatchest" } },
       "actions": [
         {
           "id": "pinch_garnet",
@@ -34768,6 +34887,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard garnet. They packed it on the strontia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatchest": {
+      "name": "Rust Oatchest",
+      "desc": "A dry oatchest north of the garnet. Packed rust coats oatchest.",
+      "brief": "Dry oatchest, packed rust.",
+      "exits": { "south": { "to": "rust_garnet" } },
+      "actions": [
+        {
+          "id": "pinch_oatchest",
+          "label": "pinch the oatchest",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatchest. They packed it on the garnet and packed rust around it."]
           ]
         }
       ]
@@ -51279,11 +51415,17 @@
     "go north",
     "go east",
     "pinch the celadonite",
+    "go north",
+    "pinch the durumchest",
+    "go south",
     "go south",
     "pinch the beanpod",
     "go north",
     "go east",
     "pinch the plancheite",
+    "go north",
+    "pinch the foniochest",
+    "go south",
     "go south",
     "pinch the cardamom",
     "go north",
@@ -51307,31 +51449,49 @@
     "go east",
     "go east",
     "pinch the bollard",
+    "go north",
+    "pinch the teffchest",
+    "go south",
     "go south",
     "pinch the blackeye",
     "go north",
     "go east",
     "pinch the heavingline",
+    "go north",
+    "pinch the barleychest",
+    "go south",
     "go south",
     "pinch the fieldpea",
     "go north",
     "go east",
     "pinch the sailtwine",
+    "go north",
+    "pinch the sorghumchest",
+    "go south",
     "go south",
     "pinch the lentilbean",
     "go north",
     "go east",
     "pinch the sandalwood",
+    "go north",
+    "pinch the milletchest",
+    "go south",
     "go south",
     "pinch the mungbean",
     "go north",
     "go east",
     "pinch the strontia",
+    "go north",
+    "pinch the cornchest",
+    "go south",
     "go south",
     "pinch the jackbean",
     "go north",
     "go east",
     "pinch the garnet",
+    "go north",
+    "pinch the oatchest",
+    "go south",
     "go south",
     "pinch the velvetbean",
     "go north",
