@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14090,
+  "maxScore": 14130,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -28860,7 +28860,7 @@
       "name": "Rust Seraya",
       "desc": "A dry seraya east of the faveira. Packed rust coats seraya.",
       "brief": "Dry seraya, packed rust.",
-      "exits": { "west": { "to": "rust_faveira" }, "east": { "to": "rust_keladan" }, "south": { "to": "rust_fonioflour" } },
+      "exits": { "west": { "to": "rust_faveira" }, "east": { "to": "rust_keladan" }, "south": { "to": "rust_fonioflour" }, "north": { "to": "rust_durumtray" } },
       "actions": [
         {
           "id": "pinch_seraya",
@@ -28869,6 +28869,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard seraya. They packed it on the faveira and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumtray": {
+      "name": "Rust Durumtray",
+      "desc": "A dry durumtray north of the seraya. Packed rust coats durumtray.",
+      "brief": "Dry durumtray, packed rust.",
+      "exits": { "south": { "to": "rust_seraya" } },
+      "actions": [
+        {
+          "id": "pinch_durumtray",
+          "label": "pinch the durumtray",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumtray. They packed it on the seraya and packed rust around it."]
           ]
         }
       ]
@@ -28894,7 +28911,7 @@
       "name": "Rust Keladan",
       "desc": "A dry keladan east of the seraya. Packed rust coats keladan.",
       "brief": "Dry keladan, packed rust.",
-      "exits": { "west": { "to": "rust_seraya" }, "east": { "to": "rust_haldu" }, "south": { "to": "rust_teffflour" } },
+      "exits": { "west": { "to": "rust_seraya" }, "east": { "to": "rust_haldu" }, "south": { "to": "rust_teffflour" }, "north": { "to": "rust_foniotray" } },
       "actions": [
         {
           "id": "pinch_keladan",
@@ -28903,6 +28920,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard keladan. They packed it on the seraya and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniotray": {
+      "name": "Rust Foniotray",
+      "desc": "A dry foniotray north of the keladan. Packed rust coats foniotray.",
+      "brief": "Dry foniotray, packed rust.",
+      "exits": { "south": { "to": "rust_keladan" } },
+      "actions": [
+        {
+          "id": "pinch_foniotray",
+          "label": "pinch the foniotray",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniotray. They packed it on the keladan and packed rust around it."]
           ]
         }
       ]
@@ -28979,7 +29013,7 @@
       "name": "Rust Spencer",
       "desc": "A dry spencer east of the trestle. Packed rust coats a spencer.",
       "brief": "Dry spencer, packed rust.",
-      "exits": { "west": { "to": "rust_trestle" }, "east": { "to": "rust_reefearring" }, "south": { "to": "rust_triticaleberry" } },
+      "exits": { "west": { "to": "rust_trestle" }, "east": { "to": "rust_reefearring" }, "south": { "to": "rust_triticaleberry" }, "north": { "to": "rust_tefftray" } },
       "actions": [
         {
           "id": "pinch_spencer",
@@ -28988,6 +29022,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spencer. They bent it on the trestle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefftray": {
+      "name": "Rust Tefftray",
+      "desc": "A dry tefftray north of the spencer. Packed rust coats tefftray.",
+      "brief": "Dry tefftray, packed rust.",
+      "exits": { "south": { "to": "rust_spencer" } },
+      "actions": [
+        {
+          "id": "pinch_tefftray",
+          "label": "pinch the tefftray",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefftray. They packed it on the spencer and packed rust around it."]
           ]
         }
       ]
@@ -29013,7 +29064,7 @@
       "name": "Rust Reefearring",
       "desc": "A dry reefearring east of the spencer. Packed rust coats a reefearring.",
       "brief": "Dry reefearring, packed rust.",
-      "exits": { "west": { "to": "rust_spencer" }, "east": { "to": "rust_padauk" }, "south": { "to": "rust_einkornberry" } },
+      "exits": { "west": { "to": "rust_spencer" }, "east": { "to": "rust_padauk" }, "south": { "to": "rust_einkornberry" }, "north": { "to": "rust_barleytray" } },
       "actions": [
         {
           "id": "pinch_reefearring",
@@ -29022,6 +29073,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard reefearring. They tied it on the spencer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleytray": {
+      "name": "Rust Barleytray",
+      "desc": "A dry barleytray north of the reefearring. Packed rust coats barleytray.",
+      "brief": "Dry barleytray, packed rust.",
+      "exits": { "south": { "to": "rust_reefearring" } },
+      "actions": [
+        {
+          "id": "pinch_barleytray",
+          "label": "pinch the barleytray",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleytray. They packed it on the reefearring and packed rust around it."]
           ]
         }
       ]
@@ -29047,7 +29115,7 @@
       "name": "Rust Padauk",
       "desc": "A dry padauk east of the reefearring. Packed rust coats padauk.",
       "brief": "Dry padauk, packed rust.",
-      "exits": { "west": { "to": "rust_reefearring" }, "east": { "to": "rust_satinwood" }, "south": { "to": "rust_emmerberry" } },
+      "exits": { "west": { "to": "rust_reefearring" }, "east": { "to": "rust_satinwood" }, "south": { "to": "rust_emmerberry" }, "north": { "to": "rust_sorghumtray" } },
       "actions": [
         {
           "id": "pinch_padauk",
@@ -29056,6 +29124,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard padauk. They cut it on the reefearring and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumtray": {
+      "name": "Rust Sorghumtray",
+      "desc": "A dry sorghumtray north of the padauk. Packed rust coats sorghumtray.",
+      "brief": "Dry sorghumtray, packed rust.",
+      "exits": { "south": { "to": "rust_padauk" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumtray",
+          "label": "pinch the sorghumtray",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumtray. They packed it on the padauk and packed rust around it."]
           ]
         }
       ]
@@ -29081,7 +29166,7 @@
       "name": "Rust Satinwood",
       "desc": "A dry satinwood east of the padauk. Packed rust coats satinwood.",
       "brief": "Dry satinwood, packed rust.",
-      "exits": { "west": { "to": "rust_padauk" }, "east": { "to": "rust_bosse" }, "south": { "to": "rust_kamutberry" } },
+      "exits": { "west": { "to": "rust_padauk" }, "east": { "to": "rust_bosse" }, "south": { "to": "rust_kamutberry" }, "north": { "to": "rust_millettray" } },
       "actions": [
         {
           "id": "pinch_satinwood",
@@ -29090,6 +29175,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard satinwood. They packed it on the padauk and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millettray": {
+      "name": "Rust Millettray",
+      "desc": "A dry millettray north of the satinwood. Packed rust coats millettray.",
+      "brief": "Dry millettray, packed rust.",
+      "exits": { "south": { "to": "rust_satinwood" } },
+      "actions": [
+        {
+          "id": "pinch_millettray",
+          "label": "pinch the millettray",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millettray. They packed it on the satinwood and packed rust around it."]
           ]
         }
       ]
@@ -29115,7 +29217,7 @@
       "name": "Rust Bosse",
       "desc": "A dry bosse east of the satinwood. Packed rust coats bosse.",
       "brief": "Dry bosse, packed rust.",
-      "exits": { "west": { "to": "rust_satinwood" }, "east": { "to": "rust_arariba" }, "south": { "to": "rust_maizegroat" } },
+      "exits": { "west": { "to": "rust_satinwood" }, "east": { "to": "rust_arariba" }, "south": { "to": "rust_maizegroat" }, "north": { "to": "rust_corntray" } },
       "actions": [
         {
           "id": "pinch_bosse",
@@ -29124,6 +29226,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bosse. They packed it on the satinwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corntray": {
+      "name": "Rust Corntray",
+      "desc": "A dry corntray north of the bosse. Packed rust coats corntray.",
+      "brief": "Dry corntray, packed rust.",
+      "exits": { "south": { "to": "rust_bosse" } },
+      "actions": [
+        {
+          "id": "pinch_corntray",
+          "label": "pinch the corntray",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corntray. They packed it on the bosse and packed rust around it."]
           ]
         }
       ]
@@ -29149,7 +29268,7 @@
       "name": "Rust Arariba",
       "desc": "A dry arariba east of the bosse. Packed rust coats arariba.",
       "brief": "Dry arariba, packed rust.",
-      "exits": { "west": { "to": "rust_bosse" }, "east": { "to": "rust_kapur" }, "south": { "to": "rust_durumgroat" } },
+      "exits": { "west": { "to": "rust_bosse" }, "east": { "to": "rust_kapur" }, "south": { "to": "rust_durumgroat" }, "north": { "to": "rust_oattray" } },
       "actions": [
         {
           "id": "pinch_arariba",
@@ -29158,6 +29277,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard arariba. They packed it on the bosse and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oattray": {
+      "name": "Rust Oattray",
+      "desc": "A dry oattray north of the arariba. Packed rust coats oattray.",
+      "brief": "Dry oattray, packed rust.",
+      "exits": { "south": { "to": "rust_arariba" } },
+      "actions": [
+        {
+          "id": "pinch_oattray",
+          "label": "pinch the oattray",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oattray. They packed it on the arariba and packed rust around it."]
           ]
         }
       ]
@@ -52891,11 +53027,17 @@
     "go north",
     "go east",
     "pinch the seraya",
+    "go north",
+    "pinch the durumtray",
+    "go south",
     "go south",
     "pinch the fonioflour",
     "go north",
     "go east",
     "pinch the keladan",
+    "go north",
+    "pinch the foniotray",
+    "go south",
     "go south",
     "pinch the teffflour",
     "go north",
@@ -52917,31 +53059,49 @@
     "pinch the trestle",
     "go east",
     "pinch the spencer",
+    "go north",
+    "pinch the tefftray",
+    "go south",
     "go south",
     "pinch the triticaleberry",
     "go north",
     "go east",
     "pinch the reefearring",
+    "go north",
+    "pinch the barleytray",
+    "go south",
     "go south",
     "pinch the einkornberry",
     "go north",
     "go east",
     "pinch the padauk",
+    "go north",
+    "pinch the sorghumtray",
+    "go south",
     "go south",
     "pinch the emmerberry",
     "go north",
     "go east",
     "pinch the satinwood",
+    "go north",
+    "pinch the millettray",
+    "go south",
     "go south",
     "pinch the kamutberry",
     "go north",
     "go east",
     "pinch the bosse",
+    "go north",
+    "pinch the corntray",
+    "go south",
     "go south",
     "pinch the maizegroat",
     "go north",
     "go east",
     "pinch the arariba",
+    "go north",
+    "pinch the oattray",
+    "go south",
     "go south",
     "pinch the durumgroat",
     "go north",
