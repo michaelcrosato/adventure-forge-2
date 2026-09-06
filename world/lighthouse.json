@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13650,
+  "maxScore": 13690,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -32311,7 +32311,7 @@
       "name": "Rust Novaculite",
       "desc": "A dry novaculite east of the terraalba. Packed rust coats novaculite.",
       "brief": "Dry novaculite, packed rust.",
-      "exits": { "west": { "to": "rust_terraalba" }, "east": { "to": "rust_rawsienna" }, "south": { "to": "rust_freekeh" } },
+      "exits": { "west": { "to": "rust_terraalba" }, "east": { "to": "rust_rawsienna" }, "south": { "to": "rust_freekeh" }, "north": { "to": "rust_durumtote" } },
       "actions": [
         {
           "id": "pinch_novaculite",
@@ -32320,6 +32320,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard novaculite. They packed it on the terraalba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumtote": {
+      "name": "Rust Durumtote",
+      "desc": "A dry durumtote north of the novaculite. Packed rust coats durumtote.",
+      "brief": "Dry durumtote, packed rust.",
+      "exits": { "south": { "to": "rust_novaculite" } },
+      "actions": [
+        {
+          "id": "pinch_durumtote",
+          "label": "pinch the durumtote",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumtote. They packed it on the novaculite and packed rust around it."]
           ]
         }
       ]
@@ -36867,7 +36884,7 @@
       "name": "Rust Roundline",
       "desc": "A dry roundline east of the stem. Packed rust coats a roundline.",
       "brief": "Dry roundline, packed rust.",
-      "exits": { "west": { "to": "rust_stem" }, "east": { "to": "rust_sailgasket" }, "south": { "to": "rust_kamut" } },
+      "exits": { "west": { "to": "rust_stem" }, "east": { "to": "rust_sailgasket" }, "south": { "to": "rust_kamut" }, "north": { "to": "rust_foniotote" } },
       "actions": [
         {
           "id": "pinch_roundline",
@@ -36876,6 +36893,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard roundline. They rove it on the stem and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniotote": {
+      "name": "Rust Foniotote",
+      "desc": "A dry foniotote north of the roundline. Packed rust coats foniotote.",
+      "brief": "Dry foniotote, packed rust.",
+      "exits": { "south": { "to": "rust_roundline" } },
+      "actions": [
+        {
+          "id": "pinch_foniotote",
+          "label": "pinch the foniotote",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniotote. They packed it on the roundline and packed rust around it."]
           ]
         }
       ]
@@ -36901,7 +36935,7 @@
       "name": "Rust Sailgasket",
       "desc": "A dry sailgasket east of the roundline. Packed rust coats a sailgasket.",
       "brief": "Dry sailgasket, packed rust.",
-      "exits": { "west": { "to": "rust_roundline" }, "east": { "to": "rust_sienna" }, "south": { "to": "rust_sticky" } },
+      "exits": { "west": { "to": "rust_roundline" }, "east": { "to": "rust_sienna" }, "south": { "to": "rust_sticky" }, "north": { "to": "rust_tefftote" } },
       "actions": [
         {
           "id": "pinch_sailgasket",
@@ -36910,6 +36944,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sailgasket. They seized it on the roundline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefftote": {
+      "name": "Rust Tefftote",
+      "desc": "A dry tefftote north of the sailgasket. Packed rust coats tefftote.",
+      "brief": "Dry tefftote, packed rust.",
+      "exits": { "south": { "to": "rust_sailgasket" } },
+      "actions": [
+        {
+          "id": "pinch_tefftote",
+          "label": "pinch the tefftote",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefftote. They packed it on the sailgasket and packed rust around it."]
           ]
         }
       ]
@@ -36935,7 +36986,7 @@
       "name": "Rust Sienna",
       "desc": "A dry sienna east of the sailgasket. Packed rust coats sienna.",
       "brief": "Dry sienna, packed rust.",
-      "exits": { "west": { "to": "rust_sailgasket" }, "east": { "to": "rust_tripoli" }, "south": { "to": "rust_blackrice" } },
+      "exits": { "west": { "to": "rust_sailgasket" }, "east": { "to": "rust_tripoli" }, "south": { "to": "rust_blackrice" }, "north": { "to": "rust_barleytote" } },
       "actions": [
         {
           "id": "pinch_sienna",
@@ -36944,6 +36995,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sienna. They packed it on the sailgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleytote": {
+      "name": "Rust Barleytote",
+      "desc": "A dry barleytote north of the sienna. Packed rust coats barleytote.",
+      "brief": "Dry barleytote, packed rust.",
+      "exits": { "south": { "to": "rust_sienna" } },
+      "actions": [
+        {
+          "id": "pinch_barleytote",
+          "label": "pinch the barleytote",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleytote. They packed it on the sienna and packed rust around it."]
           ]
         }
       ]
@@ -36969,7 +37037,7 @@
       "name": "Rust Tripoli",
       "desc": "A dry tripoli east of the sienna. Packed rust coats tripoli.",
       "brief": "Dry tripoli, packed rust.",
-      "exits": { "west": { "to": "rust_sienna" }, "east": { "to": "rust_kieselguhr" }, "south": { "to": "rust_wildrice" } },
+      "exits": { "west": { "to": "rust_sienna" }, "east": { "to": "rust_kieselguhr" }, "south": { "to": "rust_wildrice" }, "north": { "to": "rust_sorghumtote" } },
       "actions": [
         {
           "id": "pinch_tripoli",
@@ -36978,6 +37046,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tripoli. They packed it on the sienna and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumtote": {
+      "name": "Rust Sorghumtote",
+      "desc": "A dry sorghumtote north of the tripoli. Packed rust coats sorghumtote.",
+      "brief": "Dry sorghumtote, packed rust.",
+      "exits": { "south": { "to": "rust_tripoli" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumtote",
+          "label": "pinch the sorghumtote",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumtote. They packed it on the tripoli and packed rust around it."]
           ]
         }
       ]
@@ -37003,7 +37088,7 @@
       "name": "Rust Kieselguhr",
       "desc": "A dry kieselguhr east of the tripoli. Packed rust coats kieselguhr.",
       "brief": "Dry kieselguhr, packed rust.",
-      "exits": { "west": { "to": "rust_tripoli" }, "east": { "to": "rust_pyrite" }, "south": { "to": "rust_redrice" } },
+      "exits": { "west": { "to": "rust_tripoli" }, "east": { "to": "rust_pyrite" }, "south": { "to": "rust_redrice" }, "north": { "to": "rust_millettote" } },
       "actions": [
         {
           "id": "pinch_kieselguhr",
@@ -37012,6 +37097,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kieselguhr. They packed it on the tripoli and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millettote": {
+      "name": "Rust Millettote",
+      "desc": "A dry millettote north of the kieselguhr. Packed rust coats millettote.",
+      "brief": "Dry millettote, packed rust.",
+      "exits": { "south": { "to": "rust_kieselguhr" } },
+      "actions": [
+        {
+          "id": "pinch_millettote",
+          "label": "pinch the millettote",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millettote. They packed it on the kieselguhr and packed rust around it."]
           ]
         }
       ]
@@ -37037,7 +37139,7 @@
       "name": "Rust Pyrite",
       "desc": "A dry pyrite east of the kieselguhr. Packed rust coats pyrite.",
       "brief": "Dry pyrite, packed rust.",
-      "exits": { "west": { "to": "rust_kieselguhr" }, "east": { "to": "rust_burntumber" }, "south": { "to": "rust_jasmine" } },
+      "exits": { "west": { "to": "rust_kieselguhr" }, "east": { "to": "rust_burntumber" }, "south": { "to": "rust_jasmine" }, "north": { "to": "rust_corntote" } },
       "actions": [
         {
           "id": "pinch_pyrite",
@@ -37046,6 +37148,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pyrite. They packed it on the kieselguhr and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corntote": {
+      "name": "Rust Corntote",
+      "desc": "A dry corntote north of the pyrite. Packed rust coats corntote.",
+      "brief": "Dry corntote, packed rust.",
+      "exits": { "south": { "to": "rust_pyrite" } },
+      "actions": [
+        {
+          "id": "pinch_corntote",
+          "label": "pinch the corntote",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corntote. They packed it on the pyrite and packed rust around it."]
           ]
         }
       ]
@@ -37071,7 +37190,7 @@
       "name": "Rust Burntumber",
       "desc": "A dry burntumber east of the pyrite. Packed rust coats burntumber.",
       "brief": "Dry burntumber, packed rust.",
-      "exits": { "west": { "to": "rust_pyrite" }, "east": { "to": "rust_chrysocolla" }, "south": { "to": "rust_basmati" } },
+      "exits": { "west": { "to": "rust_pyrite" }, "east": { "to": "rust_chrysocolla" }, "south": { "to": "rust_basmati" }, "north": { "to": "rust_oattote" } },
       "actions": [
         {
           "id": "pinch_burntumber",
@@ -37080,6 +37199,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard burntumber. They packed it on the pyrite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oattote": {
+      "name": "Rust Oattote",
+      "desc": "A dry oattote north of the burntumber. Packed rust coats oattote.",
+      "brief": "Dry oattote, packed rust.",
+      "exits": { "south": { "to": "rust_burntumber" } },
+      "actions": [
+        {
+          "id": "pinch_oattote",
+          "label": "pinch the oattote",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oattote. They packed it on the burntumber and packed rust around it."]
           ]
         }
       ]
@@ -52006,6 +52142,9 @@
     "go north",
     "go east",
     "pinch the novaculite",
+    "go north",
+    "pinch the durumtote",
+    "go south",
     "go south",
     "pinch the freekeh",
     "go north",
@@ -52033,36 +52172,57 @@
     "pinch the stem",
     "go east",
     "pinch the roundline",
+    "go north",
+    "pinch the foniotote",
+    "go south",
     "go south",
     "pinch the kamut",
     "go north",
     "go east",
     "pinch the sailgasket",
+    "go north",
+    "pinch the tefftote",
+    "go south",
     "go south",
     "pinch the sticky",
     "go north",
     "go east",
     "pinch the sienna",
+    "go north",
+    "pinch the barleytote",
+    "go south",
     "go south",
     "pinch the blackrice",
     "go north",
     "go east",
     "pinch the tripoli",
+    "go north",
+    "pinch the sorghumtote",
+    "go south",
     "go south",
     "pinch the wildrice",
     "go north",
     "go east",
     "pinch the kieselguhr",
+    "go north",
+    "pinch the millettote",
+    "go south",
     "go south",
     "pinch the redrice",
     "go north",
     "go east",
     "pinch the pyrite",
+    "go north",
+    "pinch the corntote",
+    "go south",
     "go south",
     "pinch the jasmine",
     "go north",
     "go east",
     "pinch the burntumber",
+    "go north",
+    "pinch the oattote",
+    "go south",
     "go south",
     "pinch the basmati",
     "go north",
