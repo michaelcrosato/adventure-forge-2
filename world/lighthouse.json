@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13890,
+  "maxScore": 13930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -30424,7 +30424,7 @@
       "name": "Rust Lapis",
       "desc": "A dry lapis east of the infusorial. Packed rust coats lapis.",
       "brief": "Dry lapis, packed rust.",
-      "exits": { "west": { "to": "rust_infusorial" }, "east": { "to": "rust_smaltite" }, "south": { "to": "rust_riceberry" } },
+      "exits": { "west": { "to": "rust_infusorial" }, "east": { "to": "rust_smaltite" }, "south": { "to": "rust_riceberry" }, "north": { "to": "rust_durumbucket" } },
       "actions": [
         {
           "id": "pinch_lapis",
@@ -30433,6 +30433,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lapis. They packed it on the infusorial and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbucket": {
+      "name": "Rust Durumbucket",
+      "desc": "A dry durumbucket north of the lapis. Packed rust coats durumbucket.",
+      "brief": "Dry durumbucket, packed rust.",
+      "exits": { "south": { "to": "rust_lapis" } },
+      "actions": [
+        {
+          "id": "pinch_durumbucket",
+          "label": "pinch the durumbucket",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbucket. They packed it on the lapis and packed rust around it."]
           ]
         }
       ]
@@ -30458,7 +30475,7 @@
       "name": "Rust Smaltite",
       "desc": "A dry smaltite east of the lapis. Packed rust coats smaltite.",
       "brief": "Dry smaltite, packed rust.",
-      "exits": { "west": { "to": "rust_lapis" }, "east": { "to": "rust_anthonyite" }, "south": { "to": "rust_cornberry" } },
+      "exits": { "west": { "to": "rust_lapis" }, "east": { "to": "rust_anthonyite" }, "south": { "to": "rust_cornberry" }, "north": { "to": "rust_foniobucket" } },
       "actions": [
         {
           "id": "pinch_smaltite",
@@ -30467,6 +30484,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard smaltite. They packed it on the lapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobucket": {
+      "name": "Rust Foniobucket",
+      "desc": "A dry foniobucket north of the smaltite. Packed rust coats foniobucket.",
+      "brief": "Dry foniobucket, packed rust.",
+      "exits": { "south": { "to": "rust_smaltite" } },
+      "actions": [
+        {
+          "id": "pinch_foniobucket",
+          "label": "pinch the foniobucket",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobucket. They packed it on the smaltite and packed rust around it."]
           ]
         }
       ]
@@ -30492,7 +30526,7 @@
       "name": "Rust Anthonyite",
       "desc": "A dry anthonyite east of the smaltite. Packed rust coats anthonyite.",
       "brief": "Dry anthonyite, packed rust.",
-      "exits": { "west": { "to": "rust_smaltite" }, "east": { "to": "rust_lollingite" }, "south": { "to": "rust_wheatberry" } },
+      "exits": { "west": { "to": "rust_smaltite" }, "east": { "to": "rust_lollingite" }, "south": { "to": "rust_wheatberry" }, "north": { "to": "rust_teffbucket" } },
       "actions": [
         {
           "id": "pinch_anthonyite",
@@ -30501,6 +30535,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard anthonyite. They packed it on the smaltite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbucket": {
+      "name": "Rust Teffbucket",
+      "desc": "A dry teffbucket north of the anthonyite. Packed rust coats teffbucket.",
+      "brief": "Dry teffbucket, packed rust.",
+      "exits": { "south": { "to": "rust_anthonyite" } },
+      "actions": [
+        {
+          "id": "pinch_teffbucket",
+          "label": "pinch the teffbucket",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbucket. They packed it on the anthonyite and packed rust around it."]
           ]
         }
       ]
@@ -30577,7 +30628,7 @@
       "name": "Rust Mast",
       "desc": "A dry mast east of the stack. Packed rust coats a mast.",
       "brief": "Dry mast, packed rust.",
-      "exits": { "west": { "to": "rust_stack" }, "east": { "to": "rust_nettles" }, "south": { "to": "rust_oatberry" } },
+      "exits": { "west": { "to": "rust_stack" }, "east": { "to": "rust_nettles" }, "south": { "to": "rust_oatberry" }, "north": { "to": "rust_barleybucket" } },
       "actions": [
         {
           "id": "pinch_mast",
@@ -30586,6 +30637,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mast. They stepped it by the stack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybucket": {
+      "name": "Rust Barleybucket",
+      "desc": "A dry barleybucket north of the mast. Packed rust coats barleybucket.",
+      "brief": "Dry barleybucket, packed rust.",
+      "exits": { "south": { "to": "rust_mast" } },
+      "actions": [
+        {
+          "id": "pinch_barleybucket",
+          "label": "pinch the barleybucket",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybucket. They packed it on the mast and packed rust around it."]
           ]
         }
       ]
@@ -30611,7 +30679,7 @@
       "name": "Rust Nettles",
       "desc": "A dry nettles east of the mast. Packed rust coats nettles.",
       "brief": "Dry nettles, packed rust.",
-      "exits": { "west": { "to": "rust_mast" }, "east": { "to": "rust_leechrope" }, "south": { "to": "rust_ryeberry" } },
+      "exits": { "west": { "to": "rust_mast" }, "east": { "to": "rust_leechrope" }, "south": { "to": "rust_ryeberry" }, "north": { "to": "rust_sorghumbucket" } },
       "actions": [
         {
           "id": "pinch_nettles",
@@ -30620,6 +30688,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nettles. They rove it on the mast and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbucket": {
+      "name": "Rust Sorghumbucket",
+      "desc": "A dry sorghumbucket north of the nettles. Packed rust coats sorghumbucket.",
+      "brief": "Dry sorghumbucket, packed rust.",
+      "exits": { "south": { "to": "rust_nettles" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbucket",
+          "label": "pinch the sorghumbucket",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbucket. They packed it on the nettles and packed rust around it."]
           ]
         }
       ]
@@ -30645,7 +30730,7 @@
       "name": "Rust Leechrope",
       "desc": "A dry leechrope east of the nettles. Packed rust coats a leechrope.",
       "brief": "Dry leechrope, packed rust.",
-      "exits": { "west": { "to": "rust_nettles" }, "east": { "to": "rust_balsa" }, "south": { "to": "rust_pumpkinflour" } },
+      "exits": { "west": { "to": "rust_nettles" }, "east": { "to": "rust_balsa" }, "south": { "to": "rust_pumpkinflour" }, "north": { "to": "rust_milletbucket" } },
       "actions": [
         {
           "id": "pinch_leechrope",
@@ -30654,6 +30739,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard leechrope. They laced it on the nettles and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbucket": {
+      "name": "Rust Milletbucket",
+      "desc": "A dry milletbucket north of the leechrope. Packed rust coats milletbucket.",
+      "brief": "Dry milletbucket, packed rust.",
+      "exits": { "south": { "to": "rust_leechrope" } },
+      "actions": [
+        {
+          "id": "pinch_milletbucket",
+          "label": "pinch the milletbucket",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbucket. They packed it on the leechrope and packed rust around it."]
           ]
         }
       ]
@@ -30679,7 +30781,7 @@
       "name": "Rust Balsa",
       "desc": "A dry balsa east of the leechrope. Packed rust coats balsa.",
       "brief": "Dry balsa, packed rust.",
-      "exits": { "west": { "to": "rust_leechrope" }, "east": { "to": "rust_diatomite" }, "south": { "to": "rust_hempflour" } },
+      "exits": { "west": { "to": "rust_leechrope" }, "east": { "to": "rust_diatomite" }, "south": { "to": "rust_hempflour" }, "north": { "to": "rust_cornbucket" } },
       "actions": [
         {
           "id": "pinch_balsa",
@@ -30688,6 +30790,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard balsa. They stacked it on the leechrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbucket": {
+      "name": "Rust Cornbucket",
+      "desc": "A dry cornbucket north of the balsa. Packed rust coats cornbucket.",
+      "brief": "Dry cornbucket, packed rust.",
+      "exits": { "south": { "to": "rust_balsa" } },
+      "actions": [
+        {
+          "id": "pinch_cornbucket",
+          "label": "pinch the cornbucket",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbucket. They packed it on the balsa and packed rust around it."]
           ]
         }
       ]
@@ -30713,7 +30832,7 @@
       "name": "Rust Diatomite",
       "desc": "A dry diatomite east of the balsa. Packed rust coats diatomite.",
       "brief": "Dry diatomite, packed rust.",
-      "exits": { "west": { "to": "rust_balsa" }, "east": { "to": "rust_agate" }, "south": { "to": "rust_chiaflour" } },
+      "exits": { "west": { "to": "rust_balsa" }, "east": { "to": "rust_agate" }, "south": { "to": "rust_chiaflour" }, "north": { "to": "rust_oatbucket" } },
       "actions": [
         {
           "id": "pinch_diatomite",
@@ -30722,6 +30841,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard diatomite. They packed it on the balsa and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbucket": {
+      "name": "Rust Oatbucket",
+      "desc": "A dry oatbucket north of the diatomite. Packed rust coats oatbucket.",
+      "brief": "Dry oatbucket, packed rust.",
+      "exits": { "south": { "to": "rust_diatomite" } },
+      "actions": [
+        {
+          "id": "pinch_oatbucket",
+          "label": "pinch the oatbucket",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbucket. They packed it on the diatomite and packed rust around it."]
           ]
         }
       ]
@@ -52485,16 +52621,25 @@
     "go north",
     "go east",
     "pinch the lapis",
+    "go north",
+    "pinch the durumbucket",
+    "go south",
     "go south",
     "pinch the riceberry",
     "go north",
     "go east",
     "pinch the smaltite",
+    "go north",
+    "pinch the foniobucket",
+    "go south",
     "go south",
     "pinch the cornberry",
     "go north",
     "go east",
     "pinch the anthonyite",
+    "go north",
+    "pinch the teffbucket",
+    "go south",
     "go south",
     "pinch the wheatberry",
     "go north",
@@ -52517,26 +52662,41 @@
     "go east",
     "go east",
     "pinch the mast",
+    "go north",
+    "pinch the barleybucket",
+    "go south",
     "go south",
     "pinch the oatberry",
     "go north",
     "go east",
     "pinch the nettles",
+    "go north",
+    "pinch the sorghumbucket",
+    "go south",
     "go south",
     "pinch the ryeberry",
     "go north",
     "go east",
     "pinch the leechrope",
+    "go north",
+    "pinch the milletbucket",
+    "go south",
     "go south",
     "pinch the pumpkinflour",
     "go north",
     "go east",
     "pinch the balsa",
+    "go north",
+    "pinch the cornbucket",
+    "go south",
     "go south",
     "pinch the hempflour",
     "go north",
     "go east",
     "pinch the diatomite",
+    "go north",
+    "pinch the oatbucket",
+    "go south",
     "go south",
     "pinch the chiaflour",
     "go north",
