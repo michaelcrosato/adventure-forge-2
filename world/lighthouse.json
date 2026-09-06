@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11050,
+  "maxScore": 11090,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -21346,7 +21346,7 @@
       "name": "Rust Cedrorosa",
       "desc": "A dry cedrorosa east of the courbaril. Packed rust coats cedrorosa.",
       "brief": "Dry cedrorosa, packed rust.",
-      "exits": { "west": { "to": "rust_courbaril" }, "east": { "to": "rust_molave" } },
+      "exits": { "west": { "to": "rust_courbaril" }, "east": { "to": "rust_molave" }, "south": { "to": "rust_teffpollard" } },
       "actions": [
         {
           "id": "pinch_cedrorosa",
@@ -21359,11 +21359,28 @@
         }
       ]
     },
+    "rust_teffpollard": {
+      "name": "Rust Teffpollard",
+      "desc": "A dry teffpollard south of the cedrorosa. Packed rust coats teffpollard.",
+      "brief": "Dry teffpollard, packed rust.",
+      "exits": { "north": { "to": "rust_cedrorosa" } },
+      "actions": [
+        {
+          "id": "pinch_teffpollard",
+          "label": "pinch the teffpollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffpollard. They packed it on the cedrorosa and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_molave": {
       "name": "Rust Molave",
       "desc": "A dry molave east of the cedrorosa. Packed rust coats molave.",
       "brief": "Dry molave, packed rust.",
-      "exits": { "west": { "to": "rust_cedrorosa" }, "east": { "to": "rust_tiaong" } },
+      "exits": { "west": { "to": "rust_cedrorosa" }, "east": { "to": "rust_tiaong" }, "south": { "to": "rust_barleypollard" } },
       "actions": [
         {
           "id": "pinch_molave",
@@ -21376,11 +21393,28 @@
         }
       ]
     },
+    "rust_barleypollard": {
+      "name": "Rust Barleypollard",
+      "desc": "A dry barleypollard south of the molave. Packed rust coats barleypollard.",
+      "brief": "Dry barleypollard, packed rust.",
+      "exits": { "north": { "to": "rust_molave" } },
+      "actions": [
+        {
+          "id": "pinch_barleypollard",
+          "label": "pinch the barleypollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleypollard. They packed it on the molave and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tiaong": {
       "name": "Rust Tiaong",
       "desc": "A dry tiaong east of the molave. Packed rust coats tiaong.",
       "brief": "Dry tiaong, packed rust.",
-      "exits": { "west": { "to": "rust_molave" }, "east": { "to": "rust_swampgum" } },
+      "exits": { "west": { "to": "rust_molave" }, "east": { "to": "rust_swampgum" }, "south": { "to": "rust_sorghumpollard" } },
       "actions": [
         {
           "id": "pinch_tiaong",
@@ -21389,6 +21423,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tiaong. They packed it on the molave and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumpollard": {
+      "name": "Rust Sorghumpollard",
+      "desc": "A dry sorghumpollard south of the tiaong. Packed rust coats sorghumpollard.",
+      "brief": "Dry sorghumpollard, packed rust.",
+      "exits": { "north": { "to": "rust_tiaong" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumpollard",
+          "label": "pinch the sorghumpollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumpollard. They packed it on the tiaong and packed rust around it."]
           ]
         }
       ]
@@ -21448,7 +21499,7 @@
       "name": "Rust Bowline",
       "desc": "A dry bowline east of the bonnet. Packed rust coats a bowline.",
       "brief": "Dry bowline, packed rust.",
-      "exits": { "west": { "to": "rust_bonnet" }, "east": { "to": "rust_clewgarnet" } },
+      "exits": { "west": { "to": "rust_bonnet" }, "east": { "to": "rust_clewgarnet" }, "south": { "to": "rust_milletpollard" } },
       "actions": [
         {
           "id": "pinch_bowline",
@@ -21461,11 +21512,28 @@
         }
       ]
     },
+    "rust_milletpollard": {
+      "name": "Rust Milletpollard",
+      "desc": "A dry milletpollard south of the bowline. Packed rust coats milletpollard.",
+      "brief": "Dry milletpollard, packed rust.",
+      "exits": { "north": { "to": "rust_bowline" } },
+      "actions": [
+        {
+          "id": "pinch_milletpollard",
+          "label": "pinch the milletpollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletpollard. They packed it on the bowline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_clewgarnet": {
       "name": "Rust Clewgarnet",
       "desc": "A dry clewgarnet east of the bowline. Packed rust coats a clewgarnet.",
       "brief": "Dry clewgarnet, packed rust.",
-      "exits": { "west": { "to": "rust_bowline" }, "east": { "to": "rust_ramin" } },
+      "exits": { "west": { "to": "rust_bowline" }, "east": { "to": "rust_ramin" }, "south": { "to": "rust_cornpollard" } },
       "actions": [
         {
           "id": "pinch_clewgarnet",
@@ -21478,11 +21546,28 @@
         }
       ]
     },
+    "rust_cornpollard": {
+      "name": "Rust Cornpollard",
+      "desc": "A dry cornpollard south of the clewgarnet. Packed rust coats cornpollard.",
+      "brief": "Dry cornpollard, packed rust.",
+      "exits": { "north": { "to": "rust_clewgarnet" } },
+      "actions": [
+        {
+          "id": "pinch_cornpollard",
+          "label": "pinch the cornpollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornpollard. They packed it on the clewgarnet and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ramin": {
       "name": "Rust Ramin",
       "desc": "A dry ramin east of the clewgarnet. Packed rust coats ramin.",
       "brief": "Dry ramin, packed rust.",
-      "exits": { "west": { "to": "rust_clewgarnet" }, "east": { "to": "rust_niangon" } },
+      "exits": { "west": { "to": "rust_clewgarnet" }, "east": { "to": "rust_niangon" }, "south": { "to": "rust_oatpollard" } },
       "actions": [
         {
           "id": "pinch_ramin",
@@ -21495,11 +21580,28 @@
         }
       ]
     },
+    "rust_oatpollard": {
+      "name": "Rust Oatpollard",
+      "desc": "A dry oatpollard south of the ramin. Packed rust coats oatpollard.",
+      "brief": "Dry oatpollard, packed rust.",
+      "exits": { "north": { "to": "rust_ramin" } },
+      "actions": [
+        {
+          "id": "pinch_oatpollard",
+          "label": "pinch the oatpollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatpollard. They packed it on the ramin and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_niangon": {
       "name": "Rust Niangon",
       "desc": "A dry niangon east of the ramin. Packed rust coats niangon.",
       "brief": "Dry niangon, packed rust.",
-      "exits": { "west": { "to": "rust_ramin" }, "east": { "to": "rust_andiroba" } },
+      "exits": { "west": { "to": "rust_ramin" }, "east": { "to": "rust_andiroba" }, "south": { "to": "rust_ryepollard" } },
       "actions": [
         {
           "id": "pinch_niangon",
@@ -21512,11 +21614,28 @@
         }
       ]
     },
+    "rust_ryepollard": {
+      "name": "Rust Ryepollard",
+      "desc": "A dry ryepollard south of the niangon. Packed rust coats ryepollard.",
+      "brief": "Dry ryepollard, packed rust.",
+      "exits": { "north": { "to": "rust_niangon" } },
+      "actions": [
+        {
+          "id": "pinch_ryepollard",
+          "label": "pinch the ryepollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryepollard. They packed it on the niangon and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_andiroba": {
       "name": "Rust Andiroba",
       "desc": "A dry andiroba east of the niangon. Packed rust coats andiroba.",
       "brief": "Dry andiroba, packed rust.",
-      "exits": { "west": { "to": "rust_niangon" }, "east": { "to": "rust_cambara" } },
+      "exits": { "west": { "to": "rust_niangon" }, "east": { "to": "rust_cambara" }, "south": { "to": "rust_wheatpollard" } },
       "actions": [
         {
           "id": "pinch_andiroba",
@@ -21525,6 +21644,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard andiroba. They packed it on the niangon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wheatpollard": {
+      "name": "Rust Wheatpollard",
+      "desc": "A dry wheatpollard south of the andiroba. Packed rust coats wheatpollard.",
+      "brief": "Dry wheatpollard, packed rust.",
+      "exits": { "north": { "to": "rust_andiroba" } },
+      "actions": [
+        {
+          "id": "pinch_wheatpollard",
+          "label": "pinch the wheatpollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatpollard. They packed it on the andiroba and packed rust around it."]
           ]
         }
       ]
@@ -41231,10 +41367,19 @@
     "pinch the courbaril",
     "go east",
     "pinch the cedrorosa",
+    "go south",
+    "pinch the teffpollard",
+    "go north",
     "go east",
     "pinch the molave",
+    "go south",
+    "pinch the barleypollard",
+    "go north",
     "go east",
     "pinch the tiaong",
+    "go south",
+    "pinch the sorghumpollard",
+    "go north",
     "go east",
     "pinch the swampgum",
     "go west",
@@ -41253,14 +41398,29 @@
     "pinch the bonnet",
     "go east",
     "pinch the bowline",
+    "go south",
+    "pinch the milletpollard",
+    "go north",
     "go east",
     "pinch the clewgarnet",
+    "go south",
+    "pinch the cornpollard",
+    "go north",
     "go east",
     "pinch the ramin",
+    "go south",
+    "pinch the oatpollard",
+    "go north",
     "go east",
     "pinch the niangon",
+    "go south",
+    "pinch the ryepollard",
+    "go north",
     "go east",
     "pinch the andiroba",
+    "go south",
+    "pinch the wheatpollard",
+    "go north",
     "go east",
     "pinch the cambara",
     "go south",
