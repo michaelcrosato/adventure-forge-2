@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10090,
+  "maxScore": 10130,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -25324,7 +25324,7 @@
       "name": "Rust Cobaltite",
       "desc": "A dry cobaltite east of the redochre. Packed rust coats cobaltite.",
       "brief": "Dry cobaltite, packed rust.",
-      "exits": { "west": { "to": "rust_redochre" }, "east": { "to": "rust_spangolite" } },
+      "exits": { "west": { "to": "rust_redochre" }, "east": { "to": "rust_spangolite" }, "south": { "to": "rust_kasha" } },
       "actions": [
         {
           "id": "pinch_cobaltite",
@@ -25337,11 +25337,28 @@
         }
       ]
     },
+    "rust_kasha": {
+      "name": "Rust Kasha",
+      "desc": "A dry kasha south of the cobaltite. Packed rust coats kasha.",
+      "brief": "Dry kasha, packed rust.",
+      "exits": { "north": { "to": "rust_cobaltite" } },
+      "actions": [
+        {
+          "id": "pinch_kasha",
+          "label": "pinch the kasha",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kasha. They packed it on the cobaltite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_spangolite": {
       "name": "Rust Spangolite",
       "desc": "A dry spangolite east of the cobaltite. Packed rust coats spangolite.",
       "brief": "Dry spangolite, packed rust.",
-      "exits": { "west": { "to": "rust_cobaltite" }, "east": { "to": "rust_violarite" } },
+      "exits": { "west": { "to": "rust_cobaltite" }, "east": { "to": "rust_violarite" }, "south": { "to": "rust_rolledoats" } },
       "actions": [
         {
           "id": "pinch_spangolite",
@@ -25350,6 +25367,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spangolite. They packed it on the cobaltite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_rolledoats": {
+      "name": "Rust Rolledoats",
+      "desc": "A dry rolledoats south of the spangolite. Packed rust coats rolledoats.",
+      "brief": "Dry rolledoats, packed rust.",
+      "exits": { "north": { "to": "rust_spangolite" } },
+      "actions": [
+        {
+          "id": "pinch_rolledoats",
+          "label": "pinch the rolledoats",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rolledoats. They packed it on the spangolite and packed rust around it."]
           ]
         }
       ]
@@ -25375,7 +25409,7 @@
       "name": "Rust Burton",
       "desc": "A dry burton east of the vent. Packed rust coats a burton.",
       "brief": "Dry burton, packed rust.",
-      "exits": { "west": { "to": "rust_vent" }, "east": { "to": "rust_towline" } },
+      "exits": { "west": { "to": "rust_vent" }, "east": { "to": "rust_towline" }, "south": { "to": "rust_pearlbarley" } },
       "actions": [
         {
           "id": "pinch_burton",
@@ -25388,11 +25422,28 @@
         }
       ]
     },
+    "rust_pearlbarley": {
+      "name": "Rust Pearlbarley",
+      "desc": "A dry pearlbarley south of the burton. Packed rust coats pearlbarley.",
+      "brief": "Dry pearlbarley, packed rust.",
+      "exits": { "north": { "to": "rust_burton" } },
+      "actions": [
+        {
+          "id": "pinch_pearlbarley",
+          "label": "pinch the pearlbarley",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pearlbarley. They packed it on the burton and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_towline": {
       "name": "Rust Towline",
       "desc": "A dry towline east of the burton. Packed rust coats a towline.",
       "brief": "Dry towline, packed rust.",
-      "exits": { "west": { "to": "rust_burton" }, "east": { "to": "rust_throatrope" } },
+      "exits": { "west": { "to": "rust_burton" }, "east": { "to": "rust_throatrope" }, "south": { "to": "rust_groats" } },
       "actions": [
         {
           "id": "pinch_towline",
@@ -25405,11 +25456,28 @@
         }
       ]
     },
+    "rust_groats": {
+      "name": "Rust Groats",
+      "desc": "A dry groats south of the towline. Packed rust coats groats.",
+      "brief": "Dry groats, packed rust.",
+      "exits": { "north": { "to": "rust_towline" } },
+      "actions": [
+        {
+          "id": "pinch_groats",
+          "label": "pinch the groats",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard groats. They packed it on the towline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_throatrope": {
       "name": "Rust Throatrope",
       "desc": "A dry throatrope east of the towline. Packed rust coats a throatrope.",
       "brief": "Dry throatrope, packed rust.",
-      "exits": { "west": { "to": "rust_towline" }, "east": { "to": "rust_asphalt" } },
+      "exits": { "west": { "to": "rust_towline" }, "east": { "to": "rust_asphalt" }, "south": { "to": "rust_middlings" } },
       "actions": [
         {
           "id": "pinch_throatrope",
@@ -25422,11 +25490,28 @@
         }
       ]
     },
+    "rust_middlings": {
+      "name": "Rust Middlings",
+      "desc": "A dry middlings south of the throatrope. Packed rust coats middlings.",
+      "brief": "Dry middlings, packed rust.",
+      "exits": { "north": { "to": "rust_throatrope" } },
+      "actions": [
+        {
+          "id": "pinch_middlings",
+          "label": "pinch the middlings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard middlings. They packed it on the throatrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_asphalt": {
       "name": "Rust Asphalt",
       "desc": "A dry asphalt east of the throatrope. Packed rust coats asphalt.",
       "brief": "Dry asphalt, packed rust.",
-      "exits": { "west": { "to": "rust_throatrope" }, "east": { "to": "rust_bentonite" } },
+      "exits": { "west": { "to": "rust_throatrope" }, "east": { "to": "rust_bentonite" }, "south": { "to": "rust_grist" } },
       "actions": [
         {
           "id": "pinch_asphalt",
@@ -25439,11 +25524,28 @@
         }
       ]
     },
+    "rust_grist": {
+      "name": "Rust Grist",
+      "desc": "A dry grist south of the asphalt. Packed rust coats grist.",
+      "brief": "Dry grist, packed rust.",
+      "exits": { "north": { "to": "rust_asphalt" } },
+      "actions": [
+        {
+          "id": "pinch_grist",
+          "label": "pinch the grist",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard grist. They packed it on the asphalt and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bentonite": {
       "name": "Rust Bentonite",
       "desc": "A dry bentonite east of the asphalt. Packed rust coats bentonite.",
       "brief": "Dry bentonite, packed rust.",
-      "exits": { "west": { "to": "rust_asphalt" }, "east": { "to": "rust_marble" } },
+      "exits": { "west": { "to": "rust_asphalt" }, "east": { "to": "rust_marble" }, "south": { "to": "rust_sampmeal" } },
       "actions": [
         {
           "id": "pinch_bentonite",
@@ -25456,11 +25558,28 @@
         }
       ]
     },
+    "rust_sampmeal": {
+      "name": "Rust Sampmeal",
+      "desc": "A dry sampmeal south of the bentonite. Packed rust coats sampmeal.",
+      "brief": "Dry sampmeal, packed rust.",
+      "exits": { "north": { "to": "rust_bentonite" } },
+      "actions": [
+        {
+          "id": "pinch_sampmeal",
+          "label": "pinch the sampmeal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sampmeal. They packed it on the bentonite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_marble": {
       "name": "Rust Marble",
       "desc": "A dry marble east of the bentonite. Packed rust coats marble.",
       "brief": "Dry marble, packed rust.",
-      "exits": { "west": { "to": "rust_bentonite" }, "east": { "to": "rust_hematite" } },
+      "exits": { "west": { "to": "rust_bentonite" }, "east": { "to": "rust_hematite" }, "south": { "to": "rust_nixtamal" } },
       "actions": [
         {
           "id": "pinch_marble",
@@ -25469,6 +25588,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard marble. They packed it on the bentonite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_nixtamal": {
+      "name": "Rust Nixtamal",
+      "desc": "A dry nixtamal south of the marble. Packed rust coats nixtamal.",
+      "brief": "Dry nixtamal, packed rust.",
+      "exits": { "north": { "to": "rust_marble" } },
+      "actions": [
+        {
+          "id": "pinch_nixtamal",
+          "label": "pinch the nixtamal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nixtamal. They packed it on the marble and packed rust around it."]
           ]
         }
       ]
@@ -38736,8 +38872,14 @@
     "pinch the redochre",
     "go east",
     "pinch the cobaltite",
+    "go south",
+    "pinch the kasha",
+    "go north",
     "go east",
     "pinch the spangolite",
+    "go south",
+    "pinch the rolledoats",
+    "go north",
     "go east",
     "pinch the violarite",
     "go west",
@@ -38753,16 +38895,34 @@
     "go north",
     "go east",
     "pinch the burton",
+    "go south",
+    "pinch the pearlbarley",
+    "go north",
     "go east",
     "pinch the towline",
+    "go south",
+    "pinch the groats",
+    "go north",
     "go east",
     "pinch the throatrope",
+    "go south",
+    "pinch the middlings",
+    "go north",
     "go east",
     "pinch the asphalt",
+    "go south",
+    "pinch the grist",
+    "go north",
     "go east",
     "pinch the bentonite",
+    "go south",
+    "pinch the sampmeal",
+    "go north",
     "go east",
     "pinch the marble",
+    "go south",
+    "pinch the nixtamal",
+    "go north",
     "go east",
     "pinch the hematite",
     "go south",
