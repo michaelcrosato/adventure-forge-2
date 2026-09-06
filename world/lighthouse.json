@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12650,
+  "maxScore": 12690,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -40267,7 +40267,7 @@
       "name": "Rust Mouse",
       "desc": "A dry mouse east of the jackstay. Packed rust coats a mouse.",
       "brief": "Dry mouse, packed rust.",
-      "exits": { "west": { "to": "rust_jackstay" }, "east": { "to": "rust_staygasket" }, "south": { "to": "rust_millfoil" } },
+      "exits": { "west": { "to": "rust_jackstay" }, "east": { "to": "rust_staygasket" }, "south": { "to": "rust_millfoil" }, "north": { "to": "rust_durumloft" } },
       "actions": [
         {
           "id": "pinch_mouse",
@@ -40276,6 +40276,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mouse. They seized it on the jackstay and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumloft": {
+      "name": "Rust Durumloft",
+      "desc": "A dry durumloft north of the mouse. Packed rust coats durumloft.",
+      "brief": "Dry durumloft, packed rust.",
+      "exits": { "south": { "to": "rust_mouse" } },
+      "actions": [
+        {
+          "id": "pinch_durumloft",
+          "label": "pinch the durumloft",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumloft. They packed it on the mouse and packed rust around it."]
           ]
         }
       ]
@@ -40301,7 +40318,7 @@
       "name": "Rust Staygasket",
       "desc": "A dry staygasket east of the mouse. Packed rust coats a staygasket.",
       "brief": "Dry staygasket, packed rust.",
-      "exits": { "west": { "to": "rust_mouse" }, "east": { "to": "rust_beeswax" }, "south": { "to": "rust_pondweed" } },
+      "exits": { "west": { "to": "rust_mouse" }, "east": { "to": "rust_beeswax" }, "south": { "to": "rust_pondweed" }, "north": { "to": "rust_fonioloft" } },
       "actions": [
         {
           "id": "pinch_staygasket",
@@ -40310,6 +40327,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard staygasket. They seized it on the mouse and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioloft": {
+      "name": "Rust Fonioloft",
+      "desc": "A dry fonioloft north of the staygasket. Packed rust coats fonioloft.",
+      "brief": "Dry fonioloft, packed rust.",
+      "exits": { "south": { "to": "rust_staygasket" } },
+      "actions": [
+        {
+          "id": "pinch_fonioloft",
+          "label": "pinch the fonioloft",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioloft. They packed it on the staygasket and packed rust around it."]
           ]
         }
       ]
@@ -40335,7 +40369,7 @@
       "name": "Rust Beeswax",
       "desc": "A dry beeswax east of the staygasket. Packed rust coats beeswax.",
       "brief": "Dry beeswax, packed rust.",
-      "exits": { "west": { "to": "rust_staygasket" }, "east": { "to": "rust_lanolin" }, "south": { "to": "rust_duckweed" } },
+      "exits": { "west": { "to": "rust_staygasket" }, "east": { "to": "rust_lanolin" }, "south": { "to": "rust_duckweed" }, "north": { "to": "rust_teffloft" } },
       "actions": [
         {
           "id": "pinch_beeswax",
@@ -40344,6 +40378,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard beeswax. They rubbed it on the staygasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffloft": {
+      "name": "Rust Teffloft",
+      "desc": "A dry teffloft north of the beeswax. Packed rust coats teffloft.",
+      "brief": "Dry teffloft, packed rust.",
+      "exits": { "south": { "to": "rust_beeswax" } },
+      "actions": [
+        {
+          "id": "pinch_teffloft",
+          "label": "pinch the teffloft",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffloft. They packed it on the beeswax and packed rust around it."]
           ]
         }
       ]
@@ -40369,7 +40420,7 @@
       "name": "Rust Lanolin",
       "desc": "A dry lanolin east of the beeswax. Packed rust coats lanolin.",
       "brief": "Dry lanolin, packed rust.",
-      "exits": { "west": { "to": "rust_beeswax" }, "east": { "to": "rust_elm" }, "south": { "to": "rust_hornwort" } },
+      "exits": { "west": { "to": "rust_beeswax" }, "east": { "to": "rust_elm" }, "south": { "to": "rust_hornwort" }, "north": { "to": "rust_barleyloft" } },
       "actions": [
         {
           "id": "pinch_lanolin",
@@ -40378,6 +40429,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lanolin. They rubbed it on the beeswax and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyloft": {
+      "name": "Rust Barleyloft",
+      "desc": "A dry barleyloft north of the lanolin. Packed rust coats barleyloft.",
+      "brief": "Dry barleyloft, packed rust.",
+      "exits": { "south": { "to": "rust_lanolin" } },
+      "actions": [
+        {
+          "id": "pinch_barleyloft",
+          "label": "pinch the barleyloft",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyloft. They packed it on the lanolin and packed rust around it."]
           ]
         }
       ]
@@ -40403,7 +40471,7 @@
       "name": "Rust Elm",
       "desc": "A dry elm east of the lanolin. Packed rust coats elm.",
       "brief": "Dry elm, packed rust.",
-      "exits": { "west": { "to": "rust_lanolin" }, "east": { "to": "rust_pecan" }, "south": { "to": "rust_arame" } },
+      "exits": { "west": { "to": "rust_lanolin" }, "east": { "to": "rust_pecan" }, "south": { "to": "rust_arame" }, "north": { "to": "rust_sorghumloft" } },
       "actions": [
         {
           "id": "pinch_elm",
@@ -40412,6 +40480,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard elm. They packed it on the lanolin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumloft": {
+      "name": "Rust Sorghumloft",
+      "desc": "A dry sorghumloft north of the elm. Packed rust coats sorghumloft.",
+      "brief": "Dry sorghumloft, packed rust.",
+      "exits": { "south": { "to": "rust_elm" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumloft",
+          "label": "pinch the sorghumloft",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumloft. They packed it on the elm and packed rust around it."]
           ]
         }
       ]
@@ -40437,7 +40522,7 @@
       "name": "Rust Pecan",
       "desc": "A dry pecan east of the elm. Packed rust coats pecan.",
       "brief": "Dry pecan, packed rust.",
-      "exits": { "west": { "to": "rust_elm" }, "east": { "to": "rust_juniper" }, "south": { "to": "rust_hijiki" } },
+      "exits": { "west": { "to": "rust_elm" }, "east": { "to": "rust_juniper" }, "south": { "to": "rust_hijiki" }, "north": { "to": "rust_milletloft" } },
       "actions": [
         {
           "id": "pinch_pecan",
@@ -40446,6 +40531,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pecan. They set it on the elm and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletloft": {
+      "name": "Rust Milletloft",
+      "desc": "A dry milletloft north of the pecan. Packed rust coats milletloft.",
+      "brief": "Dry milletloft, packed rust.",
+      "exits": { "south": { "to": "rust_pecan" } },
+      "actions": [
+        {
+          "id": "pinch_milletloft",
+          "label": "pinch the milletloft",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletloft. They packed it on the pecan and packed rust around it."]
           ]
         }
       ]
@@ -40471,7 +40573,7 @@
       "name": "Rust Juniper",
       "desc": "A dry juniper east of the pecan. Packed rust coats juniper.",
       "brief": "Dry juniper, packed rust.",
-      "exits": { "west": { "to": "rust_pecan" }, "east": { "to": "rust_barytes" }, "south": { "to": "rust_kombu" } },
+      "exits": { "west": { "to": "rust_pecan" }, "east": { "to": "rust_barytes" }, "south": { "to": "rust_kombu" }, "north": { "to": "rust_cornloft" } },
       "actions": [
         {
           "id": "pinch_juniper",
@@ -40480,6 +40582,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard juniper. They set it on the pecan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornloft": {
+      "name": "Rust Cornloft",
+      "desc": "A dry cornloft north of the juniper. Packed rust coats cornloft.",
+      "brief": "Dry cornloft, packed rust.",
+      "exits": { "south": { "to": "rust_juniper" } },
+      "actions": [
+        {
+          "id": "pinch_cornloft",
+          "label": "pinch the cornloft",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornloft. They packed it on the juniper and packed rust around it."]
           ]
         }
       ]
@@ -40505,7 +40624,7 @@
       "name": "Rust Barytes",
       "desc": "A dry barytes east of the juniper. Packed rust coats barytes.",
       "brief": "Dry barytes, packed rust.",
-      "exits": { "west": { "to": "rust_juniper" }, "east": { "to": "rust_cuprite" }, "south": { "to": "rust_wakame" } },
+      "exits": { "west": { "to": "rust_juniper" }, "east": { "to": "rust_cuprite" }, "south": { "to": "rust_wakame" }, "north": { "to": "rust_oatloft" } },
       "actions": [
         {
           "id": "pinch_barytes",
@@ -40514,6 +40633,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard barytes. They packed it on the juniper and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatloft": {
+      "name": "Rust Oatloft",
+      "desc": "A dry oatloft north of the barytes. Packed rust coats oatloft.",
+      "brief": "Dry oatloft, packed rust.",
+      "exits": { "south": { "to": "rust_barytes" } },
+      "actions": [
+        {
+          "id": "pinch_oatloft",
+          "label": "pinch the oatloft",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatloft. They packed it on the barytes and packed rust around it."]
           ]
         }
       ]
@@ -50015,41 +50151,65 @@
     "pinch the jackstay",
     "go east",
     "pinch the mouse",
+    "go north",
+    "pinch the durumloft",
+    "go south",
     "go south",
     "pinch the millfoil",
     "go north",
     "go east",
     "pinch the staygasket",
+    "go north",
+    "pinch the fonioloft",
+    "go south",
     "go south",
     "pinch the pondweed",
     "go north",
     "go east",
     "pinch the beeswax",
+    "go north",
+    "pinch the teffloft",
+    "go south",
     "go south",
     "pinch the duckweed",
     "go north",
     "go east",
     "pinch the lanolin",
+    "go north",
+    "pinch the barleyloft",
+    "go south",
     "go south",
     "pinch the hornwort",
     "go north",
     "go east",
     "pinch the elm",
+    "go north",
+    "pinch the sorghumloft",
+    "go south",
     "go south",
     "pinch the arame",
     "go north",
     "go east",
     "pinch the pecan",
+    "go north",
+    "pinch the milletloft",
+    "go south",
     "go south",
     "pinch the hijiki",
     "go north",
     "go east",
     "pinch the juniper",
+    "go north",
+    "pinch the cornloft",
+    "go south",
     "go south",
     "pinch the kombu",
     "go north",
     "go east",
     "pinch the barytes",
+    "go north",
+    "pinch the oatloft",
+    "go south",
     "go south",
     "pinch the wakame",
     "go north",
