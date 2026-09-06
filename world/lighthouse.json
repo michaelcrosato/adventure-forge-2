@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8970,
+  "maxScore": 9010,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -13101,7 +13101,7 @@
       "name": "Rust Labdanum",
       "desc": "A dry labdanum east of the coiling. Packed rust coats labdanum.",
       "brief": "Dry labdanum, packed rust.",
-      "exits": { "west": { "to": "rust_coiling" }, "east": { "to": "rust_oakgall" } },
+      "exits": { "west": { "to": "rust_coiling" }, "east": { "to": "rust_oakgall" }, "south": { "to": "rust_rice" } },
       "actions": [
         {
           "id": "pinch_labdanum",
@@ -13114,11 +13114,28 @@
         }
       ]
     },
+    "rust_rice": {
+      "name": "Rust Rice",
+      "desc": "A dry rice south of the labdanum. Packed rust coats rice.",
+      "brief": "Dry rice, packed rust.",
+      "exits": { "north": { "to": "rust_labdanum" } },
+      "actions": [
+        {
+          "id": "pinch_rice",
+          "label": "pinch the rice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rice. They packed it on the labdanum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_oakgall": {
       "name": "Rust Oakgall",
       "desc": "A dry oakgall east of the labdanum. Packed rust coats oakgall.",
       "brief": "Dry oakgall, packed rust.",
-      "exits": { "west": { "to": "rust_labdanum" }, "east": { "to": "rust_jetblack" } },
+      "exits": { "west": { "to": "rust_labdanum" }, "east": { "to": "rust_jetblack" }, "south": { "to": "rust_wheat" } },
       "actions": [
         {
           "id": "pinch_oakgall",
@@ -13131,11 +13148,28 @@
         }
       ]
     },
+    "rust_wheat": {
+      "name": "Rust Wheat",
+      "desc": "A dry wheat south of the oakgall. Packed rust coats wheat.",
+      "brief": "Dry wheat, packed rust.",
+      "exits": { "north": { "to": "rust_oakgall" } },
+      "actions": [
+        {
+          "id": "pinch_wheat",
+          "label": "pinch the wheat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheat. They packed it on the oakgall and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_jetblack": {
       "name": "Rust Jetblack",
       "desc": "A dry jetblack east of the oakgall. Packed rust coats jetblack.",
       "brief": "Dry jetblack, packed rust.",
-      "exits": { "west": { "to": "rust_oakgall" }, "east": { "to": "rust_cidergum" } },
+      "exits": { "west": { "to": "rust_oakgall" }, "east": { "to": "rust_cidergum" }, "south": { "to": "rust_barley" } },
       "actions": [
         {
           "id": "pinch_jetblack",
@@ -13148,11 +13182,28 @@
         }
       ]
     },
+    "rust_barley": {
+      "name": "Rust Barley",
+      "desc": "A dry barley south of the jetblack. Packed rust coats barley.",
+      "brief": "Dry barley, packed rust.",
+      "exits": { "north": { "to": "rust_jetblack" } },
+      "actions": [
+        {
+          "id": "pinch_barley",
+          "label": "pinch the barley",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barley. They packed it on the jetblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cidergum": {
       "name": "Rust Cidergum",
       "desc": "A dry cidergum east of the jetblack. Packed rust coats cidergum.",
       "brief": "Dry cidergum, packed rust.",
-      "exits": { "west": { "to": "rust_jetblack" }, "east": { "to": "rust_bottlebrush" } },
+      "exits": { "west": { "to": "rust_jetblack" }, "east": { "to": "rust_bottlebrush" }, "south": { "to": "rust_oats" } },
       "actions": [
         {
           "id": "pinch_cidergum",
@@ -13165,11 +13216,28 @@
         }
       ]
     },
+    "rust_oats": {
+      "name": "Rust Oats",
+      "desc": "A dry oats south of the cidergum. Packed rust coats oats.",
+      "brief": "Dry oats, packed rust.",
+      "exits": { "north": { "to": "rust_cidergum" } },
+      "actions": [
+        {
+          "id": "pinch_oats",
+          "label": "pinch the oats",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oats. They packed it on the cidergum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bottlebrush": {
       "name": "Rust Bottlebrush",
       "desc": "A dry bottlebrush east of the cidergum. Packed rust coats bottlebrush.",
       "brief": "Dry bottlebrush, packed rust.",
-      "exits": { "west": { "to": "rust_cidergum" }, "east": { "to": "rust_radiatapine" } },
+      "exits": { "west": { "to": "rust_cidergum" }, "east": { "to": "rust_radiatapine" }, "south": { "to": "rust_rye" } },
       "actions": [
         {
           "id": "pinch_bottlebrush",
@@ -13182,11 +13250,28 @@
         }
       ]
     },
+    "rust_rye": {
+      "name": "Rust Rye",
+      "desc": "A dry rye south of the bottlebrush. Packed rust coats rye.",
+      "brief": "Dry rye, packed rust.",
+      "exits": { "north": { "to": "rust_bottlebrush" } },
+      "actions": [
+        {
+          "id": "pinch_rye",
+          "label": "pinch the rye",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rye. They packed it on the bottlebrush and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_radiatapine": {
       "name": "Rust Radiatapine",
       "desc": "A dry radiatapine east of the bottlebrush. Packed rust coats radiatapine.",
       "brief": "Dry radiatapine, packed rust.",
-      "exits": { "west": { "to": "rust_bottlebrush" }, "east": { "to": "rust_dawnredwood" } },
+      "exits": { "west": { "to": "rust_bottlebrush" }, "east": { "to": "rust_dawnredwood" }, "south": { "to": "rust_millet" } },
       "actions": [
         {
           "id": "pinch_radiatapine",
@@ -13195,6 +13280,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard radiatapine. They packed it on the bottlebrush and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millet": {
+      "name": "Rust Millet",
+      "desc": "A dry millet south of the radiatapine. Packed rust coats millet.",
+      "brief": "Dry millet, packed rust.",
+      "exits": { "north": { "to": "rust_radiatapine" } },
+      "actions": [
+        {
+          "id": "pinch_millet",
+          "label": "pinch the millet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millet. They packed it on the radiatapine and packed rust around it."]
           ]
         }
       ]
@@ -13288,7 +13390,7 @@
       "name": "Rust Belaying",
       "desc": "A dry belaying east of the lizard. Packed rust coats belaying.",
       "brief": "Dry belaying, packed rust.",
-      "exits": { "west": { "to": "rust_lizard" }, "east": { "to": "rust_olibanum" } },
+      "exits": { "west": { "to": "rust_lizard" }, "east": { "to": "rust_olibanum" }, "south": { "to": "rust_sorghum" } },
       "actions": [
         {
           "id": "pinch_belaying",
@@ -13301,11 +13403,28 @@
         }
       ]
     },
+    "rust_sorghum": {
+      "name": "Rust Sorghum",
+      "desc": "A dry sorghum south of the belaying. Packed rust coats sorghum.",
+      "brief": "Dry sorghum, packed rust.",
+      "exits": { "north": { "to": "rust_belaying" } },
+      "actions": [
+        {
+          "id": "pinch_sorghum",
+          "label": "pinch the sorghum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghum. They packed it on the belaying and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_olibanum": {
       "name": "Rust Olibanum",
       "desc": "A dry olibanum east of the belaying. Packed rust coats olibanum.",
       "brief": "Dry olibanum, packed rust.",
-      "exits": { "west": { "to": "rust_belaying" }, "east": { "to": "rust_ribbongum" } },
+      "exits": { "west": { "to": "rust_belaying" }, "east": { "to": "rust_ribbongum" }, "south": { "to": "rust_quinoa" } },
       "actions": [
         {
           "id": "pinch_olibanum",
@@ -13314,6 +13433,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard olibanum. They packed it on the belaying and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_quinoa": {
+      "name": "Rust Quinoa",
+      "desc": "A dry quinoa south of the olibanum. Packed rust coats quinoa.",
+      "brief": "Dry quinoa, packed rust.",
+      "exits": { "north": { "to": "rust_olibanum" } },
+      "actions": [
+        {
+          "id": "pinch_quinoa",
+          "label": "pinch the quinoa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard quinoa. They packed it on the olibanum and packed rust around it."]
           ]
         }
       ]
@@ -32709,16 +32845,34 @@
     "go north",
     "go east",
     "pinch the labdanum",
+    "go south",
+    "pinch the rice",
+    "go north",
     "go east",
     "pinch the oakgall",
+    "go south",
+    "pinch the wheat",
+    "go north",
     "go east",
     "pinch the jetblack",
+    "go south",
+    "pinch the barley",
+    "go north",
     "go east",
     "pinch the cidergum",
+    "go south",
+    "pinch the oats",
+    "go north",
     "go east",
     "pinch the bottlebrush",
+    "go south",
+    "pinch the rye",
+    "go north",
     "go east",
     "pinch the radiatapine",
+    "go south",
+    "pinch the millet",
+    "go north",
     "go east",
     "pinch the dawnredwood",
     "go south",
@@ -32742,8 +32896,14 @@
     "pinch the lizard",
     "go east",
     "pinch the belaying",
+    "go south",
+    "pinch the sorghum",
+    "go north",
     "go east",
     "pinch the olibanum",
+    "go south",
+    "pinch the quinoa",
+    "go north",
     "go east",
     "pinch the ribbongum",
     "go east",
