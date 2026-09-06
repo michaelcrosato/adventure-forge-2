@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10930,
+  "maxScore": 10970,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -21890,7 +21890,7 @@
       "name": "Rust Goncalo",
       "desc": "A dry goncalo east of the cumaru. Packed rust coats goncalo.",
       "brief": "Dry goncalo, packed rust.",
-      "exits": { "west": { "to": "rust_cumaru" }, "east": { "to": "rust_yakal" } },
+      "exits": { "west": { "to": "rust_cumaru" }, "east": { "to": "rust_yakal" }, "south": { "to": "rust_cornshorts" } },
       "actions": [
         {
           "id": "pinch_goncalo",
@@ -21903,11 +21903,28 @@
         }
       ]
     },
+    "rust_cornshorts": {
+      "name": "Rust Cornshorts",
+      "desc": "A dry cornshorts south of the goncalo. Packed rust coats cornshorts.",
+      "brief": "Dry cornshorts, packed rust.",
+      "exits": { "north": { "to": "rust_goncalo" } },
+      "actions": [
+        {
+          "id": "pinch_cornshorts",
+          "label": "pinch the cornshorts",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornshorts. They packed it on the goncalo and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_yakal": {
       "name": "Rust Yakal",
       "desc": "A dry yakal east of the goncalo. Packed rust coats yakal.",
       "brief": "Dry yakal, packed rust.",
-      "exits": { "west": { "to": "rust_goncalo" }, "east": { "to": "rust_whiteapo" } },
+      "exits": { "west": { "to": "rust_goncalo" }, "east": { "to": "rust_whiteapo" }, "south": { "to": "rust_oatmidds" } },
       "actions": [
         {
           "id": "pinch_yakal",
@@ -21920,11 +21937,28 @@
         }
       ]
     },
+    "rust_oatmidds": {
+      "name": "Rust Oatmidds",
+      "desc": "A dry oatmidds south of the yakal. Packed rust coats oatmidds.",
+      "brief": "Dry oatmidds, packed rust.",
+      "exits": { "north": { "to": "rust_yakal" } },
+      "actions": [
+        {
+          "id": "pinch_oatmidds",
+          "label": "pinch the oatmidds",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatmidds. They packed it on the yakal and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_whiteapo": {
       "name": "Rust Whiteapo",
       "desc": "A dry whiteapo east of the yakal. Packed rust coats whiteapo.",
       "brief": "Dry whiteapo, packed rust.",
-      "exits": { "west": { "to": "rust_yakal" }, "east": { "to": "rust_mountainash" } },
+      "exits": { "west": { "to": "rust_yakal" }, "east": { "to": "rust_mountainash" }, "south": { "to": "rust_ryescreenings" } },
       "actions": [
         {
           "id": "pinch_whiteapo",
@@ -21933,6 +21967,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whiteapo. They packed it on the yakal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ryescreenings": {
+      "name": "Rust Ryescreenings",
+      "desc": "A dry ryescreenings south of the whiteapo. Packed rust coats ryescreenings.",
+      "brief": "Dry ryescreenings, packed rust.",
+      "exits": { "north": { "to": "rust_whiteapo" } },
+      "actions": [
+        {
+          "id": "pinch_ryescreenings",
+          "label": "pinch the ryescreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryescreenings. They packed it on the whiteapo and packed rust around it."]
           ]
         }
       ]
@@ -21958,7 +22009,7 @@
       "name": "Rust Sheave",
       "desc": "A dry sheave east of the dross. Packed rust coats a sheave.",
       "brief": "Dry sheave, packed rust.",
-      "exits": { "west": { "to": "rust_dross" }, "east": { "to": "rust_eyeplice" } },
+      "exits": { "west": { "to": "rust_dross" }, "east": { "to": "rust_eyeplice" }, "south": { "to": "rust_wheatshorts" } },
       "actions": [
         {
           "id": "pinch_sheave",
@@ -21971,11 +22022,28 @@
         }
       ]
     },
+    "rust_wheatshorts": {
+      "name": "Rust Wheatshorts",
+      "desc": "A dry wheatshorts south of the sheave. Packed rust coats wheatshorts.",
+      "brief": "Dry wheatshorts, packed rust.",
+      "exits": { "north": { "to": "rust_sheave" } },
+      "actions": [
+        {
+          "id": "pinch_wheatshorts",
+          "label": "pinch the wheatshorts",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatshorts. They packed it on the sheave and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_eyeplice": {
       "name": "Rust Eyeplice",
       "desc": "A dry eyeplice east of the sheave. Packed rust coats an eyeplice.",
       "brief": "Dry eyeplice, packed rust.",
-      "exits": { "west": { "to": "rust_sheave" }, "east": { "to": "rust_cocobolo" } },
+      "exits": { "west": { "to": "rust_sheave" }, "east": { "to": "rust_cocobolo" }, "south": { "to": "rust_ryegrassseed" } },
       "actions": [
         {
           "id": "pinch_eyeplice",
@@ -21988,11 +22056,28 @@
         }
       ]
     },
+    "rust_ryegrassseed": {
+      "name": "Rust Ryegrassseed",
+      "desc": "A dry ryegrassseed south of the eyeplice. Packed rust coats ryegrassseed.",
+      "brief": "Dry ryegrassseed, packed rust.",
+      "exits": { "north": { "to": "rust_eyeplice" } },
+      "actions": [
+        {
+          "id": "pinch_ryegrassseed",
+          "label": "pinch the ryegrassseed",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryegrassseed. They packed it on the eyeplice and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cocobolo": {
       "name": "Rust Cocobolo",
       "desc": "A dry cocobolo east of the eyeplice. Packed rust coats cocobolo.",
       "brief": "Dry cocobolo, packed rust.",
-      "exits": { "west": { "to": "rust_eyeplice" }, "east": { "to": "rust_abachi" } },
+      "exits": { "west": { "to": "rust_eyeplice" }, "east": { "to": "rust_abachi" }, "south": { "to": "rust_barleygerm" } },
       "actions": [
         {
           "id": "pinch_cocobolo",
@@ -22005,11 +22090,28 @@
         }
       ]
     },
+    "rust_barleygerm": {
+      "name": "Rust Barleygerm",
+      "desc": "A dry barleygerm south of the cocobolo. Packed rust coats barleygerm.",
+      "brief": "Dry barleygerm, packed rust.",
+      "exits": { "north": { "to": "rust_cocobolo" } },
+      "actions": [
+        {
+          "id": "pinch_barleygerm",
+          "label": "pinch the barleygerm",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleygerm. They packed it on the cocobolo and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_abachi": {
       "name": "Rust Abachi",
       "desc": "A dry abachi east of the cocobolo. Packed rust coats abachi.",
       "brief": "Dry abachi, packed rust.",
-      "exits": { "west": { "to": "rust_cocobolo" }, "east": { "to": "rust_jatoba" } },
+      "exits": { "west": { "to": "rust_cocobolo" }, "east": { "to": "rust_jatoba" }, "south": { "to": "rust_sorghumgerm" } },
       "actions": [
         {
           "id": "pinch_abachi",
@@ -22022,11 +22124,28 @@
         }
       ]
     },
+    "rust_sorghumgerm": {
+      "name": "Rust Sorghumgerm",
+      "desc": "A dry sorghumgerm south of the abachi. Packed rust coats sorghumgerm.",
+      "brief": "Dry sorghumgerm, packed rust.",
+      "exits": { "north": { "to": "rust_abachi" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumgerm",
+          "label": "pinch the sorghumgerm",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumgerm. They packed it on the abachi and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_jatoba": {
       "name": "Rust Jatoba",
       "desc": "A dry jatoba east of the abachi. Packed rust coats jatoba.",
       "brief": "Dry jatoba, packed rust.",
-      "exits": { "west": { "to": "rust_abachi" }, "east": { "to": "rust_muiracatiara" } },
+      "exits": { "west": { "to": "rust_abachi" }, "east": { "to": "rust_muiracatiara" }, "south": { "to": "rust_milletgerm" } },
       "actions": [
         {
           "id": "pinch_jatoba",
@@ -22035,6 +22154,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jatoba. They packed it on the abachi and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletgerm": {
+      "name": "Rust Milletgerm",
+      "desc": "A dry milletgerm south of the jatoba. Packed rust coats milletgerm.",
+      "brief": "Dry milletgerm, packed rust.",
+      "exits": { "north": { "to": "rust_jatoba" } },
+      "actions": [
+        {
+          "id": "pinch_milletgerm",
+          "label": "pinch the milletgerm",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletgerm. They packed it on the jatoba and packed rust around it."]
           ]
         }
       ]
@@ -40917,10 +41053,19 @@
     "pinch the cumaru",
     "go east",
     "pinch the goncalo",
+    "go south",
+    "pinch the cornshorts",
+    "go north",
     "go east",
     "pinch the yakal",
+    "go south",
+    "pinch the oatmidds",
+    "go north",
     "go east",
     "pinch the whiteapo",
+    "go south",
+    "pinch the ryescreenings",
+    "go north",
     "go east",
     "pinch the mountainash",
     "go west",
@@ -40935,14 +41080,29 @@
     "go north",
     "go east",
     "pinch the sheave",
+    "go south",
+    "pinch the wheatshorts",
+    "go north",
     "go east",
     "pinch the eyeplice",
+    "go south",
+    "pinch the ryegrassseed",
+    "go north",
     "go east",
     "pinch the cocobolo",
+    "go south",
+    "pinch the barleygerm",
+    "go north",
     "go east",
     "pinch the abachi",
+    "go south",
+    "pinch the sorghumgerm",
+    "go north",
     "go east",
     "pinch the jatoba",
+    "go south",
+    "pinch the milletgerm",
+    "go north",
     "go east",
     "pinch the muiracatiara",
     "go south",
