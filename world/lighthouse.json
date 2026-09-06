@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10890,
+  "maxScore": 10930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -22043,7 +22043,7 @@
       "name": "Rust Muiracatiara",
       "desc": "A dry muiracatiara east of the jatoba. Packed rust coats muiracatiara.",
       "brief": "Dry muiracatiara, packed rust.",
-      "exits": { "west": { "to": "rust_jatoba" }, "east": { "to": "rust_apitong" } },
+      "exits": { "west": { "to": "rust_jatoba" }, "east": { "to": "rust_apitong" }, "south": { "to": "rust_cornsemolina" } },
       "actions": [
         {
           "id": "pinch_muiracatiara",
@@ -22056,11 +22056,28 @@
         }
       ]
     },
+    "rust_cornsemolina": {
+      "name": "Rust Cornsemolina",
+      "desc": "A dry cornsemolina south of the muiracatiara. Packed rust coats cornsemolina.",
+      "brief": "Dry cornsemolina, packed rust.",
+      "exits": { "north": { "to": "rust_muiracatiara" } },
+      "actions": [
+        {
+          "id": "pinch_cornsemolina",
+          "label": "pinch the cornsemolina",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornsemolina. They packed it on the muiracatiara and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_apitong": {
       "name": "Rust Apitong",
       "desc": "A dry apitong east of the muiracatiara. Packed rust coats apitong.",
       "brief": "Dry apitong, packed rust.",
-      "exits": { "west": { "to": "rust_muiracatiara" }, "east": { "to": "rust_dao" } },
+      "exits": { "west": { "to": "rust_muiracatiara" }, "east": { "to": "rust_dao" }, "south": { "to": "rust_oatsemolina" } },
       "actions": [
         {
           "id": "pinch_apitong",
@@ -22073,11 +22090,28 @@
         }
       ]
     },
+    "rust_oatsemolina": {
+      "name": "Rust Oatsemolina",
+      "desc": "A dry oatsemolina south of the apitong. Packed rust coats oatsemolina.",
+      "brief": "Dry oatsemolina, packed rust.",
+      "exits": { "north": { "to": "rust_apitong" } },
+      "actions": [
+        {
+          "id": "pinch_oatsemolina",
+          "label": "pinch the oatsemolina",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatsemolina. They packed it on the apitong and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_dao": {
       "name": "Rust Dao",
       "desc": "A dry dao east of the apitong. Packed rust coats dao.",
       "brief": "Dry dao, packed rust.",
-      "exits": { "west": { "to": "rust_apitong" }, "east": { "to": "rust_alpineash" } },
+      "exits": { "west": { "to": "rust_apitong" }, "east": { "to": "rust_alpineash" }, "south": { "to": "rust_ryesemolina" } },
       "actions": [
         {
           "id": "pinch_dao",
@@ -22086,6 +22120,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dao. They packed it on the apitong and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ryesemolina": {
+      "name": "Rust Ryesemolina",
+      "desc": "A dry ryesemolina south of the dao. Packed rust coats ryesemolina.",
+      "brief": "Dry ryesemolina, packed rust.",
+      "exits": { "north": { "to": "rust_dao" } },
+      "actions": [
+        {
+          "id": "pinch_ryesemolina",
+          "label": "pinch the ryesemolina",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryesemolina. They packed it on the dao and packed rust around it."]
           ]
         }
       ]
@@ -22145,7 +22196,7 @@
       "name": "Rust Stay",
       "desc": "A dry stay east of the pommel. Packed rust coats a stay.",
       "brief": "Dry stay, packed rust.",
-      "exits": { "west": { "to": "rust_pommel" }, "east": { "to": "rust_shortsplice" } },
+      "exits": { "west": { "to": "rust_pommel" }, "east": { "to": "rust_shortsplice" }, "south": { "to": "rust_wheatmidds" } },
       "actions": [
         {
           "id": "pinch_stay",
@@ -22158,11 +22209,28 @@
         }
       ]
     },
+    "rust_wheatmidds": {
+      "name": "Rust Wheatmidds",
+      "desc": "A dry wheatmidds south of the stay. Packed rust coats wheatmidds.",
+      "brief": "Dry wheatmidds, packed rust.",
+      "exits": { "north": { "to": "rust_stay" } },
+      "actions": [
+        {
+          "id": "pinch_wheatmidds",
+          "label": "pinch the wheatmidds",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatmidds. They packed it on the stay and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_shortsplice": {
       "name": "Rust Shortsplice",
       "desc": "A dry shortsplice east of the stay. Packed rust coats a shortsplice.",
       "brief": "Dry shortsplice, packed rust.",
-      "exits": { "west": { "to": "rust_stay" }, "east": { "to": "rust_bubinga" } },
+      "exits": { "west": { "to": "rust_stay" }, "east": { "to": "rust_bubinga" }, "south": { "to": "rust_cornbranflake" } },
       "actions": [
         {
           "id": "pinch_shortsplice",
@@ -22175,11 +22243,28 @@
         }
       ]
     },
+    "rust_cornbranflake": {
+      "name": "Rust Cornbranflake",
+      "desc": "A dry cornbranflake south of the shortsplice. Packed rust coats cornbranflake.",
+      "brief": "Dry cornbranflake, packed rust.",
+      "exits": { "north": { "to": "rust_shortsplice" } },
+      "actions": [
+        {
+          "id": "pinch_cornbranflake",
+          "label": "pinch the cornbranflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbranflake. They packed it on the shortsplice and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bubinga": {
       "name": "Rust Bubinga",
       "desc": "A dry bubinga east of the shortsplice. Packed rust coats bubinga.",
       "brief": "Dry bubinga, packed rust.",
-      "exits": { "west": { "to": "rust_shortsplice" }, "east": { "to": "rust_obeche" } },
+      "exits": { "west": { "to": "rust_shortsplice" }, "east": { "to": "rust_obeche" }, "south": { "to": "rust_branflake" } },
       "actions": [
         {
           "id": "pinch_bubinga",
@@ -22192,11 +22277,28 @@
         }
       ]
     },
+    "rust_branflake": {
+      "name": "Rust Branflake",
+      "desc": "A dry branflake south of the bubinga. Packed rust coats branflake.",
+      "brief": "Dry branflake, packed rust.",
+      "exits": { "north": { "to": "rust_bubinga" } },
+      "actions": [
+        {
+          "id": "pinch_branflake",
+          "label": "pinch the branflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard branflake. They packed it on the bubinga and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_obeche": {
       "name": "Rust Obeche",
       "desc": "A dry obeche east of the bubinga. Packed rust coats obeche.",
       "brief": "Dry obeche, packed rust.",
-      "exits": { "west": { "to": "rust_bubinga" }, "east": { "to": "rust_gmelina" } },
+      "exits": { "west": { "to": "rust_bubinga" }, "east": { "to": "rust_gmelina" }, "south": { "to": "rust_oatflakebran" } },
       "actions": [
         {
           "id": "pinch_obeche",
@@ -22209,11 +22311,28 @@
         }
       ]
     },
+    "rust_oatflakebran": {
+      "name": "Rust Oatflakebran",
+      "desc": "A dry oatflakebran south of the obeche. Packed rust coats oatflakebran.",
+      "brief": "Dry oatflakebran, packed rust.",
+      "exits": { "north": { "to": "rust_obeche" } },
+      "actions": [
+        {
+          "id": "pinch_oatflakebran",
+          "label": "pinch the oatflakebran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatflakebran. They packed it on the obeche and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_gmelina": {
       "name": "Rust Gmelina",
       "desc": "A dry gmelina east of the obeche. Packed rust coats gmelina.",
       "brief": "Dry gmelina, packed rust.",
-      "exits": { "west": { "to": "rust_obeche" }, "east": { "to": "rust_marupa" } },
+      "exits": { "west": { "to": "rust_obeche" }, "east": { "to": "rust_marupa" }, "south": { "to": "rust_ryeberrymeal" } },
       "actions": [
         {
           "id": "pinch_gmelina",
@@ -22222,6 +22341,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gmelina. They packed it on the obeche and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ryeberrymeal": {
+      "name": "Rust Ryeberrymeal",
+      "desc": "A dry ryeberrymeal south of the gmelina. Packed rust coats ryeberrymeal.",
+      "brief": "Dry ryeberrymeal, packed rust.",
+      "exits": { "north": { "to": "rust_gmelina" } },
+      "actions": [
+        {
+          "id": "pinch_ryeberrymeal",
+          "label": "pinch the ryeberrymeal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryeberrymeal. They packed it on the gmelina and packed rust around it."]
           ]
         }
       ]
@@ -40809,10 +40945,19 @@
     "pinch the jatoba",
     "go east",
     "pinch the muiracatiara",
+    "go south",
+    "pinch the cornsemolina",
+    "go north",
     "go east",
     "pinch the apitong",
+    "go south",
+    "pinch the oatsemolina",
+    "go north",
     "go east",
     "pinch the dao",
+    "go south",
+    "pinch the ryesemolina",
+    "go north",
     "go east",
     "pinch the alpineash",
     "go west",
@@ -40831,14 +40976,29 @@
     "go east",
     "go east",
     "pinch the stay",
+    "go south",
+    "pinch the wheatmidds",
+    "go north",
     "go east",
     "pinch the shortsplice",
+    "go south",
+    "pinch the cornbranflake",
+    "go north",
     "go east",
     "pinch the bubinga",
+    "go south",
+    "pinch the branflake",
+    "go north",
     "go east",
     "pinch the obeche",
+    "go south",
+    "pinch the oatflakebran",
+    "go north",
     "go east",
     "pinch the gmelina",
+    "go south",
+    "pinch the ryeberrymeal",
+    "go north",
     "go east",
     "pinch the marupa",
     "go south",
