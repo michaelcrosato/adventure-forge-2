@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11370,
+  "maxScore": 11410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -19646,7 +19646,7 @@
       "name": "Rust Arjun",
       "desc": "A dry arjun east of the sesendok. Packed rust coats arjun.",
       "brief": "Dry arjun, packed rust.",
-      "exits": { "west": { "to": "rust_sesendok" }, "east": { "to": "rust_ironbark" } },
+      "exits": { "west": { "to": "rust_sesendok" }, "east": { "to": "rust_ironbark" }, "south": { "to": "rust_sorghumoffal" } },
       "actions": [
         {
           "id": "pinch_arjun",
@@ -19655,6 +19655,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard arjun. They packed it on the sesendok and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumoffal": {
+      "name": "Rust Sorghumoffal",
+      "desc": "A dry sorghumoffal south of the arjun. Packed rust coats sorghumoffal.",
+      "brief": "Dry sorghumoffal, packed rust.",
+      "exits": { "north": { "to": "rust_arjun" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumoffal",
+          "label": "pinch the sorghumoffal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumoffal. They packed it on the arjun and packed rust around it."]
           ]
         }
       ]
@@ -19714,7 +19731,7 @@
       "name": "Rust Reeving",
       "desc": "A dry reeving east of the trunnel. Packed rust coats reeving.",
       "brief": "Dry reeving, packed rust.",
-      "exits": { "west": { "to": "rust_trunnel" }, "east": { "to": "rust_ambergris" } },
+      "exits": { "west": { "to": "rust_trunnel" }, "east": { "to": "rust_ambergris" }, "south": { "to": "rust_milletoffal" } },
       "actions": [
         {
           "id": "pinch_reeving",
@@ -19727,11 +19744,28 @@
         }
       ]
     },
+    "rust_milletoffal": {
+      "name": "Rust Milletoffal",
+      "desc": "A dry milletoffal south of the reeving. Packed rust coats milletoffal.",
+      "brief": "Dry milletoffal, packed rust.",
+      "exits": { "north": { "to": "rust_reeving" } },
+      "actions": [
+        {
+          "id": "pinch_milletoffal",
+          "label": "pinch the milletoffal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletoffal. They packed it on the reeving and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ambergris": {
       "name": "Rust Ambergris",
       "desc": "A dry ambergris east of the reeving. Packed rust coats ambergris.",
       "brief": "Dry ambergris, packed rust.",
-      "exits": { "west": { "to": "rust_reeving" }, "east": { "to": "rust_framire" } },
+      "exits": { "west": { "to": "rust_reeving" }, "east": { "to": "rust_framire" }, "south": { "to": "rust_cornoffal" } },
       "actions": [
         {
           "id": "pinch_ambergris",
@@ -19744,11 +19778,28 @@
         }
       ]
     },
+    "rust_cornoffal": {
+      "name": "Rust Cornoffal",
+      "desc": "A dry cornoffal south of the ambergris. Packed rust coats cornoffal.",
+      "brief": "Dry cornoffal, packed rust.",
+      "exits": { "north": { "to": "rust_ambergris" } },
+      "actions": [
+        {
+          "id": "pinch_cornoffal",
+          "label": "pinch the cornoffal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornoffal. They packed it on the ambergris and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_framire": {
       "name": "Rust Framire",
       "desc": "A dry framire east of the ambergris. Packed rust coats framire.",
       "brief": "Dry framire, packed rust.",
-      "exits": { "west": { "to": "rust_ambergris" }, "east": { "to": "rust_peroba" } },
+      "exits": { "west": { "to": "rust_ambergris" }, "east": { "to": "rust_peroba" }, "south": { "to": "rust_oatoffal" } },
       "actions": [
         {
           "id": "pinch_framire",
@@ -19761,11 +19812,28 @@
         }
       ]
     },
+    "rust_oatoffal": {
+      "name": "Rust Oatoffal",
+      "desc": "A dry oatoffal south of the framire. Packed rust coats oatoffal.",
+      "brief": "Dry oatoffal, packed rust.",
+      "exits": { "north": { "to": "rust_framire" } },
+      "actions": [
+        {
+          "id": "pinch_oatoffal",
+          "label": "pinch the oatoffal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatoffal. They packed it on the framire and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_peroba": {
       "name": "Rust Peroba",
       "desc": "A dry peroba east of the framire. Packed rust coats peroba.",
       "brief": "Dry peroba, packed rust.",
-      "exits": { "west": { "to": "rust_framire" }, "east": { "to": "rust_nargusta" } },
+      "exits": { "west": { "to": "rust_framire" }, "east": { "to": "rust_nargusta" }, "south": { "to": "rust_ryeoffal" } },
       "actions": [
         {
           "id": "pinch_peroba",
@@ -19778,11 +19846,28 @@
         }
       ]
     },
+    "rust_ryeoffal": {
+      "name": "Rust Ryeoffal",
+      "desc": "A dry ryeoffal south of the peroba. Packed rust coats ryeoffal.",
+      "brief": "Dry ryeoffal, packed rust.",
+      "exits": { "north": { "to": "rust_peroba" } },
+      "actions": [
+        {
+          "id": "pinch_ryeoffal",
+          "label": "pinch the ryeoffal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryeoffal. They packed it on the peroba and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_nargusta": {
       "name": "Rust Nargusta",
       "desc": "A dry nargusta east of the peroba. Packed rust coats nargusta.",
       "brief": "Dry nargusta, packed rust.",
-      "exits": { "west": { "to": "rust_peroba" }, "east": { "to": "rust_merawan" } },
+      "exits": { "west": { "to": "rust_peroba" }, "east": { "to": "rust_merawan" }, "south": { "to": "rust_wheatoffal" } },
       "actions": [
         {
           "id": "pinch_nargusta",
@@ -19795,11 +19880,28 @@
         }
       ]
     },
+    "rust_wheatoffal": {
+      "name": "Rust Wheatoffal",
+      "desc": "A dry wheatoffal south of the nargusta. Packed rust coats wheatoffal.",
+      "brief": "Dry wheatoffal, packed rust.",
+      "exits": { "north": { "to": "rust_nargusta" } },
+      "actions": [
+        {
+          "id": "pinch_wheatoffal",
+          "label": "pinch the wheatoffal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatoffal. They packed it on the nargusta and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_merawan": {
       "name": "Rust Merawan",
       "desc": "A dry merawan east of the nargusta. Packed rust coats merawan.",
       "brief": "Dry merawan, packed rust.",
-      "exits": { "west": { "to": "rust_nargusta" }, "east": { "to": "rust_terap" } },
+      "exits": { "west": { "to": "rust_nargusta" }, "east": { "to": "rust_terap" }, "south": { "to": "rust_durumscreenings" } },
       "actions": [
         {
           "id": "pinch_merawan",
@@ -19812,11 +19914,28 @@
         }
       ]
     },
+    "rust_durumscreenings": {
+      "name": "Rust Durumscreenings",
+      "desc": "A dry durumscreenings south of the merawan. Packed rust coats durumscreenings.",
+      "brief": "Dry durumscreenings, packed rust.",
+      "exits": { "north": { "to": "rust_merawan" } },
+      "actions": [
+        {
+          "id": "pinch_durumscreenings",
+          "label": "pinch the durumscreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumscreenings. They packed it on the merawan and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_terap": {
       "name": "Rust Terap",
       "desc": "A dry terap east of the merawan. Packed rust coats terap.",
       "brief": "Dry terap, packed rust.",
-      "exits": { "west": { "to": "rust_merawan" }, "east": { "to": "rust_palash" } },
+      "exits": { "west": { "to": "rust_merawan" }, "east": { "to": "rust_palash" }, "south": { "to": "rust_fonioscreenings" } },
       "actions": [
         {
           "id": "pinch_terap",
@@ -19825,6 +19944,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard terap. They packed it on the merawan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioscreenings": {
+      "name": "Rust Fonioscreenings",
+      "desc": "A dry fonioscreenings south of the terap. Packed rust coats fonioscreenings.",
+      "brief": "Dry fonioscreenings, packed rust.",
+      "exits": { "north": { "to": "rust_terap" } },
+      "actions": [
+        {
+          "id": "pinch_fonioscreenings",
+          "label": "pinch the fonioscreenings",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioscreenings. They packed it on the terap and packed rust around it."]
           ]
         }
       ]
@@ -42053,6 +42189,9 @@
     "pinch the sesendok",
     "go east",
     "pinch the arjun",
+    "go south",
+    "pinch the sorghumoffal",
+    "go north",
     "go east",
     "pinch the ironbark",
     "go west",
@@ -42071,18 +42210,39 @@
     "pinch the trunnel",
     "go east",
     "pinch the reeving",
+    "go south",
+    "pinch the milletoffal",
+    "go north",
     "go east",
     "pinch the ambergris",
+    "go south",
+    "pinch the cornoffal",
+    "go north",
     "go east",
     "pinch the framire",
+    "go south",
+    "pinch the oatoffal",
+    "go north",
     "go east",
     "pinch the peroba",
+    "go south",
+    "pinch the ryeoffal",
+    "go north",
     "go east",
     "pinch the nargusta",
+    "go south",
+    "pinch the wheatoffal",
+    "go north",
     "go east",
     "pinch the merawan",
+    "go south",
+    "pinch the durumscreenings",
+    "go north",
     "go east",
     "pinch the terap",
+    "go south",
+    "pinch the fonioscreenings",
+    "go north",
     "go east",
     "pinch the palash",
     "go south",
