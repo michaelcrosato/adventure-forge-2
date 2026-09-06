@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14050,
+  "maxScore": 14090,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -29183,7 +29183,7 @@
       "name": "Rust Kapur",
       "desc": "A dry kapur east of the arariba. Packed rust coats kapur.",
       "brief": "Dry kapur, packed rust.",
-      "exits": { "west": { "to": "rust_arariba" }, "east": { "to": "rust_gerutu" }, "south": { "to": "rust_foniogroat" } },
+      "exits": { "west": { "to": "rust_arariba" }, "east": { "to": "rust_gerutu" }, "south": { "to": "rust_foniogroat" }, "north": { "to": "rust_durumbasin" } },
       "actions": [
         {
           "id": "pinch_kapur",
@@ -29192,6 +29192,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kapur. They packed it on the arariba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbasin": {
+      "name": "Rust Durumbasin",
+      "desc": "A dry durumbasin north of the kapur. Packed rust coats durumbasin.",
+      "brief": "Dry durumbasin, packed rust.",
+      "exits": { "south": { "to": "rust_kapur" } },
+      "actions": [
+        {
+          "id": "pinch_durumbasin",
+          "label": "pinch the durumbasin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbasin. They packed it on the kapur and packed rust around it."]
           ]
         }
       ]
@@ -29217,7 +29234,7 @@
       "name": "Rust Gerutu",
       "desc": "A dry gerutu east of the kapur. Packed rust coats gerutu.",
       "brief": "Dry gerutu, packed rust.",
-      "exits": { "west": { "to": "rust_kapur" }, "east": { "to": "rust_salwood" }, "south": { "to": "rust_teffgroat" } },
+      "exits": { "west": { "to": "rust_kapur" }, "east": { "to": "rust_salwood" }, "south": { "to": "rust_teffgroat" }, "north": { "to": "rust_foniobasin" } },
       "actions": [
         {
           "id": "pinch_gerutu",
@@ -29226,6 +29243,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gerutu. They packed it on the kapur and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobasin": {
+      "name": "Rust Foniobasin",
+      "desc": "A dry foniobasin north of the gerutu. Packed rust coats foniobasin.",
+      "brief": "Dry foniobasin, packed rust.",
+      "exits": { "south": { "to": "rust_gerutu" } },
+      "actions": [
+        {
+          "id": "pinch_foniobasin",
+          "label": "pinch the foniobasin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobasin. They packed it on the gerutu and packed rust around it."]
           ]
         }
       ]
@@ -29268,7 +29302,7 @@
       "name": "Rust Deadwood",
       "desc": "A dry deadwood east of the duct. Packed rust coats deadwood.",
       "brief": "Dry deadwood, packed rust.",
-      "exits": { "west": { "to": "rust_duct" }, "east": { "to": "rust_lateen" }, "south": { "to": "rust_wheatgroat" } },
+      "exits": { "west": { "to": "rust_duct" }, "east": { "to": "rust_lateen" }, "south": { "to": "rust_wheatgroat" }, "north": { "to": "rust_teffbasin" } },
       "actions": [
         {
           "id": "pinch_deadwood",
@@ -29277,6 +29311,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard deadwood. They chocked it in the duct and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbasin": {
+      "name": "Rust Teffbasin",
+      "desc": "A dry teffbasin north of the deadwood. Packed rust coats teffbasin.",
+      "brief": "Dry teffbasin, packed rust.",
+      "exits": { "south": { "to": "rust_deadwood" } },
+      "actions": [
+        {
+          "id": "pinch_teffbasin",
+          "label": "pinch the teffbasin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbasin. They packed it on the deadwood and packed rust around it."]
           ]
         }
       ]
@@ -29302,7 +29353,7 @@
       "name": "Rust Lateen",
       "desc": "A dry lateen east of the deadwood. Packed rust coats a lateen.",
       "brief": "Dry lateen, packed rust.",
-      "exits": { "west": { "to": "rust_deadwood" }, "east": { "to": "rust_slings" }, "south": { "to": "rust_oatgroat" } },
+      "exits": { "west": { "to": "rust_deadwood" }, "east": { "to": "rust_slings" }, "south": { "to": "rust_oatgroat" }, "north": { "to": "rust_barleybasin" } },
       "actions": [
         {
           "id": "pinch_lateen",
@@ -29311,6 +29362,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lateen. They laced it on the deadwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybasin": {
+      "name": "Rust Barleybasin",
+      "desc": "A dry barleybasin north of the lateen. Packed rust coats barleybasin.",
+      "brief": "Dry barleybasin, packed rust.",
+      "exits": { "south": { "to": "rust_lateen" } },
+      "actions": [
+        {
+          "id": "pinch_barleybasin",
+          "label": "pinch the barleybasin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybasin. They packed it on the lateen and packed rust around it."]
           ]
         }
       ]
@@ -29336,7 +29404,7 @@
       "name": "Rust Slings",
       "desc": "A dry slings east of the lateen. Packed rust coats slings.",
       "brief": "Dry slings, packed rust.",
-      "exits": { "west": { "to": "rust_lateen" }, "east": { "to": "rust_meranti" }, "south": { "to": "rust_barleygroat" } },
+      "exits": { "west": { "to": "rust_lateen" }, "east": { "to": "rust_meranti" }, "south": { "to": "rust_barleygroat" }, "north": { "to": "rust_sorghumbasin" } },
       "actions": [
         {
           "id": "pinch_slings",
@@ -29345,6 +29413,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard slings. They hung them on the lateen and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbasin": {
+      "name": "Rust Sorghumbasin",
+      "desc": "A dry sorghumbasin north of the slings. Packed rust coats sorghumbasin.",
+      "brief": "Dry sorghumbasin, packed rust.",
+      "exits": { "south": { "to": "rust_slings" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbasin",
+          "label": "pinch the sorghumbasin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbasin. They packed it on the slings and packed rust around it."]
           ]
         }
       ]
@@ -29370,7 +29455,7 @@
       "name": "Rust Meranti",
       "desc": "A dry meranti east of the slings. Packed rust coats meranti.",
       "brief": "Dry meranti, packed rust.",
-      "exits": { "west": { "to": "rust_slings" }, "east": { "to": "rust_tulipwood" }, "south": { "to": "rust_sorghumgroat" } },
+      "exits": { "west": { "to": "rust_slings" }, "east": { "to": "rust_tulipwood" }, "south": { "to": "rust_sorghumgroat" }, "north": { "to": "rust_milletbasin" } },
       "actions": [
         {
           "id": "pinch_meranti",
@@ -29379,6 +29464,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard meranti. They bound it on the slings and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbasin": {
+      "name": "Rust Milletbasin",
+      "desc": "A dry milletbasin north of the meranti. Packed rust coats milletbasin.",
+      "brief": "Dry milletbasin, packed rust.",
+      "exits": { "south": { "to": "rust_meranti" } },
+      "actions": [
+        {
+          "id": "pinch_milletbasin",
+          "label": "pinch the milletbasin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbasin. They packed it on the meranti and packed rust around it."]
           ]
         }
       ]
@@ -29404,7 +29506,7 @@
       "name": "Rust Tulipwood",
       "desc": "A dry tulipwood east of the meranti. Packed rust coats tulipwood.",
       "brief": "Dry tulipwood, packed rust.",
-      "exits": { "west": { "to": "rust_meranti" }, "east": { "to": "rust_tiama" }, "south": { "to": "rust_milletgroat" } },
+      "exits": { "west": { "to": "rust_meranti" }, "east": { "to": "rust_tiama" }, "south": { "to": "rust_milletgroat" }, "north": { "to": "rust_cornbasin" } },
       "actions": [
         {
           "id": "pinch_tulipwood",
@@ -29413,6 +29515,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tulipwood. They packed it on the meranti and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbasin": {
+      "name": "Rust Cornbasin",
+      "desc": "A dry cornbasin north of the tulipwood. Packed rust coats cornbasin.",
+      "brief": "Dry cornbasin, packed rust.",
+      "exits": { "south": { "to": "rust_tulipwood" } },
+      "actions": [
+        {
+          "id": "pinch_cornbasin",
+          "label": "pinch the cornbasin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbasin. They packed it on the tulipwood and packed rust around it."]
           ]
         }
       ]
@@ -29438,7 +29557,7 @@
       "name": "Rust Tiama",
       "desc": "A dry tiama east of the tulipwood. Packed rust coats tiama.",
       "brief": "Dry tiama, packed rust.",
-      "exits": { "west": { "to": "rust_tulipwood" }, "east": { "to": "rust_jequitiba" }, "south": { "to": "rust_triticalegroat" } },
+      "exits": { "west": { "to": "rust_tulipwood" }, "east": { "to": "rust_jequitiba" }, "south": { "to": "rust_triticalegroat" }, "north": { "to": "rust_oatbasin" } },
       "actions": [
         {
           "id": "pinch_tiama",
@@ -29447,6 +29566,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tiama. They packed it on the tulipwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbasin": {
+      "name": "Rust Oatbasin",
+      "desc": "A dry oatbasin north of the tiama. Packed rust coats oatbasin.",
+      "brief": "Dry oatbasin, packed rust.",
+      "exits": { "south": { "to": "rust_tiama" } },
+      "actions": [
+        {
+          "id": "pinch_oatbasin",
+          "label": "pinch the oatbasin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbasin. They packed it on the tiama and packed rust around it."]
           ]
         }
       ]
@@ -52811,11 +52947,17 @@
     "go north",
     "go east",
     "pinch the kapur",
+    "go north",
+    "pinch the durumbasin",
+    "go south",
     "go south",
     "pinch the foniogroat",
     "go north",
     "go east",
     "pinch the gerutu",
+    "go north",
+    "pinch the foniobasin",
+    "go south",
     "go south",
     "pinch the teffgroat",
     "go north",
@@ -52833,31 +52975,49 @@
     "go north",
     "go east",
     "pinch the deadwood",
+    "go north",
+    "pinch the teffbasin",
+    "go south",
     "go south",
     "pinch the wheatgroat",
     "go north",
     "go east",
     "pinch the lateen",
+    "go north",
+    "pinch the barleybasin",
+    "go south",
     "go south",
     "pinch the oatgroat",
     "go north",
     "go east",
     "pinch the slings",
+    "go north",
+    "pinch the sorghumbasin",
+    "go south",
     "go south",
     "pinch the barleygroat",
     "go north",
     "go east",
     "pinch the meranti",
+    "go north",
+    "pinch the milletbasin",
+    "go south",
     "go south",
     "pinch the sorghumgroat",
     "go north",
     "go east",
     "pinch the tulipwood",
+    "go north",
+    "pinch the cornbasin",
+    "go south",
     "go south",
     "pinch the milletgroat",
     "go north",
     "go east",
     "pinch the tiama",
+    "go north",
+    "pinch the oatbasin",
+    "go south",
     "go south",
     "pinch the triticalegroat",
     "go north",
