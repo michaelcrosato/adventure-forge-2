@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14610,
+  "maxScore": 14650,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -24729,7 +24729,7 @@
       "name": "Rust Copaiba",
       "desc": "A dry copaiba east of the houndband. Packed rust coats copaiba.",
       "brief": "Dry copaiba, packed rust.",
-      "exits": { "west": { "to": "rust_houndband" }, "east": { "to": "rust_agba" }, "south": { "to": "rust_milletfeedflake" } },
+      "exits": { "west": { "to": "rust_houndband" }, "east": { "to": "rust_agba" }, "south": { "to": "rust_milletfeedflake" }, "north": { "to": "rust_durumcarboy" } },
       "actions": [
         {
           "id": "pinch_copaiba",
@@ -24738,6 +24738,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard copaiba. They packed it on the houndband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumcarboy": {
+      "name": "Rust Durumcarboy",
+      "desc": "A dry durumcarboy north of the copaiba. Packed rust coats durumcarboy.",
+      "brief": "Dry durumcarboy, packed rust.",
+      "exits": { "south": { "to": "rust_copaiba" } },
+      "actions": [
+        {
+          "id": "pinch_durumcarboy",
+          "label": "pinch the durumcarboy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumcarboy. They packed it on the copaiba and packed rust around it."]
           ]
         }
       ]
@@ -24763,7 +24780,7 @@
       "name": "Rust Agba",
       "desc": "A dry agba east of the copaiba. Packed rust coats agba.",
       "brief": "Dry agba, packed rust.",
-      "exits": { "west": { "to": "rust_copaiba" }, "east": { "to": "rust_pauferro" }, "south": { "to": "rust_cornfeedflake" } },
+      "exits": { "west": { "to": "rust_copaiba" }, "east": { "to": "rust_pauferro" }, "south": { "to": "rust_cornfeedflake" }, "north": { "to": "rust_foniocarboy" } },
       "actions": [
         {
           "id": "pinch_agba",
@@ -24772,6 +24789,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard agba. They packed it on the copaiba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniocarboy": {
+      "name": "Rust Foniocarboy",
+      "desc": "A dry foniocarboy north of the agba. Packed rust coats foniocarboy.",
+      "brief": "Dry foniocarboy, packed rust.",
+      "exits": { "south": { "to": "rust_agba" } },
+      "actions": [
+        {
+          "id": "pinch_foniocarboy",
+          "label": "pinch the foniocarboy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniocarboy. They packed it on the agba and packed rust around it."]
           ]
         }
       ]
@@ -24797,7 +24831,7 @@
       "name": "Rust Pauferro",
       "desc": "A dry pauferro east of the agba. Packed rust coats pauferro.",
       "brief": "Dry pauferro, packed rust.",
-      "exits": { "west": { "to": "rust_agba" }, "east": { "to": "rust_dahoma" }, "south": { "to": "rust_oatfeedflake" } },
+      "exits": { "west": { "to": "rust_agba" }, "east": { "to": "rust_dahoma" }, "south": { "to": "rust_oatfeedflake" }, "north": { "to": "rust_teffcarboy" } },
       "actions": [
         {
           "id": "pinch_pauferro",
@@ -24806,6 +24840,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pauferro. They packed it on the agba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffcarboy": {
+      "name": "Rust Teffcarboy",
+      "desc": "A dry teffcarboy north of the pauferro. Packed rust coats teffcarboy.",
+      "brief": "Dry teffcarboy, packed rust.",
+      "exits": { "south": { "to": "rust_pauferro" } },
+      "actions": [
+        {
+          "id": "pinch_teffcarboy",
+          "label": "pinch the teffcarboy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffcarboy. They packed it on the pauferro and packed rust around it."]
           ]
         }
       ]
@@ -24831,7 +24882,7 @@
       "name": "Rust Dahoma",
       "desc": "A dry dahoma east of the pauferro. Packed rust coats dahoma.",
       "brief": "Dry dahoma, packed rust.",
-      "exits": { "west": { "to": "rust_pauferro" }, "east": { "to": "rust_balau" }, "south": { "to": "rust_ryefeedflake" } },
+      "exits": { "west": { "to": "rust_pauferro" }, "east": { "to": "rust_balau" }, "south": { "to": "rust_ryefeedflake" }, "north": { "to": "rust_barleycarboy" } },
       "actions": [
         {
           "id": "pinch_dahoma",
@@ -24840,6 +24891,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dahoma. They packed it on the pauferro and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleycarboy": {
+      "name": "Rust Barleycarboy",
+      "desc": "A dry barleycarboy north of the dahoma. Packed rust coats barleycarboy.",
+      "brief": "Dry barleycarboy, packed rust.",
+      "exits": { "south": { "to": "rust_dahoma" } },
+      "actions": [
+        {
+          "id": "pinch_barleycarboy",
+          "label": "pinch the barleycarboy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleycarboy. They packed it on the dahoma and packed rust around it."]
           ]
         }
       ]
@@ -24865,7 +24933,7 @@
       "name": "Rust Balau",
       "desc": "A dry balau east of the dahoma. Packed rust coats balau.",
       "brief": "Dry balau, packed rust.",
-      "exits": { "west": { "to": "rust_dahoma" }, "east": { "to": "rust_bagtikan" }, "south": { "to": "rust_wheatfeedflake" } },
+      "exits": { "west": { "to": "rust_dahoma" }, "east": { "to": "rust_bagtikan" }, "south": { "to": "rust_wheatfeedflake" }, "north": { "to": "rust_sorghumcarboy" } },
       "actions": [
         {
           "id": "pinch_balau",
@@ -24874,6 +24942,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard balau. They packed it on the dahoma and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumcarboy": {
+      "name": "Rust Sorghumcarboy",
+      "desc": "A dry sorghumcarboy north of the balau. Packed rust coats sorghumcarboy.",
+      "brief": "Dry sorghumcarboy, packed rust.",
+      "exits": { "south": { "to": "rust_balau" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumcarboy",
+          "label": "pinch the sorghumcarboy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumcarboy. They packed it on the balau and packed rust around it."]
           ]
         }
       ]
@@ -24899,7 +24984,7 @@
       "name": "Rust Bagtikan",
       "desc": "A dry bagtikan east of the balau. Packed rust coats bagtikan.",
       "brief": "Dry bagtikan, packed rust.",
-      "exits": { "west": { "to": "rust_balau" }, "east": { "to": "rust_khair" }, "south": { "to": "rust_durumshorts" } },
+      "exits": { "west": { "to": "rust_balau" }, "east": { "to": "rust_khair" }, "south": { "to": "rust_durumshorts" }, "north": { "to": "rust_milletcarboy" } },
       "actions": [
         {
           "id": "pinch_bagtikan",
@@ -24908,6 +24993,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bagtikan. They packed it on the balau and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletcarboy": {
+      "name": "Rust Milletcarboy",
+      "desc": "A dry milletcarboy north of the bagtikan. Packed rust coats milletcarboy.",
+      "brief": "Dry milletcarboy, packed rust.",
+      "exits": { "south": { "to": "rust_bagtikan" } },
+      "actions": [
+        {
+          "id": "pinch_milletcarboy",
+          "label": "pinch the milletcarboy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletcarboy. They packed it on the bagtikan and packed rust around it."]
           ]
         }
       ]
@@ -25001,7 +25103,7 @@
       "name": "Rust Houseline",
       "desc": "A dry houseline east of the triatic. Packed rust coats a houseline.",
       "brief": "Dry houseline, packed rust.",
-      "exits": { "west": { "to": "rust_triatic" }, "east": { "to": "rust_chainwale" }, "south": { "to": "rust_fonioshorts" } },
+      "exits": { "west": { "to": "rust_triatic" }, "east": { "to": "rust_chainwale" }, "south": { "to": "rust_fonioshorts" }, "north": { "to": "rust_corncarboy" } },
       "actions": [
         {
           "id": "pinch_houseline",
@@ -25010,6 +25112,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard houseline. They rove it on the triatic and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corncarboy": {
+      "name": "Rust Corncarboy",
+      "desc": "A dry corncarboy north of the houseline. Packed rust coats corncarboy.",
+      "brief": "Dry corncarboy, packed rust.",
+      "exits": { "south": { "to": "rust_houseline" } },
+      "actions": [
+        {
+          "id": "pinch_corncarboy",
+          "label": "pinch the corncarboy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corncarboy. They packed it on the houseline and packed rust around it."]
           ]
         }
       ]
@@ -25035,7 +25154,7 @@
       "name": "Rust Chainwale",
       "desc": "A dry chainwale east of the houseline. Packed rust coats a chainwale.",
       "brief": "Dry chainwale, packed rust.",
-      "exits": { "west": { "to": "rust_houseline" }, "east": { "to": "rust_elemi" }, "south": { "to": "rust_teffshorts" } },
+      "exits": { "west": { "to": "rust_houseline" }, "east": { "to": "rust_elemi" }, "south": { "to": "rust_teffshorts" }, "north": { "to": "rust_oatcarboy" } },
       "actions": [
         {
           "id": "pinch_chainwale",
@@ -25044,6 +25163,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chainwale. They plated it on the houseline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatcarboy": {
+      "name": "Rust Oatcarboy",
+      "desc": "A dry oatcarboy north of the chainwale. Packed rust coats oatcarboy.",
+      "brief": "Dry oatcarboy, packed rust.",
+      "exits": { "south": { "to": "rust_chainwale" } },
+      "actions": [
+        {
+          "id": "pinch_oatcarboy",
+          "label": "pinch the oatcarboy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatcarboy. They packed it on the chainwale and packed rust around it."]
           ]
         }
       ]
@@ -53935,31 +54071,49 @@
     "go north",
     "go east",
     "pinch the copaiba",
+    "go north",
+    "pinch the durumcarboy",
+    "go south",
     "go south",
     "pinch the milletfeedflake",
     "go north",
     "go east",
     "pinch the agba",
+    "go north",
+    "pinch the foniocarboy",
+    "go south",
     "go south",
     "pinch the cornfeedflake",
     "go north",
     "go east",
     "pinch the pauferro",
+    "go north",
+    "pinch the teffcarboy",
+    "go south",
     "go south",
     "pinch the oatfeedflake",
     "go north",
     "go east",
     "pinch the dahoma",
+    "go north",
+    "pinch the barleycarboy",
+    "go south",
     "go south",
     "pinch the ryefeedflake",
     "go north",
     "go east",
     "pinch the balau",
+    "go north",
+    "pinch the sorghumcarboy",
+    "go south",
     "go south",
     "pinch the wheatfeedflake",
     "go north",
     "go east",
     "pinch the bagtikan",
+    "go north",
+    "pinch the milletcarboy",
+    "go south",
     "go south",
     "pinch the durumshorts",
     "go north",
@@ -53984,11 +54138,17 @@
     "pinch the triatic",
     "go east",
     "pinch the houseline",
+    "go north",
+    "pinch the corncarboy",
+    "go south",
     "go south",
     "pinch the fonioshorts",
     "go north",
     "go east",
     "pinch the chainwale",
+    "go north",
+    "pinch the oatcarboy",
+    "go south",
     "go south",
     "pinch the teffshorts",
     "go north",
