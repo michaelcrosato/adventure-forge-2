@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12930,
+  "maxScore": 12970,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -38057,7 +38057,7 @@
       "name": "Rust Cable",
       "desc": "A dry cable east of the sailrope. Packed rust coats a cable.",
       "brief": "Dry cable, packed rust.",
-      "exits": { "west": { "to": "rust_sailrope" }, "east": { "to": "rust_shellac" }, "south": { "to": "rust_beetroot" } },
+      "exits": { "west": { "to": "rust_sailrope" }, "east": { "to": "rust_shellac" }, "south": { "to": "rust_beetroot" }, "north": { "to": "rust_durumtin" } },
       "actions": [
         {
           "id": "pinch_cable",
@@ -38066,6 +38066,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cable. They bent it on the sailrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumtin": {
+      "name": "Rust Durumtin",
+      "desc": "A dry durumtin north of the cable. Packed rust coats durumtin.",
+      "brief": "Dry durumtin, packed rust.",
+      "exits": { "south": { "to": "rust_cable" } },
+      "actions": [
+        {
+          "id": "pinch_durumtin",
+          "label": "pinch the durumtin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumtin. They packed it on the cable and packed rust around it."]
           ]
         }
       ]
@@ -38091,7 +38108,7 @@
       "name": "Rust Shellac",
       "desc": "A dry shellac east of the cable. Packed rust coats shellac.",
       "brief": "Dry shellac, packed rust.",
-      "exits": { "west": { "to": "rust_cable" }, "east": { "to": "rust_whitelead" }, "south": { "to": "rust_turnip" } },
+      "exits": { "west": { "to": "rust_cable" }, "east": { "to": "rust_whitelead" }, "south": { "to": "rust_turnip" }, "north": { "to": "rust_foniotin" } },
       "actions": [
         {
           "id": "pinch_shellac",
@@ -38100,6 +38117,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shellac. They brushed it on the cable and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniotin": {
+      "name": "Rust Foniotin",
+      "desc": "A dry foniotin north of the shellac. Packed rust coats foniotin.",
+      "brief": "Dry foniotin, packed rust.",
+      "exits": { "south": { "to": "rust_shellac" } },
+      "actions": [
+        {
+          "id": "pinch_foniotin",
+          "label": "pinch the foniotin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniotin. They packed it on the shellac and packed rust around it."]
           ]
         }
       ]
@@ -38125,7 +38159,7 @@
       "name": "Rust Whitelead",
       "desc": "A dry whitelead east of the shellac. Packed rust coats whitelead.",
       "brief": "Dry whitelead, packed rust.",
-      "exits": { "west": { "to": "rust_shellac" }, "east": { "to": "rust_alder" }, "south": { "to": "rust_parsnip" } },
+      "exits": { "west": { "to": "rust_shellac" }, "east": { "to": "rust_alder" }, "south": { "to": "rust_parsnip" }, "north": { "to": "rust_tefftin" } },
       "actions": [
         {
           "id": "pinch_whitelead",
@@ -38134,6 +38168,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whitelead. They painted it on the shellac and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefftin": {
+      "name": "Rust Tefftin",
+      "desc": "A dry tefftin north of the whitelead. Packed rust coats tefftin.",
+      "brief": "Dry tefftin, packed rust.",
+      "exits": { "south": { "to": "rust_whitelead" } },
+      "actions": [
+        {
+          "id": "pinch_tefftin",
+          "label": "pinch the tefftin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefftin. They packed it on the whitelead and packed rust around it."]
           ]
         }
       ]
@@ -38159,7 +38210,7 @@
       "name": "Rust Alder",
       "desc": "A dry alder east of the whitelead. Packed rust coats alder.",
       "brief": "Dry alder, packed rust.",
-      "exits": { "west": { "to": "rust_whitelead" }, "east": { "to": "rust_ironwood" }, "south": { "to": "rust_celeriac" } },
+      "exits": { "west": { "to": "rust_whitelead" }, "east": { "to": "rust_ironwood" }, "south": { "to": "rust_celeriac" }, "north": { "to": "rust_barleytin" } },
       "actions": [
         {
           "id": "pinch_alder",
@@ -38168,6 +38219,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard alder. They packed it on the whitelead and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleytin": {
+      "name": "Rust Barleytin",
+      "desc": "A dry barleytin north of the alder. Packed rust coats barleytin.",
+      "brief": "Dry barleytin, packed rust.",
+      "exits": { "south": { "to": "rust_alder" } },
+      "actions": [
+        {
+          "id": "pinch_barleytin",
+          "label": "pinch the barleytin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleytin. They packed it on the alder and packed rust around it."]
           ]
         }
       ]
@@ -38193,7 +38261,7 @@
       "name": "Rust Ironwood",
       "desc": "A dry ironwood east of the alder. Packed rust coats ironwood.",
       "brief": "Dry ironwood, packed rust.",
-      "exits": { "west": { "to": "rust_alder" }, "east": { "to": "rust_mica" }, "south": { "to": "rust_ramson" } },
+      "exits": { "west": { "to": "rust_alder" }, "east": { "to": "rust_mica" }, "south": { "to": "rust_ramson" }, "north": { "to": "rust_sorghumtin" } },
       "actions": [
         {
           "id": "pinch_ironwood",
@@ -38202,6 +38270,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ironwood. They packed it on the alder and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumtin": {
+      "name": "Rust Sorghumtin",
+      "desc": "A dry sorghumtin north of the ironwood. Packed rust coats sorghumtin.",
+      "brief": "Dry sorghumtin, packed rust.",
+      "exits": { "south": { "to": "rust_ironwood" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumtin",
+          "label": "pinch the sorghumtin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumtin. They packed it on the ironwood and packed rust around it."]
           ]
         }
       ]
@@ -38227,7 +38312,7 @@
       "name": "Rust Mica",
       "desc": "A dry mica east of the ironwood. Packed rust coats mica.",
       "brief": "Dry mica, packed rust.",
-      "exits": { "west": { "to": "rust_ironwood" }, "east": { "to": "rust_willemite" }, "south": { "to": "rust_scallion" } },
+      "exits": { "west": { "to": "rust_ironwood" }, "east": { "to": "rust_willemite" }, "south": { "to": "rust_scallion" }, "north": { "to": "rust_millettin" } },
       "actions": [
         {
           "id": "pinch_mica",
@@ -38236,6 +38321,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mica. They packed it on the ironwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millettin": {
+      "name": "Rust Millettin",
+      "desc": "A dry millettin north of the mica. Packed rust coats millettin.",
+      "brief": "Dry millettin, packed rust.",
+      "exits": { "south": { "to": "rust_mica" } },
+      "actions": [
+        {
+          "id": "pinch_millettin",
+          "label": "pinch the millettin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millettin. They packed it on the mica and packed rust around it."]
           ]
         }
       ]
@@ -38261,7 +38363,7 @@
       "name": "Rust Willemite",
       "desc": "A dry willemite east of the mica. Packed rust coats willemite.",
       "brief": "Dry willemite, packed rust.",
-      "exits": { "west": { "to": "rust_mica" }, "east": { "to": "rust_gahnite" }, "south": { "to": "rust_leek" } },
+      "exits": { "west": { "to": "rust_mica" }, "east": { "to": "rust_gahnite" }, "south": { "to": "rust_leek" }, "north": { "to": "rust_corntin" } },
       "actions": [
         {
           "id": "pinch_willemite",
@@ -38270,6 +38372,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard willemite. They packed it on the mica and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corntin": {
+      "name": "Rust Corntin",
+      "desc": "A dry corntin north of the willemite. Packed rust coats corntin.",
+      "brief": "Dry corntin, packed rust.",
+      "exits": { "south": { "to": "rust_willemite" } },
+      "actions": [
+        {
+          "id": "pinch_corntin",
+          "label": "pinch the corntin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corntin. They packed it on the willemite and packed rust around it."]
           ]
         }
       ]
@@ -38312,7 +38431,7 @@
       "name": "Rust Boom",
       "desc": "A dry boom east of the fang. Packed rust coats a boom.",
       "brief": "Dry boom, packed rust.",
-      "exits": { "west": { "to": "rust_fang" }, "east": { "to": "rust_serving" }, "south": { "to": "rust_sorrel" } },
+      "exits": { "west": { "to": "rust_fang" }, "east": { "to": "rust_serving" }, "south": { "to": "rust_sorrel" }, "north": { "to": "rust_oattin" } },
       "actions": [
         {
           "id": "pinch_boom",
@@ -38321,6 +38440,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boom. They swung it off the fang and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oattin": {
+      "name": "Rust Oattin",
+      "desc": "A dry oattin north of the boom. Packed rust coats oattin.",
+      "brief": "Dry oattin, packed rust.",
+      "exits": { "south": { "to": "rust_boom" } },
+      "actions": [
+        {
+          "id": "pinch_oattin",
+          "label": "pinch the oattin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oattin. They packed it on the boom and packed rust around it."]
           ]
         }
       ]
@@ -50572,36 +50708,57 @@
     "go north",
     "go east",
     "pinch the cable",
+    "go north",
+    "pinch the durumtin",
+    "go south",
     "go south",
     "pinch the beetroot",
     "go north",
     "go east",
     "pinch the shellac",
+    "go north",
+    "pinch the foniotin",
+    "go south",
     "go south",
     "pinch the turnip",
     "go north",
     "go east",
     "pinch the whitelead",
+    "go north",
+    "pinch the tefftin",
+    "go south",
     "go south",
     "pinch the parsnip",
     "go north",
     "go east",
     "pinch the alder",
+    "go north",
+    "pinch the barleytin",
+    "go south",
     "go south",
     "pinch the celeriac",
     "go north",
     "go east",
     "pinch the ironwood",
+    "go north",
+    "pinch the sorghumtin",
+    "go south",
     "go south",
     "pinch the ramson",
     "go north",
     "go east",
     "pinch the mica",
+    "go north",
+    "pinch the millettin",
+    "go south",
     "go south",
     "pinch the scallion",
     "go north",
     "go east",
     "pinch the willemite",
+    "go north",
+    "pinch the corntin",
+    "go south",
     "go south",
     "pinch the leek",
     "go north",
@@ -50620,6 +50777,9 @@
     "go north",
     "go east",
     "pinch the boom",
+    "go north",
+    "pinch the oattin",
+    "go south",
     "go south",
     "pinch the sorrel",
     "go north",
