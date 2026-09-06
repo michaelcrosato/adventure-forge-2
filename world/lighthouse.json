@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11090,
+  "maxScore": 11130,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -21142,7 +21142,7 @@
       "name": "Rust Opepe",
       "desc": "A dry opepe east of the mastic. Packed rust coats opepe.",
       "brief": "Dry opepe, packed rust.",
-      "exits": { "west": { "to": "rust_mastic" }, "east": { "to": "rust_tatajuba" } },
+      "exits": { "west": { "to": "rust_mastic" }, "east": { "to": "rust_tatajuba" }, "south": { "to": "rust_barleybranflake" } },
       "actions": [
         {
           "id": "pinch_opepe",
@@ -21155,11 +21155,28 @@
         }
       ]
     },
+    "rust_barleybranflake": {
+      "name": "Rust Barleybranflake",
+      "desc": "A dry barleybranflake south of the opepe. Packed rust coats barleybranflake.",
+      "brief": "Dry barleybranflake, packed rust.",
+      "exits": { "north": { "to": "rust_opepe" } },
+      "actions": [
+        {
+          "id": "pinch_barleybranflake",
+          "label": "pinch the barleybranflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybranflake. They packed it on the opepe and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tatajuba": {
       "name": "Rust Tatajuba",
       "desc": "A dry tatajuba east of the opepe. Packed rust coats tatajuba.",
       "brief": "Dry tatajuba, packed rust.",
-      "exits": { "west": { "to": "rust_opepe" }, "east": { "to": "rust_quaruba" } },
+      "exits": { "west": { "to": "rust_opepe" }, "east": { "to": "rust_quaruba" }, "south": { "to": "rust_sorghumbranflake" } },
       "actions": [
         {
           "id": "pinch_tatajuba",
@@ -21172,11 +21189,28 @@
         }
       ]
     },
+    "rust_sorghumbranflake": {
+      "name": "Rust Sorghumbranflake",
+      "desc": "A dry sorghumbranflake south of the tatajuba. Packed rust coats sorghumbranflake.",
+      "brief": "Dry sorghumbranflake, packed rust.",
+      "exits": { "north": { "to": "rust_tatajuba" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbranflake",
+          "label": "pinch the sorghumbranflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbranflake. They packed it on the tatajuba and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_quaruba": {
       "name": "Rust Quaruba",
       "desc": "A dry quaruba east of the tatajuba. Packed rust coats quaruba.",
       "brief": "Dry quaruba, packed rust.",
-      "exits": { "west": { "to": "rust_tatajuba" }, "east": { "to": "rust_kamagong" } },
+      "exits": { "west": { "to": "rust_tatajuba" }, "east": { "to": "rust_kamagong" }, "south": { "to": "rust_milletbranflake" } },
       "actions": [
         {
           "id": "pinch_quaruba",
@@ -21185,6 +21219,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard quaruba. They packed it on the tatajuba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbranflake": {
+      "name": "Rust Milletbranflake",
+      "desc": "A dry milletbranflake south of the quaruba. Packed rust coats milletbranflake.",
+      "brief": "Dry milletbranflake, packed rust.",
+      "exits": { "north": { "to": "rust_quaruba" } },
+      "actions": [
+        {
+          "id": "pinch_milletbranflake",
+          "label": "pinch the milletbranflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbranflake. They packed it on the quaruba and packed rust around it."]
           ]
         }
       ]
@@ -21261,7 +21312,7 @@
       "name": "Rust Earing",
       "desc": "A dry earing east of the jumper. Packed rust coats an earing.",
       "brief": "Dry earing, packed rust.",
-      "exits": { "west": { "to": "rust_jumper" }, "east": { "to": "rust_jigger" } },
+      "exits": { "west": { "to": "rust_jumper" }, "east": { "to": "rust_jigger" }, "south": { "to": "rust_oatbranflake" } },
       "actions": [
         {
           "id": "pinch_earing",
@@ -21274,11 +21325,28 @@
         }
       ]
     },
+    "rust_oatbranflake": {
+      "name": "Rust Oatbranflake",
+      "desc": "A dry oatbranflake south of the earing. Packed rust coats oatbranflake.",
+      "brief": "Dry oatbranflake, packed rust.",
+      "exits": { "north": { "to": "rust_earing" } },
+      "actions": [
+        {
+          "id": "pinch_oatbranflake",
+          "label": "pinch the oatbranflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbranflake. They packed it on the earing and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_jigger": {
       "name": "Rust Jigger",
       "desc": "A dry jigger east of the earing. Packed rust coats a jigger.",
       "brief": "Dry jigger, packed rust.",
-      "exits": { "west": { "to": "rust_earing" }, "east": { "to": "rust_jelutong" } },
+      "exits": { "west": { "to": "rust_earing" }, "east": { "to": "rust_jelutong" }, "south": { "to": "rust_ryebranflake" } },
       "actions": [
         {
           "id": "pinch_jigger",
@@ -21291,11 +21359,28 @@
         }
       ]
     },
+    "rust_ryebranflake": {
+      "name": "Rust Ryebranflake",
+      "desc": "A dry ryebranflake south of the jigger. Packed rust coats ryebranflake.",
+      "brief": "Dry ryebranflake, packed rust.",
+      "exits": { "north": { "to": "rust_jigger" } },
+      "actions": [
+        {
+          "id": "pinch_ryebranflake",
+          "label": "pinch the ryebranflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryebranflake. They packed it on the jigger and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_jelutong": {
       "name": "Rust Jelutong",
       "desc": "A dry jelutong east of the jigger. Packed rust coats jelutong.",
       "brief": "Dry jelutong, packed rust.",
-      "exits": { "west": { "to": "rust_jigger" }, "east": { "to": "rust_danta" } },
+      "exits": { "west": { "to": "rust_jigger" }, "east": { "to": "rust_danta" }, "south": { "to": "rust_wheatbranflake" } },
       "actions": [
         {
           "id": "pinch_jelutong",
@@ -21308,11 +21393,28 @@
         }
       ]
     },
+    "rust_wheatbranflake": {
+      "name": "Rust Wheatbranflake",
+      "desc": "A dry wheatbranflake south of the jelutong. Packed rust coats wheatbranflake.",
+      "brief": "Dry wheatbranflake, packed rust.",
+      "exits": { "north": { "to": "rust_jelutong" } },
+      "actions": [
+        {
+          "id": "pinch_wheatbranflake",
+          "label": "pinch the wheatbranflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatbranflake. They packed it on the jelutong and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_danta": {
       "name": "Rust Danta",
       "desc": "A dry danta east of the jelutong. Packed rust coats danta.",
       "brief": "Dry danta, packed rust.",
-      "exits": { "west": { "to": "rust_jelutong" }, "east": { "to": "rust_courbaril" } },
+      "exits": { "west": { "to": "rust_jelutong" }, "east": { "to": "rust_courbaril" }, "south": { "to": "rust_durumpollard" } },
       "actions": [
         {
           "id": "pinch_danta",
@@ -21325,11 +21427,28 @@
         }
       ]
     },
+    "rust_durumpollard": {
+      "name": "Rust Durumpollard",
+      "desc": "A dry durumpollard south of the danta. Packed rust coats durumpollard.",
+      "brief": "Dry durumpollard, packed rust.",
+      "exits": { "north": { "to": "rust_danta" } },
+      "actions": [
+        {
+          "id": "pinch_durumpollard",
+          "label": "pinch the durumpollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumpollard. They packed it on the danta and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_courbaril": {
       "name": "Rust Courbaril",
       "desc": "A dry courbaril east of the danta. Packed rust coats courbaril.",
       "brief": "Dry courbaril, packed rust.",
-      "exits": { "west": { "to": "rust_danta" }, "east": { "to": "rust_cedrorosa" } },
+      "exits": { "west": { "to": "rust_danta" }, "east": { "to": "rust_cedrorosa" }, "south": { "to": "rust_foniopollard" } },
       "actions": [
         {
           "id": "pinch_courbaril",
@@ -21338,6 +21457,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard courbaril. They packed it on the danta and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniopollard": {
+      "name": "Rust Foniopollard",
+      "desc": "A dry foniopollard south of the courbaril. Packed rust coats foniopollard.",
+      "brief": "Dry foniopollard, packed rust.",
+      "exits": { "north": { "to": "rust_courbaril" } },
+      "actions": [
+        {
+          "id": "pinch_foniopollard",
+          "label": "pinch the foniopollard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniopollard. They packed it on the courbaril and packed rust around it."]
           ]
         }
       ]
@@ -41332,10 +41468,19 @@
     "pinch the mastic",
     "go east",
     "pinch the opepe",
+    "go south",
+    "pinch the barleybranflake",
+    "go north",
     "go east",
     "pinch the tatajuba",
+    "go south",
+    "pinch the sorghumbranflake",
+    "go north",
     "go east",
     "pinch the quaruba",
+    "go south",
+    "pinch the milletbranflake",
+    "go north",
     "go east",
     "pinch the kamagong",
     "go west",
@@ -41357,14 +41502,29 @@
     "pinch the jumper",
     "go east",
     "pinch the earing",
+    "go south",
+    "pinch the oatbranflake",
+    "go north",
     "go east",
     "pinch the jigger",
+    "go south",
+    "pinch the ryebranflake",
+    "go north",
     "go east",
     "pinch the jelutong",
+    "go south",
+    "pinch the wheatbranflake",
+    "go north",
     "go east",
     "pinch the danta",
+    "go south",
+    "pinch the durumpollard",
+    "go north",
     "go east",
     "pinch the courbaril",
+    "go south",
+    "pinch the foniopollard",
+    "go north",
     "go east",
     "pinch the cedrorosa",
     "go south",
