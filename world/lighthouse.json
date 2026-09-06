@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8770,
+  "maxScore": 8810,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -10211,7 +10211,7 @@
       "name": "Rust Terreverte",
       "desc": "A dry terreverte east of the palomar. Packed rust coats terreverte.",
       "brief": "Dry terreverte, packed rust.",
-      "exits": { "west": { "to": "rust_palomar" }, "east": { "to": "rust_cerulean" } },
+      "exits": { "west": { "to": "rust_palomar" }, "east": { "to": "rust_cerulean" }, "south": { "to": "rust_lychee" } },
       "actions": [
         {
           "id": "pinch_terreverte",
@@ -10220,6 +10220,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard terreverte. They packed it on the palomar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_lychee": {
+      "name": "Rust Lychee",
+      "desc": "A dry lychee south of the terreverte. Packed rust coats lychee.",
+      "brief": "Dry lychee, packed rust.",
+      "exits": { "north": { "to": "rust_terreverte" } },
+      "actions": [
+        {
+          "id": "pinch_lychee",
+          "label": "pinch the lychee",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lychee. They packed it on the terreverte and packed rust around it."]
           ]
         }
       ]
@@ -10364,7 +10381,7 @@
       "name": "Rust Sawara",
       "desc": "A dry sawara east of the umbrellapine. Packed rust coats sawara.",
       "brief": "Dry sawara, packed rust.",
-      "exits": { "west": { "to": "rust_umbrellapine" }, "east": { "to": "rust_numidica" } },
+      "exits": { "west": { "to": "rust_umbrellapine" }, "east": { "to": "rust_numidica" }, "south": { "to": "rust_rambutan" } },
       "actions": [
         {
           "id": "pinch_sawara",
@@ -10373,6 +10390,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sawara. They packed it on the umbrellapine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_rambutan": {
+      "name": "Rust Rambutan",
+      "desc": "A dry rambutan south of the sawara. Packed rust coats rambutan.",
+      "brief": "Dry rambutan, packed rust.",
+      "exits": { "north": { "to": "rust_sawara" } },
+      "actions": [
+        {
+          "id": "pinch_rambutan",
+          "label": "pinch the rambutan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rambutan. They packed it on the sawara and packed rust around it."]
           ]
         }
       ]
@@ -10449,7 +10483,7 @@
       "name": "Rust Guy",
       "desc": "A dry guy east of the partner. Packed rust coats a guy.",
       "brief": "Dry guy, packed rust.",
-      "exits": { "west": { "to": "rust_partner" }, "east": { "to": "rust_prusik" } },
+      "exits": { "west": { "to": "rust_partner" }, "east": { "to": "rust_prusik" }, "south": { "to": "rust_longan" } },
       "actions": [
         {
           "id": "pinch_guy",
@@ -10462,11 +10496,28 @@
         }
       ]
     },
+    "rust_longan": {
+      "name": "Rust Longan",
+      "desc": "A dry longan south of the guy. Packed rust coats longan.",
+      "brief": "Dry longan, packed rust.",
+      "exits": { "north": { "to": "rust_guy" } },
+      "actions": [
+        {
+          "id": "pinch_longan",
+          "label": "pinch the longan",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard longan. They packed it on the guy and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_prusik": {
       "name": "Rust Prusik",
       "desc": "A dry prusik east of the guy. Packed rust coats a prusik.",
       "brief": "Dry prusik, packed rust.",
-      "exits": { "west": { "to": "rust_guy" }, "east": { "to": "rust_verditer" } },
+      "exits": { "west": { "to": "rust_guy" }, "east": { "to": "rust_verditer" }, "south": { "to": "rust_durian" } },
       "actions": [
         {
           "id": "pinch_prusik",
@@ -10479,11 +10530,28 @@
         }
       ]
     },
+    "rust_durian": {
+      "name": "Rust Durian",
+      "desc": "A dry durian south of the prusik. Packed rust coats durian.",
+      "brief": "Dry durian, packed rust.",
+      "exits": { "north": { "to": "rust_prusik" } },
+      "actions": [
+        {
+          "id": "pinch_durian",
+          "label": "pinch the durian",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durian. They packed it on the prusik and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_verditer": {
       "name": "Rust Verditer",
       "desc": "A dry verditer east of the prusik. Packed rust coats verditer.",
       "brief": "Dry verditer, packed rust.",
-      "exits": { "west": { "to": "rust_prusik" }, "east": { "to": "rust_cobalt" } },
+      "exits": { "west": { "to": "rust_prusik" }, "east": { "to": "rust_cobalt" }, "south": { "to": "rust_jackfruit" } },
       "actions": [
         {
           "id": "pinch_verditer",
@@ -10496,11 +10564,28 @@
         }
       ]
     },
+    "rust_jackfruit": {
+      "name": "Rust Jackfruit",
+      "desc": "A dry jackfruit south of the verditer. Packed rust coats jackfruit.",
+      "brief": "Dry jackfruit, packed rust.",
+      "exits": { "north": { "to": "rust_verditer" } },
+      "actions": [
+        {
+          "id": "pinch_jackfruit",
+          "label": "pinch the jackfruit",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard jackfruit. They packed it on the verditer and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cobalt": {
       "name": "Rust Cobalt",
       "desc": "A dry cobalt east of the verditer. Packed rust coats cobalt.",
       "brief": "Dry cobalt, packed rust.",
-      "exits": { "west": { "to": "rust_verditer" }, "east": { "to": "rust_carmine" } },
+      "exits": { "west": { "to": "rust_verditer" }, "east": { "to": "rust_carmine" }, "south": { "to": "rust_breadfruit" } },
       "actions": [
         {
           "id": "pinch_cobalt",
@@ -10513,11 +10598,28 @@
         }
       ]
     },
+    "rust_breadfruit": {
+      "name": "Rust Breadfruit",
+      "desc": "A dry breadfruit south of the cobalt. Packed rust coats breadfruit.",
+      "brief": "Dry breadfruit, packed rust.",
+      "exits": { "north": { "to": "rust_cobalt" } },
+      "actions": [
+        {
+          "id": "pinch_breadfruit",
+          "label": "pinch the breadfruit",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard breadfruit. They packed it on the cobalt and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_carmine": {
       "name": "Rust Carmine",
       "desc": "A dry carmine east of the cobalt. Packed rust coats carmine.",
       "brief": "Dry carmine, packed rust.",
-      "exits": { "west": { "to": "rust_cobalt" }, "east": { "to": "rust_torrey" } },
+      "exits": { "west": { "to": "rust_cobalt" }, "east": { "to": "rust_torrey" }, "south": { "to": "rust_soursop" } },
       "actions": [
         {
           "id": "pinch_carmine",
@@ -10526,6 +10628,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard carmine. They packed it on the cobalt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_soursop": {
+      "name": "Rust Soursop",
+      "desc": "A dry soursop south of the carmine. Packed rust coats soursop.",
+      "brief": "Dry soursop, packed rust.",
+      "exits": { "north": { "to": "rust_carmine" } },
+      "actions": [
+        {
+          "id": "pinch_soursop",
+          "label": "pinch the soursop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard soursop. They packed it on the carmine and packed rust around it."]
           ]
         }
       ]
@@ -10568,7 +10687,7 @@
       "name": "Rust Alerce",
       "desc": "A dry alerce east of the torrey. Packed rust coats alerce.",
       "brief": "Dry alerce, packed rust.",
-      "exits": { "west": { "to": "rust_torrey" }, "east": { "to": "rust_spanishfir" } },
+      "exits": { "west": { "to": "rust_torrey" }, "east": { "to": "rust_spanishfir" }, "south": { "to": "rust_sweetsop" } },
       "actions": [
         {
           "id": "pinch_alerce",
@@ -10577,6 +10696,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard alerce. They packed it on the torrey and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sweetsop": {
+      "name": "Rust Sweetsop",
+      "desc": "A dry sweetsop south of the alerce. Packed rust coats sweetsop.",
+      "brief": "Dry sweetsop, packed rust.",
+      "exits": { "north": { "to": "rust_alerce" } },
+      "actions": [
+        {
+          "id": "pinch_sweetsop",
+          "label": "pinch the sweetsop",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sweetsop. They packed it on the alerce and packed rust around it."]
           ]
         }
       ]
@@ -31554,6 +31690,9 @@
     "go north",
     "go east",
     "pinch the terreverte",
+    "go south",
+    "pinch the lychee",
+    "go north",
     "go east",
     "pinch the cerulean",
     "go south",
@@ -31576,6 +31715,9 @@
     "go north",
     "go east",
     "pinch the sawara",
+    "go south",
+    "pinch the rambutan",
+    "go north",
     "go east",
     "pinch the numidica",
     "go south",
@@ -31597,14 +31739,29 @@
     "pinch the partner",
     "go east",
     "pinch the guy",
+    "go south",
+    "pinch the longan",
+    "go north",
     "go east",
     "pinch the prusik",
+    "go south",
+    "pinch the durian",
+    "go north",
     "go east",
     "pinch the verditer",
+    "go south",
+    "pinch the jackfruit",
+    "go north",
     "go east",
     "pinch the cobalt",
+    "go south",
+    "pinch the breadfruit",
+    "go north",
     "go east",
     "pinch the carmine",
+    "go south",
+    "pinch the soursop",
+    "go north",
     "go east",
     "pinch the torrey",
     "go south",
@@ -31612,6 +31769,9 @@
     "go north",
     "go east",
     "pinch the alerce",
+    "go south",
+    "pinch the sweetsop",
+    "go north",
     "go east",
     "pinch the spanishfir",
     "go east",
