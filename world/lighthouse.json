@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13410,
+  "maxScore": 13450,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -33586,7 +33586,7 @@
       "name": "Rust Bitumen",
       "desc": "A dry bitumen east of the reefcringle. Packed rust coats bitumen.",
       "brief": "Dry bitumen, packed rust.",
-      "exits": { "west": { "to": "rust_reefcringle" }, "east": { "to": "rust_megilp" }, "south": { "to": "rust_oatmeal" } },
+      "exits": { "west": { "to": "rust_reefcringle" }, "east": { "to": "rust_megilp" }, "south": { "to": "rust_oatmeal" }, "north": { "to": "rust_durumhamper" } },
       "actions": [
         {
           "id": "pinch_bitumen",
@@ -33595,6 +33595,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bitumen. They packed it on the reefcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumhamper": {
+      "name": "Rust Durumhamper",
+      "desc": "A dry durumhamper north of the bitumen. Packed rust coats durumhamper.",
+      "brief": "Dry durumhamper, packed rust.",
+      "exits": { "south": { "to": "rust_bitumen" } },
+      "actions": [
+        {
+          "id": "pinch_durumhamper",
+          "label": "pinch the durumhamper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumhamper. They packed it on the bitumen and packed rust around it."]
           ]
         }
       ]
@@ -33620,7 +33637,7 @@
       "name": "Rust Megilp",
       "desc": "A dry megilp east of the bitumen. Packed rust coats megilp.",
       "brief": "Dry megilp, packed rust.",
-      "exits": { "west": { "to": "rust_bitumen" }, "east": { "to": "rust_limestone" }, "south": { "to": "rust_cornmeal" } },
+      "exits": { "west": { "to": "rust_bitumen" }, "east": { "to": "rust_limestone" }, "south": { "to": "rust_cornmeal" }, "north": { "to": "rust_foniohamper" } },
       "actions": [
         {
           "id": "pinch_megilp",
@@ -33629,6 +33646,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard megilp. They packed it on the bitumen and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniohamper": {
+      "name": "Rust Foniohamper",
+      "desc": "A dry foniohamper north of the megilp. Packed rust coats foniohamper.",
+      "brief": "Dry foniohamper, packed rust.",
+      "exits": { "south": { "to": "rust_megilp" } },
+      "actions": [
+        {
+          "id": "pinch_foniohamper",
+          "label": "pinch the foniohamper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniohamper. They packed it on the megilp and packed rust around it."]
           ]
         }
       ]
@@ -33654,7 +33688,7 @@
       "name": "Rust Limestone",
       "desc": "A dry limestone east of the megilp. Packed rust coats limestone.",
       "brief": "Dry limestone, packed rust.",
-      "exits": { "west": { "to": "rust_megilp" }, "east": { "to": "rust_carborundum" }, "south": { "to": "rust_teparybean" } },
+      "exits": { "west": { "to": "rust_megilp" }, "east": { "to": "rust_carborundum" }, "south": { "to": "rust_teparybean" }, "north": { "to": "rust_teffhamper" } },
       "actions": [
         {
           "id": "pinch_limestone",
@@ -33663,6 +33697,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard limestone. They packed it on the megilp and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffhamper": {
+      "name": "Rust Teffhamper",
+      "desc": "A dry teffhamper north of the limestone. Packed rust coats teffhamper.",
+      "brief": "Dry teffhamper, packed rust.",
+      "exits": { "south": { "to": "rust_limestone" } },
+      "actions": [
+        {
+          "id": "pinch_teffhamper",
+          "label": "pinch the teffhamper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffhamper. They packed it on the limestone and packed rust around it."]
           ]
         }
       ]
@@ -33688,7 +33739,7 @@
       "name": "Rust Carborundum",
       "desc": "A dry carborundum east of the limestone. Packed rust coats carborundum.",
       "brief": "Dry carborundum, packed rust.",
-      "exits": { "west": { "to": "rust_limestone" }, "east": { "to": "rust_manganese" }, "south": { "to": "rust_haricotbean" } },
+      "exits": { "west": { "to": "rust_limestone" }, "east": { "to": "rust_manganese" }, "south": { "to": "rust_haricotbean" }, "north": { "to": "rust_barleyhamper" } },
       "actions": [
         {
           "id": "pinch_carborundum",
@@ -33697,6 +33748,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard carborundum. They packed it on the limestone and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyhamper": {
+      "name": "Rust Barleyhamper",
+      "desc": "A dry barleyhamper north of the carborundum. Packed rust coats barleyhamper.",
+      "brief": "Dry barleyhamper, packed rust.",
+      "exits": { "south": { "to": "rust_carborundum" } },
+      "actions": [
+        {
+          "id": "pinch_barleyhamper",
+          "label": "pinch the barleyhamper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyhamper. They packed it on the carborundum and packed rust around it."]
           ]
         }
       ]
@@ -33722,7 +33790,7 @@
       "name": "Rust Manganese",
       "desc": "A dry manganese east of the carborundum. Packed rust coats manganese.",
       "brief": "Dry manganese, packed rust.",
-      "exits": { "west": { "to": "rust_carborundum" }, "east": { "to": "rust_pyrolusite" }, "south": { "to": "rust_maize" } },
+      "exits": { "west": { "to": "rust_carborundum" }, "east": { "to": "rust_pyrolusite" }, "south": { "to": "rust_maize" }, "north": { "to": "rust_sorghumhamper" } },
       "actions": [
         {
           "id": "pinch_manganese",
@@ -33731,6 +33799,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard manganese. They packed it on the carborundum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumhamper": {
+      "name": "Rust Sorghumhamper",
+      "desc": "A dry sorghumhamper north of the manganese. Packed rust coats sorghumhamper.",
+      "brief": "Dry sorghumhamper, packed rust.",
+      "exits": { "south": { "to": "rust_manganese" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumhamper",
+          "label": "pinch the sorghumhamper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumhamper. They packed it on the manganese and packed rust around it."]
           ]
         }
       ]
@@ -33756,7 +33841,7 @@
       "name": "Rust Pyrolusite",
       "desc": "A dry pyrolusite east of the manganese. Packed rust coats pyrolusite.",
       "brief": "Dry pyrolusite, packed rust.",
-      "exits": { "west": { "to": "rust_manganese" }, "east": { "to": "rust_connellite" }, "south": { "to": "rust_grits" } },
+      "exits": { "west": { "to": "rust_manganese" }, "east": { "to": "rust_connellite" }, "south": { "to": "rust_grits" }, "north": { "to": "rust_millethamper" } },
       "actions": [
         {
           "id": "pinch_pyrolusite",
@@ -33765,6 +33850,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pyrolusite. They packed it on the manganese and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millethamper": {
+      "name": "Rust Millethamper",
+      "desc": "A dry millethamper north of the pyrolusite. Packed rust coats millethamper.",
+      "brief": "Dry millethamper, packed rust.",
+      "exits": { "south": { "to": "rust_pyrolusite" } },
+      "actions": [
+        {
+          "id": "pinch_millethamper",
+          "label": "pinch the millethamper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millethamper. They packed it on the pyrolusite and packed rust around it."]
           ]
         }
       ]
@@ -33790,7 +33892,7 @@
       "name": "Rust Connellite",
       "desc": "A dry connellite east of the pyrolusite. Packed rust coats connellite.",
       "brief": "Dry connellite, packed rust.",
-      "exits": { "west": { "to": "rust_pyrolusite" }, "east": { "to": "rust_valleriite" }, "south": { "to": "rust_hominy" } },
+      "exits": { "west": { "to": "rust_pyrolusite" }, "east": { "to": "rust_valleriite" }, "south": { "to": "rust_hominy" }, "north": { "to": "rust_cornhamper" } },
       "actions": [
         {
           "id": "pinch_connellite",
@@ -33799,6 +33901,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard connellite. They packed it on the pyrolusite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornhamper": {
+      "name": "Rust Cornhamper",
+      "desc": "A dry cornhamper north of the connellite. Packed rust coats cornhamper.",
+      "brief": "Dry cornhamper, packed rust.",
+      "exits": { "south": { "to": "rust_connellite" } },
+      "actions": [
+        {
+          "id": "pinch_cornhamper",
+          "label": "pinch the cornhamper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornhamper. They packed it on the connellite and packed rust around it."]
           ]
         }
       ]
@@ -33875,7 +33994,7 @@
       "name": "Rust Sternfast",
       "desc": "A dry sternfast east of the futtock. Packed rust coats a sternfast.",
       "brief": "Dry sternfast, packed rust.",
-      "exits": { "west": { "to": "rust_futtock" }, "east": { "to": "rust_tackcringle" }, "south": { "to": "rust_polenta" } },
+      "exits": { "west": { "to": "rust_futtock" }, "east": { "to": "rust_tackcringle" }, "south": { "to": "rust_polenta" }, "north": { "to": "rust_oathamper" } },
       "actions": [
         {
           "id": "pinch_sternfast",
@@ -33884,6 +34003,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sternfast. They made it on the futtock and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oathamper": {
+      "name": "Rust Oathamper",
+      "desc": "A dry oathamper north of the sternfast. Packed rust coats oathamper.",
+      "brief": "Dry oathamper, packed rust.",
+      "exits": { "south": { "to": "rust_sternfast" } },
+      "actions": [
+        {
+          "id": "pinch_oathamper",
+          "label": "pinch the oathamper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oathamper. They packed it on the sternfast and packed rust around it."]
           ]
         }
       ]
@@ -51537,36 +51673,57 @@
     "go north",
     "go east",
     "pinch the bitumen",
+    "go north",
+    "pinch the durumhamper",
+    "go south",
     "go south",
     "pinch the oatmeal",
     "go north",
     "go east",
     "pinch the megilp",
+    "go north",
+    "pinch the foniohamper",
+    "go south",
     "go south",
     "pinch the cornmeal",
     "go north",
     "go east",
     "pinch the limestone",
+    "go north",
+    "pinch the teffhamper",
+    "go south",
     "go south",
     "pinch the teparybean",
     "go north",
     "go east",
     "pinch the carborundum",
+    "go north",
+    "pinch the barleyhamper",
+    "go south",
     "go south",
     "pinch the haricotbean",
     "go north",
     "go east",
     "pinch the manganese",
+    "go north",
+    "pinch the sorghumhamper",
+    "go south",
     "go south",
     "pinch the maize",
     "go north",
     "go east",
     "pinch the pyrolusite",
+    "go north",
+    "pinch the millethamper",
+    "go south",
     "go south",
     "pinch the grits",
     "go north",
     "go east",
     "pinch the connellite",
+    "go north",
+    "pinch the cornhamper",
+    "go south",
     "go south",
     "pinch the hominy",
     "go north",
@@ -51589,6 +51746,9 @@
     "pinch the futtock",
     "go east",
     "pinch the sternfast",
+    "go north",
+    "pinch the oathamper",
+    "go south",
     "go south",
     "pinch the polenta",
     "go north",
