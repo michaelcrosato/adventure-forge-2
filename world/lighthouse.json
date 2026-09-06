@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13490,
+  "maxScore": 13530,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -32957,7 +32957,7 @@
       "name": "Rust Colcothar",
       "desc": "A dry colcothar east of the steatite. Packed rust coats colcothar.",
       "brief": "Dry colcothar, packed rust.",
-      "exits": { "west": { "to": "rust_steatite" }, "east": { "to": "rust_redochre" }, "south": { "to": "rust_bulgur" } },
+      "exits": { "west": { "to": "rust_steatite" }, "east": { "to": "rust_redochre" }, "south": { "to": "rust_bulgur" }, "north": { "to": "rust_durumbunker" } },
       "actions": [
         {
           "id": "pinch_colcothar",
@@ -32966,6 +32966,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard colcothar. They packed it on the steatite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbunker": {
+      "name": "Rust Durumbunker",
+      "desc": "A dry durumbunker north of the colcothar. Packed rust coats durumbunker.",
+      "brief": "Dry durumbunker, packed rust.",
+      "exits": { "south": { "to": "rust_colcothar" } },
+      "actions": [
+        {
+          "id": "pinch_durumbunker",
+          "label": "pinch the durumbunker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbunker. They packed it on the colcothar and packed rust around it."]
           ]
         }
       ]
@@ -32991,7 +33008,7 @@
       "name": "Rust Redochre",
       "desc": "A dry redochre east of the colcothar. Packed rust coats redochre.",
       "brief": "Dry redochre, packed rust.",
-      "exits": { "west": { "to": "rust_colcothar" }, "east": { "to": "rust_cobaltite" }, "south": { "to": "rust_couscous" } },
+      "exits": { "west": { "to": "rust_colcothar" }, "east": { "to": "rust_cobaltite" }, "south": { "to": "rust_couscous" }, "north": { "to": "rust_foniobunker" } },
       "actions": [
         {
           "id": "pinch_redochre",
@@ -33000,6 +33017,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redochre. They packed it on the colcothar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobunker": {
+      "name": "Rust Foniobunker",
+      "desc": "A dry foniobunker north of the redochre. Packed rust coats foniobunker.",
+      "brief": "Dry foniobunker, packed rust.",
+      "exits": { "south": { "to": "rust_redochre" } },
+      "actions": [
+        {
+          "id": "pinch_foniobunker",
+          "label": "pinch the foniobunker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobunker. They packed it on the redochre and packed rust around it."]
           ]
         }
       ]
@@ -33025,7 +33059,7 @@
       "name": "Rust Cobaltite",
       "desc": "A dry cobaltite east of the redochre. Packed rust coats cobaltite.",
       "brief": "Dry cobaltite, packed rust.",
-      "exits": { "west": { "to": "rust_redochre" }, "east": { "to": "rust_spangolite" }, "south": { "to": "rust_kasha" } },
+      "exits": { "west": { "to": "rust_redochre" }, "east": { "to": "rust_spangolite" }, "south": { "to": "rust_kasha" }, "north": { "to": "rust_teffbunker" } },
       "actions": [
         {
           "id": "pinch_cobaltite",
@@ -33034,6 +33068,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cobaltite. They packed it on the redochre and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbunker": {
+      "name": "Rust Teffbunker",
+      "desc": "A dry teffbunker north of the cobaltite. Packed rust coats teffbunker.",
+      "brief": "Dry teffbunker, packed rust.",
+      "exits": { "south": { "to": "rust_cobaltite" } },
+      "actions": [
+        {
+          "id": "pinch_teffbunker",
+          "label": "pinch the teffbunker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbunker. They packed it on the cobaltite and packed rust around it."]
           ]
         }
       ]
@@ -33059,7 +33110,7 @@
       "name": "Rust Spangolite",
       "desc": "A dry spangolite east of the cobaltite. Packed rust coats spangolite.",
       "brief": "Dry spangolite, packed rust.",
-      "exits": { "west": { "to": "rust_cobaltite" }, "east": { "to": "rust_violarite" }, "south": { "to": "rust_rolledoats" } },
+      "exits": { "west": { "to": "rust_cobaltite" }, "east": { "to": "rust_violarite" }, "south": { "to": "rust_rolledoats" }, "north": { "to": "rust_barleybunker" } },
       "actions": [
         {
           "id": "pinch_spangolite",
@@ -33068,6 +33119,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spangolite. They packed it on the cobaltite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybunker": {
+      "name": "Rust Barleybunker",
+      "desc": "A dry barleybunker north of the spangolite. Packed rust coats barleybunker.",
+      "brief": "Dry barleybunker, packed rust.",
+      "exits": { "south": { "to": "rust_spangolite" } },
+      "actions": [
+        {
+          "id": "pinch_barleybunker",
+          "label": "pinch the barleybunker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybunker. They packed it on the spangolite and packed rust around it."]
           ]
         }
       ]
@@ -33110,7 +33178,7 @@
       "name": "Rust Burton",
       "desc": "A dry burton east of the vent. Packed rust coats a burton.",
       "brief": "Dry burton, packed rust.",
-      "exits": { "west": { "to": "rust_vent" }, "east": { "to": "rust_towline" }, "south": { "to": "rust_pearlbarley" } },
+      "exits": { "west": { "to": "rust_vent" }, "east": { "to": "rust_towline" }, "south": { "to": "rust_pearlbarley" }, "north": { "to": "rust_sorghumbunker" } },
       "actions": [
         {
           "id": "pinch_burton",
@@ -33119,6 +33187,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard burton. They sprung it off the vent and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbunker": {
+      "name": "Rust Sorghumbunker",
+      "desc": "A dry sorghumbunker north of the burton. Packed rust coats sorghumbunker.",
+      "brief": "Dry sorghumbunker, packed rust.",
+      "exits": { "south": { "to": "rust_burton" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbunker",
+          "label": "pinch the sorghumbunker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbunker. They packed it on the burton and packed rust around it."]
           ]
         }
       ]
@@ -33144,7 +33229,7 @@
       "name": "Rust Towline",
       "desc": "A dry towline east of the burton. Packed rust coats a towline.",
       "brief": "Dry towline, packed rust.",
-      "exits": { "west": { "to": "rust_burton" }, "east": { "to": "rust_throatrope" }, "south": { "to": "rust_groats" } },
+      "exits": { "west": { "to": "rust_burton" }, "east": { "to": "rust_throatrope" }, "south": { "to": "rust_groats" }, "north": { "to": "rust_milletbunker" } },
       "actions": [
         {
           "id": "pinch_towline",
@@ -33153,6 +33238,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard towline. They paid it on the burton and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbunker": {
+      "name": "Rust Milletbunker",
+      "desc": "A dry milletbunker north of the towline. Packed rust coats milletbunker.",
+      "brief": "Dry milletbunker, packed rust.",
+      "exits": { "south": { "to": "rust_towline" } },
+      "actions": [
+        {
+          "id": "pinch_milletbunker",
+          "label": "pinch the milletbunker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbunker. They packed it on the towline and packed rust around it."]
           ]
         }
       ]
@@ -33178,7 +33280,7 @@
       "name": "Rust Throatrope",
       "desc": "A dry throatrope east of the towline. Packed rust coats a throatrope.",
       "brief": "Dry throatrope, packed rust.",
-      "exits": { "west": { "to": "rust_towline" }, "east": { "to": "rust_asphalt" }, "south": { "to": "rust_middlings" } },
+      "exits": { "west": { "to": "rust_towline" }, "east": { "to": "rust_asphalt" }, "south": { "to": "rust_middlings" }, "north": { "to": "rust_cornbunker" } },
       "actions": [
         {
           "id": "pinch_throatrope",
@@ -33187,6 +33289,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard throatrope. They bent it on the towline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbunker": {
+      "name": "Rust Cornbunker",
+      "desc": "A dry cornbunker north of the throatrope. Packed rust coats cornbunker.",
+      "brief": "Dry cornbunker, packed rust.",
+      "exits": { "south": { "to": "rust_throatrope" } },
+      "actions": [
+        {
+          "id": "pinch_cornbunker",
+          "label": "pinch the cornbunker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbunker. They packed it on the throatrope and packed rust around it."]
           ]
         }
       ]
@@ -33212,7 +33331,7 @@
       "name": "Rust Asphalt",
       "desc": "A dry asphalt east of the throatrope. Packed rust coats asphalt.",
       "brief": "Dry asphalt, packed rust.",
-      "exits": { "west": { "to": "rust_throatrope" }, "east": { "to": "rust_bentonite" }, "south": { "to": "rust_grist" } },
+      "exits": { "west": { "to": "rust_throatrope" }, "east": { "to": "rust_bentonite" }, "south": { "to": "rust_grist" }, "north": { "to": "rust_oatbunker" } },
       "actions": [
         {
           "id": "pinch_asphalt",
@@ -33221,6 +33340,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard asphalt. They packed it on the throatrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbunker": {
+      "name": "Rust Oatbunker",
+      "desc": "A dry oatbunker north of the asphalt. Packed rust coats oatbunker.",
+      "brief": "Dry oatbunker, packed rust.",
+      "exits": { "south": { "to": "rust_asphalt" } },
+      "actions": [
+        {
+          "id": "pinch_oatbunker",
+          "label": "pinch the oatbunker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbunker. They packed it on the asphalt and packed rust around it."]
           ]
         }
       ]
@@ -51696,21 +51832,33 @@
     "go north",
     "go east",
     "pinch the colcothar",
+    "go north",
+    "pinch the durumbunker",
+    "go south",
     "go south",
     "pinch the bulgur",
     "go north",
     "go east",
     "pinch the redochre",
+    "go north",
+    "pinch the foniobunker",
+    "go south",
     "go south",
     "pinch the couscous",
     "go north",
     "go east",
     "pinch the cobaltite",
+    "go north",
+    "pinch the teffbunker",
+    "go south",
     "go south",
     "pinch the kasha",
     "go north",
     "go east",
     "pinch the spangolite",
+    "go north",
+    "pinch the barleybunker",
+    "go south",
     "go south",
     "pinch the rolledoats",
     "go north",
@@ -51729,21 +51877,33 @@
     "go north",
     "go east",
     "pinch the burton",
+    "go north",
+    "pinch the sorghumbunker",
+    "go south",
     "go south",
     "pinch the pearlbarley",
     "go north",
     "go east",
     "pinch the towline",
+    "go north",
+    "pinch the milletbunker",
+    "go south",
     "go south",
     "pinch the groats",
     "go north",
     "go east",
     "pinch the throatrope",
+    "go north",
+    "pinch the cornbunker",
+    "go south",
     "go south",
     "pinch the middlings",
     "go north",
     "go east",
     "pinch the asphalt",
+    "go north",
+    "pinch the oatbunker",
+    "go south",
     "go south",
     "pinch the grist",
     "go north",
