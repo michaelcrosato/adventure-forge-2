@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14130,
+  "maxScore": 14170,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -28520,7 +28520,7 @@
       "name": "Rust Nyatoh",
       "desc": "A dry nyatoh east of the louropreto. Packed rust coats nyatoh.",
       "brief": "Dry nyatoh, packed rust.",
-      "exits": { "west": { "to": "rust_louropreto" }, "east": { "to": "rust_tualang" }, "south": { "to": "rust_oatgerm" } },
+      "exits": { "west": { "to": "rust_louropreto" }, "east": { "to": "rust_tualang" }, "south": { "to": "rust_oatgerm" }, "north": { "to": "rust_durumladle" } },
       "actions": [
         {
           "id": "pinch_nyatoh",
@@ -28529,6 +28529,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nyatoh. They packed it on the louropreto and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumladle": {
+      "name": "Rust Durumladle",
+      "desc": "A dry durumladle north of the nyatoh. Packed rust coats durumladle.",
+      "brief": "Dry durumladle, packed rust.",
+      "exits": { "south": { "to": "rust_nyatoh" } },
+      "actions": [
+        {
+          "id": "pinch_durumladle",
+          "label": "pinch the durumladle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumladle. They packed it on the nyatoh and packed rust around it."]
           ]
         }
       ]
@@ -28554,7 +28571,7 @@
       "name": "Rust Tualang",
       "desc": "A dry tualang east of the nyatoh. Packed rust coats tualang.",
       "brief": "Dry tualang, packed rust.",
-      "exits": { "west": { "to": "rust_nyatoh" }, "east": { "to": "rust_toon" }, "south": { "to": "rust_wheatgerm" } },
+      "exits": { "west": { "to": "rust_nyatoh" }, "east": { "to": "rust_toon" }, "south": { "to": "rust_wheatgerm" }, "north": { "to": "rust_fonioladle" } },
       "actions": [
         {
           "id": "pinch_tualang",
@@ -28563,6 +28580,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tualang. They packed it on the nyatoh and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioladle": {
+      "name": "Rust Fonioladle",
+      "desc": "A dry fonioladle north of the tualang. Packed rust coats fonioladle.",
+      "brief": "Dry fonioladle, packed rust.",
+      "exits": { "south": { "to": "rust_tualang" } },
+      "actions": [
+        {
+          "id": "pinch_fonioladle",
+          "label": "pinch the fonioladle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioladle. They packed it on the tualang and packed rust around it."]
           ]
         }
       ]
@@ -28656,7 +28690,7 @@
       "name": "Rust Yardarm",
       "desc": "A dry yardarm east of the stirrup. Packed rust coats a yardarm.",
       "brief": "Dry yardarm, packed rust.",
-      "exits": { "west": { "to": "rust_stirrup" }, "east": { "to": "rust_yardsling" }, "south": { "to": "rust_crackedwheat" } },
+      "exits": { "west": { "to": "rust_stirrup" }, "east": { "to": "rust_yardsling" }, "south": { "to": "rust_crackedwheat" }, "north": { "to": "rust_teffladle" } },
       "actions": [
         {
           "id": "pinch_yardarm",
@@ -28665,6 +28699,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yardarm. They capped it on the stirrup and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffladle": {
+      "name": "Rust Teffladle",
+      "desc": "A dry teffladle north of the yardarm. Packed rust coats teffladle.",
+      "brief": "Dry teffladle, packed rust.",
+      "exits": { "south": { "to": "rust_yardarm" } },
+      "actions": [
+        {
+          "id": "pinch_teffladle",
+          "label": "pinch the teffladle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffladle. They packed it on the yardarm and packed rust around it."]
           ]
         }
       ]
@@ -28690,7 +28741,7 @@
       "name": "Rust Yardsling",
       "desc": "A dry yardsling east of the yardarm. Packed rust coats a yardsling.",
       "brief": "Dry yardsling, packed rust.",
-      "exits": { "west": { "to": "rust_yardarm" }, "east": { "to": "rust_purpleheart" }, "south": { "to": "rust_buckwheatbran" } },
+      "exits": { "west": { "to": "rust_yardarm" }, "east": { "to": "rust_purpleheart" }, "south": { "to": "rust_buckwheatbran" }, "north": { "to": "rust_barleyladle" } },
       "actions": [
         {
           "id": "pinch_yardsling",
@@ -28699,6 +28750,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yardsling. They slung it on the yardarm and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyladle": {
+      "name": "Rust Barleyladle",
+      "desc": "A dry barleyladle north of the yardsling. Packed rust coats barleyladle.",
+      "brief": "Dry barleyladle, packed rust.",
+      "exits": { "south": { "to": "rust_yardsling" } },
+      "actions": [
+        {
+          "id": "pinch_barleyladle",
+          "label": "pinch the barleyladle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyladle. They packed it on the yardsling and packed rust around it."]
           ]
         }
       ]
@@ -28724,7 +28792,7 @@
       "name": "Rust Purpleheart",
       "desc": "A dry purpleheart east of the yardsling. Packed rust coats purpleheart.",
       "brief": "Dry purpleheart, packed rust.",
-      "exits": { "west": { "to": "rust_yardsling" }, "east": { "to": "rust_snakewood" }, "south": { "to": "rust_amaranthflour" } },
+      "exits": { "west": { "to": "rust_yardsling" }, "east": { "to": "rust_snakewood" }, "south": { "to": "rust_amaranthflour" }, "north": { "to": "rust_sorghumladle" } },
       "actions": [
         {
           "id": "pinch_purpleheart",
@@ -28733,6 +28801,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard purpleheart. They laid it on the yardsling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumladle": {
+      "name": "Rust Sorghumladle",
+      "desc": "A dry sorghumladle north of the purpleheart. Packed rust coats sorghumladle.",
+      "brief": "Dry sorghumladle, packed rust.",
+      "exits": { "south": { "to": "rust_purpleheart" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumladle",
+          "label": "pinch the sorghumladle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumladle. They packed it on the purpleheart and packed rust around it."]
           ]
         }
       ]
@@ -28758,7 +28843,7 @@
       "name": "Rust Snakewood",
       "desc": "A dry snakewood east of the purpleheart. Packed rust coats snakewood.",
       "brief": "Dry snakewood, packed rust.",
-      "exits": { "west": { "to": "rust_purpleheart" }, "east": { "to": "rust_dibetou" }, "south": { "to": "rust_quinoaflour" } },
+      "exits": { "west": { "to": "rust_purpleheart" }, "east": { "to": "rust_dibetou" }, "south": { "to": "rust_quinoaflour" }, "north": { "to": "rust_milletladle" } },
       "actions": [
         {
           "id": "pinch_snakewood",
@@ -28767,6 +28852,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard snakewood. They packed it on the purpleheart and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletladle": {
+      "name": "Rust Milletladle",
+      "desc": "A dry milletladle north of the snakewood. Packed rust coats milletladle.",
+      "brief": "Dry milletladle, packed rust.",
+      "exits": { "south": { "to": "rust_snakewood" } },
+      "actions": [
+        {
+          "id": "pinch_milletladle",
+          "label": "pinch the milletladle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletladle. They packed it on the snakewood and packed rust around it."]
           ]
         }
       ]
@@ -28792,7 +28894,7 @@
       "name": "Rust Dibetou",
       "desc": "A dry dibetou east of the snakewood. Packed rust coats dibetou.",
       "brief": "Dry dibetou, packed rust.",
-      "exits": { "west": { "to": "rust_snakewood" }, "east": { "to": "rust_faveira" }, "south": { "to": "rust_foniomeal" } },
+      "exits": { "west": { "to": "rust_snakewood" }, "east": { "to": "rust_faveira" }, "south": { "to": "rust_foniomeal" }, "north": { "to": "rust_cornladle" } },
       "actions": [
         {
           "id": "pinch_dibetou",
@@ -28801,6 +28903,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dibetou. They packed it on the snakewood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornladle": {
+      "name": "Rust Cornladle",
+      "desc": "A dry cornladle north of the dibetou. Packed rust coats cornladle.",
+      "brief": "Dry cornladle, packed rust.",
+      "exits": { "south": { "to": "rust_dibetou" } },
+      "actions": [
+        {
+          "id": "pinch_cornladle",
+          "label": "pinch the cornladle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornladle. They packed it on the dibetou and packed rust around it."]
           ]
         }
       ]
@@ -28826,7 +28945,7 @@
       "name": "Rust Faveira",
       "desc": "A dry faveira east of the dibetou. Packed rust coats faveira.",
       "brief": "Dry faveira, packed rust.",
-      "exits": { "west": { "to": "rust_dibetou" }, "east": { "to": "rust_seraya" }, "south": { "to": "rust_teffmeal" } },
+      "exits": { "west": { "to": "rust_dibetou" }, "east": { "to": "rust_seraya" }, "south": { "to": "rust_teffmeal" }, "north": { "to": "rust_oatladle" } },
       "actions": [
         {
           "id": "pinch_faveira",
@@ -28835,6 +28954,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard faveira. They packed it on the dibetou and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatladle": {
+      "name": "Rust Oatladle",
+      "desc": "A dry oatladle north of the faveira. Packed rust coats oatladle.",
+      "brief": "Dry oatladle, packed rust.",
+      "exits": { "south": { "to": "rust_faveira" } },
+      "actions": [
+        {
+          "id": "pinch_oatladle",
+          "label": "pinch the oatladle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatladle. They packed it on the faveira and packed rust around it."]
           ]
         }
       ]
@@ -52968,11 +53104,17 @@
     "go north",
     "go east",
     "pinch the nyatoh",
+    "go north",
+    "pinch the durumladle",
+    "go south",
     "go south",
     "pinch the oatgerm",
     "go north",
     "go east",
     "pinch the tualang",
+    "go north",
+    "pinch the fonioladle",
+    "go south",
     "go south",
     "pinch the wheatgerm",
     "go north",
@@ -52997,31 +53139,49 @@
     "pinch the stirrup",
     "go east",
     "pinch the yardarm",
+    "go north",
+    "pinch the teffladle",
+    "go south",
     "go south",
     "pinch the crackedwheat",
     "go north",
     "go east",
     "pinch the yardsling",
+    "go north",
+    "pinch the barleyladle",
+    "go south",
     "go south",
     "pinch the buckwheatbran",
     "go north",
     "go east",
     "pinch the purpleheart",
+    "go north",
+    "pinch the sorghumladle",
+    "go south",
     "go south",
     "pinch the amaranthflour",
     "go north",
     "go east",
     "pinch the snakewood",
+    "go north",
+    "pinch the milletladle",
+    "go south",
     "go south",
     "pinch the quinoaflour",
     "go north",
     "go east",
     "pinch the dibetou",
+    "go north",
+    "pinch the cornladle",
+    "go south",
     "go south",
     "pinch the foniomeal",
     "go north",
     "go east",
     "pinch the faveira",
+    "go north",
+    "pinch the oatladle",
+    "go south",
     "go south",
     "pinch the teffmeal",
     "go north",
