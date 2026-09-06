@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12810,
+  "maxScore": 12850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -38941,7 +38941,7 @@
       "name": "Rust Kaolin",
       "desc": "A dry kaolin east of the grout. Packed rust coats kaolin.",
       "brief": "Dry kaolin, packed rust.",
-      "exits": { "west": { "to": "rust_grout" }, "east": { "to": "rust_smithsonite" }, "south": { "to": "rust_dill" } },
+      "exits": { "west": { "to": "rust_grout" }, "east": { "to": "rust_smithsonite" }, "south": { "to": "rust_dill" }, "north": { "to": "rust_durumbag" } },
       "actions": [
         {
           "id": "pinch_kaolin",
@@ -38950,6 +38950,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kaolin. They packed it on the grout and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbag": {
+      "name": "Rust Durumbag",
+      "desc": "A dry durumbag north of the kaolin. Packed rust coats durumbag.",
+      "brief": "Dry durumbag, packed rust.",
+      "exits": { "south": { "to": "rust_kaolin" } },
+      "actions": [
+        {
+          "id": "pinch_durumbag",
+          "label": "pinch the durumbag",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbag. They packed it on the kaolin and packed rust around it."]
           ]
         }
       ]
@@ -38975,7 +38992,7 @@
       "name": "Rust Smithsonite",
       "desc": "A dry smithsonite east of the kaolin. Packed rust coats smithsonite.",
       "brief": "Dry smithsonite, packed rust.",
-      "exits": { "west": { "to": "rust_kaolin" }, "east": { "to": "rust_polianite" }, "south": { "to": "rust_fennel" } },
+      "exits": { "west": { "to": "rust_kaolin" }, "east": { "to": "rust_polianite" }, "south": { "to": "rust_fennel" }, "north": { "to": "rust_foniobag" } },
       "actions": [
         {
           "id": "pinch_smithsonite",
@@ -38984,6 +39001,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard smithsonite. They packed it on the kaolin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobag": {
+      "name": "Rust Foniobag",
+      "desc": "A dry foniobag north of the smithsonite. Packed rust coats foniobag.",
+      "brief": "Dry foniobag, packed rust.",
+      "exits": { "south": { "to": "rust_smithsonite" } },
+      "actions": [
+        {
+          "id": "pinch_foniobag",
+          "label": "pinch the foniobag",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobag. They packed it on the smithsonite and packed rust around it."]
           ]
         }
       ]
@@ -39043,7 +39077,7 @@
       "name": "Rust Bit",
       "desc": "A dry bit east of the guard. Packed rust coats a bit.",
       "brief": "Dry bit, packed rust.",
-      "exits": { "west": { "to": "rust_guard" }, "east": { "to": "rust_keckling" }, "south": { "to": "rust_hyssop" } },
+      "exits": { "west": { "to": "rust_guard" }, "east": { "to": "rust_keckling" }, "south": { "to": "rust_hyssop" }, "north": { "to": "rust_teffbag" } },
       "actions": [
         {
           "id": "pinch_bit",
@@ -39052,6 +39086,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bit. They set it on the guard and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbag": {
+      "name": "Rust Teffbag",
+      "desc": "A dry teffbag north of the bit. Packed rust coats teffbag.",
+      "brief": "Dry teffbag, packed rust.",
+      "exits": { "south": { "to": "rust_bit" } },
+      "actions": [
+        {
+          "id": "pinch_teffbag",
+          "label": "pinch the teffbag",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbag. They packed it on the bit and packed rust around it."]
           ]
         }
       ]
@@ -39077,7 +39128,7 @@
       "name": "Rust Keckling",
       "desc": "A dry keckling east of the bit. Packed rust coats keckling.",
       "brief": "Dry keckling, packed rust.",
-      "exits": { "west": { "to": "rust_bit" }, "east": { "to": "rust_mastgasket" }, "south": { "to": "rust_borage" } },
+      "exits": { "west": { "to": "rust_bit" }, "east": { "to": "rust_mastgasket" }, "south": { "to": "rust_borage" }, "north": { "to": "rust_barleybag" } },
       "actions": [
         {
           "id": "pinch_keckling",
@@ -39086,6 +39137,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard keckling. They wormed it on the bit and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybag": {
+      "name": "Rust Barleybag",
+      "desc": "A dry barleybag north of the keckling. Packed rust coats barleybag.",
+      "brief": "Dry barleybag, packed rust.",
+      "exits": { "south": { "to": "rust_keckling" } },
+      "actions": [
+        {
+          "id": "pinch_barleybag",
+          "label": "pinch the barleybag",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybag. They packed it on the keckling and packed rust around it."]
           ]
         }
       ]
@@ -39111,7 +39179,7 @@
       "name": "Rust Mastgasket",
       "desc": "A dry mastgasket east of the keckling. Packed rust coats a mastgasket.",
       "brief": "Dry mastgasket, packed rust.",
-      "exits": { "west": { "to": "rust_keckling" }, "east": { "to": "rust_linen" }, "south": { "to": "rust_lovage" } },
+      "exits": { "west": { "to": "rust_keckling" }, "east": { "to": "rust_linen" }, "south": { "to": "rust_lovage" }, "north": { "to": "rust_sorghumbag" } },
       "actions": [
         {
           "id": "pinch_mastgasket",
@@ -39120,6 +39188,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mastgasket. They bound it on the keckling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbag": {
+      "name": "Rust Sorghumbag",
+      "desc": "A dry sorghumbag north of the mastgasket. Packed rust coats sorghumbag.",
+      "brief": "Dry sorghumbag, packed rust.",
+      "exits": { "south": { "to": "rust_mastgasket" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbag",
+          "label": "pinch the sorghumbag",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbag. They packed it on the mastgasket and packed rust around it."]
           ]
         }
       ]
@@ -39145,7 +39230,7 @@
       "name": "Rust Linen",
       "desc": "A dry linen east of the mastgasket. Packed rust coats linen.",
       "brief": "Dry linen, packed rust.",
-      "exits": { "west": { "to": "rust_mastgasket" }, "east": { "to": "rust_suet" }, "south": { "to": "rust_chervil" } },
+      "exits": { "west": { "to": "rust_mastgasket" }, "east": { "to": "rust_suet" }, "south": { "to": "rust_chervil" }, "north": { "to": "rust_milletbag" } },
       "actions": [
         {
           "id": "pinch_linen",
@@ -39154,6 +39239,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard linen. They wrapped it on the mastgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbag": {
+      "name": "Rust Milletbag",
+      "desc": "A dry milletbag north of the linen. Packed rust coats milletbag.",
+      "brief": "Dry milletbag, packed rust.",
+      "exits": { "south": { "to": "rust_linen" } },
+      "actions": [
+        {
+          "id": "pinch_milletbag",
+          "label": "pinch the milletbag",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbag. They packed it on the linen and packed rust around it."]
           ]
         }
       ]
@@ -39230,7 +39332,7 @@
       "name": "Rust Pointing",
       "desc": "A dry pointing east of the pinrail. Packed rust coats pointing.",
       "brief": "Dry pointing, packed rust.",
-      "exits": { "west": { "to": "rust_pinrail" }, "east": { "to": "rust_boomgasket" }, "south": { "to": "rust_tarragon" } },
+      "exits": { "west": { "to": "rust_pinrail" }, "east": { "to": "rust_boomgasket" }, "south": { "to": "rust_tarragon" }, "north": { "to": "rust_cornbag" } },
       "actions": [
         {
           "id": "pinch_pointing",
@@ -39239,6 +39341,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pointing. They tapered it on the pinrail and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbag": {
+      "name": "Rust Cornbag",
+      "desc": "A dry cornbag north of the pointing. Packed rust coats cornbag.",
+      "brief": "Dry cornbag, packed rust.",
+      "exits": { "south": { "to": "rust_pointing" } },
+      "actions": [
+        {
+          "id": "pinch_cornbag",
+          "label": "pinch the cornbag",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbag. They packed it on the pointing and packed rust around it."]
           ]
         }
       ]
@@ -39264,7 +39383,7 @@
       "name": "Rust Boomgasket",
       "desc": "A dry boomgasket east of the pointing. Packed rust coats a boomgasket.",
       "brief": "Dry boomgasket, packed rust.",
-      "exits": { "west": { "to": "rust_pointing" }, "east": { "to": "rust_cotton" }, "south": { "to": "rust_savory" } },
+      "exits": { "west": { "to": "rust_pointing" }, "east": { "to": "rust_cotton" }, "south": { "to": "rust_savory" }, "north": { "to": "rust_oatbag" } },
       "actions": [
         {
           "id": "pinch_boomgasket",
@@ -39273,6 +39392,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boomgasket. They tied it on the pointing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbag": {
+      "name": "Rust Oatbag",
+      "desc": "A dry oatbag north of the boomgasket. Packed rust coats oatbag.",
+      "brief": "Dry oatbag, packed rust.",
+      "exits": { "south": { "to": "rust_boomgasket" } },
+      "actions": [
+        {
+          "id": "pinch_oatbag",
+          "label": "pinch the oatbag",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbag. They packed it on the boomgasket and packed rust around it."]
           ]
         }
       ]
@@ -50314,11 +50450,17 @@
     "go north",
     "go east",
     "pinch the kaolin",
+    "go north",
+    "pinch the durumbag",
+    "go south",
     "go south",
     "pinch the dill",
     "go north",
     "go east",
     "pinch the smithsonite",
+    "go north",
+    "pinch the foniobag",
+    "go south",
     "go south",
     "pinch the fennel",
     "go north",
@@ -50340,21 +50482,33 @@
     "go east",
     "go east",
     "pinch the bit",
+    "go north",
+    "pinch the teffbag",
+    "go south",
     "go south",
     "pinch the hyssop",
     "go north",
     "go east",
     "pinch the keckling",
+    "go north",
+    "pinch the barleybag",
+    "go south",
     "go south",
     "pinch the borage",
     "go north",
     "go east",
     "pinch the mastgasket",
+    "go north",
+    "pinch the sorghumbag",
+    "go south",
     "go south",
     "pinch the lovage",
     "go north",
     "go east",
     "pinch the linen",
+    "go north",
+    "pinch the milletbag",
+    "go south",
     "go south",
     "pinch the chervil",
     "go north",
@@ -50377,11 +50531,17 @@
     "pinch the pinrail",
     "go east",
     "pinch the pointing",
+    "go north",
+    "pinch the cornbag",
+    "go south",
     "go south",
     "pinch the tarragon",
     "go north",
     "go east",
     "pinch the boomgasket",
+    "go north",
+    "pinch the oatbag",
+    "go south",
     "go south",
     "pinch the savory",
     "go north",
