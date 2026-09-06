@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 16130,
+  "maxScore": 16170,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -12183,7 +12183,7 @@
       "name": "Rust Amabilis",
       "desc": "A dry amabilis east of the blackspruce. Packed rust coats amabilis.",
       "brief": "Dry amabilis, packed rust.",
-      "exits": { "west": { "to": "rust_blackspruce" }, "east": { "to": "rust_nordmann" }, "south": { "to": "rust_olona" } },
+      "exits": { "west": { "to": "rust_blackspruce" }, "east": { "to": "rust_nordmann" }, "south": { "to": "rust_olona" }, "north": { "to": "rust_durumgoliath" } },
       "actions": [
         {
           "id": "pinch_amabilis",
@@ -12192,6 +12192,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard amabilis. They packed it on the blackspruce and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumgoliath": {
+      "name": "Rust Durumgoliath",
+      "desc": "A dry durumgoliath north of the amabilis. Packed rust coats durumgoliath.",
+      "brief": "Dry durumgoliath, packed rust.",
+      "exits": { "south": { "to": "rust_amabilis" } },
+      "actions": [
+        {
+          "id": "pinch_durumgoliath",
+          "label": "pinch the durumgoliath",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumgoliath. They packed it on the amabilis and packed rust around it."]
           ]
         }
       ]
@@ -12217,7 +12234,7 @@
       "name": "Rust Nordmann",
       "desc": "A dry nordmann east of the amabilis. Packed rust coats nordmann.",
       "brief": "Dry nordmann, packed rust.",
-      "exits": { "west": { "to": "rust_amabilis" }, "east": { "to": "rust_maries" }, "south": { "to": "rust_gourd" } },
+      "exits": { "west": { "to": "rust_amabilis" }, "east": { "to": "rust_maries" }, "south": { "to": "rust_gourd" }, "north": { "to": "rust_foniogoliath" } },
       "actions": [
         {
           "id": "pinch_nordmann",
@@ -12226,6 +12243,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nordmann. They packed it on the amabilis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniogoliath": {
+      "name": "Rust Foniogoliath",
+      "desc": "A dry foniogoliath north of the nordmann. Packed rust coats foniogoliath.",
+      "brief": "Dry foniogoliath, packed rust.",
+      "exits": { "south": { "to": "rust_nordmann" } },
+      "actions": [
+        {
+          "id": "pinch_foniogoliath",
+          "label": "pinch the foniogoliath",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniogoliath. They packed it on the nordmann and packed rust around it."]
           ]
         }
       ]
@@ -12251,7 +12285,7 @@
       "name": "Rust Maries",
       "desc": "A dry maries east of the nordmann. Packed rust coats maries.",
       "brief": "Dry maries, packed rust.",
-      "exits": { "west": { "to": "rust_nordmann" }, "east": { "to": "rust_kowhai" }, "south": { "to": "rust_toropapa" } },
+      "exits": { "west": { "to": "rust_nordmann" }, "east": { "to": "rust_kowhai" }, "south": { "to": "rust_toropapa" }, "north": { "to": "rust_teffgoliath" } },
       "actions": [
         {
           "id": "pinch_maries",
@@ -12260,6 +12294,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard maries. They packed it on the nordmann and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffgoliath": {
+      "name": "Rust Teffgoliath",
+      "desc": "A dry teffgoliath north of the maries. Packed rust coats teffgoliath.",
+      "brief": "Dry teffgoliath, packed rust.",
+      "exits": { "south": { "to": "rust_maries" } },
+      "actions": [
+        {
+          "id": "pinch_teffgoliath",
+          "label": "pinch the teffgoliath",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffgoliath. They packed it on the maries and packed rust around it."]
           ]
         }
       ]
@@ -12336,7 +12387,7 @@
       "name": "Rust Roundturn",
       "desc": "A dry roundturn east of the sling. Packed rust coats a roundturn.",
       "brief": "Dry roundturn, packed rust.",
-      "exits": { "west": { "to": "rust_sling" }, "east": { "to": "rust_locustbean" }, "south": { "to": "rust_elderberry" } },
+      "exits": { "west": { "to": "rust_sling" }, "east": { "to": "rust_locustbean" }, "south": { "to": "rust_elderberry" }, "north": { "to": "rust_barleygoliath" } },
       "actions": [
         {
           "id": "pinch_roundturn",
@@ -12345,6 +12396,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard roundturn. They took it on the sling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleygoliath": {
+      "name": "Rust Barleygoliath",
+      "desc": "A dry barleygoliath north of the roundturn. Packed rust coats barleygoliath.",
+      "brief": "Dry barleygoliath, packed rust.",
+      "exits": { "south": { "to": "rust_roundturn" } },
+      "actions": [
+        {
+          "id": "pinch_barleygoliath",
+          "label": "pinch the barleygoliath",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleygoliath. They packed it on the roundturn and packed rust around it."]
           ]
         }
       ]
@@ -12370,7 +12438,7 @@
       "name": "Rust Locustbean",
       "desc": "A dry locustbean east of the roundturn. Packed rust coats locustbean.",
       "brief": "Dry locustbean, packed rust.",
-      "exits": { "west": { "to": "rust_roundturn" }, "east": { "to": "rust_pinyon" }, "south": { "to": "rust_redbud" } },
+      "exits": { "west": { "to": "rust_roundturn" }, "east": { "to": "rust_pinyon" }, "south": { "to": "rust_redbud" }, "north": { "to": "rust_sorghumgoliath" } },
       "actions": [
         {
           "id": "pinch_locustbean",
@@ -12379,6 +12447,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard locustbean. They packed it on the roundturn and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumgoliath": {
+      "name": "Rust Sorghumgoliath",
+      "desc": "A dry sorghumgoliath north of the locustbean. Packed rust coats sorghumgoliath.",
+      "brief": "Dry sorghumgoliath, packed rust.",
+      "exits": { "south": { "to": "rust_locustbean" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumgoliath",
+          "label": "pinch the sorghumgoliath",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumgoliath. They packed it on the locustbean and packed rust around it."]
           ]
         }
       ]
@@ -12404,7 +12489,7 @@
       "name": "Rust Pinyon",
       "desc": "A dry pinyon east of the locustbean. Packed rust coats pinyon.",
       "brief": "Dry pinyon, packed rust.",
-      "exits": { "west": { "to": "rust_locustbean" }, "east": { "to": "rust_bluespruce" }, "south": { "to": "rust_catalpa" } },
+      "exits": { "west": { "to": "rust_locustbean" }, "east": { "to": "rust_bluespruce" }, "south": { "to": "rust_catalpa" }, "north": { "to": "rust_milletgoliath" } },
       "actions": [
         {
           "id": "pinch_pinyon",
@@ -12413,6 +12498,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pinyon. They packed it on the locustbean and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletgoliath": {
+      "name": "Rust Milletgoliath",
+      "desc": "A dry milletgoliath north of the pinyon. Packed rust coats milletgoliath.",
+      "brief": "Dry milletgoliath, packed rust.",
+      "exits": { "south": { "to": "rust_pinyon" } },
+      "actions": [
+        {
+          "id": "pinch_milletgoliath",
+          "label": "pinch the milletgoliath",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletgoliath. They packed it on the pinyon and packed rust around it."]
           ]
         }
       ]
@@ -12438,7 +12540,7 @@
       "name": "Rust Bluespruce",
       "desc": "A dry bluespruce east of the pinyon. Packed rust coats bluespruce.",
       "brief": "Dry bluespruce, packed rust.",
-      "exits": { "west": { "to": "rust_pinyon" }, "east": { "to": "rust_fraserfir" }, "south": { "to": "rust_alahee" } },
+      "exits": { "west": { "to": "rust_pinyon" }, "east": { "to": "rust_fraserfir" }, "south": { "to": "rust_alahee" }, "north": { "to": "rust_corngoliath" } },
       "actions": [
         {
           "id": "pinch_bluespruce",
@@ -12447,6 +12549,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bluespruce. They packed it on the pinyon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corngoliath": {
+      "name": "Rust Corngoliath",
+      "desc": "A dry corngoliath north of the bluespruce. Packed rust coats corngoliath.",
+      "brief": "Dry corngoliath, packed rust.",
+      "exits": { "south": { "to": "rust_bluespruce" } },
+      "actions": [
+        {
+          "id": "pinch_corngoliath",
+          "label": "pinch the corngoliath",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corngoliath. They packed it on the bluespruce and packed rust around it."]
           ]
         }
       ]
@@ -12472,7 +12591,7 @@
       "name": "Rust Fraserfir",
       "desc": "A dry fraserfir east of the bluespruce. Packed rust coats fraserfir.",
       "brief": "Dry fraserfir, packed rust.",
-      "exits": { "west": { "to": "rust_bluespruce" }, "east": { "to": "rust_sitka" }, "south": { "to": "rust_wauke" } },
+      "exits": { "west": { "to": "rust_bluespruce" }, "east": { "to": "rust_sitka" }, "south": { "to": "rust_wauke" }, "north": { "to": "rust_oatgoliath" } },
       "actions": [
         {
           "id": "pinch_fraserfir",
@@ -12481,6 +12600,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fraserfir. They packed it on the bluespruce and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatgoliath": {
+      "name": "Rust Oatgoliath",
+      "desc": "A dry oatgoliath north of the fraserfir. Packed rust coats oatgoliath.",
+      "brief": "Dry oatgoliath, packed rust.",
+      "exits": { "south": { "to": "rust_fraserfir" } },
+      "actions": [
+        {
+          "id": "pinch_oatgoliath",
+          "label": "pinch the oatgoliath",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatgoliath. They packed it on the fraserfir and packed rust around it."]
           ]
         }
       ]
@@ -56943,16 +57079,25 @@
     "go north",
     "go east",
     "pinch the amabilis",
+    "go north",
+    "pinch the durumgoliath",
+    "go south",
     "go south",
     "pinch the olona",
     "go north",
     "go east",
     "pinch the nordmann",
+    "go north",
+    "pinch the foniogoliath",
+    "go south",
     "go south",
     "pinch the gourd",
     "go north",
     "go east",
     "pinch the maries",
+    "go north",
+    "pinch the teffgoliath",
+    "go south",
     "go south",
     "pinch the toropapa",
     "go north",
@@ -56974,26 +57119,41 @@
     "pinch the sling",
     "go east",
     "pinch the roundturn",
+    "go north",
+    "pinch the barleygoliath",
+    "go south",
     "go south",
     "pinch the elderberry",
     "go north",
     "go east",
     "pinch the locustbean",
+    "go north",
+    "pinch the sorghumgoliath",
+    "go south",
     "go south",
     "pinch the redbud",
     "go north",
     "go east",
     "pinch the pinyon",
+    "go north",
+    "pinch the milletgoliath",
+    "go south",
     "go south",
     "pinch the catalpa",
     "go north",
     "go east",
     "pinch the bluespruce",
+    "go north",
+    "pinch the corngoliath",
+    "go south",
     "go south",
     "pinch the alahee",
     "go north",
     "go east",
     "pinch the fraserfir",
+    "go north",
+    "pinch the oatgoliath",
+    "go south",
     "go south",
     "pinch the wauke",
     "go north",
