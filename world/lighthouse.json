@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7410,
+  "maxScore": 7450,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6777,7 +6777,7 @@
       "name": "Rust Bistre",
       "desc": "A dry bistre east of the cochineal. Packed rust coats bistre.",
       "brief": "Dry bistre, packed rust.",
-      "exits": { "west": { "to": "rust_cochineal" } },
+      "exits": { "west": { "to": "rust_cochineal" }, "east": { "to": "rust_jackpine" } },
       "actions": [
         {
           "id": "pinch_bistre",
@@ -6786,6 +6786,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bistre. They packed it on the cochineal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_jackpine": {
+      "name": "Rust Jackpine",
+      "desc": "A dry jackpine east of the bistre. Packed rust coats jackpine.",
+      "brief": "Dry jackpine, packed rust.",
+      "exits": { "west": { "to": "rust_bistre" } },
+      "actions": [
+        {
+          "id": "pinch_jackpine",
+          "label": "pinch the jackpine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard jackpine. They packed it on the bistre and packed rust around it."]
           ]
         }
       ]
@@ -7236,7 +7253,7 @@
       "name": "Rust Ivoryblack",
       "desc": "A dry ivoryblack east of the indigo. Packed rust coats ivoryblack.",
       "brief": "Dry ivoryblack, packed rust.",
-      "exits": { "west": { "to": "rust_indigo" } },
+      "exits": { "west": { "to": "rust_indigo" }, "east": { "to": "rust_foxtail" } },
       "actions": [
         {
           "id": "pinch_ivoryblack",
@@ -7245,6 +7262,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ivoryblack. They packed it on the indigo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foxtail": {
+      "name": "Rust Foxtail",
+      "desc": "A dry foxtail east of the ivoryblack. Packed rust coats foxtail.",
+      "brief": "Dry foxtail, packed rust.",
+      "exits": { "west": { "to": "rust_ivoryblack" } },
+      "actions": [
+        {
+          "id": "pinch_foxtail",
+          "label": "pinch the foxtail",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foxtail. They packed it on the ivoryblack and packed rust around it."]
           ]
         }
       ]
@@ -7627,7 +7661,7 @@
       "name": "Rust Hansa",
       "desc": "A dry hansa east of the chrome. Packed rust coats hansa.",
       "brief": "Dry hansa, packed rust.",
-      "exits": { "west": { "to": "rust_chrome" } },
+      "exits": { "west": { "to": "rust_chrome" }, "east": { "to": "rust_virginiapine" } },
       "actions": [
         {
           "id": "pinch_hansa",
@@ -7636,6 +7670,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hansa. They packed it on the chrome and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_virginiapine": {
+      "name": "Rust Virginiapine",
+      "desc": "A dry virginiapine east of the hansa. Packed rust coats virginiapine.",
+      "brief": "Dry virginiapine, packed rust.",
+      "exits": { "west": { "to": "rust_hansa" } },
+      "actions": [
+        {
+          "id": "pinch_virginiapine",
+          "label": "pinch the virginiapine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard virginiapine. They packed it on the hansa and packed rust around it."]
           ]
         }
       ]
@@ -7865,7 +7916,7 @@
       "name": "Rust Vermilion",
       "desc": "A dry vermilion east of the cerulean. Packed rust coats vermilion.",
       "brief": "Dry vermilion, packed rust.",
-      "exits": { "west": { "to": "rust_cerulean" } },
+      "exits": { "west": { "to": "rust_cerulean" }, "east": { "to": "rust_longleaf" } },
       "actions": [
         {
           "id": "pinch_vermilion",
@@ -7874,6 +7925,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard vermilion. They packed it on the cerulean and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_longleaf": {
+      "name": "Rust Longleaf",
+      "desc": "A dry longleaf east of the vermilion. Packed rust coats longleaf.",
+      "brief": "Dry longleaf, packed rust.",
+      "exits": { "west": { "to": "rust_vermilion" } },
+      "actions": [
+        {
+          "id": "pinch_longleaf",
+          "label": "pinch the longleaf",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard longleaf. They packed it on the vermilion and packed rust around it."]
           ]
         }
       ]
@@ -8273,7 +8341,7 @@
       "name": "Rust Carrageen",
       "desc": "A dry carrageen east of the barrelknot. Packed rust coats carrageen.",
       "brief": "Dry carrageen, packed rust.",
-      "exits": { "west": { "to": "rust_barrelknot" } },
+      "exits": { "west": { "to": "rust_barrelknot" }, "east": { "to": "rust_limberpine" } },
       "actions": [
         {
           "id": "pinch_carrageen",
@@ -8282,6 +8350,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard carrageen. They packed it on the barrelknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_limberpine": {
+      "name": "Rust Limberpine",
+      "desc": "A dry limberpine east of the carrageen. Packed rust coats limberpine.",
+      "brief": "Dry limberpine, packed rust.",
+      "exits": { "west": { "to": "rust_carrageen" } },
+      "actions": [
+        {
+          "id": "pinch_limberpine",
+          "label": "pinch the limberpine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard limberpine. They packed it on the carrageen and packed rust around it."]
           ]
         }
       ]
@@ -8341,7 +8426,7 @@
       "name": "Rust Algin",
       "desc": "A dry algin east of the diamondknot. Packed rust coats algin.",
       "brief": "Dry algin, packed rust.",
-      "exits": { "west": { "to": "rust_diamondknot" } },
+      "exits": { "west": { "to": "rust_diamondknot" }, "east": { "to": "rust_macedonian" } },
       "actions": [
         {
           "id": "pinch_algin",
@@ -8350,6 +8435,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard algin. They packed it on the diamondknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_macedonian": {
+      "name": "Rust Macedonian",
+      "desc": "A dry macedonian east of the algin. Packed rust coats macedonian.",
+      "brief": "Dry macedonian, packed rust.",
+      "exits": { "west": { "to": "rust_algin" } },
+      "actions": [
+        {
+          "id": "pinch_macedonian",
+          "label": "pinch the macedonian",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard macedonian. They packed it on the algin and packed rust around it."]
           ]
         }
       ]
@@ -8426,7 +8528,7 @@
       "name": "Rust Carob",
       "desc": "A dry carob east of the stopperknot. Packed rust coats carob.",
       "brief": "Dry carob, packed rust.",
-      "exits": { "west": { "to": "rust_stopperknot" } },
+      "exits": { "west": { "to": "rust_stopperknot" }, "east": { "to": "rust_arolla" } },
       "actions": [
         {
           "id": "pinch_carob",
@@ -8435,6 +8537,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard carob. They packed it on the stopperknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_arolla": {
+      "name": "Rust Arolla",
+      "desc": "A dry arolla east of the carob. Packed rust coats arolla.",
+      "brief": "Dry arolla, packed rust.",
+      "exits": { "west": { "to": "rust_carob" } },
+      "actions": [
+        {
+          "id": "pinch_arolla",
+          "label": "pinch the arolla",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard arolla. They packed it on the carob and packed rust around it."]
           ]
         }
       ]
@@ -8494,7 +8613,7 @@
       "name": "Rust Locustbean",
       "desc": "A dry locustbean east of the roundturn. Packed rust coats locustbean.",
       "brief": "Dry locustbean, packed rust.",
-      "exits": { "west": { "to": "rust_roundturn" } },
+      "exits": { "west": { "to": "rust_roundturn" }, "east": { "to": "rust_pinyon" } },
       "actions": [
         {
           "id": "pinch_locustbean",
@@ -8503,6 +8622,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard locustbean. They packed it on the roundturn and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_pinyon": {
+      "name": "Rust Pinyon",
+      "desc": "A dry pinyon east of the locustbean. Packed rust coats pinyon.",
+      "brief": "Dry pinyon, packed rust.",
+      "exits": { "west": { "to": "rust_locustbean" } },
+      "actions": [
+        {
+          "id": "pinch_pinyon",
+          "label": "pinch the pinyon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pinyon. They packed it on the locustbean and packed rust around it."]
           ]
         }
       ]
@@ -26307,6 +26443,9 @@
     "pinch the cochineal",
     "go east",
     "pinch the bistre",
+    "go east",
+    "pinch the jackpine",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26384,6 +26523,9 @@
     "pinch the indigo",
     "go east",
     "pinch the ivoryblack",
+    "go east",
+    "pinch the foxtail",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26453,6 +26595,9 @@
     "pinch the chrome",
     "go east",
     "pinch the hansa",
+    "go east",
+    "pinch the virginiapine",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26493,6 +26638,9 @@
     "pinch the cerulean",
     "go east",
     "pinch the vermilion",
+    "go east",
+    "pinch the longleaf",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26567,6 +26715,9 @@
     "pinch the barrelknot",
     "go east",
     "pinch the carrageen",
+    "go east",
+    "pinch the limberpine",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26579,6 +26730,9 @@
     "pinch the diamondknot",
     "go east",
     "pinch the algin",
+    "go east",
+    "pinch the macedonian",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26593,6 +26747,9 @@
     "pinch the stopperknot",
     "go east",
     "pinch the carob",
+    "go east",
+    "pinch the arolla",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26605,6 +26762,9 @@
     "pinch the roundturn",
     "go east",
     "pinch the locustbean",
+    "go east",
+    "pinch the pinyon",
+    "go west",
     "go west",
     "go west",
     "go north",
