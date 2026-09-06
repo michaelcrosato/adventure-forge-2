@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13850,
+  "maxScore": 13890,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -30747,7 +30747,7 @@
       "name": "Rust Agate",
       "desc": "A dry agate east of the diatomite. Packed rust coats agate.",
       "brief": "Dry agate, packed rust.",
-      "exits": { "west": { "to": "rust_diatomite" }, "east": { "to": "rust_glasspaper" }, "south": { "to": "rust_nigellaflour" } },
+      "exits": { "west": { "to": "rust_diatomite" }, "east": { "to": "rust_glasspaper" }, "south": { "to": "rust_nigellaflour" }, "north": { "to": "rust_durumbowl" } },
       "actions": [
         {
           "id": "pinch_agate",
@@ -30756,6 +30756,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard agate. They packed it on the diatomite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbowl": {
+      "name": "Rust Durumbowl",
+      "desc": "A dry durumbowl north of the agate. Packed rust coats durumbowl.",
+      "brief": "Dry durumbowl, packed rust.",
+      "exits": { "south": { "to": "rust_agate" } },
+      "actions": [
+        {
+          "id": "pinch_durumbowl",
+          "label": "pinch the durumbowl",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbowl. They packed it on the agate and packed rust around it."]
           ]
         }
       ]
@@ -30781,7 +30798,7 @@
       "name": "Rust Glasspaper",
       "desc": "A dry glasspaper east of the agate. Packed rust coats glasspaper.",
       "brief": "Dry glasspaper, packed rust.",
-      "exits": { "west": { "to": "rust_agate" }, "east": { "to": "rust_bice" }, "south": { "to": "rust_poppyflour" } },
+      "exits": { "west": { "to": "rust_agate" }, "east": { "to": "rust_bice" }, "south": { "to": "rust_poppyflour" }, "north": { "to": "rust_foniobowl" } },
       "actions": [
         {
           "id": "pinch_glasspaper",
@@ -30790,6 +30807,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard glasspaper. They packed it on the agate and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobowl": {
+      "name": "Rust Foniobowl",
+      "desc": "A dry foniobowl north of the glasspaper. Packed rust coats foniobowl.",
+      "brief": "Dry foniobowl, packed rust.",
+      "exits": { "south": { "to": "rust_glasspaper" } },
+      "actions": [
+        {
+          "id": "pinch_foniobowl",
+          "label": "pinch the foniobowl",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobowl. They packed it on the glasspaper and packed rust around it."]
           ]
         }
       ]
@@ -30815,7 +30849,7 @@
       "name": "Rust Bice",
       "desc": "A dry bice east of the glasspaper. Packed rust coats bice.",
       "brief": "Dry bice, packed rust.",
-      "exits": { "west": { "to": "rust_glasspaper" }, "east": { "to": "rust_mayanblue" }, "south": { "to": "rust_sunflowerflour" } },
+      "exits": { "west": { "to": "rust_glasspaper" }, "east": { "to": "rust_mayanblue" }, "south": { "to": "rust_sunflowerflour" }, "north": { "to": "rust_teffbowl" } },
       "actions": [
         {
           "id": "pinch_bice",
@@ -30824,6 +30858,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bice. They packed it on the glasspaper and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbowl": {
+      "name": "Rust Teffbowl",
+      "desc": "A dry teffbowl north of the bice. Packed rust coats teffbowl.",
+      "brief": "Dry teffbowl, packed rust.",
+      "exits": { "south": { "to": "rust_bice" } },
+      "actions": [
+        {
+          "id": "pinch_teffbowl",
+          "label": "pinch the teffbowl",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbowl. They packed it on the bice and packed rust around it."]
           ]
         }
       ]
@@ -30849,7 +30900,7 @@
       "name": "Rust Mayanblue",
       "desc": "A dry mayanblue east of the bice. Packed rust coats mayanblue.",
       "brief": "Dry mayanblue, packed rust.",
-      "exits": { "west": { "to": "rust_bice" }, "east": { "to": "rust_calumetite" }, "south": { "to": "rust_sesameflour" } },
+      "exits": { "west": { "to": "rust_bice" }, "east": { "to": "rust_calumetite" }, "south": { "to": "rust_sesameflour" }, "north": { "to": "rust_barleybowl" } },
       "actions": [
         {
           "id": "pinch_mayanblue",
@@ -30858,6 +30909,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mayanblue. They packed it on the bice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybowl": {
+      "name": "Rust Barleybowl",
+      "desc": "A dry barleybowl north of the mayanblue. Packed rust coats barleybowl.",
+      "brief": "Dry barleybowl, packed rust.",
+      "exits": { "south": { "to": "rust_mayanblue" } },
+      "actions": [
+        {
+          "id": "pinch_barleybowl",
+          "label": "pinch the barleybowl",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybowl. They packed it on the mayanblue and packed rust around it."]
           ]
         }
       ]
@@ -30883,7 +30951,7 @@
       "name": "Rust Calumetite",
       "desc": "A dry calumetite east of the mayanblue. Packed rust coats calumetite.",
       "brief": "Dry calumetite, packed rust.",
-      "exits": { "west": { "to": "rust_mayanblue" }, "east": { "to": "rust_ullmannite" }, "south": { "to": "rust_barleybran" } },
+      "exits": { "west": { "to": "rust_mayanblue" }, "east": { "to": "rust_ullmannite" }, "south": { "to": "rust_barleybran" }, "north": { "to": "rust_sorghumbowl" } },
       "actions": [
         {
           "id": "pinch_calumetite",
@@ -30892,6 +30960,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard calumetite. They packed it on the mayanblue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbowl": {
+      "name": "Rust Sorghumbowl",
+      "desc": "A dry sorghumbowl north of the calumetite. Packed rust coats sorghumbowl.",
+      "brief": "Dry sorghumbowl, packed rust.",
+      "exits": { "south": { "to": "rust_calumetite" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbowl",
+          "label": "pinch the sorghumbowl",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbowl. They packed it on the calumetite and packed rust around it."]
           ]
         }
       ]
@@ -30968,7 +31053,7 @@
       "name": "Rust Sennit",
       "desc": "A dry sennit east of the samson. Packed rust coats sennit.",
       "brief": "Dry sennit, packed rust.",
-      "exits": { "west": { "to": "rust_samson" }, "east": { "to": "rust_footband" }, "south": { "to": "rust_sorghumbran" } },
+      "exits": { "west": { "to": "rust_samson" }, "east": { "to": "rust_footband" }, "south": { "to": "rust_sorghumbran" }, "north": { "to": "rust_milletbowl" } },
       "actions": [
         {
           "id": "pinch_sennit",
@@ -30977,6 +31062,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sennit. They plaited it on the samson and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbowl": {
+      "name": "Rust Milletbowl",
+      "desc": "A dry milletbowl north of the sennit. Packed rust coats milletbowl.",
+      "brief": "Dry milletbowl, packed rust.",
+      "exits": { "south": { "to": "rust_sennit" } },
+      "actions": [
+        {
+          "id": "pinch_milletbowl",
+          "label": "pinch the milletbowl",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbowl. They packed it on the sennit and packed rust around it."]
           ]
         }
       ]
@@ -31002,7 +31104,7 @@
       "name": "Rust Footband",
       "desc": "A dry footband east of the sennit. Packed rust coats a footband.",
       "brief": "Dry footband, packed rust.",
-      "exits": { "west": { "to": "rust_sennit" }, "east": { "to": "rust_jarrah" }, "south": { "to": "rust_milletbran" } },
+      "exits": { "west": { "to": "rust_sennit" }, "east": { "to": "rust_jarrah" }, "south": { "to": "rust_milletbran" }, "north": { "to": "rust_cornbowl" } },
       "actions": [
         {
           "id": "pinch_footband",
@@ -31011,6 +31113,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard footband. They stitched it on the sennit and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbowl": {
+      "name": "Rust Cornbowl",
+      "desc": "A dry cornbowl north of the footband. Packed rust coats cornbowl.",
+      "brief": "Dry cornbowl, packed rust.",
+      "exits": { "south": { "to": "rust_footband" } },
+      "actions": [
+        {
+          "id": "pinch_cornbowl",
+          "label": "pinch the cornbowl",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbowl. They packed it on the footband and packed rust around it."]
           ]
         }
       ]
@@ -31036,7 +31155,7 @@
       "name": "Rust Jarrah",
       "desc": "A dry jarrah east of the footband. Packed rust coats jarrah.",
       "brief": "Dry jarrah, packed rust.",
-      "exits": { "west": { "to": "rust_footband" }, "east": { "to": "rust_soapstone" }, "south": { "to": "rust_speltberry" } },
+      "exits": { "west": { "to": "rust_footband" }, "east": { "to": "rust_soapstone" }, "south": { "to": "rust_speltberry" }, "north": { "to": "rust_oatbowl" } },
       "actions": [
         {
           "id": "pinch_jarrah",
@@ -31045,6 +31164,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jarrah. They set it on the footband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbowl": {
+      "name": "Rust Oatbowl",
+      "desc": "A dry oatbowl north of the jarrah. Packed rust coats oatbowl.",
+      "brief": "Dry oatbowl, packed rust.",
+      "exits": { "south": { "to": "rust_jarrah" } },
+      "actions": [
+        {
+          "id": "pinch_oatbowl",
+          "label": "pinch the oatbowl",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbowl. They packed it on the jarrah and packed rust around it."]
           ]
         }
       ]
@@ -52406,26 +52542,41 @@
     "go north",
     "go east",
     "pinch the agate",
+    "go north",
+    "pinch the durumbowl",
+    "go south",
     "go south",
     "pinch the nigellaflour",
     "go north",
     "go east",
     "pinch the glasspaper",
+    "go north",
+    "pinch the foniobowl",
+    "go south",
     "go south",
     "pinch the poppyflour",
     "go north",
     "go east",
     "pinch the bice",
+    "go north",
+    "pinch the teffbowl",
+    "go south",
     "go south",
     "pinch the sunflowerflour",
     "go north",
     "go east",
     "pinch the mayanblue",
+    "go north",
+    "pinch the barleybowl",
+    "go south",
     "go south",
     "pinch the sesameflour",
     "go north",
     "go east",
     "pinch the calumetite",
+    "go north",
+    "pinch the sorghumbowl",
+    "go south",
     "go south",
     "pinch the barleybran",
     "go north",
@@ -52448,16 +52599,25 @@
     "pinch the samson",
     "go east",
     "pinch the sennit",
+    "go north",
+    "pinch the milletbowl",
+    "go south",
     "go south",
     "pinch the sorghumbran",
     "go north",
     "go east",
     "pinch the footband",
+    "go north",
+    "pinch the cornbowl",
+    "go south",
     "go south",
     "pinch the milletbran",
     "go north",
     "go east",
     "pinch the jarrah",
+    "go north",
+    "pinch the oatbowl",
+    "go south",
     "go south",
     "pinch the speltberry",
     "go north",
