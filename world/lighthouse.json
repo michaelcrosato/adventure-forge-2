@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14850,
+  "maxScore": 14890,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -22451,7 +22451,7 @@
       "name": "Rust Belian",
       "desc": "A dry belian east of the ziricote. Packed rust coats belian.",
       "brief": "Dry belian, packed rust.",
-      "exits": { "west": { "to": "rust_ziricote" }, "east": { "to": "rust_kalantas" }, "south": { "to": "rust_cornclear" } },
+      "exits": { "west": { "to": "rust_ziricote" }, "east": { "to": "rust_kalantas" }, "south": { "to": "rust_cornclear" }, "north": { "to": "rust_durumkilderkin" } },
       "actions": [
         {
           "id": "pinch_belian",
@@ -22460,6 +22460,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard belian. They packed it on the ziricote and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumkilderkin": {
+      "name": "Rust Durumkilderkin",
+      "desc": "A dry durumkilderkin north of the belian. Packed rust coats durumkilderkin.",
+      "brief": "Dry durumkilderkin, packed rust.",
+      "exits": { "south": { "to": "rust_belian" } },
+      "actions": [
+        {
+          "id": "pinch_durumkilderkin",
+          "label": "pinch the durumkilderkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumkilderkin. They packed it on the belian and packed rust around it."]
           ]
         }
       ]
@@ -22485,7 +22502,7 @@
       "name": "Rust Kalantas",
       "desc": "A dry kalantas east of the belian. Packed rust coats kalantas.",
       "brief": "Dry kalantas, packed rust.",
-      "exits": { "west": { "to": "rust_belian" }, "east": { "to": "rust_tendu" }, "south": { "to": "rust_oatclear" } },
+      "exits": { "west": { "to": "rust_belian" }, "east": { "to": "rust_tendu" }, "south": { "to": "rust_oatclear" }, "north": { "to": "rust_foniokilderkin" } },
       "actions": [
         {
           "id": "pinch_kalantas",
@@ -22494,6 +22511,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kalantas. They packed it on the belian and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniokilderkin": {
+      "name": "Rust Foniokilderkin",
+      "desc": "A dry foniokilderkin north of the kalantas. Packed rust coats foniokilderkin.",
+      "brief": "Dry foniokilderkin, packed rust.",
+      "exits": { "south": { "to": "rust_kalantas" } },
+      "actions": [
+        {
+          "id": "pinch_foniokilderkin",
+          "label": "pinch the foniokilderkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniokilderkin. They packed it on the kalantas and packed rust around it."]
           ]
         }
       ]
@@ -22536,7 +22570,7 @@
       "name": "Rust Sprit",
       "desc": "A dry sprit east of the rod. Packed rust coats a sprit.",
       "brief": "Dry sprit, packed rust.",
-      "exits": { "west": { "to": "rust_rod" }, "east": { "to": "rust_sheepshank" }, "south": { "to": "rust_ryeclear" } },
+      "exits": { "west": { "to": "rust_rod" }, "east": { "to": "rust_sheepshank" }, "south": { "to": "rust_ryeclear" }, "north": { "to": "rust_teffkilderkin" } },
       "actions": [
         {
           "id": "pinch_sprit",
@@ -22545,6 +22579,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sprit. They peaked it on the rod and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffkilderkin": {
+      "name": "Rust Teffkilderkin",
+      "desc": "A dry teffkilderkin north of the sprit. Packed rust coats teffkilderkin.",
+      "brief": "Dry teffkilderkin, packed rust.",
+      "exits": { "south": { "to": "rust_sprit" } },
+      "actions": [
+        {
+          "id": "pinch_teffkilderkin",
+          "label": "pinch the teffkilderkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffkilderkin. They packed it on the sprit and packed rust around it."]
           ]
         }
       ]
@@ -22570,7 +22621,7 @@
       "name": "Rust Sheepshank",
       "desc": "A dry sheepshank east of the sprit. Packed rust coats a sheepshank.",
       "brief": "Dry sheepshank, packed rust.",
-      "exits": { "west": { "to": "rust_sprit" }, "east": { "to": "rust_distemper" }, "south": { "to": "rust_wheatclear" } },
+      "exits": { "west": { "to": "rust_sprit" }, "east": { "to": "rust_distemper" }, "south": { "to": "rust_wheatclear" }, "north": { "to": "rust_barleykilderkin" } },
       "actions": [
         {
           "id": "pinch_sheepshank",
@@ -22579,6 +22630,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheepshank. They shortened it on the sprit and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleykilderkin": {
+      "name": "Rust Barleykilderkin",
+      "desc": "A dry barleykilderkin north of the sheepshank. Packed rust coats barleykilderkin.",
+      "brief": "Dry barleykilderkin, packed rust.",
+      "exits": { "south": { "to": "rust_sheepshank" } },
+      "actions": [
+        {
+          "id": "pinch_barleykilderkin",
+          "label": "pinch the barleykilderkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleykilderkin. They packed it on the sheepshank and packed rust around it."]
           ]
         }
       ]
@@ -22604,7 +22672,7 @@
       "name": "Rust Distemper",
       "desc": "A dry distemper east of the sheepshank. Packed rust coats distemper.",
       "brief": "Dry distemper, packed rust.",
-      "exits": { "west": { "to": "rust_sheepshank" }, "east": { "to": "rust_mansonia" }, "south": { "to": "rust_durumreddog" } },
+      "exits": { "west": { "to": "rust_sheepshank" }, "east": { "to": "rust_mansonia" }, "south": { "to": "rust_durumreddog" }, "north": { "to": "rust_sorghumkilderkin" } },
       "actions": [
         {
           "id": "pinch_distemper",
@@ -22613,6 +22681,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard distemper. They packed it on the sheepshank and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumkilderkin": {
+      "name": "Rust Sorghumkilderkin",
+      "desc": "A dry sorghumkilderkin north of the distemper. Packed rust coats sorghumkilderkin.",
+      "brief": "Dry sorghumkilderkin, packed rust.",
+      "exits": { "south": { "to": "rust_distemper" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumkilderkin",
+          "label": "pinch the sorghumkilderkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumkilderkin. They packed it on the distemper and packed rust around it."]
           ]
         }
       ]
@@ -22638,7 +22723,7 @@
       "name": "Rust Mansonia",
       "desc": "A dry mansonia east of the distemper. Packed rust coats mansonia.",
       "brief": "Dry mansonia, packed rust.",
-      "exits": { "west": { "to": "rust_distemper" }, "east": { "to": "rust_vinhatico" }, "south": { "to": "rust_fonioreddog" } },
+      "exits": { "west": { "to": "rust_distemper" }, "east": { "to": "rust_vinhatico" }, "south": { "to": "rust_fonioreddog" }, "north": { "to": "rust_milletkilderkin" } },
       "actions": [
         {
           "id": "pinch_mansonia",
@@ -22647,6 +22732,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mansonia. They packed it on the distemper and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletkilderkin": {
+      "name": "Rust Milletkilderkin",
+      "desc": "A dry milletkilderkin north of the mansonia. Packed rust coats milletkilderkin.",
+      "brief": "Dry milletkilderkin, packed rust.",
+      "exits": { "south": { "to": "rust_mansonia" } },
+      "actions": [
+        {
+          "id": "pinch_milletkilderkin",
+          "label": "pinch the milletkilderkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletkilderkin. They packed it on the mansonia and packed rust around it."]
           ]
         }
       ]
@@ -22672,7 +22774,7 @@
       "name": "Rust Vinhatico",
       "desc": "A dry vinhatico east of the mansonia. Packed rust coats vinhatico.",
       "brief": "Dry vinhatico, packed rust.",
-      "exits": { "west": { "to": "rust_mansonia" }, "east": { "to": "rust_palosanto" }, "south": { "to": "rust_teffreddog" } },
+      "exits": { "west": { "to": "rust_mansonia" }, "east": { "to": "rust_palosanto" }, "south": { "to": "rust_teffreddog" }, "north": { "to": "rust_cornkilderkin" } },
       "actions": [
         {
           "id": "pinch_vinhatico",
@@ -22681,6 +22783,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard vinhatico. They packed it on the mansonia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornkilderkin": {
+      "name": "Rust Cornkilderkin",
+      "desc": "A dry cornkilderkin north of the vinhatico. Packed rust coats cornkilderkin.",
+      "brief": "Dry cornkilderkin, packed rust.",
+      "exits": { "south": { "to": "rust_vinhatico" } },
+      "actions": [
+        {
+          "id": "pinch_cornkilderkin",
+          "label": "pinch the cornkilderkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornkilderkin. They packed it on the vinhatico and packed rust around it."]
           ]
         }
       ]
@@ -22706,7 +22825,7 @@
       "name": "Rust Palosanto",
       "desc": "A dry palosanto east of the vinhatico. Packed rust coats palosanto.",
       "brief": "Dry palosanto, packed rust.",
-      "exits": { "west": { "to": "rust_vinhatico" }, "east": { "to": "rust_chengal" }, "south": { "to": "rust_barleyreddog" } },
+      "exits": { "west": { "to": "rust_vinhatico" }, "east": { "to": "rust_chengal" }, "south": { "to": "rust_barleyreddog" }, "north": { "to": "rust_oatkilderkin" } },
       "actions": [
         {
           "id": "pinch_palosanto",
@@ -22715,6 +22834,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palosanto. They packed it on the vinhatico and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatkilderkin": {
+      "name": "Rust Oatkilderkin",
+      "desc": "A dry oatkilderkin north of the palosanto. Packed rust coats oatkilderkin.",
+      "brief": "Dry oatkilderkin, packed rust.",
+      "exits": { "south": { "to": "rust_palosanto" } },
+      "actions": [
+        {
+          "id": "pinch_oatkilderkin",
+          "label": "pinch the oatkilderkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatkilderkin. They packed it on the palosanto and packed rust around it."]
           ]
         }
       ]
@@ -54406,11 +54542,17 @@
     "go north",
     "go east",
     "pinch the belian",
+    "go north",
+    "pinch the durumkilderkin",
+    "go south",
     "go south",
     "pinch the cornclear",
     "go north",
     "go east",
     "pinch the kalantas",
+    "go north",
+    "pinch the foniokilderkin",
+    "go south",
     "go south",
     "pinch the oatclear",
     "go north",
@@ -54428,31 +54570,49 @@
     "go north",
     "go east",
     "pinch the sprit",
+    "go north",
+    "pinch the teffkilderkin",
+    "go south",
     "go south",
     "pinch the ryeclear",
     "go north",
     "go east",
     "pinch the sheepshank",
+    "go north",
+    "pinch the barleykilderkin",
+    "go south",
     "go south",
     "pinch the wheatclear",
     "go north",
     "go east",
     "pinch the distemper",
+    "go north",
+    "pinch the sorghumkilderkin",
+    "go south",
     "go south",
     "pinch the durumreddog",
     "go north",
     "go east",
     "pinch the mansonia",
+    "go north",
+    "pinch the milletkilderkin",
+    "go south",
     "go south",
     "pinch the fonioreddog",
     "go north",
     "go east",
     "pinch the vinhatico",
+    "go north",
+    "pinch the cornkilderkin",
+    "go south",
     "go south",
     "pinch the teffreddog",
     "go north",
     "go east",
     "pinch the palosanto",
+    "go north",
+    "pinch the oatkilderkin",
+    "go south",
     "go south",
     "pinch the barleyreddog",
     "go north",
