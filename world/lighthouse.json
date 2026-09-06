@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12530,
+  "maxScore": 12570,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -41151,7 +41151,7 @@
       "name": "Rust Redwood",
       "desc": "A dry redwood east of the hickory. Packed rust coats redwood.",
       "brief": "Dry redwood, packed rust.",
-      "exits": { "west": { "to": "rust_hickory" }, "east": { "to": "rust_flakewhite" }, "south": { "to": "rust_agar" } },
+      "exits": { "west": { "to": "rust_hickory" }, "east": { "to": "rust_flakewhite" }, "south": { "to": "rust_agar" }, "north": { "to": "rust_durumrun" } },
       "actions": [
         {
           "id": "pinch_redwood",
@@ -41160,6 +41160,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redwood. They laid it on the hickory and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumrun": {
+      "name": "Rust Durumrun",
+      "desc": "A dry durumrun north of the redwood. Packed rust coats durumrun.",
+      "brief": "Dry durumrun, packed rust.",
+      "exits": { "south": { "to": "rust_redwood" } },
+      "actions": [
+        {
+          "id": "pinch_durumrun",
+          "label": "pinch the durumrun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumrun. They packed it on the redwood and packed rust around it."]
           ]
         }
       ]
@@ -41185,7 +41202,7 @@
       "name": "Rust Flakewhite",
       "desc": "A dry flakewhite east of the redwood. Packed rust coats flakewhite.",
       "brief": "Dry flakewhite, packed rust.",
-      "exits": { "west": { "to": "rust_redwood" }, "east": { "to": "rust_covellite" }, "south": { "to": "rust_nori" } },
+      "exits": { "west": { "to": "rust_redwood" }, "east": { "to": "rust_covellite" }, "south": { "to": "rust_nori" }, "north": { "to": "rust_foniorun" } },
       "actions": [
         {
           "id": "pinch_flakewhite",
@@ -41194,6 +41211,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard flakewhite. They packed it on the redwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniorun": {
+      "name": "Rust Foniorun",
+      "desc": "A dry foniorun north of the flakewhite. Packed rust coats foniorun.",
+      "brief": "Dry foniorun, packed rust.",
+      "exits": { "south": { "to": "rust_flakewhite" } },
+      "actions": [
+        {
+          "id": "pinch_foniorun",
+          "label": "pinch the foniorun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniorun. They packed it on the flakewhite and packed rust around it."]
           ]
         }
       ]
@@ -41219,7 +41253,7 @@
       "name": "Rust Covellite",
       "desc": "A dry covellite east of the flakewhite. Packed rust coats covellite.",
       "brief": "Dry covellite, packed rust.",
-      "exits": { "west": { "to": "rust_flakewhite" }, "east": { "to": "rust_delafossite" }, "south": { "to": "rust_fucus" } },
+      "exits": { "west": { "to": "rust_flakewhite" }, "east": { "to": "rust_delafossite" }, "south": { "to": "rust_fucus" }, "north": { "to": "rust_teffrun" } },
       "actions": [
         {
           "id": "pinch_covellite",
@@ -41228,6 +41262,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard covellite. They packed it on the flakewhite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffrun": {
+      "name": "Rust Teffrun",
+      "desc": "A dry teffrun north of the covellite. Packed rust coats teffrun.",
+      "brief": "Dry teffrun, packed rust.",
+      "exits": { "south": { "to": "rust_covellite" } },
+      "actions": [
+        {
+          "id": "pinch_teffrun",
+          "label": "pinch the teffrun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffrun. They packed it on the covellite and packed rust around it."]
           ]
         }
       ]
@@ -41287,7 +41338,7 @@
       "name": "Rust Racking",
       "desc": "A dry racking east of the helm. Packed rust coats racking.",
       "brief": "Dry racking, packed rust.",
-      "exits": { "west": { "to": "rust_helm" }, "east": { "to": "rust_halyardgasket" }, "south": { "to": "rust_wrack" } },
+      "exits": { "west": { "to": "rust_helm" }, "east": { "to": "rust_halyardgasket" }, "south": { "to": "rust_wrack" }, "north": { "to": "rust_barleyrun" } },
       "actions": [
         {
           "id": "pinch_racking",
@@ -41296,6 +41347,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard racking. They seized it on the helm and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyrun": {
+      "name": "Rust Barleyrun",
+      "desc": "A dry barleyrun north of the racking. Packed rust coats barleyrun.",
+      "brief": "Dry barleyrun, packed rust.",
+      "exits": { "south": { "to": "rust_racking" } },
+      "actions": [
+        {
+          "id": "pinch_barleyrun",
+          "label": "pinch the barleyrun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyrun. They packed it on the racking and packed rust around it."]
           ]
         }
       ]
@@ -41321,7 +41389,7 @@
       "name": "Rust Halyardgasket",
       "desc": "A dry halyardgasket east of the racking. Packed rust coats a halyardgasket.",
       "brief": "Dry halyardgasket, packed rust.",
-      "exits": { "west": { "to": "rust_racking" }, "east": { "to": "rust_varnish" }, "south": { "to": "rust_dulse" } },
+      "exits": { "west": { "to": "rust_racking" }, "east": { "to": "rust_varnish" }, "south": { "to": "rust_dulse" }, "north": { "to": "rust_sorghumrun" } },
       "actions": [
         {
           "id": "pinch_halyardgasket",
@@ -41330,6 +41398,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard halyardgasket. They rove it on the racking and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumrun": {
+      "name": "Rust Sorghumrun",
+      "desc": "A dry sorghumrun north of the halyardgasket. Packed rust coats sorghumrun.",
+      "brief": "Dry sorghumrun, packed rust.",
+      "exits": { "south": { "to": "rust_halyardgasket" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumrun",
+          "label": "pinch the sorghumrun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumrun. They packed it on the halyardgasket and packed rust around it."]
           ]
         }
       ]
@@ -41355,7 +41440,7 @@
       "name": "Rust Varnish",
       "desc": "A dry varnish east of the halyardgasket. Packed rust coats varnish.",
       "brief": "Dry varnish, packed rust.",
-      "exits": { "west": { "to": "rust_halyardgasket" }, "east": { "to": "rust_lampblack" }, "south": { "to": "rust_heather" } },
+      "exits": { "west": { "to": "rust_halyardgasket" }, "east": { "to": "rust_lampblack" }, "south": { "to": "rust_heather" }, "north": { "to": "rust_milletrun" } },
       "actions": [
         {
           "id": "pinch_varnish",
@@ -41364,6 +41449,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard varnish. They brushed it on the halyardgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletrun": {
+      "name": "Rust Milletrun",
+      "desc": "A dry milletrun north of the varnish. Packed rust coats milletrun.",
+      "brief": "Dry milletrun, packed rust.",
+      "exits": { "south": { "to": "rust_varnish" } },
+      "actions": [
+        {
+          "id": "pinch_milletrun",
+          "label": "pinch the milletrun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletrun. They packed it on the varnish and packed rust around it."]
           ]
         }
       ]
@@ -41389,7 +41491,7 @@
       "name": "Rust Lampblack",
       "desc": "A dry lampblack east of the varnish. Packed rust coats lampblack.",
       "brief": "Dry lampblack, packed rust.",
-      "exits": { "west": { "to": "rust_varnish" }, "east": { "to": "rust_spruce" }, "south": { "to": "rust_bracken" } },
+      "exits": { "west": { "to": "rust_varnish" }, "east": { "to": "rust_spruce" }, "south": { "to": "rust_bracken" }, "north": { "to": "rust_cornrun" } },
       "actions": [
         {
           "id": "pinch_lampblack",
@@ -41398,6 +41500,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lampblack. They dusted it on the varnish and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornrun": {
+      "name": "Rust Cornrun",
+      "desc": "A dry cornrun north of the lampblack. Packed rust coats cornrun.",
+      "brief": "Dry cornrun, packed rust.",
+      "exits": { "south": { "to": "rust_lampblack" } },
+      "actions": [
+        {
+          "id": "pinch_cornrun",
+          "label": "pinch the cornrun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornrun. They packed it on the lampblack and packed rust around it."]
           ]
         }
       ]
@@ -41423,7 +41542,7 @@
       "name": "Rust Spruce",
       "desc": "A dry spruce east of the lampblack. Packed rust coats spruce.",
       "brief": "Dry spruce, packed rust.",
-      "exits": { "west": { "to": "rust_lampblack" }, "east": { "to": "rust_aspen" }, "south": { "to": "rust_osier" } },
+      "exits": { "west": { "to": "rust_lampblack" }, "east": { "to": "rust_aspen" }, "south": { "to": "rust_osier" }, "north": { "to": "rust_oatrun" } },
       "actions": [
         {
           "id": "pinch_spruce",
@@ -41432,6 +41551,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spruce. They stacked it on the lampblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatrun": {
+      "name": "Rust Oatrun",
+      "desc": "A dry oatrun north of the spruce. Packed rust coats oatrun.",
+      "brief": "Dry oatrun, packed rust.",
+      "exits": { "south": { "to": "rust_spruce" } },
+      "actions": [
+        {
+          "id": "pinch_oatrun",
+          "label": "pinch the oatrun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatrun. They packed it on the spruce and packed rust around it."]
           ]
         }
       ]
@@ -49757,16 +49893,25 @@
     "go north",
     "go east",
     "pinch the redwood",
+    "go north",
+    "pinch the durumrun",
+    "go south",
     "go south",
     "pinch the agar",
     "go north",
     "go east",
     "pinch the flakewhite",
+    "go north",
+    "pinch the foniorun",
+    "go south",
     "go south",
     "pinch the nori",
     "go north",
     "go east",
     "pinch the covellite",
+    "go north",
+    "pinch the teffrun",
+    "go south",
     "go south",
     "pinch the fucus",
     "go north",
@@ -49787,26 +49932,41 @@
     "pinch the helm",
     "go east",
     "pinch the racking",
+    "go north",
+    "pinch the barleyrun",
+    "go south",
     "go south",
     "pinch the wrack",
     "go north",
     "go east",
     "pinch the halyardgasket",
+    "go north",
+    "pinch the sorghumrun",
+    "go south",
     "go south",
     "pinch the dulse",
     "go north",
     "go east",
     "pinch the varnish",
+    "go north",
+    "pinch the milletrun",
+    "go south",
     "go south",
     "pinch the heather",
     "go north",
     "go east",
     "pinch the lampblack",
+    "go north",
+    "pinch the cornrun",
+    "go south",
     "go south",
     "pinch the bracken",
     "go north",
     "go east",
     "pinch the spruce",
+    "go north",
+    "pinch the oatrun",
+    "go south",
     "go south",
     "pinch the osier",
     "go north",
