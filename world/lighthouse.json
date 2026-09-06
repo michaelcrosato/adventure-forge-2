@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12130,
+  "maxScore": 12170,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -15889,7 +15889,7 @@
       "name": "Rust Nipper",
       "desc": "A dry nipper east of the bobstay. Packed rust coats a nipper.",
       "brief": "Dry nipper, packed rust.",
-      "exits": { "west": { "to": "rust_bobstay" }, "east": { "to": "rust_running" } },
+      "exits": { "west": { "to": "rust_bobstay" }, "east": { "to": "rust_running" }, "south": { "to": "rust_durumstrong" } },
       "actions": [
         {
           "id": "pinch_nipper",
@@ -15902,11 +15902,28 @@
         }
       ]
     },
+    "rust_durumstrong": {
+      "name": "Rust Durumstrong",
+      "desc": "A dry durumstrong south of the nipper. Packed rust coats durumstrong.",
+      "brief": "Dry durumstrong, packed rust.",
+      "exits": { "north": { "to": "rust_nipper" } },
+      "actions": [
+        {
+          "id": "pinch_durumstrong",
+          "label": "pinch the durumstrong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumstrong. They packed it on the nipper and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_running": {
       "name": "Rust Running",
       "desc": "A dry running east of the nipper. Packed rust coats a running.",
       "brief": "Dry running, packed rust.",
-      "exits": { "west": { "to": "rust_nipper" }, "east": { "to": "rust_pinegum" } },
+      "exits": { "west": { "to": "rust_nipper" }, "east": { "to": "rust_pinegum" }, "south": { "to": "rust_foniostrong" } },
       "actions": [
         {
           "id": "pinch_running",
@@ -15919,11 +15936,28 @@
         }
       ]
     },
+    "rust_foniostrong": {
+      "name": "Rust Foniostrong",
+      "desc": "A dry foniostrong south of the running. Packed rust coats foniostrong.",
+      "brief": "Dry foniostrong, packed rust.",
+      "exits": { "north": { "to": "rust_running" } },
+      "actions": [
+        {
+          "id": "pinch_foniostrong",
+          "label": "pinch the foniostrong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniostrong. They packed it on the running and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_pinegum": {
       "name": "Rust Pinegum",
       "desc": "A dry pinegum east of the running. Packed rust coats pinegum.",
       "brief": "Dry pinegum, packed rust.",
-      "exits": { "west": { "to": "rust_running" }, "east": { "to": "rust_minium" } },
+      "exits": { "west": { "to": "rust_running" }, "east": { "to": "rust_minium" }, "south": { "to": "rust_teffstrong" } },
       "actions": [
         {
           "id": "pinch_pinegum",
@@ -15936,11 +15970,28 @@
         }
       ]
     },
+    "rust_teffstrong": {
+      "name": "Rust Teffstrong",
+      "desc": "A dry teffstrong south of the pinegum. Packed rust coats teffstrong.",
+      "brief": "Dry teffstrong, packed rust.",
+      "exits": { "north": { "to": "rust_pinegum" } },
+      "actions": [
+        {
+          "id": "pinch_teffstrong",
+          "label": "pinch the teffstrong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffstrong. They packed it on the pinegum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_minium": {
       "name": "Rust Minium",
       "desc": "A dry minium east of the pinegum. Packed rust coats minium.",
       "brief": "Dry minium, packed rust.",
-      "exits": { "west": { "to": "rust_pinegum" }, "east": { "to": "rust_wandoo" } },
+      "exits": { "west": { "to": "rust_pinegum" }, "east": { "to": "rust_wandoo" }, "south": { "to": "rust_barleystrong" } },
       "actions": [
         {
           "id": "pinch_minium",
@@ -15953,11 +16004,28 @@
         }
       ]
     },
+    "rust_barleystrong": {
+      "name": "Rust Barleystrong",
+      "desc": "A dry barleystrong south of the minium. Packed rust coats barleystrong.",
+      "brief": "Dry barleystrong, packed rust.",
+      "exits": { "north": { "to": "rust_minium" } },
+      "actions": [
+        {
+          "id": "pinch_barleystrong",
+          "label": "pinch the barleystrong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleystrong. They packed it on the minium and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_wandoo": {
       "name": "Rust Wandoo",
       "desc": "A dry wandoo east of the minium. Packed rust coats wandoo.",
       "brief": "Dry wandoo, packed rust.",
-      "exits": { "west": { "to": "rust_minium" }, "east": { "to": "rust_teatree" } },
+      "exits": { "west": { "to": "rust_minium" }, "east": { "to": "rust_teatree" }, "south": { "to": "rust_sorghumstrong" } },
       "actions": [
         {
           "id": "pinch_wandoo",
@@ -15970,11 +16038,28 @@
         }
       ]
     },
+    "rust_sorghumstrong": {
+      "name": "Rust Sorghumstrong",
+      "desc": "A dry sorghumstrong south of the wandoo. Packed rust coats sorghumstrong.",
+      "brief": "Dry sorghumstrong, packed rust.",
+      "exits": { "north": { "to": "rust_wandoo" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumstrong",
+          "label": "pinch the sorghumstrong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumstrong. They packed it on the wandoo and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_teatree": {
       "name": "Rust Teatree",
       "desc": "A dry teatree east of the wandoo. Packed rust coats teatree.",
       "brief": "Dry teatree, packed rust.",
-      "exits": { "west": { "to": "rust_wandoo" }, "east": { "to": "rust_macadamia" } },
+      "exits": { "west": { "to": "rust_wandoo" }, "east": { "to": "rust_macadamia" }, "south": { "to": "rust_milletstrong" } },
       "actions": [
         {
           "id": "pinch_teatree",
@@ -15987,11 +16072,28 @@
         }
       ]
     },
+    "rust_milletstrong": {
+      "name": "Rust Milletstrong",
+      "desc": "A dry milletstrong south of the teatree. Packed rust coats milletstrong.",
+      "brief": "Dry milletstrong, packed rust.",
+      "exits": { "north": { "to": "rust_teatree" } },
+      "actions": [
+        {
+          "id": "pinch_milletstrong",
+          "label": "pinch the milletstrong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletstrong. They packed it on the teatree and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_macadamia": {
       "name": "Rust Macadamia",
       "desc": "A dry macadamia east of the teatree. Packed rust coats macadamia.",
       "brief": "Dry macadamia, packed rust.",
-      "exits": { "west": { "to": "rust_teatree" }, "east": { "to": "rust_bristlecone" } },
+      "exits": { "west": { "to": "rust_teatree" }, "east": { "to": "rust_bristlecone" }, "south": { "to": "rust_cornstrong" } },
       "actions": [
         {
           "id": "pinch_macadamia",
@@ -16000,6 +16102,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard macadamia. They packed it on the teatree and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornstrong": {
+      "name": "Rust Cornstrong",
+      "desc": "A dry cornstrong south of the macadamia. Packed rust coats cornstrong.",
+      "brief": "Dry cornstrong, packed rust.",
+      "exits": { "north": { "to": "rust_macadamia" } },
+      "actions": [
+        {
+          "id": "pinch_cornstrong",
+          "label": "pinch the cornstrong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornstrong. They packed it on the macadamia and packed rust around it."]
           ]
         }
       ]
@@ -16093,7 +16212,7 @@
       "name": "Rust Icicle",
       "desc": "A dry icicle east of the hawser. Packed rust coats an icicle.",
       "brief": "Dry icicle, packed rust.",
-      "exits": { "west": { "to": "rust_hawser" }, "east": { "to": "rust_galipot" } },
+      "exits": { "west": { "to": "rust_hawser" }, "east": { "to": "rust_galipot" }, "south": { "to": "rust_oatstrong" } },
       "actions": [
         {
           "id": "pinch_icicle",
@@ -16102,6 +16221,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard icicle. They hung it on the hawser and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatstrong": {
+      "name": "Rust Oatstrong",
+      "desc": "A dry oatstrong south of the icicle. Packed rust coats oatstrong.",
+      "brief": "Dry oatstrong, packed rust.",
+      "exits": { "north": { "to": "rust_icicle" } },
+      "actions": [
+        {
+          "id": "pinch_oatstrong",
+          "label": "pinch the oatstrong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatstrong. They packed it on the icicle and packed rust around it."]
           ]
         }
       ]
@@ -43936,18 +44072,39 @@
     "pinch the bobstay",
     "go east",
     "pinch the nipper",
+    "go south",
+    "pinch the durumstrong",
+    "go north",
     "go east",
     "pinch the running",
+    "go south",
+    "pinch the foniostrong",
+    "go north",
     "go east",
     "pinch the pinegum",
+    "go south",
+    "pinch the teffstrong",
+    "go north",
     "go east",
     "pinch the minium",
+    "go south",
+    "pinch the barleystrong",
+    "go north",
     "go east",
     "pinch the wandoo",
+    "go south",
+    "pinch the sorghumstrong",
+    "go north",
     "go east",
     "pinch the teatree",
+    "go south",
+    "pinch the milletstrong",
+    "go north",
     "go east",
     "pinch the macadamia",
+    "go south",
+    "pinch the cornstrong",
+    "go north",
     "go east",
     "pinch the bristlecone",
     "go south",
@@ -43971,6 +44128,9 @@
     "pinch the hawser",
     "go east",
     "pinch the icicle",
+    "go south",
+    "pinch the oatstrong",
+    "go north",
     "go east",
     "pinch the galipot",
     "go south",
