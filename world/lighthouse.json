@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11290,
+  "maxScore": 11330,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -19986,7 +19986,7 @@
       "name": "Rust Palosapis",
       "desc": "A dry palosapis east of the sepetir. Packed rust coats palosapis.",
       "brief": "Dry palosapis, packed rust.",
-      "exits": { "west": { "to": "rust_sepetir" }, "east": { "to": "rust_siris" } },
+      "exits": { "west": { "to": "rust_sepetir" }, "east": { "to": "rust_siris" }, "south": { "to": "rust_foniogermflake" } },
       "actions": [
         {
           "id": "pinch_palosapis",
@@ -19999,11 +19999,28 @@
         }
       ]
     },
+    "rust_foniogermflake": {
+      "name": "Rust Foniogermflake",
+      "desc": "A dry foniogermflake south of the palosapis. Packed rust coats foniogermflake.",
+      "brief": "Dry foniogermflake, packed rust.",
+      "exits": { "north": { "to": "rust_palosapis" } },
+      "actions": [
+        {
+          "id": "pinch_foniogermflake",
+          "label": "pinch the foniogermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniogermflake. They packed it on the palosapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_siris": {
       "name": "Rust Siris",
       "desc": "A dry siris east of the palosapis. Packed rust coats siris.",
       "brief": "Dry siris, packed rust.",
-      "exits": { "west": { "to": "rust_palosapis" }, "east": { "to": "rust_spottedgum" } },
+      "exits": { "west": { "to": "rust_palosapis" }, "east": { "to": "rust_spottedgum" }, "south": { "to": "rust_teffgermflake" } },
       "actions": [
         {
           "id": "pinch_siris",
@@ -20012,6 +20029,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard siris. They packed it on the palosapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffgermflake": {
+      "name": "Rust Teffgermflake",
+      "desc": "A dry teffgermflake south of the siris. Packed rust coats teffgermflake.",
+      "brief": "Dry teffgermflake, packed rust.",
+      "exits": { "north": { "to": "rust_siris" } },
+      "actions": [
+        {
+          "id": "pinch_teffgermflake",
+          "label": "pinch the teffgermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffgermflake. They packed it on the siris and packed rust around it."]
           ]
         }
       ]
@@ -20071,7 +20105,7 @@
       "name": "Rust Hitch",
       "desc": "A dry hitch east of the toggle. Packed rust coats a hitch.",
       "brief": "Dry hitch, packed rust.",
-      "exits": { "west": { "to": "rust_toggle" }, "east": { "to": "rust_japanblack" } },
+      "exits": { "west": { "to": "rust_toggle" }, "east": { "to": "rust_japanblack" }, "south": { "to": "rust_barleygermflake" } },
       "actions": [
         {
           "id": "pinch_hitch",
@@ -20084,11 +20118,28 @@
         }
       ]
     },
+    "rust_barleygermflake": {
+      "name": "Rust Barleygermflake",
+      "desc": "A dry barleygermflake south of the hitch. Packed rust coats barleygermflake.",
+      "brief": "Dry barleygermflake, packed rust.",
+      "exits": { "north": { "to": "rust_hitch" } },
+      "actions": [
+        {
+          "id": "pinch_barleygermflake",
+          "label": "pinch the barleygermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleygermflake. They packed it on the hitch and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_japanblack": {
       "name": "Rust Japanblack",
       "desc": "A dry japanblack east of the hitch. Packed rust coats japanblack.",
       "brief": "Dry japanblack, packed rust.",
-      "exits": { "west": { "to": "rust_hitch" }, "east": { "to": "rust_avodire" } },
+      "exits": { "west": { "to": "rust_hitch" }, "east": { "to": "rust_avodire" }, "south": { "to": "rust_sorghumgermflake" } },
       "actions": [
         {
           "id": "pinch_japanblack",
@@ -20101,11 +20152,28 @@
         }
       ]
     },
+    "rust_sorghumgermflake": {
+      "name": "Rust Sorghumgermflake",
+      "desc": "A dry sorghumgermflake south of the japanblack. Packed rust coats sorghumgermflake.",
+      "brief": "Dry sorghumgermflake, packed rust.",
+      "exits": { "north": { "to": "rust_japanblack" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumgermflake",
+          "label": "pinch the sorghumgermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumgermflake. They packed it on the japanblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_avodire": {
       "name": "Rust Avodire",
       "desc": "A dry avodire east of the japanblack. Packed rust coats avodire.",
       "brief": "Dry avodire, packed rust.",
-      "exits": { "west": { "to": "rust_japanblack" }, "east": { "to": "rust_cabreuva" } },
+      "exits": { "west": { "to": "rust_japanblack" }, "east": { "to": "rust_cabreuva" }, "south": { "to": "rust_milletgermflake" } },
       "actions": [
         {
           "id": "pinch_avodire",
@@ -20118,11 +20186,28 @@
         }
       ]
     },
+    "rust_milletgermflake": {
+      "name": "Rust Milletgermflake",
+      "desc": "A dry milletgermflake south of the avodire. Packed rust coats milletgermflake.",
+      "brief": "Dry milletgermflake, packed rust.",
+      "exits": { "north": { "to": "rust_avodire" } },
+      "actions": [
+        {
+          "id": "pinch_milletgermflake",
+          "label": "pinch the milletgermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletgermflake. They packed it on the avodire and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cabreuva": {
       "name": "Rust Cabreuva",
       "desc": "A dry cabreuva east of the avodire. Packed rust coats cabreuva.",
       "brief": "Dry cabreuva, packed rust.",
-      "exits": { "west": { "to": "rust_avodire" }, "east": { "to": "rust_okan" } },
+      "exits": { "west": { "to": "rust_avodire" }, "east": { "to": "rust_okan" }, "south": { "to": "rust_corngermflake" } },
       "actions": [
         {
           "id": "pinch_cabreuva",
@@ -20135,11 +20220,28 @@
         }
       ]
     },
+    "rust_corngermflake": {
+      "name": "Rust Corngermflake",
+      "desc": "A dry corngermflake south of the cabreuva. Packed rust coats corngermflake.",
+      "brief": "Dry corngermflake, packed rust.",
+      "exits": { "north": { "to": "rust_cabreuva" } },
+      "actions": [
+        {
+          "id": "pinch_corngermflake",
+          "label": "pinch the corngermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corngermflake. They packed it on the cabreuva and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_okan": {
       "name": "Rust Okan",
       "desc": "A dry okan east of the cabreuva. Packed rust coats okan.",
       "brief": "Dry okan, packed rust.",
-      "exits": { "west": { "to": "rust_cabreuva" }, "east": { "to": "rust_kempas" } },
+      "exits": { "west": { "to": "rust_cabreuva" }, "east": { "to": "rust_kempas" }, "south": { "to": "rust_oatgermflake" } },
       "actions": [
         {
           "id": "pinch_okan",
@@ -20152,11 +20254,28 @@
         }
       ]
     },
+    "rust_oatgermflake": {
+      "name": "Rust Oatgermflake",
+      "desc": "A dry oatgermflake south of the okan. Packed rust coats oatgermflake.",
+      "brief": "Dry oatgermflake, packed rust.",
+      "exits": { "north": { "to": "rust_okan" } },
+      "actions": [
+        {
+          "id": "pinch_oatgermflake",
+          "label": "pinch the oatgermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatgermflake. They packed it on the okan and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kempas": {
       "name": "Rust Kempas",
       "desc": "A dry kempas east of the okan. Packed rust coats kempas.",
       "brief": "Dry kempas, packed rust.",
-      "exits": { "west": { "to": "rust_okan" }, "east": { "to": "rust_mayapis" } },
+      "exits": { "west": { "to": "rust_okan" }, "east": { "to": "rust_mayapis" }, "south": { "to": "rust_ryegermflake" } },
       "actions": [
         {
           "id": "pinch_kempas",
@@ -20165,6 +20284,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kempas. They packed it on the okan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ryegermflake": {
+      "name": "Rust Ryegermflake",
+      "desc": "A dry ryegermflake south of the kempas. Packed rust coats ryegermflake.",
+      "brief": "Dry ryegermflake, packed rust.",
+      "exits": { "north": { "to": "rust_kempas" } },
+      "actions": [
+        {
+          "id": "pinch_ryegermflake",
+          "label": "pinch the ryegermflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryegermflake. They packed it on the kempas and packed rust around it."]
           ]
         }
       ]
@@ -41841,8 +41977,14 @@
     "pinch the sepetir",
     "go east",
     "pinch the palosapis",
+    "go south",
+    "pinch the foniogermflake",
+    "go north",
     "go east",
     "pinch the siris",
+    "go south",
+    "pinch the teffgermflake",
+    "go north",
     "go east",
     "pinch the spottedgum",
     "go west",
@@ -41861,16 +42003,34 @@
     "pinch the toggle",
     "go east",
     "pinch the hitch",
+    "go south",
+    "pinch the barleygermflake",
+    "go north",
     "go east",
     "pinch the japanblack",
+    "go south",
+    "pinch the sorghumgermflake",
+    "go north",
     "go east",
     "pinch the avodire",
+    "go south",
+    "pinch the milletgermflake",
+    "go north",
     "go east",
     "pinch the cabreuva",
+    "go south",
+    "pinch the corngermflake",
+    "go north",
     "go east",
     "pinch the okan",
+    "go south",
+    "pinch the oatgermflake",
+    "go north",
     "go east",
     "pinch the kempas",
+    "go south",
+    "pinch the ryegermflake",
+    "go north",
     "go east",
     "pinch the mayapis",
     "go south",
