@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15730,
+  "maxScore": 15770,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -15736,7 +15736,7 @@
       "name": "Rust Charcoal",
       "desc": "A dry charcoal east of the henna. Packed rust coats charcoal.",
       "brief": "Dry charcoal, packed rust.",
-      "exits": { "west": { "to": "rust_henna" }, "east": { "to": "rust_tuart" }, "south": { "to": "rust_milletselect" } },
+      "exits": { "west": { "to": "rust_henna" }, "east": { "to": "rust_tuart" }, "south": { "to": "rust_milletselect" }, "north": { "to": "rust_durumjeroboam" } },
       "actions": [
         {
           "id": "pinch_charcoal",
@@ -15745,6 +15745,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard charcoal. They packed it on the henna and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumjeroboam": {
+      "name": "Rust Durumjeroboam",
+      "desc": "A dry durumjeroboam north of the charcoal. Packed rust coats durumjeroboam.",
+      "brief": "Dry durumjeroboam, packed rust.",
+      "exits": { "south": { "to": "rust_charcoal" } },
+      "actions": [
+        {
+          "id": "pinch_durumjeroboam",
+          "label": "pinch the durumjeroboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumjeroboam. They packed it on the charcoal and packed rust around it."]
           ]
         }
       ]
@@ -15770,7 +15787,7 @@
       "name": "Rust Tuart",
       "desc": "A dry tuart east of the charcoal. Packed rust coats tuart.",
       "brief": "Dry tuart, packed rust.",
-      "exits": { "west": { "to": "rust_charcoal" }, "east": { "to": "rust_redoak" }, "south": { "to": "rust_cornselect" } },
+      "exits": { "west": { "to": "rust_charcoal" }, "east": { "to": "rust_redoak" }, "south": { "to": "rust_cornselect" }, "north": { "to": "rust_foniojeroboam" } },
       "actions": [
         {
           "id": "pinch_tuart",
@@ -15779,6 +15796,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tuart. They packed it on the charcoal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniojeroboam": {
+      "name": "Rust Foniojeroboam",
+      "desc": "A dry foniojeroboam north of the tuart. Packed rust coats foniojeroboam.",
+      "brief": "Dry foniojeroboam, packed rust.",
+      "exits": { "south": { "to": "rust_tuart" } },
+      "actions": [
+        {
+          "id": "pinch_foniojeroboam",
+          "label": "pinch the foniojeroboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniojeroboam. They packed it on the tuart and packed rust around it."]
           ]
         }
       ]
@@ -15804,7 +15838,7 @@
       "name": "Rust Redoak",
       "desc": "A dry redoak east of the tuart. Packed rust coats redoak.",
       "brief": "Dry redoak, packed rust.",
-      "exits": { "west": { "to": "rust_tuart" }, "east": { "to": "rust_sassafras" }, "south": { "to": "rust_oatselect" } },
+      "exits": { "west": { "to": "rust_tuart" }, "east": { "to": "rust_sassafras" }, "south": { "to": "rust_oatselect" }, "north": { "to": "rust_teffjeroboam" } },
       "actions": [
         {
           "id": "pinch_redoak",
@@ -15813,6 +15847,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redoak. They packed it on the tuart and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffjeroboam": {
+      "name": "Rust Teffjeroboam",
+      "desc": "A dry teffjeroboam north of the redoak. Packed rust coats teffjeroboam.",
+      "brief": "Dry teffjeroboam, packed rust.",
+      "exits": { "south": { "to": "rust_redoak" } },
+      "actions": [
+        {
+          "id": "pinch_teffjeroboam",
+          "label": "pinch the teffjeroboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffjeroboam. They packed it on the redoak and packed rust around it."]
           ]
         }
       ]
@@ -15838,7 +15889,7 @@
       "name": "Rust Sassafras",
       "desc": "A dry sassafras east of the redoak. Packed rust coats sassafras.",
       "brief": "Dry sassafras, packed rust.",
-      "exits": { "west": { "to": "rust_redoak" }, "east": { "to": "rust_monterey" }, "south": { "to": "rust_durumstandard" } },
+      "exits": { "west": { "to": "rust_redoak" }, "east": { "to": "rust_monterey" }, "south": { "to": "rust_durumstandard" }, "north": { "to": "rust_barleyjeroboam" } },
       "actions": [
         {
           "id": "pinch_sassafras",
@@ -15847,6 +15898,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sassafras. They packed it on the redoak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyjeroboam": {
+      "name": "Rust Barleyjeroboam",
+      "desc": "A dry barleyjeroboam north of the sassafras. Packed rust coats barleyjeroboam.",
+      "brief": "Dry barleyjeroboam, packed rust.",
+      "exits": { "south": { "to": "rust_sassafras" } },
+      "actions": [
+        {
+          "id": "pinch_barleyjeroboam",
+          "label": "pinch the barleyjeroboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyjeroboam. They packed it on the sassafras and packed rust around it."]
           ]
         }
       ]
@@ -15872,7 +15940,7 @@
       "name": "Rust Monterey",
       "desc": "A dry monterey east of the sassafras. Packed rust coats monterey.",
       "brief": "Dry monterey, packed rust.",
-      "exits": { "west": { "to": "rust_sassafras" }, "east": { "to": "rust_alaskan" }, "south": { "to": "rust_foniostandard" } },
+      "exits": { "west": { "to": "rust_sassafras" }, "east": { "to": "rust_alaskan" }, "south": { "to": "rust_foniostandard" }, "north": { "to": "rust_sorghumjeroboam" } },
       "actions": [
         {
           "id": "pinch_monterey",
@@ -15881,6 +15949,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard monterey. They packed it on the sassafras and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumjeroboam": {
+      "name": "Rust Sorghumjeroboam",
+      "desc": "A dry sorghumjeroboam north of the monterey. Packed rust coats sorghumjeroboam.",
+      "brief": "Dry sorghumjeroboam, packed rust.",
+      "exits": { "south": { "to": "rust_monterey" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumjeroboam",
+          "label": "pinch the sorghumjeroboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumjeroboam. They packed it on the monterey and packed rust around it."]
           ]
         }
       ]
@@ -15957,7 +16042,7 @@
       "name": "Rust Checkstay",
       "desc": "A dry checkstay east of the jib. Packed rust coats a checkstay.",
       "brief": "Dry checkstay, packed rust.",
-      "exits": { "west": { "to": "rust_jib" }, "east": { "to": "rust_bachmann" }, "south": { "to": "rust_teffstandard" } },
+      "exits": { "west": { "to": "rust_jib" }, "east": { "to": "rust_bachmann" }, "south": { "to": "rust_teffstandard" }, "north": { "to": "rust_milletjeroboam" } },
       "actions": [
         {
           "id": "pinch_checkstay",
@@ -15966,6 +16051,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard checkstay. They stayed it on the jib and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletjeroboam": {
+      "name": "Rust Milletjeroboam",
+      "desc": "A dry milletjeroboam north of the checkstay. Packed rust coats milletjeroboam.",
+      "brief": "Dry milletjeroboam, packed rust.",
+      "exits": { "south": { "to": "rust_checkstay" } },
+      "actions": [
+        {
+          "id": "pinch_milletjeroboam",
+          "label": "pinch the milletjeroboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletjeroboam. They packed it on the checkstay and packed rust around it."]
           ]
         }
       ]
@@ -15991,7 +16093,7 @@
       "name": "Rust Bachmann",
       "desc": "A dry bachmann east of the checkstay. Packed rust coats a bachmann.",
       "brief": "Dry bachmann, packed rust.",
-      "exits": { "west": { "to": "rust_checkstay" }, "east": { "to": "rust_colophony" }, "south": { "to": "rust_barleystandard" } },
+      "exits": { "west": { "to": "rust_checkstay" }, "east": { "to": "rust_colophony" }, "south": { "to": "rust_barleystandard" }, "north": { "to": "rust_cornjeroboam" } },
       "actions": [
         {
           "id": "pinch_bachmann",
@@ -16000,6 +16102,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bachmann. They clipped it on the checkstay and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornjeroboam": {
+      "name": "Rust Cornjeroboam",
+      "desc": "A dry cornjeroboam north of the bachmann. Packed rust coats cornjeroboam.",
+      "brief": "Dry cornjeroboam, packed rust.",
+      "exits": { "south": { "to": "rust_bachmann" } },
+      "actions": [
+        {
+          "id": "pinch_cornjeroboam",
+          "label": "pinch the cornjeroboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornjeroboam. They packed it on the bachmann and packed rust around it."]
           ]
         }
       ]
@@ -16025,7 +16144,7 @@
       "name": "Rust Colophony",
       "desc": "A dry colophony east of the bachmann. Packed rust coats colophony.",
       "brief": "Dry colophony, packed rust.",
-      "exits": { "west": { "to": "rust_bachmann" }, "east": { "to": "rust_turmeric" }, "south": { "to": "rust_sorghumstandard" } },
+      "exits": { "west": { "to": "rust_bachmann" }, "east": { "to": "rust_turmeric" }, "south": { "to": "rust_sorghumstandard" }, "north": { "to": "rust_oatjeroboam" } },
       "actions": [
         {
           "id": "pinch_colophony",
@@ -16034,6 +16153,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard colophony. They packed it on the bachmann and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatjeroboam": {
+      "name": "Rust Oatjeroboam",
+      "desc": "A dry oatjeroboam north of the colophony. Packed rust coats oatjeroboam.",
+      "brief": "Dry oatjeroboam, packed rust.",
+      "exits": { "south": { "to": "rust_colophony" } },
+      "actions": [
+        {
+          "id": "pinch_oatjeroboam",
+          "label": "pinch the oatjeroboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatjeroboam. They packed it on the colophony and packed rust around it."]
           ]
         }
       ]
@@ -56149,26 +56285,41 @@
     "go north",
     "go east",
     "pinch the charcoal",
+    "go north",
+    "pinch the durumjeroboam",
+    "go south",
     "go south",
     "pinch the milletselect",
     "go north",
     "go east",
     "pinch the tuart",
+    "go north",
+    "pinch the foniojeroboam",
+    "go south",
     "go south",
     "pinch the cornselect",
     "go north",
     "go east",
     "pinch the redoak",
+    "go north",
+    "pinch the teffjeroboam",
+    "go south",
     "go south",
     "pinch the oatselect",
     "go north",
     "go east",
     "pinch the sassafras",
+    "go north",
+    "pinch the barleyjeroboam",
+    "go south",
     "go south",
     "pinch the durumstandard",
     "go north",
     "go east",
     "pinch the monterey",
+    "go north",
+    "pinch the sorghumjeroboam",
+    "go south",
     "go south",
     "pinch the foniostandard",
     "go north",
@@ -56190,16 +56341,25 @@
     "pinch the jib",
     "go east",
     "pinch the checkstay",
+    "go north",
+    "pinch the milletjeroboam",
+    "go south",
     "go south",
     "pinch the teffstandard",
     "go north",
     "go east",
     "pinch the bachmann",
+    "go north",
+    "pinch the cornjeroboam",
+    "go south",
     "go south",
     "pinch the barleystandard",
     "go north",
     "go east",
     "pinch the colophony",
+    "go north",
+    "pinch the oatjeroboam",
+    "go south",
     "go south",
     "pinch the sorghumstandard",
     "go north",
