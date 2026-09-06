@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13930,
+  "maxScore": 13970,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -30135,7 +30135,7 @@
       "name": "Rust Arsenopyrite",
       "desc": "A dry arsenopyrite east of the eriochalcite. Packed rust coats arsenopyrite.",
       "brief": "Dry arsenopyrite, packed rust.",
-      "exits": { "west": { "to": "rust_eriochalcite" }, "east": { "to": "rust_narig" }, "south": { "to": "rust_wheatflake" } },
+      "exits": { "west": { "to": "rust_eriochalcite" }, "east": { "to": "rust_narig" }, "south": { "to": "rust_wheatflake" }, "north": { "to": "rust_durumkettle" } },
       "actions": [
         {
           "id": "pinch_arsenopyrite",
@@ -30144,6 +30144,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard arsenopyrite. They packed it on the eriochalcite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumkettle": {
+      "name": "Rust Durumkettle",
+      "desc": "A dry durumkettle north of the arsenopyrite. Packed rust coats durumkettle.",
+      "brief": "Dry durumkettle, packed rust.",
+      "exits": { "south": { "to": "rust_arsenopyrite" } },
+      "actions": [
+        {
+          "id": "pinch_durumkettle",
+          "label": "pinch the durumkettle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumkettle. They packed it on the arsenopyrite and packed rust around it."]
           ]
         }
       ]
@@ -30169,7 +30186,7 @@
       "name": "Rust Narig",
       "desc": "A dry narig east of the arsenopyrite. Packed rust coats narig.",
       "brief": "Dry narig, packed rust.",
-      "exits": { "west": { "to": "rust_arsenopyrite" }, "east": { "to": "rust_yellowbox" }, "south": { "to": "rust_oatflake" } },
+      "exits": { "west": { "to": "rust_arsenopyrite" }, "east": { "to": "rust_yellowbox" }, "south": { "to": "rust_oatflake" }, "north": { "to": "rust_foniokettle" } },
       "actions": [
         {
           "id": "pinch_narig",
@@ -30178,6 +30195,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard narig. They packed it on the arsenopyrite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniokettle": {
+      "name": "Rust Foniokettle",
+      "desc": "A dry foniokettle north of the narig. Packed rust coats foniokettle.",
+      "brief": "Dry foniokettle, packed rust.",
+      "exits": { "south": { "to": "rust_narig" } },
+      "actions": [
+        {
+          "id": "pinch_foniokettle",
+          "label": "pinch the foniokettle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniokettle. They packed it on the narig and packed rust around it."]
           ]
         }
       ]
@@ -30220,7 +30254,7 @@
       "name": "Rust Fairlead",
       "desc": "A dry fairlead east of the belt. Packed rust coats a fairlead.",
       "brief": "Dry fairlead, packed rust.",
-      "exits": { "west": { "to": "rust_belt" }, "east": { "to": "rust_seizing" }, "south": { "to": "rust_speltflake" } },
+      "exits": { "west": { "to": "rust_belt" }, "east": { "to": "rust_seizing" }, "south": { "to": "rust_speltflake" }, "north": { "to": "rust_teffkettle" } },
       "actions": [
         {
           "id": "pinch_fairlead",
@@ -30229,6 +30263,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fairlead. They led line off the belt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffkettle": {
+      "name": "Rust Teffkettle",
+      "desc": "A dry teffkettle north of the fairlead. Packed rust coats teffkettle.",
+      "brief": "Dry teffkettle, packed rust.",
+      "exits": { "south": { "to": "rust_fairlead" } },
+      "actions": [
+        {
+          "id": "pinch_teffkettle",
+          "label": "pinch the teffkettle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffkettle. They packed it on the fairlead and packed rust around it."]
           ]
         }
       ]
@@ -30254,7 +30305,7 @@
       "name": "Rust Seizing",
       "desc": "A dry seizing east of the fairlead. Packed rust coats a seizing.",
       "brief": "Dry seizing, packed rust.",
-      "exits": { "west": { "to": "rust_fairlead" }, "east": { "to": "rust_headrope" }, "south": { "to": "rust_groatflake" } },
+      "exits": { "west": { "to": "rust_fairlead" }, "east": { "to": "rust_headrope" }, "south": { "to": "rust_groatflake" }, "north": { "to": "rust_barleykettle" } },
       "actions": [
         {
           "id": "pinch_seizing",
@@ -30263,6 +30314,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard seizing. They bound it on the fairlead and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleykettle": {
+      "name": "Rust Barleykettle",
+      "desc": "A dry barleykettle north of the seizing. Packed rust coats barleykettle.",
+      "brief": "Dry barleykettle, packed rust.",
+      "exits": { "south": { "to": "rust_seizing" } },
+      "actions": [
+        {
+          "id": "pinch_barleykettle",
+          "label": "pinch the barleykettle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleykettle. They packed it on the seizing and packed rust around it."]
           ]
         }
       ]
@@ -30288,7 +30356,7 @@
       "name": "Rust Headrope",
       "desc": "A dry headrope east of the seizing. Packed rust coats a headrope.",
       "brief": "Dry headrope, packed rust.",
-      "exits": { "west": { "to": "rust_seizing" }, "east": { "to": "rust_lauan" }, "south": { "to": "rust_farroberry" } },
+      "exits": { "west": { "to": "rust_seizing" }, "east": { "to": "rust_lauan" }, "south": { "to": "rust_farroberry" }, "north": { "to": "rust_sorghumkettle" } },
       "actions": [
         {
           "id": "pinch_headrope",
@@ -30297,6 +30365,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard headrope. They rove it on the seizing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumkettle": {
+      "name": "Rust Sorghumkettle",
+      "desc": "A dry sorghumkettle north of the headrope. Packed rust coats sorghumkettle.",
+      "brief": "Dry sorghumkettle, packed rust.",
+      "exits": { "south": { "to": "rust_headrope" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumkettle",
+          "label": "pinch the sorghumkettle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumkettle. They packed it on the headrope and packed rust around it."]
           ]
         }
       ]
@@ -30322,7 +30407,7 @@
       "name": "Rust Lauan",
       "desc": "A dry lauan east of the headrope. Packed rust coats lauan.",
       "brief": "Dry lauan, packed rust.",
-      "exits": { "west": { "to": "rust_headrope" }, "east": { "to": "rust_jasper" }, "south": { "to": "rust_barleyberry" } },
+      "exits": { "west": { "to": "rust_headrope" }, "east": { "to": "rust_jasper" }, "south": { "to": "rust_barleyberry" }, "north": { "to": "rust_milletkettle" } },
       "actions": [
         {
           "id": "pinch_lauan",
@@ -30331,6 +30416,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lauan. They laid it on the headrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletkettle": {
+      "name": "Rust Milletkettle",
+      "desc": "A dry milletkettle north of the lauan. Packed rust coats milletkettle.",
+      "brief": "Dry milletkettle, packed rust.",
+      "exits": { "south": { "to": "rust_lauan" } },
+      "actions": [
+        {
+          "id": "pinch_milletkettle",
+          "label": "pinch the milletkettle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletkettle. They packed it on the lauan and packed rust around it."]
           ]
         }
       ]
@@ -30356,7 +30458,7 @@
       "name": "Rust Jasper",
       "desc": "A dry jasper east of the lauan. Packed rust coats jasper.",
       "brief": "Dry jasper, packed rust.",
-      "exits": { "west": { "to": "rust_lauan" }, "east": { "to": "rust_infusorial" }, "south": { "to": "rust_sorghumberry" } },
+      "exits": { "west": { "to": "rust_lauan" }, "east": { "to": "rust_infusorial" }, "south": { "to": "rust_sorghumberry" }, "north": { "to": "rust_cornkettle" } },
       "actions": [
         {
           "id": "pinch_jasper",
@@ -30365,6 +30467,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jasper. They packed it on the lauan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornkettle": {
+      "name": "Rust Cornkettle",
+      "desc": "A dry cornkettle north of the jasper. Packed rust coats cornkettle.",
+      "brief": "Dry cornkettle, packed rust.",
+      "exits": { "south": { "to": "rust_jasper" } },
+      "actions": [
+        {
+          "id": "pinch_cornkettle",
+          "label": "pinch the cornkettle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornkettle. They packed it on the jasper and packed rust around it."]
           ]
         }
       ]
@@ -30390,7 +30509,7 @@
       "name": "Rust Infusorial",
       "desc": "A dry infusorial east of the jasper. Packed rust coats infusorial.",
       "brief": "Dry infusorial, packed rust.",
-      "exits": { "west": { "to": "rust_jasper" }, "east": { "to": "rust_lapis" }, "south": { "to": "rust_milletberry" } },
+      "exits": { "west": { "to": "rust_jasper" }, "east": { "to": "rust_lapis" }, "south": { "to": "rust_milletberry" }, "north": { "to": "rust_oatkettle" } },
       "actions": [
         {
           "id": "pinch_infusorial",
@@ -30399,6 +30518,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard infusorial. They packed it on the jasper and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatkettle": {
+      "name": "Rust Oatkettle",
+      "desc": "A dry oatkettle north of the infusorial. Packed rust coats oatkettle.",
+      "brief": "Dry oatkettle, packed rust.",
+      "exits": { "south": { "to": "rust_infusorial" } },
+      "actions": [
+        {
+          "id": "pinch_oatkettle",
+          "label": "pinch the oatkettle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatkettle. They packed it on the infusorial and packed rust around it."]
           ]
         }
       ]
@@ -52570,11 +52706,17 @@
     "go north",
     "go east",
     "pinch the arsenopyrite",
+    "go north",
+    "pinch the durumkettle",
+    "go south",
     "go south",
     "pinch the wheatflake",
     "go north",
     "go east",
     "pinch the narig",
+    "go north",
+    "pinch the foniokettle",
+    "go south",
     "go south",
     "pinch the oatflake",
     "go north",
@@ -52591,31 +52733,49 @@
     "go north",
     "go east",
     "pinch the fairlead",
+    "go north",
+    "pinch the teffkettle",
+    "go south",
     "go south",
     "pinch the speltflake",
     "go north",
     "go east",
     "pinch the seizing",
+    "go north",
+    "pinch the barleykettle",
+    "go south",
     "go south",
     "pinch the groatflake",
     "go north",
     "go east",
     "pinch the headrope",
+    "go north",
+    "pinch the sorghumkettle",
+    "go south",
     "go south",
     "pinch the farroberry",
     "go north",
     "go east",
     "pinch the lauan",
+    "go north",
+    "pinch the milletkettle",
+    "go south",
     "go south",
     "pinch the barleyberry",
     "go north",
     "go east",
     "pinch the jasper",
+    "go north",
+    "pinch the cornkettle",
+    "go south",
     "go south",
     "pinch the sorghumberry",
     "go north",
     "go east",
     "pinch the infusorial",
+    "go north",
+    "pinch the oatkettle",
+    "go south",
     "go south",
     "pinch the milletberry",
     "go north",
