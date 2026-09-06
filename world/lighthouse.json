@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14770,
+  "maxScore": 14810,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -23080,7 +23080,7 @@
       "name": "Rust Resak",
       "desc": "A dry resak east of the primavera. Packed rust coats resak.",
       "brief": "Dry resak, packed rust.",
-      "exits": { "west": { "to": "rust_primavera" }, "east": { "to": "rust_sesendok" }, "south": { "to": "rust_teffoffal" } },
+      "exits": { "west": { "to": "rust_primavera" }, "east": { "to": "rust_sesendok" }, "south": { "to": "rust_teffoffal" }, "north": { "to": "rust_durumbarrel" } },
       "actions": [
         {
           "id": "pinch_resak",
@@ -23089,6 +23089,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard resak. They packed it on the primavera and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbarrel": {
+      "name": "Rust Durumbarrel",
+      "desc": "A dry durumbarrel north of the resak. Packed rust coats durumbarrel.",
+      "brief": "Dry durumbarrel, packed rust.",
+      "exits": { "south": { "to": "rust_resak" } },
+      "actions": [
+        {
+          "id": "pinch_durumbarrel",
+          "label": "pinch the durumbarrel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbarrel. They packed it on the resak and packed rust around it."]
           ]
         }
       ]
@@ -23114,7 +23131,7 @@
       "name": "Rust Sesendok",
       "desc": "A dry sesendok east of the resak. Packed rust coats sesendok.",
       "brief": "Dry sesendok, packed rust.",
-      "exits": { "west": { "to": "rust_resak" }, "east": { "to": "rust_arjun" }, "south": { "to": "rust_barleyoffal" } },
+      "exits": { "west": { "to": "rust_resak" }, "east": { "to": "rust_arjun" }, "south": { "to": "rust_barleyoffal" }, "north": { "to": "rust_foniobarrel" } },
       "actions": [
         {
           "id": "pinch_sesendok",
@@ -23123,6 +23140,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sesendok. They packed it on the resak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobarrel": {
+      "name": "Rust Foniobarrel",
+      "desc": "A dry foniobarrel north of the sesendok. Packed rust coats foniobarrel.",
+      "brief": "Dry foniobarrel, packed rust.",
+      "exits": { "south": { "to": "rust_sesendok" } },
+      "actions": [
+        {
+          "id": "pinch_foniobarrel",
+          "label": "pinch the foniobarrel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobarrel. They packed it on the sesendok and packed rust around it."]
           ]
         }
       ]
@@ -23148,7 +23182,7 @@
       "name": "Rust Arjun",
       "desc": "A dry arjun east of the sesendok. Packed rust coats arjun.",
       "brief": "Dry arjun, packed rust.",
-      "exits": { "west": { "to": "rust_sesendok" }, "east": { "to": "rust_ironbark" }, "south": { "to": "rust_sorghumoffal" } },
+      "exits": { "west": { "to": "rust_sesendok" }, "east": { "to": "rust_ironbark" }, "south": { "to": "rust_sorghumoffal" }, "north": { "to": "rust_teffbarrel" } },
       "actions": [
         {
           "id": "pinch_arjun",
@@ -23157,6 +23191,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard arjun. They packed it on the sesendok and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbarrel": {
+      "name": "Rust Teffbarrel",
+      "desc": "A dry teffbarrel north of the arjun. Packed rust coats teffbarrel.",
+      "brief": "Dry teffbarrel, packed rust.",
+      "exits": { "south": { "to": "rust_arjun" } },
+      "actions": [
+        {
+          "id": "pinch_teffbarrel",
+          "label": "pinch the teffbarrel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbarrel. They packed it on the arjun and packed rust around it."]
           ]
         }
       ]
@@ -23233,7 +23284,7 @@
       "name": "Rust Reeving",
       "desc": "A dry reeving east of the trunnel. Packed rust coats reeving.",
       "brief": "Dry reeving, packed rust.",
-      "exits": { "west": { "to": "rust_trunnel" }, "east": { "to": "rust_ambergris" }, "south": { "to": "rust_milletoffal" } },
+      "exits": { "west": { "to": "rust_trunnel" }, "east": { "to": "rust_ambergris" }, "south": { "to": "rust_milletoffal" }, "north": { "to": "rust_barleybarrel" } },
       "actions": [
         {
           "id": "pinch_reeving",
@@ -23242,6 +23293,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard reeving. They rove it on the trunnel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybarrel": {
+      "name": "Rust Barleybarrel",
+      "desc": "A dry barleybarrel north of the reeving. Packed rust coats barleybarrel.",
+      "brief": "Dry barleybarrel, packed rust.",
+      "exits": { "south": { "to": "rust_reeving" } },
+      "actions": [
+        {
+          "id": "pinch_barleybarrel",
+          "label": "pinch the barleybarrel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybarrel. They packed it on the reeving and packed rust around it."]
           ]
         }
       ]
@@ -23267,7 +23335,7 @@
       "name": "Rust Ambergris",
       "desc": "A dry ambergris east of the reeving. Packed rust coats ambergris.",
       "brief": "Dry ambergris, packed rust.",
-      "exits": { "west": { "to": "rust_reeving" }, "east": { "to": "rust_framire" }, "south": { "to": "rust_cornoffal" } },
+      "exits": { "west": { "to": "rust_reeving" }, "east": { "to": "rust_framire" }, "south": { "to": "rust_cornoffal" }, "north": { "to": "rust_sorghumbarrel" } },
       "actions": [
         {
           "id": "pinch_ambergris",
@@ -23276,6 +23344,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ambergris. They packed it on the reeving and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbarrel": {
+      "name": "Rust Sorghumbarrel",
+      "desc": "A dry sorghumbarrel north of the ambergris. Packed rust coats sorghumbarrel.",
+      "brief": "Dry sorghumbarrel, packed rust.",
+      "exits": { "south": { "to": "rust_ambergris" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbarrel",
+          "label": "pinch the sorghumbarrel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbarrel. They packed it on the ambergris and packed rust around it."]
           ]
         }
       ]
@@ -23301,7 +23386,7 @@
       "name": "Rust Framire",
       "desc": "A dry framire east of the ambergris. Packed rust coats framire.",
       "brief": "Dry framire, packed rust.",
-      "exits": { "west": { "to": "rust_ambergris" }, "east": { "to": "rust_peroba" }, "south": { "to": "rust_oatoffal" } },
+      "exits": { "west": { "to": "rust_ambergris" }, "east": { "to": "rust_peroba" }, "south": { "to": "rust_oatoffal" }, "north": { "to": "rust_milletbarrel" } },
       "actions": [
         {
           "id": "pinch_framire",
@@ -23310,6 +23395,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard framire. They packed it on the ambergris and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbarrel": {
+      "name": "Rust Milletbarrel",
+      "desc": "A dry milletbarrel north of the framire. Packed rust coats milletbarrel.",
+      "brief": "Dry milletbarrel, packed rust.",
+      "exits": { "south": { "to": "rust_framire" } },
+      "actions": [
+        {
+          "id": "pinch_milletbarrel",
+          "label": "pinch the milletbarrel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbarrel. They packed it on the framire and packed rust around it."]
           ]
         }
       ]
@@ -23335,7 +23437,7 @@
       "name": "Rust Peroba",
       "desc": "A dry peroba east of the framire. Packed rust coats peroba.",
       "brief": "Dry peroba, packed rust.",
-      "exits": { "west": { "to": "rust_framire" }, "east": { "to": "rust_nargusta" }, "south": { "to": "rust_ryeoffal" } },
+      "exits": { "west": { "to": "rust_framire" }, "east": { "to": "rust_nargusta" }, "south": { "to": "rust_ryeoffal" }, "north": { "to": "rust_cornbarrel" } },
       "actions": [
         {
           "id": "pinch_peroba",
@@ -23344,6 +23446,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard peroba. They packed it on the framire and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbarrel": {
+      "name": "Rust Cornbarrel",
+      "desc": "A dry cornbarrel north of the peroba. Packed rust coats cornbarrel.",
+      "brief": "Dry cornbarrel, packed rust.",
+      "exits": { "south": { "to": "rust_peroba" } },
+      "actions": [
+        {
+          "id": "pinch_cornbarrel",
+          "label": "pinch the cornbarrel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbarrel. They packed it on the peroba and packed rust around it."]
           ]
         }
       ]
@@ -23369,7 +23488,7 @@
       "name": "Rust Nargusta",
       "desc": "A dry nargusta east of the peroba. Packed rust coats nargusta.",
       "brief": "Dry nargusta, packed rust.",
-      "exits": { "west": { "to": "rust_peroba" }, "east": { "to": "rust_merawan" }, "south": { "to": "rust_wheatoffal" } },
+      "exits": { "west": { "to": "rust_peroba" }, "east": { "to": "rust_merawan" }, "south": { "to": "rust_wheatoffal" }, "north": { "to": "rust_oatbarrel" } },
       "actions": [
         {
           "id": "pinch_nargusta",
@@ -23378,6 +23497,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nargusta. They packed it on the peroba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbarrel": {
+      "name": "Rust Oatbarrel",
+      "desc": "A dry oatbarrel north of the nargusta. Packed rust coats oatbarrel.",
+      "brief": "Dry oatbarrel, packed rust.",
+      "exits": { "south": { "to": "rust_nargusta" } },
+      "actions": [
+        {
+          "id": "pinch_oatbarrel",
+          "label": "pinch the oatbarrel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbarrel. They packed it on the nargusta and packed rust around it."]
           ]
         }
       ]
@@ -54245,16 +54381,25 @@
     "go north",
     "go east",
     "pinch the resak",
+    "go north",
+    "pinch the durumbarrel",
+    "go south",
     "go south",
     "pinch the teffoffal",
     "go north",
     "go east",
     "pinch the sesendok",
+    "go north",
+    "pinch the foniobarrel",
+    "go south",
     "go south",
     "pinch the barleyoffal",
     "go north",
     "go east",
     "pinch the arjun",
+    "go north",
+    "pinch the teffbarrel",
+    "go south",
     "go south",
     "pinch the sorghumoffal",
     "go north",
@@ -54276,26 +54421,41 @@
     "pinch the trunnel",
     "go east",
     "pinch the reeving",
+    "go north",
+    "pinch the barleybarrel",
+    "go south",
     "go south",
     "pinch the milletoffal",
     "go north",
     "go east",
     "pinch the ambergris",
+    "go north",
+    "pinch the sorghumbarrel",
+    "go south",
     "go south",
     "pinch the cornoffal",
     "go north",
     "go east",
     "pinch the framire",
+    "go north",
+    "pinch the milletbarrel",
+    "go south",
     "go south",
     "pinch the oatoffal",
     "go north",
     "go east",
     "pinch the peroba",
+    "go north",
+    "pinch the cornbarrel",
+    "go south",
     "go south",
     "pinch the ryeoffal",
     "go north",
     "go east",
     "pinch the nargusta",
+    "go north",
+    "pinch the oatbarrel",
+    "go south",
     "go south",
     "pinch the wheatoffal",
     "go north",
