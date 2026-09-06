@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13250,
+  "maxScore": 13290,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -34793,7 +34793,7 @@
       "name": "Rust Granite",
       "desc": "A dry granite east of the garnet. Packed rust coats granite.",
       "brief": "Dry granite, packed rust.",
-      "exits": { "west": { "to": "rust_garnet" }, "east": { "to": "rust_goethite" }, "south": { "to": "rust_yardlong" } },
+      "exits": { "west": { "to": "rust_garnet" }, "east": { "to": "rust_goethite" }, "south": { "to": "rust_yardlong" }, "north": { "to": "rust_durumdrum" } },
       "actions": [
         {
           "id": "pinch_granite",
@@ -34802,6 +34802,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard granite. They packed it on the garnet and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumdrum": {
+      "name": "Rust Durumdrum",
+      "desc": "A dry durumdrum north of the granite. Packed rust coats durumdrum.",
+      "brief": "Dry durumdrum, packed rust.",
+      "exits": { "south": { "to": "rust_granite" } },
+      "actions": [
+        {
+          "id": "pinch_durumdrum",
+          "label": "pinch the durumdrum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumdrum. They packed it on the granite and packed rust around it."]
           ]
         }
       ]
@@ -34827,7 +34844,7 @@
       "name": "Rust Goethite",
       "desc": "A dry goethite east of the granite. Packed rust coats goethite.",
       "brief": "Dry goethite, packed rust.",
-      "exits": { "west": { "to": "rust_granite" }, "east": { "to": "rust_vivianite" }, "south": { "to": "rust_tepary" } },
+      "exits": { "west": { "to": "rust_granite" }, "east": { "to": "rust_vivianite" }, "south": { "to": "rust_tepary" }, "north": { "to": "rust_foniodrum" } },
       "actions": [
         {
           "id": "pinch_goethite",
@@ -34836,6 +34853,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard goethite. They packed it on the granite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniodrum": {
+      "name": "Rust Foniodrum",
+      "desc": "A dry foniodrum north of the goethite. Packed rust coats foniodrum.",
+      "brief": "Dry foniodrum, packed rust.",
+      "exits": { "south": { "to": "rust_goethite" } },
+      "actions": [
+        {
+          "id": "pinch_foniodrum",
+          "label": "pinch the foniodrum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniodrum. They packed it on the goethite and packed rust around it."]
           ]
         }
       ]
@@ -34861,7 +34895,7 @@
       "name": "Rust Vivianite",
       "desc": "A dry vivianite east of the goethite. Packed rust coats vivianite.",
       "brief": "Dry vivianite, packed rust.",
-      "exits": { "west": { "to": "rust_goethite" }, "east": { "to": "rust_shattuckite" }, "south": { "to": "rust_seabean" } },
+      "exits": { "west": { "to": "rust_goethite" }, "east": { "to": "rust_shattuckite" }, "south": { "to": "rust_seabean" }, "north": { "to": "rust_teffdrum" } },
       "actions": [
         {
           "id": "pinch_vivianite",
@@ -34870,6 +34904,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard vivianite. They packed it on the goethite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffdrum": {
+      "name": "Rust Teffdrum",
+      "desc": "A dry teffdrum north of the vivianite. Packed rust coats teffdrum.",
+      "brief": "Dry teffdrum, packed rust.",
+      "exits": { "south": { "to": "rust_vivianite" } },
+      "actions": [
+        {
+          "id": "pinch_teffdrum",
+          "label": "pinch the teffdrum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffdrum. They packed it on the vivianite and packed rust around it."]
           ]
         }
       ]
@@ -34895,7 +34946,7 @@
       "name": "Rust Shattuckite",
       "desc": "A dry shattuckite east of the vivianite. Packed rust coats shattuckite.",
       "brief": "Dry shattuckite, packed rust.",
-      "exits": { "west": { "to": "rust_vivianite" }, "east": { "to": "rust_pentlandite" }, "south": { "to": "rust_glasswort" } },
+      "exits": { "west": { "to": "rust_vivianite" }, "east": { "to": "rust_pentlandite" }, "south": { "to": "rust_glasswort" }, "north": { "to": "rust_barleydrum" } },
       "actions": [
         {
           "id": "pinch_shattuckite",
@@ -34904,6 +34955,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shattuckite. They packed it on the vivianite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleydrum": {
+      "name": "Rust Barleydrum",
+      "desc": "A dry barleydrum north of the shattuckite. Packed rust coats barleydrum.",
+      "brief": "Dry barleydrum, packed rust.",
+      "exits": { "south": { "to": "rust_shattuckite" } },
+      "actions": [
+        {
+          "id": "pinch_barleydrum",
+          "label": "pinch the barleydrum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleydrum. They packed it on the shattuckite and packed rust around it."]
           ]
         }
       ]
@@ -34980,7 +35048,7 @@
       "name": "Rust Breastline",
       "desc": "A dry breastline east of the reefpoint. Packed rust coats a breastline.",
       "brief": "Dry breastline, packed rust.",
-      "exits": { "west": { "to": "rust_reefpoint" }, "east": { "to": "rust_boltline" }, "south": { "to": "rust_splitpea" } },
+      "exits": { "west": { "to": "rust_reefpoint" }, "east": { "to": "rust_boltline" }, "south": { "to": "rust_splitpea" }, "north": { "to": "rust_sorghumdrum" } },
       "actions": [
         {
           "id": "pinch_breastline",
@@ -34989,6 +35057,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard breastline. They made it on the reefpoint and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumdrum": {
+      "name": "Rust Sorghumdrum",
+      "desc": "A dry sorghumdrum north of the breastline. Packed rust coats sorghumdrum.",
+      "brief": "Dry sorghumdrum, packed rust.",
+      "exits": { "south": { "to": "rust_breastline" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumdrum",
+          "label": "pinch the sorghumdrum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumdrum. They packed it on the breastline and packed rust around it."]
           ]
         }
       ]
@@ -35014,7 +35099,7 @@
       "name": "Rust Boltline",
       "desc": "A dry boltline east of the breastline. Packed rust coats a boltline.",
       "brief": "Dry boltline, packed rust.",
-      "exits": { "west": { "to": "rust_breastline" }, "east": { "to": "rust_rosewood" }, "south": { "to": "rust_marrowfat" } },
+      "exits": { "west": { "to": "rust_breastline" }, "east": { "to": "rust_rosewood" }, "south": { "to": "rust_marrowfat" }, "north": { "to": "rust_milletdrum" } },
       "actions": [
         {
           "id": "pinch_boltline",
@@ -35023,6 +35108,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boltline. They sewed it on the breastline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletdrum": {
+      "name": "Rust Milletdrum",
+      "desc": "A dry milletdrum north of the boltline. Packed rust coats milletdrum.",
+      "brief": "Dry milletdrum, packed rust.",
+      "exits": { "south": { "to": "rust_boltline" } },
+      "actions": [
+        {
+          "id": "pinch_milletdrum",
+          "label": "pinch the milletdrum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletdrum. They packed it on the boltline and packed rust around it."]
           ]
         }
       ]
@@ -35048,7 +35150,7 @@
       "name": "Rust Rosewood",
       "desc": "A dry rosewood east of the boltline. Packed rust coats rosewood.",
       "brief": "Dry rosewood, packed rust.",
-      "exits": { "west": { "to": "rust_boltline" }, "east": { "to": "rust_celestine" }, "south": { "to": "rust_cannellini" } },
+      "exits": { "west": { "to": "rust_boltline" }, "east": { "to": "rust_celestine" }, "south": { "to": "rust_cannellini" }, "north": { "to": "rust_corndrum" } },
       "actions": [
         {
           "id": "pinch_rosewood",
@@ -35057,6 +35159,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rosewood. They laid it on the boltline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corndrum": {
+      "name": "Rust Corndrum",
+      "desc": "A dry corndrum north of the rosewood. Packed rust coats corndrum.",
+      "brief": "Dry corndrum, packed rust.",
+      "exits": { "south": { "to": "rust_rosewood" } },
+      "actions": [
+        {
+          "id": "pinch_corndrum",
+          "label": "pinch the corndrum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corndrum. They packed it on the rosewood and packed rust around it."]
           ]
         }
       ]
@@ -35082,7 +35201,7 @@
       "name": "Rust Celestine",
       "desc": "A dry celestine east of the rosewood. Packed rust coats celestine.",
       "brief": "Dry celestine, packed rust.",
-      "exits": { "west": { "to": "rust_rosewood" }, "east": { "to": "rust_quartz" }, "south": { "to": "rust_borlotti" } },
+      "exits": { "west": { "to": "rust_rosewood" }, "east": { "to": "rust_quartz" }, "south": { "to": "rust_borlotti" }, "north": { "to": "rust_oatdrum" } },
       "actions": [
         {
           "id": "pinch_celestine",
@@ -35091,6 +35210,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard celestine. They packed it on the rosewood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatdrum": {
+      "name": "Rust Oatdrum",
+      "desc": "A dry oatdrum north of the celestine. Packed rust coats oatdrum.",
+      "brief": "Dry oatdrum, packed rust.",
+      "exits": { "south": { "to": "rust_celestine" } },
+      "actions": [
+        {
+          "id": "pinch_oatdrum",
+          "label": "pinch the oatdrum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatdrum. They packed it on the celestine and packed rust around it."]
           ]
         }
       ]
@@ -51201,21 +51337,33 @@
     "go north",
     "go east",
     "pinch the granite",
+    "go north",
+    "pinch the durumdrum",
+    "go south",
     "go south",
     "pinch the yardlong",
     "go north",
     "go east",
     "pinch the goethite",
+    "go north",
+    "pinch the foniodrum",
+    "go south",
     "go south",
     "pinch the tepary",
     "go north",
     "go east",
     "pinch the vivianite",
+    "go north",
+    "pinch the teffdrum",
+    "go south",
     "go south",
     "pinch the seabean",
     "go north",
     "go east",
     "pinch the shattuckite",
+    "go north",
+    "pinch the barleydrum",
+    "go south",
     "go south",
     "pinch the glasswort",
     "go north",
@@ -51238,21 +51386,33 @@
     "pinch the reefpoint",
     "go east",
     "pinch the breastline",
+    "go north",
+    "pinch the sorghumdrum",
+    "go south",
     "go south",
     "pinch the splitpea",
     "go north",
     "go east",
     "pinch the boltline",
+    "go north",
+    "pinch the milletdrum",
+    "go south",
     "go south",
     "pinch the marrowfat",
     "go north",
     "go east",
     "pinch the rosewood",
+    "go north",
+    "pinch the corndrum",
+    "go south",
     "go south",
     "pinch the cannellini",
     "go north",
     "go east",
     "pinch the celestine",
+    "go north",
+    "pinch the oatdrum",
+    "go south",
     "go south",
     "pinch the borlotti",
     "go north",
