@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10690,
+  "maxScore": 10730,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -23029,7 +23029,7 @@
       "name": "Rust Spencer",
       "desc": "A dry spencer east of the trestle. Packed rust coats a spencer.",
       "brief": "Dry spencer, packed rust.",
-      "exits": { "west": { "to": "rust_trestle" }, "east": { "to": "rust_reefearring" } },
+      "exits": { "west": { "to": "rust_trestle" }, "east": { "to": "rust_reefearring" }, "south": { "to": "rust_triticaleberry" } },
       "actions": [
         {
           "id": "pinch_spencer",
@@ -23042,11 +23042,28 @@
         }
       ]
     },
+    "rust_triticaleberry": {
+      "name": "Rust Triticaleberry",
+      "desc": "A dry triticaleberry south of the spencer. Packed rust coats triticaleberry.",
+      "brief": "Dry triticaleberry, packed rust.",
+      "exits": { "north": { "to": "rust_spencer" } },
+      "actions": [
+        {
+          "id": "pinch_triticaleberry",
+          "label": "pinch the triticaleberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard triticaleberry. They packed it on the spencer and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_reefearring": {
       "name": "Rust Reefearring",
       "desc": "A dry reefearring east of the spencer. Packed rust coats a reefearring.",
       "brief": "Dry reefearring, packed rust.",
-      "exits": { "west": { "to": "rust_spencer" }, "east": { "to": "rust_padauk" } },
+      "exits": { "west": { "to": "rust_spencer" }, "east": { "to": "rust_padauk" }, "south": { "to": "rust_einkornberry" } },
       "actions": [
         {
           "id": "pinch_reefearring",
@@ -23059,11 +23076,28 @@
         }
       ]
     },
+    "rust_einkornberry": {
+      "name": "Rust Einkornberry",
+      "desc": "A dry einkornberry south of the reefearring. Packed rust coats einkornberry.",
+      "brief": "Dry einkornberry, packed rust.",
+      "exits": { "north": { "to": "rust_reefearring" } },
+      "actions": [
+        {
+          "id": "pinch_einkornberry",
+          "label": "pinch the einkornberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard einkornberry. They packed it on the reefearring and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_padauk": {
       "name": "Rust Padauk",
       "desc": "A dry padauk east of the reefearring. Packed rust coats padauk.",
       "brief": "Dry padauk, packed rust.",
-      "exits": { "west": { "to": "rust_reefearring" }, "east": { "to": "rust_satinwood" } },
+      "exits": { "west": { "to": "rust_reefearring" }, "east": { "to": "rust_satinwood" }, "south": { "to": "rust_emmerberry" } },
       "actions": [
         {
           "id": "pinch_padauk",
@@ -23076,11 +23110,28 @@
         }
       ]
     },
+    "rust_emmerberry": {
+      "name": "Rust Emmerberry",
+      "desc": "A dry emmerberry south of the padauk. Packed rust coats emmerberry.",
+      "brief": "Dry emmerberry, packed rust.",
+      "exits": { "north": { "to": "rust_padauk" } },
+      "actions": [
+        {
+          "id": "pinch_emmerberry",
+          "label": "pinch the emmerberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard emmerberry. They packed it on the padauk and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_satinwood": {
       "name": "Rust Satinwood",
       "desc": "A dry satinwood east of the padauk. Packed rust coats satinwood.",
       "brief": "Dry satinwood, packed rust.",
-      "exits": { "west": { "to": "rust_padauk" }, "east": { "to": "rust_bosse" } },
+      "exits": { "west": { "to": "rust_padauk" }, "east": { "to": "rust_bosse" }, "south": { "to": "rust_kamutberry" } },
       "actions": [
         {
           "id": "pinch_satinwood",
@@ -23093,11 +23144,28 @@
         }
       ]
     },
+    "rust_kamutberry": {
+      "name": "Rust Kamutberry",
+      "desc": "A dry kamutberry south of the satinwood. Packed rust coats kamutberry.",
+      "brief": "Dry kamutberry, packed rust.",
+      "exits": { "north": { "to": "rust_satinwood" } },
+      "actions": [
+        {
+          "id": "pinch_kamutberry",
+          "label": "pinch the kamutberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kamutberry. They packed it on the satinwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bosse": {
       "name": "Rust Bosse",
       "desc": "A dry bosse east of the satinwood. Packed rust coats bosse.",
       "brief": "Dry bosse, packed rust.",
-      "exits": { "west": { "to": "rust_satinwood" }, "east": { "to": "rust_arariba" } },
+      "exits": { "west": { "to": "rust_satinwood" }, "east": { "to": "rust_arariba" }, "south": { "to": "rust_maizegroat" } },
       "actions": [
         {
           "id": "pinch_bosse",
@@ -23110,11 +23178,28 @@
         }
       ]
     },
+    "rust_maizegroat": {
+      "name": "Rust Maizegroat",
+      "desc": "A dry maizegroat south of the bosse. Packed rust coats maizegroat.",
+      "brief": "Dry maizegroat, packed rust.",
+      "exits": { "north": { "to": "rust_bosse" } },
+      "actions": [
+        {
+          "id": "pinch_maizegroat",
+          "label": "pinch the maizegroat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard maizegroat. They packed it on the bosse and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_arariba": {
       "name": "Rust Arariba",
       "desc": "A dry arariba east of the bosse. Packed rust coats arariba.",
       "brief": "Dry arariba, packed rust.",
-      "exits": { "west": { "to": "rust_bosse" }, "east": { "to": "rust_kapur" } },
+      "exits": { "west": { "to": "rust_bosse" }, "east": { "to": "rust_kapur" }, "south": { "to": "rust_durumgroat" } },
       "actions": [
         {
           "id": "pinch_arariba",
@@ -23127,11 +23212,28 @@
         }
       ]
     },
+    "rust_durumgroat": {
+      "name": "Rust Durumgroat",
+      "desc": "A dry durumgroat south of the arariba. Packed rust coats durumgroat.",
+      "brief": "Dry durumgroat, packed rust.",
+      "exits": { "north": { "to": "rust_arariba" } },
+      "actions": [
+        {
+          "id": "pinch_durumgroat",
+          "label": "pinch the durumgroat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumgroat. They packed it on the arariba and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kapur": {
       "name": "Rust Kapur",
       "desc": "A dry kapur east of the arariba. Packed rust coats kapur.",
       "brief": "Dry kapur, packed rust.",
-      "exits": { "west": { "to": "rust_arariba" }, "east": { "to": "rust_gerutu" } },
+      "exits": { "west": { "to": "rust_arariba" }, "east": { "to": "rust_gerutu" }, "south": { "to": "rust_foniogroat" } },
       "actions": [
         {
           "id": "pinch_kapur",
@@ -23144,11 +23246,28 @@
         }
       ]
     },
+    "rust_foniogroat": {
+      "name": "Rust Foniogroat",
+      "desc": "A dry foniogroat south of the kapur. Packed rust coats foniogroat.",
+      "brief": "Dry foniogroat, packed rust.",
+      "exits": { "north": { "to": "rust_kapur" } },
+      "actions": [
+        {
+          "id": "pinch_foniogroat",
+          "label": "pinch the foniogroat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniogroat. They packed it on the kapur and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_gerutu": {
       "name": "Rust Gerutu",
       "desc": "A dry gerutu east of the kapur. Packed rust coats gerutu.",
       "brief": "Dry gerutu, packed rust.",
-      "exits": { "west": { "to": "rust_kapur" }, "east": { "to": "rust_salwood" } },
+      "exits": { "west": { "to": "rust_kapur" }, "east": { "to": "rust_salwood" }, "south": { "to": "rust_teffgroat" } },
       "actions": [
         {
           "id": "pinch_gerutu",
@@ -23157,6 +23276,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gerutu. They packed it on the kapur and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffgroat": {
+      "name": "Rust Teffgroat",
+      "desc": "A dry teffgroat south of the gerutu. Packed rust coats teffgroat.",
+      "brief": "Dry teffgroat, packed rust.",
+      "exits": { "north": { "to": "rust_gerutu" } },
+      "actions": [
+        {
+          "id": "pinch_teffgroat",
+          "label": "pinch the teffgroat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffgroat. They packed it on the gerutu and packed rust around it."]
           ]
         }
       ]
@@ -40307,20 +40443,44 @@
     "pinch the trestle",
     "go east",
     "pinch the spencer",
+    "go south",
+    "pinch the triticaleberry",
+    "go north",
     "go east",
     "pinch the reefearring",
+    "go south",
+    "pinch the einkornberry",
+    "go north",
     "go east",
     "pinch the padauk",
+    "go south",
+    "pinch the emmerberry",
+    "go north",
     "go east",
     "pinch the satinwood",
+    "go south",
+    "pinch the kamutberry",
+    "go north",
     "go east",
     "pinch the bosse",
+    "go south",
+    "pinch the maizegroat",
+    "go north",
     "go east",
     "pinch the arariba",
+    "go south",
+    "pinch the durumgroat",
+    "go north",
     "go east",
     "pinch the kapur",
+    "go south",
+    "pinch the foniogroat",
+    "go north",
     "go east",
     "pinch the gerutu",
+    "go south",
+    "pinch the teffgroat",
+    "go north",
     "go east",
     "pinch the salwood",
     "go west",
