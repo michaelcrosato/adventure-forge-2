@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8610,
+  "maxScore": 8650,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -8511,7 +8511,7 @@
       "name": "Rust Nikkofir",
       "desc": "A dry nikkofir east of the hinoki. Packed rust coats nikkofir.",
       "brief": "Dry nikkofir, packed rust.",
-      "exits": { "west": { "to": "rust_hinoki" }, "east": { "to": "rust_koreana" } },
+      "exits": { "west": { "to": "rust_hinoki" }, "east": { "to": "rust_koreana" }, "south": { "to": "rust_hawthorn" } },
       "actions": [
         {
           "id": "pinch_nikkofir",
@@ -8520,6 +8520,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nikkofir. They packed it on the hinoki and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_hawthorn": {
+      "name": "Rust Hawthorn",
+      "desc": "A dry hawthorn south of the nikkofir. Packed rust coats hawthorn.",
+      "brief": "Dry hawthorn, packed rust.",
+      "exits": { "north": { "to": "rust_nikkofir" } },
+      "actions": [
+        {
+          "id": "pinch_hawthorn",
+          "label": "pinch the hawthorn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hawthorn. They packed it on the nikkofir and packed rust around it."]
           ]
         }
       ]
@@ -8596,7 +8613,7 @@
       "name": "Rust Inhaul",
       "desc": "A dry inhaul east of the carling. Packed rust coats an inhaul.",
       "brief": "Dry inhaul, packed rust.",
-      "exits": { "west": { "to": "rust_carling" }, "east": { "to": "rust_squareknot" } },
+      "exits": { "west": { "to": "rust_carling" }, "east": { "to": "rust_squareknot" }, "south": { "to": "rust_blackthorn" } },
       "actions": [
         {
           "id": "pinch_inhaul",
@@ -8609,11 +8626,28 @@
         }
       ]
     },
+    "rust_blackthorn": {
+      "name": "Rust Blackthorn",
+      "desc": "A dry blackthorn south of the inhaul. Packed rust coats blackthorn.",
+      "brief": "Dry blackthorn, packed rust.",
+      "exits": { "north": { "to": "rust_inhaul" } },
+      "actions": [
+        {
+          "id": "pinch_blackthorn",
+          "label": "pinch the blackthorn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard blackthorn. They packed it on the inhaul and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_squareknot": {
       "name": "Rust Squareknot",
       "desc": "A dry squareknot east of the inhaul. Packed rust coats a squareknot.",
       "brief": "Dry squareknot, packed rust.",
-      "exits": { "west": { "to": "rust_inhaul" }, "east": { "to": "rust_gamboge" } },
+      "exits": { "west": { "to": "rust_inhaul" }, "east": { "to": "rust_gamboge" }, "south": { "to": "rust_sloe" } },
       "actions": [
         {
           "id": "pinch_squareknot",
@@ -8622,6 +8656,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard squareknot. They tied it on the inhaul and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sloe": {
+      "name": "Rust Sloe",
+      "desc": "A dry sloe south of the squareknot. Packed rust coats sloe.",
+      "brief": "Dry sloe, packed rust.",
+      "exits": { "north": { "to": "rust_squareknot" } },
+      "actions": [
+        {
+          "id": "pinch_sloe",
+          "label": "pinch the sloe",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sloe. They packed it on the squareknot and packed rust around it."]
           ]
         }
       ]
@@ -8766,7 +8817,7 @@
       "name": "Rust Atlascedar",
       "desc": "A dry atlascedar east of the shortleaf. Packed rust coats atlascedar.",
       "brief": "Dry atlascedar, packed rust.",
-      "exits": { "west": { "to": "rust_shortleaf" }, "east": { "to": "rust_cephalonica" } },
+      "exits": { "west": { "to": "rust_shortleaf" }, "east": { "to": "rust_cephalonica" }, "south": { "to": "rust_medlar" } },
       "actions": [
         {
           "id": "pinch_atlascedar",
@@ -8775,6 +8826,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard atlascedar. They packed it on the shortleaf and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_medlar": {
+      "name": "Rust Medlar",
+      "desc": "A dry medlar south of the atlascedar. Packed rust coats medlar.",
+      "brief": "Dry medlar, packed rust.",
+      "exits": { "north": { "to": "rust_atlascedar" } },
+      "actions": [
+        {
+          "id": "pinch_medlar",
+          "label": "pinch the medlar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard medlar. They packed it on the atlascedar and packed rust around it."]
           ]
         }
       ]
@@ -8834,7 +8902,7 @@
       "name": "Rust Martingale",
       "desc": "A dry martingale east of the hasp. Packed rust coats a martingale.",
       "brief": "Dry martingale, packed rust.",
-      "exits": { "west": { "to": "rust_hasp" }, "east": { "to": "rust_fisherman" } },
+      "exits": { "west": { "to": "rust_hasp" }, "east": { "to": "rust_fisherman" }, "south": { "to": "rust_quince" } },
       "actions": [
         {
           "id": "pinch_martingale",
@@ -8847,11 +8915,28 @@
         }
       ]
     },
+    "rust_quince": {
+      "name": "Rust Quince",
+      "desc": "A dry quince south of the martingale. Packed rust coats quince.",
+      "brief": "Dry quince, packed rust.",
+      "exits": { "north": { "to": "rust_martingale" } },
+      "actions": [
+        {
+          "id": "pinch_quince",
+          "label": "pinch the quince",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard quince. They packed it on the martingale and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_fisherman": {
       "name": "Rust Fisherman",
       "desc": "A dry fisherman east of the martingale. Packed rust coats a fisherman.",
       "brief": "Dry fisherman, packed rust.",
-      "exits": { "west": { "to": "rust_martingale" }, "east": { "to": "rust_malachite" } },
+      "exits": { "west": { "to": "rust_martingale" }, "east": { "to": "rust_malachite" }, "south": { "to": "rust_loquat" } },
       "actions": [
         {
           "id": "pinch_fisherman",
@@ -8864,11 +8949,28 @@
         }
       ]
     },
+    "rust_loquat": {
+      "name": "Rust Loquat",
+      "desc": "A dry loquat south of the fisherman. Packed rust coats loquat.",
+      "brief": "Dry loquat, packed rust.",
+      "exits": { "north": { "to": "rust_fisherman" } },
+      "actions": [
+        {
+          "id": "pinch_loquat",
+          "label": "pinch the loquat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard loquat. They packed it on the fisherman and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_malachite": {
       "name": "Rust Malachite",
       "desc": "A dry malachite east of the fisherman. Packed rust coats malachite.",
       "brief": "Dry malachite, packed rust.",
-      "exits": { "west": { "to": "rust_fisherman" }, "east": { "to": "rust_caput" } },
+      "exits": { "west": { "to": "rust_fisherman" }, "east": { "to": "rust_caput" }, "south": { "to": "rust_jujube" } },
       "actions": [
         {
           "id": "pinch_malachite",
@@ -8881,11 +8983,28 @@
         }
       ]
     },
+    "rust_jujube": {
+      "name": "Rust Jujube",
+      "desc": "A dry jujube south of the malachite. Packed rust coats jujube.",
+      "brief": "Dry jujube, packed rust.",
+      "exits": { "north": { "to": "rust_malachite" } },
+      "actions": [
+        {
+          "id": "pinch_jujube",
+          "label": "pinch the jujube",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard jujube. They packed it on the malachite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_caput": {
       "name": "Rust Caput",
       "desc": "A dry caput east of the malachite. Packed rust coats caput.",
       "brief": "Dry caput, packed rust.",
-      "exits": { "west": { "to": "rust_malachite" }, "east": { "to": "rust_rosemadder" } },
+      "exits": { "west": { "to": "rust_malachite" }, "east": { "to": "rust_rosemadder" }, "south": { "to": "rust_hawtree" } },
       "actions": [
         {
           "id": "pinch_caput",
@@ -8894,6 +9013,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard caput. They packed it on the malachite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_hawtree": {
+      "name": "Rust Hawtree",
+      "desc": "A dry hawtree south of the caput. Packed rust coats hawtree.",
+      "brief": "Dry hawtree, packed rust.",
+      "exits": { "north": { "to": "rust_caput" } },
+      "actions": [
+        {
+          "id": "pinch_hawtree",
+          "label": "pinch the hawtree",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hawtree. They packed it on the caput and packed rust around it."]
           ]
         }
       ]
@@ -30706,6 +30842,9 @@
     "go north",
     "go east",
     "pinch the nikkofir",
+    "go south",
+    "pinch the hawthorn",
+    "go north",
     "go east",
     "pinch the koreana",
     "go south",
@@ -30727,8 +30866,14 @@
     "pinch the carling",
     "go east",
     "pinch the inhaul",
+    "go south",
+    "pinch the blackthorn",
+    "go north",
     "go east",
     "pinch the squareknot",
+    "go south",
+    "pinch the sloe",
+    "go north",
     "go east",
     "pinch the gamboge",
     "go south",
@@ -30751,6 +30896,9 @@
     "go north",
     "go east",
     "pinch the atlascedar",
+    "go south",
+    "pinch the medlar",
+    "go north",
     "go east",
     "pinch the cephalonica",
     "go south",
@@ -30770,12 +30918,24 @@
     "go south",
     "go east",
     "pinch the martingale",
+    "go south",
+    "pinch the quince",
+    "go north",
     "go east",
     "pinch the fisherman",
+    "go south",
+    "pinch the loquat",
+    "go north",
     "go east",
     "pinch the malachite",
+    "go south",
+    "pinch the jujube",
+    "go north",
     "go east",
     "pinch the caput",
+    "go south",
+    "pinch the hawtree",
+    "go north",
     "go east",
     "pinch the rosemadder",
     "go east",
