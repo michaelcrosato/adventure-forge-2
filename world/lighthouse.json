@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13170,
+  "maxScore": 13210,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -35422,7 +35422,7 @@
       "name": "Rust Coir",
       "desc": "A dry coir east of the footline. Packed rust coats coir.",
       "brief": "Dry coir, packed rust.",
-      "exits": { "west": { "to": "rust_footline" }, "east": { "to": "rust_ebony" }, "south": { "to": "rust_kidneybean" } },
+      "exits": { "west": { "to": "rust_footline" }, "east": { "to": "rust_ebony" }, "south": { "to": "rust_kidneybean" }, "north": { "to": "rust_durumjar" } },
       "actions": [
         {
           "id": "pinch_coir",
@@ -35431,6 +35431,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coir. They laid it on the footline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumjar": {
+      "name": "Rust Durumjar",
+      "desc": "A dry durumjar north of the coir. Packed rust coats durumjar.",
+      "brief": "Dry durumjar, packed rust.",
+      "exits": { "south": { "to": "rust_coir" } },
+      "actions": [
+        {
+          "id": "pinch_durumjar",
+          "label": "pinch the durumjar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumjar. They packed it on the coir and packed rust around it."]
           ]
         }
       ]
@@ -36187,7 +36204,7 @@
       "name": "Rust Messenger",
       "desc": "A dry messenger east of the clewline. Packed rust coats a messenger.",
       "brief": "Dry messenger, packed rust.",
-      "exits": { "west": { "to": "rust_clewline" }, "east": { "to": "rust_reefgasket" }, "south": { "to": "rust_pinto" } },
+      "exits": { "west": { "to": "rust_clewline" }, "east": { "to": "rust_reefgasket" }, "south": { "to": "rust_pinto" }, "north": { "to": "rust_foniojar" } },
       "actions": [
         {
           "id": "pinch_messenger",
@@ -36196,6 +36213,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard messenger. They rove it on the clewline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniojar": {
+      "name": "Rust Foniojar",
+      "desc": "A dry foniojar north of the messenger. Packed rust coats foniojar.",
+      "brief": "Dry foniojar, packed rust.",
+      "exits": { "south": { "to": "rust_messenger" } },
+      "actions": [
+        {
+          "id": "pinch_foniojar",
+          "label": "pinch the foniojar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniojar. They packed it on the messenger and packed rust around it."]
           ]
         }
       ]
@@ -36221,7 +36255,7 @@
       "name": "Rust Reefgasket",
       "desc": "A dry reefgasket east of the messenger. Packed rust coats a reefgasket.",
       "brief": "Dry reefgasket, packed rust.",
-      "exits": { "west": { "to": "rust_messenger" }, "east": { "to": "rust_jute" }, "south": { "to": "rust_navybean" } },
+      "exits": { "west": { "to": "rust_messenger" }, "east": { "to": "rust_jute" }, "south": { "to": "rust_navybean" }, "north": { "to": "rust_teffjar" } },
       "actions": [
         {
           "id": "pinch_reefgasket",
@@ -36230,6 +36264,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard reefgasket. They bound it on the messenger and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffjar": {
+      "name": "Rust Teffjar",
+      "desc": "A dry teffjar north of the reefgasket. Packed rust coats teffjar.",
+      "brief": "Dry teffjar, packed rust.",
+      "exits": { "south": { "to": "rust_reefgasket" } },
+      "actions": [
+        {
+          "id": "pinch_teffjar",
+          "label": "pinch the teffjar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffjar. They packed it on the reefgasket and packed rust around it."]
           ]
         }
       ]
@@ -36255,7 +36306,7 @@
       "name": "Rust Jute",
       "desc": "A dry jute east of the reefgasket. Packed rust coats jute.",
       "brief": "Dry jute, packed rust.",
-      "exits": { "west": { "to": "rust_reefgasket" }, "east": { "to": "rust_lignum" }, "south": { "to": "rust_lima" } },
+      "exits": { "west": { "to": "rust_reefgasket" }, "east": { "to": "rust_lignum" }, "south": { "to": "rust_lima" }, "north": { "to": "rust_barleyjar" } },
       "actions": [
         {
           "id": "pinch_jute",
@@ -36264,6 +36315,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard jute. They wound it on the reefgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyjar": {
+      "name": "Rust Barleyjar",
+      "desc": "A dry barleyjar north of the jute. Packed rust coats barleyjar.",
+      "brief": "Dry barleyjar, packed rust.",
+      "exits": { "south": { "to": "rust_jute" } },
+      "actions": [
+        {
+          "id": "pinch_barleyjar",
+          "label": "pinch the barleyjar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyjar. They packed it on the jute and packed rust around it."]
           ]
         }
       ]
@@ -36289,7 +36357,7 @@
       "name": "Rust Lignum",
       "desc": "A dry lignum east of the jute. Packed rust coats lignum.",
       "brief": "Dry lignum, packed rust.",
-      "exits": { "west": { "to": "rust_jute" }, "east": { "to": "rust_hemlock" }, "south": { "to": "rust_cowpea" } },
+      "exits": { "west": { "to": "rust_jute" }, "east": { "to": "rust_hemlock" }, "south": { "to": "rust_cowpea" }, "north": { "to": "rust_sorghumjar" } },
       "actions": [
         {
           "id": "pinch_lignum",
@@ -36298,6 +36366,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lignum. They laid it on the jute and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumjar": {
+      "name": "Rust Sorghumjar",
+      "desc": "A dry sorghumjar north of the lignum. Packed rust coats sorghumjar.",
+      "brief": "Dry sorghumjar, packed rust.",
+      "exits": { "south": { "to": "rust_lignum" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumjar",
+          "label": "pinch the sorghumjar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumjar. They packed it on the lignum and packed rust around it."]
           ]
         }
       ]
@@ -36323,7 +36408,7 @@
       "name": "Rust Hemlock",
       "desc": "A dry hemlock east of the lignum. Packed rust coats hemlock.",
       "brief": "Dry hemlock, packed rust.",
-      "exits": { "west": { "to": "rust_lignum" }, "east": { "to": "rust_whaleoil" }, "south": { "to": "rust_soybean" } },
+      "exits": { "west": { "to": "rust_lignum" }, "east": { "to": "rust_whaleoil" }, "south": { "to": "rust_soybean" }, "north": { "to": "rust_milletjar" } },
       "actions": [
         {
           "id": "pinch_hemlock",
@@ -36332,6 +36417,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hemlock. They stacked it on the lignum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletjar": {
+      "name": "Rust Milletjar",
+      "desc": "A dry milletjar north of the hemlock. Packed rust coats milletjar.",
+      "brief": "Dry milletjar, packed rust.",
+      "exits": { "south": { "to": "rust_hemlock" } },
+      "actions": [
+        {
+          "id": "pinch_milletjar",
+          "label": "pinch the milletjar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletjar. They packed it on the hemlock and packed rust around it."]
           ]
         }
       ]
@@ -36357,7 +36459,7 @@
       "name": "Rust Whaleoil",
       "desc": "A dry whaleoil east of the hemlock. Packed rust coats whaleoil.",
       "brief": "Dry whaleoil, packed rust.",
-      "exits": { "west": { "to": "rust_hemlock" }, "east": { "to": "rust_alumina" }, "south": { "to": "rust_adzuki" } },
+      "exits": { "west": { "to": "rust_hemlock" }, "east": { "to": "rust_alumina" }, "south": { "to": "rust_adzuki" }, "north": { "to": "rust_cornjar" } },
       "actions": [
         {
           "id": "pinch_whaleoil",
@@ -36366,6 +36468,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whaleoil. They soaked it on the hemlock and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornjar": {
+      "name": "Rust Cornjar",
+      "desc": "A dry cornjar north of the whaleoil. Packed rust coats cornjar.",
+      "brief": "Dry cornjar, packed rust.",
+      "exits": { "south": { "to": "rust_whaleoil" } },
+      "actions": [
+        {
+          "id": "pinch_cornjar",
+          "label": "pinch the cornjar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornjar. They packed it on the whaleoil and packed rust around it."]
           ]
         }
       ]
@@ -36391,7 +36510,7 @@
       "name": "Rust Alumina",
       "desc": "A dry alumina east of the whaleoil. Packed rust coats alumina.",
       "brief": "Dry alumina, packed rust.",
-      "exits": { "west": { "to": "rust_whaleoil" }, "east": { "to": "rust_olivenite" }, "south": { "to": "rust_mung" } },
+      "exits": { "west": { "to": "rust_whaleoil" }, "east": { "to": "rust_olivenite" }, "south": { "to": "rust_mung" }, "north": { "to": "rust_oatjar" } },
       "actions": [
         {
           "id": "pinch_alumina",
@@ -36400,6 +36519,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard alumina. They packed it on the whaleoil and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatjar": {
+      "name": "Rust Oatjar",
+      "desc": "A dry oatjar north of the alumina. Packed rust coats oatjar.",
+      "brief": "Dry oatjar, packed rust.",
+      "exits": { "south": { "to": "rust_alumina" } },
+      "actions": [
+        {
+          "id": "pinch_oatjar",
+          "label": "pinch the oatjar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatjar. They packed it on the alumina and packed rust around it."]
           ]
         }
       ]
@@ -51042,6 +51178,9 @@
     "go north",
     "go east",
     "pinch the coir",
+    "go north",
+    "pinch the durumjar",
+    "go south",
     "go south",
     "pinch the kidneybean",
     "go north",
@@ -51064,36 +51203,57 @@
     "pinch the clewline",
     "go east",
     "pinch the messenger",
+    "go north",
+    "pinch the foniojar",
+    "go south",
     "go south",
     "pinch the pinto",
     "go north",
     "go east",
     "pinch the reefgasket",
+    "go north",
+    "pinch the teffjar",
+    "go south",
     "go south",
     "pinch the navybean",
     "go north",
     "go east",
     "pinch the jute",
+    "go north",
+    "pinch the barleyjar",
+    "go south",
     "go south",
     "pinch the lima",
     "go north",
     "go east",
     "pinch the lignum",
+    "go north",
+    "pinch the sorghumjar",
+    "go south",
     "go south",
     "pinch the cowpea",
     "go north",
     "go east",
     "pinch the hemlock",
+    "go north",
+    "pinch the milletjar",
+    "go south",
     "go south",
     "pinch the soybean",
     "go north",
     "go east",
     "pinch the whaleoil",
+    "go north",
+    "pinch the cornjar",
+    "go south",
     "go south",
     "pinch the adzuki",
     "go north",
     "go east",
     "pinch the alumina",
+    "go north",
+    "pinch the oatjar",
+    "go south",
     "go south",
     "pinch the mung",
     "go north",
