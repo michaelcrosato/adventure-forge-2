@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11890,
+  "maxScore": 11930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -17198,7 +17198,7 @@
       "name": "Rust Clarain",
       "desc": "A dry clarain east of the wattle. Packed rust coats clarain.",
       "brief": "Dry clarain, packed rust.",
-      "exits": { "west": { "to": "rust_wattle" }, "east": { "to": "rust_greyironbark" } },
+      "exits": { "west": { "to": "rust_wattle" }, "east": { "to": "rust_greyironbark" }, "south": { "to": "rust_durumallpurpose" } },
       "actions": [
         {
           "id": "pinch_clarain",
@@ -17211,11 +17211,28 @@
         }
       ]
     },
+    "rust_durumallpurpose": {
+      "name": "Rust Durumallpurpose",
+      "desc": "A dry durumallpurpose south of the clarain. Packed rust coats durumallpurpose.",
+      "brief": "Dry durumallpurpose, packed rust.",
+      "exits": { "north": { "to": "rust_clarain" } },
+      "actions": [
+        {
+          "id": "pinch_durumallpurpose",
+          "label": "pinch the durumallpurpose",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumallpurpose. They packed it on the clarain and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_greyironbark": {
       "name": "Rust Greyironbark",
       "desc": "A dry greyironbark east of the clarain. Packed rust coats greyironbark.",
       "brief": "Dry greyironbark, packed rust.",
-      "exits": { "west": { "to": "rust_clarain" }, "east": { "to": "rust_silverleaf" } },
+      "exits": { "west": { "to": "rust_clarain" }, "east": { "to": "rust_silverleaf" }, "south": { "to": "rust_fonioallpurpose" } },
       "actions": [
         {
           "id": "pinch_greyironbark",
@@ -17228,11 +17245,28 @@
         }
       ]
     },
+    "rust_fonioallpurpose": {
+      "name": "Rust Fonioallpurpose",
+      "desc": "A dry fonioallpurpose south of the greyironbark. Packed rust coats fonioallpurpose.",
+      "brief": "Dry fonioallpurpose, packed rust.",
+      "exits": { "north": { "to": "rust_greyironbark" } },
+      "actions": [
+        {
+          "id": "pinch_fonioallpurpose",
+          "label": "pinch the fonioallpurpose",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioallpurpose. They packed it on the greyironbark and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_silverleaf": {
       "name": "Rust Silverleaf",
       "desc": "A dry silverleaf east of the greyironbark. Packed rust coats silverleaf.",
       "brief": "Dry silverleaf, packed rust.",
-      "exits": { "west": { "to": "rust_greyironbark" }, "east": { "to": "rust_redpine" } },
+      "exits": { "west": { "to": "rust_greyironbark" }, "east": { "to": "rust_redpine" }, "south": { "to": "rust_teffallpurpose" } },
       "actions": [
         {
           "id": "pinch_silverleaf",
@@ -17241,6 +17275,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard silverleaf. They packed it on the greyironbark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffallpurpose": {
+      "name": "Rust Teffallpurpose",
+      "desc": "A dry teffallpurpose south of the silverleaf. Packed rust coats teffallpurpose.",
+      "brief": "Dry teffallpurpose, packed rust.",
+      "exits": { "north": { "to": "rust_silverleaf" } },
+      "actions": [
+        {
+          "id": "pinch_teffallpurpose",
+          "label": "pinch the teffallpurpose",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffallpurpose. They packed it on the silverleaf and packed rust around it."]
           ]
         }
       ]
@@ -17351,7 +17402,7 @@
       "name": "Rust Tomfool",
       "desc": "A dry tomfool east of the ceiling. Packed rust coats a tomfool.",
       "brief": "Dry tomfool, packed rust.",
-      "exits": { "west": { "to": "rust_ceiling" }, "east": { "to": "rust_collodion" } },
+      "exits": { "west": { "to": "rust_ceiling" }, "east": { "to": "rust_collodion" }, "south": { "to": "rust_barleyallpurpose" } },
       "actions": [
         {
           "id": "pinch_tomfool",
@@ -17364,11 +17415,28 @@
         }
       ]
     },
+    "rust_barleyallpurpose": {
+      "name": "Rust Barleyallpurpose",
+      "desc": "A dry barleyallpurpose south of the tomfool. Packed rust coats barleyallpurpose.",
+      "brief": "Dry barleyallpurpose, packed rust.",
+      "exits": { "north": { "to": "rust_tomfool" } },
+      "actions": [
+        {
+          "id": "pinch_barleyallpurpose",
+          "label": "pinch the barleyallpurpose",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyallpurpose. They packed it on the tomfool and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_collodion": {
       "name": "Rust Collodion",
       "desc": "A dry collodion east of the tomfool. Packed rust coats collodion.",
       "brief": "Dry collodion, packed rust.",
-      "exits": { "west": { "to": "rust_tomfool" }, "east": { "to": "rust_mangrove" } },
+      "exits": { "west": { "to": "rust_tomfool" }, "east": { "to": "rust_mangrove" }, "south": { "to": "rust_sorghumallpurpose" } },
       "actions": [
         {
           "id": "pinch_collodion",
@@ -17381,11 +17449,28 @@
         }
       ]
     },
+    "rust_sorghumallpurpose": {
+      "name": "Rust Sorghumallpurpose",
+      "desc": "A dry sorghumallpurpose south of the collodion. Packed rust coats sorghumallpurpose.",
+      "brief": "Dry sorghumallpurpose, packed rust.",
+      "exits": { "north": { "to": "rust_collodion" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumallpurpose",
+          "label": "pinch the sorghumallpurpose",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumallpurpose. They packed it on the collodion and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_mangrove": {
       "name": "Rust Mangrove",
       "desc": "A dry mangrove east of the collodion. Packed rust coats mangrove.",
       "brief": "Dry mangrove, packed rust.",
-      "exits": { "west": { "to": "rust_collodion" }, "east": { "to": "rust_durain" } },
+      "exits": { "west": { "to": "rust_collodion" }, "east": { "to": "rust_durain" }, "south": { "to": "rust_milletallpurpose" } },
       "actions": [
         {
           "id": "pinch_mangrove",
@@ -17398,11 +17483,28 @@
         }
       ]
     },
+    "rust_milletallpurpose": {
+      "name": "Rust Milletallpurpose",
+      "desc": "A dry milletallpurpose south of the mangrove. Packed rust coats milletallpurpose.",
+      "brief": "Dry milletallpurpose, packed rust.",
+      "exits": { "north": { "to": "rust_mangrove" } },
+      "actions": [
+        {
+          "id": "pinch_milletallpurpose",
+          "label": "pinch the milletallpurpose",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletallpurpose. They packed it on the mangrove and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_durain": {
       "name": "Rust Durain",
       "desc": "A dry durain east of the mangrove. Packed rust coats durain.",
       "brief": "Dry durain, packed rust.",
-      "exits": { "west": { "to": "rust_mangrove" }, "east": { "to": "rust_swampmahogany" } },
+      "exits": { "west": { "to": "rust_mangrove" }, "east": { "to": "rust_swampmahogany" }, "south": { "to": "rust_cornallpurpose" } },
       "actions": [
         {
           "id": "pinch_durain",
@@ -17415,11 +17517,28 @@
         }
       ]
     },
+    "rust_cornallpurpose": {
+      "name": "Rust Cornallpurpose",
+      "desc": "A dry cornallpurpose south of the durain. Packed rust coats cornallpurpose.",
+      "brief": "Dry cornallpurpose, packed rust.",
+      "exits": { "north": { "to": "rust_durain" } },
+      "actions": [
+        {
+          "id": "pinch_cornallpurpose",
+          "label": "pinch the cornallpurpose",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornallpurpose. They packed it on the durain and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_swampmahogany": {
       "name": "Rust Swampmahogany",
       "desc": "A dry swampmahogany east of the durain. Packed rust coats swampmahogany.",
       "brief": "Dry swampmahogany, packed rust.",
-      "exits": { "west": { "to": "rust_durain" }, "east": { "to": "rust_angophora" } },
+      "exits": { "west": { "to": "rust_durain" }, "east": { "to": "rust_angophora" }, "south": { "to": "rust_oatallpurpose" } },
       "actions": [
         {
           "id": "pinch_swampmahogany",
@@ -17428,6 +17547,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard swampmahogany. They packed it on the durain and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatallpurpose": {
+      "name": "Rust Oatallpurpose",
+      "desc": "A dry oatallpurpose south of the swampmahogany. Packed rust coats oatallpurpose.",
+      "brief": "Dry oatallpurpose, packed rust.",
+      "exits": { "north": { "to": "rust_swampmahogany" } },
+      "actions": [
+        {
+          "id": "pinch_oatallpurpose",
+          "label": "pinch the oatallpurpose",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatallpurpose. They packed it on the swampmahogany and packed rust around it."]
           ]
         }
       ]
@@ -43355,10 +43491,19 @@
     "pinch the wattle",
     "go east",
     "pinch the clarain",
+    "go south",
+    "pinch the durumallpurpose",
+    "go north",
     "go east",
     "pinch the greyironbark",
+    "go south",
+    "pinch the fonioallpurpose",
+    "go north",
     "go east",
     "pinch the silverleaf",
+    "go south",
+    "pinch the teffallpurpose",
+    "go north",
     "go east",
     "pinch the redpine",
     "go south",
@@ -43385,14 +43530,29 @@
     "pinch the ceiling",
     "go east",
     "pinch the tomfool",
+    "go south",
+    "pinch the barleyallpurpose",
+    "go north",
     "go east",
     "pinch the collodion",
+    "go south",
+    "pinch the sorghumallpurpose",
+    "go north",
     "go east",
     "pinch the mangrove",
+    "go south",
+    "pinch the milletallpurpose",
+    "go north",
     "go east",
     "pinch the durain",
+    "go south",
+    "pinch the cornallpurpose",
+    "go north",
     "go east",
     "pinch the swampmahogany",
+    "go south",
+    "pinch the oatallpurpose",
+    "go north",
     "go east",
     "pinch the angophora",
     "go south",
