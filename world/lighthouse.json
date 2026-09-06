@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9650,
+  "maxScore": 9690,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -27670,7 +27670,7 @@
       "name": "Rust Emery",
       "desc": "A dry emery east of the cottonwood. Packed rust coats emery.",
       "brief": "Dry emery, packed rust.",
-      "exits": { "west": { "to": "rust_cottonwood" }, "east": { "to": "rust_enargite" } },
+      "exits": { "west": { "to": "rust_cottonwood" }, "east": { "to": "rust_enargite" }, "south": { "to": "rust_tatsoi" } },
       "actions": [
         {
           "id": "pinch_emery",
@@ -27683,11 +27683,28 @@
         }
       ]
     },
+    "rust_tatsoi": {
+      "name": "Rust Tatsoi",
+      "desc": "A dry tatsoi south of the emery. Packed rust coats tatsoi.",
+      "brief": "Dry tatsoi, packed rust.",
+      "exits": { "north": { "to": "rust_emery" } },
+      "actions": [
+        {
+          "id": "pinch_tatsoi",
+          "label": "pinch the tatsoi",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tatsoi. They packed it on the emery and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_enargite": {
       "name": "Rust Enargite",
       "desc": "A dry enargite east of the emery. Packed rust coats enargite.",
       "brief": "Dry enargite, packed rust.",
-      "exits": { "west": { "to": "rust_emery" }, "east": { "to": "rust_wurtzite" } },
+      "exits": { "west": { "to": "rust_emery" }, "east": { "to": "rust_wurtzite" }, "south": { "to": "rust_mizuna" } },
       "actions": [
         {
           "id": "pinch_enargite",
@@ -27696,6 +27713,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard enargite. They packed it on the emery and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_mizuna": {
+      "name": "Rust Mizuna",
+      "desc": "A dry mizuna south of the enargite. Packed rust coats mizuna.",
+      "brief": "Dry mizuna, packed rust.",
+      "exits": { "north": { "to": "rust_enargite" } },
+      "actions": [
+        {
+          "id": "pinch_mizuna",
+          "label": "pinch the mizuna",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mizuna. They packed it on the enargite and packed rust around it."]
           ]
         }
       ]
@@ -27738,7 +27772,7 @@
       "name": "Rust Foxes",
       "desc": "A dry foxes east of the zinc. Packed rust coats foxes.",
       "brief": "Dry foxes, packed rust.",
-      "exits": { "west": { "to": "rust_zinc" }, "east": { "to": "rust_tackline" } },
+      "exits": { "west": { "to": "rust_zinc" }, "east": { "to": "rust_tackline" }, "south": { "to": "rust_chicory" } },
       "actions": [
         {
           "id": "pinch_foxes",
@@ -27751,11 +27785,28 @@
         }
       ]
     },
+    "rust_chicory": {
+      "name": "Rust Chicory",
+      "desc": "A dry chicory south of the foxes. Packed rust coats chicory.",
+      "brief": "Dry chicory, packed rust.",
+      "exits": { "north": { "to": "rust_foxes" } },
+      "actions": [
+        {
+          "id": "pinch_chicory",
+          "label": "pinch the chicory",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard chicory. They packed it on the foxes and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tackline": {
       "name": "Rust Tackline",
       "desc": "A dry tackline east of the foxes. Packed rust coats a tackline.",
       "brief": "Dry tackline, packed rust.",
-      "exits": { "west": { "to": "rust_foxes" }, "east": { "to": "rust_duck" } },
+      "exits": { "west": { "to": "rust_foxes" }, "east": { "to": "rust_duck" }, "south": { "to": "rust_romaine" } },
       "actions": [
         {
           "id": "pinch_tackline",
@@ -27768,11 +27819,28 @@
         }
       ]
     },
+    "rust_romaine": {
+      "name": "Rust Romaine",
+      "desc": "A dry romaine south of the tackline. Packed rust coats romaine.",
+      "brief": "Dry romaine, packed rust.",
+      "exits": { "north": { "to": "rust_tackline" } },
+      "actions": [
+        {
+          "id": "pinch_romaine",
+          "label": "pinch the romaine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard romaine. They packed it on the tackline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_duck": {
       "name": "Rust Duck",
       "desc": "A dry duck east of the tackline. Packed rust coats a duck.",
       "brief": "Dry duck, packed rust.",
-      "exits": { "west": { "to": "rust_tackline" }, "east": { "to": "rust_putty" } },
+      "exits": { "west": { "to": "rust_tackline" }, "east": { "to": "rust_putty" }, "south": { "to": "rust_radicchio" } },
       "actions": [
         {
           "id": "pinch_duck",
@@ -27785,11 +27853,28 @@
         }
       ]
     },
+    "rust_radicchio": {
+      "name": "Rust Radicchio",
+      "desc": "A dry radicchio south of the duck. Packed rust coats radicchio.",
+      "brief": "Dry radicchio, packed rust.",
+      "exits": { "north": { "to": "rust_duck" } },
+      "actions": [
+        {
+          "id": "pinch_radicchio",
+          "label": "pinch the radicchio",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard radicchio. They packed it on the duck and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_putty": {
       "name": "Rust Putty",
       "desc": "A dry putty east of the duck. Packed rust coats putty.",
       "brief": "Dry putty, packed rust.",
-      "exits": { "west": { "to": "rust_duck" }, "east": { "to": "rust_gypsum" } },
+      "exits": { "west": { "to": "rust_duck" }, "east": { "to": "rust_gypsum" }, "south": { "to": "rust_arugula" } },
       "actions": [
         {
           "id": "pinch_putty",
@@ -27802,11 +27887,28 @@
         }
       ]
     },
+    "rust_arugula": {
+      "name": "Rust Arugula",
+      "desc": "A dry arugula south of the putty. Packed rust coats arugula.",
+      "brief": "Dry arugula, packed rust.",
+      "exits": { "north": { "to": "rust_putty" } },
+      "actions": [
+        {
+          "id": "pinch_arugula",
+          "label": "pinch the arugula",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard arugula. They packed it on the putty and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_gypsum": {
       "name": "Rust Gypsum",
       "desc": "A dry gypsum east of the putty. Packed rust coats gypsum.",
       "brief": "Dry gypsum, packed rust.",
-      "exits": { "west": { "to": "rust_putty" }, "east": { "to": "rust_fir" } },
+      "exits": { "west": { "to": "rust_putty" }, "east": { "to": "rust_fir" }, "south": { "to": "rust_escarole" } },
       "actions": [
         {
           "id": "pinch_gypsum",
@@ -27819,11 +27921,28 @@
         }
       ]
     },
+    "rust_escarole": {
+      "name": "Rust Escarole",
+      "desc": "A dry escarole south of the gypsum. Packed rust coats escarole.",
+      "brief": "Dry escarole, packed rust.",
+      "exits": { "north": { "to": "rust_gypsum" } },
+      "actions": [
+        {
+          "id": "pinch_escarole",
+          "label": "pinch the escarole",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard escarole. They packed it on the gypsum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_fir": {
       "name": "Rust Fir",
       "desc": "A dry fir east of the gypsum. Packed rust coats fir.",
       "brief": "Dry fir, packed rust.",
-      "exits": { "west": { "to": "rust_gypsum" }, "east": { "to": "rust_butternut" } },
+      "exits": { "west": { "to": "rust_gypsum" }, "east": { "to": "rust_butternut" }, "south": { "to": "rust_endive" } },
       "actions": [
         {
           "id": "pinch_fir",
@@ -27832,6 +27951,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fir. They stacked it on the gypsum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_endive": {
+      "name": "Rust Endive",
+      "desc": "A dry endive south of the fir. Packed rust coats endive.",
+      "brief": "Dry endive, packed rust.",
+      "exits": { "north": { "to": "rust_fir" } },
+      "actions": [
+        {
+          "id": "pinch_endive",
+          "label": "pinch the endive",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard endive. They packed it on the fir and packed rust around it."]
           ]
         }
       ]
@@ -37584,8 +37720,14 @@
     "pinch the cottonwood",
     "go east",
     "pinch the emery",
+    "go south",
+    "pinch the tatsoi",
+    "go north",
     "go east",
     "pinch the enargite",
+    "go south",
+    "pinch the mizuna",
+    "go north",
     "go east",
     "pinch the wurtzite",
     "go west",
@@ -37603,16 +37745,34 @@
     "pinch the zinc",
     "go east",
     "pinch the foxes",
+    "go south",
+    "pinch the chicory",
+    "go north",
     "go east",
     "pinch the tackline",
+    "go south",
+    "pinch the romaine",
+    "go north",
     "go east",
     "pinch the duck",
+    "go south",
+    "pinch the radicchio",
+    "go north",
     "go east",
     "pinch the putty",
+    "go south",
+    "pinch the arugula",
+    "go north",
     "go east",
     "pinch the gypsum",
+    "go south",
+    "pinch the escarole",
+    "go north",
     "go east",
     "pinch the fir",
+    "go south",
+    "pinch the endive",
+    "go north",
     "go east",
     "pinch the butternut",
     "go south",
