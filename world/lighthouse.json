@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14250,
+  "maxScore": 14290,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -27568,7 +27568,7 @@
       "name": "Rust Obeche",
       "desc": "A dry obeche east of the bubinga. Packed rust coats obeche.",
       "brief": "Dry obeche, packed rust.",
-      "exits": { "west": { "to": "rust_bubinga" }, "east": { "to": "rust_gmelina" }, "south": { "to": "rust_oatflakebran" } },
+      "exits": { "west": { "to": "rust_bubinga" }, "east": { "to": "rust_gmelina" }, "south": { "to": "rust_oatflakebran" }, "north": { "to": "rust_durumflask" } },
       "actions": [
         {
           "id": "pinch_obeche",
@@ -27577,6 +27577,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard obeche. They packed it on the bubinga and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumflask": {
+      "name": "Rust Durumflask",
+      "desc": "A dry durumflask north of the obeche. Packed rust coats durumflask.",
+      "brief": "Dry durumflask, packed rust.",
+      "exits": { "south": { "to": "rust_obeche" } },
+      "actions": [
+        {
+          "id": "pinch_durumflask",
+          "label": "pinch the durumflask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumflask. They packed it on the obeche and packed rust around it."]
           ]
         }
       ]
@@ -27602,7 +27619,7 @@
       "name": "Rust Gmelina",
       "desc": "A dry gmelina east of the obeche. Packed rust coats gmelina.",
       "brief": "Dry gmelina, packed rust.",
-      "exits": { "west": { "to": "rust_obeche" }, "east": { "to": "rust_marupa" }, "south": { "to": "rust_ryeberrymeal" } },
+      "exits": { "west": { "to": "rust_obeche" }, "east": { "to": "rust_marupa" }, "south": { "to": "rust_ryeberrymeal" }, "north": { "to": "rust_fonioflask" } },
       "actions": [
         {
           "id": "pinch_gmelina",
@@ -27611,6 +27628,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gmelina. They packed it on the obeche and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioflask": {
+      "name": "Rust Fonioflask",
+      "desc": "A dry fonioflask north of the gmelina. Packed rust coats fonioflask.",
+      "brief": "Dry fonioflask, packed rust.",
+      "exits": { "south": { "to": "rust_gmelina" } },
+      "actions": [
+        {
+          "id": "pinch_fonioflask",
+          "label": "pinch the fonioflask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioflask. They packed it on the gmelina and packed rust around it."]
           ]
         }
       ]
@@ -27636,7 +27670,7 @@
       "name": "Rust Marupa",
       "desc": "A dry marupa east of the gmelina. Packed rust coats marupa.",
       "brief": "Dry marupa, packed rust.",
-      "exits": { "west": { "to": "rust_gmelina" }, "east": { "to": "rust_geronggang" }, "south": { "to": "rust_durumgrits" } },
+      "exits": { "west": { "to": "rust_gmelina" }, "east": { "to": "rust_geronggang" }, "south": { "to": "rust_durumgrits" }, "north": { "to": "rust_teffflask" } },
       "actions": [
         {
           "id": "pinch_marupa",
@@ -27645,6 +27679,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard marupa. They packed it on the gmelina and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffflask": {
+      "name": "Rust Teffflask",
+      "desc": "A dry teffflask north of the marupa. Packed rust coats teffflask.",
+      "brief": "Dry teffflask, packed rust.",
+      "exits": { "south": { "to": "rust_marupa" } },
+      "actions": [
+        {
+          "id": "pinch_teffflask",
+          "label": "pinch the teffflask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffflask. They packed it on the marupa and packed rust around it."]
           ]
         }
       ]
@@ -27670,7 +27721,7 @@
       "name": "Rust Geronggang",
       "desc": "A dry geronggang east of the marupa. Packed rust coats geronggang.",
       "brief": "Dry geronggang, packed rust.",
-      "exits": { "west": { "to": "rust_marupa" }, "east": { "to": "rust_keranji" }, "south": { "to": "rust_foniogrits" } },
+      "exits": { "west": { "to": "rust_marupa" }, "east": { "to": "rust_keranji" }, "south": { "to": "rust_foniogrits" }, "north": { "to": "rust_barleyflask" } },
       "actions": [
         {
           "id": "pinch_geronggang",
@@ -27679,6 +27730,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard geronggang. They packed it on the marupa and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyflask": {
+      "name": "Rust Barleyflask",
+      "desc": "A dry barleyflask north of the geronggang. Packed rust coats barleyflask.",
+      "brief": "Dry barleyflask, packed rust.",
+      "exits": { "south": { "to": "rust_geronggang" } },
+      "actions": [
+        {
+          "id": "pinch_barleyflask",
+          "label": "pinch the barleyflask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyflask. They packed it on the geronggang and packed rust around it."]
           ]
         }
       ]
@@ -27704,7 +27772,7 @@
       "name": "Rust Keranji",
       "desc": "A dry keranji east of the geronggang. Packed rust coats keranji.",
       "brief": "Dry keranji, packed rust.",
-      "exits": { "west": { "to": "rust_geronggang" }, "east": { "to": "rust_palmyra" }, "south": { "to": "rust_teffgrits" } },
+      "exits": { "west": { "to": "rust_geronggang" }, "east": { "to": "rust_palmyra" }, "south": { "to": "rust_teffgrits" }, "north": { "to": "rust_sorghumflask" } },
       "actions": [
         {
           "id": "pinch_keranji",
@@ -27713,6 +27781,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard keranji. They packed it on the geronggang and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumflask": {
+      "name": "Rust Sorghumflask",
+      "desc": "A dry sorghumflask north of the keranji. Packed rust coats sorghumflask.",
+      "brief": "Dry sorghumflask, packed rust.",
+      "exits": { "south": { "to": "rust_keranji" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumflask",
+          "label": "pinch the sorghumflask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumflask. They packed it on the keranji and packed rust around it."]
           ]
         }
       ]
@@ -27738,7 +27823,7 @@
       "name": "Rust Palmyra",
       "desc": "A dry palmyra east of the keranji. Packed rust coats palmyra.",
       "brief": "Dry palmyra, packed rust.",
-      "exits": { "west": { "to": "rust_keranji" }, "east": { "to": "rust_karri" }, "south": { "to": "rust_triticalegrits" } },
+      "exits": { "west": { "to": "rust_keranji" }, "east": { "to": "rust_karri" }, "south": { "to": "rust_triticalegrits" }, "north": { "to": "rust_milletflask" } },
       "actions": [
         {
           "id": "pinch_palmyra",
@@ -27747,6 +27832,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palmyra. They packed it on the keranji and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletflask": {
+      "name": "Rust Milletflask",
+      "desc": "A dry milletflask north of the palmyra. Packed rust coats milletflask.",
+      "brief": "Dry milletflask, packed rust.",
+      "exits": { "south": { "to": "rust_palmyra" } },
+      "actions": [
+        {
+          "id": "pinch_milletflask",
+          "label": "pinch the milletflask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletflask. They packed it on the palmyra and packed rust around it."]
           ]
         }
       ]
@@ -27823,7 +27925,7 @@
       "name": "Rust Wallknot",
       "desc": "A dry wallknot east of the cranse. Packed rust coats a wallknot.",
       "brief": "Dry wallknot, packed rust.",
-      "exits": { "west": { "to": "rust_cranse" }, "east": { "to": "rust_sailcloth" }, "south": { "to": "rust_einkorngrits" } },
+      "exits": { "west": { "to": "rust_cranse" }, "east": { "to": "rust_sailcloth" }, "south": { "to": "rust_einkorngrits" }, "north": { "to": "rust_cornflask" } },
       "actions": [
         {
           "id": "pinch_wallknot",
@@ -27832,6 +27934,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wallknot. They tied it on the cranse and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornflask": {
+      "name": "Rust Cornflask",
+      "desc": "A dry cornflask north of the wallknot. Packed rust coats cornflask.",
+      "brief": "Dry cornflask, packed rust.",
+      "exits": { "south": { "to": "rust_wallknot" } },
+      "actions": [
+        {
+          "id": "pinch_cornflask",
+          "label": "pinch the cornflask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornflask. They packed it on the wallknot and packed rust around it."]
           ]
         }
       ]
@@ -27857,7 +27976,7 @@
       "name": "Rust Sailcloth",
       "desc": "A dry sailcloth east of the wallknot. Packed rust coats a sailcloth.",
       "brief": "Dry sailcloth, packed rust.",
-      "exits": { "west": { "to": "rust_wallknot" }, "east": { "to": "rust_wenge" }, "south": { "to": "rust_emmergrits" } },
+      "exits": { "west": { "to": "rust_wallknot" }, "east": { "to": "rust_wenge" }, "south": { "to": "rust_emmergrits" }, "north": { "to": "rust_oatflask" } },
       "actions": [
         {
           "id": "pinch_sailcloth",
@@ -27866,6 +27985,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sailcloth. They wrapped it on the wallknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatflask": {
+      "name": "Rust Oatflask",
+      "desc": "A dry oatflask north of the sailcloth. Packed rust coats oatflask.",
+      "brief": "Dry oatflask, packed rust.",
+      "exits": { "south": { "to": "rust_sailcloth" } },
+      "actions": [
+        {
+          "id": "pinch_oatflask",
+          "label": "pinch the oatflask",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatflask. They packed it on the sailcloth and packed rust around it."]
           ]
         }
       ]
@@ -53209,31 +53345,49 @@
     "go north",
     "go east",
     "pinch the obeche",
+    "go north",
+    "pinch the durumflask",
+    "go south",
     "go south",
     "pinch the oatflakebran",
     "go north",
     "go east",
     "pinch the gmelina",
+    "go north",
+    "pinch the fonioflask",
+    "go south",
     "go south",
     "pinch the ryeberrymeal",
     "go north",
     "go east",
     "pinch the marupa",
+    "go north",
+    "pinch the teffflask",
+    "go south",
     "go south",
     "pinch the durumgrits",
     "go north",
     "go east",
     "pinch the geronggang",
+    "go north",
+    "pinch the barleyflask",
+    "go south",
     "go south",
     "pinch the foniogrits",
     "go north",
     "go east",
     "pinch the keranji",
+    "go north",
+    "pinch the sorghumflask",
+    "go south",
     "go south",
     "pinch the teffgrits",
     "go north",
     "go east",
     "pinch the palmyra",
+    "go north",
+    "pinch the milletflask",
+    "go south",
     "go south",
     "pinch the triticalegrits",
     "go north",
@@ -53255,11 +53409,17 @@
     "pinch the cranse",
     "go east",
     "pinch the wallknot",
+    "go north",
+    "pinch the cornflask",
+    "go south",
     "go south",
     "pinch the einkorngrits",
     "go north",
     "go east",
     "pinch the sailcloth",
+    "go north",
+    "pinch the oatflask",
+    "go south",
     "go south",
     "pinch the emmergrits",
     "go north",
