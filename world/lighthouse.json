@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8490,
+  "maxScore": 8530,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -6641,7 +6641,7 @@
       "name": "Rust Spanker",
       "desc": "A dry spanker east of the footrope. Packed rust coats a spanker.",
       "brief": "Dry spanker, packed rust.",
-      "exits": { "west": { "to": "rust_footrope" }, "east": { "to": "rust_rollinghitch" } },
+      "exits": { "west": { "to": "rust_footrope" }, "east": { "to": "rust_rollinghitch" }, "south": { "to": "rust_cranberry" } },
       "actions": [
         {
           "id": "pinch_spanker",
@@ -6654,11 +6654,28 @@
         }
       ]
     },
+    "rust_cranberry": {
+      "name": "Rust Cranberry",
+      "desc": "A dry cranberry south of the spanker. Packed rust coats cranberry.",
+      "brief": "Dry cranberry, packed rust.",
+      "exits": { "north": { "to": "rust_spanker" } },
+      "actions": [
+        {
+          "id": "pinch_cranberry",
+          "label": "pinch the cranberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cranberry. They packed it on the spanker and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_rollinghitch": {
       "name": "Rust Rollinghitch",
       "desc": "A dry rollinghitch east of the spanker. Packed rust coats a rollinghitch.",
       "brief": "Dry rollinghitch, packed rust.",
-      "exits": { "west": { "to": "rust_spanker" }, "east": { "to": "rust_brazilwood" } },
+      "exits": { "west": { "to": "rust_spanker" }, "east": { "to": "rust_brazilwood" }, "south": { "to": "rust_gooseberry" } },
       "actions": [
         {
           "id": "pinch_rollinghitch",
@@ -6671,11 +6688,28 @@
         }
       ]
     },
+    "rust_gooseberry": {
+      "name": "Rust Gooseberry",
+      "desc": "A dry gooseberry south of the rollinghitch. Packed rust coats gooseberry.",
+      "brief": "Dry gooseberry, packed rust.",
+      "exits": { "north": { "to": "rust_rollinghitch" } },
+      "actions": [
+        {
+          "id": "pinch_gooseberry",
+          "label": "pinch the gooseberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gooseberry. They packed it on the rollinghitch and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_brazilwood": {
       "name": "Rust Brazilwood",
       "desc": "A dry brazilwood east of the rollinghitch. Packed rust coats brazilwood.",
       "brief": "Dry brazilwood, packed rust.",
-      "exits": { "west": { "to": "rust_rollinghitch" }, "east": { "to": "rust_sepia" } },
+      "exits": { "west": { "to": "rust_rollinghitch" }, "east": { "to": "rust_sepia" }, "south": { "to": "rust_huckleberry" } },
       "actions": [
         {
           "id": "pinch_brazilwood",
@@ -6688,11 +6722,28 @@
         }
       ]
     },
+    "rust_huckleberry": {
+      "name": "Rust Huckleberry",
+      "desc": "A dry huckleberry south of the brazilwood. Packed rust coats huckleberry.",
+      "brief": "Dry huckleberry, packed rust.",
+      "exits": { "north": { "to": "rust_brazilwood" } },
+      "actions": [
+        {
+          "id": "pinch_huckleberry",
+          "label": "pinch the huckleberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard huckleberry. They packed it on the brazilwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sepia": {
       "name": "Rust Sepia",
       "desc": "A dry sepia east of the brazilwood. Packed rust coats sepia.",
       "brief": "Dry sepia, packed rust.",
-      "exits": { "west": { "to": "rust_brazilwood" }, "east": { "to": "rust_greypine" } },
+      "exits": { "west": { "to": "rust_brazilwood" }, "east": { "to": "rust_greypine" }, "south": { "to": "rust_loganberry" } },
       "actions": [
         {
           "id": "pinch_sepia",
@@ -6701,6 +6752,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sepia. They packed it on the brazilwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_loganberry": {
+      "name": "Rust Loganberry",
+      "desc": "A dry loganberry south of the sepia. Packed rust coats loganberry.",
+      "brief": "Dry loganberry, packed rust.",
+      "exits": { "north": { "to": "rust_sepia" } },
+      "actions": [
+        {
+          "id": "pinch_loganberry",
+          "label": "pinch the loganberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard loganberry. They packed it on the sepia and packed rust around it."]
           ]
         }
       ]
@@ -6743,7 +6811,7 @@
       "name": "Rust Nobelfir",
       "desc": "A dry nobelfir east of the greypine. Packed rust coats nobelfir.",
       "brief": "Dry nobelfir, packed rust.",
-      "exits": { "west": { "to": "rust_greypine" }, "east": { "to": "rust_cilician" } },
+      "exits": { "west": { "to": "rust_greypine" }, "east": { "to": "rust_cilician" }, "south": { "to": "rust_cloudberry" } },
       "actions": [
         {
           "id": "pinch_nobelfir",
@@ -6752,6 +6820,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard nobelfir. They packed it on the greypine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cloudberry": {
+      "name": "Rust Cloudberry",
+      "desc": "A dry cloudberry south of the nobelfir. Packed rust coats cloudberry.",
+      "brief": "Dry cloudberry, packed rust.",
+      "exits": { "north": { "to": "rust_nobelfir" } },
+      "actions": [
+        {
+          "id": "pinch_cloudberry",
+          "label": "pinch the cloudberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cloudberry. They packed it on the nobelfir and packed rust around it."]
           ]
         }
       ]
@@ -6794,7 +6879,7 @@
       "name": "Rust Morrison",
       "desc": "A dry morrison east of the cilician. Packed rust coats morrison.",
       "brief": "Dry morrison, packed rust.",
-      "exits": { "west": { "to": "rust_cilician" }, "east": { "to": "rust_tawa" } },
+      "exits": { "west": { "to": "rust_cilician" }, "east": { "to": "rust_tawa" }, "south": { "to": "rust_thimbleberry" } },
       "actions": [
         {
           "id": "pinch_morrison",
@@ -6803,6 +6888,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard morrison. They packed it on the cilician and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_thimbleberry": {
+      "name": "Rust Thimbleberry",
+      "desc": "A dry thimbleberry south of the morrison. Packed rust coats thimbleberry.",
+      "brief": "Dry thimbleberry, packed rust.",
+      "exits": { "north": { "to": "rust_morrison" } },
+      "actions": [
+        {
+          "id": "pinch_thimbleberry",
+          "label": "pinch the thimbleberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard thimbleberry. They packed it on the morrison and packed rust around it."]
           ]
         }
       ]
@@ -6862,7 +6964,7 @@
       "name": "Rust Timberhitch",
       "desc": "A dry timberhitch east of the bumpkin. Packed rust coats a timberhitch.",
       "brief": "Dry timberhitch, packed rust.",
-      "exits": { "west": { "to": "rust_bumpkin" }, "east": { "to": "rust_cochineal" } },
+      "exits": { "west": { "to": "rust_bumpkin" }, "east": { "to": "rust_cochineal" }, "south": { "to": "rust_salmonberry" } },
       "actions": [
         {
           "id": "pinch_timberhitch",
@@ -6871,6 +6973,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard timberhitch. They lashed it on the bumpkin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_salmonberry": {
+      "name": "Rust Salmonberry",
+      "desc": "A dry salmonberry south of the timberhitch. Packed rust coats salmonberry.",
+      "brief": "Dry salmonberry, packed rust.",
+      "exits": { "north": { "to": "rust_timberhitch" } },
+      "actions": [
+        {
+          "id": "pinch_salmonberry",
+          "label": "pinch the salmonberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard salmonberry. They packed it on the timberhitch and packed rust around it."]
           ]
         }
       ]
@@ -7049,7 +7168,7 @@
       "name": "Rust Momifir",
       "desc": "A dry momifir east of the sugi. Packed rust coats momifir.",
       "brief": "Dry momifir, packed rust.",
-      "exits": { "west": { "to": "rust_sugi" }, "east": { "to": "rust_nephrolepis" } },
+      "exits": { "west": { "to": "rust_sugi" }, "east": { "to": "rust_nephrolepis" }, "south": { "to": "rust_dewberry" } },
       "actions": [
         {
           "id": "pinch_momifir",
@@ -7058,6 +7177,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard momifir. They packed it on the sugi and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_dewberry": {
+      "name": "Rust Dewberry",
+      "desc": "A dry dewberry south of the momifir. Packed rust coats dewberry.",
+      "brief": "Dry dewberry, packed rust.",
+      "exits": { "north": { "to": "rust_momifir" } },
+      "actions": [
+        {
+          "id": "pinch_dewberry",
+          "label": "pinch the dewberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard dewberry. They packed it on the momifir and packed rust around it."]
           ]
         }
       ]
@@ -29979,12 +30115,24 @@
     "pinch the footrope",
     "go east",
     "pinch the spanker",
+    "go south",
+    "pinch the cranberry",
+    "go north",
     "go east",
     "pinch the rollinghitch",
+    "go south",
+    "pinch the gooseberry",
+    "go north",
     "go east",
     "pinch the brazilwood",
+    "go south",
+    "pinch the huckleberry",
+    "go north",
     "go east",
     "pinch the sepia",
+    "go south",
+    "pinch the loganberry",
+    "go north",
     "go east",
     "pinch the greypine",
     "go south",
@@ -29992,6 +30140,9 @@
     "go north",
     "go east",
     "pinch the nobelfir",
+    "go south",
+    "pinch the cloudberry",
+    "go north",
     "go east",
     "pinch the cilician",
     "go south",
@@ -29999,6 +30150,9 @@
     "go north",
     "go east",
     "pinch the morrison",
+    "go south",
+    "pinch the thimbleberry",
+    "go north",
     "go east",
     "pinch the tawa",
     "go west",
@@ -30017,6 +30171,9 @@
     "pinch the bumpkin",
     "go east",
     "pinch the timberhitch",
+    "go south",
+    "pinch the salmonberry",
+    "go north",
     "go east",
     "pinch the cochineal",
     "go south",
@@ -30044,6 +30201,9 @@
     "go north",
     "go east",
     "pinch the momifir",
+    "go south",
+    "pinch the dewberry",
+    "go north",
     "go east",
     "pinch the nephrolepis",
     "go south",
