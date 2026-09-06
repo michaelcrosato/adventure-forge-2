@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14530,
+  "maxScore": 14570,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -25358,7 +25358,7 @@
       "name": "Rust Futtockband",
       "desc": "A dry futtockband east of the boltrope. Packed rust coats a futtockband.",
       "brief": "Dry futtockband, packed rust.",
-      "exits": { "west": { "to": "rust_boltrope" }, "east": { "to": "rust_sandarac" }, "south": { "to": "rust_barleymiddlings" } },
+      "exits": { "west": { "to": "rust_boltrope" }, "east": { "to": "rust_sandarac" }, "south": { "to": "rust_barleymiddlings" }, "north": { "to": "rust_durumphial" } },
       "actions": [
         {
           "id": "pinch_futtockband",
@@ -25367,6 +25367,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard futtockband. They strapped it on the boltrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumphial": {
+      "name": "Rust Durumphial",
+      "desc": "A dry durumphial north of the futtockband. Packed rust coats durumphial.",
+      "brief": "Dry durumphial, packed rust.",
+      "exits": { "south": { "to": "rust_futtockband" } },
+      "actions": [
+        {
+          "id": "pinch_durumphial",
+          "label": "pinch the durumphial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumphial. They packed it on the futtockband and packed rust around it."]
           ]
         }
       ]
@@ -25392,7 +25409,7 @@
       "name": "Rust Sandarac",
       "desc": "A dry sandarac east of the futtockband. Packed rust coats sandarac.",
       "brief": "Dry sandarac, packed rust.",
-      "exits": { "west": { "to": "rust_futtockband" }, "east": { "to": "rust_afzelia" }, "south": { "to": "rust_sorghimmiddlings" } },
+      "exits": { "west": { "to": "rust_futtockband" }, "east": { "to": "rust_afzelia" }, "south": { "to": "rust_sorghimmiddlings" }, "north": { "to": "rust_foniophial" } },
       "actions": [
         {
           "id": "pinch_sandarac",
@@ -25401,6 +25418,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sandarac. They laid it on the futtockband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniophial": {
+      "name": "Rust Foniophial",
+      "desc": "A dry foniophial north of the sandarac. Packed rust coats foniophial.",
+      "brief": "Dry foniophial, packed rust.",
+      "exits": { "south": { "to": "rust_sandarac" } },
+      "actions": [
+        {
+          "id": "pinch_foniophial",
+          "label": "pinch the foniophial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniophial. They packed it on the sandarac and packed rust around it."]
           ]
         }
       ]
@@ -25426,7 +25460,7 @@
       "name": "Rust Afzelia",
       "desc": "A dry afzelia east of the sandarac. Packed rust coats afzelia.",
       "brief": "Dry afzelia, packed rust.",
-      "exits": { "west": { "to": "rust_sandarac" }, "east": { "to": "rust_massaranduba" }, "south": { "to": "rust_milletmiddlings" } },
+      "exits": { "west": { "to": "rust_sandarac" }, "east": { "to": "rust_massaranduba" }, "south": { "to": "rust_milletmiddlings" }, "north": { "to": "rust_teffphial" } },
       "actions": [
         {
           "id": "pinch_afzelia",
@@ -25435,6 +25469,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard afzelia. They packed it on the sandarac and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffphial": {
+      "name": "Rust Teffphial",
+      "desc": "A dry teffphial north of the afzelia. Packed rust coats teffphial.",
+      "brief": "Dry teffphial, packed rust.",
+      "exits": { "south": { "to": "rust_afzelia" } },
+      "actions": [
+        {
+          "id": "pinch_teffphial",
+          "label": "pinch the teffphial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffphial. They packed it on the afzelia and packed rust around it."]
           ]
         }
       ]
@@ -25460,7 +25511,7 @@
       "name": "Rust Massaranduba",
       "desc": "A dry massaranduba east of the afzelia. Packed rust coats massaranduba.",
       "brief": "Dry massaranduba, packed rust.",
-      "exits": { "west": { "to": "rust_afzelia" }, "east": { "to": "rust_virola" }, "south": { "to": "rust_cornmiddlings" } },
+      "exits": { "west": { "to": "rust_afzelia" }, "east": { "to": "rust_virola" }, "south": { "to": "rust_cornmiddlings" }, "north": { "to": "rust_barleyphial" } },
       "actions": [
         {
           "id": "pinch_massaranduba",
@@ -25469,6 +25520,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard massaranduba. They packed it on the afzelia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyphial": {
+      "name": "Rust Barleyphial",
+      "desc": "A dry barleyphial north of the massaranduba. Packed rust coats barleyphial.",
+      "brief": "Dry barleyphial, packed rust.",
+      "exits": { "south": { "to": "rust_massaranduba" } },
+      "actions": [
+        {
+          "id": "pinch_barleyphial",
+          "label": "pinch the barleyphial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyphial. They packed it on the massaranduba and packed rust around it."]
           ]
         }
       ]
@@ -25494,7 +25562,7 @@
       "name": "Rust Virola",
       "desc": "A dry virola east of the massaranduba. Packed rust coats virola.",
       "brief": "Dry virola, packed rust.",
-      "exits": { "west": { "to": "rust_massaranduba" }, "east": { "to": "rust_tanguile" }, "south": { "to": "rust_oatmiddlings" } },
+      "exits": { "west": { "to": "rust_massaranduba" }, "east": { "to": "rust_tanguile" }, "south": { "to": "rust_oatmiddlings" }, "north": { "to": "rust_sorghumphial" } },
       "actions": [
         {
           "id": "pinch_virola",
@@ -25503,6 +25571,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard virola. They packed it on the massaranduba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumphial": {
+      "name": "Rust Sorghumphial",
+      "desc": "A dry sorghumphial north of the virola. Packed rust coats sorghumphial.",
+      "brief": "Dry sorghumphial, packed rust.",
+      "exits": { "south": { "to": "rust_virola" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumphial",
+          "label": "pinch the sorghumphial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumphial. They packed it on the virola and packed rust around it."]
           ]
         }
       ]
@@ -25528,7 +25613,7 @@
       "name": "Rust Tanguile",
       "desc": "A dry tanguile east of the virola. Packed rust coats tanguile.",
       "brief": "Dry tanguile, packed rust.",
-      "exits": { "west": { "to": "rust_virola" }, "east": { "to": "rust_malugai" }, "south": { "to": "rust_ryemiddlings" } },
+      "exits": { "west": { "to": "rust_virola" }, "east": { "to": "rust_malugai" }, "south": { "to": "rust_ryemiddlings" }, "north": { "to": "rust_milletphial" } },
       "actions": [
         {
           "id": "pinch_tanguile",
@@ -25537,6 +25622,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tanguile. They packed it on the virola and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletphial": {
+      "name": "Rust Milletphial",
+      "desc": "A dry milletphial north of the tanguile. Packed rust coats milletphial.",
+      "brief": "Dry milletphial, packed rust.",
+      "exits": { "south": { "to": "rust_tanguile" } },
+      "actions": [
+        {
+          "id": "pinch_milletphial",
+          "label": "pinch the milletphial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletphial. They packed it on the tanguile and packed rust around it."]
           ]
         }
       ]
@@ -25562,7 +25664,7 @@
       "name": "Rust Malugai",
       "desc": "A dry malugai east of the tanguile. Packed rust coats malugai.",
       "brief": "Dry malugai, packed rust.",
-      "exits": { "west": { "to": "rust_tanguile" }, "east": { "to": "rust_redgum" }, "south": { "to": "rust_wheatmiddlings" } },
+      "exits": { "west": { "to": "rust_tanguile" }, "east": { "to": "rust_redgum" }, "south": { "to": "rust_wheatmiddlings" }, "north": { "to": "rust_cornphial" } },
       "actions": [
         {
           "id": "pinch_malugai",
@@ -25571,6 +25673,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard malugai. They packed it on the tanguile and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornphial": {
+      "name": "Rust Cornphial",
+      "desc": "A dry cornphial north of the malugai. Packed rust coats cornphial.",
+      "brief": "Dry cornphial, packed rust.",
+      "exits": { "south": { "to": "rust_malugai" } },
+      "actions": [
+        {
+          "id": "pinch_cornphial",
+          "label": "pinch the cornphial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornphial. They packed it on the malugai and packed rust around it."]
           ]
         }
       ]
@@ -25630,7 +25749,7 @@
       "name": "Rust Tabling",
       "desc": "A dry tabling east of the hull. Packed rust coats tabling.",
       "brief": "Dry tabling, packed rust.",
-      "exits": { "west": { "to": "rust_hull" }, "east": { "to": "rust_crowfoot" }, "south": { "to": "rust_durumbran" } },
+      "exits": { "west": { "to": "rust_hull" }, "east": { "to": "rust_crowfoot" }, "south": { "to": "rust_durumbran" }, "north": { "to": "rust_oatphial" } },
       "actions": [
         {
           "id": "pinch_tabling",
@@ -25639,6 +25758,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tabling. They hemmed it on the hull and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatphial": {
+      "name": "Rust Oatphial",
+      "desc": "A dry oatphial north of the tabling. Packed rust coats oatphial.",
+      "brief": "Dry oatphial, packed rust.",
+      "exits": { "south": { "to": "rust_tabling" } },
+      "actions": [
+        {
+          "id": "pinch_oatphial",
+          "label": "pinch the oatphial",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatphial. They packed it on the tabling and packed rust around it."]
           ]
         }
       ]
@@ -53774,36 +53910,57 @@
     "go north",
     "go east",
     "pinch the futtockband",
+    "go north",
+    "pinch the durumphial",
+    "go south",
     "go south",
     "pinch the barleymiddlings",
     "go north",
     "go east",
     "pinch the sandarac",
+    "go north",
+    "pinch the foniophial",
+    "go south",
     "go south",
     "pinch the sorghimmiddlings",
     "go north",
     "go east",
     "pinch the afzelia",
+    "go north",
+    "pinch the teffphial",
+    "go south",
     "go south",
     "pinch the milletmiddlings",
     "go north",
     "go east",
     "pinch the massaranduba",
+    "go north",
+    "pinch the barleyphial",
+    "go south",
     "go south",
     "pinch the cornmiddlings",
     "go north",
     "go east",
     "pinch the virola",
+    "go north",
+    "pinch the sorghumphial",
+    "go south",
     "go south",
     "pinch the oatmiddlings",
     "go north",
     "go east",
     "pinch the tanguile",
+    "go north",
+    "pinch the milletphial",
+    "go south",
     "go south",
     "pinch the ryemiddlings",
     "go north",
     "go east",
     "pinch the malugai",
+    "go north",
+    "pinch the cornphial",
+    "go south",
     "go south",
     "pinch the wheatmiddlings",
     "go north",
@@ -53823,6 +53980,9 @@
     "pinch the hull",
     "go east",
     "pinch the tabling",
+    "go north",
+    "pinch the oatphial",
+    "go south",
     "go south",
     "pinch the durumbran",
     "go north",
