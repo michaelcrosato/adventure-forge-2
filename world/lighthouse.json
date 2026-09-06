@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9970,
+  "maxScore": 10010,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -25868,7 +25868,7 @@
       "name": "Rust Siccative",
       "desc": "A dry siccative east of the creosote. Packed rust coats siccative.",
       "brief": "Dry siccative, packed rust.",
-      "exits": { "west": { "to": "rust_creosote" }, "east": { "to": "rust_puttypowder" } },
+      "exits": { "west": { "to": "rust_creosote" }, "east": { "to": "rust_puttypowder" }, "south": { "to": "rust_groat" } },
       "actions": [
         {
           "id": "pinch_siccative",
@@ -25881,11 +25881,28 @@
         }
       ]
     },
+    "rust_groat": {
+      "name": "Rust Groat",
+      "desc": "A dry groat south of the siccative. Packed rust coats groat.",
+      "brief": "Dry groat, packed rust.",
+      "exits": { "north": { "to": "rust_siccative" } },
+      "actions": [
+        {
+          "id": "pinch_groat",
+          "label": "pinch the groat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard groat. They packed it on the siccative and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_puttypowder": {
       "name": "Rust Puttypowder",
       "desc": "A dry puttypowder east of the siccative. Packed rust coats puttypowder.",
       "brief": "Dry puttypowder, packed rust.",
-      "exits": { "west": { "to": "rust_siccative" }, "east": { "to": "rust_grindstone" } },
+      "exits": { "west": { "to": "rust_siccative" }, "east": { "to": "rust_grindstone" }, "south": { "to": "rust_fonio" } },
       "actions": [
         {
           "id": "pinch_puttypowder",
@@ -25898,11 +25915,28 @@
         }
       ]
     },
+    "rust_fonio": {
+      "name": "Rust Fonio",
+      "desc": "A dry fonio south of the puttypowder. Packed rust coats fonio.",
+      "brief": "Dry fonio, packed rust.",
+      "exits": { "north": { "to": "rust_puttypowder" } },
+      "actions": [
+        {
+          "id": "pinch_fonio",
+          "label": "pinch the fonio",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonio. They packed it on the puttypowder and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_grindstone": {
       "name": "Rust Grindstone",
       "desc": "A dry grindstone east of the puttypowder. Packed rust coats grindstone.",
       "brief": "Dry grindstone, packed rust.",
-      "exits": { "west": { "to": "rust_puttypowder" }, "east": { "to": "rust_stibnite" } },
+      "exits": { "west": { "to": "rust_puttypowder" }, "east": { "to": "rust_stibnite" }, "south": { "to": "rust_teff" } },
       "actions": [
         {
           "id": "pinch_grindstone",
@@ -25915,11 +25949,28 @@
         }
       ]
     },
+    "rust_teff": {
+      "name": "Rust Teff",
+      "desc": "A dry teff south of the grindstone. Packed rust coats teff.",
+      "brief": "Dry teff, packed rust.",
+      "exits": { "north": { "to": "rust_grindstone" } },
+      "actions": [
+        {
+          "id": "pinch_teff",
+          "label": "pinch the teff",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teff. They packed it on the grindstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_stibnite": {
       "name": "Rust Stibnite",
       "desc": "A dry stibnite east of the grindstone. Packed rust coats stibnite.",
       "brief": "Dry stibnite, packed rust.",
-      "exits": { "west": { "to": "rust_grindstone" }, "east": { "to": "rust_glauconite" } },
+      "exits": { "west": { "to": "rust_grindstone" }, "east": { "to": "rust_glauconite" }, "south": { "to": "rust_triticale" } },
       "actions": [
         {
           "id": "pinch_stibnite",
@@ -25932,11 +25983,28 @@
         }
       ]
     },
+    "rust_triticale": {
+      "name": "Rust Triticale",
+      "desc": "A dry triticale south of the stibnite. Packed rust coats triticale.",
+      "brief": "Dry triticale, packed rust.",
+      "exits": { "north": { "to": "rust_stibnite" } },
+      "actions": [
+        {
+          "id": "pinch_triticale",
+          "label": "pinch the triticale",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard triticale. They packed it on the stibnite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_glauconite": {
       "name": "Rust Glauconite",
       "desc": "A dry glauconite east of the stibnite. Packed rust coats glauconite.",
       "brief": "Dry glauconite, packed rust.",
-      "exits": { "west": { "to": "rust_stibnite" }, "east": { "to": "rust_diaboleite" } },
+      "exits": { "west": { "to": "rust_stibnite" }, "east": { "to": "rust_diaboleite" }, "south": { "to": "rust_einkorn" } },
       "actions": [
         {
           "id": "pinch_glauconite",
@@ -25949,11 +26017,28 @@
         }
       ]
     },
+    "rust_einkorn": {
+      "name": "Rust Einkorn",
+      "desc": "A dry einkorn south of the glauconite. Packed rust coats einkorn.",
+      "brief": "Dry einkorn, packed rust.",
+      "exits": { "north": { "to": "rust_glauconite" } },
+      "actions": [
+        {
+          "id": "pinch_einkorn",
+          "label": "pinch the einkorn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard einkorn. They packed it on the glauconite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_diaboleite": {
       "name": "Rust Diaboleite",
       "desc": "A dry diaboleite east of the glauconite. Packed rust coats diaboleite.",
       "brief": "Dry diaboleite, packed rust.",
-      "exits": { "west": { "to": "rust_glauconite" }, "east": { "to": "rust_cubanite" } },
+      "exits": { "west": { "to": "rust_glauconite" }, "east": { "to": "rust_cubanite" }, "south": { "to": "rust_emmer" } },
       "actions": [
         {
           "id": "pinch_diaboleite",
@@ -25962,6 +26047,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard diaboleite. They packed it on the glauconite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_emmer": {
+      "name": "Rust Emmer",
+      "desc": "A dry emmer south of the diaboleite. Packed rust coats emmer.",
+      "brief": "Dry emmer, packed rust.",
+      "exits": { "north": { "to": "rust_diaboleite" } },
+      "actions": [
+        {
+          "id": "pinch_emmer",
+          "label": "pinch the emmer",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard emmer. They packed it on the diaboleite and packed rust around it."]
           ]
         }
       ]
@@ -25987,7 +26089,7 @@
       "name": "Rust Chock",
       "desc": "A dry chock east of the hide. Packed rust coats a chock.",
       "brief": "Dry chock, packed rust.",
-      "exits": { "west": { "to": "rust_hide" }, "east": { "to": "rust_frapping" } },
+      "exits": { "west": { "to": "rust_hide" }, "east": { "to": "rust_frapping" }, "south": { "to": "rust_spelt" } },
       "actions": [
         {
           "id": "pinch_chock",
@@ -26000,11 +26102,28 @@
         }
       ]
     },
+    "rust_spelt": {
+      "name": "Rust Spelt",
+      "desc": "A dry spelt south of the chock. Packed rust coats spelt.",
+      "brief": "Dry spelt, packed rust.",
+      "exits": { "north": { "to": "rust_chock" } },
+      "actions": [
+        {
+          "id": "pinch_spelt",
+          "label": "pinch the spelt",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard spelt. They packed it on the chock and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_frapping": {
       "name": "Rust Frapping",
       "desc": "A dry frapping east of the chock. Packed rust coats frapping.",
       "brief": "Dry frapping, packed rust.",
-      "exits": { "west": { "to": "rust_chock" }, "east": { "to": "rust_clewcringle" } },
+      "exits": { "west": { "to": "rust_chock" }, "east": { "to": "rust_clewcringle" }, "south": { "to": "rust_farro" } },
       "actions": [
         {
           "id": "pinch_frapping",
@@ -26013,6 +26132,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard frapping. They bound it on the chock and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_farro": {
+      "name": "Rust Farro",
+      "desc": "A dry farro south of the frapping. Packed rust coats farro.",
+      "brief": "Dry farro, packed rust.",
+      "exits": { "north": { "to": "rust_frapping" } },
+      "actions": [
+        {
+          "id": "pinch_farro",
+          "label": "pinch the farro",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard farro. They packed it on the frapping and packed rust around it."]
           ]
         }
       ]
@@ -38426,16 +38562,34 @@
     "pinch the creosote",
     "go east",
     "pinch the siccative",
+    "go south",
+    "pinch the groat",
+    "go north",
     "go east",
     "pinch the puttypowder",
+    "go south",
+    "pinch the fonio",
+    "go north",
     "go east",
     "pinch the grindstone",
+    "go south",
+    "pinch the teff",
+    "go north",
     "go east",
     "pinch the stibnite",
+    "go south",
+    "pinch the triticale",
+    "go north",
     "go east",
     "pinch the glauconite",
+    "go south",
+    "pinch the einkorn",
+    "go north",
     "go east",
     "pinch the diaboleite",
+    "go south",
+    "pinch the emmer",
+    "go north",
     "go east",
     "pinch the cubanite",
     "go west",
@@ -38451,8 +38605,14 @@
     "go north",
     "go east",
     "pinch the chock",
+    "go south",
+    "pinch the spelt",
+    "go north",
     "go east",
     "pinch the frapping",
+    "go south",
+    "pinch the farro",
+    "go north",
     "go east",
     "pinch the clewcringle",
     "go south",
