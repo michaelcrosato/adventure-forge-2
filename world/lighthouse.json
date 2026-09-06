@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14730,
+  "maxScore": 14770,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -23403,7 +23403,7 @@
       "name": "Rust Merawan",
       "desc": "A dry merawan east of the nargusta. Packed rust coats merawan.",
       "brief": "Dry merawan, packed rust.",
-      "exits": { "west": { "to": "rust_nargusta" }, "east": { "to": "rust_terap" }, "south": { "to": "rust_durumscreenings" } },
+      "exits": { "west": { "to": "rust_nargusta" }, "east": { "to": "rust_terap" }, "south": { "to": "rust_durumscreenings" }, "north": { "to": "rust_durumtun" } },
       "actions": [
         {
           "id": "pinch_merawan",
@@ -23412,6 +23412,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard merawan. They packed it on the nargusta and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumtun": {
+      "name": "Rust Durumtun",
+      "desc": "A dry durumtun north of the merawan. Packed rust coats durumtun.",
+      "brief": "Dry durumtun, packed rust.",
+      "exits": { "south": { "to": "rust_merawan" } },
+      "actions": [
+        {
+          "id": "pinch_durumtun",
+          "label": "pinch the durumtun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumtun. They packed it on the merawan and packed rust around it."]
           ]
         }
       ]
@@ -23437,7 +23454,7 @@
       "name": "Rust Terap",
       "desc": "A dry terap east of the merawan. Packed rust coats terap.",
       "brief": "Dry terap, packed rust.",
-      "exits": { "west": { "to": "rust_merawan" }, "east": { "to": "rust_palash" }, "south": { "to": "rust_fonioscreenings" } },
+      "exits": { "west": { "to": "rust_merawan" }, "east": { "to": "rust_palash" }, "south": { "to": "rust_fonioscreenings" }, "north": { "to": "rust_foniotun" } },
       "actions": [
         {
           "id": "pinch_terap",
@@ -23446,6 +23463,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard terap. They packed it on the merawan and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniotun": {
+      "name": "Rust Foniotun",
+      "desc": "A dry foniotun north of the terap. Packed rust coats foniotun.",
+      "brief": "Dry foniotun, packed rust.",
+      "exits": { "south": { "to": "rust_terap" } },
+      "actions": [
+        {
+          "id": "pinch_foniotun",
+          "label": "pinch the foniotun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniotun. They packed it on the terap and packed rust around it."]
           ]
         }
       ]
@@ -23471,7 +23505,7 @@
       "name": "Rust Palash",
       "desc": "A dry palash east of the terap. Packed rust coats palash.",
       "brief": "Dry palash, packed rust.",
-      "exits": { "west": { "to": "rust_terap" }, "east": { "to": "rust_blackbutt" }, "south": { "to": "rust_teffscreenings" } },
+      "exits": { "west": { "to": "rust_terap" }, "east": { "to": "rust_blackbutt" }, "south": { "to": "rust_teffscreenings" }, "north": { "to": "rust_tefftun" } },
       "actions": [
         {
           "id": "pinch_palash",
@@ -23480,6 +23514,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palash. They packed it on the terap and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefftun": {
+      "name": "Rust Tefftun",
+      "desc": "A dry tefftun north of the palash. Packed rust coats tefftun.",
+      "brief": "Dry tefftun, packed rust.",
+      "exits": { "south": { "to": "rust_palash" } },
+      "actions": [
+        {
+          "id": "pinch_tefftun",
+          "label": "pinch the tefftun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefftun. They packed it on the palash and packed rust around it."]
           ]
         }
       ]
@@ -23522,7 +23573,7 @@
       "name": "Rust Gunnel",
       "desc": "A dry gunnel east of the tooth. Packed rust coats a gunnel.",
       "brief": "Dry gunnel, packed rust.",
-      "exits": { "west": { "to": "rust_tooth" }, "east": { "to": "rust_bending" }, "south": { "to": "rust_barleyscreenings" } },
+      "exits": { "west": { "to": "rust_tooth" }, "east": { "to": "rust_bending" }, "south": { "to": "rust_barleyscreenings" }, "north": { "to": "rust_barleytun" } },
       "actions": [
         {
           "id": "pinch_gunnel",
@@ -23531,6 +23582,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gunnel. They capped the tooth and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleytun": {
+      "name": "Rust Barleytun",
+      "desc": "A dry barleytun north of the gunnel. Packed rust coats barleytun.",
+      "brief": "Dry barleytun, packed rust.",
+      "exits": { "south": { "to": "rust_gunnel" } },
+      "actions": [
+        {
+          "id": "pinch_barleytun",
+          "label": "pinch the barleytun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleytun. They packed it on the gunnel and packed rust around it."]
           ]
         }
       ]
@@ -23556,7 +23624,7 @@
       "name": "Rust Bending",
       "desc": "A dry bending east of the gunnel. Packed rust coats bending.",
       "brief": "Dry bending, packed rust.",
-      "exits": { "west": { "to": "rust_gunnel" }, "east": { "to": "rust_spermaceti" }, "south": { "to": "rust_sorghumscreenings" } },
+      "exits": { "west": { "to": "rust_gunnel" }, "east": { "to": "rust_spermaceti" }, "south": { "to": "rust_sorghumscreenings" }, "north": { "to": "rust_sorghumtun" } },
       "actions": [
         {
           "id": "pinch_bending",
@@ -23565,6 +23633,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bending. They made it on the gunnel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumtun": {
+      "name": "Rust Sorghumtun",
+      "desc": "A dry sorghumtun north of the bending. Packed rust coats sorghumtun.",
+      "brief": "Dry sorghumtun, packed rust.",
+      "exits": { "south": { "to": "rust_bending" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumtun",
+          "label": "pinch the sorghumtun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumtun. They packed it on the bending and packed rust around it."]
           ]
         }
       ]
@@ -23590,7 +23675,7 @@
       "name": "Rust Spermaceti",
       "desc": "A dry spermaceti east of the bending. Packed rust coats spermaceti.",
       "brief": "Dry spermaceti, packed rust.",
-      "exits": { "west": { "to": "rust_bending" }, "east": { "to": "rust_anigre" }, "south": { "to": "rust_milletscreenings" } },
+      "exits": { "west": { "to": "rust_bending" }, "east": { "to": "rust_anigre" }, "south": { "to": "rust_milletscreenings" }, "north": { "to": "rust_millettun" } },
       "actions": [
         {
           "id": "pinch_spermaceti",
@@ -23599,6 +23684,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard spermaceti. They packed it on the bending and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_millettun": {
+      "name": "Rust Millettun",
+      "desc": "A dry millettun north of the spermaceti. Packed rust coats millettun.",
+      "brief": "Dry millettun, packed rust.",
+      "exits": { "south": { "to": "rust_spermaceti" } },
+      "actions": [
+        {
+          "id": "pinch_millettun",
+          "label": "pinch the millettun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard millettun. They packed it on the spermaceti and packed rust around it."]
           ]
         }
       ]
@@ -23624,7 +23726,7 @@
       "name": "Rust Anigre",
       "desc": "A dry anigre east of the spermaceti. Packed rust coats anigre.",
       "brief": "Dry anigre, packed rust.",
-      "exits": { "west": { "to": "rust_spermaceti" }, "east": { "to": "rust_guatambu" }, "south": { "to": "rust_cornscreenings" } },
+      "exits": { "west": { "to": "rust_spermaceti" }, "east": { "to": "rust_guatambu" }, "south": { "to": "rust_cornscreenings" }, "north": { "to": "rust_corntun" } },
       "actions": [
         {
           "id": "pinch_anigre",
@@ -23633,6 +23735,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard anigre. They packed it on the spermaceti and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corntun": {
+      "name": "Rust Corntun",
+      "desc": "A dry corntun north of the anigre. Packed rust coats corntun.",
+      "brief": "Dry corntun, packed rust.",
+      "exits": { "south": { "to": "rust_anigre" } },
+      "actions": [
+        {
+          "id": "pinch_corntun",
+          "label": "pinch the corntun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corntun. They packed it on the anigre and packed rust around it."]
           ]
         }
       ]
@@ -23658,7 +23777,7 @@
       "name": "Rust Guatambu",
       "desc": "A dry guatambu east of the anigre. Packed rust coats guatambu.",
       "brief": "Dry guatambu, packed rust.",
-      "exits": { "west": { "to": "rust_anigre" }, "east": { "to": "rust_missanda" }, "south": { "to": "rust_oatscreenings" } },
+      "exits": { "west": { "to": "rust_anigre" }, "east": { "to": "rust_missanda" }, "south": { "to": "rust_oatscreenings" }, "north": { "to": "rust_oattun" } },
       "actions": [
         {
           "id": "pinch_guatambu",
@@ -23667,6 +23786,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard guatambu. They packed it on the anigre and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oattun": {
+      "name": "Rust Oattun",
+      "desc": "A dry oattun north of the guatambu. Packed rust coats oattun.",
+      "brief": "Dry oattun, packed rust.",
+      "exits": { "south": { "to": "rust_guatambu" } },
+      "actions": [
+        {
+          "id": "pinch_oattun",
+          "label": "pinch the oattun",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oattun. They packed it on the guatambu and packed rust around it."]
           ]
         }
       ]
@@ -54165,16 +54301,25 @@
     "go north",
     "go east",
     "pinch the merawan",
+    "go north",
+    "pinch the durumtun",
+    "go south",
     "go south",
     "pinch the durumscreenings",
     "go north",
     "go east",
     "pinch the terap",
+    "go north",
+    "pinch the foniotun",
+    "go south",
     "go south",
     "pinch the fonioscreenings",
     "go north",
     "go east",
     "pinch the palash",
+    "go north",
+    "pinch the tefftun",
+    "go south",
     "go south",
     "pinch the teffscreenings",
     "go north",
@@ -54192,26 +54337,41 @@
     "go north",
     "go east",
     "pinch the gunnel",
+    "go north",
+    "pinch the barleytun",
+    "go south",
     "go south",
     "pinch the barleyscreenings",
     "go north",
     "go east",
     "pinch the bending",
+    "go north",
+    "pinch the sorghumtun",
+    "go south",
     "go south",
     "pinch the sorghumscreenings",
     "go north",
     "go east",
     "pinch the spermaceti",
+    "go north",
+    "pinch the millettun",
+    "go south",
     "go south",
     "pinch the milletscreenings",
     "go north",
     "go east",
     "pinch the anigre",
+    "go north",
+    "pinch the corntun",
+    "go south",
     "go south",
     "pinch the cornscreenings",
     "go north",
     "go east",
     "pinch the guatambu",
+    "go north",
+    "pinch the oattun",
+    "go south",
     "go south",
     "pinch the oatscreenings",
     "go north",
