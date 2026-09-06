@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15770,
+  "maxScore": 15810,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -15447,7 +15447,7 @@
       "name": "Rust Coke",
       "desc": "A dry coke east of the alkanet. Packed rust coats coke.",
       "brief": "Dry coke, packed rust.",
-      "exits": { "west": { "to": "rust_alkanet" }, "east": { "to": "rust_bangalay" }, "south": { "to": "rust_cornprime" } },
+      "exits": { "west": { "to": "rust_alkanet" }, "east": { "to": "rust_bangalay" }, "south": { "to": "rust_cornprime" }, "north": { "to": "rust_durumrehoboam" } },
       "actions": [
         {
           "id": "pinch_coke",
@@ -15456,6 +15456,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coke. They packed it on the alkanet and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumrehoboam": {
+      "name": "Rust Durumrehoboam",
+      "desc": "A dry durumrehoboam north of the coke. Packed rust coats durumrehoboam.",
+      "brief": "Dry durumrehoboam, packed rust.",
+      "exits": { "south": { "to": "rust_coke" } },
+      "actions": [
+        {
+          "id": "pinch_durumrehoboam",
+          "label": "pinch the durumrehoboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumrehoboam. They packed it on the coke and packed rust around it."]
           ]
         }
       ]
@@ -15481,7 +15498,7 @@
       "name": "Rust Bangalay",
       "desc": "A dry bangalay east of the coke. Packed rust coats bangalay.",
       "brief": "Dry bangalay, packed rust.",
-      "exits": { "west": { "to": "rust_coke" }, "east": { "to": "rust_hakea" }, "south": { "to": "rust_oatprime" } },
+      "exits": { "west": { "to": "rust_coke" }, "east": { "to": "rust_hakea" }, "south": { "to": "rust_oatprime" }, "north": { "to": "rust_foniorehoboam" } },
       "actions": [
         {
           "id": "pinch_bangalay",
@@ -15490,6 +15507,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bangalay. They packed it on the coke and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniorehoboam": {
+      "name": "Rust Foniorehoboam",
+      "desc": "A dry foniorehoboam north of the bangalay. Packed rust coats foniorehoboam.",
+      "brief": "Dry foniorehoboam, packed rust.",
+      "exits": { "south": { "to": "rust_bangalay" } },
+      "actions": [
+        {
+          "id": "pinch_foniorehoboam",
+          "label": "pinch the foniorehoboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniorehoboam. They packed it on the bangalay and packed rust around it."]
           ]
         }
       ]
@@ -15515,7 +15549,7 @@
       "name": "Rust Hakea",
       "desc": "A dry hakea east of the bangalay. Packed rust coats hakea.",
       "brief": "Dry hakea, packed rust.",
-      "exits": { "west": { "to": "rust_bangalay" }, "east": { "to": "rust_kingbilly" }, "south": { "to": "rust_durumselect" } },
+      "exits": { "west": { "to": "rust_bangalay" }, "east": { "to": "rust_kingbilly" }, "south": { "to": "rust_durumselect" }, "north": { "to": "rust_teffrehoboam" } },
       "actions": [
         {
           "id": "pinch_hakea",
@@ -15524,6 +15558,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hakea. They packed it on the bangalay and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffrehoboam": {
+      "name": "Rust Teffrehoboam",
+      "desc": "A dry teffrehoboam north of the hakea. Packed rust coats teffrehoboam.",
+      "brief": "Dry teffrehoboam, packed rust.",
+      "exits": { "south": { "to": "rust_hakea" } },
+      "actions": [
+        {
+          "id": "pinch_teffrehoboam",
+          "label": "pinch the teffrehoboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffrehoboam. They packed it on the hakea and packed rust around it."]
           ]
         }
       ]
@@ -15549,7 +15600,7 @@
       "name": "Rust Kingbilly",
       "desc": "A dry kingbilly east of the hakea. Packed rust coats kingbilly.",
       "brief": "Dry kingbilly, packed rust.",
-      "exits": { "west": { "to": "rust_hakea" }, "east": { "to": "rust_akeake" }, "south": { "to": "rust_lancewood" } },
+      "exits": { "west": { "to": "rust_hakea" }, "east": { "to": "rust_akeake" }, "south": { "to": "rust_lancewood" }, "north": { "to": "rust_barleyrehoboam" } },
       "actions": [
         {
           "id": "pinch_kingbilly",
@@ -15558,6 +15609,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kingbilly. They packed it on the hakea and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyrehoboam": {
+      "name": "Rust Barleyrehoboam",
+      "desc": "A dry barleyrehoboam north of the kingbilly. Packed rust coats barleyrehoboam.",
+      "brief": "Dry barleyrehoboam, packed rust.",
+      "exits": { "south": { "to": "rust_kingbilly" } },
+      "actions": [
+        {
+          "id": "pinch_barleyrehoboam",
+          "label": "pinch the barleyrehoboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyrehoboam. They packed it on the kingbilly and packed rust around it."]
           ]
         }
       ]
@@ -15600,7 +15668,7 @@
       "name": "Rust Tiller",
       "desc": "A dry tiller east of the chin. Packed rust coats a tiller.",
       "brief": "Dry tiller, packed rust.",
-      "exits": { "west": { "to": "rust_chin" }, "east": { "to": "rust_halfhitch" }, "south": { "to": "rust_fonioselect" } },
+      "exits": { "west": { "to": "rust_chin" }, "east": { "to": "rust_halfhitch" }, "south": { "to": "rust_fonioselect" }, "north": { "to": "rust_sorghumrehoboam" } },
       "actions": [
         {
           "id": "pinch_tiller",
@@ -15609,6 +15677,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tiller. They lashed it to the chin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumrehoboam": {
+      "name": "Rust Sorghumrehoboam",
+      "desc": "A dry sorghumrehoboam north of the tiller. Packed rust coats sorghumrehoboam.",
+      "brief": "Dry sorghumrehoboam, packed rust.",
+      "exits": { "south": { "to": "rust_tiller" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumrehoboam",
+          "label": "pinch the sorghumrehoboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumrehoboam. They packed it on the tiller and packed rust around it."]
           ]
         }
       ]
@@ -15634,7 +15719,7 @@
       "name": "Rust Halfhitch",
       "desc": "A dry halfhitch east of the tiller. Packed rust coats a halfhitch.",
       "brief": "Dry halfhitch, packed rust.",
-      "exits": { "west": { "to": "rust_tiller" }, "east": { "to": "rust_myrrh" }, "south": { "to": "rust_teffselect" } },
+      "exits": { "west": { "to": "rust_tiller" }, "east": { "to": "rust_myrrh" }, "south": { "to": "rust_teffselect" }, "north": { "to": "rust_milletrehoboam" } },
       "actions": [
         {
           "id": "pinch_halfhitch",
@@ -15643,6 +15728,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard halfhitch. They tied it on the tiller and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletrehoboam": {
+      "name": "Rust Milletrehoboam",
+      "desc": "A dry milletrehoboam north of the halfhitch. Packed rust coats milletrehoboam.",
+      "brief": "Dry milletrehoboam, packed rust.",
+      "exits": { "south": { "to": "rust_halfhitch" } },
+      "actions": [
+        {
+          "id": "pinch_milletrehoboam",
+          "label": "pinch the milletrehoboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletrehoboam. They packed it on the halfhitch and packed rust around it."]
           ]
         }
       ]
@@ -15668,7 +15770,7 @@
       "name": "Rust Myrrh",
       "desc": "A dry myrrh east of the halfhitch. Packed rust coats myrrh.",
       "brief": "Dry myrrh, packed rust.",
-      "exits": { "west": { "to": "rust_halfhitch" }, "east": { "to": "rust_henna" }, "south": { "to": "rust_barleyselect" } },
+      "exits": { "west": { "to": "rust_halfhitch" }, "east": { "to": "rust_henna" }, "south": { "to": "rust_barleyselect" }, "north": { "to": "rust_cornrehoboam" } },
       "actions": [
         {
           "id": "pinch_myrrh",
@@ -15677,6 +15779,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard myrrh. They packed it on the halfhitch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornrehoboam": {
+      "name": "Rust Cornrehoboam",
+      "desc": "A dry cornrehoboam north of the myrrh. Packed rust coats cornrehoboam.",
+      "brief": "Dry cornrehoboam, packed rust.",
+      "exits": { "south": { "to": "rust_myrrh" } },
+      "actions": [
+        {
+          "id": "pinch_cornrehoboam",
+          "label": "pinch the cornrehoboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornrehoboam. They packed it on the myrrh and packed rust around it."]
           ]
         }
       ]
@@ -15702,7 +15821,7 @@
       "name": "Rust Henna",
       "desc": "A dry henna east of the myrrh. Packed rust coats henna.",
       "brief": "Dry henna, packed rust.",
-      "exits": { "west": { "to": "rust_myrrh" }, "east": { "to": "rust_charcoal" }, "south": { "to": "rust_sorghumselect" } },
+      "exits": { "west": { "to": "rust_myrrh" }, "east": { "to": "rust_charcoal" }, "south": { "to": "rust_sorghumselect" }, "north": { "to": "rust_oatrehoboam" } },
       "actions": [
         {
           "id": "pinch_henna",
@@ -15711,6 +15830,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard henna. They packed it on the myrrh and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatrehoboam": {
+      "name": "Rust Oatrehoboam",
+      "desc": "A dry oatrehoboam north of the henna. Packed rust coats oatrehoboam.",
+      "brief": "Dry oatrehoboam, packed rust.",
+      "exits": { "south": { "to": "rust_henna" } },
+      "actions": [
+        {
+          "id": "pinch_oatrehoboam",
+          "label": "pinch the oatrehoboam",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatrehoboam. They packed it on the henna and packed rust around it."]
           ]
         }
       ]
@@ -56233,21 +56369,33 @@
     "go north",
     "go east",
     "pinch the coke",
+    "go north",
+    "pinch the durumrehoboam",
+    "go south",
     "go south",
     "pinch the cornprime",
     "go north",
     "go east",
     "pinch the bangalay",
+    "go north",
+    "pinch the foniorehoboam",
+    "go south",
     "go south",
     "pinch the oatprime",
     "go north",
     "go east",
     "pinch the hakea",
+    "go north",
+    "pinch the teffrehoboam",
+    "go south",
     "go south",
     "pinch the durumselect",
     "go north",
     "go east",
     "pinch the kingbilly",
+    "go north",
+    "pinch the barleyrehoboam",
+    "go south",
     "go south",
     "pinch the lancewood",
     "go north",
@@ -56265,21 +56413,33 @@
     "go north",
     "go east",
     "pinch the tiller",
+    "go north",
+    "pinch the sorghumrehoboam",
+    "go south",
     "go south",
     "pinch the fonioselect",
     "go north",
     "go east",
     "pinch the halfhitch",
+    "go north",
+    "pinch the milletrehoboam",
+    "go south",
     "go south",
     "pinch the teffselect",
     "go north",
     "go east",
     "pinch the myrrh",
+    "go north",
+    "pinch the cornrehoboam",
+    "go south",
     "go south",
     "pinch the barleyselect",
     "go north",
     "go east",
     "pinch the henna",
+    "go north",
+    "pinch the oatrehoboam",
+    "go south",
     "go south",
     "pinch the sorghumselect",
     "go north",
