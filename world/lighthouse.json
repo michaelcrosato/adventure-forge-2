@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9810,
+  "maxScore": 9850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -26531,7 +26531,7 @@
       "name": "Rust Limonite",
       "desc": "A dry limonite east of the basalt. Packed rust coats limonite.",
       "brief": "Dry limonite, packed rust.",
-      "exits": { "west": { "to": "rust_basalt" }, "east": { "to": "rust_prussian" } },
+      "exits": { "west": { "to": "rust_basalt" }, "east": { "to": "rust_prussian" }, "south": { "to": "rust_samphire" } },
       "actions": [
         {
           "id": "pinch_limonite",
@@ -26544,11 +26544,28 @@
         }
       ]
     },
+    "rust_samphire": {
+      "name": "Rust Samphire",
+      "desc": "A dry samphire south of the limonite. Packed rust coats samphire.",
+      "brief": "Dry samphire, packed rust.",
+      "exits": { "north": { "to": "rust_limonite" } },
+      "actions": [
+        {
+          "id": "pinch_samphire",
+          "label": "pinch the samphire",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard samphire. They packed it on the limonite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_prussian": {
       "name": "Rust Prussian",
       "desc": "A dry prussian east of the limonite. Packed rust coats prussian.",
       "brief": "Dry prussian, packed rust.",
-      "exits": { "west": { "to": "rust_limonite" }, "east": { "to": "rust_libethenite" } },
+      "exits": { "west": { "to": "rust_limonite" }, "east": { "to": "rust_libethenite" }, "south": { "to": "rust_gram" } },
       "actions": [
         {
           "id": "pinch_prussian",
@@ -26561,11 +26578,28 @@
         }
       ]
     },
+    "rust_gram": {
+      "name": "Rust Gram",
+      "desc": "A dry gram south of the prussian. Packed rust coats gram.",
+      "brief": "Dry gram, packed rust.",
+      "exits": { "north": { "to": "rust_prussian" } },
+      "actions": [
+        {
+          "id": "pinch_gram",
+          "label": "pinch the gram",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gram. They packed it on the prussian and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_libethenite": {
       "name": "Rust Libethenite",
       "desc": "A dry libethenite east of the prussian. Packed rust coats libethenite.",
       "brief": "Dry libethenite, packed rust.",
-      "exits": { "west": { "to": "rust_prussian" }, "east": { "to": "rust_millerite" } },
+      "exits": { "west": { "to": "rust_prussian" }, "east": { "to": "rust_millerite" }, "south": { "to": "rust_fenugreek" } },
       "actions": [
         {
           "id": "pinch_libethenite",
@@ -26574,6 +26608,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard libethenite. They packed it on the prussian and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fenugreek": {
+      "name": "Rust Fenugreek",
+      "desc": "A dry fenugreek south of the libethenite. Packed rust coats fenugreek.",
+      "brief": "Dry fenugreek, packed rust.",
+      "exits": { "north": { "to": "rust_libethenite" } },
+      "actions": [
+        {
+          "id": "pinch_fenugreek",
+          "label": "pinch the fenugreek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fenugreek. They packed it on the libethenite and packed rust around it."]
           ]
         }
       ]
@@ -26616,7 +26667,7 @@
       "name": "Rust Gaff",
       "desc": "A dry gaff east of the joist. Packed rust coats a gaff.",
       "brief": "Dry gaff, packed rust.",
-      "exits": { "west": { "to": "rust_joist" }, "east": { "to": "rust_warp" } },
+      "exits": { "west": { "to": "rust_joist" }, "east": { "to": "rust_warp" }, "south": { "to": "rust_lupin" } },
       "actions": [
         {
           "id": "pinch_gaff",
@@ -26629,11 +26680,28 @@
         }
       ]
     },
+    "rust_lupin": {
+      "name": "Rust Lupin",
+      "desc": "A dry lupin south of the gaff. Packed rust coats lupin.",
+      "brief": "Dry lupin, packed rust.",
+      "exits": { "north": { "to": "rust_gaff" } },
+      "actions": [
+        {
+          "id": "pinch_lupin",
+          "label": "pinch the lupin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lupin. They packed it on the gaff and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_warp": {
       "name": "Rust Warp",
       "desc": "A dry warp east of the gaff. Packed rust coats a warp.",
       "brief": "Dry warp, packed rust.",
-      "exits": { "west": { "to": "rust_gaff" }, "east": { "to": "rust_footline" } },
+      "exits": { "west": { "to": "rust_gaff" }, "east": { "to": "rust_footline" }, "south": { "to": "rust_pigeonpea" } },
       "actions": [
         {
           "id": "pinch_warp",
@@ -26646,11 +26714,28 @@
         }
       ]
     },
+    "rust_pigeonpea": {
+      "name": "Rust Pigeonpea",
+      "desc": "A dry pigeonpea south of the warp. Packed rust coats pigeonpea.",
+      "brief": "Dry pigeonpea, packed rust.",
+      "exits": { "north": { "to": "rust_warp" } },
+      "actions": [
+        {
+          "id": "pinch_pigeonpea",
+          "label": "pinch the pigeonpea",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pigeonpea. They packed it on the warp and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_footline": {
       "name": "Rust Footline",
       "desc": "A dry footline east of the warp. Packed rust coats a footline.",
       "brief": "Dry footline, packed rust.",
-      "exits": { "west": { "to": "rust_warp" }, "east": { "to": "rust_coir" } },
+      "exits": { "west": { "to": "rust_warp" }, "east": { "to": "rust_coir" }, "south": { "to": "rust_blackbean" } },
       "actions": [
         {
           "id": "pinch_footline",
@@ -26663,11 +26748,28 @@
         }
       ]
     },
+    "rust_blackbean": {
+      "name": "Rust Blackbean",
+      "desc": "A dry blackbean south of the footline. Packed rust coats blackbean.",
+      "brief": "Dry blackbean, packed rust.",
+      "exits": { "north": { "to": "rust_footline" } },
+      "actions": [
+        {
+          "id": "pinch_blackbean",
+          "label": "pinch the blackbean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard blackbean. They packed it on the footline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_coir": {
       "name": "Rust Coir",
       "desc": "A dry coir east of the footline. Packed rust coats coir.",
       "brief": "Dry coir, packed rust.",
-      "exits": { "west": { "to": "rust_footline" }, "east": { "to": "rust_ebony" } },
+      "exits": { "west": { "to": "rust_footline" }, "east": { "to": "rust_ebony" }, "south": { "to": "rust_kidneybean" } },
       "actions": [
         {
           "id": "pinch_coir",
@@ -26676,6 +26778,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coir. They laid it on the footline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kidneybean": {
+      "name": "Rust Kidneybean",
+      "desc": "A dry kidneybean south of the coir. Packed rust coats kidneybean.",
+      "brief": "Dry kidneybean, packed rust.",
+      "exits": { "north": { "to": "rust_coir" } },
+      "actions": [
+        {
+          "id": "pinch_kidneybean",
+          "label": "pinch the kidneybean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kidneybean. They packed it on the coir and packed rust around it."]
           ]
         }
       ]
@@ -27126,7 +27245,7 @@
       "name": "Rust Messenger",
       "desc": "A dry messenger east of the clewline. Packed rust coats a messenger.",
       "brief": "Dry messenger, packed rust.",
-      "exits": { "west": { "to": "rust_clewline" }, "east": { "to": "rust_reefgasket" } },
+      "exits": { "west": { "to": "rust_clewline" }, "east": { "to": "rust_reefgasket" }, "south": { "to": "rust_pinto" } },
       "actions": [
         {
           "id": "pinch_messenger",
@@ -27135,6 +27254,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard messenger. They rove it on the clewline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_pinto": {
+      "name": "Rust Pinto",
+      "desc": "A dry pinto south of the messenger. Packed rust coats pinto.",
+      "brief": "Dry pinto, packed rust.",
+      "exits": { "north": { "to": "rust_messenger" } },
+      "actions": [
+        {
+          "id": "pinch_pinto",
+          "label": "pinch the pinto",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pinto. They packed it on the messenger and packed rust around it."]
           ]
         }
       ]
@@ -37994,10 +38130,19 @@
     "pinch the basalt",
     "go east",
     "pinch the limonite",
+    "go south",
+    "pinch the samphire",
+    "go north",
     "go east",
     "pinch the prussian",
+    "go south",
+    "pinch the gram",
+    "go north",
     "go east",
     "pinch the libethenite",
+    "go south",
+    "pinch the fenugreek",
+    "go north",
     "go east",
     "pinch the millerite",
     "go west",
@@ -38016,12 +38161,24 @@
     "go east",
     "go east",
     "pinch the gaff",
+    "go south",
+    "pinch the lupin",
+    "go north",
     "go east",
     "pinch the warp",
+    "go south",
+    "pinch the pigeonpea",
+    "go north",
     "go east",
     "pinch the footline",
+    "go south",
+    "pinch the blackbean",
+    "go north",
     "go east",
     "pinch the coir",
+    "go south",
+    "pinch the kidneybean",
+    "go north",
     "go east",
     "pinch the ebony",
     "go west",
@@ -38041,6 +38198,9 @@
     "pinch the clewline",
     "go east",
     "pinch the messenger",
+    "go south",
+    "pinch the pinto",
+    "go north",
     "go east",
     "pinch the reefgasket",
     "go south",
