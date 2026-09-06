@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9450,
+  "maxScore": 9490,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -28571,7 +28571,7 @@
       "name": "Rust Yardgasket",
       "desc": "A dry yardgasket east of the rounding. Packed rust coats a yardgasket.",
       "brief": "Dry yardgasket, packed rust.",
-      "exits": { "west": { "to": "rust_rounding" }, "east": { "to": "rust_flax" } },
+      "exits": { "west": { "to": "rust_rounding" }, "east": { "to": "rust_flax" }, "south": { "to": "rust_rosemary" } },
       "actions": [
         {
           "id": "pinch_yardgasket",
@@ -28584,11 +28584,28 @@
         }
       ]
     },
+    "rust_rosemary": {
+      "name": "Rust Rosemary",
+      "desc": "A dry rosemary south of the yardgasket. Packed rust coats rosemary.",
+      "brief": "Dry rosemary, packed rust.",
+      "exits": { "north": { "to": "rust_yardgasket" } },
+      "actions": [
+        {
+          "id": "pinch_rosemary",
+          "label": "pinch the rosemary",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rosemary. They packed it on the yardgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_flax": {
       "name": "Rust Flax",
       "desc": "A dry flax east of the yardgasket. Packed rust coats flax.",
       "brief": "Dry flax, packed rust.",
-      "exits": { "west": { "to": "rust_yardgasket" }, "east": { "to": "rust_umber" } },
+      "exits": { "west": { "to": "rust_yardgasket" }, "east": { "to": "rust_umber" }, "south": { "to": "rust_parsley" } },
       "actions": [
         {
           "id": "pinch_flax",
@@ -28601,11 +28618,28 @@
         }
       ]
     },
+    "rust_parsley": {
+      "name": "Rust Parsley",
+      "desc": "A dry parsley south of the flax. Packed rust coats parsley.",
+      "brief": "Dry parsley, packed rust.",
+      "exits": { "north": { "to": "rust_flax" } },
+      "actions": [
+        {
+          "id": "pinch_parsley",
+          "label": "pinch the parsley",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard parsley. They packed it on the flax and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_umber": {
       "name": "Rust Umber",
       "desc": "A dry umber east of the flax. Packed rust coats umber.",
       "brief": "Dry umber, packed rust.",
-      "exits": { "west": { "to": "rust_flax" }, "east": { "to": "rust_colza" } },
+      "exits": { "west": { "to": "rust_flax" }, "east": { "to": "rust_colza" }, "south": { "to": "rust_anise" } },
       "actions": [
         {
           "id": "pinch_umber",
@@ -28618,11 +28652,28 @@
         }
       ]
     },
+    "rust_anise": {
+      "name": "Rust Anise",
+      "desc": "A dry anise south of the umber. Packed rust coats anise.",
+      "brief": "Dry anise, packed rust.",
+      "exits": { "north": { "to": "rust_umber" } },
+      "actions": [
+        {
+          "id": "pinch_anise",
+          "label": "pinch the anise",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard anise. They packed it on the umber and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_colza": {
       "name": "Rust Colza",
       "desc": "A dry colza east of the umber. Packed rust coats colza.",
       "brief": "Dry colza, packed rust.",
-      "exits": { "west": { "to": "rust_umber" }, "east": { "to": "rust_basswood" } },
+      "exits": { "west": { "to": "rust_umber" }, "east": { "to": "rust_basswood" }, "south": { "to": "rust_caraway" } },
       "actions": [
         {
           "id": "pinch_colza",
@@ -28635,11 +28686,28 @@
         }
       ]
     },
+    "rust_caraway": {
+      "name": "Rust Caraway",
+      "desc": "A dry caraway south of the colza. Packed rust coats caraway.",
+      "brief": "Dry caraway, packed rust.",
+      "exits": { "north": { "to": "rust_colza" } },
+      "actions": [
+        {
+          "id": "pinch_caraway",
+          "label": "pinch the caraway",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard caraway. They packed it on the colza and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_basswood": {
       "name": "Rust Basswood",
       "desc": "A dry basswood east of the colza. Packed rust coats basswood.",
       "brief": "Dry basswood, packed rust.",
-      "exits": { "west": { "to": "rust_colza" }, "east": { "to": "rust_grout" } },
+      "exits": { "west": { "to": "rust_colza" }, "east": { "to": "rust_grout" }, "south": { "to": "rust_coriander" } },
       "actions": [
         {
           "id": "pinch_basswood",
@@ -28652,11 +28720,28 @@
         }
       ]
     },
+    "rust_coriander": {
+      "name": "Rust Coriander",
+      "desc": "A dry coriander south of the basswood. Packed rust coats coriander.",
+      "brief": "Dry coriander, packed rust.",
+      "exits": { "north": { "to": "rust_basswood" } },
+      "actions": [
+        {
+          "id": "pinch_coriander",
+          "label": "pinch the coriander",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard coriander. They packed it on the basswood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_grout": {
       "name": "Rust Grout",
       "desc": "A dry grout east of the basswood. Packed rust coats grout.",
       "brief": "Dry grout, packed rust.",
-      "exits": { "west": { "to": "rust_basswood" }, "east": { "to": "rust_kaolin" } },
+      "exits": { "west": { "to": "rust_basswood" }, "east": { "to": "rust_kaolin" }, "south": { "to": "rust_cumin" } },
       "actions": [
         {
           "id": "pinch_grout",
@@ -28669,11 +28754,28 @@
         }
       ]
     },
+    "rust_cumin": {
+      "name": "Rust Cumin",
+      "desc": "A dry cumin south of the grout. Packed rust coats cumin.",
+      "brief": "Dry cumin, packed rust.",
+      "exits": { "north": { "to": "rust_grout" } },
+      "actions": [
+        {
+          "id": "pinch_cumin",
+          "label": "pinch the cumin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cumin. They packed it on the grout and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kaolin": {
       "name": "Rust Kaolin",
       "desc": "A dry kaolin east of the grout. Packed rust coats kaolin.",
       "brief": "Dry kaolin, packed rust.",
-      "exits": { "west": { "to": "rust_grout" }, "east": { "to": "rust_smithsonite" } },
+      "exits": { "west": { "to": "rust_grout" }, "east": { "to": "rust_smithsonite" }, "south": { "to": "rust_dill" } },
       "actions": [
         {
           "id": "pinch_kaolin",
@@ -28686,11 +28788,28 @@
         }
       ]
     },
+    "rust_dill": {
+      "name": "Rust Dill",
+      "desc": "A dry dill south of the kaolin. Packed rust coats dill.",
+      "brief": "Dry dill, packed rust.",
+      "exits": { "north": { "to": "rust_kaolin" } },
+      "actions": [
+        {
+          "id": "pinch_dill",
+          "label": "pinch the dill",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard dill. They packed it on the kaolin and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_smithsonite": {
       "name": "Rust Smithsonite",
       "desc": "A dry smithsonite east of the kaolin. Packed rust coats smithsonite.",
       "brief": "Dry smithsonite, packed rust.",
-      "exits": { "west": { "to": "rust_kaolin" }, "east": { "to": "rust_polianite" } },
+      "exits": { "west": { "to": "rust_kaolin" }, "east": { "to": "rust_polianite" }, "south": { "to": "rust_fennel" } },
       "actions": [
         {
           "id": "pinch_smithsonite",
@@ -28699,6 +28818,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard smithsonite. They packed it on the kaolin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fennel": {
+      "name": "Rust Fennel",
+      "desc": "A dry fennel south of the smithsonite. Packed rust coats fennel.",
+      "brief": "Dry fennel, packed rust.",
+      "exits": { "north": { "to": "rust_smithsonite" } },
+      "actions": [
+        {
+          "id": "pinch_fennel",
+          "label": "pinch the fennel",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fennel. They packed it on the smithsonite and packed rust around it."]
           ]
         }
       ]
@@ -37066,20 +37202,44 @@
     "pinch the rounding",
     "go east",
     "pinch the yardgasket",
+    "go south",
+    "pinch the rosemary",
+    "go north",
     "go east",
     "pinch the flax",
+    "go south",
+    "pinch the parsley",
+    "go north",
     "go east",
     "pinch the umber",
+    "go south",
+    "pinch the anise",
+    "go north",
     "go east",
     "pinch the colza",
+    "go south",
+    "pinch the caraway",
+    "go north",
     "go east",
     "pinch the basswood",
+    "go south",
+    "pinch the coriander",
+    "go north",
     "go east",
     "pinch the grout",
+    "go south",
+    "pinch the cumin",
+    "go north",
     "go east",
     "pinch the kaolin",
+    "go south",
+    "pinch the dill",
+    "go north",
     "go east",
     "pinch the smithsonite",
+    "go south",
+    "pinch the fennel",
+    "go north",
     "go east",
     "pinch the polianite",
     "go west",
