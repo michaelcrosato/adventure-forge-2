@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13810,
+  "maxScore": 13850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -31070,7 +31070,7 @@
       "name": "Rust Soapstone",
       "desc": "A dry soapstone east of the jarrah. Packed rust coats soapstone.",
       "brief": "Dry soapstone, packed rust.",
-      "exits": { "west": { "to": "rust_jarrah" }, "east": { "to": "rust_flint" }, "south": { "to": "rust_buckwheatgroat" } },
+      "exits": { "west": { "to": "rust_jarrah" }, "east": { "to": "rust_flint" }, "south": { "to": "rust_buckwheatgroat" }, "north": { "to": "rust_durumpot" } },
       "actions": [
         {
           "id": "pinch_soapstone",
@@ -31079,6 +31079,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard soapstone. They packed it on the jarrah and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumpot": {
+      "name": "Rust Durumpot",
+      "desc": "A dry durumpot north of the soapstone. Packed rust coats durumpot.",
+      "brief": "Dry durumpot, packed rust.",
+      "exits": { "south": { "to": "rust_soapstone" } },
+      "actions": [
+        {
+          "id": "pinch_durumpot",
+          "label": "pinch the durumpot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumpot. They packed it on the soapstone and packed rust around it."]
           ]
         }
       ]
@@ -31104,7 +31121,7 @@
       "name": "Rust Flint",
       "desc": "A dry flint east of the soapstone. Packed rust coats flint.",
       "brief": "Dry flint, packed rust.",
-      "exits": { "west": { "to": "rust_soapstone" }, "east": { "to": "rust_sandpaper" }, "south": { "to": "rust_quinoaflake" } },
+      "exits": { "west": { "to": "rust_soapstone" }, "east": { "to": "rust_sandpaper" }, "south": { "to": "rust_quinoaflake" }, "north": { "to": "rust_foniopot" } },
       "actions": [
         {
           "id": "pinch_flint",
@@ -31113,6 +31130,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard flint. They packed it on the soapstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniopot": {
+      "name": "Rust Foniopot",
+      "desc": "A dry foniopot north of the flint. Packed rust coats foniopot.",
+      "brief": "Dry foniopot, packed rust.",
+      "exits": { "south": { "to": "rust_flint" } },
+      "actions": [
+        {
+          "id": "pinch_foniopot",
+          "label": "pinch the foniopot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniopot. They packed it on the flint and packed rust around it."]
           ]
         }
       ]
@@ -31138,7 +31172,7 @@
       "name": "Rust Sandpaper",
       "desc": "A dry sandpaper east of the flint. Packed rust coats sandpaper.",
       "brief": "Dry sandpaper, packed rust.",
-      "exits": { "west": { "to": "rust_flint" }, "east": { "to": "rust_sapgreen" }, "south": { "to": "rust_amaranthseed" } },
+      "exits": { "west": { "to": "rust_flint" }, "east": { "to": "rust_sapgreen" }, "south": { "to": "rust_amaranthseed" }, "north": { "to": "rust_teffpot" } },
       "actions": [
         {
           "id": "pinch_sandpaper",
@@ -31147,6 +31181,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sandpaper. They packed it on the flint and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffpot": {
+      "name": "Rust Teffpot",
+      "desc": "A dry teffpot north of the sandpaper. Packed rust coats teffpot.",
+      "brief": "Dry teffpot, packed rust.",
+      "exits": { "south": { "to": "rust_sandpaper" } },
+      "actions": [
+        {
+          "id": "pinch_teffpot",
+          "label": "pinch the teffpot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffpot. They packed it on the sandpaper and packed rust around it."]
           ]
         }
       ]
@@ -31172,7 +31223,7 @@
       "name": "Rust Sapgreen",
       "desc": "A dry sapgreen east of the sandpaper. Packed rust coats sapgreen.",
       "brief": "Dry sapgreen, packed rust.",
-      "exits": { "west": { "to": "rust_sandpaper" }, "east": { "to": "rust_brochantite" }, "south": { "to": "rust_farinaflour" } },
+      "exits": { "west": { "to": "rust_sandpaper" }, "east": { "to": "rust_brochantite" }, "south": { "to": "rust_farinaflour" }, "north": { "to": "rust_barleypot" } },
       "actions": [
         {
           "id": "pinch_sapgreen",
@@ -31181,6 +31232,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sapgreen. They packed it on the sandpaper and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleypot": {
+      "name": "Rust Barleypot",
+      "desc": "A dry barleypot north of the sapgreen. Packed rust coats barleypot.",
+      "brief": "Dry barleypot, packed rust.",
+      "exits": { "south": { "to": "rust_sapgreen" } },
+      "actions": [
+        {
+          "id": "pinch_barleypot",
+          "label": "pinch the barleypot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleypot. They packed it on the sapgreen and packed rust around it."]
           ]
         }
       ]
@@ -31206,7 +31274,7 @@
       "name": "Rust Brochantite",
       "desc": "A dry brochantite east of the sapgreen. Packed rust coats brochantite.",
       "brief": "Dry brochantite, packed rust.",
-      "exits": { "west": { "to": "rust_sapgreen" }, "east": { "to": "rust_percylite" }, "south": { "to": "rust_coconutflour" } },
+      "exits": { "west": { "to": "rust_sapgreen" }, "east": { "to": "rust_percylite" }, "south": { "to": "rust_coconutflour" }, "north": { "to": "rust_sorghumpot" } },
       "actions": [
         {
           "id": "pinch_brochantite",
@@ -31215,6 +31283,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard brochantite. They packed it on the sapgreen and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumpot": {
+      "name": "Rust Sorghumpot",
+      "desc": "A dry sorghumpot north of the brochantite. Packed rust coats sorghumpot.",
+      "brief": "Dry sorghumpot, packed rust.",
+      "exits": { "south": { "to": "rust_brochantite" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumpot",
+          "label": "pinch the sorghumpot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumpot. They packed it on the brochantite and packed rust around it."]
           ]
         }
       ]
@@ -31240,7 +31325,7 @@
       "name": "Rust Percylite",
       "desc": "A dry percylite east of the brochantite. Packed rust coats percylite.",
       "brief": "Dry percylite, packed rust.",
-      "exits": { "west": { "to": "rust_brochantite" }, "east": { "to": "rust_gersdorffite" }, "south": { "to": "rust_almondflour" } },
+      "exits": { "west": { "to": "rust_brochantite" }, "east": { "to": "rust_gersdorffite" }, "south": { "to": "rust_almondflour" }, "north": { "to": "rust_milletpot" } },
       "actions": [
         {
           "id": "pinch_percylite",
@@ -31249,6 +31334,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard percylite. They packed it on the brochantite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletpot": {
+      "name": "Rust Milletpot",
+      "desc": "A dry milletpot north of the percylite. Packed rust coats milletpot.",
+      "brief": "Dry milletpot, packed rust.",
+      "exits": { "south": { "to": "rust_percylite" } },
+      "actions": [
+        {
+          "id": "pinch_milletpot",
+          "label": "pinch the milletpot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletpot. They packed it on the percylite and packed rust around it."]
           ]
         }
       ]
@@ -31308,7 +31410,7 @@
       "name": "Rust Eyelet",
       "desc": "A dry eyelet east of the beam. Packed rust coats an eyelet.",
       "brief": "Dry eyelet, packed rust.",
-      "exits": { "west": { "to": "rust_beam" }, "east": { "to": "rust_stevedore" }, "south": { "to": "rust_peanutflour" } },
+      "exits": { "west": { "to": "rust_beam" }, "east": { "to": "rust_stevedore" }, "south": { "to": "rust_peanutflour" }, "north": { "to": "rust_cornpot" } },
       "actions": [
         {
           "id": "pinch_eyelet",
@@ -31317,6 +31419,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard eyelet. They punched it in the beam and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornpot": {
+      "name": "Rust Cornpot",
+      "desc": "A dry cornpot north of the eyelet. Packed rust coats cornpot.",
+      "brief": "Dry cornpot, packed rust.",
+      "exits": { "south": { "to": "rust_eyelet" } },
+      "actions": [
+        {
+          "id": "pinch_cornpot",
+          "label": "pinch the cornpot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornpot. They packed it on the eyelet and packed rust around it."]
           ]
         }
       ]
@@ -31342,7 +31461,7 @@
       "name": "Rust Stevedore",
       "desc": "A dry stevedore east of the eyelet. Packed rust coats a stevedore.",
       "brief": "Dry stevedore, packed rust.",
-      "exits": { "west": { "to": "rust_eyelet" }, "east": { "to": "rust_sisal" }, "south": { "to": "rust_lentilflour" } },
+      "exits": { "west": { "to": "rust_eyelet" }, "east": { "to": "rust_sisal" }, "south": { "to": "rust_lentilflour" }, "north": { "to": "rust_oatpot" } },
       "actions": [
         {
           "id": "pinch_stevedore",
@@ -31351,6 +31470,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stevedore. They tied it on the eyelet and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatpot": {
+      "name": "Rust Oatpot",
+      "desc": "A dry oatpot north of the stevedore. Packed rust coats oatpot.",
+      "brief": "Dry oatpot, packed rust.",
+      "exits": { "south": { "to": "rust_stevedore" } },
+      "actions": [
+        {
+          "id": "pinch_oatpot",
+          "label": "pinch the oatpot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatpot. They packed it on the stevedore and packed rust around it."]
           ]
         }
       ]
@@ -52327,31 +52463,49 @@
     "go north",
     "go east",
     "pinch the soapstone",
+    "go north",
+    "pinch the durumpot",
+    "go south",
     "go south",
     "pinch the buckwheatgroat",
     "go north",
     "go east",
     "pinch the flint",
+    "go north",
+    "pinch the foniopot",
+    "go south",
     "go south",
     "pinch the quinoaflake",
     "go north",
     "go east",
     "pinch the sandpaper",
+    "go north",
+    "pinch the teffpot",
+    "go south",
     "go south",
     "pinch the amaranthseed",
     "go north",
     "go east",
     "pinch the sapgreen",
+    "go north",
+    "pinch the barleypot",
+    "go south",
     "go south",
     "pinch the farinaflour",
     "go north",
     "go east",
     "pinch the brochantite",
+    "go north",
+    "pinch the sorghumpot",
+    "go south",
     "go south",
     "pinch the coconutflour",
     "go north",
     "go east",
     "pinch the percylite",
+    "go north",
+    "pinch the milletpot",
+    "go south",
     "go south",
     "pinch the almondflour",
     "go north",
@@ -52373,11 +52527,17 @@
     "go east",
     "go east",
     "pinch the eyelet",
+    "go north",
+    "pinch the cornpot",
+    "go south",
     "go south",
     "pinch the peanutflour",
     "go north",
     "go east",
     "pinch the stevedore",
+    "go north",
+    "pinch the oatpot",
+    "go south",
     "go south",
     "pinch the lentilflour",
     "go north",
