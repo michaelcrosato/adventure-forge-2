@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13970,
+  "maxScore": 14010,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -29812,7 +29812,7 @@
       "name": "Rust Amendoim",
       "desc": "A dry amendoim east of the sipo. Packed rust coats amendoim.",
       "brief": "Dry amendoim, packed rust.",
-      "exits": { "west": { "to": "rust_sipo" }, "east": { "to": "rust_merbau" }, "south": { "to": "rust_freekehflake" } },
+      "exits": { "west": { "to": "rust_sipo" }, "east": { "to": "rust_merbau" }, "south": { "to": "rust_freekehflake" }, "north": { "to": "rust_durumskillet" } },
       "actions": [
         {
           "id": "pinch_amendoim",
@@ -29821,6 +29821,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard amendoim. They packed it on the sipo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumskillet": {
+      "name": "Rust Durumskillet",
+      "desc": "A dry durumskillet north of the amendoim. Packed rust coats durumskillet.",
+      "brief": "Dry durumskillet, packed rust.",
+      "exits": { "south": { "to": "rust_amendoim" } },
+      "actions": [
+        {
+          "id": "pinch_durumskillet",
+          "label": "pinch the durumskillet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumskillet. They packed it on the amendoim and packed rust around it."]
           ]
         }
       ]
@@ -29846,7 +29863,7 @@
       "name": "Rust Merbau",
       "desc": "A dry merbau east of the amendoim. Packed rust coats merbau.",
       "brief": "Dry merbau, packed rust.",
-      "exits": { "west": { "to": "rust_amendoim" }, "east": { "to": "rust_selangan" }, "south": { "to": "rust_kamutflake" } },
+      "exits": { "west": { "to": "rust_amendoim" }, "east": { "to": "rust_selangan" }, "south": { "to": "rust_kamutflake" }, "north": { "to": "rust_fonioskillet" } },
       "actions": [
         {
           "id": "pinch_merbau",
@@ -29855,6 +29872,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard merbau. They packed it on the amendoim and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioskillet": {
+      "name": "Rust Fonioskillet",
+      "desc": "A dry fonioskillet north of the merbau. Packed rust coats fonioskillet.",
+      "brief": "Dry fonioskillet, packed rust.",
+      "exits": { "south": { "to": "rust_merbau" } },
+      "actions": [
+        {
+          "id": "pinch_fonioskillet",
+          "label": "pinch the fonioskillet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioskillet. They packed it on the merbau and packed rust around it."]
           ]
         }
       ]
@@ -29880,7 +29914,7 @@
       "name": "Rust Selangan",
       "desc": "A dry selangan east of the merbau. Packed rust coats selangan.",
       "brief": "Dry selangan, packed rust.",
-      "exits": { "west": { "to": "rust_merbau" }, "east": { "to": "rust_shisham" }, "south": { "to": "rust_ryeflake" } },
+      "exits": { "west": { "to": "rust_merbau" }, "east": { "to": "rust_shisham" }, "south": { "to": "rust_ryeflake" }, "north": { "to": "rust_teffskillet" } },
       "actions": [
         {
           "id": "pinch_selangan",
@@ -29889,6 +29923,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard selangan. They packed it on the merbau and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffskillet": {
+      "name": "Rust Teffskillet",
+      "desc": "A dry teffskillet north of the selangan. Packed rust coats teffskillet.",
+      "brief": "Dry teffskillet, packed rust.",
+      "exits": { "south": { "to": "rust_selangan" } },
+      "actions": [
+        {
+          "id": "pinch_teffskillet",
+          "label": "pinch the teffskillet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffskillet. They packed it on the selangan and packed rust around it."]
           ]
         }
       ]
@@ -29965,7 +30016,7 @@
       "name": "Rust Roband",
       "desc": "A dry roband east of the frame. Packed rust coats a roband.",
       "brief": "Dry roband, packed rust.",
-      "exits": { "west": { "to": "rust_frame" }, "east": { "to": "rust_reefband" }, "south": { "to": "rust_barleyflake" } },
+      "exits": { "west": { "to": "rust_frame" }, "east": { "to": "rust_reefband" }, "south": { "to": "rust_barleyflake" }, "north": { "to": "rust_barleyskillet" } },
       "actions": [
         {
           "id": "pinch_roband",
@@ -29974,6 +30025,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard roband. They seized it on the frame and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyskillet": {
+      "name": "Rust Barleyskillet",
+      "desc": "A dry barleyskillet north of the roband. Packed rust coats barleyskillet.",
+      "brief": "Dry barleyskillet, packed rust.",
+      "exits": { "south": { "to": "rust_roband" } },
+      "actions": [
+        {
+          "id": "pinch_barleyskillet",
+          "label": "pinch the barleyskillet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyskillet. They packed it on the roband and packed rust around it."]
           ]
         }
       ]
@@ -29999,7 +30067,7 @@
       "name": "Rust Reefband",
       "desc": "A dry reefband east of the roband. Packed rust coats a reefband.",
       "brief": "Dry reefband, packed rust.",
-      "exits": { "west": { "to": "rust_roband" }, "east": { "to": "rust_iroko" }, "south": { "to": "rust_sorghumflake" } },
+      "exits": { "west": { "to": "rust_roband" }, "east": { "to": "rust_iroko" }, "south": { "to": "rust_sorghumflake" }, "north": { "to": "rust_sorghumskillet" } },
       "actions": [
         {
           "id": "pinch_reefband",
@@ -30008,6 +30076,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard reefband. They bound it on the roband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumskillet": {
+      "name": "Rust Sorghumskillet",
+      "desc": "A dry sorghumskillet north of the reefband. Packed rust coats sorghumskillet.",
+      "brief": "Dry sorghumskillet, packed rust.",
+      "exits": { "south": { "to": "rust_reefband" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumskillet",
+          "label": "pinch the sorghumskillet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumskillet. They packed it on the reefband and packed rust around it."]
           ]
         }
       ]
@@ -30033,7 +30118,7 @@
       "name": "Rust Iroko",
       "desc": "A dry iroko east of the reefband. Packed rust coats iroko.",
       "brief": "Dry iroko, packed rust.",
-      "exits": { "west": { "to": "rust_reefband" }, "east": { "to": "rust_langite" }, "south": { "to": "rust_milletflake" } },
+      "exits": { "west": { "to": "rust_reefband" }, "east": { "to": "rust_langite" }, "south": { "to": "rust_milletflake" }, "north": { "to": "rust_milletskillet" } },
       "actions": [
         {
           "id": "pinch_iroko",
@@ -30042,6 +30127,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard iroko. They set it on the reefband and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletskillet": {
+      "name": "Rust Milletskillet",
+      "desc": "A dry milletskillet north of the iroko. Packed rust coats milletskillet.",
+      "brief": "Dry milletskillet, packed rust.",
+      "exits": { "south": { "to": "rust_iroko" } },
+      "actions": [
+        {
+          "id": "pinch_milletskillet",
+          "label": "pinch the milletskillet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletskillet. They packed it on the iroko and packed rust around it."]
           ]
         }
       ]
@@ -30067,7 +30169,7 @@
       "name": "Rust Langite",
       "desc": "A dry langite east of the iroko. Packed rust coats langite.",
       "brief": "Dry langite, packed rust.",
-      "exits": { "west": { "to": "rust_iroko" }, "east": { "to": "rust_eriochalcite" }, "south": { "to": "rust_riceflake" } },
+      "exits": { "west": { "to": "rust_iroko" }, "east": { "to": "rust_eriochalcite" }, "south": { "to": "rust_riceflake" }, "north": { "to": "rust_cornskillet" } },
       "actions": [
         {
           "id": "pinch_langite",
@@ -30076,6 +30178,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard langite. They packed it on the iroko and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornskillet": {
+      "name": "Rust Cornskillet",
+      "desc": "A dry cornskillet north of the langite. Packed rust coats cornskillet.",
+      "brief": "Dry cornskillet, packed rust.",
+      "exits": { "south": { "to": "rust_langite" } },
+      "actions": [
+        {
+          "id": "pinch_cornskillet",
+          "label": "pinch the cornskillet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornskillet. They packed it on the langite and packed rust around it."]
           ]
         }
       ]
@@ -30101,7 +30220,7 @@
       "name": "Rust Eriochalcite",
       "desc": "A dry eriochalcite east of the langite. Packed rust coats eriochalcite.",
       "brief": "Dry eriochalcite, packed rust.",
-      "exits": { "west": { "to": "rust_langite" }, "east": { "to": "rust_arsenopyrite" }, "south": { "to": "rust_cornflake" } },
+      "exits": { "west": { "to": "rust_langite" }, "east": { "to": "rust_arsenopyrite" }, "south": { "to": "rust_cornflake" }, "north": { "to": "rust_oatskillet" } },
       "actions": [
         {
           "id": "pinch_eriochalcite",
@@ -30110,6 +30229,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard eriochalcite. They packed it on the langite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatskillet": {
+      "name": "Rust Oatskillet",
+      "desc": "A dry oatskillet north of the eriochalcite. Packed rust coats oatskillet.",
+      "brief": "Dry oatskillet, packed rust.",
+      "exits": { "south": { "to": "rust_eriochalcite" } },
+      "actions": [
+        {
+          "id": "pinch_oatskillet",
+          "label": "pinch the oatskillet",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatskillet. They packed it on the eriochalcite and packed rust around it."]
           ]
         }
       ]
@@ -52650,16 +52786,25 @@
     "go north",
     "go east",
     "pinch the amendoim",
+    "go north",
+    "pinch the durumskillet",
+    "go south",
     "go south",
     "pinch the freekehflake",
     "go north",
     "go east",
     "pinch the merbau",
+    "go north",
+    "pinch the fonioskillet",
+    "go south",
     "go south",
     "pinch the kamutflake",
     "go north",
     "go east",
     "pinch the selangan",
+    "go north",
+    "pinch the teffskillet",
+    "go south",
     "go south",
     "pinch the ryeflake",
     "go north",
@@ -52681,26 +52826,41 @@
     "pinch the frame",
     "go east",
     "pinch the roband",
+    "go north",
+    "pinch the barleyskillet",
+    "go south",
     "go south",
     "pinch the barleyflake",
     "go north",
     "go east",
     "pinch the reefband",
+    "go north",
+    "pinch the sorghumskillet",
+    "go south",
     "go south",
     "pinch the sorghumflake",
     "go north",
     "go east",
     "pinch the iroko",
+    "go north",
+    "pinch the milletskillet",
+    "go south",
     "go south",
     "pinch the milletflake",
     "go north",
     "go east",
     "pinch the langite",
+    "go north",
+    "pinch the cornskillet",
+    "go south",
     "go south",
     "pinch the riceflake",
     "go north",
     "go east",
     "pinch the eriochalcite",
+    "go north",
+    "pinch the oatskillet",
+    "go south",
     "go south",
     "pinch the cornflake",
     "go north",
