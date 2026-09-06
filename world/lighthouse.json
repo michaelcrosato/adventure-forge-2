@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12250,
+  "maxScore": 12290,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -15192,7 +15192,7 @@
       "name": "Rust Sassafras",
       "desc": "A dry sassafras east of the redoak. Packed rust coats sassafras.",
       "brief": "Dry sassafras, packed rust.",
-      "exits": { "west": { "to": "rust_redoak" }, "east": { "to": "rust_monterey" } },
+      "exits": { "west": { "to": "rust_redoak" }, "east": { "to": "rust_monterey" }, "south": { "to": "rust_durumstandard" } },
       "actions": [
         {
           "id": "pinch_sassafras",
@@ -15205,11 +15205,28 @@
         }
       ]
     },
+    "rust_durumstandard": {
+      "name": "Rust Durumstandard",
+      "desc": "A dry durumstandard south of the sassafras. Packed rust coats durumstandard.",
+      "brief": "Dry durumstandard, packed rust.",
+      "exits": { "north": { "to": "rust_sassafras" } },
+      "actions": [
+        {
+          "id": "pinch_durumstandard",
+          "label": "pinch the durumstandard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumstandard. They packed it on the sassafras and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_monterey": {
       "name": "Rust Monterey",
       "desc": "A dry monterey east of the sassafras. Packed rust coats monterey.",
       "brief": "Dry monterey, packed rust.",
-      "exits": { "west": { "to": "rust_sassafras" }, "east": { "to": "rust_alaskan" } },
+      "exits": { "west": { "to": "rust_sassafras" }, "east": { "to": "rust_alaskan" }, "south": { "to": "rust_foniostandard" } },
       "actions": [
         {
           "id": "pinch_monterey",
@@ -15218,6 +15235,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard monterey. They packed it on the sassafras and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniostandard": {
+      "name": "Rust Foniostandard",
+      "desc": "A dry foniostandard south of the monterey. Packed rust coats foniostandard.",
+      "brief": "Dry foniostandard, packed rust.",
+      "exits": { "north": { "to": "rust_monterey" } },
+      "actions": [
+        {
+          "id": "pinch_foniostandard",
+          "label": "pinch the foniostandard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniostandard. They packed it on the monterey and packed rust around it."]
           ]
         }
       ]
@@ -15277,7 +15311,7 @@
       "name": "Rust Checkstay",
       "desc": "A dry checkstay east of the jib. Packed rust coats a checkstay.",
       "brief": "Dry checkstay, packed rust.",
-      "exits": { "west": { "to": "rust_jib" }, "east": { "to": "rust_bachmann" } },
+      "exits": { "west": { "to": "rust_jib" }, "east": { "to": "rust_bachmann" }, "south": { "to": "rust_teffstandard" } },
       "actions": [
         {
           "id": "pinch_checkstay",
@@ -15290,11 +15324,28 @@
         }
       ]
     },
+    "rust_teffstandard": {
+      "name": "Rust Teffstandard",
+      "desc": "A dry teffstandard south of the checkstay. Packed rust coats teffstandard.",
+      "brief": "Dry teffstandard, packed rust.",
+      "exits": { "north": { "to": "rust_checkstay" } },
+      "actions": [
+        {
+          "id": "pinch_teffstandard",
+          "label": "pinch the teffstandard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffstandard. They packed it on the checkstay and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bachmann": {
       "name": "Rust Bachmann",
       "desc": "A dry bachmann east of the checkstay. Packed rust coats a bachmann.",
       "brief": "Dry bachmann, packed rust.",
-      "exits": { "west": { "to": "rust_checkstay" }, "east": { "to": "rust_colophony" } },
+      "exits": { "west": { "to": "rust_checkstay" }, "east": { "to": "rust_colophony" }, "south": { "to": "rust_barleystandard" } },
       "actions": [
         {
           "id": "pinch_bachmann",
@@ -15307,11 +15358,28 @@
         }
       ]
     },
+    "rust_barleystandard": {
+      "name": "Rust Barleystandard",
+      "desc": "A dry barleystandard south of the bachmann. Packed rust coats barleystandard.",
+      "brief": "Dry barleystandard, packed rust.",
+      "exits": { "north": { "to": "rust_bachmann" } },
+      "actions": [
+        {
+          "id": "pinch_barleystandard",
+          "label": "pinch the barleystandard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleystandard. They packed it on the bachmann and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_colophony": {
       "name": "Rust Colophony",
       "desc": "A dry colophony east of the bachmann. Packed rust coats colophony.",
       "brief": "Dry colophony, packed rust.",
-      "exits": { "west": { "to": "rust_bachmann" }, "east": { "to": "rust_turmeric" } },
+      "exits": { "west": { "to": "rust_bachmann" }, "east": { "to": "rust_turmeric" }, "south": { "to": "rust_sorghumstandard" } },
       "actions": [
         {
           "id": "pinch_colophony",
@@ -15324,11 +15392,28 @@
         }
       ]
     },
+    "rust_sorghumstandard": {
+      "name": "Rust Sorghumstandard",
+      "desc": "A dry sorghumstandard south of the colophony. Packed rust coats sorghumstandard.",
+      "brief": "Dry sorghumstandard, packed rust.",
+      "exits": { "north": { "to": "rust_colophony" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumstandard",
+          "label": "pinch the sorghumstandard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumstandard. They packed it on the colophony and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_turmeric": {
       "name": "Rust Turmeric",
       "desc": "A dry turmeric east of the colophony. Packed rust coats turmeric.",
       "brief": "Dry turmeric, packed rust.",
-      "exits": { "west": { "to": "rust_colophony" }, "east": { "to": "rust_marri" } },
+      "exits": { "west": { "to": "rust_colophony" }, "east": { "to": "rust_marri" }, "south": { "to": "rust_milletstandard" } },
       "actions": [
         {
           "id": "pinch_turmeric",
@@ -15341,11 +15426,28 @@
         }
       ]
     },
+    "rust_milletstandard": {
+      "name": "Rust Milletstandard",
+      "desc": "A dry milletstandard south of the turmeric. Packed rust coats milletstandard.",
+      "brief": "Dry milletstandard, packed rust.",
+      "exits": { "north": { "to": "rust_turmeric" } },
+      "actions": [
+        {
+          "id": "pinch_milletstandard",
+          "label": "pinch the milletstandard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletstandard. They packed it on the turmeric and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_marri": {
       "name": "Rust Marri",
       "desc": "A dry marri east of the turmeric. Packed rust coats marri.",
       "brief": "Dry marri, packed rust.",
-      "exits": { "west": { "to": "rust_turmeric" }, "east": { "to": "rust_blackoak" } },
+      "exits": { "west": { "to": "rust_turmeric" }, "east": { "to": "rust_blackoak" }, "south": { "to": "rust_cornstandard" } },
       "actions": [
         {
           "id": "pinch_marri",
@@ -15358,11 +15460,28 @@
         }
       ]
     },
+    "rust_cornstandard": {
+      "name": "Rust Cornstandard",
+      "desc": "A dry cornstandard south of the marri. Packed rust coats cornstandard.",
+      "brief": "Dry cornstandard, packed rust.",
+      "exits": { "north": { "to": "rust_marri" } },
+      "actions": [
+        {
+          "id": "pinch_cornstandard",
+          "label": "pinch the cornstandard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornstandard. They packed it on the marri and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_blackoak": {
       "name": "Rust Blackoak",
       "desc": "A dry blackoak east of the marri. Packed rust coats blackoak.",
       "brief": "Dry blackoak, packed rust.",
-      "exits": { "west": { "to": "rust_marri" }, "east": { "to": "rust_celerytop" } },
+      "exits": { "west": { "to": "rust_marri" }, "east": { "to": "rust_celerytop" }, "south": { "to": "rust_oatstandard" } },
       "actions": [
         {
           "id": "pinch_blackoak",
@@ -15371,6 +15490,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackoak. They packed it on the marri and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatstandard": {
+      "name": "Rust Oatstandard",
+      "desc": "A dry oatstandard south of the blackoak. Packed rust coats oatstandard.",
+      "brief": "Dry oatstandard, packed rust.",
+      "exits": { "north": { "to": "rust_blackoak" } },
+      "actions": [
+        {
+          "id": "pinch_oatstandard",
+          "label": "pinch the oatstandard",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatstandard. They packed it on the blackoak and packed rust around it."]
           ]
         }
       ]
@@ -44218,8 +44354,14 @@
     "pinch the redoak",
     "go east",
     "pinch the sassafras",
+    "go south",
+    "pinch the durumstandard",
+    "go north",
     "go east",
     "pinch the monterey",
+    "go south",
+    "pinch the foniostandard",
+    "go north",
     "go east",
     "pinch the alaskan",
     "go west",
@@ -44238,16 +44380,34 @@
     "pinch the jib",
     "go east",
     "pinch the checkstay",
+    "go south",
+    "pinch the teffstandard",
+    "go north",
     "go east",
     "pinch the bachmann",
+    "go south",
+    "pinch the barleystandard",
+    "go north",
     "go east",
     "pinch the colophony",
+    "go south",
+    "pinch the sorghumstandard",
+    "go north",
     "go east",
     "pinch the turmeric",
+    "go south",
+    "pinch the milletstandard",
+    "go north",
     "go east",
     "pinch the marri",
+    "go south",
+    "pinch the cornstandard",
+    "go north",
     "go east",
     "pinch the blackoak",
+    "go south",
+    "pinch the oatstandard",
+    "go north",
     "go east",
     "pinch the celerytop",
     "go south",
