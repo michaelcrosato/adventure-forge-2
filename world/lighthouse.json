@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10010,
+  "maxScore": 10050,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -25681,7 +25681,7 @@
       "name": "Rust Limestone",
       "desc": "A dry limestone east of the megilp. Packed rust coats limestone.",
       "brief": "Dry limestone, packed rust.",
-      "exits": { "west": { "to": "rust_megilp" }, "east": { "to": "rust_carborundum" } },
+      "exits": { "west": { "to": "rust_megilp" }, "east": { "to": "rust_carborundum" }, "south": { "to": "rust_teparybean" } },
       "actions": [
         {
           "id": "pinch_limestone",
@@ -25694,11 +25694,28 @@
         }
       ]
     },
+    "rust_teparybean": {
+      "name": "Rust Teparybean",
+      "desc": "A dry teparybean south of the limestone. Packed rust coats teparybean.",
+      "brief": "Dry teparybean, packed rust.",
+      "exits": { "north": { "to": "rust_limestone" } },
+      "actions": [
+        {
+          "id": "pinch_teparybean",
+          "label": "pinch the teparybean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teparybean. They packed it on the limestone and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_carborundum": {
       "name": "Rust Carborundum",
       "desc": "A dry carborundum east of the limestone. Packed rust coats carborundum.",
       "brief": "Dry carborundum, packed rust.",
-      "exits": { "west": { "to": "rust_limestone" }, "east": { "to": "rust_manganese" } },
+      "exits": { "west": { "to": "rust_limestone" }, "east": { "to": "rust_manganese" }, "south": { "to": "rust_haricotbean" } },
       "actions": [
         {
           "id": "pinch_carborundum",
@@ -25711,11 +25728,28 @@
         }
       ]
     },
+    "rust_haricotbean": {
+      "name": "Rust Haricotbean",
+      "desc": "A dry haricotbean south of the carborundum. Packed rust coats haricotbean.",
+      "brief": "Dry haricotbean, packed rust.",
+      "exits": { "north": { "to": "rust_carborundum" } },
+      "actions": [
+        {
+          "id": "pinch_haricotbean",
+          "label": "pinch the haricotbean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard haricotbean. They packed it on the carborundum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_manganese": {
       "name": "Rust Manganese",
       "desc": "A dry manganese east of the carborundum. Packed rust coats manganese.",
       "brief": "Dry manganese, packed rust.",
-      "exits": { "west": { "to": "rust_carborundum" }, "east": { "to": "rust_pyrolusite" } },
+      "exits": { "west": { "to": "rust_carborundum" }, "east": { "to": "rust_pyrolusite" }, "south": { "to": "rust_maize" } },
       "actions": [
         {
           "id": "pinch_manganese",
@@ -25728,11 +25762,28 @@
         }
       ]
     },
+    "rust_maize": {
+      "name": "Rust Maize",
+      "desc": "A dry maize south of the manganese. Packed rust coats maize.",
+      "brief": "Dry maize, packed rust.",
+      "exits": { "north": { "to": "rust_manganese" } },
+      "actions": [
+        {
+          "id": "pinch_maize",
+          "label": "pinch the maize",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard maize. They packed it on the manganese and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_pyrolusite": {
       "name": "Rust Pyrolusite",
       "desc": "A dry pyrolusite east of the manganese. Packed rust coats pyrolusite.",
       "brief": "Dry pyrolusite, packed rust.",
-      "exits": { "west": { "to": "rust_manganese" }, "east": { "to": "rust_connellite" } },
+      "exits": { "west": { "to": "rust_manganese" }, "east": { "to": "rust_connellite" }, "south": { "to": "rust_grits" } },
       "actions": [
         {
           "id": "pinch_pyrolusite",
@@ -25745,11 +25796,28 @@
         }
       ]
     },
+    "rust_grits": {
+      "name": "Rust Grits",
+      "desc": "A dry grits south of the pyrolusite. Packed rust coats grits.",
+      "brief": "Dry grits, packed rust.",
+      "exits": { "north": { "to": "rust_pyrolusite" } },
+      "actions": [
+        {
+          "id": "pinch_grits",
+          "label": "pinch the grits",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard grits. They packed it on the pyrolusite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_connellite": {
       "name": "Rust Connellite",
       "desc": "A dry connellite east of the pyrolusite. Packed rust coats connellite.",
       "brief": "Dry connellite, packed rust.",
-      "exits": { "west": { "to": "rust_pyrolusite" }, "east": { "to": "rust_valleriite" } },
+      "exits": { "west": { "to": "rust_pyrolusite" }, "east": { "to": "rust_valleriite" }, "south": { "to": "rust_hominy" } },
       "actions": [
         {
           "id": "pinch_connellite",
@@ -25758,6 +25826,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard connellite. They packed it on the pyrolusite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_hominy": {
+      "name": "Rust Hominy",
+      "desc": "A dry hominy south of the connellite. Packed rust coats hominy.",
+      "brief": "Dry hominy, packed rust.",
+      "exits": { "north": { "to": "rust_connellite" } },
+      "actions": [
+        {
+          "id": "pinch_hominy",
+          "label": "pinch the hominy",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hominy. They packed it on the connellite and packed rust around it."]
           ]
         }
       ]
@@ -25817,7 +25902,7 @@
       "name": "Rust Sternfast",
       "desc": "A dry sternfast east of the futtock. Packed rust coats a sternfast.",
       "brief": "Dry sternfast, packed rust.",
-      "exits": { "west": { "to": "rust_futtock" }, "east": { "to": "rust_tackcringle" } },
+      "exits": { "west": { "to": "rust_futtock" }, "east": { "to": "rust_tackcringle" }, "south": { "to": "rust_polenta" } },
       "actions": [
         {
           "id": "pinch_sternfast",
@@ -25830,11 +25915,28 @@
         }
       ]
     },
+    "rust_polenta": {
+      "name": "Rust Polenta",
+      "desc": "A dry polenta south of the sternfast. Packed rust coats polenta.",
+      "brief": "Dry polenta, packed rust.",
+      "exits": { "north": { "to": "rust_sternfast" } },
+      "actions": [
+        {
+          "id": "pinch_polenta",
+          "label": "pinch the polenta",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard polenta. They packed it on the sternfast and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tackcringle": {
       "name": "Rust Tackcringle",
       "desc": "A dry tackcringle east of the sternfast. Packed rust coats a tackcringle.",
       "brief": "Dry tackcringle, packed rust.",
-      "exits": { "west": { "to": "rust_sternfast" }, "east": { "to": "rust_creosote" } },
+      "exits": { "west": { "to": "rust_sternfast" }, "east": { "to": "rust_creosote" }, "south": { "to": "rust_semolina" } },
       "actions": [
         {
           "id": "pinch_tackcringle",
@@ -25847,11 +25949,28 @@
         }
       ]
     },
+    "rust_semolina": {
+      "name": "Rust Semolina",
+      "desc": "A dry semolina south of the tackcringle. Packed rust coats semolina.",
+      "brief": "Dry semolina, packed rust.",
+      "exits": { "north": { "to": "rust_tackcringle" } },
+      "actions": [
+        {
+          "id": "pinch_semolina",
+          "label": "pinch the semolina",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard semolina. They packed it on the tackcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_creosote": {
       "name": "Rust Creosote",
       "desc": "A dry creosote east of the tackcringle. Packed rust coats creosote.",
       "brief": "Dry creosote, packed rust.",
-      "exits": { "west": { "to": "rust_tackcringle" }, "east": { "to": "rust_siccative" } },
+      "exits": { "west": { "to": "rust_tackcringle" }, "east": { "to": "rust_siccative" }, "south": { "to": "rust_wheatcorn" } },
       "actions": [
         {
           "id": "pinch_creosote",
@@ -25860,6 +25979,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard creosote. They soaked it on the tackcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wheatcorn": {
+      "name": "Rust Wheatcorn",
+      "desc": "A dry wheatcorn south of the creosote. Packed rust coats wheatcorn.",
+      "brief": "Dry wheatcorn, packed rust.",
+      "exits": { "north": { "to": "rust_creosote" } },
+      "actions": [
+        {
+          "id": "pinch_wheatcorn",
+          "label": "pinch the wheatcorn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatcorn. They packed it on the creosote and packed rust around it."]
           ]
         }
       ]
@@ -38529,14 +38665,29 @@
     "pinch the megilp",
     "go east",
     "pinch the limestone",
+    "go south",
+    "pinch the teparybean",
+    "go north",
     "go east",
     "pinch the carborundum",
+    "go south",
+    "pinch the haricotbean",
+    "go north",
     "go east",
     "pinch the manganese",
+    "go south",
+    "pinch the maize",
+    "go north",
     "go east",
     "pinch the pyrolusite",
+    "go south",
+    "pinch the grits",
+    "go north",
     "go east",
     "pinch the connellite",
+    "go south",
+    "pinch the hominy",
+    "go north",
     "go east",
     "pinch the valleriite",
     "go west",
@@ -38556,10 +38707,19 @@
     "pinch the futtock",
     "go east",
     "pinch the sternfast",
+    "go south",
+    "pinch the polenta",
+    "go north",
     "go east",
     "pinch the tackcringle",
+    "go south",
+    "pinch the semolina",
+    "go north",
     "go east",
     "pinch the creosote",
+    "go south",
+    "pinch the wheatcorn",
+    "go north",
     "go east",
     "pinch the siccative",
     "go south",
