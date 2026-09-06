@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13690,
+  "maxScore": 13730,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -32005,7 +32005,7 @@
       "name": "Rust Honestone",
       "desc": "A dry honestone east of the spanishwhite. Packed rust coats honestone.",
       "brief": "Dry honestone, packed rust.",
-      "exits": { "west": { "to": "rust_spanishwhite" }, "east": { "to": "rust_burntsienna" }, "south": { "to": "rust_riceflour" } },
+      "exits": { "west": { "to": "rust_spanishwhite" }, "east": { "to": "rust_burntsienna" }, "south": { "to": "rust_riceflour" }, "north": { "to": "rust_durumark" } },
       "actions": [
         {
           "id": "pinch_honestone",
@@ -32014,6 +32014,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard honestone. They packed it on the spanishwhite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumark": {
+      "name": "Rust Durumark",
+      "desc": "A dry durumark north of the honestone. Packed rust coats durumark.",
+      "brief": "Dry durumark, packed rust.",
+      "exits": { "south": { "to": "rust_honestone" } },
+      "actions": [
+        {
+          "id": "pinch_durumark",
+          "label": "pinch the durumark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumark. They packed it on the honestone and packed rust around it."]
           ]
         }
       ]
@@ -32039,7 +32056,7 @@
       "name": "Rust Burntsienna",
       "desc": "A dry burntsienna east of the honestone. Packed rust coats burntsienna.",
       "brief": "Dry burntsienna, packed rust.",
-      "exits": { "west": { "to": "rust_honestone" }, "east": { "to": "rust_dioptase" }, "south": { "to": "rust_cornflour" } },
+      "exits": { "west": { "to": "rust_honestone" }, "east": { "to": "rust_dioptase" }, "south": { "to": "rust_cornflour" }, "north": { "to": "rust_fonioark" } },
       "actions": [
         {
           "id": "pinch_burntsienna",
@@ -32048,6 +32065,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard burntsienna. They packed it on the honestone and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioark": {
+      "name": "Rust Fonioark",
+      "desc": "A dry fonioark north of the burntsienna. Packed rust coats fonioark.",
+      "brief": "Dry fonioark, packed rust.",
+      "exits": { "south": { "to": "rust_burntsienna" } },
+      "actions": [
+        {
+          "id": "pinch_fonioark",
+          "label": "pinch the fonioark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioark. They packed it on the burntsienna and packed rust around it."]
           ]
         }
       ]
@@ -32073,7 +32107,7 @@
       "name": "Rust Dioptase",
       "desc": "A dry dioptase east of the burntsienna. Packed rust coats dioptase.",
       "brief": "Dry dioptase, packed rust.",
-      "exits": { "west": { "to": "rust_burntsienna" }, "east": { "to": "rust_clinoatacamite" }, "south": { "to": "rust_wheatflour" } },
+      "exits": { "west": { "to": "rust_burntsienna" }, "east": { "to": "rust_clinoatacamite" }, "south": { "to": "rust_wheatflour" }, "north": { "to": "rust_teffark" } },
       "actions": [
         {
           "id": "pinch_dioptase",
@@ -32082,6 +32116,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard dioptase. They packed it on the burntsienna and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffark": {
+      "name": "Rust Teffark",
+      "desc": "A dry teffark north of the dioptase. Packed rust coats teffark.",
+      "brief": "Dry teffark, packed rust.",
+      "exits": { "south": { "to": "rust_dioptase" } },
+      "actions": [
+        {
+          "id": "pinch_teffark",
+          "label": "pinch the teffark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffark. They packed it on the dioptase and packed rust around it."]
           ]
         }
       ]
@@ -32107,7 +32158,7 @@
       "name": "Rust Clinoatacamite",
       "desc": "A dry clinoatacamite east of the dioptase. Packed rust coats clinoatacamite.",
       "brief": "Dry clinoatacamite, packed rust.",
-      "exits": { "west": { "to": "rust_dioptase" }, "east": { "to": "rust_safflorite" }, "south": { "to": "rust_barleyflour" } },
+      "exits": { "west": { "to": "rust_dioptase" }, "east": { "to": "rust_safflorite" }, "south": { "to": "rust_barleyflour" }, "north": { "to": "rust_barleyark" } },
       "actions": [
         {
           "id": "pinch_clinoatacamite",
@@ -32116,6 +32167,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clinoatacamite. They packed it on the dioptase and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyark": {
+      "name": "Rust Barleyark",
+      "desc": "A dry barleyark north of the clinoatacamite. Packed rust coats barleyark.",
+      "brief": "Dry barleyark, packed rust.",
+      "exits": { "south": { "to": "rust_clinoatacamite" } },
+      "actions": [
+        {
+          "id": "pinch_barleyark",
+          "label": "pinch the barleyark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyark. They packed it on the clinoatacamite and packed rust around it."]
           ]
         }
       ]
@@ -32175,7 +32243,7 @@
       "name": "Rust Yarn",
       "desc": "A dry yarn east of the plate. Packed rust coats yarn.",
       "brief": "Dry yarn, packed rust.",
-      "exits": { "west": { "to": "rust_plate" }, "east": { "to": "rust_limewash" }, "south": { "to": "rust_oatflour" } },
+      "exits": { "west": { "to": "rust_plate" }, "east": { "to": "rust_limewash" }, "south": { "to": "rust_oatflour" }, "north": { "to": "rust_sorghumark" } },
       "actions": [
         {
           "id": "pinch_yarn",
@@ -32184,6 +32252,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yarn. They wound it on the plate and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumark": {
+      "name": "Rust Sorghumark",
+      "desc": "A dry sorghumark north of the yarn. Packed rust coats sorghumark.",
+      "brief": "Dry sorghumark, packed rust.",
+      "exits": { "south": { "to": "rust_yarn" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumark",
+          "label": "pinch the sorghumark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumark. They packed it on the yarn and packed rust around it."]
           ]
         }
       ]
@@ -32209,7 +32294,7 @@
       "name": "Rust Limewash",
       "desc": "A dry limewash east of the yarn. Packed rust coats limewash.",
       "brief": "Dry limewash, packed rust.",
-      "exits": { "west": { "to": "rust_yarn" }, "east": { "to": "rust_fullersearth" }, "south": { "to": "rust_ryeflour" } },
+      "exits": { "west": { "to": "rust_yarn" }, "east": { "to": "rust_fullersearth" }, "south": { "to": "rust_ryeflour" }, "north": { "to": "rust_milletark" } },
       "actions": [
         {
           "id": "pinch_limewash",
@@ -32218,6 +32303,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard limewash. They soaked it on the yarn and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletark": {
+      "name": "Rust Milletark",
+      "desc": "A dry milletark north of the limewash. Packed rust coats milletark.",
+      "brief": "Dry milletark, packed rust.",
+      "exits": { "south": { "to": "rust_limewash" } },
+      "actions": [
+        {
+          "id": "pinch_milletark",
+          "label": "pinch the milletark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletark. They packed it on the limewash and packed rust around it."]
           ]
         }
       ]
@@ -32243,7 +32345,7 @@
       "name": "Rust Fullersearth",
       "desc": "A dry fullersearth east of the limewash. Packed rust coats fullersearth.",
       "brief": "Dry fullersearth, packed rust.",
-      "exits": { "west": { "to": "rust_limewash" }, "east": { "to": "rust_terraalba" }, "south": { "to": "rust_milletflour" } },
+      "exits": { "west": { "to": "rust_limewash" }, "east": { "to": "rust_terraalba" }, "south": { "to": "rust_milletflour" }, "north": { "to": "rust_cornark" } },
       "actions": [
         {
           "id": "pinch_fullersearth",
@@ -32252,6 +32354,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fullersearth. They packed it on the limewash and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornark": {
+      "name": "Rust Cornark",
+      "desc": "A dry cornark north of the fullersearth. Packed rust coats cornark.",
+      "brief": "Dry cornark, packed rust.",
+      "exits": { "south": { "to": "rust_fullersearth" } },
+      "actions": [
+        {
+          "id": "pinch_cornark",
+          "label": "pinch the cornark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornark. They packed it on the fullersearth and packed rust around it."]
           ]
         }
       ]
@@ -32277,7 +32396,7 @@
       "name": "Rust Terraalba",
       "desc": "A dry terraalba east of the fullersearth. Packed rust coats terraalba.",
       "brief": "Dry terraalba, packed rust.",
-      "exits": { "west": { "to": "rust_fullersearth" }, "east": { "to": "rust_novaculite" }, "south": { "to": "rust_sorghumflour" } },
+      "exits": { "west": { "to": "rust_fullersearth" }, "east": { "to": "rust_novaculite" }, "south": { "to": "rust_sorghumflour" }, "north": { "to": "rust_oatark" } },
       "actions": [
         {
           "id": "pinch_terraalba",
@@ -32286,6 +32405,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard terraalba. They packed it on the fullersearth and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatark": {
+      "name": "Rust Oatark",
+      "desc": "A dry oatark north of the terraalba. Packed rust coats oatark.",
+      "brief": "Dry oatark, packed rust.",
+      "exits": { "south": { "to": "rust_terraalba" } },
+      "actions": [
+        {
+          "id": "pinch_oatark",
+          "label": "pinch the oatark",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatark. They packed it on the terraalba and packed rust around it."]
           ]
         }
       ]
@@ -52087,21 +52223,33 @@
     "go north",
     "go east",
     "pinch the honestone",
+    "go north",
+    "pinch the durumark",
+    "go south",
     "go south",
     "pinch the riceflour",
     "go north",
     "go east",
     "pinch the burntsienna",
+    "go north",
+    "pinch the fonioark",
+    "go south",
     "go south",
     "pinch the cornflour",
     "go north",
     "go east",
     "pinch the dioptase",
+    "go north",
+    "pinch the teffark",
+    "go south",
     "go south",
     "pinch the wheatflour",
     "go north",
     "go east",
     "pinch the clinoatacamite",
+    "go north",
+    "pinch the barleyark",
+    "go south",
     "go south",
     "pinch the barleyflour",
     "go north",
@@ -52122,21 +52270,33 @@
     "pinch the boss",
     "go east",
     "pinch the yarn",
+    "go north",
+    "pinch the sorghumark",
+    "go south",
     "go south",
     "pinch the oatflour",
     "go north",
     "go east",
     "pinch the limewash",
+    "go north",
+    "pinch the milletark",
+    "go south",
     "go south",
     "pinch the ryeflour",
     "go north",
     "go east",
     "pinch the fullersearth",
+    "go north",
+    "pinch the cornark",
+    "go south",
     "go south",
     "pinch the milletflour",
     "go north",
     "go east",
     "pinch the terraalba",
+    "go north",
+    "pinch the oatark",
+    "go south",
     "go south",
     "pinch the sorghumflour",
     "go north",
