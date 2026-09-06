@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15330,
+  "maxScore": 15370,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -18932,7 +18932,7 @@
       "name": "Rust Swivel",
       "desc": "A dry swivel east of the clamp. Packed rust coats a swivel.",
       "brief": "Dry swivel, packed rust.",
-      "exits": { "west": { "to": "rust_clamp" }, "east": { "to": "rust_millers" }, "south": { "to": "rust_sorghumplain" } },
+      "exits": { "west": { "to": "rust_clamp" }, "east": { "to": "rust_millers" }, "south": { "to": "rust_sorghumplain" }, "north": { "to": "rust_durumbeaker" } },
       "actions": [
         {
           "id": "pinch_swivel",
@@ -18941,6 +18941,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard swivel. They pinned it on the clamp and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbeaker": {
+      "name": "Rust Durumbeaker",
+      "desc": "A dry durumbeaker north of the swivel. Packed rust coats durumbeaker.",
+      "brief": "Dry durumbeaker, packed rust.",
+      "exits": { "south": { "to": "rust_swivel" } },
+      "actions": [
+        {
+          "id": "pinch_durumbeaker",
+          "label": "pinch the durumbeaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbeaker. They packed it on the swivel and packed rust around it."]
           ]
         }
       ]
@@ -18966,7 +18983,7 @@
       "name": "Rust Millers",
       "desc": "A dry millers east of the swivel. Packed rust coats a millers.",
       "brief": "Dry millers, packed rust.",
-      "exits": { "west": { "to": "rust_swivel" }, "east": { "to": "rust_sizeglue" }, "south": { "to": "rust_milletplain" } },
+      "exits": { "west": { "to": "rust_swivel" }, "east": { "to": "rust_sizeglue" }, "south": { "to": "rust_milletplain" }, "north": { "to": "rust_foniobeaker" } },
       "actions": [
         {
           "id": "pinch_millers",
@@ -18975,6 +18992,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard millers. They looped it on the swivel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobeaker": {
+      "name": "Rust Foniobeaker",
+      "desc": "A dry foniobeaker north of the millers. Packed rust coats foniobeaker.",
+      "brief": "Dry foniobeaker, packed rust.",
+      "exits": { "south": { "to": "rust_millers" } },
+      "actions": [
+        {
+          "id": "pinch_foniobeaker",
+          "label": "pinch the foniobeaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobeaker. They packed it on the millers and packed rust around it."]
           ]
         }
       ]
@@ -19000,7 +19034,7 @@
       "name": "Rust Sizeglue",
       "desc": "A dry sizeglue east of the millers. Packed rust coats sizeglue.",
       "brief": "Dry sizeglue, packed rust.",
-      "exits": { "west": { "to": "rust_millers" }, "east": { "to": "rust_wattle" }, "south": { "to": "rust_cornplain" } },
+      "exits": { "west": { "to": "rust_millers" }, "east": { "to": "rust_wattle" }, "south": { "to": "rust_cornplain" }, "north": { "to": "rust_teffbeaker" } },
       "actions": [
         {
           "id": "pinch_sizeglue",
@@ -19009,6 +19043,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sizeglue. They packed it on the millers and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbeaker": {
+      "name": "Rust Teffbeaker",
+      "desc": "A dry teffbeaker north of the sizeglue. Packed rust coats teffbeaker.",
+      "brief": "Dry teffbeaker, packed rust.",
+      "exits": { "south": { "to": "rust_sizeglue" } },
+      "actions": [
+        {
+          "id": "pinch_teffbeaker",
+          "label": "pinch the teffbeaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbeaker. They packed it on the sizeglue and packed rust around it."]
           ]
         }
       ]
@@ -19034,7 +19085,7 @@
       "name": "Rust Wattle",
       "desc": "A dry wattle east of the sizeglue. Packed rust coats wattle.",
       "brief": "Dry wattle, packed rust.",
-      "exits": { "west": { "to": "rust_sizeglue" }, "east": { "to": "rust_clarain" }, "south": { "to": "rust_oatplain" } },
+      "exits": { "west": { "to": "rust_sizeglue" }, "east": { "to": "rust_clarain" }, "south": { "to": "rust_oatplain" }, "north": { "to": "rust_barleybeaker" } },
       "actions": [
         {
           "id": "pinch_wattle",
@@ -19043,6 +19094,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wattle. They packed it on the sizeglue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybeaker": {
+      "name": "Rust Barleybeaker",
+      "desc": "A dry barleybeaker north of the wattle. Packed rust coats barleybeaker.",
+      "brief": "Dry barleybeaker, packed rust.",
+      "exits": { "south": { "to": "rust_wattle" } },
+      "actions": [
+        {
+          "id": "pinch_barleybeaker",
+          "label": "pinch the barleybeaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybeaker. They packed it on the wattle and packed rust around it."]
           ]
         }
       ]
@@ -19068,7 +19136,7 @@
       "name": "Rust Clarain",
       "desc": "A dry clarain east of the wattle. Packed rust coats clarain.",
       "brief": "Dry clarain, packed rust.",
-      "exits": { "west": { "to": "rust_wattle" }, "east": { "to": "rust_greyironbark" }, "south": { "to": "rust_durumallpurpose" } },
+      "exits": { "west": { "to": "rust_wattle" }, "east": { "to": "rust_greyironbark" }, "south": { "to": "rust_durumallpurpose" }, "north": { "to": "rust_sorghumbeaker" } },
       "actions": [
         {
           "id": "pinch_clarain",
@@ -19077,6 +19145,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clarain. They packed it on the wattle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbeaker": {
+      "name": "Rust Sorghumbeaker",
+      "desc": "A dry sorghumbeaker north of the clarain. Packed rust coats sorghumbeaker.",
+      "brief": "Dry sorghumbeaker, packed rust.",
+      "exits": { "south": { "to": "rust_clarain" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbeaker",
+          "label": "pinch the sorghumbeaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbeaker. They packed it on the clarain and packed rust around it."]
           ]
         }
       ]
@@ -19102,7 +19187,7 @@
       "name": "Rust Greyironbark",
       "desc": "A dry greyironbark east of the clarain. Packed rust coats greyironbark.",
       "brief": "Dry greyironbark, packed rust.",
-      "exits": { "west": { "to": "rust_clarain" }, "east": { "to": "rust_silverleaf" }, "south": { "to": "rust_fonioallpurpose" } },
+      "exits": { "west": { "to": "rust_clarain" }, "east": { "to": "rust_silverleaf" }, "south": { "to": "rust_fonioallpurpose" }, "north": { "to": "rust_milletbeaker" } },
       "actions": [
         {
           "id": "pinch_greyironbark",
@@ -19111,6 +19196,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard greyironbark. They packed it on the clarain and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbeaker": {
+      "name": "Rust Milletbeaker",
+      "desc": "A dry milletbeaker north of the greyironbark. Packed rust coats milletbeaker.",
+      "brief": "Dry milletbeaker, packed rust.",
+      "exits": { "south": { "to": "rust_greyironbark" } },
+      "actions": [
+        {
+          "id": "pinch_milletbeaker",
+          "label": "pinch the milletbeaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbeaker. They packed it on the greyironbark and packed rust around it."]
           ]
         }
       ]
@@ -19136,7 +19238,7 @@
       "name": "Rust Silverleaf",
       "desc": "A dry silverleaf east of the greyironbark. Packed rust coats silverleaf.",
       "brief": "Dry silverleaf, packed rust.",
-      "exits": { "west": { "to": "rust_greyironbark" }, "east": { "to": "rust_redpine" }, "south": { "to": "rust_teffallpurpose" } },
+      "exits": { "west": { "to": "rust_greyironbark" }, "east": { "to": "rust_redpine" }, "south": { "to": "rust_teffallpurpose" }, "north": { "to": "rust_cornbeaker" } },
       "actions": [
         {
           "id": "pinch_silverleaf",
@@ -19145,6 +19247,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard silverleaf. They packed it on the greyironbark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbeaker": {
+      "name": "Rust Cornbeaker",
+      "desc": "A dry cornbeaker north of the silverleaf. Packed rust coats cornbeaker.",
+      "brief": "Dry cornbeaker, packed rust.",
+      "exits": { "south": { "to": "rust_silverleaf" } },
+      "actions": [
+        {
+          "id": "pinch_cornbeaker",
+          "label": "pinch the cornbeaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbeaker. They packed it on the silverleaf and packed rust around it."]
           ]
         }
       ]
@@ -19170,7 +19289,7 @@
       "name": "Rust Redpine",
       "desc": "A dry redpine east of the silverleaf. Packed rust coats redpine.",
       "brief": "Dry redpine, packed rust.",
-      "exits": { "west": { "to": "rust_silverleaf" }, "east": { "to": "rust_kohuhu" }, "south": { "to": "rust_lehua" } },
+      "exits": { "west": { "to": "rust_silverleaf" }, "east": { "to": "rust_kohuhu" }, "south": { "to": "rust_lehua" }, "north": { "to": "rust_oatbeaker" } },
       "actions": [
         {
           "id": "pinch_redpine",
@@ -19179,6 +19298,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redpine. They packed it on the silverleaf and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbeaker": {
+      "name": "Rust Oatbeaker",
+      "desc": "A dry oatbeaker north of the redpine. Packed rust coats oatbeaker.",
+      "brief": "Dry oatbeaker, packed rust.",
+      "exits": { "south": { "to": "rust_redpine" } },
+      "actions": [
+        {
+          "id": "pinch_oatbeaker",
+          "label": "pinch the oatbeaker",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbeaker. They packed it on the redpine and packed rust around it."]
           ]
         }
       ]
@@ -55361,41 +55497,65 @@
     "pinch the clamp",
     "go east",
     "pinch the swivel",
+    "go north",
+    "pinch the durumbeaker",
+    "go south",
     "go south",
     "pinch the sorghumplain",
     "go north",
     "go east",
     "pinch the millers",
+    "go north",
+    "pinch the foniobeaker",
+    "go south",
     "go south",
     "pinch the milletplain",
     "go north",
     "go east",
     "pinch the sizeglue",
+    "go north",
+    "pinch the teffbeaker",
+    "go south",
     "go south",
     "pinch the cornplain",
     "go north",
     "go east",
     "pinch the wattle",
+    "go north",
+    "pinch the barleybeaker",
+    "go south",
     "go south",
     "pinch the oatplain",
     "go north",
     "go east",
     "pinch the clarain",
+    "go north",
+    "pinch the sorghumbeaker",
+    "go south",
     "go south",
     "pinch the durumallpurpose",
     "go north",
     "go east",
     "pinch the greyironbark",
+    "go north",
+    "pinch the milletbeaker",
+    "go south",
     "go south",
     "pinch the fonioallpurpose",
     "go north",
     "go east",
     "pinch the silverleaf",
+    "go north",
+    "pinch the cornbeaker",
+    "go south",
     "go south",
     "pinch the teffallpurpose",
     "go north",
     "go east",
     "pinch the redpine",
+    "go north",
+    "pinch the oatbeaker",
+    "go south",
     "go south",
     "pinch the lehua",
     "go north",
