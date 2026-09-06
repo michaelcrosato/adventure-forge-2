@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7290,
+  "maxScore": 7330,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -8800,7 +8800,7 @@
       "name": "Rust Bottlebrush",
       "desc": "A dry bottlebrush east of the cidergum. Packed rust coats bottlebrush.",
       "brief": "Dry bottlebrush, packed rust.",
-      "exits": { "west": { "to": "rust_cidergum" } },
+      "exits": { "west": { "to": "rust_cidergum" }, "east": { "to": "rust_radiatapine" } },
       "actions": [
         {
           "id": "pinch_bottlebrush",
@@ -8809,6 +8809,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bottlebrush. They packed it on the cidergum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_radiatapine": {
+      "name": "Rust Radiatapine",
+      "desc": "A dry radiatapine east of the bottlebrush. Packed rust coats radiatapine.",
+      "brief": "Dry radiatapine, packed rust.",
+      "exits": { "west": { "to": "rust_bottlebrush" } },
+      "actions": [
+        {
+          "id": "pinch_radiatapine",
+          "label": "pinch the radiatapine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard radiatapine. They packed it on the bottlebrush and packed rust around it."]
           ]
         }
       ]
@@ -8902,7 +8919,7 @@
       "name": "Rust Acacia",
       "desc": "A dry acacia east of the ribbongum. Packed rust coats acacia.",
       "brief": "Dry acacia, packed rust.",
-      "exits": { "west": { "to": "rust_ribbongum" } },
+      "exits": { "west": { "to": "rust_ribbongum" }, "east": { "to": "rust_blackpine" } },
       "actions": [
         {
           "id": "pinch_acacia",
@@ -8911,6 +8928,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard acacia. They packed it on the ribbongum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_blackpine": {
+      "name": "Rust Blackpine",
+      "desc": "A dry blackpine east of the acacia. Packed rust coats blackpine.",
+      "brief": "Dry blackpine, packed rust.",
+      "exits": { "west": { "to": "rust_acacia" } },
+      "actions": [
+        {
+          "id": "pinch_blackpine",
+          "label": "pinch the blackpine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard blackpine. They packed it on the acacia and packed rust around it."]
           ]
         }
       ]
@@ -9191,7 +9225,7 @@
       "name": "Rust Gympie",
       "desc": "A dry gympie east of the scribblygum. Packed rust coats gympie.",
       "brief": "Dry gympie, packed rust.",
-      "exits": { "west": { "to": "rust_scribblygum" } },
+      "exits": { "west": { "to": "rust_scribblygum" }, "east": { "to": "rust_ponderosa" } },
       "actions": [
         {
           "id": "pinch_gympie",
@@ -9200,6 +9234,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gympie. They packed it on the scribblygum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_ponderosa": {
+      "name": "Rust Ponderosa",
+      "desc": "A dry ponderosa east of the gympie. Packed rust coats ponderosa.",
+      "brief": "Dry ponderosa, packed rust.",
+      "exits": { "west": { "to": "rust_gympie" } },
+      "actions": [
+        {
+          "id": "pinch_ponderosa",
+          "label": "pinch the ponderosa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ponderosa. They packed it on the gympie and packed rust around it."]
           ]
         }
       ]
@@ -9327,7 +9378,7 @@
       "name": "Rust Lillypilly",
       "desc": "A dry lillypilly east of the applebox. Packed rust coats lillypilly.",
       "brief": "Dry lillypilly, packed rust.",
-      "exits": { "west": { "to": "rust_applebox" } },
+      "exits": { "west": { "to": "rust_applebox" }, "east": { "to": "rust_loblolly" } },
       "actions": [
         {
           "id": "pinch_lillypilly",
@@ -9336,6 +9387,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lillypilly. They packed it on the applebox and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_loblolly": {
+      "name": "Rust Loblolly",
+      "desc": "A dry loblolly east of the lillypilly. Packed rust coats loblolly.",
+      "brief": "Dry loblolly, packed rust.",
+      "exits": { "west": { "to": "rust_lillypilly" } },
+      "actions": [
+        {
+          "id": "pinch_loblolly",
+          "label": "pinch the loblolly",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard loblolly. They packed it on the lillypilly and packed rust around it."]
           ]
         }
       ]
@@ -9786,7 +9854,7 @@
       "name": "Rust Hakea",
       "desc": "A dry hakea east of the bangalay. Packed rust coats hakea.",
       "brief": "Dry hakea, packed rust.",
-      "exits": { "west": { "to": "rust_bangalay" } },
+      "exits": { "west": { "to": "rust_bangalay" }, "east": { "to": "rust_kingbilly" } },
       "actions": [
         {
           "id": "pinch_hakea",
@@ -9795,6 +9863,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hakea. They packed it on the bangalay and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kingbilly": {
+      "name": "Rust Kingbilly",
+      "desc": "A dry kingbilly east of the hakea. Packed rust coats kingbilly.",
+      "brief": "Dry kingbilly, packed rust.",
+      "exits": { "west": { "to": "rust_hakea" } },
+      "actions": [
+        {
+          "id": "pinch_kingbilly",
+          "label": "pinch the kingbilly",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kingbilly. They packed it on the hakea and packed rust around it."]
           ]
         }
       ]
@@ -12098,7 +12183,7 @@
       "name": "Rust Sheoak",
       "desc": "A dry sheoak east of the mannagum. Packed rust coats sheoak.",
       "brief": "Dry sheoak, packed rust.",
-      "exits": { "west": { "to": "rust_mannagum" } },
+      "exits": { "west": { "to": "rust_mannagum" }, "east": { "to": "rust_kauripine" } },
       "actions": [
         {
           "id": "pinch_sheoak",
@@ -12107,6 +12192,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheoak. They packed it on the mannagum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kauripine": {
+      "name": "Rust Kauripine",
+      "desc": "A dry kauripine east of the sheoak. Packed rust coats kauripine.",
+      "brief": "Dry kauripine, packed rust.",
+      "exits": { "west": { "to": "rust_sheoak" } },
+      "actions": [
+        {
+          "id": "pinch_kauripine",
+          "label": "pinch the kauripine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kauripine. They packed it on the sheoak and packed rust around it."]
           ]
         }
       ]
@@ -12268,7 +12370,7 @@
       "name": "Rust Paperbark",
       "desc": "A dry paperbark east of the woollybutt. Packed rust coats paperbark.",
       "brief": "Dry paperbark, packed rust.",
-      "exits": { "west": { "to": "rust_woollybutt" } },
+      "exits": { "west": { "to": "rust_woollybutt" }, "east": { "to": "rust_sugarpine" } },
       "actions": [
         {
           "id": "pinch_paperbark",
@@ -12277,6 +12379,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard paperbark. They packed it on the woollybutt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sugarpine": {
+      "name": "Rust Sugarpine",
+      "desc": "A dry sugarpine east of the paperbark. Packed rust coats sugarpine.",
+      "brief": "Dry sugarpine, packed rust.",
+      "exits": { "west": { "to": "rust_paperbark" } },
+      "actions": [
+        {
+          "id": "pinch_sugarpine",
+          "label": "pinch the sugarpine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sugarpine. They packed it on the paperbark and packed rust around it."]
           ]
         }
       ]
@@ -12557,7 +12676,7 @@
       "name": "Rust Waratah",
       "desc": "A dry waratah east of the whitemahogany. Packed rust coats waratah.",
       "brief": "Dry waratah, packed rust.",
-      "exits": { "west": { "to": "rust_whitemahogany" } },
+      "exits": { "west": { "to": "rust_whitemahogany" }, "east": { "to": "rust_slashpine" } },
       "actions": [
         {
           "id": "pinch_waratah",
@@ -12566,6 +12685,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard waratah. They packed it on the whitemahogany and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_slashpine": {
+      "name": "Rust Slashpine",
+      "desc": "A dry slashpine east of the waratah. Packed rust coats slashpine.",
+      "brief": "Dry slashpine, packed rust.",
+      "exits": { "west": { "to": "rust_waratah" } },
+      "actions": [
+        {
+          "id": "pinch_slashpine",
+          "label": "pinch the slashpine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard slashpine. They packed it on the waratah and packed rust around it."]
           ]
         }
       ]
@@ -26234,6 +26370,9 @@
     "pinch the cidergum",
     "go east",
     "pinch the bottlebrush",
+    "go east",
+    "pinch the radiatapine",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26253,6 +26392,9 @@
     "pinch the ribbongum",
     "go east",
     "pinch the acacia",
+    "go east",
+    "pinch the blackpine",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26299,6 +26441,9 @@
     "pinch the scribblygum",
     "go east",
     "pinch the gympie",
+    "go east",
+    "pinch the ponderosa",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26322,6 +26467,9 @@
     "pinch the applebox",
     "go east",
     "pinch the lillypilly",
+    "go east",
+    "pinch the loblolly",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26400,6 +26548,9 @@
     "pinch the bangalay",
     "go east",
     "pinch the hakea",
+    "go east",
+    "pinch the kingbilly",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26810,6 +26961,9 @@
     "pinch the mannagum",
     "go east",
     "pinch the sheoak",
+    "go east",
+    "pinch the kauripine",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26839,6 +26993,9 @@
     "pinch the woollybutt",
     "go east",
     "pinch the paperbark",
+    "go east",
+    "pinch the sugarpine",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26890,6 +27047,9 @@
     "pinch the whitemahogany",
     "go east",
     "pinch the waratah",
+    "go east",
+    "pinch the slashpine",
+    "go west",
     "go west",
     "go west",
     "go west",
