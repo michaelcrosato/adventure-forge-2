@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12850,
+  "maxScore": 12890,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -38618,7 +38618,7 @@
       "name": "Rust Hemimorphite",
       "desc": "A dry hemimorphite east of the talc. Packed rust coats hemimorphite.",
       "brief": "Dry hemimorphite, packed rust.",
-      "exits": { "west": { "to": "rust_talc" }, "east": { "to": "rust_zincite" }, "south": { "to": "rust_mint" } },
+      "exits": { "west": { "to": "rust_talc" }, "east": { "to": "rust_zincite" }, "south": { "to": "rust_mint" }, "north": { "to": "rust_durumbox" } },
       "actions": [
         {
           "id": "pinch_hemimorphite",
@@ -38627,6 +38627,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hemimorphite. They packed it on the talc and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbox": {
+      "name": "Rust Durumbox",
+      "desc": "A dry durumbox north of the hemimorphite. Packed rust coats durumbox.",
+      "brief": "Dry durumbox, packed rust.",
+      "exits": { "south": { "to": "rust_hemimorphite" } },
+      "actions": [
+        {
+          "id": "pinch_durumbox",
+          "label": "pinch the durumbox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbox. They packed it on the hemimorphite and packed rust around it."]
           ]
         }
       ]
@@ -38703,7 +38720,7 @@
       "name": "Rust Rounding",
       "desc": "A dry rounding east of the becket. Packed rust coats rounding.",
       "brief": "Dry rounding, packed rust.",
-      "exits": { "west": { "to": "rust_becket" }, "east": { "to": "rust_yardgasket" }, "south": { "to": "rust_thyme" } },
+      "exits": { "west": { "to": "rust_becket" }, "east": { "to": "rust_yardgasket" }, "south": { "to": "rust_thyme" }, "north": { "to": "rust_foniobox" } },
       "actions": [
         {
           "id": "pinch_rounding",
@@ -38712,6 +38729,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rounding. They served it on the becket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobox": {
+      "name": "Rust Foniobox",
+      "desc": "A dry foniobox north of the rounding. Packed rust coats foniobox.",
+      "brief": "Dry foniobox, packed rust.",
+      "exits": { "south": { "to": "rust_rounding" } },
+      "actions": [
+        {
+          "id": "pinch_foniobox",
+          "label": "pinch the foniobox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobox. They packed it on the rounding and packed rust around it."]
           ]
         }
       ]
@@ -38737,7 +38771,7 @@
       "name": "Rust Yardgasket",
       "desc": "A dry yardgasket east of the rounding. Packed rust coats a yardgasket.",
       "brief": "Dry yardgasket, packed rust.",
-      "exits": { "west": { "to": "rust_rounding" }, "east": { "to": "rust_flax" }, "south": { "to": "rust_rosemary" } },
+      "exits": { "west": { "to": "rust_rounding" }, "east": { "to": "rust_flax" }, "south": { "to": "rust_rosemary" }, "north": { "to": "rust_teffbox" } },
       "actions": [
         {
           "id": "pinch_yardgasket",
@@ -38746,6 +38780,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yardgasket. They seized it on the rounding and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbox": {
+      "name": "Rust Teffbox",
+      "desc": "A dry teffbox north of the yardgasket. Packed rust coats teffbox.",
+      "brief": "Dry teffbox, packed rust.",
+      "exits": { "south": { "to": "rust_yardgasket" } },
+      "actions": [
+        {
+          "id": "pinch_teffbox",
+          "label": "pinch the teffbox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbox. They packed it on the yardgasket and packed rust around it."]
           ]
         }
       ]
@@ -38771,7 +38822,7 @@
       "name": "Rust Flax",
       "desc": "A dry flax east of the yardgasket. Packed rust coats flax.",
       "brief": "Dry flax, packed rust.",
-      "exits": { "west": { "to": "rust_yardgasket" }, "east": { "to": "rust_umber" }, "south": { "to": "rust_parsley" } },
+      "exits": { "west": { "to": "rust_yardgasket" }, "east": { "to": "rust_umber" }, "south": { "to": "rust_parsley" }, "north": { "to": "rust_barleybox" } },
       "actions": [
         {
           "id": "pinch_flax",
@@ -38780,6 +38831,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard flax. They laid it on the yardgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybox": {
+      "name": "Rust Barleybox",
+      "desc": "A dry barleybox north of the flax. Packed rust coats barleybox.",
+      "brief": "Dry barleybox, packed rust.",
+      "exits": { "south": { "to": "rust_flax" } },
+      "actions": [
+        {
+          "id": "pinch_barleybox",
+          "label": "pinch the barleybox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybox. They packed it on the flax and packed rust around it."]
           ]
         }
       ]
@@ -38805,7 +38873,7 @@
       "name": "Rust Umber",
       "desc": "A dry umber east of the flax. Packed rust coats umber.",
       "brief": "Dry umber, packed rust.",
-      "exits": { "west": { "to": "rust_flax" }, "east": { "to": "rust_colza" }, "south": { "to": "rust_anise" } },
+      "exits": { "west": { "to": "rust_flax" }, "east": { "to": "rust_colza" }, "south": { "to": "rust_anise" }, "north": { "to": "rust_sorghumbox" } },
       "actions": [
         {
           "id": "pinch_umber",
@@ -38814,6 +38882,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard umber. They dusted it on the flax and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbox": {
+      "name": "Rust Sorghumbox",
+      "desc": "A dry sorghumbox north of the umber. Packed rust coats sorghumbox.",
+      "brief": "Dry sorghumbox, packed rust.",
+      "exits": { "south": { "to": "rust_umber" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbox",
+          "label": "pinch the sorghumbox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbox. They packed it on the umber and packed rust around it."]
           ]
         }
       ]
@@ -38839,7 +38924,7 @@
       "name": "Rust Colza",
       "desc": "A dry colza east of the umber. Packed rust coats colza.",
       "brief": "Dry colza, packed rust.",
-      "exits": { "west": { "to": "rust_umber" }, "east": { "to": "rust_basswood" }, "south": { "to": "rust_caraway" } },
+      "exits": { "west": { "to": "rust_umber" }, "east": { "to": "rust_basswood" }, "south": { "to": "rust_caraway" }, "north": { "to": "rust_milletbox" } },
       "actions": [
         {
           "id": "pinch_colza",
@@ -38848,6 +38933,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard colza. They soaked it on the umber and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbox": {
+      "name": "Rust Milletbox",
+      "desc": "A dry milletbox north of the colza. Packed rust coats milletbox.",
+      "brief": "Dry milletbox, packed rust.",
+      "exits": { "south": { "to": "rust_colza" } },
+      "actions": [
+        {
+          "id": "pinch_milletbox",
+          "label": "pinch the milletbox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbox. They packed it on the colza and packed rust around it."]
           ]
         }
       ]
@@ -38873,7 +38975,7 @@
       "name": "Rust Basswood",
       "desc": "A dry basswood east of the colza. Packed rust coats basswood.",
       "brief": "Dry basswood, packed rust.",
-      "exits": { "west": { "to": "rust_colza" }, "east": { "to": "rust_grout" }, "south": { "to": "rust_coriander" } },
+      "exits": { "west": { "to": "rust_colza" }, "east": { "to": "rust_grout" }, "south": { "to": "rust_coriander" }, "north": { "to": "rust_cornbox" } },
       "actions": [
         {
           "id": "pinch_basswood",
@@ -38882,6 +38984,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard basswood. They laid it on the colza and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbox": {
+      "name": "Rust Cornbox",
+      "desc": "A dry cornbox north of the basswood. Packed rust coats cornbox.",
+      "brief": "Dry cornbox, packed rust.",
+      "exits": { "south": { "to": "rust_basswood" } },
+      "actions": [
+        {
+          "id": "pinch_cornbox",
+          "label": "pinch the cornbox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbox. They packed it on the basswood and packed rust around it."]
           ]
         }
       ]
@@ -38907,7 +39026,7 @@
       "name": "Rust Grout",
       "desc": "A dry grout east of the basswood. Packed rust coats grout.",
       "brief": "Dry grout, packed rust.",
-      "exits": { "west": { "to": "rust_basswood" }, "east": { "to": "rust_kaolin" }, "south": { "to": "rust_cumin" } },
+      "exits": { "west": { "to": "rust_basswood" }, "east": { "to": "rust_kaolin" }, "south": { "to": "rust_cumin" }, "north": { "to": "rust_oatbox" } },
       "actions": [
         {
           "id": "pinch_grout",
@@ -38916,6 +39035,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard grout. They packed it on the basswood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbox": {
+      "name": "Rust Oatbox",
+      "desc": "A dry oatbox north of the grout. Packed rust coats oatbox.",
+      "brief": "Dry oatbox, packed rust.",
+      "exits": { "south": { "to": "rust_grout" } },
+      "actions": [
+        {
+          "id": "pinch_oatbox",
+          "label": "pinch the oatbox",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbox. They packed it on the grout and packed rust around it."]
           ]
         }
       ]
@@ -50393,6 +50529,9 @@
     "go north",
     "go east",
     "pinch the hemimorphite",
+    "go north",
+    "pinch the durumbox",
+    "go south",
     "go south",
     "pinch the mint",
     "go north",
@@ -50415,36 +50554,57 @@
     "pinch the becket",
     "go east",
     "pinch the rounding",
+    "go north",
+    "pinch the foniobox",
+    "go south",
     "go south",
     "pinch the thyme",
     "go north",
     "go east",
     "pinch the yardgasket",
+    "go north",
+    "pinch the teffbox",
+    "go south",
     "go south",
     "pinch the rosemary",
     "go north",
     "go east",
     "pinch the flax",
+    "go north",
+    "pinch the barleybox",
+    "go south",
     "go south",
     "pinch the parsley",
     "go north",
     "go east",
     "pinch the umber",
+    "go north",
+    "pinch the sorghumbox",
+    "go south",
     "go south",
     "pinch the anise",
     "go north",
     "go east",
     "pinch the colza",
+    "go north",
+    "pinch the milletbox",
+    "go south",
     "go south",
     "pinch the caraway",
     "go north",
     "go east",
     "pinch the basswood",
+    "go north",
+    "pinch the cornbox",
+    "go south",
     "go south",
     "pinch the coriander",
     "go north",
     "go east",
     "pinch the grout",
+    "go north",
+    "pinch the oatbox",
+    "go south",
     "go south",
     "pinch the cumin",
     "go north",
