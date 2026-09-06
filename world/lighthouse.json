@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10610,
+  "maxScore": 10650,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -23318,7 +23318,7 @@
       "name": "Rust Merpauh",
       "desc": "A dry merpauh east of the keruing. Packed rust coats merpauh.",
       "brief": "Dry merpauh, packed rust.",
-      "exits": { "west": { "to": "rust_keruing" }, "east": { "to": "rust_sissoo" } },
+      "exits": { "west": { "to": "rust_keruing" }, "east": { "to": "rust_sissoo" }, "south": { "to": "rust_freekehgroat" } },
       "actions": [
         {
           "id": "pinch_merpauh",
@@ -23327,6 +23327,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard merpauh. They packed it on the keruing and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_freekehgroat": {
+      "name": "Rust Freekehgroat",
+      "desc": "A dry freekehgroat south of the merpauh. Packed rust coats freekehgroat.",
+      "brief": "Dry freekehgroat, packed rust.",
+      "exits": { "north": { "to": "rust_merpauh" } },
+      "actions": [
+        {
+          "id": "pinch_freekehgroat",
+          "label": "pinch the freekehgroat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard freekehgroat. They packed it on the merpauh and packed rust around it."]
           ]
         }
       ]
@@ -23403,7 +23420,7 @@
       "name": "Rust Lugsail",
       "desc": "A dry lugsail east of the gripe. Packed rust coats a lugsail.",
       "brief": "Dry lugsail, packed rust.",
-      "exits": { "west": { "to": "rust_gripe" }, "east": { "to": "rust_hanks" } },
+      "exits": { "west": { "to": "rust_gripe" }, "east": { "to": "rust_hanks" }, "south": { "to": "rust_kamutgroat" } },
       "actions": [
         {
           "id": "pinch_lugsail",
@@ -23416,11 +23433,28 @@
         }
       ]
     },
+    "rust_kamutgroat": {
+      "name": "Rust Kamutgroat",
+      "desc": "A dry kamutgroat south of the lugsail. Packed rust coats kamutgroat.",
+      "brief": "Dry kamutgroat, packed rust.",
+      "exits": { "north": { "to": "rust_lugsail" } },
+      "actions": [
+        {
+          "id": "pinch_kamutgroat",
+          "label": "pinch the kamutgroat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kamutgroat. They packed it on the lugsail and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_hanks": {
       "name": "Rust Hanks",
       "desc": "A dry hanks east of the lugsail. Packed rust coats hanks.",
       "brief": "Dry hanks, packed rust.",
-      "exits": { "west": { "to": "rust_lugsail" }, "east": { "to": "rust_greenheart" } },
+      "exits": { "west": { "to": "rust_lugsail" }, "east": { "to": "rust_greenheart" }, "south": { "to": "rust_speltgroat" } },
       "actions": [
         {
           "id": "pinch_hanks",
@@ -23433,11 +23467,28 @@
         }
       ]
     },
+    "rust_speltgroat": {
+      "name": "Rust Speltgroat",
+      "desc": "A dry speltgroat south of the hanks. Packed rust coats speltgroat.",
+      "brief": "Dry speltgroat, packed rust.",
+      "exits": { "north": { "to": "rust_hanks" } },
+      "actions": [
+        {
+          "id": "pinch_speltgroat",
+          "label": "pinch the speltgroat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard speltgroat. They packed it on the hanks and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_greenheart": {
       "name": "Rust Greenheart",
       "desc": "A dry greenheart east of the hanks. Packed rust coats greenheart.",
       "brief": "Dry greenheart, packed rust.",
-      "exits": { "west": { "to": "rust_hanks" }, "east": { "to": "rust_kingwood" } },
+      "exits": { "west": { "to": "rust_hanks" }, "east": { "to": "rust_kingwood" }, "south": { "to": "rust_triticaleflake" } },
       "actions": [
         {
           "id": "pinch_greenheart",
@@ -23450,11 +23501,28 @@
         }
       ]
     },
+    "rust_triticaleflake": {
+      "name": "Rust Triticaleflake",
+      "desc": "A dry triticaleflake south of the greenheart. Packed rust coats triticaleflake.",
+      "brief": "Dry triticaleflake, packed rust.",
+      "exits": { "north": { "to": "rust_greenheart" } },
+      "actions": [
+        {
+          "id": "pinch_triticaleflake",
+          "label": "pinch the triticaleflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard triticaleflake. They packed it on the greenheart and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kingwood": {
       "name": "Rust Kingwood",
       "desc": "A dry kingwood east of the greenheart. Packed rust coats kingwood.",
       "brief": "Dry kingwood, packed rust.",
-      "exits": { "west": { "to": "rust_greenheart" }, "east": { "to": "rust_sipo" } },
+      "exits": { "west": { "to": "rust_greenheart" }, "east": { "to": "rust_sipo" }, "south": { "to": "rust_emmerflake" } },
       "actions": [
         {
           "id": "pinch_kingwood",
@@ -23467,11 +23535,28 @@
         }
       ]
     },
+    "rust_emmerflake": {
+      "name": "Rust Emmerflake",
+      "desc": "A dry emmerflake south of the kingwood. Packed rust coats emmerflake.",
+      "brief": "Dry emmerflake, packed rust.",
+      "exits": { "north": { "to": "rust_kingwood" } },
+      "actions": [
+        {
+          "id": "pinch_emmerflake",
+          "label": "pinch the emmerflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard emmerflake. They packed it on the kingwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sipo": {
       "name": "Rust Sipo",
       "desc": "A dry sipo east of the kingwood. Packed rust coats sipo.",
       "brief": "Dry sipo, packed rust.",
-      "exits": { "west": { "to": "rust_kingwood" }, "east": { "to": "rust_amendoim" } },
+      "exits": { "west": { "to": "rust_kingwood" }, "east": { "to": "rust_amendoim" }, "south": { "to": "rust_einkornflake" } },
       "actions": [
         {
           "id": "pinch_sipo",
@@ -23484,11 +23569,28 @@
         }
       ]
     },
+    "rust_einkornflake": {
+      "name": "Rust Einkornflake",
+      "desc": "A dry einkornflake south of the sipo. Packed rust coats einkornflake.",
+      "brief": "Dry einkornflake, packed rust.",
+      "exits": { "north": { "to": "rust_sipo" } },
+      "actions": [
+        {
+          "id": "pinch_einkornflake",
+          "label": "pinch the einkornflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard einkornflake. They packed it on the sipo and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_amendoim": {
       "name": "Rust Amendoim",
       "desc": "A dry amendoim east of the sipo. Packed rust coats amendoim.",
       "brief": "Dry amendoim, packed rust.",
-      "exits": { "west": { "to": "rust_sipo" }, "east": { "to": "rust_merbau" } },
+      "exits": { "west": { "to": "rust_sipo" }, "east": { "to": "rust_merbau" }, "south": { "to": "rust_freekehflake" } },
       "actions": [
         {
           "id": "pinch_amendoim",
@@ -23501,11 +23603,28 @@
         }
       ]
     },
+    "rust_freekehflake": {
+      "name": "Rust Freekehflake",
+      "desc": "A dry freekehflake south of the amendoim. Packed rust coats freekehflake.",
+      "brief": "Dry freekehflake, packed rust.",
+      "exits": { "north": { "to": "rust_amendoim" } },
+      "actions": [
+        {
+          "id": "pinch_freekehflake",
+          "label": "pinch the freekehflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard freekehflake. They packed it on the amendoim and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_merbau": {
       "name": "Rust Merbau",
       "desc": "A dry merbau east of the amendoim. Packed rust coats merbau.",
       "brief": "Dry merbau, packed rust.",
-      "exits": { "west": { "to": "rust_amendoim" }, "east": { "to": "rust_selangan" } },
+      "exits": { "west": { "to": "rust_amendoim" }, "east": { "to": "rust_selangan" }, "south": { "to": "rust_kamutflake" } },
       "actions": [
         {
           "id": "pinch_merbau",
@@ -23514,6 +23633,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard merbau. They packed it on the amendoim and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_kamutflake": {
+      "name": "Rust Kamutflake",
+      "desc": "A dry kamutflake south of the merbau. Packed rust coats kamutflake.",
+      "brief": "Dry kamutflake, packed rust.",
+      "exits": { "north": { "to": "rust_merbau" } },
+      "actions": [
+        {
+          "id": "pinch_kamutflake",
+          "label": "pinch the kamutflake",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard kamutflake. They packed it on the merbau and packed rust around it."]
           ]
         }
       ]
@@ -40079,6 +40215,9 @@
     "pinch the keruing",
     "go east",
     "pinch the merpauh",
+    "go south",
+    "pinch the freekehgroat",
+    "go north",
     "go east",
     "pinch the sissoo",
     "go west",
@@ -40100,18 +40239,39 @@
     "pinch the gripe",
     "go east",
     "pinch the lugsail",
+    "go south",
+    "pinch the kamutgroat",
+    "go north",
     "go east",
     "pinch the hanks",
+    "go south",
+    "pinch the speltgroat",
+    "go north",
     "go east",
     "pinch the greenheart",
+    "go south",
+    "pinch the triticaleflake",
+    "go north",
     "go east",
     "pinch the kingwood",
+    "go south",
+    "pinch the emmerflake",
+    "go north",
     "go east",
     "pinch the sipo",
+    "go south",
+    "pinch the einkornflake",
+    "go north",
     "go east",
     "pinch the amendoim",
+    "go south",
+    "pinch the freekehflake",
+    "go north",
     "go east",
     "pinch the merbau",
+    "go south",
+    "pinch the kamutflake",
+    "go north",
     "go east",
     "pinch the selangan",
     "go south",
