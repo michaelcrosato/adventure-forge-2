@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15410,
+  "maxScore": 15450,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -18320,7 +18320,7 @@
       "name": "Rust Frankincense",
       "desc": "A dry frankincense east of the constrictor. Packed rust coats frankincense.",
       "brief": "Dry frankincense, packed rust.",
-      "exits": { "west": { "to": "rust_constrictor" }, "east": { "to": "rust_massicot" }, "south": { "to": "rust_cornbolted" } },
+      "exits": { "west": { "to": "rust_constrictor" }, "east": { "to": "rust_massicot" }, "south": { "to": "rust_cornbolted" }, "north": { "to": "rust_durumstoup" } },
       "actions": [
         {
           "id": "pinch_frankincense",
@@ -18329,6 +18329,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard frankincense. They packed it on the constrictor and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumstoup": {
+      "name": "Rust Durumstoup",
+      "desc": "A dry durumstoup north of the frankincense. Packed rust coats durumstoup.",
+      "brief": "Dry durumstoup, packed rust.",
+      "exits": { "south": { "to": "rust_frankincense" } },
+      "actions": [
+        {
+          "id": "pinch_durumstoup",
+          "label": "pinch the durumstoup",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumstoup. They packed it on the frankincense and packed rust around it."]
           ]
         }
       ]
@@ -18354,7 +18371,7 @@
       "name": "Rust Massicot",
       "desc": "A dry massicot east of the frankincense. Packed rust coats massicot.",
       "brief": "Dry massicot, packed rust.",
-      "exits": { "west": { "to": "rust_frankincense" }, "east": { "to": "rust_whitebox" }, "south": { "to": "rust_oatbolted" } },
+      "exits": { "west": { "to": "rust_frankincense" }, "east": { "to": "rust_whitebox" }, "south": { "to": "rust_oatbolted" }, "north": { "to": "rust_foniostoup" } },
       "actions": [
         {
           "id": "pinch_massicot",
@@ -18363,6 +18380,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard massicot. They packed it on the frankincense and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniostoup": {
+      "name": "Rust Foniostoup",
+      "desc": "A dry foniostoup north of the massicot. Packed rust coats foniostoup.",
+      "brief": "Dry foniostoup, packed rust.",
+      "exits": { "south": { "to": "rust_massicot" } },
+      "actions": [
+        {
+          "id": "pinch_foniostoup",
+          "label": "pinch the foniostoup",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniostoup. They packed it on the massicot and packed rust around it."]
           ]
         }
       ]
@@ -18388,7 +18422,7 @@
       "name": "Rust Whitebox",
       "desc": "A dry whitebox east of the massicot. Packed rust coats whitebox.",
       "brief": "Dry whitebox, packed rust.",
-      "exits": { "west": { "to": "rust_massicot" }, "east": { "to": "rust_swampoak" }, "south": { "to": "rust_durumsifted" } },
+      "exits": { "west": { "to": "rust_massicot" }, "east": { "to": "rust_swampoak" }, "south": { "to": "rust_durumsifted" }, "north": { "to": "rust_teffstoup" } },
       "actions": [
         {
           "id": "pinch_whitebox",
@@ -18397,6 +18431,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whitebox. They packed it on the massicot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffstoup": {
+      "name": "Rust Teffstoup",
+      "desc": "A dry teffstoup north of the whitebox. Packed rust coats teffstoup.",
+      "brief": "Dry teffstoup, packed rust.",
+      "exits": { "south": { "to": "rust_whitebox" } },
+      "actions": [
+        {
+          "id": "pinch_teffstoup",
+          "label": "pinch the teffstoup",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffstoup. They packed it on the whitebox and packed rust around it."]
           ]
         }
       ]
@@ -18422,7 +18473,7 @@
       "name": "Rust Swampoak",
       "desc": "A dry swampoak east of the whitebox. Packed rust coats swampoak.",
       "brief": "Dry swampoak, packed rust.",
-      "exits": { "west": { "to": "rust_whitebox" }, "east": { "to": "rust_mulga" }, "south": { "to": "rust_foniosifted" } },
+      "exits": { "west": { "to": "rust_whitebox" }, "east": { "to": "rust_mulga" }, "south": { "to": "rust_foniosifted" }, "north": { "to": "rust_barleystoup" } },
       "actions": [
         {
           "id": "pinch_swampoak",
@@ -18431,6 +18482,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard swampoak. They packed it on the whitebox and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleystoup": {
+      "name": "Rust Barleystoup",
+      "desc": "A dry barleystoup north of the swampoak. Packed rust coats barleystoup.",
+      "brief": "Dry barleystoup, packed rust.",
+      "exits": { "south": { "to": "rust_swampoak" } },
+      "actions": [
+        {
+          "id": "pinch_barleystoup",
+          "label": "pinch the barleystoup",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleystoup. They packed it on the swampoak and packed rust around it."]
           ]
         }
       ]
@@ -18456,7 +18524,7 @@
       "name": "Rust Mulga",
       "desc": "A dry mulga east of the swampoak. Packed rust coats mulga.",
       "brief": "Dry mulga, packed rust.",
-      "exits": { "west": { "to": "rust_swampoak" }, "east": { "to": "rust_pencilpine" }, "south": { "to": "rust_teffsifted" } },
+      "exits": { "west": { "to": "rust_swampoak" }, "east": { "to": "rust_pencilpine" }, "south": { "to": "rust_teffsifted" }, "north": { "to": "rust_sorghumstoup" } },
       "actions": [
         {
           "id": "pinch_mulga",
@@ -18465,6 +18533,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mulga. They packed it on the swampoak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumstoup": {
+      "name": "Rust Sorghumstoup",
+      "desc": "A dry sorghumstoup north of the mulga. Packed rust coats sorghumstoup.",
+      "brief": "Dry sorghumstoup, packed rust.",
+      "exits": { "south": { "to": "rust_mulga" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumstoup",
+          "label": "pinch the sorghumstoup",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumstoup. They packed it on the mulga and packed rust around it."]
           ]
         }
       ]
@@ -18490,7 +18575,7 @@
       "name": "Rust Pencilpine",
       "desc": "A dry pencilpine east of the mulga. Packed rust coats pencilpine.",
       "brief": "Dry pencilpine, packed rust.",
-      "exits": { "west": { "to": "rust_mulga" }, "east": { "to": "rust_redspruce" }, "south": { "to": "rust_barleysifted" } },
+      "exits": { "west": { "to": "rust_mulga" }, "east": { "to": "rust_redspruce" }, "south": { "to": "rust_barleysifted" }, "north": { "to": "rust_milletstoup" } },
       "actions": [
         {
           "id": "pinch_pencilpine",
@@ -18499,6 +18584,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard pencilpine. They packed it on the mulga and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletstoup": {
+      "name": "Rust Milletstoup",
+      "desc": "A dry milletstoup north of the pencilpine. Packed rust coats milletstoup.",
+      "brief": "Dry milletstoup, packed rust.",
+      "exits": { "south": { "to": "rust_pencilpine" } },
+      "actions": [
+        {
+          "id": "pinch_milletstoup",
+          "label": "pinch the milletstoup",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletstoup. They packed it on the pencilpine and packed rust around it."]
           ]
         }
       ]
@@ -18524,7 +18626,7 @@
       "name": "Rust Redspruce",
       "desc": "A dry redspruce east of the pencilpine. Packed rust coats redspruce.",
       "brief": "Dry redspruce, packed rust.",
-      "exits": { "west": { "to": "rust_pencilpine" }, "east": { "to": "rust_kawakawa" }, "south": { "to": "rust_lama" } },
+      "exits": { "west": { "to": "rust_pencilpine" }, "east": { "to": "rust_kawakawa" }, "south": { "to": "rust_lama" }, "north": { "to": "rust_cornstoup" } },
       "actions": [
         {
           "id": "pinch_redspruce",
@@ -18533,6 +18635,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redspruce. They packed it on the pencilpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornstoup": {
+      "name": "Rust Cornstoup",
+      "desc": "A dry cornstoup north of the redspruce. Packed rust coats cornstoup.",
+      "brief": "Dry cornstoup, packed rust.",
+      "exits": { "south": { "to": "rust_redspruce" } },
+      "actions": [
+        {
+          "id": "pinch_cornstoup",
+          "label": "pinch the cornstoup",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornstoup. They packed it on the redspruce and packed rust around it."]
           ]
         }
       ]
@@ -18592,7 +18711,7 @@
       "name": "Rust Grating",
       "desc": "A dry grating east of the band. Packed rust coats a grating.",
       "brief": "Dry grating, packed rust.",
-      "exits": { "west": { "to": "rust_band" }, "east": { "to": "rust_surgeon" }, "south": { "to": "rust_sorghumsifted" } },
+      "exits": { "west": { "to": "rust_band" }, "east": { "to": "rust_surgeon" }, "south": { "to": "rust_sorghumsifted" }, "north": { "to": "rust_oatstoup" } },
       "actions": [
         {
           "id": "pinch_grating",
@@ -18601,6 +18720,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard grating. They laid it on the band and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatstoup": {
+      "name": "Rust Oatstoup",
+      "desc": "A dry oatstoup north of the grating. Packed rust coats oatstoup.",
+      "brief": "Dry oatstoup, packed rust.",
+      "exits": { "south": { "to": "rust_grating" } },
+      "actions": [
+        {
+          "id": "pinch_oatstoup",
+          "label": "pinch the oatstoup",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatstoup. They packed it on the grating and packed rust around it."]
           ]
         }
       ]
@@ -55525,36 +55661,57 @@
     "go north",
     "go east",
     "pinch the frankincense",
+    "go north",
+    "pinch the durumstoup",
+    "go south",
     "go south",
     "pinch the cornbolted",
     "go north",
     "go east",
     "pinch the massicot",
+    "go north",
+    "pinch the foniostoup",
+    "go south",
     "go south",
     "pinch the oatbolted",
     "go north",
     "go east",
     "pinch the whitebox",
+    "go north",
+    "pinch the teffstoup",
+    "go south",
     "go south",
     "pinch the durumsifted",
     "go north",
     "go east",
     "pinch the swampoak",
+    "go north",
+    "pinch the barleystoup",
+    "go south",
     "go south",
     "pinch the foniosifted",
     "go north",
     "go east",
     "pinch the mulga",
+    "go north",
+    "pinch the sorghumstoup",
+    "go south",
     "go south",
     "pinch the teffsifted",
     "go north",
     "go east",
     "pinch the pencilpine",
+    "go north",
+    "pinch the milletstoup",
+    "go south",
     "go south",
     "pinch the barleysifted",
     "go north",
     "go east",
     "pinch the redspruce",
+    "go north",
+    "pinch the cornstoup",
+    "go south",
     "go south",
     "pinch the lama",
     "go north",
@@ -55574,6 +55731,9 @@
     "pinch the band",
     "go east",
     "pinch the grating",
+    "go north",
+    "pinch the oatstoup",
+    "go south",
     "go south",
     "pinch the sorghumsifted",
     "go north",
