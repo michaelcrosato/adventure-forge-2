@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9890,
+  "maxScore": 9930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -26208,7 +26208,7 @@
       "name": "Rust Bollard",
       "desc": "A dry bollard east of the flue. Packed rust coats a bollard.",
       "brief": "Dry bollard, packed rust.",
-      "exits": { "west": { "to": "rust_flue" }, "east": { "to": "rust_heavingline" } },
+      "exits": { "west": { "to": "rust_flue" }, "east": { "to": "rust_heavingline" }, "south": { "to": "rust_blackeye" } },
       "actions": [
         {
           "id": "pinch_bollard",
@@ -26221,11 +26221,28 @@
         }
       ]
     },
+    "rust_blackeye": {
+      "name": "Rust Blackeye",
+      "desc": "A dry blackeye south of the bollard. Packed rust coats blackeye.",
+      "brief": "Dry blackeye, packed rust.",
+      "exits": { "north": { "to": "rust_bollard" } },
+      "actions": [
+        {
+          "id": "pinch_blackeye",
+          "label": "pinch the blackeye",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard blackeye. They packed it on the bollard and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_heavingline": {
       "name": "Rust Heavingline",
       "desc": "A dry heavingline east of the bollard. Packed rust coats a heavingline.",
       "brief": "Dry heavingline, packed rust.",
-      "exits": { "west": { "to": "rust_bollard" }, "east": { "to": "rust_sailtwine" } },
+      "exits": { "west": { "to": "rust_bollard" }, "east": { "to": "rust_sailtwine" }, "south": { "to": "rust_fieldpea" } },
       "actions": [
         {
           "id": "pinch_heavingline",
@@ -26238,11 +26255,28 @@
         }
       ]
     },
+    "rust_fieldpea": {
+      "name": "Rust Fieldpea",
+      "desc": "A dry fieldpea south of the heavingline. Packed rust coats fieldpea.",
+      "brief": "Dry fieldpea, packed rust.",
+      "exits": { "north": { "to": "rust_heavingline" } },
+      "actions": [
+        {
+          "id": "pinch_fieldpea",
+          "label": "pinch the fieldpea",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fieldpea. They packed it on the heavingline and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sailtwine": {
       "name": "Rust Sailtwine",
       "desc": "A dry sailtwine east of the heavingline. Packed rust coats a sailtwine.",
       "brief": "Dry sailtwine, packed rust.",
-      "exits": { "west": { "to": "rust_heavingline" }, "east": { "to": "rust_sandalwood" } },
+      "exits": { "west": { "to": "rust_heavingline" }, "east": { "to": "rust_sandalwood" }, "south": { "to": "rust_lentilbean" } },
       "actions": [
         {
           "id": "pinch_sailtwine",
@@ -26255,11 +26289,28 @@
         }
       ]
     },
+    "rust_lentilbean": {
+      "name": "Rust Lentilbean",
+      "desc": "A dry lentilbean south of the sailtwine. Packed rust coats lentilbean.",
+      "brief": "Dry lentilbean, packed rust.",
+      "exits": { "north": { "to": "rust_sailtwine" } },
+      "actions": [
+        {
+          "id": "pinch_lentilbean",
+          "label": "pinch the lentilbean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lentilbean. They packed it on the sailtwine and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sandalwood": {
       "name": "Rust Sandalwood",
       "desc": "A dry sandalwood east of the sailtwine. Packed rust coats sandalwood.",
       "brief": "Dry sandalwood, packed rust.",
-      "exits": { "west": { "to": "rust_sailtwine" }, "east": { "to": "rust_strontia" } },
+      "exits": { "west": { "to": "rust_sailtwine" }, "east": { "to": "rust_strontia" }, "south": { "to": "rust_mungbean" } },
       "actions": [
         {
           "id": "pinch_sandalwood",
@@ -26272,11 +26323,28 @@
         }
       ]
     },
+    "rust_mungbean": {
+      "name": "Rust Mungbean",
+      "desc": "A dry mungbean south of the sandalwood. Packed rust coats mungbean.",
+      "brief": "Dry mungbean, packed rust.",
+      "exits": { "north": { "to": "rust_sandalwood" } },
+      "actions": [
+        {
+          "id": "pinch_mungbean",
+          "label": "pinch the mungbean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mungbean. They packed it on the sandalwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_strontia": {
       "name": "Rust Strontia",
       "desc": "A dry strontia east of the sandalwood. Packed rust coats strontia.",
       "brief": "Dry strontia, packed rust.",
-      "exits": { "west": { "to": "rust_sandalwood" }, "east": { "to": "rust_garnet" } },
+      "exits": { "west": { "to": "rust_sandalwood" }, "east": { "to": "rust_garnet" }, "south": { "to": "rust_jackbean" } },
       "actions": [
         {
           "id": "pinch_strontia",
@@ -26289,11 +26357,28 @@
         }
       ]
     },
+    "rust_jackbean": {
+      "name": "Rust Jackbean",
+      "desc": "A dry jackbean south of the strontia. Packed rust coats jackbean.",
+      "brief": "Dry jackbean, packed rust.",
+      "exits": { "north": { "to": "rust_strontia" } },
+      "actions": [
+        {
+          "id": "pinch_jackbean",
+          "label": "pinch the jackbean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard jackbean. They packed it on the strontia and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_garnet": {
       "name": "Rust Garnet",
       "desc": "A dry garnet east of the strontia. Packed rust coats garnet.",
       "brief": "Dry garnet, packed rust.",
-      "exits": { "west": { "to": "rust_strontia" }, "east": { "to": "rust_granite" } },
+      "exits": { "west": { "to": "rust_strontia" }, "east": { "to": "rust_granite" }, "south": { "to": "rust_velvetbean" } },
       "actions": [
         {
           "id": "pinch_garnet",
@@ -26306,11 +26391,28 @@
         }
       ]
     },
+    "rust_velvetbean": {
+      "name": "Rust Velvetbean",
+      "desc": "A dry velvetbean south of the garnet. Packed rust coats velvetbean.",
+      "brief": "Dry velvetbean, packed rust.",
+      "exits": { "north": { "to": "rust_garnet" } },
+      "actions": [
+        {
+          "id": "pinch_velvetbean",
+          "label": "pinch the velvetbean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard velvetbean. They packed it on the garnet and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_granite": {
       "name": "Rust Granite",
       "desc": "A dry granite east of the garnet. Packed rust coats granite.",
       "brief": "Dry granite, packed rust.",
-      "exits": { "west": { "to": "rust_garnet" }, "east": { "to": "rust_goethite" } },
+      "exits": { "west": { "to": "rust_garnet" }, "east": { "to": "rust_goethite" }, "south": { "to": "rust_yardlong" } },
       "actions": [
         {
           "id": "pinch_granite",
@@ -26323,11 +26425,28 @@
         }
       ]
     },
+    "rust_yardlong": {
+      "name": "Rust Yardlong",
+      "desc": "A dry yardlong south of the granite. Packed rust coats yardlong.",
+      "brief": "Dry yardlong, packed rust.",
+      "exits": { "north": { "to": "rust_granite" } },
+      "actions": [
+        {
+          "id": "pinch_yardlong",
+          "label": "pinch the yardlong",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard yardlong. They packed it on the granite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_goethite": {
       "name": "Rust Goethite",
       "desc": "A dry goethite east of the granite. Packed rust coats goethite.",
       "brief": "Dry goethite, packed rust.",
-      "exits": { "west": { "to": "rust_granite" }, "east": { "to": "rust_vivianite" } },
+      "exits": { "west": { "to": "rust_granite" }, "east": { "to": "rust_vivianite" }, "south": { "to": "rust_tepary" } },
       "actions": [
         {
           "id": "pinch_goethite",
@@ -26336,6 +26455,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard goethite. They packed it on the granite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tepary": {
+      "name": "Rust Tepary",
+      "desc": "A dry tepary south of the goethite. Packed rust coats tepary.",
+      "brief": "Dry tepary, packed rust.",
+      "exits": { "north": { "to": "rust_goethite" } },
+      "actions": [
+        {
+          "id": "pinch_tepary",
+          "label": "pinch the tepary",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tepary. They packed it on the goethite and packed rust around it."]
           ]
         }
       ]
@@ -38217,20 +38353,44 @@
     "go east",
     "go east",
     "pinch the bollard",
+    "go south",
+    "pinch the blackeye",
+    "go north",
     "go east",
     "pinch the heavingline",
+    "go south",
+    "pinch the fieldpea",
+    "go north",
     "go east",
     "pinch the sailtwine",
+    "go south",
+    "pinch the lentilbean",
+    "go north",
     "go east",
     "pinch the sandalwood",
+    "go south",
+    "pinch the mungbean",
+    "go north",
     "go east",
     "pinch the strontia",
+    "go south",
+    "pinch the jackbean",
+    "go north",
     "go east",
     "pinch the garnet",
+    "go south",
+    "pinch the velvetbean",
+    "go north",
     "go east",
     "pinch the granite",
+    "go south",
+    "pinch the yardlong",
+    "go north",
     "go east",
     "pinch the goethite",
+    "go south",
+    "pinch the tepary",
+    "go north",
     "go east",
     "pinch the vivianite",
     "go south",
