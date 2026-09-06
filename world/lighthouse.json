@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8730,
+  "maxScore": 8770,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -9752,7 +9752,7 @@
       "name": "Rust Hiba",
       "desc": "A dry hiba east of the lebanoncedar. Packed rust coats hiba.",
       "brief": "Dry hiba, packed rust.",
-      "exits": { "west": { "to": "rust_lebanoncedar" }, "east": { "to": "rust_rewarewa" } },
+      "exits": { "west": { "to": "rust_lebanoncedar" }, "east": { "to": "rust_rewarewa" }, "south": { "to": "rust_olive" } },
       "actions": [
         {
           "id": "pinch_hiba",
@@ -9761,6 +9761,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hiba. They packed it on the lebanoncedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_olive": {
+      "name": "Rust Olive",
+      "desc": "A dry olive south of the hiba. Packed rust coats olive.",
+      "brief": "Dry olive, packed rust.",
+      "exits": { "north": { "to": "rust_hiba" } },
+      "actions": [
+        {
+          "id": "pinch_olive",
+          "label": "pinch the olive",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard olive. They packed it on the hiba and packed rust around it."]
           ]
         }
       ]
@@ -9820,7 +9837,7 @@
       "name": "Rust Brace",
       "desc": "A dry brace east of the forestay. Packed rust coats a brace.",
       "brief": "Dry brace, packed rust.",
-      "exits": { "west": { "to": "rust_forestay" }, "east": { "to": "rust_butterfly" } },
+      "exits": { "west": { "to": "rust_forestay" }, "east": { "to": "rust_butterfly" }, "south": { "to": "rust_avocado" } },
       "actions": [
         {
           "id": "pinch_brace",
@@ -9833,11 +9850,28 @@
         }
       ]
     },
+    "rust_avocado": {
+      "name": "Rust Avocado",
+      "desc": "A dry avocado south of the brace. Packed rust coats avocado.",
+      "brief": "Dry avocado, packed rust.",
+      "exits": { "north": { "to": "rust_brace" } },
+      "actions": [
+        {
+          "id": "pinch_avocado",
+          "label": "pinch the avocado",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard avocado. They packed it on the brace and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_butterfly": {
       "name": "Rust Butterfly",
       "desc": "A dry butterfly east of the brace. Packed rust coats a butterfly.",
       "brief": "Dry butterfly, packed rust.",
-      "exits": { "west": { "to": "rust_brace" }, "east": { "to": "rust_verdigris" } },
+      "exits": { "west": { "to": "rust_brace" }, "east": { "to": "rust_verdigris" }, "south": { "to": "rust_mango" } },
       "actions": [
         {
           "id": "pinch_butterfly",
@@ -9850,11 +9884,28 @@
         }
       ]
     },
+    "rust_mango": {
+      "name": "Rust Mango",
+      "desc": "A dry mango south of the butterfly. Packed rust coats mango.",
+      "brief": "Dry mango, packed rust.",
+      "exits": { "north": { "to": "rust_butterfly" } },
+      "actions": [
+        {
+          "id": "pinch_mango",
+          "label": "pinch the mango",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mango. They packed it on the butterfly and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_verdigris": {
       "name": "Rust Verdigris",
       "desc": "A dry verdigris east of the butterfly. Packed rust coats verdigris.",
       "brief": "Dry verdigris, packed rust.",
-      "exits": { "west": { "to": "rust_butterfly" }, "east": { "to": "rust_viridian" } },
+      "exits": { "west": { "to": "rust_butterfly" }, "east": { "to": "rust_viridian" }, "south": { "to": "rust_papaya" } },
       "actions": [
         {
           "id": "pinch_verdigris",
@@ -9867,11 +9918,28 @@
         }
       ]
     },
+    "rust_papaya": {
+      "name": "Rust Papaya",
+      "desc": "A dry papaya south of the verdigris. Packed rust coats papaya.",
+      "brief": "Dry papaya, packed rust.",
+      "exits": { "north": { "to": "rust_verdigris" } },
+      "actions": [
+        {
+          "id": "pinch_papaya",
+          "label": "pinch the papaya",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard papaya. They packed it on the verdigris and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_viridian": {
       "name": "Rust Viridian",
       "desc": "A dry viridian east of the verdigris. Packed rust coats viridian.",
       "brief": "Dry viridian, packed rust.",
-      "exits": { "west": { "to": "rust_verdigris" }, "east": { "to": "rust_phthalo" } },
+      "exits": { "west": { "to": "rust_verdigris" }, "east": { "to": "rust_phthalo" }, "south": { "to": "rust_guava" } },
       "actions": [
         {
           "id": "pinch_viridian",
@@ -9884,11 +9952,28 @@
         }
       ]
     },
+    "rust_guava": {
+      "name": "Rust Guava",
+      "desc": "A dry guava south of the viridian. Packed rust coats guava.",
+      "brief": "Dry guava, packed rust.",
+      "exits": { "north": { "to": "rust_viridian" } },
+      "actions": [
+        {
+          "id": "pinch_guava",
+          "label": "pinch the guava",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard guava. They packed it on the viridian and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_phthalo": {
       "name": "Rust Phthalo",
       "desc": "A dry phthalo east of the viridian. Packed rust coats phthalo.",
       "brief": "Dry phthalo, packed rust.",
-      "exits": { "west": { "to": "rust_viridian" }, "east": { "to": "rust_pondpine" } },
+      "exits": { "west": { "to": "rust_viridian" }, "east": { "to": "rust_pondpine" }, "south": { "to": "rust_feijoa" } },
       "actions": [
         {
           "id": "pinch_phthalo",
@@ -9897,6 +9982,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard phthalo. They packed it on the viridian and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_feijoa": {
+      "name": "Rust Feijoa",
+      "desc": "A dry feijoa south of the phthalo. Packed rust coats feijoa.",
+      "brief": "Dry feijoa, packed rust.",
+      "exits": { "north": { "to": "rust_phthalo" } },
+      "actions": [
+        {
+          "id": "pinch_feijoa",
+          "label": "pinch the feijoa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard feijoa. They packed it on the phthalo and packed rust around it."]
           ]
         }
       ]
@@ -9939,7 +10041,7 @@
       "name": "Rust Arborvitae",
       "desc": "A dry arborvitae east of the pondpine. Packed rust coats arborvitae.",
       "brief": "Dry arborvitae, packed rust.",
-      "exits": { "west": { "to": "rust_pondpine" }, "east": { "to": "rust_pinsapo" } },
+      "exits": { "west": { "to": "rust_pondpine" }, "east": { "to": "rust_pinsapo" }, "south": { "to": "rust_cherimoya" } },
       "actions": [
         {
           "id": "pinch_arborvitae",
@@ -9948,6 +10050,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard arborvitae. They packed it on the pondpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cherimoya": {
+      "name": "Rust Cherimoya",
+      "desc": "A dry cherimoya south of the arborvitae. Packed rust coats cherimoya.",
+      "brief": "Dry cherimoya, packed rust.",
+      "exits": { "north": { "to": "rust_arborvitae" } },
+      "actions": [
+        {
+          "id": "pinch_cherimoya",
+          "label": "pinch the cherimoya",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cherimoya. They packed it on the arborvitae and packed rust around it."]
           ]
         }
       ]
@@ -10058,7 +10177,7 @@
       "name": "Rust Palomar",
       "desc": "A dry palomar east of the topsail. Packed rust coats a palomar.",
       "brief": "Dry palomar, packed rust.",
-      "exits": { "west": { "to": "rust_topsail" }, "east": { "to": "rust_terreverte" } },
+      "exits": { "west": { "to": "rust_topsail" }, "east": { "to": "rust_terreverte" }, "south": { "to": "rust_sapodilla" } },
       "actions": [
         {
           "id": "pinch_palomar",
@@ -10067,6 +10186,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palomar. They cinched it on the topsail and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sapodilla": {
+      "name": "Rust Sapodilla",
+      "desc": "A dry sapodilla south of the palomar. Packed rust coats sapodilla.",
+      "brief": "Dry sapodilla, packed rust.",
+      "exits": { "north": { "to": "rust_palomar" } },
+      "actions": [
+        {
+          "id": "pinch_sapodilla",
+          "label": "pinch the sapodilla",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sapodilla. They packed it on the palomar and packed rust around it."]
           ]
         }
       ]
@@ -31333,6 +31469,9 @@
     "go north",
     "go east",
     "pinch the hiba",
+    "go south",
+    "pinch the olive",
+    "go north",
     "go east",
     "pinch the rewarewa",
     "go west",
@@ -31351,14 +31490,29 @@
     "pinch the forestay",
     "go east",
     "pinch the brace",
+    "go south",
+    "pinch the avocado",
+    "go north",
     "go east",
     "pinch the butterfly",
+    "go south",
+    "pinch the mango",
+    "go north",
     "go east",
     "pinch the verdigris",
+    "go south",
+    "pinch the papaya",
+    "go north",
     "go east",
     "pinch the viridian",
+    "go south",
+    "pinch the guava",
+    "go north",
     "go east",
     "pinch the phthalo",
+    "go south",
+    "pinch the feijoa",
+    "go north",
     "go east",
     "pinch the pondpine",
     "go south",
@@ -31366,6 +31520,9 @@
     "go north",
     "go east",
     "pinch the arborvitae",
+    "go south",
+    "pinch the cherimoya",
+    "go north",
     "go east",
     "pinch the pinsapo",
     "go south",
@@ -31392,6 +31549,9 @@
     "pinch the topsail",
     "go east",
     "pinch the palomar",
+    "go south",
+    "pinch the sapodilla",
+    "go north",
     "go east",
     "pinch the terreverte",
     "go east",
