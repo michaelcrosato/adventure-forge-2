@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8930,
+  "maxScore": 8970,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -12710,7 +12710,7 @@
       "name": "Rust Apron",
       "desc": "A dry apron east of the rail. Packed rust coats an apron.",
       "brief": "Dry apron, packed rust.",
-      "exits": { "west": { "to": "rust_rail" }, "east": { "to": "rust_stunsail" } },
+      "exits": { "west": { "to": "rust_rail" }, "east": { "to": "rust_stunsail" }, "south": { "to": "rust_tomato" } },
       "actions": [
         {
           "id": "pinch_apron",
@@ -12723,11 +12723,28 @@
         }
       ]
     },
+    "rust_tomato": {
+      "name": "Rust Tomato",
+      "desc": "A dry tomato south of the apron. Packed rust coats tomato.",
+      "brief": "Dry tomato, packed rust.",
+      "exits": { "north": { "to": "rust_apron" } },
+      "actions": [
+        {
+          "id": "pinch_tomato",
+          "label": "pinch the tomato",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tomato. They packed it on the apron and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_stunsail": {
       "name": "Rust Stunsail",
       "desc": "A dry stunsail east of the apron. Packed rust coats a stunsail.",
       "brief": "Dry stunsail, packed rust.",
-      "exits": { "west": { "to": "rust_apron" }, "east": { "to": "rust_bloodknot" } },
+      "exits": { "west": { "to": "rust_apron" }, "east": { "to": "rust_bloodknot" }, "south": { "to": "rust_pepper" } },
       "actions": [
         {
           "id": "pinch_stunsail",
@@ -12740,11 +12757,28 @@
         }
       ]
     },
+    "rust_pepper": {
+      "name": "Rust Pepper",
+      "desc": "A dry pepper south of the stunsail. Packed rust coats pepper.",
+      "brief": "Dry pepper, packed rust.",
+      "exits": { "north": { "to": "rust_stunsail" } },
+      "actions": [
+        {
+          "id": "pinch_pepper",
+          "label": "pinch the pepper",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pepper. They packed it on the stunsail and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_bloodknot": {
       "name": "Rust Bloodknot",
       "desc": "A dry bloodknot east of the stunsail. Packed rust coats a bloodknot.",
       "brief": "Dry bloodknot, packed rust.",
-      "exits": { "west": { "to": "rust_stunsail" }, "east": { "to": "rust_logwood" } },
+      "exits": { "west": { "to": "rust_stunsail" }, "east": { "to": "rust_logwood" }, "south": { "to": "rust_eggplant" } },
       "actions": [
         {
           "id": "pinch_bloodknot",
@@ -12757,11 +12791,28 @@
         }
       ]
     },
+    "rust_eggplant": {
+      "name": "Rust Eggplant",
+      "desc": "A dry eggplant south of the bloodknot. Packed rust coats eggplant.",
+      "brief": "Dry eggplant, packed rust.",
+      "exits": { "north": { "to": "rust_bloodknot" } },
+      "actions": [
+        {
+          "id": "pinch_eggplant",
+          "label": "pinch the eggplant",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard eggplant. They packed it on the bloodknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_logwood": {
       "name": "Rust Logwood",
       "desc": "A dry logwood east of the bloodknot. Packed rust coats logwood.",
       "brief": "Dry logwood, packed rust.",
-      "exits": { "west": { "to": "rust_bloodknot" }, "east": { "to": "rust_cassel" } },
+      "exits": { "west": { "to": "rust_bloodknot" }, "east": { "to": "rust_cassel" }, "south": { "to": "rust_okra" } },
       "actions": [
         {
           "id": "pinch_logwood",
@@ -12774,11 +12825,28 @@
         }
       ]
     },
+    "rust_okra": {
+      "name": "Rust Okra",
+      "desc": "A dry okra south of the logwood. Packed rust coats okra.",
+      "brief": "Dry okra, packed rust.",
+      "exits": { "north": { "to": "rust_logwood" } },
+      "actions": [
+        {
+          "id": "pinch_okra",
+          "label": "pinch the okra",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard okra. They packed it on the logwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cassel": {
       "name": "Rust Cassel",
       "desc": "A dry cassel east of the logwood. Packed rust coats cassel.",
       "brief": "Dry cassel, packed rust.",
-      "exits": { "west": { "to": "rust_logwood" }, "east": { "to": "rust_westernwhite" } },
+      "exits": { "west": { "to": "rust_logwood" }, "east": { "to": "rust_westernwhite" }, "south": { "to": "rust_corn" } },
       "actions": [
         {
           "id": "pinch_cassel",
@@ -12787,6 +12855,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cassel. They packed it on the logwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corn": {
+      "name": "Rust Corn",
+      "desc": "A dry corn south of the cassel. Packed rust coats corn.",
+      "brief": "Dry corn, packed rust.",
+      "exits": { "north": { "to": "rust_cassel" } },
+      "actions": [
+        {
+          "id": "pinch_corn",
+          "label": "pinch the corn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corn. They packed it on the cassel and packed rust around it."]
           ]
         }
       ]
@@ -12829,7 +12914,7 @@
       "name": "Rust Incensecedar",
       "desc": "A dry incensecedar east of the westernwhite. Packed rust coats incensecedar.",
       "brief": "Dry incensecedar, packed rust.",
-      "exits": { "west": { "to": "rust_westernwhite" }, "east": { "to": "rust_bornmueller" } },
+      "exits": { "west": { "to": "rust_westernwhite" }, "east": { "to": "rust_bornmueller" }, "south": { "to": "rust_bean" } },
       "actions": [
         {
           "id": "pinch_incensecedar",
@@ -12838,6 +12923,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard incensecedar. They packed it on the westernwhite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bean": {
+      "name": "Rust Bean",
+      "desc": "A dry bean south of the incensecedar. Packed rust coats bean.",
+      "brief": "Dry bean, packed rust.",
+      "exits": { "north": { "to": "rust_incensecedar" } },
+      "actions": [
+        {
+          "id": "pinch_bean",
+          "label": "pinch the bean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bean. They packed it on the incensecedar and packed rust around it."]
           ]
         }
       ]
@@ -12880,7 +12982,7 @@
       "name": "Rust Keteleeria",
       "desc": "A dry keteleeria east of the bornmueller. Packed rust coats keteleeria.",
       "brief": "Dry keteleeria, packed rust.",
-      "exits": { "west": { "to": "rust_bornmueller" }, "east": { "to": "rust_taraire" } },
+      "exits": { "west": { "to": "rust_bornmueller" }, "east": { "to": "rust_taraire" }, "south": { "to": "rust_pea" } },
       "actions": [
         {
           "id": "pinch_keteleeria",
@@ -12889,6 +12991,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard keteleeria. They packed it on the bornmueller and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_pea": {
+      "name": "Rust Pea",
+      "desc": "A dry pea south of the keteleeria. Packed rust coats pea.",
+      "brief": "Dry pea, packed rust.",
+      "exits": { "north": { "to": "rust_keteleeria" } },
+      "actions": [
+        {
+          "id": "pinch_pea",
+          "label": "pinch the pea",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pea. They packed it on the keteleeria and packed rust around it."]
           ]
         }
       ]
@@ -12948,7 +13067,7 @@
       "name": "Rust Coiling",
       "desc": "A dry coiling east of the covering. Packed rust coats coiling.",
       "brief": "Dry coiling, packed rust.",
-      "exits": { "west": { "to": "rust_covering" }, "east": { "to": "rust_labdanum" } },
+      "exits": { "west": { "to": "rust_covering" }, "east": { "to": "rust_labdanum" }, "south": { "to": "rust_lentil" } },
       "actions": [
         {
           "id": "pinch_coiling",
@@ -12957,6 +13076,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coiling. They laid it on the covering and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_lentil": {
+      "name": "Rust Lentil",
+      "desc": "A dry lentil south of the coiling. Packed rust coats lentil.",
+      "brief": "Dry lentil, packed rust.",
+      "exits": { "north": { "to": "rust_coiling" } },
+      "actions": [
+        {
+          "id": "pinch_lentil",
+          "label": "pinch the lentil",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lentil. They packed it on the coiling and packed rust around it."]
           ]
         }
       ]
@@ -31432,14 +31568,29 @@
     "go east",
     "go east",
     "pinch the apron",
+    "go south",
+    "pinch the tomato",
+    "go north",
     "go east",
     "pinch the stunsail",
+    "go south",
+    "pinch the pepper",
+    "go north",
     "go east",
     "pinch the bloodknot",
+    "go south",
+    "pinch the eggplant",
+    "go north",
     "go east",
     "pinch the logwood",
+    "go south",
+    "pinch the okra",
+    "go north",
     "go east",
     "pinch the cassel",
+    "go south",
+    "pinch the corn",
+    "go north",
     "go east",
     "pinch the westernwhite",
     "go south",
@@ -31447,6 +31598,9 @@
     "go north",
     "go east",
     "pinch the incensecedar",
+    "go south",
+    "pinch the bean",
+    "go north",
     "go east",
     "pinch the bornmueller",
     "go south",
@@ -31454,6 +31608,9 @@
     "go north",
     "go east",
     "pinch the keteleeria",
+    "go south",
+    "pinch the pea",
+    "go north",
     "go east",
     "pinch the taraire",
     "go west",
@@ -32547,6 +32704,9 @@
     "pinch the covering",
     "go east",
     "pinch the coiling",
+    "go south",
+    "pinch the lentil",
+    "go north",
     "go east",
     "pinch the labdanum",
     "go east",
