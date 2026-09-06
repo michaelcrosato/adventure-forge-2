@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10490,
+  "maxScore": 10530,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -23862,7 +23862,7 @@
       "name": "Rust Anthonyite",
       "desc": "A dry anthonyite east of the smaltite. Packed rust coats anthonyite.",
       "brief": "Dry anthonyite, packed rust.",
-      "exits": { "west": { "to": "rust_smaltite" }, "east": { "to": "rust_lollingite" } },
+      "exits": { "west": { "to": "rust_smaltite" }, "east": { "to": "rust_lollingite" }, "south": { "to": "rust_wheatberry" } },
       "actions": [
         {
           "id": "pinch_anthonyite",
@@ -23871,6 +23871,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard anthonyite. They packed it on the smaltite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_wheatberry": {
+      "name": "Rust Wheatberry",
+      "desc": "A dry wheatberry south of the anthonyite. Packed rust coats wheatberry.",
+      "brief": "Dry wheatberry, packed rust.",
+      "exits": { "north": { "to": "rust_anthonyite" } },
+      "actions": [
+        {
+          "id": "pinch_wheatberry",
+          "label": "pinch the wheatberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatberry. They packed it on the anthonyite and packed rust around it."]
           ]
         }
       ]
@@ -23930,7 +23947,7 @@
       "name": "Rust Mast",
       "desc": "A dry mast east of the stack. Packed rust coats a mast.",
       "brief": "Dry mast, packed rust.",
-      "exits": { "west": { "to": "rust_stack" }, "east": { "to": "rust_nettles" } },
+      "exits": { "west": { "to": "rust_stack" }, "east": { "to": "rust_nettles" }, "south": { "to": "rust_oatberry" } },
       "actions": [
         {
           "id": "pinch_mast",
@@ -23943,11 +23960,28 @@
         }
       ]
     },
+    "rust_oatberry": {
+      "name": "Rust Oatberry",
+      "desc": "A dry oatberry south of the mast. Packed rust coats oatberry.",
+      "brief": "Dry oatberry, packed rust.",
+      "exits": { "north": { "to": "rust_mast" } },
+      "actions": [
+        {
+          "id": "pinch_oatberry",
+          "label": "pinch the oatberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatberry. They packed it on the mast and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_nettles": {
       "name": "Rust Nettles",
       "desc": "A dry nettles east of the mast. Packed rust coats nettles.",
       "brief": "Dry nettles, packed rust.",
-      "exits": { "west": { "to": "rust_mast" }, "east": { "to": "rust_leechrope" } },
+      "exits": { "west": { "to": "rust_mast" }, "east": { "to": "rust_leechrope" }, "south": { "to": "rust_ryeberry" } },
       "actions": [
         {
           "id": "pinch_nettles",
@@ -23960,11 +23994,28 @@
         }
       ]
     },
+    "rust_ryeberry": {
+      "name": "Rust Ryeberry",
+      "desc": "A dry ryeberry south of the nettles. Packed rust coats ryeberry.",
+      "brief": "Dry ryeberry, packed rust.",
+      "exits": { "north": { "to": "rust_nettles" } },
+      "actions": [
+        {
+          "id": "pinch_ryeberry",
+          "label": "pinch the ryeberry",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryeberry. They packed it on the nettles and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_leechrope": {
       "name": "Rust Leechrope",
       "desc": "A dry leechrope east of the nettles. Packed rust coats a leechrope.",
       "brief": "Dry leechrope, packed rust.",
-      "exits": { "west": { "to": "rust_nettles" }, "east": { "to": "rust_balsa" } },
+      "exits": { "west": { "to": "rust_nettles" }, "east": { "to": "rust_balsa" }, "south": { "to": "rust_pumpkinflour" } },
       "actions": [
         {
           "id": "pinch_leechrope",
@@ -23977,11 +24028,28 @@
         }
       ]
     },
+    "rust_pumpkinflour": {
+      "name": "Rust Pumpkinflour",
+      "desc": "A dry pumpkinflour south of the leechrope. Packed rust coats pumpkinflour.",
+      "brief": "Dry pumpkinflour, packed rust.",
+      "exits": { "north": { "to": "rust_leechrope" } },
+      "actions": [
+        {
+          "id": "pinch_pumpkinflour",
+          "label": "pinch the pumpkinflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pumpkinflour. They packed it on the leechrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_balsa": {
       "name": "Rust Balsa",
       "desc": "A dry balsa east of the leechrope. Packed rust coats balsa.",
       "brief": "Dry balsa, packed rust.",
-      "exits": { "west": { "to": "rust_leechrope" }, "east": { "to": "rust_diatomite" } },
+      "exits": { "west": { "to": "rust_leechrope" }, "east": { "to": "rust_diatomite" }, "south": { "to": "rust_hempflour" } },
       "actions": [
         {
           "id": "pinch_balsa",
@@ -23994,11 +24062,28 @@
         }
       ]
     },
+    "rust_hempflour": {
+      "name": "Rust Hempflour",
+      "desc": "A dry hempflour south of the balsa. Packed rust coats hempflour.",
+      "brief": "Dry hempflour, packed rust.",
+      "exits": { "north": { "to": "rust_balsa" } },
+      "actions": [
+        {
+          "id": "pinch_hempflour",
+          "label": "pinch the hempflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard hempflour. They packed it on the balsa and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_diatomite": {
       "name": "Rust Diatomite",
       "desc": "A dry diatomite east of the balsa. Packed rust coats diatomite.",
       "brief": "Dry diatomite, packed rust.",
-      "exits": { "west": { "to": "rust_balsa" }, "east": { "to": "rust_agate" } },
+      "exits": { "west": { "to": "rust_balsa" }, "east": { "to": "rust_agate" }, "south": { "to": "rust_chiaflour" } },
       "actions": [
         {
           "id": "pinch_diatomite",
@@ -24011,11 +24096,28 @@
         }
       ]
     },
+    "rust_chiaflour": {
+      "name": "Rust Chiaflour",
+      "desc": "A dry chiaflour south of the diatomite. Packed rust coats chiaflour.",
+      "brief": "Dry chiaflour, packed rust.",
+      "exits": { "north": { "to": "rust_diatomite" } },
+      "actions": [
+        {
+          "id": "pinch_chiaflour",
+          "label": "pinch the chiaflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard chiaflour. They packed it on the diatomite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_agate": {
       "name": "Rust Agate",
       "desc": "A dry agate east of the diatomite. Packed rust coats agate.",
       "brief": "Dry agate, packed rust.",
-      "exits": { "west": { "to": "rust_diatomite" }, "east": { "to": "rust_glasspaper" } },
+      "exits": { "west": { "to": "rust_diatomite" }, "east": { "to": "rust_glasspaper" }, "south": { "to": "rust_nigellaflour" } },
       "actions": [
         {
           "id": "pinch_agate",
@@ -24028,11 +24130,28 @@
         }
       ]
     },
+    "rust_nigellaflour": {
+      "name": "Rust Nigellaflour",
+      "desc": "A dry nigellaflour south of the agate. Packed rust coats nigellaflour.",
+      "brief": "Dry nigellaflour, packed rust.",
+      "exits": { "north": { "to": "rust_agate" } },
+      "actions": [
+        {
+          "id": "pinch_nigellaflour",
+          "label": "pinch the nigellaflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nigellaflour. They packed it on the agate and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_glasspaper": {
       "name": "Rust Glasspaper",
       "desc": "A dry glasspaper east of the agate. Packed rust coats glasspaper.",
       "brief": "Dry glasspaper, packed rust.",
-      "exits": { "west": { "to": "rust_agate" }, "east": { "to": "rust_bice" } },
+      "exits": { "west": { "to": "rust_agate" }, "east": { "to": "rust_bice" }, "south": { "to": "rust_poppyflour" } },
       "actions": [
         {
           "id": "pinch_glasspaper",
@@ -24041,6 +24160,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard glasspaper. They packed it on the agate and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_poppyflour": {
+      "name": "Rust Poppyflour",
+      "desc": "A dry poppyflour south of the glasspaper. Packed rust coats poppyflour.",
+      "brief": "Dry poppyflour, packed rust.",
+      "exits": { "north": { "to": "rust_glasspaper" } },
+      "actions": [
+        {
+          "id": "pinch_poppyflour",
+          "label": "pinch the poppyflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard poppyflour. They packed it on the glasspaper and packed rust around it."]
           ]
         }
       ]
@@ -39765,6 +39901,9 @@
     "pinch the smaltite",
     "go east",
     "pinch the anthonyite",
+    "go south",
+    "pinch the wheatberry",
+    "go north",
     "go east",
     "pinch the lollingite",
     "go west",
@@ -39784,18 +39923,39 @@
     "go east",
     "go east",
     "pinch the mast",
+    "go south",
+    "pinch the oatberry",
+    "go north",
     "go east",
     "pinch the nettles",
+    "go south",
+    "pinch the ryeberry",
+    "go north",
     "go east",
     "pinch the leechrope",
+    "go south",
+    "pinch the pumpkinflour",
+    "go north",
     "go east",
     "pinch the balsa",
+    "go south",
+    "pinch the hempflour",
+    "go north",
     "go east",
     "pinch the diatomite",
+    "go south",
+    "pinch the chiaflour",
+    "go north",
     "go east",
     "pinch the agate",
+    "go south",
+    "pinch the nigellaflour",
+    "go north",
     "go east",
     "pinch the glasspaper",
+    "go south",
+    "pinch the poppyflour",
+    "go north",
     "go east",
     "pinch the bice",
     "go south",
