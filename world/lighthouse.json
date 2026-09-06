@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9330,
+  "maxScore": 9370,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -29098,7 +29098,7 @@
       "name": "Rust Bamboo",
       "desc": "A dry bamboo east of the wool. Packed rust coats bamboo.",
       "brief": "Dry bamboo, packed rust.",
-      "exits": { "west": { "to": "rust_wool" }, "east": { "to": "rust_mahogany" } },
+      "exits": { "west": { "to": "rust_wool" }, "east": { "to": "rust_mahogany" }, "south": { "to": "rust_elodea" } },
       "actions": [
         {
           "id": "pinch_bamboo",
@@ -29111,11 +29111,28 @@
         }
       ]
     },
+    "rust_elodea": {
+      "name": "Rust Elodea",
+      "desc": "A dry elodea south of the bamboo. Packed rust coats elodea.",
+      "brief": "Dry elodea, packed rust.",
+      "exits": { "north": { "to": "rust_bamboo" } },
+      "actions": [
+        {
+          "id": "pinch_elodea",
+          "label": "pinch the elodea",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard elodea. They packed it on the bamboo and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_mahogany": {
       "name": "Rust Mahogany",
       "desc": "A dry mahogany east of the bamboo. Packed rust coats mahogany.",
       "brief": "Dry mahogany, packed rust.",
-      "exits": { "west": { "to": "rust_bamboo" }, "east": { "to": "rust_locust" } },
+      "exits": { "west": { "to": "rust_bamboo" }, "east": { "to": "rust_locust" }, "south": { "to": "rust_naiad" } },
       "actions": [
         {
           "id": "pinch_mahogany",
@@ -29128,11 +29145,28 @@
         }
       ]
     },
+    "rust_naiad": {
+      "name": "Rust Naiad",
+      "desc": "A dry naiad south of the mahogany. Packed rust coats naiad.",
+      "brief": "Dry naiad, packed rust.",
+      "exits": { "north": { "to": "rust_mahogany" } },
+      "actions": [
+        {
+          "id": "pinch_naiad",
+          "label": "pinch the naiad",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard naiad. They packed it on the mahogany and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_locust": {
       "name": "Rust Locust",
       "desc": "A dry locust east of the mahogany. Packed rust coats locust.",
       "brief": "Dry locust, packed rust.",
-      "exits": { "west": { "to": "rust_mahogany" }, "east": { "to": "rust_plaster" } },
+      "exits": { "west": { "to": "rust_mahogany" }, "east": { "to": "rust_plaster" }, "south": { "to": "rust_watermeal" } },
       "actions": [
         {
           "id": "pinch_locust",
@@ -29145,11 +29179,28 @@
         }
       ]
     },
+    "rust_watermeal": {
+      "name": "Rust Watermeal",
+      "desc": "A dry watermeal south of the locust. Packed rust coats watermeal.",
+      "brief": "Dry watermeal, packed rust.",
+      "exits": { "north": { "to": "rust_locust" } },
+      "actions": [
+        {
+          "id": "pinch_watermeal",
+          "label": "pinch the watermeal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard watermeal. They packed it on the locust and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_plaster": {
       "name": "Rust Plaster",
       "desc": "A dry plaster east of the locust. Packed rust coats plaster.",
       "brief": "Dry plaster, packed rust.",
-      "exits": { "west": { "to": "rust_locust" }, "east": { "to": "rust_lithopone" } },
+      "exits": { "west": { "to": "rust_locust" }, "east": { "to": "rust_lithopone" }, "south": { "to": "rust_salvinia" } },
       "actions": [
         {
           "id": "pinch_plaster",
@@ -29162,11 +29213,28 @@
         }
       ]
     },
+    "rust_salvinia": {
+      "name": "Rust Salvinia",
+      "desc": "A dry salvinia south of the plaster. Packed rust coats salvinia.",
+      "brief": "Dry salvinia, packed rust.",
+      "exits": { "north": { "to": "rust_plaster" } },
+      "actions": [
+        {
+          "id": "pinch_salvinia",
+          "label": "pinch the salvinia",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard salvinia. They packed it on the plaster and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_lithopone": {
       "name": "Rust Lithopone",
       "desc": "A dry lithopone east of the plaster. Packed rust coats lithopone.",
       "brief": "Dry lithopone, packed rust.",
-      "exits": { "west": { "to": "rust_plaster" }, "east": { "to": "rust_linarite" } },
+      "exits": { "west": { "to": "rust_plaster" }, "east": { "to": "rust_linarite" }, "south": { "to": "rust_azolla" } },
       "actions": [
         {
           "id": "pinch_lithopone",
@@ -29179,11 +29247,28 @@
         }
       ]
     },
+    "rust_azolla": {
+      "name": "Rust Azolla",
+      "desc": "A dry azolla south of the lithopone. Packed rust coats azolla.",
+      "brief": "Dry azolla, packed rust.",
+      "exits": { "north": { "to": "rust_lithopone" } },
+      "actions": [
+        {
+          "id": "pinch_azolla",
+          "label": "pinch the azolla",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard azolla. They packed it on the lithopone and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_linarite": {
       "name": "Rust Linarite",
       "desc": "A dry linarite east of the lithopone. Packed rust coats linarite.",
       "brief": "Dry linarite, packed rust.",
-      "exits": { "west": { "to": "rust_lithopone" }, "east": { "to": "rust_manganite" } },
+      "exits": { "west": { "to": "rust_lithopone" }, "east": { "to": "rust_manganite" }, "south": { "to": "rust_frogbit" } },
       "actions": [
         {
           "id": "pinch_linarite",
@@ -29192,6 +29277,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard linarite. They packed it on the lithopone and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_frogbit": {
+      "name": "Rust Frogbit",
+      "desc": "A dry frogbit south of the linarite. Packed rust coats frogbit.",
+      "brief": "Dry frogbit, packed rust.",
+      "exits": { "north": { "to": "rust_linarite" } },
+      "actions": [
+        {
+          "id": "pinch_frogbit",
+          "label": "pinch the frogbit",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard frogbit. They packed it on the linarite and packed rust around it."]
           ]
         }
       ]
@@ -29234,7 +29336,7 @@
       "name": "Rust Spangasket",
       "desc": "A dry spangasket east of the mesh. Packed rust coats a spangasket.",
       "brief": "Dry spangasket, packed rust.",
-      "exits": { "west": { "to": "rust_mesh" }, "east": { "to": "rust_tallow" } },
+      "exits": { "west": { "to": "rust_mesh" }, "east": { "to": "rust_tallow" }, "south": { "to": "rust_tapegrass" } },
       "actions": [
         {
           "id": "pinch_spangasket",
@@ -29247,11 +29349,28 @@
         }
       ]
     },
+    "rust_tapegrass": {
+      "name": "Rust Tapegrass",
+      "desc": "A dry tapegrass south of the spangasket. Packed rust coats tapegrass.",
+      "brief": "Dry tapegrass, packed rust.",
+      "exits": { "north": { "to": "rust_spangasket" } },
+      "actions": [
+        {
+          "id": "pinch_tapegrass",
+          "label": "pinch the tapegrass",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tapegrass. They packed it on the spangasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tallow": {
       "name": "Rust Tallow",
       "desc": "A dry tallow east of the spangasket. Packed rust coats tallow.",
       "brief": "Dry tallow, packed rust.",
-      "exits": { "west": { "to": "rust_spangasket" }, "east": { "to": "rust_rattan" } },
+      "exits": { "west": { "to": "rust_spangasket" }, "east": { "to": "rust_rattan" }, "south": { "to": "rust_spikegrass" } },
       "actions": [
         {
           "id": "pinch_tallow",
@@ -29260,6 +29379,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tallow. They smeared it on the spangasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_spikegrass": {
+      "name": "Rust Spikegrass",
+      "desc": "A dry spikegrass south of the tallow. Packed rust coats spikegrass.",
+      "brief": "Dry spikegrass, packed rust.",
+      "exits": { "north": { "to": "rust_tallow" } },
+      "actions": [
+        {
+          "id": "pinch_spikegrass",
+          "label": "pinch the spikegrass",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard spikegrass. They packed it on the tallow and packed rust around it."]
           ]
         }
       ]
@@ -36754,16 +36890,34 @@
     "pinch the wool",
     "go east",
     "pinch the bamboo",
+    "go south",
+    "pinch the elodea",
+    "go north",
     "go east",
     "pinch the mahogany",
+    "go south",
+    "pinch the naiad",
+    "go north",
     "go east",
     "pinch the locust",
+    "go south",
+    "pinch the watermeal",
+    "go north",
     "go east",
     "pinch the plaster",
+    "go south",
+    "pinch the salvinia",
+    "go north",
     "go east",
     "pinch the lithopone",
+    "go south",
+    "pinch the azolla",
+    "go north",
     "go east",
     "pinch the linarite",
+    "go south",
+    "pinch the frogbit",
+    "go north",
     "go east",
     "pinch the manganite",
     "go west",
@@ -36781,8 +36935,14 @@
     "pinch the stud",
     "go east",
     "pinch the spangasket",
+    "go south",
+    "pinch the tapegrass",
+    "go north",
     "go east",
     "pinch the tallow",
+    "go south",
+    "pinch the spikegrass",
+    "go north",
     "go east",
     "pinch the rattan",
     "go south",
