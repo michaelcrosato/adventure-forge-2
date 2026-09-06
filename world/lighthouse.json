@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15010,
+  "maxScore": 15050,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -21465,7 +21465,7 @@
       "name": "Rust Oar",
       "desc": "A dry oar east of the spar. Packed rust coats an oar.",
       "brief": "Dry oar, packed rust.",
-      "exits": { "west": { "to": "rust_spar" }, "east": { "to": "rust_clove" }, "south": { "to": "rust_sorghumpatent" } },
+      "exits": { "west": { "to": "rust_spar" }, "east": { "to": "rust_clove" }, "south": { "to": "rust_sorghumpatent" }, "north": { "to": "rust_durumpuncheon" } },
       "actions": [
         {
           "id": "pinch_oar",
@@ -21474,6 +21474,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard oar. They laid it on the spar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumpuncheon": {
+      "name": "Rust Durumpuncheon",
+      "desc": "A dry durumpuncheon north of the oar. Packed rust coats durumpuncheon.",
+      "brief": "Dry durumpuncheon, packed rust.",
+      "exits": { "south": { "to": "rust_oar" } },
+      "actions": [
+        {
+          "id": "pinch_durumpuncheon",
+          "label": "pinch the durumpuncheon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumpuncheon. They packed it on the oar and packed rust around it."]
           ]
         }
       ]
@@ -21499,7 +21516,7 @@
       "name": "Rust Clove",
       "desc": "A dry clove east of the oar. Packed rust coats a clove.",
       "brief": "Dry clove, packed rust.",
-      "exits": { "west": { "to": "rust_oar" }, "east": { "to": "rust_copalite" }, "south": { "to": "rust_milletpatent" } },
+      "exits": { "west": { "to": "rust_oar" }, "east": { "to": "rust_copalite" }, "south": { "to": "rust_milletpatent" }, "north": { "to": "rust_foniopuncheon" } },
       "actions": [
         {
           "id": "pinch_clove",
@@ -21508,6 +21525,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard clove. They hitched it on the oar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniopuncheon": {
+      "name": "Rust Foniopuncheon",
+      "desc": "A dry foniopuncheon north of the clove. Packed rust coats foniopuncheon.",
+      "brief": "Dry foniopuncheon, packed rust.",
+      "exits": { "south": { "to": "rust_clove" } },
+      "actions": [
+        {
+          "id": "pinch_foniopuncheon",
+          "label": "pinch the foniopuncheon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniopuncheon. They packed it on the clove and packed rust around it."]
           ]
         }
       ]
@@ -25494,7 +25528,7 @@
       "name": "Rust Girtline",
       "desc": "A dry girtline east of the mizzen. Packed rust coats a girtline.",
       "brief": "Dry girtline, packed rust.",
-      "exits": { "west": { "to": "rust_mizzen" }, "east": { "to": "rust_mastcap" }, "south": { "to": "rust_cornpatent" } },
+      "exits": { "west": { "to": "rust_mizzen" }, "east": { "to": "rust_mastcap" }, "south": { "to": "rust_cornpatent" }, "north": { "to": "rust_teffpuncheon" } },
       "actions": [
         {
           "id": "pinch_girtline",
@@ -25503,6 +25537,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard girtline. They rove it on the mizzen and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffpuncheon": {
+      "name": "Rust Teffpuncheon",
+      "desc": "A dry teffpuncheon north of the girtline. Packed rust coats teffpuncheon.",
+      "brief": "Dry teffpuncheon, packed rust.",
+      "exits": { "south": { "to": "rust_girtline" } },
+      "actions": [
+        {
+          "id": "pinch_teffpuncheon",
+          "label": "pinch the teffpuncheon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffpuncheon. They packed it on the girtline and packed rust around it."]
           ]
         }
       ]
@@ -25528,7 +25579,7 @@
       "name": "Rust Mastcap",
       "desc": "A dry mastcap east of the girtline. Packed rust coats a mastcap.",
       "brief": "Dry mastcap, packed rust.",
-      "exits": { "west": { "to": "rust_girtline" }, "east": { "to": "rust_rabbitglue" }, "south": { "to": "rust_oatpatent" } },
+      "exits": { "west": { "to": "rust_girtline" }, "east": { "to": "rust_rabbitglue" }, "south": { "to": "rust_oatpatent" }, "north": { "to": "rust_barleypuncheon" } },
       "actions": [
         {
           "id": "pinch_mastcap",
@@ -25537,6 +25588,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mastcap. They capped it on the girtline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleypuncheon": {
+      "name": "Rust Barleypuncheon",
+      "desc": "A dry barleypuncheon north of the mastcap. Packed rust coats barleypuncheon.",
+      "brief": "Dry barleypuncheon, packed rust.",
+      "exits": { "south": { "to": "rust_mastcap" } },
+      "actions": [
+        {
+          "id": "pinch_barleypuncheon",
+          "label": "pinch the barleypuncheon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleypuncheon. They packed it on the mastcap and packed rust around it."]
           ]
         }
       ]
@@ -25562,7 +25630,7 @@
       "name": "Rust Rabbitglue",
       "desc": "A dry rabbitglue east of the mastcap. Packed rust coats rabbitglue.",
       "brief": "Dry rabbitglue, packed rust.",
-      "exits": { "west": { "to": "rust_mastcap" }, "east": { "to": "rust_riverredgum" }, "south": { "to": "rust_ryepatent" } },
+      "exits": { "west": { "to": "rust_mastcap" }, "east": { "to": "rust_riverredgum" }, "south": { "to": "rust_ryepatent" }, "north": { "to": "rust_sorghumpuncheon" } },
       "actions": [
         {
           "id": "pinch_rabbitglue",
@@ -25571,6 +25639,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard rabbitglue. They packed it on the mastcap and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumpuncheon": {
+      "name": "Rust Sorghumpuncheon",
+      "desc": "A dry sorghumpuncheon north of the rabbitglue. Packed rust coats sorghumpuncheon.",
+      "brief": "Dry sorghumpuncheon, packed rust.",
+      "exits": { "south": { "to": "rust_rabbitglue" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumpuncheon",
+          "label": "pinch the sorghumpuncheon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumpuncheon. They packed it on the rabbitglue and packed rust around it."]
           ]
         }
       ]
@@ -25596,7 +25681,7 @@
       "name": "Rust Riverredgum",
       "desc": "A dry riverredgum east of the rabbitglue. Packed rust coats riverredgum.",
       "brief": "Dry riverredgum, packed rust.",
-      "exits": { "west": { "to": "rust_rabbitglue" }, "east": { "to": "rust_brownbarrel" }, "south": { "to": "rust_wheatpatent" } },
+      "exits": { "west": { "to": "rust_rabbitglue" }, "east": { "to": "rust_brownbarrel" }, "south": { "to": "rust_wheatpatent" }, "north": { "to": "rust_milletpuncheon" } },
       "actions": [
         {
           "id": "pinch_riverredgum",
@@ -25605,6 +25690,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard riverredgum. They packed it on the rabbitglue and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletpuncheon": {
+      "name": "Rust Milletpuncheon",
+      "desc": "A dry milletpuncheon north of the riverredgum. Packed rust coats milletpuncheon.",
+      "brief": "Dry milletpuncheon, packed rust.",
+      "exits": { "south": { "to": "rust_riverredgum" } },
+      "actions": [
+        {
+          "id": "pinch_milletpuncheon",
+          "label": "pinch the milletpuncheon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletpuncheon. They packed it on the riverredgum and packed rust around it."]
           ]
         }
       ]
@@ -25630,7 +25732,7 @@
       "name": "Rust Brownbarrel",
       "desc": "A dry brownbarrel east of the riverredgum. Packed rust coats brownbarrel.",
       "brief": "Dry brownbarrel, packed rust.",
-      "exits": { "west": { "to": "rust_riverredgum" }, "east": { "to": "rust_callistemon" }, "south": { "to": "rust_durumbreak" } },
+      "exits": { "west": { "to": "rust_riverredgum" }, "east": { "to": "rust_callistemon" }, "south": { "to": "rust_durumbreak" }, "north": { "to": "rust_cornpuncheon" } },
       "actions": [
         {
           "id": "pinch_brownbarrel",
@@ -25639,6 +25741,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard brownbarrel. They packed it on the riverredgum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornpuncheon": {
+      "name": "Rust Cornpuncheon",
+      "desc": "A dry cornpuncheon north of the brownbarrel. Packed rust coats cornpuncheon.",
+      "brief": "Dry cornpuncheon, packed rust.",
+      "exits": { "south": { "to": "rust_brownbarrel" } },
+      "actions": [
+        {
+          "id": "pinch_cornpuncheon",
+          "label": "pinch the cornpuncheon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornpuncheon. They packed it on the brownbarrel and packed rust around it."]
           ]
         }
       ]
@@ -25664,7 +25783,7 @@
       "name": "Rust Callistemon",
       "desc": "A dry callistemon east of the brownbarrel. Packed rust coats callistemon.",
       "brief": "Dry callistemon, packed rust.",
-      "exits": { "west": { "to": "rust_brownbarrel" }, "east": { "to": "rust_leatherwood" }, "south": { "to": "rust_foniobreak" } },
+      "exits": { "west": { "to": "rust_brownbarrel" }, "east": { "to": "rust_leatherwood" }, "south": { "to": "rust_foniobreak" }, "north": { "to": "rust_oatpuncheon" } },
       "actions": [
         {
           "id": "pinch_callistemon",
@@ -25673,6 +25792,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard callistemon. They packed it on the brownbarrel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatpuncheon": {
+      "name": "Rust Oatpuncheon",
+      "desc": "A dry oatpuncheon north of the callistemon. Packed rust coats oatpuncheon.",
+      "brief": "Dry oatpuncheon, packed rust.",
+      "exits": { "south": { "to": "rust_callistemon" } },
+      "actions": [
+        {
+          "id": "pinch_oatpuncheon",
+          "label": "pinch the oatpuncheon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatpuncheon. They packed it on the callistemon and packed rust around it."]
           ]
         }
       ]
@@ -54716,11 +54852,17 @@
     "go east",
     "go east",
     "pinch the oar",
+    "go north",
+    "pinch the durumpuncheon",
+    "go south",
     "go south",
     "pinch the sorghumpatent",
     "go north",
     "go east",
     "pinch the clove",
+    "go north",
+    "pinch the foniopuncheon",
+    "go south",
     "go south",
     "pinch the milletpatent",
     "go north",
@@ -54751,31 +54893,49 @@
     "pinch the mizzen",
     "go east",
     "pinch the girtline",
+    "go north",
+    "pinch the teffpuncheon",
+    "go south",
     "go south",
     "pinch the cornpatent",
     "go north",
     "go east",
     "pinch the mastcap",
+    "go north",
+    "pinch the barleypuncheon",
+    "go south",
     "go south",
     "pinch the oatpatent",
     "go north",
     "go east",
     "pinch the rabbitglue",
+    "go north",
+    "pinch the sorghumpuncheon",
+    "go south",
     "go south",
     "pinch the ryepatent",
     "go north",
     "go east",
     "pinch the riverredgum",
+    "go north",
+    "pinch the milletpuncheon",
+    "go south",
     "go south",
     "pinch the wheatpatent",
     "go north",
     "go east",
     "pinch the brownbarrel",
+    "go north",
+    "pinch the cornpuncheon",
+    "go south",
     "go south",
     "pinch the durumbreak",
     "go north",
     "go east",
     "pinch the callistemon",
+    "go north",
+    "pinch the oatpuncheon",
+    "go south",
     "go south",
     "pinch the foniobreak",
     "go north",
