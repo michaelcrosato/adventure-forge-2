@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15930,
+  "maxScore": 15970,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -14172,7 +14172,7 @@
       "name": "Rust Gympie",
       "desc": "A dry gympie east of the scribblygum. Packed rust coats gympie.",
       "brief": "Dry gympie, packed rust.",
-      "exits": { "west": { "to": "rust_scribblygum" }, "east": { "to": "rust_ponderosa" }, "south": { "to": "rust_teffcut" } },
+      "exits": { "west": { "to": "rust_scribblygum" }, "east": { "to": "rust_ponderosa" }, "south": { "to": "rust_teffcut" }, "north": { "to": "rust_durumnebuchadnezzar" } },
       "actions": [
         {
           "id": "pinch_gympie",
@@ -14181,6 +14181,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gympie. They packed it on the scribblygum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumnebuchadnezzar": {
+      "name": "Rust Durumnebuchadnezzar",
+      "desc": "A dry durumnebuchadnezzar north of the gympie. Packed rust coats durumnebuchadnezzar.",
+      "brief": "Dry durumnebuchadnezzar, packed rust.",
+      "exits": { "south": { "to": "rust_gympie" } },
+      "actions": [
+        {
+          "id": "pinch_durumnebuchadnezzar",
+          "label": "pinch the durumnebuchadnezzar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumnebuchadnezzar. They packed it on the gympie and packed rust around it."]
           ]
         }
       ]
@@ -14206,7 +14223,7 @@
       "name": "Rust Ponderosa",
       "desc": "A dry ponderosa east of the gympie. Packed rust coats ponderosa.",
       "brief": "Dry ponderosa, packed rust.",
-      "exits": { "west": { "to": "rust_gympie" }, "east": { "to": "rust_blackhills" }, "south": { "to": "rust_barleycut" } },
+      "exits": { "west": { "to": "rust_gympie" }, "east": { "to": "rust_blackhills" }, "south": { "to": "rust_barleycut" }, "north": { "to": "rust_fonionebuchadnezzar" } },
       "actions": [
         {
           "id": "pinch_ponderosa",
@@ -14215,6 +14232,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ponderosa. They packed it on the gympie and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonionebuchadnezzar": {
+      "name": "Rust Fonionebuchadnezzar",
+      "desc": "A dry fonionebuchadnezzar north of the ponderosa. Packed rust coats fonionebuchadnezzar.",
+      "brief": "Dry fonionebuchadnezzar, packed rust.",
+      "exits": { "south": { "to": "rust_ponderosa" } },
+      "actions": [
+        {
+          "id": "pinch_fonionebuchadnezzar",
+          "label": "pinch the fonionebuchadnezzar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonionebuchadnezzar. They packed it on the ponderosa and packed rust around it."]
           ]
         }
       ]
@@ -14240,7 +14274,7 @@
       "name": "Rust Blackhills",
       "desc": "A dry blackhills east of the ponderosa. Packed rust coats blackhills.",
       "brief": "Dry blackhills, packed rust.",
-      "exits": { "west": { "to": "rust_ponderosa" }, "east": { "to": "rust_mahoe" }, "south": { "to": "rust_hapuu" } },
+      "exits": { "west": { "to": "rust_ponderosa" }, "east": { "to": "rust_mahoe" }, "south": { "to": "rust_hapuu" }, "north": { "to": "rust_teffnebuchadnezzar" } },
       "actions": [
         {
           "id": "pinch_blackhills",
@@ -14249,6 +14283,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackhills. They packed it on the ponderosa and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffnebuchadnezzar": {
+      "name": "Rust Teffnebuchadnezzar",
+      "desc": "A dry teffnebuchadnezzar north of the blackhills. Packed rust coats teffnebuchadnezzar.",
+      "brief": "Dry teffnebuchadnezzar, packed rust.",
+      "exits": { "south": { "to": "rust_blackhills" } },
+      "actions": [
+        {
+          "id": "pinch_teffnebuchadnezzar",
+          "label": "pinch the teffnebuchadnezzar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffnebuchadnezzar. They packed it on the blackhills and packed rust around it."]
           ]
         }
       ]
@@ -14308,7 +14359,7 @@
       "name": "Rust Fish",
       "desc": "A dry fish east of the claw. Packed rust coats a fish.",
       "brief": "Dry fish, packed rust.",
-      "exits": { "west": { "to": "rust_claw" }, "east": { "to": "rust_alpine" }, "south": { "to": "rust_sorghumcut" } },
+      "exits": { "west": { "to": "rust_claw" }, "east": { "to": "rust_alpine" }, "south": { "to": "rust_sorghumcut" }, "north": { "to": "rust_barleynebuchadnezzar" } },
       "actions": [
         {
           "id": "pinch_fish",
@@ -14317,6 +14368,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fish. They fished it on the claw and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleynebuchadnezzar": {
+      "name": "Rust Barleynebuchadnezzar",
+      "desc": "A dry barleynebuchadnezzar north of the fish. Packed rust coats barleynebuchadnezzar.",
+      "brief": "Dry barleynebuchadnezzar, packed rust.",
+      "exits": { "south": { "to": "rust_fish" } },
+      "actions": [
+        {
+          "id": "pinch_barleynebuchadnezzar",
+          "label": "pinch the barleynebuchadnezzar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleynebuchadnezzar. They packed it on the fish and packed rust around it."]
           ]
         }
       ]
@@ -14342,7 +14410,7 @@
       "name": "Rust Alpine",
       "desc": "A dry alpine east of the fish. Packed rust coats an alpine.",
       "brief": "Dry alpine, packed rust.",
-      "exits": { "west": { "to": "rust_fish" }, "east": { "to": "rust_ghatti" }, "south": { "to": "rust_milletcut" } },
+      "exits": { "west": { "to": "rust_fish" }, "east": { "to": "rust_ghatti" }, "south": { "to": "rust_milletcut" }, "north": { "to": "rust_sorghumnebuchadnezzar" } },
       "actions": [
         {
           "id": "pinch_alpine",
@@ -14351,6 +14419,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard alpine. They looped it on the fish and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumnebuchadnezzar": {
+      "name": "Rust Sorghumnebuchadnezzar",
+      "desc": "A dry sorghumnebuchadnezzar north of the alpine. Packed rust coats sorghumnebuchadnezzar.",
+      "brief": "Dry sorghumnebuchadnezzar, packed rust.",
+      "exits": { "south": { "to": "rust_alpine" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumnebuchadnezzar",
+          "label": "pinch the sorghumnebuchadnezzar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumnebuchadnezzar. They packed it on the alpine and packed rust around it."]
           ]
         }
       ]
@@ -14376,7 +14461,7 @@
       "name": "Rust Ghatti",
       "desc": "A dry ghatti east of the alpine. Packed rust coats ghatti.",
       "brief": "Dry ghatti, packed rust.",
-      "exits": { "west": { "to": "rust_alpine" }, "east": { "to": "rust_fustic" }, "south": { "to": "rust_corncut" } },
+      "exits": { "west": { "to": "rust_alpine" }, "east": { "to": "rust_fustic" }, "south": { "to": "rust_corncut" }, "north": { "to": "rust_milletnebuchadnezzar" } },
       "actions": [
         {
           "id": "pinch_ghatti",
@@ -14385,6 +14470,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ghatti. They packed it on the alpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletnebuchadnezzar": {
+      "name": "Rust Milletnebuchadnezzar",
+      "desc": "A dry milletnebuchadnezzar north of the ghatti. Packed rust coats milletnebuchadnezzar.",
+      "brief": "Dry milletnebuchadnezzar, packed rust.",
+      "exits": { "south": { "to": "rust_ghatti" } },
+      "actions": [
+        {
+          "id": "pinch_milletnebuchadnezzar",
+          "label": "pinch the milletnebuchadnezzar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletnebuchadnezzar. They packed it on the ghatti and packed rust around it."]
           ]
         }
       ]
@@ -14410,7 +14512,7 @@
       "name": "Rust Fustic",
       "desc": "A dry fustic east of the ghatti. Packed rust coats fustic.",
       "brief": "Dry fustic, packed rust.",
-      "exits": { "west": { "to": "rust_ghatti" }, "east": { "to": "rust_coal" }, "south": { "to": "rust_oatcut" } },
+      "exits": { "west": { "to": "rust_ghatti" }, "east": { "to": "rust_coal" }, "south": { "to": "rust_oatcut" }, "north": { "to": "rust_cornnebuchadnezzar" } },
       "actions": [
         {
           "id": "pinch_fustic",
@@ -14419,6 +14521,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard fustic. They packed it on the ghatti and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornnebuchadnezzar": {
+      "name": "Rust Cornnebuchadnezzar",
+      "desc": "A dry cornnebuchadnezzar north of the fustic. Packed rust coats cornnebuchadnezzar.",
+      "brief": "Dry cornnebuchadnezzar, packed rust.",
+      "exits": { "south": { "to": "rust_fustic" } },
+      "actions": [
+        {
+          "id": "pinch_cornnebuchadnezzar",
+          "label": "pinch the cornnebuchadnezzar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornnebuchadnezzar. They packed it on the fustic and packed rust around it."]
           ]
         }
       ]
@@ -14444,7 +14563,7 @@
       "name": "Rust Coal",
       "desc": "A dry coal east of the fustic. Packed rust coats coal.",
       "brief": "Dry coal, packed rust.",
-      "exits": { "west": { "to": "rust_fustic" }, "east": { "to": "rust_applebox" }, "south": { "to": "rust_durumgrade" } },
+      "exits": { "west": { "to": "rust_fustic" }, "east": { "to": "rust_applebox" }, "south": { "to": "rust_durumgrade" }, "north": { "to": "rust_oatnebuchadnezzar" } },
       "actions": [
         {
           "id": "pinch_coal",
@@ -14453,6 +14572,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coal. They packed it on the fustic and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatnebuchadnezzar": {
+      "name": "Rust Oatnebuchadnezzar",
+      "desc": "A dry oatnebuchadnezzar north of the coal. Packed rust coats oatnebuchadnezzar.",
+      "brief": "Dry oatnebuchadnezzar, packed rust.",
+      "exits": { "south": { "to": "rust_coal" } },
+      "actions": [
+        {
+          "id": "pinch_oatnebuchadnezzar",
+          "label": "pinch the oatnebuchadnezzar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatnebuchadnezzar. They packed it on the coal and packed rust around it."]
           ]
         }
       ]
@@ -56554,16 +56690,25 @@
     "go north",
     "go east",
     "pinch the gympie",
+    "go north",
+    "pinch the durumnebuchadnezzar",
+    "go south",
     "go south",
     "pinch the teffcut",
     "go north",
     "go east",
     "pinch the ponderosa",
+    "go north",
+    "pinch the fonionebuchadnezzar",
+    "go south",
     "go south",
     "pinch the barleycut",
     "go north",
     "go east",
     "pinch the blackhills",
+    "go north",
+    "pinch the teffnebuchadnezzar",
+    "go south",
     "go south",
     "pinch the hapuu",
     "go north",
@@ -56583,26 +56728,41 @@
     "pinch the claw",
     "go east",
     "pinch the fish",
+    "go north",
+    "pinch the barleynebuchadnezzar",
+    "go south",
     "go south",
     "pinch the sorghumcut",
     "go north",
     "go east",
     "pinch the alpine",
+    "go north",
+    "pinch the sorghumnebuchadnezzar",
+    "go south",
     "go south",
     "pinch the milletcut",
     "go north",
     "go east",
     "pinch the ghatti",
+    "go north",
+    "pinch the milletnebuchadnezzar",
+    "go south",
     "go south",
     "pinch the corncut",
     "go north",
     "go east",
     "pinch the fustic",
+    "go north",
+    "pinch the cornnebuchadnezzar",
+    "go south",
     "go south",
     "pinch the oatcut",
     "go north",
     "go east",
     "pinch the coal",
+    "go north",
+    "pinch the oatnebuchadnezzar",
+    "go south",
     "go south",
     "pinch the durumgrade",
     "go north",
