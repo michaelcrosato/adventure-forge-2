@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14690,
+  "maxScore": 14730,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -23692,7 +23692,7 @@
       "name": "Rust Missanda",
       "desc": "A dry missanda east of the guatambu. Packed rust coats missanda.",
       "brief": "Dry missanda, packed rust.",
-      "exits": { "west": { "to": "rust_guatambu" }, "east": { "to": "rust_sepetir" }, "south": { "to": "rust_wheatscreenings" } },
+      "exits": { "west": { "to": "rust_guatambu" }, "east": { "to": "rust_sepetir" }, "south": { "to": "rust_wheatscreenings" }, "north": { "to": "rust_durumamphora" } },
       "actions": [
         {
           "id": "pinch_missanda",
@@ -23701,6 +23701,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard missanda. They packed it on the guatambu and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumamphora": {
+      "name": "Rust Durumamphora",
+      "desc": "A dry durumamphora north of the missanda. Packed rust coats durumamphora.",
+      "brief": "Dry durumamphora, packed rust.",
+      "exits": { "south": { "to": "rust_missanda" } },
+      "actions": [
+        {
+          "id": "pinch_durumamphora",
+          "label": "pinch the durumamphora",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumamphora. They packed it on the missanda and packed rust around it."]
           ]
         }
       ]
@@ -23726,7 +23743,7 @@
       "name": "Rust Sepetir",
       "desc": "A dry sepetir east of the missanda. Packed rust coats sepetir.",
       "brief": "Dry sepetir, packed rust.",
-      "exits": { "west": { "to": "rust_missanda" }, "east": { "to": "rust_palosapis" }, "south": { "to": "rust_durumgermflake" } },
+      "exits": { "west": { "to": "rust_missanda" }, "east": { "to": "rust_palosapis" }, "south": { "to": "rust_durumgermflake" }, "north": { "to": "rust_fonioamphora" } },
       "actions": [
         {
           "id": "pinch_sepetir",
@@ -23735,6 +23752,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sepetir. They packed it on the missanda and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioamphora": {
+      "name": "Rust Fonioamphora",
+      "desc": "A dry fonioamphora north of the sepetir. Packed rust coats fonioamphora.",
+      "brief": "Dry fonioamphora, packed rust.",
+      "exits": { "south": { "to": "rust_sepetir" } },
+      "actions": [
+        {
+          "id": "pinch_fonioamphora",
+          "label": "pinch the fonioamphora",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioamphora. They packed it on the sepetir and packed rust around it."]
           ]
         }
       ]
@@ -23760,7 +23794,7 @@
       "name": "Rust Palosapis",
       "desc": "A dry palosapis east of the sepetir. Packed rust coats palosapis.",
       "brief": "Dry palosapis, packed rust.",
-      "exits": { "west": { "to": "rust_sepetir" }, "east": { "to": "rust_siris" }, "south": { "to": "rust_foniogermflake" } },
+      "exits": { "west": { "to": "rust_sepetir" }, "east": { "to": "rust_siris" }, "south": { "to": "rust_foniogermflake" }, "north": { "to": "rust_teffamphora" } },
       "actions": [
         {
           "id": "pinch_palosapis",
@@ -23769,6 +23803,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard palosapis. They packed it on the sepetir and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffamphora": {
+      "name": "Rust Teffamphora",
+      "desc": "A dry teffamphora north of the palosapis. Packed rust coats teffamphora.",
+      "brief": "Dry teffamphora, packed rust.",
+      "exits": { "south": { "to": "rust_palosapis" } },
+      "actions": [
+        {
+          "id": "pinch_teffamphora",
+          "label": "pinch the teffamphora",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffamphora. They packed it on the palosapis and packed rust around it."]
           ]
         }
       ]
@@ -23794,7 +23845,7 @@
       "name": "Rust Siris",
       "desc": "A dry siris east of the palosapis. Packed rust coats siris.",
       "brief": "Dry siris, packed rust.",
-      "exits": { "west": { "to": "rust_palosapis" }, "east": { "to": "rust_spottedgum" }, "south": { "to": "rust_teffgermflake" } },
+      "exits": { "west": { "to": "rust_palosapis" }, "east": { "to": "rust_spottedgum" }, "south": { "to": "rust_teffgermflake" }, "north": { "to": "rust_barleyamphora" } },
       "actions": [
         {
           "id": "pinch_siris",
@@ -23803,6 +23854,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard siris. They packed it on the palosapis and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyamphora": {
+      "name": "Rust Barleyamphora",
+      "desc": "A dry barleyamphora north of the siris. Packed rust coats barleyamphora.",
+      "brief": "Dry barleyamphora, packed rust.",
+      "exits": { "south": { "to": "rust_siris" } },
+      "actions": [
+        {
+          "id": "pinch_barleyamphora",
+          "label": "pinch the barleyamphora",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyamphora. They packed it on the siris and packed rust around it."]
           ]
         }
       ]
@@ -23879,7 +23947,7 @@
       "name": "Rust Hitch",
       "desc": "A dry hitch east of the toggle. Packed rust coats a hitch.",
       "brief": "Dry hitch, packed rust.",
-      "exits": { "west": { "to": "rust_toggle" }, "east": { "to": "rust_japanblack" }, "south": { "to": "rust_barleygermflake" } },
+      "exits": { "west": { "to": "rust_toggle" }, "east": { "to": "rust_japanblack" }, "south": { "to": "rust_barleygermflake" }, "north": { "to": "rust_sorghumamphora" } },
       "actions": [
         {
           "id": "pinch_hitch",
@@ -23888,6 +23956,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hitch. They bent it on the toggle and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumamphora": {
+      "name": "Rust Sorghumamphora",
+      "desc": "A dry sorghumamphora north of the hitch. Packed rust coats sorghumamphora.",
+      "brief": "Dry sorghumamphora, packed rust.",
+      "exits": { "south": { "to": "rust_hitch" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumamphora",
+          "label": "pinch the sorghumamphora",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumamphora. They packed it on the hitch and packed rust around it."]
           ]
         }
       ]
@@ -23913,7 +23998,7 @@
       "name": "Rust Japanblack",
       "desc": "A dry japanblack east of the hitch. Packed rust coats japanblack.",
       "brief": "Dry japanblack, packed rust.",
-      "exits": { "west": { "to": "rust_hitch" }, "east": { "to": "rust_avodire" }, "south": { "to": "rust_sorghumgermflake" } },
+      "exits": { "west": { "to": "rust_hitch" }, "east": { "to": "rust_avodire" }, "south": { "to": "rust_sorghumgermflake" }, "north": { "to": "rust_milletamphora" } },
       "actions": [
         {
           "id": "pinch_japanblack",
@@ -23922,6 +24007,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard japanblack. They packed it on the hitch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletamphora": {
+      "name": "Rust Milletamphora",
+      "desc": "A dry milletamphora north of the japanblack. Packed rust coats milletamphora.",
+      "brief": "Dry milletamphora, packed rust.",
+      "exits": { "south": { "to": "rust_japanblack" } },
+      "actions": [
+        {
+          "id": "pinch_milletamphora",
+          "label": "pinch the milletamphora",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletamphora. They packed it on the japanblack and packed rust around it."]
           ]
         }
       ]
@@ -23947,7 +24049,7 @@
       "name": "Rust Avodire",
       "desc": "A dry avodire east of the japanblack. Packed rust coats avodire.",
       "brief": "Dry avodire, packed rust.",
-      "exits": { "west": { "to": "rust_japanblack" }, "east": { "to": "rust_cabreuva" }, "south": { "to": "rust_milletgermflake" } },
+      "exits": { "west": { "to": "rust_japanblack" }, "east": { "to": "rust_cabreuva" }, "south": { "to": "rust_milletgermflake" }, "north": { "to": "rust_cornamphora" } },
       "actions": [
         {
           "id": "pinch_avodire",
@@ -23956,6 +24058,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard avodire. They packed it on the japanblack and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornamphora": {
+      "name": "Rust Cornamphora",
+      "desc": "A dry cornamphora north of the avodire. Packed rust coats cornamphora.",
+      "brief": "Dry cornamphora, packed rust.",
+      "exits": { "south": { "to": "rust_avodire" } },
+      "actions": [
+        {
+          "id": "pinch_cornamphora",
+          "label": "pinch the cornamphora",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornamphora. They packed it on the avodire and packed rust around it."]
           ]
         }
       ]
@@ -23981,7 +24100,7 @@
       "name": "Rust Cabreuva",
       "desc": "A dry cabreuva east of the avodire. Packed rust coats cabreuva.",
       "brief": "Dry cabreuva, packed rust.",
-      "exits": { "west": { "to": "rust_avodire" }, "east": { "to": "rust_okan" }, "south": { "to": "rust_corngermflake" } },
+      "exits": { "west": { "to": "rust_avodire" }, "east": { "to": "rust_okan" }, "south": { "to": "rust_corngermflake" }, "north": { "to": "rust_oatamphora" } },
       "actions": [
         {
           "id": "pinch_cabreuva",
@@ -23990,6 +24109,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cabreuva. They packed it on the avodire and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatamphora": {
+      "name": "Rust Oatamphora",
+      "desc": "A dry oatamphora north of the cabreuva. Packed rust coats oatamphora.",
+      "brief": "Dry oatamphora, packed rust.",
+      "exits": { "south": { "to": "rust_cabreuva" } },
+      "actions": [
+        {
+          "id": "pinch_oatamphora",
+          "label": "pinch the oatamphora",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatamphora. They packed it on the cabreuva and packed rust around it."]
           ]
         }
       ]
@@ -54081,21 +54217,33 @@
     "go north",
     "go east",
     "pinch the missanda",
+    "go north",
+    "pinch the durumamphora",
+    "go south",
     "go south",
     "pinch the wheatscreenings",
     "go north",
     "go east",
     "pinch the sepetir",
+    "go north",
+    "pinch the fonioamphora",
+    "go south",
     "go south",
     "pinch the durumgermflake",
     "go north",
     "go east",
     "pinch the palosapis",
+    "go north",
+    "pinch the teffamphora",
+    "go south",
     "go south",
     "pinch the foniogermflake",
     "go north",
     "go east",
     "pinch the siris",
+    "go north",
+    "pinch the barleyamphora",
+    "go south",
     "go south",
     "pinch the teffgermflake",
     "go north",
@@ -54117,21 +54265,33 @@
     "pinch the toggle",
     "go east",
     "pinch the hitch",
+    "go north",
+    "pinch the sorghumamphora",
+    "go south",
     "go south",
     "pinch the barleygermflake",
     "go north",
     "go east",
     "pinch the japanblack",
+    "go north",
+    "pinch the milletamphora",
+    "go south",
     "go south",
     "pinch the sorghumgermflake",
     "go north",
     "go east",
     "pinch the avodire",
+    "go north",
+    "pinch the cornamphora",
+    "go south",
     "go south",
     "pinch the milletgermflake",
     "go north",
     "go east",
     "pinch the cabreuva",
+    "go north",
+    "pinch the oatamphora",
+    "go south",
     "go south",
     "pinch the corngermflake",
     "go north",
