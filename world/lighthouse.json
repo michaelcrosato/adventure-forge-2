@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14570,
+  "maxScore": 14610,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -25069,7 +25069,7 @@
       "name": "Rust Elemi",
       "desc": "A dry elemi east of the chainwale. Packed rust coats elemi.",
       "brief": "Dry elemi, packed rust.",
-      "exits": { "west": { "to": "rust_chainwale" }, "east": { "to": "rust_makore" }, "south": { "to": "rust_barleyshorts" } },
+      "exits": { "west": { "to": "rust_chainwale" }, "east": { "to": "rust_makore" }, "south": { "to": "rust_barleyshorts" }, "north": { "to": "rust_durumampule" } },
       "actions": [
         {
           "id": "pinch_elemi",
@@ -25078,6 +25078,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard elemi. They set it on the chainwale and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumampule": {
+      "name": "Rust Durumampule",
+      "desc": "A dry durumampule north of the elemi. Packed rust coats durumampule.",
+      "brief": "Dry durumampule, packed rust.",
+      "exits": { "south": { "to": "rust_elemi" } },
+      "actions": [
+        {
+          "id": "pinch_durumampule",
+          "label": "pinch the durumampule",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumampule. They packed it on the elemi and packed rust around it."]
           ]
         }
       ]
@@ -25103,7 +25120,7 @@
       "name": "Rust Makore",
       "desc": "A dry makore east of the elemi. Packed rust coats makore.",
       "brief": "Dry makore, packed rust.",
-      "exits": { "west": { "to": "rust_elemi" }, "east": { "to": "rust_angelim" }, "south": { "to": "rust_sorghumshorts" } },
+      "exits": { "west": { "to": "rust_elemi" }, "east": { "to": "rust_angelim" }, "south": { "to": "rust_sorghumshorts" }, "north": { "to": "rust_fonioampule" } },
       "actions": [
         {
           "id": "pinch_makore",
@@ -25112,6 +25129,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard makore. They packed it on the elemi and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_fonioampule": {
+      "name": "Rust Fonioampule",
+      "desc": "A dry fonioampule north of the makore. Packed rust coats fonioampule.",
+      "brief": "Dry fonioampule, packed rust.",
+      "exits": { "south": { "to": "rust_makore" } },
+      "actions": [
+        {
+          "id": "pinch_fonioampule",
+          "label": "pinch the fonioampule",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioampule. They packed it on the makore and packed rust around it."]
           ]
         }
       ]
@@ -25137,7 +25171,7 @@
       "name": "Rust Angelim",
       "desc": "A dry angelim east of the makore. Packed rust coats angelim.",
       "brief": "Dry angelim, packed rust.",
-      "exits": { "west": { "to": "rust_makore" }, "east": { "to": "rust_breu" }, "south": { "to": "rust_milletshorts" } },
+      "exits": { "west": { "to": "rust_makore" }, "east": { "to": "rust_breu" }, "south": { "to": "rust_milletshorts" }, "north": { "to": "rust_teffampule" } },
       "actions": [
         {
           "id": "pinch_angelim",
@@ -25146,6 +25180,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard angelim. They packed it on the makore and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffampule": {
+      "name": "Rust Teffampule",
+      "desc": "A dry teffampule north of the angelim. Packed rust coats teffampule.",
+      "brief": "Dry teffampule, packed rust.",
+      "exits": { "south": { "to": "rust_angelim" } },
+      "actions": [
+        {
+          "id": "pinch_teffampule",
+          "label": "pinch the teffampule",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffampule. They packed it on the angelim and packed rust around it."]
           ]
         }
       ]
@@ -25171,7 +25222,7 @@
       "name": "Rust Breu",
       "desc": "A dry breu east of the angelim. Packed rust coats breu.",
       "brief": "Dry breu, packed rust.",
-      "exits": { "west": { "to": "rust_angelim" }, "east": { "to": "rust_almon" }, "south": { "to": "rust_oatshorts" } },
+      "exits": { "west": { "to": "rust_angelim" }, "east": { "to": "rust_almon" }, "south": { "to": "rust_oatshorts" }, "north": { "to": "rust_barleyampule" } },
       "actions": [
         {
           "id": "pinch_breu",
@@ -25180,6 +25231,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard breu. They packed it on the angelim and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyampule": {
+      "name": "Rust Barleyampule",
+      "desc": "A dry barleyampule north of the breu. Packed rust coats barleyampule.",
+      "brief": "Dry barleyampule, packed rust.",
+      "exits": { "south": { "to": "rust_breu" } },
+      "actions": [
+        {
+          "id": "pinch_barleyampule",
+          "label": "pinch the barleyampule",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyampule. They packed it on the breu and packed rust around it."]
           ]
         }
       ]
@@ -25205,7 +25273,7 @@
       "name": "Rust Almon",
       "desc": "A dry almon east of the breu. Packed rust coats almon.",
       "brief": "Dry almon, packed rust.",
-      "exits": { "west": { "to": "rust_breu" }, "east": { "to": "rust_gisok" }, "south": { "to": "rust_ryeshorts" } },
+      "exits": { "west": { "to": "rust_breu" }, "east": { "to": "rust_gisok" }, "south": { "to": "rust_ryeshorts" }, "north": { "to": "rust_sorghumampule" } },
       "actions": [
         {
           "id": "pinch_almon",
@@ -25214,6 +25282,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard almon. They packed it on the breu and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumampule": {
+      "name": "Rust Sorghumampule",
+      "desc": "A dry sorghumampule north of the almon. Packed rust coats sorghumampule.",
+      "brief": "Dry sorghumampule, packed rust.",
+      "exits": { "south": { "to": "rust_almon" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumampule",
+          "label": "pinch the sorghumampule",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumampule. They packed it on the almon and packed rust around it."]
           ]
         }
       ]
@@ -25239,7 +25324,7 @@
       "name": "Rust Gisok",
       "desc": "A dry gisok east of the almon. Packed rust coats gisok.",
       "brief": "Dry gisok, packed rust.",
-      "exits": { "west": { "to": "rust_almon" }, "east": { "to": "rust_greybox" }, "south": { "to": "rust_durummiddlings" } },
+      "exits": { "west": { "to": "rust_almon" }, "east": { "to": "rust_greybox" }, "south": { "to": "rust_durummiddlings" }, "north": { "to": "rust_milletampule" } },
       "actions": [
         {
           "id": "pinch_gisok",
@@ -25248,6 +25333,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gisok. They packed it on the almon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletampule": {
+      "name": "Rust Milletampule",
+      "desc": "A dry milletampule north of the gisok. Packed rust coats milletampule.",
+      "brief": "Dry milletampule, packed rust.",
+      "exits": { "south": { "to": "rust_gisok" } },
+      "actions": [
+        {
+          "id": "pinch_milletampule",
+          "label": "pinch the milletampule",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletampule. They packed it on the gisok and packed rust around it."]
           ]
         }
       ]
@@ -25290,7 +25392,7 @@
       "name": "Rust Keelson",
       "desc": "A dry keelson east of the rib. Packed rust coats a keelson.",
       "brief": "Dry keelson, packed rust.",
-      "exits": { "west": { "to": "rust_rib" }, "east": { "to": "rust_boltrope" }, "south": { "to": "rust_foniomiddlings" } },
+      "exits": { "west": { "to": "rust_rib" }, "east": { "to": "rust_boltrope" }, "south": { "to": "rust_foniomiddlings" }, "north": { "to": "rust_cornampule" } },
       "actions": [
         {
           "id": "pinch_keelson",
@@ -25299,6 +25401,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard keelson. They sistered it on the rib and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornampule": {
+      "name": "Rust Cornampule",
+      "desc": "A dry cornampule north of the keelson. Packed rust coats cornampule.",
+      "brief": "Dry cornampule, packed rust.",
+      "exits": { "south": { "to": "rust_keelson" } },
+      "actions": [
+        {
+          "id": "pinch_cornampule",
+          "label": "pinch the cornampule",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornampule. They packed it on the keelson and packed rust around it."]
           ]
         }
       ]
@@ -25324,7 +25443,7 @@
       "name": "Rust Boltrope",
       "desc": "A dry boltrope east of the keelson. Packed rust coats a boltrope.",
       "brief": "Dry boltrope, packed rust.",
-      "exits": { "west": { "to": "rust_keelson" }, "east": { "to": "rust_futtockband" }, "south": { "to": "rust_teffmiddlings" } },
+      "exits": { "west": { "to": "rust_keelson" }, "east": { "to": "rust_futtockband" }, "south": { "to": "rust_teffmiddlings" }, "north": { "to": "rust_oatampule" } },
       "actions": [
         {
           "id": "pinch_boltrope",
@@ -25333,6 +25452,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard boltrope. They sewed it on the keelson and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatampule": {
+      "name": "Rust Oatampule",
+      "desc": "A dry oatampule north of the boltrope. Packed rust coats oatampule.",
+      "brief": "Dry oatampule, packed rust.",
+      "exits": { "south": { "to": "rust_boltrope" } },
+      "actions": [
+        {
+          "id": "pinch_oatampule",
+          "label": "pinch the oatampule",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatampule. They packed it on the boltrope and packed rust around it."]
           ]
         }
       ]
@@ -53858,31 +53994,49 @@
     "go north",
     "go east",
     "pinch the elemi",
+    "go north",
+    "pinch the durumampule",
+    "go south",
     "go south",
     "pinch the barleyshorts",
     "go north",
     "go east",
     "pinch the makore",
+    "go north",
+    "pinch the fonioampule",
+    "go south",
     "go south",
     "pinch the sorghumshorts",
     "go north",
     "go east",
     "pinch the angelim",
+    "go north",
+    "pinch the teffampule",
+    "go south",
     "go south",
     "pinch the milletshorts",
     "go north",
     "go east",
     "pinch the breu",
+    "go north",
+    "pinch the barleyampule",
+    "go south",
     "go south",
     "pinch the oatshorts",
     "go north",
     "go east",
     "pinch the almon",
+    "go north",
+    "pinch the sorghumampule",
+    "go south",
     "go south",
     "pinch the ryeshorts",
     "go north",
     "go east",
     "pinch the gisok",
+    "go north",
+    "pinch the milletampule",
+    "go south",
     "go south",
     "pinch the durummiddlings",
     "go north",
@@ -53900,11 +54054,17 @@
     "go north",
     "go east",
     "pinch the keelson",
+    "go north",
+    "pinch the cornampule",
+    "go south",
     "go south",
     "pinch the foniomiddlings",
     "go north",
     "go east",
     "pinch the boltrope",
+    "go north",
+    "pinch the oatampule",
+    "go south",
     "go south",
     "pinch the teffmiddlings",
     "go north",
