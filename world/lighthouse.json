@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10370,
+  "maxScore": 10410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -24457,7 +24457,7 @@
       "name": "Rust Thimble",
       "desc": "A dry thimble east of the rider. Packed rust coats a thimble.",
       "brief": "Dry thimble, packed rust.",
-      "exits": { "west": { "to": "rust_rider" }, "east": { "to": "rust_tackrope" } },
+      "exits": { "west": { "to": "rust_rider" }, "east": { "to": "rust_tackrope" }, "south": { "to": "rust_ricebran" } },
       "actions": [
         {
           "id": "pinch_thimble",
@@ -24470,11 +24470,28 @@
         }
       ]
     },
+    "rust_ricebran": {
+      "name": "Rust Ricebran",
+      "desc": "A dry ricebran south of the thimble. Packed rust coats ricebran.",
+      "brief": "Dry ricebran, packed rust.",
+      "exits": { "north": { "to": "rust_thimble" } },
+      "actions": [
+        {
+          "id": "pinch_ricebran",
+          "label": "pinch the ricebran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ricebran. They packed it on the thimble and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tackrope": {
       "name": "Rust Tackrope",
       "desc": "A dry tackrope east of the thimble. Packed rust coats a tackrope.",
       "brief": "Dry tackrope, packed rust.",
-      "exits": { "west": { "to": "rust_thimble" }, "east": { "to": "rust_pitchpine" } },
+      "exits": { "west": { "to": "rust_thimble" }, "east": { "to": "rust_pitchpine" }, "south": { "to": "rust_cornbran" } },
       "actions": [
         {
           "id": "pinch_tackrope",
@@ -24487,11 +24504,28 @@
         }
       ]
     },
+    "rust_cornbran": {
+      "name": "Rust Cornbran",
+      "desc": "A dry cornbran south of the tackrope. Packed rust coats cornbran.",
+      "brief": "Dry cornbran, packed rust.",
+      "exits": { "north": { "to": "rust_tackrope" } },
+      "actions": [
+        {
+          "id": "pinch_cornbran",
+          "label": "pinch the cornbran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbran. They packed it on the tackrope and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_pitchpine": {
       "name": "Rust Pitchpine",
       "desc": "A dry pitchpine east of the tackrope. Packed rust coats pitchpine.",
       "brief": "Dry pitchpine, packed rust.",
-      "exits": { "west": { "to": "rust_tackrope" }, "east": { "to": "rust_alabaster" } },
+      "exits": { "west": { "to": "rust_tackrope" }, "east": { "to": "rust_alabaster" }, "south": { "to": "rust_wheatbran" } },
       "actions": [
         {
           "id": "pinch_pitchpine",
@@ -24504,11 +24538,28 @@
         }
       ]
     },
+    "rust_wheatbran": {
+      "name": "Rust Wheatbran",
+      "desc": "A dry wheatbran south of the pitchpine. Packed rust coats wheatbran.",
+      "brief": "Dry wheatbran, packed rust.",
+      "exits": { "north": { "to": "rust_pitchpine" } },
+      "actions": [
+        {
+          "id": "pinch_wheatbran",
+          "label": "pinch the wheatbran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatbran. They packed it on the pitchpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_alabaster": {
       "name": "Rust Alabaster",
       "desc": "A dry alabaster east of the pitchpine. Packed rust coats alabaster.",
       "brief": "Dry alabaster, packed rust.",
-      "exits": { "west": { "to": "rust_pitchpine" }, "east": { "to": "rust_slatepowder" } },
+      "exits": { "west": { "to": "rust_pitchpine" }, "east": { "to": "rust_slatepowder" }, "south": { "to": "rust_oatbran" } },
       "actions": [
         {
           "id": "pinch_alabaster",
@@ -24521,11 +24572,28 @@
         }
       ]
     },
+    "rust_oatbran": {
+      "name": "Rust Oatbran",
+      "desc": "A dry oatbran south of the alabaster. Packed rust coats oatbran.",
+      "brief": "Dry oatbran, packed rust.",
+      "exits": { "north": { "to": "rust_alabaster" } },
+      "actions": [
+        {
+          "id": "pinch_oatbran",
+          "label": "pinch the oatbran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbran. They packed it on the alabaster and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_slatepowder": {
       "name": "Rust Slatepowder",
       "desc": "A dry slatepowder east of the alabaster. Packed rust coats slatepowder.",
       "brief": "Dry slatepowder, packed rust.",
-      "exits": { "west": { "to": "rust_alabaster" }, "east": { "to": "rust_oilstone" } },
+      "exits": { "west": { "to": "rust_alabaster" }, "east": { "to": "rust_oilstone" }, "south": { "to": "rust_ryebran" } },
       "actions": [
         {
           "id": "pinch_slatepowder",
@@ -24538,11 +24606,28 @@
         }
       ]
     },
+    "rust_ryebran": {
+      "name": "Rust Ryebran",
+      "desc": "A dry ryebran south of the slatepowder. Packed rust coats ryebran.",
+      "brief": "Dry ryebran, packed rust.",
+      "exits": { "north": { "to": "rust_slatepowder" } },
+      "actions": [
+        {
+          "id": "pinch_ryebran",
+          "label": "pinch the ryebran",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryebran. They packed it on the slatepowder and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_oilstone": {
       "name": "Rust Oilstone",
       "desc": "A dry oilstone east of the slatepowder. Packed rust coats oilstone.",
       "brief": "Dry oilstone, packed rust.",
-      "exits": { "west": { "to": "rust_slatepowder" }, "east": { "to": "rust_greenearth" } },
+      "exits": { "west": { "to": "rust_slatepowder" }, "east": { "to": "rust_greenearth" }, "south": { "to": "rust_speltflour" } },
       "actions": [
         {
           "id": "pinch_oilstone",
@@ -24555,11 +24640,28 @@
         }
       ]
     },
+    "rust_speltflour": {
+      "name": "Rust Speltflour",
+      "desc": "A dry speltflour south of the oilstone. Packed rust coats speltflour.",
+      "brief": "Dry speltflour, packed rust.",
+      "exits": { "north": { "to": "rust_oilstone" } },
+      "actions": [
+        {
+          "id": "pinch_speltflour",
+          "label": "pinch the speltflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard speltflour. They packed it on the oilstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_greenearth": {
       "name": "Rust Greenearth",
       "desc": "A dry greenearth east of the oilstone. Packed rust coats greenearth.",
       "brief": "Dry greenearth, packed rust.",
-      "exits": { "west": { "to": "rust_oilstone" }, "east": { "to": "rust_atacamite" } },
+      "exits": { "west": { "to": "rust_oilstone" }, "east": { "to": "rust_atacamite" }, "south": { "to": "rust_durumflour" } },
       "actions": [
         {
           "id": "pinch_greenearth",
@@ -24572,11 +24674,28 @@
         }
       ]
     },
+    "rust_durumflour": {
+      "name": "Rust Durumflour",
+      "desc": "A dry durumflour south of the greenearth. Packed rust coats durumflour.",
+      "brief": "Dry durumflour, packed rust.",
+      "exits": { "north": { "to": "rust_greenearth" } },
+      "actions": [
+        {
+          "id": "pinch_durumflour",
+          "label": "pinch the durumflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumflour. They packed it on the greenearth and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_atacamite": {
       "name": "Rust Atacamite",
       "desc": "A dry atacamite east of the greenearth. Packed rust coats atacamite.",
       "brief": "Dry atacamite, packed rust.",
-      "exits": { "west": { "to": "rust_greenearth" }, "east": { "to": "rust_cumengeite" } },
+      "exits": { "west": { "to": "rust_greenearth" }, "east": { "to": "rust_cumengeite" }, "south": { "to": "rust_breadflour" } },
       "actions": [
         {
           "id": "pinch_atacamite",
@@ -24585,6 +24704,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard atacamite. They packed it on the greenearth and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_breadflour": {
+      "name": "Rust Breadflour",
+      "desc": "A dry breadflour south of the atacamite. Packed rust coats breadflour.",
+      "brief": "Dry breadflour, packed rust.",
+      "exits": { "north": { "to": "rust_atacamite" } },
+      "actions": [
+        {
+          "id": "pinch_breadflour",
+          "label": "pinch the breadflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard breadflour. They packed it on the atacamite and packed rust around it."]
           ]
         }
       ]
@@ -39472,20 +39608,44 @@
     "pinch the rider",
     "go east",
     "pinch the thimble",
+    "go south",
+    "pinch the ricebran",
+    "go north",
     "go east",
     "pinch the tackrope",
+    "go south",
+    "pinch the cornbran",
+    "go north",
     "go east",
     "pinch the pitchpine",
+    "go south",
+    "pinch the wheatbran",
+    "go north",
     "go east",
     "pinch the alabaster",
+    "go south",
+    "pinch the oatbran",
+    "go north",
     "go east",
     "pinch the slatepowder",
+    "go south",
+    "pinch the ryebran",
+    "go north",
     "go east",
     "pinch the oilstone",
+    "go south",
+    "pinch the speltflour",
+    "go north",
     "go east",
     "pinch the greenearth",
+    "go south",
+    "pinch the durumflour",
+    "go north",
     "go east",
     "pinch the atacamite",
+    "go south",
+    "pinch the breadflour",
+    "go north",
     "go east",
     "pinch the cumengeite",
     "go south",
