@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 10250,
+  "maxScore": 10290,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -28112,7 +28112,7 @@
       "name": "Rust Sailgasket",
       "desc": "A dry sailgasket east of the roundline. Packed rust coats a sailgasket.",
       "brief": "Dry sailgasket, packed rust.",
-      "exits": { "west": { "to": "rust_roundline" }, "east": { "to": "rust_sienna" } },
+      "exits": { "west": { "to": "rust_roundline" }, "east": { "to": "rust_sienna" }, "south": { "to": "rust_sticky" } },
       "actions": [
         {
           "id": "pinch_sailgasket",
@@ -28125,11 +28125,28 @@
         }
       ]
     },
+    "rust_sticky": {
+      "name": "Rust Sticky",
+      "desc": "A dry sticky south of the sailgasket. Packed rust coats sticky.",
+      "brief": "Dry sticky, packed rust.",
+      "exits": { "north": { "to": "rust_sailgasket" } },
+      "actions": [
+        {
+          "id": "pinch_sticky",
+          "label": "pinch the sticky",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sticky. They packed it on the sailgasket and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sienna": {
       "name": "Rust Sienna",
       "desc": "A dry sienna east of the sailgasket. Packed rust coats sienna.",
       "brief": "Dry sienna, packed rust.",
-      "exits": { "west": { "to": "rust_sailgasket" }, "east": { "to": "rust_tripoli" } },
+      "exits": { "west": { "to": "rust_sailgasket" }, "east": { "to": "rust_tripoli" }, "south": { "to": "rust_blackrice" } },
       "actions": [
         {
           "id": "pinch_sienna",
@@ -28142,11 +28159,28 @@
         }
       ]
     },
+    "rust_blackrice": {
+      "name": "Rust Blackrice",
+      "desc": "A dry blackrice south of the sienna. Packed rust coats blackrice.",
+      "brief": "Dry blackrice, packed rust.",
+      "exits": { "north": { "to": "rust_sienna" } },
+      "actions": [
+        {
+          "id": "pinch_blackrice",
+          "label": "pinch the blackrice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard blackrice. They packed it on the sienna and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tripoli": {
       "name": "Rust Tripoli",
       "desc": "A dry tripoli east of the sienna. Packed rust coats tripoli.",
       "brief": "Dry tripoli, packed rust.",
-      "exits": { "west": { "to": "rust_sienna" }, "east": { "to": "rust_kieselguhr" } },
+      "exits": { "west": { "to": "rust_sienna" }, "east": { "to": "rust_kieselguhr" }, "south": { "to": "rust_wildrice" } },
       "actions": [
         {
           "id": "pinch_tripoli",
@@ -28159,11 +28193,28 @@
         }
       ]
     },
+    "rust_wildrice": {
+      "name": "Rust Wildrice",
+      "desc": "A dry wildrice south of the tripoli. Packed rust coats wildrice.",
+      "brief": "Dry wildrice, packed rust.",
+      "exits": { "north": { "to": "rust_tripoli" } },
+      "actions": [
+        {
+          "id": "pinch_wildrice",
+          "label": "pinch the wildrice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wildrice. They packed it on the tripoli and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kieselguhr": {
       "name": "Rust Kieselguhr",
       "desc": "A dry kieselguhr east of the tripoli. Packed rust coats kieselguhr.",
       "brief": "Dry kieselguhr, packed rust.",
-      "exits": { "west": { "to": "rust_tripoli" }, "east": { "to": "rust_pyrite" } },
+      "exits": { "west": { "to": "rust_tripoli" }, "east": { "to": "rust_pyrite" }, "south": { "to": "rust_redrice" } },
       "actions": [
         {
           "id": "pinch_kieselguhr",
@@ -28176,11 +28227,28 @@
         }
       ]
     },
+    "rust_redrice": {
+      "name": "Rust Redrice",
+      "desc": "A dry redrice south of the kieselguhr. Packed rust coats redrice.",
+      "brief": "Dry redrice, packed rust.",
+      "exits": { "north": { "to": "rust_kieselguhr" } },
+      "actions": [
+        {
+          "id": "pinch_redrice",
+          "label": "pinch the redrice",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard redrice. They packed it on the kieselguhr and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_pyrite": {
       "name": "Rust Pyrite",
       "desc": "A dry pyrite east of the kieselguhr. Packed rust coats pyrite.",
       "brief": "Dry pyrite, packed rust.",
-      "exits": { "west": { "to": "rust_kieselguhr" }, "east": { "to": "rust_burntumber" } },
+      "exits": { "west": { "to": "rust_kieselguhr" }, "east": { "to": "rust_burntumber" }, "south": { "to": "rust_jasmine" } },
       "actions": [
         {
           "id": "pinch_pyrite",
@@ -28193,11 +28261,28 @@
         }
       ]
     },
+    "rust_jasmine": {
+      "name": "Rust Jasmine",
+      "desc": "A dry jasmine south of the pyrite. Packed rust coats jasmine.",
+      "brief": "Dry jasmine, packed rust.",
+      "exits": { "north": { "to": "rust_pyrite" } },
+      "actions": [
+        {
+          "id": "pinch_jasmine",
+          "label": "pinch the jasmine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard jasmine. They packed it on the pyrite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_burntumber": {
       "name": "Rust Burntumber",
       "desc": "A dry burntumber east of the pyrite. Packed rust coats burntumber.",
       "brief": "Dry burntumber, packed rust.",
-      "exits": { "west": { "to": "rust_pyrite" }, "east": { "to": "rust_chrysocolla" } },
+      "exits": { "west": { "to": "rust_pyrite" }, "east": { "to": "rust_chrysocolla" }, "south": { "to": "rust_basmati" } },
       "actions": [
         {
           "id": "pinch_burntumber",
@@ -28210,11 +28295,28 @@
         }
       ]
     },
+    "rust_basmati": {
+      "name": "Rust Basmati",
+      "desc": "A dry basmati south of the burntumber. Packed rust coats basmati.",
+      "brief": "Dry basmati, packed rust.",
+      "exits": { "north": { "to": "rust_burntumber" } },
+      "actions": [
+        {
+          "id": "pinch_basmati",
+          "label": "pinch the basmati",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard basmati. They packed it on the burntumber and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_chrysocolla": {
       "name": "Rust Chrysocolla",
       "desc": "A dry chrysocolla east of the burntumber. Packed rust coats chrysocolla.",
       "brief": "Dry chrysocolla, packed rust.",
-      "exits": { "west": { "to": "rust_burntumber" }, "east": { "to": "rust_paratacamite" } },
+      "exits": { "west": { "to": "rust_burntumber" }, "east": { "to": "rust_paratacamite" }, "south": { "to": "rust_glutinous" } },
       "actions": [
         {
           "id": "pinch_chrysocolla",
@@ -28227,11 +28329,28 @@
         }
       ]
     },
+    "rust_glutinous": {
+      "name": "Rust Glutinous",
+      "desc": "A dry glutinous south of the chrysocolla. Packed rust coats glutinous.",
+      "brief": "Dry glutinous, packed rust.",
+      "exits": { "north": { "to": "rust_chrysocolla" } },
+      "actions": [
+        {
+          "id": "pinch_glutinous",
+          "label": "pinch the glutinous",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard glutinous. They packed it on the chrysocolla and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_paratacamite": {
       "name": "Rust Paratacamite",
       "desc": "A dry paratacamite east of the chrysocolla. Packed rust coats paratacamite.",
       "brief": "Dry paratacamite, packed rust.",
-      "exits": { "west": { "to": "rust_chrysocolla" }, "east": { "to": "rust_rammelsbergite" } },
+      "exits": { "west": { "to": "rust_chrysocolla" }, "east": { "to": "rust_rammelsbergite" }, "south": { "to": "rust_japonica" } },
       "actions": [
         {
           "id": "pinch_paratacamite",
@@ -28240,6 +28359,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard paratacamite. They packed it on the chrysocolla and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_japonica": {
+      "name": "Rust Japonica",
+      "desc": "A dry japonica south of the paratacamite. Packed rust coats japonica.",
+      "brief": "Dry japonica, packed rust.",
+      "exits": { "north": { "to": "rust_paratacamite" } },
+      "actions": [
+        {
+          "id": "pinch_japonica",
+          "label": "pinch the japonica",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard japonica. They packed it on the paratacamite and packed rust around it."]
           ]
         }
       ]
@@ -39164,20 +39300,44 @@
     "pinch the roundline",
     "go east",
     "pinch the sailgasket",
+    "go south",
+    "pinch the sticky",
+    "go north",
     "go east",
     "pinch the sienna",
+    "go south",
+    "pinch the blackrice",
+    "go north",
     "go east",
     "pinch the tripoli",
+    "go south",
+    "pinch the wildrice",
+    "go north",
     "go east",
     "pinch the kieselguhr",
+    "go south",
+    "pinch the redrice",
+    "go north",
     "go east",
     "pinch the pyrite",
+    "go south",
+    "pinch the jasmine",
+    "go north",
     "go east",
     "pinch the burntumber",
+    "go south",
+    "pinch the basmati",
+    "go north",
     "go east",
     "pinch the chrysocolla",
+    "go south",
+    "pinch the glutinous",
+    "go north",
     "go east",
     "pinch the paratacamite",
+    "go south",
+    "pinch the japonica",
+    "go north",
     "go east",
     "pinch the rammelsbergite",
     "go west",
