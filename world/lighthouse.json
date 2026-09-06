@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9090,
+  "maxScore": 9130,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -30135,7 +30135,7 @@
       "name": "Rust Titanium",
       "desc": "A dry titanium east of the cypress. Packed rust coats titanium.",
       "brief": "Dry titanium, packed rust.",
-      "exits": { "west": { "to": "rust_cypress" }, "east": { "to": "rust_chalcanthite" } },
+      "exits": { "west": { "to": "rust_cypress" }, "east": { "to": "rust_chalcanthite" }, "south": { "to": "rust_gorse" } },
       "actions": [
         {
           "id": "pinch_titanium",
@@ -30148,11 +30148,28 @@
         }
       ]
     },
+    "rust_gorse": {
+      "name": "Rust Gorse",
+      "desc": "A dry gorse south of the titanium. Packed rust coats gorse.",
+      "brief": "Dry gorse, packed rust.",
+      "exits": { "north": { "to": "rust_titanium" } },
+      "actions": [
+        {
+          "id": "pinch_gorse",
+          "label": "pinch the gorse",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gorse. They packed it on the titanium and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_chalcanthite": {
       "name": "Rust Chalcanthite",
       "desc": "A dry chalcanthite east of the titanium. Packed rust coats chalcanthite.",
       "brief": "Dry chalcanthite, packed rust.",
-      "exits": { "west": { "to": "rust_titanium" }, "east": { "to": "rust_paramelaconite" } },
+      "exits": { "west": { "to": "rust_titanium" }, "east": { "to": "rust_paramelaconite" }, "south": { "to": "rust_rush" } },
       "actions": [
         {
           "id": "pinch_chalcanthite",
@@ -30161,6 +30178,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chalcanthite. They packed it on the titanium and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_rush": {
+      "name": "Rust Rush",
+      "desc": "A dry rush south of the chalcanthite. Packed rust coats rush.",
+      "brief": "Dry rush, packed rust.",
+      "exits": { "north": { "to": "rust_chalcanthite" } },
+      "actions": [
+        {
+          "id": "pinch_rush",
+          "label": "pinch the rush",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard rush. They packed it on the chalcanthite and packed rust around it."]
           ]
         }
       ]
@@ -30203,7 +30237,7 @@
       "name": "Rust Manila",
       "desc": "A dry manila east of the sheet. Packed rust coats a manila.",
       "brief": "Dry manila, packed rust.",
-      "exits": { "west": { "to": "rust_sheet" }, "east": { "to": "rust_tow" } },
+      "exits": { "west": { "to": "rust_sheet" }, "east": { "to": "rust_tow" }, "south": { "to": "rust_papyrus" } },
       "actions": [
         {
           "id": "pinch_manila",
@@ -30216,11 +30250,28 @@
         }
       ]
     },
+    "rust_papyrus": {
+      "name": "Rust Papyrus",
+      "desc": "A dry papyrus south of the manila. Packed rust coats papyrus.",
+      "brief": "Dry papyrus, packed rust.",
+      "exits": { "north": { "to": "rust_manila" } },
+      "actions": [
+        {
+          "id": "pinch_papyrus",
+          "label": "pinch the papyrus",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard papyrus. They packed it on the manila and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tow": {
       "name": "Rust Tow",
       "desc": "A dry tow east of the manila. Packed rust coats tow.",
       "brief": "Dry tow, packed rust.",
-      "exits": { "west": { "to": "rust_manila" }, "east": { "to": "rust_naphtha" } },
+      "exits": { "west": { "to": "rust_manila" }, "east": { "to": "rust_naphtha" }, "south": { "to": "rust_sedge" } },
       "actions": [
         {
           "id": "pinch_tow",
@@ -30233,11 +30284,28 @@
         }
       ]
     },
+    "rust_sedge": {
+      "name": "Rust Sedge",
+      "desc": "A dry sedge south of the tow. Packed rust coats sedge.",
+      "brief": "Dry sedge, packed rust.",
+      "exits": { "north": { "to": "rust_tow" } },
+      "actions": [
+        {
+          "id": "pinch_sedge",
+          "label": "pinch the sedge",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sedge. They packed it on the tow and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_naphtha": {
       "name": "Rust Naphtha",
       "desc": "A dry naphtha east of the tow. Packed rust coats naphtha.",
       "brief": "Dry naphtha, packed rust.",
-      "exits": { "west": { "to": "rust_tow" }, "east": { "to": "rust_birch" } },
+      "exits": { "west": { "to": "rust_tow" }, "east": { "to": "rust_birch" }, "south": { "to": "rust_pina" } },
       "actions": [
         {
           "id": "pinch_naphtha",
@@ -30250,11 +30318,28 @@
         }
       ]
     },
+    "rust_pina": {
+      "name": "Rust Pina",
+      "desc": "A dry pina south of the naphtha. Packed rust coats pina.",
+      "brief": "Dry pina, packed rust.",
+      "exits": { "north": { "to": "rust_naphtha" } },
+      "actions": [
+        {
+          "id": "pinch_pina",
+          "label": "pinch the pina",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard pina. They packed it on the naphtha and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_birch": {
       "name": "Rust Birch",
       "desc": "A dry birch east of the naphtha. Packed rust coats birch.",
       "brief": "Dry birch, packed rust.",
-      "exits": { "west": { "to": "rust_naphtha" }, "east": { "to": "rust_willow" } },
+      "exits": { "west": { "to": "rust_naphtha" }, "east": { "to": "rust_willow" }, "south": { "to": "rust_alfa" } },
       "actions": [
         {
           "id": "pinch_birch",
@@ -30267,11 +30352,28 @@
         }
       ]
     },
+    "rust_alfa": {
+      "name": "Rust Alfa",
+      "desc": "A dry alfa south of the birch. Packed rust coats alfa.",
+      "brief": "Dry alfa, packed rust.",
+      "exits": { "north": { "to": "rust_birch" } },
+      "actions": [
+        {
+          "id": "pinch_alfa",
+          "label": "pinch the alfa",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard alfa. They packed it on the birch and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_willow": {
       "name": "Rust Willow",
       "desc": "A dry willow east of the birch. Packed rust coats willow.",
       "brief": "Dry willow, packed rust.",
-      "exits": { "west": { "to": "rust_birch" }, "east": { "to": "rust_cadmium" } },
+      "exits": { "west": { "to": "rust_birch" }, "east": { "to": "rust_cadmium" }, "south": { "to": "rust_piassava" } },
       "actions": [
         {
           "id": "pinch_willow",
@@ -30284,11 +30386,28 @@
         }
       ]
     },
+    "rust_piassava": {
+      "name": "Rust Piassava",
+      "desc": "A dry piassava south of the willow. Packed rust coats piassava.",
+      "brief": "Dry piassava, packed rust.",
+      "exits": { "north": { "to": "rust_willow" } },
+      "actions": [
+        {
+          "id": "pinch_piassava",
+          "label": "pinch the piassava",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard piassava. They packed it on the willow and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cadmium": {
       "name": "Rust Cadmium",
       "desc": "A dry cadmium east of the willow. Packed rust coats cadmium.",
       "brief": "Dry cadmium, packed rust.",
-      "exits": { "west": { "to": "rust_willow" }, "east": { "to": "rust_antlerite" } },
+      "exits": { "west": { "to": "rust_willow" }, "east": { "to": "rust_antlerite" }, "south": { "to": "rust_esparto" } },
       "actions": [
         {
           "id": "pinch_cadmium",
@@ -30297,6 +30416,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cadmium. They packed it on the willow and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_esparto": {
+      "name": "Rust Esparto",
+      "desc": "A dry esparto south of the cadmium. Packed rust coats esparto.",
+      "brief": "Dry esparto, packed rust.",
+      "exits": { "north": { "to": "rust_cadmium" } },
+      "actions": [
+        {
+          "id": "pinch_esparto",
+          "label": "pinch the esparto",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard esparto. They packed it on the cadmium and packed rust around it."]
           ]
         }
       ]
@@ -36116,8 +36252,14 @@
     "pinch the cypress",
     "go east",
     "pinch the titanium",
+    "go south",
+    "pinch the gorse",
+    "go north",
     "go east",
     "pinch the chalcanthite",
+    "go south",
+    "pinch the rush",
+    "go north",
     "go east",
     "pinch the paramelaconite",
     "go west",
@@ -36135,16 +36277,34 @@
     "pinch the lug",
     "go east",
     "pinch the manila",
+    "go south",
+    "pinch the papyrus",
+    "go north",
     "go east",
     "pinch the tow",
+    "go south",
+    "pinch the sedge",
+    "go north",
     "go east",
     "pinch the naphtha",
+    "go south",
+    "pinch the pina",
+    "go north",
     "go east",
     "pinch the birch",
+    "go south",
+    "pinch the alfa",
+    "go north",
     "go east",
     "pinch the willow",
+    "go south",
+    "pinch the piassava",
+    "go north",
     "go east",
     "pinch the cadmium",
+    "go south",
+    "pinch the esparto",
+    "go north",
     "go east",
     "pinch the antlerite",
     "go west",
