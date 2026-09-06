@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 13050,
+  "maxScore": 13090,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -37088,7 +37088,7 @@
       "name": "Rust Larch",
       "desc": "A dry larch east of the teak. Packed rust coats larch.",
       "brief": "Dry larch, packed rust.",
-      "exits": { "west": { "to": "rust_teak" }, "east": { "to": "rust_cottonwood" }, "south": { "to": "rust_cress" } },
+      "exits": { "west": { "to": "rust_teak" }, "east": { "to": "rust_cottonwood" }, "south": { "to": "rust_cress" }, "north": { "to": "rust_durumvat" } },
       "actions": [
         {
           "id": "pinch_larch",
@@ -37097,6 +37097,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard larch. They laid it on the teak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumvat": {
+      "name": "Rust Durumvat",
+      "desc": "A dry durumvat north of the larch. Packed rust coats durumvat.",
+      "brief": "Dry durumvat, packed rust.",
+      "exits": { "south": { "to": "rust_larch" } },
+      "actions": [
+        {
+          "id": "pinch_durumvat",
+          "label": "pinch the durumvat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumvat. They packed it on the larch and packed rust around it."]
           ]
         }
       ]
@@ -37122,7 +37139,7 @@
       "name": "Rust Cottonwood",
       "desc": "A dry cottonwood east of the larch. Packed rust coats cottonwood.",
       "brief": "Dry cottonwood, packed rust.",
-      "exits": { "west": { "to": "rust_larch" }, "east": { "to": "rust_emery" }, "south": { "to": "rust_sprout" } },
+      "exits": { "west": { "to": "rust_larch" }, "east": { "to": "rust_emery" }, "south": { "to": "rust_sprout" }, "north": { "to": "rust_foniovat" } },
       "actions": [
         {
           "id": "pinch_cottonwood",
@@ -37131,6 +37148,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cottonwood. They laid it on the larch and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniovat": {
+      "name": "Rust Foniovat",
+      "desc": "A dry foniovat north of the cottonwood. Packed rust coats foniovat.",
+      "brief": "Dry foniovat, packed rust.",
+      "exits": { "south": { "to": "rust_cottonwood" } },
+      "actions": [
+        {
+          "id": "pinch_foniovat",
+          "label": "pinch the foniovat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniovat. They packed it on the cottonwood and packed rust around it."]
           ]
         }
       ]
@@ -37156,7 +37190,7 @@
       "name": "Rust Emery",
       "desc": "A dry emery east of the cottonwood. Packed rust coats emery.",
       "brief": "Dry emery, packed rust.",
-      "exits": { "west": { "to": "rust_cottonwood" }, "east": { "to": "rust_enargite" }, "south": { "to": "rust_tatsoi" } },
+      "exits": { "west": { "to": "rust_cottonwood" }, "east": { "to": "rust_enargite" }, "south": { "to": "rust_tatsoi" }, "north": { "to": "rust_teffvat" } },
       "actions": [
         {
           "id": "pinch_emery",
@@ -37165,6 +37199,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard emery. They packed it on the cottonwood and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffvat": {
+      "name": "Rust Teffvat",
+      "desc": "A dry teffvat north of the emery. Packed rust coats teffvat.",
+      "brief": "Dry teffvat, packed rust.",
+      "exits": { "south": { "to": "rust_emery" } },
+      "actions": [
+        {
+          "id": "pinch_teffvat",
+          "label": "pinch the teffvat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffvat. They packed it on the emery and packed rust around it."]
           ]
         }
       ]
@@ -37190,7 +37241,7 @@
       "name": "Rust Enargite",
       "desc": "A dry enargite east of the emery. Packed rust coats enargite.",
       "brief": "Dry enargite, packed rust.",
-      "exits": { "west": { "to": "rust_emery" }, "east": { "to": "rust_wurtzite" }, "south": { "to": "rust_mizuna" } },
+      "exits": { "west": { "to": "rust_emery" }, "east": { "to": "rust_wurtzite" }, "south": { "to": "rust_mizuna" }, "north": { "to": "rust_barleyvat" } },
       "actions": [
         {
           "id": "pinch_enargite",
@@ -37199,6 +37250,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard enargite. They packed it on the emery and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyvat": {
+      "name": "Rust Barleyvat",
+      "desc": "A dry barleyvat north of the enargite. Packed rust coats barleyvat.",
+      "brief": "Dry barleyvat, packed rust.",
+      "exits": { "south": { "to": "rust_enargite" } },
+      "actions": [
+        {
+          "id": "pinch_barleyvat",
+          "label": "pinch the barleyvat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyvat. They packed it on the enargite and packed rust around it."]
           ]
         }
       ]
@@ -37258,7 +37326,7 @@
       "name": "Rust Foxes",
       "desc": "A dry foxes east of the zinc. Packed rust coats foxes.",
       "brief": "Dry foxes, packed rust.",
-      "exits": { "west": { "to": "rust_zinc" }, "east": { "to": "rust_tackline" }, "south": { "to": "rust_chicory" } },
+      "exits": { "west": { "to": "rust_zinc" }, "east": { "to": "rust_tackline" }, "south": { "to": "rust_chicory" }, "north": { "to": "rust_sorghumvat" } },
       "actions": [
         {
           "id": "pinch_foxes",
@@ -37267,6 +37335,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard foxes. They laid it on the zinc and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumvat": {
+      "name": "Rust Sorghumvat",
+      "desc": "A dry sorghumvat north of the foxes. Packed rust coats sorghumvat.",
+      "brief": "Dry sorghumvat, packed rust.",
+      "exits": { "south": { "to": "rust_foxes" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumvat",
+          "label": "pinch the sorghumvat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumvat. They packed it on the foxes and packed rust around it."]
           ]
         }
       ]
@@ -37292,7 +37377,7 @@
       "name": "Rust Tackline",
       "desc": "A dry tackline east of the foxes. Packed rust coats a tackline.",
       "brief": "Dry tackline, packed rust.",
-      "exits": { "west": { "to": "rust_foxes" }, "east": { "to": "rust_duck" }, "south": { "to": "rust_romaine" } },
+      "exits": { "west": { "to": "rust_foxes" }, "east": { "to": "rust_duck" }, "south": { "to": "rust_romaine" }, "north": { "to": "rust_milletvat" } },
       "actions": [
         {
           "id": "pinch_tackline",
@@ -37301,6 +37386,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tackline. They bent it on the foxes and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletvat": {
+      "name": "Rust Milletvat",
+      "desc": "A dry milletvat north of the tackline. Packed rust coats milletvat.",
+      "brief": "Dry milletvat, packed rust.",
+      "exits": { "south": { "to": "rust_tackline" } },
+      "actions": [
+        {
+          "id": "pinch_milletvat",
+          "label": "pinch the milletvat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletvat. They packed it on the tackline and packed rust around it."]
           ]
         }
       ]
@@ -37326,7 +37428,7 @@
       "name": "Rust Duck",
       "desc": "A dry duck east of the tackline. Packed rust coats a duck.",
       "brief": "Dry duck, packed rust.",
-      "exits": { "west": { "to": "rust_tackline" }, "east": { "to": "rust_putty" }, "south": { "to": "rust_radicchio" } },
+      "exits": { "west": { "to": "rust_tackline" }, "east": { "to": "rust_putty" }, "south": { "to": "rust_radicchio" }, "north": { "to": "rust_cornvat" } },
       "actions": [
         {
           "id": "pinch_duck",
@@ -37335,6 +37437,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard duck. They folded it on the tackline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornvat": {
+      "name": "Rust Cornvat",
+      "desc": "A dry cornvat north of the duck. Packed rust coats cornvat.",
+      "brief": "Dry cornvat, packed rust.",
+      "exits": { "south": { "to": "rust_duck" } },
+      "actions": [
+        {
+          "id": "pinch_cornvat",
+          "label": "pinch the cornvat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornvat. They packed it on the duck and packed rust around it."]
           ]
         }
       ]
@@ -37360,7 +37479,7 @@
       "name": "Rust Putty",
       "desc": "A dry putty east of the duck. Packed rust coats putty.",
       "brief": "Dry putty, packed rust.",
-      "exits": { "west": { "to": "rust_duck" }, "east": { "to": "rust_gypsum" }, "south": { "to": "rust_arugula" } },
+      "exits": { "west": { "to": "rust_duck" }, "east": { "to": "rust_gypsum" }, "south": { "to": "rust_arugula" }, "north": { "to": "rust_oatvat" } },
       "actions": [
         {
           "id": "pinch_putty",
@@ -37369,6 +37488,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard putty. They pressed it on the duck and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatvat": {
+      "name": "Rust Oatvat",
+      "desc": "A dry oatvat north of the putty. Packed rust coats oatvat.",
+      "brief": "Dry oatvat, packed rust.",
+      "exits": { "south": { "to": "rust_putty" } },
+      "actions": [
+        {
+          "id": "pinch_oatvat",
+          "label": "pinch the oatvat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatvat. They packed it on the putty and packed rust around it."]
           ]
         }
       ]
@@ -50808,21 +50944,33 @@
     "go north",
     "go east",
     "pinch the larch",
+    "go north",
+    "pinch the durumvat",
+    "go south",
     "go south",
     "pinch the cress",
     "go north",
     "go east",
     "pinch the cottonwood",
+    "go north",
+    "pinch the foniovat",
+    "go south",
     "go south",
     "pinch the sprout",
     "go north",
     "go east",
     "pinch the emery",
+    "go north",
+    "pinch the teffvat",
+    "go south",
     "go south",
     "pinch the tatsoi",
     "go north",
     "go east",
     "pinch the enargite",
+    "go north",
+    "pinch the barleyvat",
+    "go south",
     "go south",
     "pinch the mizuna",
     "go north",
@@ -50843,21 +50991,33 @@
     "pinch the zinc",
     "go east",
     "pinch the foxes",
+    "go north",
+    "pinch the sorghumvat",
+    "go south",
     "go south",
     "pinch the chicory",
     "go north",
     "go east",
     "pinch the tackline",
+    "go north",
+    "pinch the milletvat",
+    "go south",
     "go south",
     "pinch the romaine",
     "go north",
     "go east",
     "pinch the duck",
+    "go north",
+    "pinch the cornvat",
+    "go south",
     "go south",
     "pinch the radicchio",
     "go north",
     "go east",
     "pinch the putty",
+    "go north",
+    "pinch the oatvat",
+    "go south",
     "go south",
     "pinch the arugula",
     "go north",
