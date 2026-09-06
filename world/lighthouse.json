@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15890,
+  "maxScore": 15930,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -14478,7 +14478,7 @@
       "name": "Rust Applebox",
       "desc": "A dry applebox east of the coal. Packed rust coats applebox.",
       "brief": "Dry applebox, packed rust.",
-      "exits": { "west": { "to": "rust_coal" }, "east": { "to": "rust_lillypilly" }, "south": { "to": "rust_foniograde" } },
+      "exits": { "west": { "to": "rust_coal" }, "east": { "to": "rust_lillypilly" }, "south": { "to": "rust_foniograde" }, "north": { "to": "rust_durumbalthazar" } },
       "actions": [
         {
           "id": "pinch_applebox",
@@ -14487,6 +14487,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard applebox. They packed it on the coal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumbalthazar": {
+      "name": "Rust Durumbalthazar",
+      "desc": "A dry durumbalthazar north of the applebox. Packed rust coats durumbalthazar.",
+      "brief": "Dry durumbalthazar, packed rust.",
+      "exits": { "south": { "to": "rust_applebox" } },
+      "actions": [
+        {
+          "id": "pinch_durumbalthazar",
+          "label": "pinch the durumbalthazar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumbalthazar. They packed it on the applebox and packed rust around it."]
           ]
         }
       ]
@@ -14512,7 +14529,7 @@
       "name": "Rust Lillypilly",
       "desc": "A dry lillypilly east of the applebox. Packed rust coats lillypilly.",
       "brief": "Dry lillypilly, packed rust.",
-      "exits": { "west": { "to": "rust_applebox" }, "east": { "to": "rust_loblolly" }, "south": { "to": "rust_teffgrade" } },
+      "exits": { "west": { "to": "rust_applebox" }, "east": { "to": "rust_loblolly" }, "south": { "to": "rust_teffgrade" }, "north": { "to": "rust_foniobalthazar" } },
       "actions": [
         {
           "id": "pinch_lillypilly",
@@ -14521,6 +14538,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard lillypilly. They packed it on the applebox and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniobalthazar": {
+      "name": "Rust Foniobalthazar",
+      "desc": "A dry foniobalthazar north of the lillypilly. Packed rust coats foniobalthazar.",
+      "brief": "Dry foniobalthazar, packed rust.",
+      "exits": { "south": { "to": "rust_lillypilly" } },
+      "actions": [
+        {
+          "id": "pinch_foniobalthazar",
+          "label": "pinch the foniobalthazar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniobalthazar. They packed it on the lillypilly and packed rust around it."]
           ]
         }
       ]
@@ -14546,7 +14580,7 @@
       "name": "Rust Loblolly",
       "desc": "A dry loblolly east of the lillypilly. Packed rust coats loblolly.",
       "brief": "Dry loblolly, packed rust.",
-      "exits": { "west": { "to": "rust_lillypilly" }, "east": { "to": "rust_engelmann" }, "south": { "to": "rust_barleygrade" } },
+      "exits": { "west": { "to": "rust_lillypilly" }, "east": { "to": "rust_engelmann" }, "south": { "to": "rust_barleygrade" }, "north": { "to": "rust_teffbalthazar" } },
       "actions": [
         {
           "id": "pinch_loblolly",
@@ -14555,6 +14589,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard loblolly. They packed it on the lillypilly and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffbalthazar": {
+      "name": "Rust Teffbalthazar",
+      "desc": "A dry teffbalthazar north of the loblolly. Packed rust coats teffbalthazar.",
+      "brief": "Dry teffbalthazar, packed rust.",
+      "exits": { "south": { "to": "rust_loblolly" } },
+      "actions": [
+        {
+          "id": "pinch_teffbalthazar",
+          "label": "pinch the teffbalthazar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffbalthazar. They packed it on the loblolly and packed rust around it."]
           ]
         }
       ]
@@ -14580,7 +14631,7 @@
       "name": "Rust Engelmann",
       "desc": "A dry engelmann east of the loblolly. Packed rust coats engelmann.",
       "brief": "Dry engelmann, packed rust.",
-      "exits": { "west": { "to": "rust_loblolly" }, "east": { "to": "rust_pukatea" }, "south": { "to": "rust_houpara" } },
+      "exits": { "west": { "to": "rust_loblolly" }, "east": { "to": "rust_pukatea" }, "south": { "to": "rust_houpara" }, "north": { "to": "rust_barleybalthazar" } },
       "actions": [
         {
           "id": "pinch_engelmann",
@@ -14589,6 +14640,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard engelmann. They packed it on the loblolly and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleybalthazar": {
+      "name": "Rust Barleybalthazar",
+      "desc": "A dry barleybalthazar north of the engelmann. Packed rust coats barleybalthazar.",
+      "brief": "Dry barleybalthazar, packed rust.",
+      "exits": { "south": { "to": "rust_engelmann" } },
+      "actions": [
+        {
+          "id": "pinch_barleybalthazar",
+          "label": "pinch the barleybalthazar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleybalthazar. They packed it on the engelmann and packed rust around it."]
           ]
         }
       ]
@@ -14648,7 +14716,7 @@
       "name": "Rust Catharpin",
       "desc": "A dry catharpin east of the stringer. Packed rust coats a catharpin.",
       "brief": "Dry catharpin, packed rust.",
-      "exits": { "west": { "to": "rust_stringer" }, "east": { "to": "rust_munter" }, "south": { "to": "rust_sorghumgrade" } },
+      "exits": { "west": { "to": "rust_stringer" }, "east": { "to": "rust_munter" }, "south": { "to": "rust_sorghumgrade" }, "north": { "to": "rust_sorghumbalthazar" } },
       "actions": [
         {
           "id": "pinch_catharpin",
@@ -14657,6 +14725,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard catharpin. They tautened it on the stringer and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumbalthazar": {
+      "name": "Rust Sorghumbalthazar",
+      "desc": "A dry sorghumbalthazar north of the catharpin. Packed rust coats sorghumbalthazar.",
+      "brief": "Dry sorghumbalthazar, packed rust.",
+      "exits": { "south": { "to": "rust_catharpin" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbalthazar",
+          "label": "pinch the sorghumbalthazar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbalthazar. They packed it on the catharpin and packed rust around it."]
           ]
         }
       ]
@@ -14682,7 +14767,7 @@
       "name": "Rust Munter",
       "desc": "A dry munter east of the catharpin. Packed rust coats a munter.",
       "brief": "Dry munter, packed rust.",
-      "exits": { "west": { "to": "rust_catharpin" }, "east": { "to": "rust_karaya" }, "south": { "to": "rust_milletgrade" } },
+      "exits": { "west": { "to": "rust_catharpin" }, "east": { "to": "rust_karaya" }, "south": { "to": "rust_milletgrade" }, "north": { "to": "rust_milletbalthazar" } },
       "actions": [
         {
           "id": "pinch_munter",
@@ -14691,6 +14776,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard munter. They wrapped it on the catharpin and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletbalthazar": {
+      "name": "Rust Milletbalthazar",
+      "desc": "A dry milletbalthazar north of the munter. Packed rust coats milletbalthazar.",
+      "brief": "Dry milletbalthazar, packed rust.",
+      "exits": { "south": { "to": "rust_munter" } },
+      "actions": [
+        {
+          "id": "pinch_milletbalthazar",
+          "label": "pinch the milletbalthazar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbalthazar. They packed it on the munter and packed rust around it."]
           ]
         }
       ]
@@ -14716,7 +14818,7 @@
       "name": "Rust Karaya",
       "desc": "A dry karaya east of the munter. Packed rust coats karaya.",
       "brief": "Dry karaya, packed rust.",
-      "exits": { "west": { "to": "rust_munter" }, "east": { "to": "rust_litmus" }, "south": { "to": "rust_corngrade" } },
+      "exits": { "west": { "to": "rust_munter" }, "east": { "to": "rust_litmus" }, "south": { "to": "rust_corngrade" }, "north": { "to": "rust_cornbalthazar" } },
       "actions": [
         {
           "id": "pinch_karaya",
@@ -14725,6 +14827,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard karaya. They packed it on the munter and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornbalthazar": {
+      "name": "Rust Cornbalthazar",
+      "desc": "A dry cornbalthazar north of the karaya. Packed rust coats cornbalthazar.",
+      "brief": "Dry cornbalthazar, packed rust.",
+      "exits": { "south": { "to": "rust_karaya" } },
+      "actions": [
+        {
+          "id": "pinch_cornbalthazar",
+          "label": "pinch the cornbalthazar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbalthazar. They packed it on the karaya and packed rust around it."]
           ]
         }
       ]
@@ -14750,7 +14869,7 @@
       "name": "Rust Litmus",
       "desc": "A dry litmus east of the karaya. Packed rust coats litmus.",
       "brief": "Dry litmus, packed rust.",
-      "exits": { "west": { "to": "rust_karaya" }, "east": { "to": "rust_peat" }, "south": { "to": "rust_oatgrade" } },
+      "exits": { "west": { "to": "rust_karaya" }, "east": { "to": "rust_peat" }, "south": { "to": "rust_oatgrade" }, "north": { "to": "rust_oatbalthazar" } },
       "actions": [
         {
           "id": "pinch_litmus",
@@ -14759,6 +14878,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard litmus. They packed it on the karaya and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatbalthazar": {
+      "name": "Rust Oatbalthazar",
+      "desc": "A dry oatbalthazar north of the litmus. Packed rust coats oatbalthazar.",
+      "brief": "Dry oatbalthazar, packed rust.",
+      "exits": { "south": { "to": "rust_litmus" } },
+      "actions": [
+        {
+          "id": "pinch_oatbalthazar",
+          "label": "pinch the oatbalthazar",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbalthazar. They packed it on the litmus and packed rust around it."]
           ]
         }
       ]
@@ -56472,21 +56608,33 @@
     "go north",
     "go east",
     "pinch the applebox",
+    "go north",
+    "pinch the durumbalthazar",
+    "go south",
     "go south",
     "pinch the foniograde",
     "go north",
     "go east",
     "pinch the lillypilly",
+    "go north",
+    "pinch the foniobalthazar",
+    "go south",
     "go south",
     "pinch the teffgrade",
     "go north",
     "go east",
     "pinch the loblolly",
+    "go north",
+    "pinch the teffbalthazar",
+    "go south",
     "go south",
     "pinch the barleygrade",
     "go north",
     "go east",
     "pinch the engelmann",
+    "go north",
+    "pinch the barleybalthazar",
+    "go south",
     "go south",
     "pinch the houpara",
     "go north",
@@ -56506,21 +56654,33 @@
     "pinch the stringer",
     "go east",
     "pinch the catharpin",
+    "go north",
+    "pinch the sorghumbalthazar",
+    "go south",
     "go south",
     "pinch the sorghumgrade",
     "go north",
     "go east",
     "pinch the munter",
+    "go north",
+    "pinch the milletbalthazar",
+    "go south",
     "go south",
     "pinch the milletgrade",
     "go north",
     "go east",
     "pinch the karaya",
+    "go north",
+    "pinch the cornbalthazar",
+    "go south",
     "go south",
     "pinch the corngrade",
     "go north",
     "go east",
     "pinch the litmus",
+    "go north",
+    "pinch the oatbalthazar",
+    "go south",
     "go south",
     "pinch the oatgrade",
     "go north",
