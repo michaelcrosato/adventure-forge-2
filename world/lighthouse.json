@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11490,
+  "maxScore": 11530,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -19153,7 +19153,7 @@
       "name": "Rust Worming",
       "desc": "A dry worming east of the tabernacle. Packed rust coats worming.",
       "brief": "Dry worming, packed rust.",
-      "exits": { "west": { "to": "rust_tabernacle" }, "east": { "to": "rust_rackseizing" } },
+      "exits": { "west": { "to": "rust_tabernacle" }, "east": { "to": "rust_rackseizing" }, "south": { "to": "rust_durumclear" } },
       "actions": [
         {
           "id": "pinch_worming",
@@ -19166,11 +19166,28 @@
         }
       ]
     },
+    "rust_durumclear": {
+      "name": "Rust Durumclear",
+      "desc": "A dry durumclear south of the worming. Packed rust coats durumclear.",
+      "brief": "Dry durumclear, packed rust.",
+      "exits": { "north": { "to": "rust_worming" } },
+      "actions": [
+        {
+          "id": "pinch_durumclear",
+          "label": "pinch the durumclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumclear. They packed it on the worming and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_rackseizing": {
       "name": "Rust Rackseizing",
       "desc": "A dry rackseizing east of the worming. Packed rust coats a rackseizing.",
       "brief": "Dry rackseizing, packed rust.",
-      "exits": { "west": { "to": "rust_worming" }, "east": { "to": "rust_isinglass" } },
+      "exits": { "west": { "to": "rust_worming" }, "east": { "to": "rust_isinglass" }, "south": { "to": "rust_fonioclear" } },
       "actions": [
         {
           "id": "pinch_rackseizing",
@@ -19183,11 +19200,28 @@
         }
       ]
     },
+    "rust_fonioclear": {
+      "name": "Rust Fonioclear",
+      "desc": "A dry fonioclear south of the rackseizing. Packed rust coats fonioclear.",
+      "brief": "Dry fonioclear, packed rust.",
+      "exits": { "north": { "to": "rust_rackseizing" } },
+      "actions": [
+        {
+          "id": "pinch_fonioclear",
+          "label": "pinch the fonioclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard fonioclear. They packed it on the rackseizing and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_isinglass": {
       "name": "Rust Isinglass",
       "desc": "A dry isinglass east of the rackseizing. Packed rust coats isinglass.",
       "brief": "Dry isinglass, packed rust.",
-      "exits": { "west": { "to": "rust_rackseizing" }, "east": { "to": "rust_movingui" } },
+      "exits": { "west": { "to": "rust_rackseizing" }, "east": { "to": "rust_movingui" }, "south": { "to": "rust_teffclear" } },
       "actions": [
         {
           "id": "pinch_isinglass",
@@ -19200,11 +19234,28 @@
         }
       ]
     },
+    "rust_teffclear": {
+      "name": "Rust Teffclear",
+      "desc": "A dry teffclear south of the isinglass. Packed rust coats teffclear.",
+      "brief": "Dry teffclear, packed rust.",
+      "exits": { "north": { "to": "rust_isinglass" } },
+      "actions": [
+        {
+          "id": "pinch_teffclear",
+          "label": "pinch the teffclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffclear. They packed it on the isinglass and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_movingui": {
       "name": "Rust Movingui",
       "desc": "A dry movingui east of the isinglass. Packed rust coats movingui.",
       "brief": "Dry movingui, packed rust.",
-      "exits": { "west": { "to": "rust_isinglass" }, "east": { "to": "rust_tauari" } },
+      "exits": { "west": { "to": "rust_isinglass" }, "east": { "to": "rust_tauari" }, "south": { "to": "rust_barleyclear" } },
       "actions": [
         {
           "id": "pinch_movingui",
@@ -19217,11 +19268,28 @@
         }
       ]
     },
+    "rust_barleyclear": {
+      "name": "Rust Barleyclear",
+      "desc": "A dry barleyclear south of the movingui. Packed rust coats barleyclear.",
+      "brief": "Dry barleyclear, packed rust.",
+      "exits": { "north": { "to": "rust_movingui" } },
+      "actions": [
+        {
+          "id": "pinch_barleyclear",
+          "label": "pinch the barleyclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyclear. They packed it on the movingui and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_tauari": {
       "name": "Rust Tauari",
       "desc": "A dry tauari east of the movingui. Packed rust coats tauari.",
       "brief": "Dry tauari, packed rust.",
-      "exits": { "west": { "to": "rust_movingui" }, "east": { "to": "rust_ziricote" } },
+      "exits": { "west": { "to": "rust_movingui" }, "east": { "to": "rust_ziricote" }, "south": { "to": "rust_sorghumclear" } },
       "actions": [
         {
           "id": "pinch_tauari",
@@ -19234,11 +19302,28 @@
         }
       ]
     },
+    "rust_sorghumclear": {
+      "name": "Rust Sorghumclear",
+      "desc": "A dry sorghumclear south of the tauari. Packed rust coats sorghumclear.",
+      "brief": "Dry sorghumclear, packed rust.",
+      "exits": { "north": { "to": "rust_tauari" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumclear",
+          "label": "pinch the sorghumclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumclear. They packed it on the tauari and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ziricote": {
       "name": "Rust Ziricote",
       "desc": "A dry ziricote east of the tauari. Packed rust coats ziricote.",
       "brief": "Dry ziricote, packed rust.",
-      "exits": { "west": { "to": "rust_tauari" }, "east": { "to": "rust_belian" } },
+      "exits": { "west": { "to": "rust_tauari" }, "east": { "to": "rust_belian" }, "south": { "to": "rust_milletclear" } },
       "actions": [
         {
           "id": "pinch_ziricote",
@@ -19251,11 +19336,28 @@
         }
       ]
     },
+    "rust_milletclear": {
+      "name": "Rust Milletclear",
+      "desc": "A dry milletclear south of the ziricote. Packed rust coats milletclear.",
+      "brief": "Dry milletclear, packed rust.",
+      "exits": { "north": { "to": "rust_ziricote" } },
+      "actions": [
+        {
+          "id": "pinch_milletclear",
+          "label": "pinch the milletclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletclear. They packed it on the ziricote and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_belian": {
       "name": "Rust Belian",
       "desc": "A dry belian east of the ziricote. Packed rust coats belian.",
       "brief": "Dry belian, packed rust.",
-      "exits": { "west": { "to": "rust_ziricote" }, "east": { "to": "rust_kalantas" } },
+      "exits": { "west": { "to": "rust_ziricote" }, "east": { "to": "rust_kalantas" }, "south": { "to": "rust_cornclear" } },
       "actions": [
         {
           "id": "pinch_belian",
@@ -19268,11 +19370,28 @@
         }
       ]
     },
+    "rust_cornclear": {
+      "name": "Rust Cornclear",
+      "desc": "A dry cornclear south of the belian. Packed rust coats cornclear.",
+      "brief": "Dry cornclear, packed rust.",
+      "exits": { "north": { "to": "rust_belian" } },
+      "actions": [
+        {
+          "id": "pinch_cornclear",
+          "label": "pinch the cornclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornclear. They packed it on the belian and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_kalantas": {
       "name": "Rust Kalantas",
       "desc": "A dry kalantas east of the belian. Packed rust coats kalantas.",
       "brief": "Dry kalantas, packed rust.",
-      "exits": { "west": { "to": "rust_belian" }, "east": { "to": "rust_tendu" } },
+      "exits": { "west": { "to": "rust_belian" }, "east": { "to": "rust_tendu" }, "south": { "to": "rust_oatclear" } },
       "actions": [
         {
           "id": "pinch_kalantas",
@@ -19281,6 +19400,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kalantas. They packed it on the belian and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatclear": {
+      "name": "Rust Oatclear",
+      "desc": "A dry oatclear south of the kalantas. Packed rust coats oatclear.",
+      "brief": "Dry oatclear, packed rust.",
+      "exits": { "north": { "to": "rust_kalantas" } },
+      "actions": [
+        {
+          "id": "pinch_oatclear",
+          "label": "pinch the oatclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatclear. They packed it on the kalantas and packed rust around it."]
           ]
         }
       ]
@@ -42382,20 +42518,44 @@
     "pinch the tabernacle",
     "go east",
     "pinch the worming",
+    "go south",
+    "pinch the durumclear",
+    "go north",
     "go east",
     "pinch the rackseizing",
+    "go south",
+    "pinch the fonioclear",
+    "go north",
     "go east",
     "pinch the isinglass",
+    "go south",
+    "pinch the teffclear",
+    "go north",
     "go east",
     "pinch the movingui",
+    "go south",
+    "pinch the barleyclear",
+    "go north",
     "go east",
     "pinch the tauari",
+    "go south",
+    "pinch the sorghumclear",
+    "go north",
     "go east",
     "pinch the ziricote",
+    "go south",
+    "pinch the milletclear",
+    "go north",
     "go east",
     "pinch the belian",
+    "go south",
+    "pinch the cornclear",
+    "go north",
     "go east",
     "pinch the kalantas",
+    "go south",
+    "pinch the oatclear",
+    "go north",
     "go east",
     "pinch the tendu",
     "go west",
