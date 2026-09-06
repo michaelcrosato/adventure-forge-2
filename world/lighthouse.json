@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14210,
+  "maxScore": 14250,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -27891,7 +27891,7 @@
       "name": "Rust Wenge",
       "desc": "A dry wenge east of the sailcloth. Packed rust coats wenge.",
       "brief": "Dry wenge, packed rust.",
-      "exits": { "west": { "to": "rust_sailcloth" }, "east": { "to": "rust_limba" }, "south": { "to": "rust_kamutgrits" } },
+      "exits": { "west": { "to": "rust_sailcloth" }, "east": { "to": "rust_limba" }, "south": { "to": "rust_kamutgrits" }, "north": { "to": "rust_durumurn" } },
       "actions": [
         {
           "id": "pinch_wenge",
@@ -27900,6 +27900,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard wenge. They laid it on the sailcloth and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumurn": {
+      "name": "Rust Durumurn",
+      "desc": "A dry durumurn north of the wenge. Packed rust coats durumurn.",
+      "brief": "Dry durumurn, packed rust.",
+      "exits": { "south": { "to": "rust_wenge" } },
+      "actions": [
+        {
+          "id": "pinch_durumurn",
+          "label": "pinch the durumurn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumurn. They packed it on the wenge and packed rust around it."]
           ]
         }
       ]
@@ -27925,7 +27942,7 @@
       "name": "Rust Limba",
       "desc": "A dry limba east of the wenge. Packed rust coats limba.",
       "brief": "Dry limba, packed rust.",
-      "exits": { "west": { "to": "rust_wenge" }, "east": { "to": "rust_ovangkol" }, "south": { "to": "rust_durumflake" } },
+      "exits": { "west": { "to": "rust_wenge" }, "east": { "to": "rust_ovangkol" }, "south": { "to": "rust_durumflake" }, "north": { "to": "rust_foniourn" } },
       "actions": [
         {
           "id": "pinch_limba",
@@ -27934,6 +27951,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard limba. They packed it on the wenge and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniourn": {
+      "name": "Rust Foniourn",
+      "desc": "A dry foniourn north of the limba. Packed rust coats foniourn.",
+      "brief": "Dry foniourn, packed rust.",
+      "exits": { "south": { "to": "rust_limba" } },
+      "actions": [
+        {
+          "id": "pinch_foniourn",
+          "label": "pinch the foniourn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniourn. They packed it on the limba and packed rust around it."]
           ]
         }
       ]
@@ -27959,7 +27993,7 @@
       "name": "Rust Ovangkol",
       "desc": "A dry ovangkol east of the limba. Packed rust coats ovangkol.",
       "brief": "Dry ovangkol, packed rust.",
-      "exits": { "west": { "to": "rust_limba" }, "east": { "to": "rust_cancharana" }, "south": { "to": "rust_fonioflake" } },
+      "exits": { "west": { "to": "rust_limba" }, "east": { "to": "rust_cancharana" }, "south": { "to": "rust_fonioflake" }, "north": { "to": "rust_teffurn" } },
       "actions": [
         {
           "id": "pinch_ovangkol",
@@ -27968,6 +28002,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard ovangkol. They packed it on the limba and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffurn": {
+      "name": "Rust Teffurn",
+      "desc": "A dry teffurn north of the ovangkol. Packed rust coats teffurn.",
+      "brief": "Dry teffurn, packed rust.",
+      "exits": { "south": { "to": "rust_ovangkol" } },
+      "actions": [
+        {
+          "id": "pinch_teffurn",
+          "label": "pinch the teffurn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffurn. They packed it on the ovangkol and packed rust around it."]
           ]
         }
       ]
@@ -27993,7 +28044,7 @@
       "name": "Rust Cancharana",
       "desc": "A dry cancharana east of the ovangkol. Packed rust coats cancharana.",
       "brief": "Dry cancharana, packed rust.",
-      "exits": { "west": { "to": "rust_ovangkol" }, "east": { "to": "rust_bintangor" }, "south": { "to": "rust_teffflake" } },
+      "exits": { "west": { "to": "rust_ovangkol" }, "east": { "to": "rust_bintangor" }, "south": { "to": "rust_teffflake" }, "north": { "to": "rust_barleyurn" } },
       "actions": [
         {
           "id": "pinch_cancharana",
@@ -28002,6 +28053,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cancharana. They packed it on the ovangkol and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyurn": {
+      "name": "Rust Barleyurn",
+      "desc": "A dry barleyurn north of the cancharana. Packed rust coats barleyurn.",
+      "brief": "Dry barleyurn, packed rust.",
+      "exits": { "south": { "to": "rust_cancharana" } },
+      "actions": [
+        {
+          "id": "pinch_barleyurn",
+          "label": "pinch the barleyurn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyurn. They packed it on the cancharana and packed rust around it."]
           ]
         }
       ]
@@ -28027,7 +28095,7 @@
       "name": "Rust Bintangor",
       "desc": "A dry bintangor east of the cancharana. Packed rust coats bintangor.",
       "brief": "Dry bintangor, packed rust.",
-      "exits": { "west": { "to": "rust_cancharana" }, "east": { "to": "rust_tembesu" }, "south": { "to": "rust_triticaleflour" } },
+      "exits": { "west": { "to": "rust_cancharana" }, "east": { "to": "rust_tembesu" }, "south": { "to": "rust_triticaleflour" }, "north": { "to": "rust_sorghumurn" } },
       "actions": [
         {
           "id": "pinch_bintangor",
@@ -28036,6 +28104,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bintangor. They packed it on the cancharana and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumurn": {
+      "name": "Rust Sorghumurn",
+      "desc": "A dry sorghumurn north of the bintangor. Packed rust coats sorghumurn.",
+      "brief": "Dry sorghumurn, packed rust.",
+      "exits": { "south": { "to": "rust_bintangor" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumurn",
+          "label": "pinch the sorghumurn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumurn. They packed it on the bintangor and packed rust around it."]
           ]
         }
       ]
@@ -28061,7 +28146,7 @@
       "name": "Rust Tembesu",
       "desc": "A dry tembesu east of the bintangor. Packed rust coats tembesu.",
       "brief": "Dry tembesu, packed rust.",
-      "exits": { "west": { "to": "rust_bintangor" }, "east": { "to": "rust_champak" }, "south": { "to": "rust_einkornmeal" } },
+      "exits": { "west": { "to": "rust_bintangor" }, "east": { "to": "rust_champak" }, "south": { "to": "rust_einkornmeal" }, "north": { "to": "rust_milleturn" } },
       "actions": [
         {
           "id": "pinch_tembesu",
@@ -28070,6 +28155,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tembesu. They packed it on the bintangor and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milleturn": {
+      "name": "Rust Milleturn",
+      "desc": "A dry milleturn north of the tembesu. Packed rust coats milleturn.",
+      "brief": "Dry milleturn, packed rust.",
+      "exits": { "south": { "to": "rust_tembesu" } },
+      "actions": [
+        {
+          "id": "pinch_milleturn",
+          "label": "pinch the milleturn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milleturn. They packed it on the tembesu and packed rust around it."]
           ]
         }
       ]
@@ -28129,7 +28231,7 @@
       "name": "Rust Knee",
       "desc": "A dry knee east of the keel. Packed rust coats a knee.",
       "brief": "Dry knee, packed rust.",
-      "exits": { "west": { "to": "rust_keel" }, "east": { "to": "rust_turkshead" }, "south": { "to": "rust_emmermeal" } },
+      "exits": { "west": { "to": "rust_keel" }, "east": { "to": "rust_turkshead" }, "south": { "to": "rust_emmermeal" }, "north": { "to": "rust_cornurn" } },
       "actions": [
         {
           "id": "pinch_knee",
@@ -28138,6 +28240,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard knee. They braced the keel and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornurn": {
+      "name": "Rust Cornurn",
+      "desc": "A dry cornurn north of the knee. Packed rust coats cornurn.",
+      "brief": "Dry cornurn, packed rust.",
+      "exits": { "south": { "to": "rust_knee" } },
+      "actions": [
+        {
+          "id": "pinch_cornurn",
+          "label": "pinch the cornurn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornurn. They packed it on the knee and packed rust around it."]
           ]
         }
       ]
@@ -28163,7 +28282,7 @@
       "name": "Rust Turkshead",
       "desc": "A dry turkshead east of the knee. Packed rust coats a turkshead.",
       "brief": "Dry turkshead, packed rust.",
-      "exits": { "west": { "to": "rust_knee" }, "east": { "to": "rust_canvas" }, "south": { "to": "rust_buckwheatberry" } },
+      "exits": { "west": { "to": "rust_knee" }, "east": { "to": "rust_canvas" }, "south": { "to": "rust_buckwheatberry" }, "north": { "to": "rust_oaturn" } },
       "actions": [
         {
           "id": "pinch_turkshead",
@@ -28172,6 +28291,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard turkshead. They wove it on the knee and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oaturn": {
+      "name": "Rust Oaturn",
+      "desc": "A dry oaturn north of the turkshead. Packed rust coats oaturn.",
+      "brief": "Dry oaturn, packed rust.",
+      "exits": { "south": { "to": "rust_turkshead" } },
+      "actions": [
+        {
+          "id": "pinch_oaturn",
+          "label": "pinch the oaturn",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oaturn. They packed it on the turkshead and packed rust around it."]
           ]
         }
       ]
@@ -53129,31 +53265,49 @@
     "go north",
     "go east",
     "pinch the wenge",
+    "go north",
+    "pinch the durumurn",
+    "go south",
     "go south",
     "pinch the kamutgrits",
     "go north",
     "go east",
     "pinch the limba",
+    "go north",
+    "pinch the foniourn",
+    "go south",
     "go south",
     "pinch the durumflake",
     "go north",
     "go east",
     "pinch the ovangkol",
+    "go north",
+    "pinch the teffurn",
+    "go south",
     "go south",
     "pinch the fonioflake",
     "go north",
     "go east",
     "pinch the cancharana",
+    "go north",
+    "pinch the barleyurn",
+    "go south",
     "go south",
     "pinch the teffflake",
     "go north",
     "go east",
     "pinch the bintangor",
+    "go north",
+    "pinch the sorghumurn",
+    "go south",
     "go south",
     "pinch the triticaleflour",
     "go north",
     "go east",
     "pinch the tembesu",
+    "go north",
+    "pinch the milleturn",
+    "go south",
     "go south",
     "pinch the einkornmeal",
     "go north",
@@ -53174,11 +53328,17 @@
     "go east",
     "go east",
     "pinch the knee",
+    "go north",
+    "pinch the cornurn",
+    "go south",
     "go south",
     "pinch the emmermeal",
     "go north",
     "go east",
     "pinch the turkshead",
+    "go north",
+    "pinch the oaturn",
+    "go south",
     "go south",
     "pinch the buckwheatberry",
     "go north",
