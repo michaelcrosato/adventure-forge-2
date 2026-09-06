@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 9930,
+  "maxScore": 9970,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -26021,7 +26021,7 @@
       "name": "Rust Clewcringle",
       "desc": "A dry clewcringle east of the frapping. Packed rust coats a clewcringle.",
       "brief": "Dry clewcringle, packed rust.",
-      "exits": { "west": { "to": "rust_frapping" }, "east": { "to": "rust_camphor" } },
+      "exits": { "west": { "to": "rust_frapping" }, "east": { "to": "rust_camphor" }, "south": { "to": "rust_buckwheat" } },
       "actions": [
         {
           "id": "pinch_clewcringle",
@@ -26034,11 +26034,28 @@
         }
       ]
     },
+    "rust_buckwheat": {
+      "name": "Rust Buckwheat",
+      "desc": "A dry buckwheat south of the clewcringle. Packed rust coats buckwheat.",
+      "brief": "Dry buckwheat, packed rust.",
+      "exits": { "north": { "to": "rust_clewcringle" } },
+      "actions": [
+        {
+          "id": "pinch_buckwheat",
+          "label": "pinch the buckwheat",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard buckwheat. They packed it on the clewcringle and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_camphor": {
       "name": "Rust Camphor",
       "desc": "A dry camphor east of the clewcringle. Packed rust coats camphor.",
       "brief": "Dry camphor, packed rust.",
-      "exits": { "west": { "to": "rust_clewcringle" }, "east": { "to": "rust_drier" } },
+      "exits": { "west": { "to": "rust_clewcringle" }, "east": { "to": "rust_drier" }, "south": { "to": "rust_gramflour" } },
       "actions": [
         {
           "id": "pinch_camphor",
@@ -26051,11 +26068,28 @@
         }
       ]
     },
+    "rust_gramflour": {
+      "name": "Rust Gramflour",
+      "desc": "A dry gramflour south of the camphor. Packed rust coats gramflour.",
+      "brief": "Dry gramflour, packed rust.",
+      "exits": { "north": { "to": "rust_camphor" } },
+      "actions": [
+        {
+          "id": "pinch_gramflour",
+          "label": "pinch the gramflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gramflour. They packed it on the camphor and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_drier": {
       "name": "Rust Drier",
       "desc": "A dry drier east of the camphor. Packed rust coats drier.",
       "brief": "Dry drier, packed rust.",
-      "exits": { "west": { "to": "rust_camphor" }, "east": { "to": "rust_crocus" } },
+      "exits": { "west": { "to": "rust_camphor" }, "east": { "to": "rust_crocus" }, "south": { "to": "rust_soyflour" } },
       "actions": [
         {
           "id": "pinch_drier",
@@ -26068,11 +26102,28 @@
         }
       ]
     },
+    "rust_soyflour": {
+      "name": "Rust Soyflour",
+      "desc": "A dry soyflour south of the drier. Packed rust coats soyflour.",
+      "brief": "Dry soyflour, packed rust.",
+      "exits": { "north": { "to": "rust_drier" } },
+      "actions": [
+        {
+          "id": "pinch_soyflour",
+          "label": "pinch the soyflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard soyflour. They packed it on the drier and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_crocus": {
       "name": "Rust Crocus",
       "desc": "A dry crocus east of the drier. Packed rust coats crocus.",
       "brief": "Dry crocus, packed rust.",
-      "exits": { "west": { "to": "rust_drier" }, "east": { "to": "rust_whetstone" } },
+      "exits": { "west": { "to": "rust_drier" }, "east": { "to": "rust_whetstone" }, "south": { "to": "rust_peaflour" } },
       "actions": [
         {
           "id": "pinch_crocus",
@@ -26085,11 +26136,28 @@
         }
       ]
     },
+    "rust_peaflour": {
+      "name": "Rust Peaflour",
+      "desc": "A dry peaflour south of the crocus. Packed rust coats peaflour.",
+      "brief": "Dry peaflour, packed rust.",
+      "exits": { "north": { "to": "rust_crocus" } },
+      "actions": [
+        {
+          "id": "pinch_peaflour",
+          "label": "pinch the peaflour",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard peaflour. They packed it on the crocus and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_whetstone": {
       "name": "Rust Whetstone",
       "desc": "A dry whetstone east of the crocus. Packed rust coats whetstone.",
       "brief": "Dry whetstone, packed rust.",
-      "exits": { "west": { "to": "rust_crocus" }, "east": { "to": "rust_galena" } },
+      "exits": { "west": { "to": "rust_crocus" }, "east": { "to": "rust_galena" }, "south": { "to": "rust_azuki" } },
       "actions": [
         {
           "id": "pinch_whetstone",
@@ -26102,11 +26170,28 @@
         }
       ]
     },
+    "rust_azuki": {
+      "name": "Rust Azuki",
+      "desc": "A dry azuki south of the whetstone. Packed rust coats azuki.",
+      "brief": "Dry azuki, packed rust.",
+      "exits": { "north": { "to": "rust_whetstone" } },
+      "actions": [
+        {
+          "id": "pinch_azuki",
+          "label": "pinch the azuki",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard azuki. They packed it on the whetstone and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_galena": {
       "name": "Rust Galena",
       "desc": "A dry galena east of the whetstone. Packed rust coats galena.",
       "brief": "Dry galena, packed rust.",
-      "exits": { "west": { "to": "rust_whetstone" }, "east": { "to": "rust_celadonite" } },
+      "exits": { "west": { "to": "rust_whetstone" }, "east": { "to": "rust_celadonite" }, "south": { "to": "rust_soymeal" } },
       "actions": [
         {
           "id": "pinch_galena",
@@ -26119,11 +26204,28 @@
         }
       ]
     },
+    "rust_soymeal": {
+      "name": "Rust Soymeal",
+      "desc": "A dry soymeal south of the galena. Packed rust coats soymeal.",
+      "brief": "Dry soymeal, packed rust.",
+      "exits": { "north": { "to": "rust_galena" } },
+      "actions": [
+        {
+          "id": "pinch_soymeal",
+          "label": "pinch the soymeal",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard soymeal. They packed it on the galena and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_celadonite": {
       "name": "Rust Celadonite",
       "desc": "A dry celadonite east of the galena. Packed rust coats celadonite.",
       "brief": "Dry celadonite, packed rust.",
-      "exits": { "west": { "to": "rust_galena" }, "east": { "to": "rust_plancheite" } },
+      "exits": { "west": { "to": "rust_galena" }, "east": { "to": "rust_plancheite" }, "south": { "to": "rust_beanpod" } },
       "actions": [
         {
           "id": "pinch_celadonite",
@@ -26136,11 +26238,28 @@
         }
       ]
     },
+    "rust_beanpod": {
+      "name": "Rust Beanpod",
+      "desc": "A dry beanpod south of the celadonite. Packed rust coats beanpod.",
+      "brief": "Dry beanpod, packed rust.",
+      "exits": { "north": { "to": "rust_celadonite" } },
+      "actions": [
+        {
+          "id": "pinch_beanpod",
+          "label": "pinch the beanpod",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard beanpod. They packed it on the celadonite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_plancheite": {
       "name": "Rust Plancheite",
       "desc": "A dry plancheite east of the celadonite. Packed rust coats plancheite.",
       "brief": "Dry plancheite, packed rust.",
-      "exits": { "west": { "to": "rust_celadonite" }, "east": { "to": "rust_pyrrhotite" } },
+      "exits": { "west": { "to": "rust_celadonite" }, "east": { "to": "rust_pyrrhotite" }, "south": { "to": "rust_cardamom" } },
       "actions": [
         {
           "id": "pinch_plancheite",
@@ -26149,6 +26268,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard plancheite. They packed it on the celadonite and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cardamom": {
+      "name": "Rust Cardamom",
+      "desc": "A dry cardamom south of the plancheite. Packed rust coats cardamom.",
+      "brief": "Dry cardamom, packed rust.",
+      "exits": { "north": { "to": "rust_plancheite" } },
+      "actions": [
+        {
+          "id": "pinch_cardamom",
+          "label": "pinch the cardamom",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cardamom. They packed it on the plancheite and packed rust around it."]
           ]
         }
       ]
@@ -38319,20 +38455,44 @@
     "pinch the frapping",
     "go east",
     "pinch the clewcringle",
+    "go south",
+    "pinch the buckwheat",
+    "go north",
     "go east",
     "pinch the camphor",
+    "go south",
+    "pinch the gramflour",
+    "go north",
     "go east",
     "pinch the drier",
+    "go south",
+    "pinch the soyflour",
+    "go north",
     "go east",
     "pinch the crocus",
+    "go south",
+    "pinch the peaflour",
+    "go north",
     "go east",
     "pinch the whetstone",
+    "go south",
+    "pinch the azuki",
+    "go north",
     "go east",
     "pinch the galena",
+    "go south",
+    "pinch the soymeal",
+    "go north",
     "go east",
     "pinch the celadonite",
+    "go south",
+    "pinch the beanpod",
+    "go north",
     "go east",
     "pinch the plancheite",
+    "go south",
+    "pinch the cardamom",
+    "go north",
     "go east",
     "pinch the pyrrhotite",
     "go west",
