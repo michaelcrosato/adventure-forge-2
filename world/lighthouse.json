@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11770,
+  "maxScore": 11810,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -17844,7 +17844,7 @@
       "name": "Rust Yate",
       "desc": "A dry yate east of the sugargum. Packed rust coats yate.",
       "brief": "Dry yate, packed rust.",
-      "exits": { "west": { "to": "rust_sugargum" }, "east": { "to": "rust_silverwattle" } },
+      "exits": { "west": { "to": "rust_sugargum" }, "east": { "to": "rust_silverwattle" }, "south": { "to": "rust_sorghumstraight" } },
       "actions": [
         {
           "id": "pinch_yate",
@@ -17853,6 +17853,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard yate. They packed it on the sugargum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumstraight": {
+      "name": "Rust Sorghumstraight",
+      "desc": "A dry sorghumstraight south of the yate. Packed rust coats sorghumstraight.",
+      "brief": "Dry sorghumstraight, packed rust.",
+      "exits": { "north": { "to": "rust_yate" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumstraight",
+          "label": "pinch the sorghumstraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumstraight. They packed it on the yate and packed rust around it."]
           ]
         }
       ]
@@ -17946,7 +17963,7 @@
       "name": "Rust Scarph",
       "desc": "A dry scarph east of the gasket. Packed rust coats a scarph.",
       "brief": "Dry scarph, packed rust.",
-      "exits": { "west": { "to": "rust_gasket" }, "east": { "to": "rust_packers" } },
+      "exits": { "west": { "to": "rust_gasket" }, "east": { "to": "rust_packers" }, "south": { "to": "rust_milletstraight" } },
       "actions": [
         {
           "id": "pinch_scarph",
@@ -17959,11 +17976,28 @@
         }
       ]
     },
+    "rust_milletstraight": {
+      "name": "Rust Milletstraight",
+      "desc": "A dry milletstraight south of the scarph. Packed rust coats milletstraight.",
+      "brief": "Dry milletstraight, packed rust.",
+      "exits": { "north": { "to": "rust_scarph" } },
+      "actions": [
+        {
+          "id": "pinch_milletstraight",
+          "label": "pinch the milletstraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletstraight. They packed it on the scarph and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_packers": {
       "name": "Rust Packers",
       "desc": "A dry packers east of the scarph. Packed rust coats a packers.",
       "brief": "Dry packers, packed rust.",
-      "exits": { "west": { "to": "rust_scarph" }, "east": { "to": "rust_starchpaste" } },
+      "exits": { "west": { "to": "rust_scarph" }, "east": { "to": "rust_starchpaste" }, "south": { "to": "rust_cornstraight" } },
       "actions": [
         {
           "id": "pinch_packers",
@@ -17976,11 +18010,28 @@
         }
       ]
     },
+    "rust_cornstraight": {
+      "name": "Rust Cornstraight",
+      "desc": "A dry cornstraight south of the packers. Packed rust coats cornstraight.",
+      "brief": "Dry cornstraight, packed rust.",
+      "exits": { "north": { "to": "rust_packers" } },
+      "actions": [
+        {
+          "id": "pinch_cornstraight",
+          "label": "pinch the cornstraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornstraight. They packed it on the packers and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_starchpaste": {
       "name": "Rust Starchpaste",
       "desc": "A dry starchpaste east of the packers. Packed rust coats starchpaste.",
       "brief": "Dry starchpaste, packed rust.",
-      "exits": { "west": { "to": "rust_packers" }, "east": { "to": "rust_gallnut" } },
+      "exits": { "west": { "to": "rust_packers" }, "east": { "to": "rust_gallnut" }, "south": { "to": "rust_oatstraight" } },
       "actions": [
         {
           "id": "pinch_starchpaste",
@@ -17993,11 +18044,28 @@
         }
       ]
     },
+    "rust_oatstraight": {
+      "name": "Rust Oatstraight",
+      "desc": "A dry oatstraight south of the starchpaste. Packed rust coats oatstraight.",
+      "brief": "Dry oatstraight, packed rust.",
+      "exits": { "north": { "to": "rust_starchpaste" } },
+      "actions": [
+        {
+          "id": "pinch_oatstraight",
+          "label": "pinch the oatstraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatstraight. They packed it on the starchpaste and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_gallnut": {
       "name": "Rust Gallnut",
       "desc": "A dry gallnut east of the starchpaste. Packed rust coats gallnut.",
       "brief": "Dry gallnut, packed rust.",
-      "exits": { "west": { "to": "rust_starchpaste" }, "east": { "to": "rust_cannel" } },
+      "exits": { "west": { "to": "rust_starchpaste" }, "east": { "to": "rust_cannel" }, "south": { "to": "rust_ryestraight" } },
       "actions": [
         {
           "id": "pinch_gallnut",
@@ -18010,11 +18078,28 @@
         }
       ]
     },
+    "rust_ryestraight": {
+      "name": "Rust Ryestraight",
+      "desc": "A dry ryestraight south of the gallnut. Packed rust coats ryestraight.",
+      "brief": "Dry ryestraight, packed rust.",
+      "exits": { "north": { "to": "rust_gallnut" } },
+      "actions": [
+        {
+          "id": "pinch_ryestraight",
+          "label": "pinch the ryestraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryestraight. They packed it on the gallnut and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_cannel": {
       "name": "Rust Cannel",
       "desc": "A dry cannel east of the gallnut. Packed rust coats cannel.",
       "brief": "Dry cannel, packed rust.",
-      "exits": { "west": { "to": "rust_gallnut" }, "east": { "to": "rust_mannagum" } },
+      "exits": { "west": { "to": "rust_gallnut" }, "east": { "to": "rust_mannagum" }, "south": { "to": "rust_wheatstraight" } },
       "actions": [
         {
           "id": "pinch_cannel",
@@ -18027,11 +18112,28 @@
         }
       ]
     },
+    "rust_wheatstraight": {
+      "name": "Rust Wheatstraight",
+      "desc": "A dry wheatstraight south of the cannel. Packed rust coats wheatstraight.",
+      "brief": "Dry wheatstraight, packed rust.",
+      "exits": { "north": { "to": "rust_cannel" } },
+      "actions": [
+        {
+          "id": "pinch_wheatstraight",
+          "label": "pinch the wheatstraight",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatstraight. They packed it on the cannel and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_mannagum": {
       "name": "Rust Mannagum",
       "desc": "A dry mannagum east of the cannel. Packed rust coats mannagum.",
       "brief": "Dry mannagum, packed rust.",
-      "exits": { "west": { "to": "rust_cannel" }, "east": { "to": "rust_sheoak" } },
+      "exits": { "west": { "to": "rust_cannel" }, "east": { "to": "rust_sheoak" }, "south": { "to": "rust_durumsecondclear" } },
       "actions": [
         {
           "id": "pinch_mannagum",
@@ -18044,11 +18146,28 @@
         }
       ]
     },
+    "rust_durumsecondclear": {
+      "name": "Rust Durumsecondclear",
+      "desc": "A dry durumsecondclear south of the mannagum. Packed rust coats durumsecondclear.",
+      "brief": "Dry durumsecondclear, packed rust.",
+      "exits": { "north": { "to": "rust_mannagum" } },
+      "actions": [
+        {
+          "id": "pinch_durumsecondclear",
+          "label": "pinch the durumsecondclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumsecondclear. They packed it on the mannagum and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sheoak": {
       "name": "Rust Sheoak",
       "desc": "A dry sheoak east of the mannagum. Packed rust coats sheoak.",
       "brief": "Dry sheoak, packed rust.",
-      "exits": { "west": { "to": "rust_mannagum" }, "east": { "to": "rust_kauripine" } },
+      "exits": { "west": { "to": "rust_mannagum" }, "east": { "to": "rust_kauripine" }, "south": { "to": "rust_foniosecondclear" } },
       "actions": [
         {
           "id": "pinch_sheoak",
@@ -18057,6 +18176,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sheoak. They packed it on the mannagum and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniosecondclear": {
+      "name": "Rust Foniosecondclear",
+      "desc": "A dry foniosecondclear south of the sheoak. Packed rust coats foniosecondclear.",
+      "brief": "Dry foniosecondclear, packed rust.",
+      "exits": { "north": { "to": "rust_sheoak" } },
+      "actions": [
+        {
+          "id": "pinch_foniosecondclear",
+          "label": "pinch the foniosecondclear",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniosecondclear. They packed it on the sheoak and packed rust around it."]
           ]
         }
       ]
@@ -43057,6 +43193,9 @@
     "pinch the sugargum",
     "go east",
     "pinch the yate",
+    "go south",
+    "pinch the sorghumstraight",
+    "go north",
     "go east",
     "pinch the silverwattle",
     "go south",
@@ -43080,18 +43219,39 @@
     "pinch the gasket",
     "go east",
     "pinch the scarph",
+    "go south",
+    "pinch the milletstraight",
+    "go north",
     "go east",
     "pinch the packers",
+    "go south",
+    "pinch the cornstraight",
+    "go north",
     "go east",
     "pinch the starchpaste",
+    "go south",
+    "pinch the oatstraight",
+    "go north",
     "go east",
     "pinch the gallnut",
+    "go south",
+    "pinch the ryestraight",
+    "go north",
     "go east",
     "pinch the cannel",
+    "go south",
+    "pinch the wheatstraight",
+    "go north",
     "go east",
     "pinch the mannagum",
+    "go south",
+    "pinch the durumsecondclear",
+    "go north",
     "go east",
     "pinch the sheoak",
+    "go south",
+    "pinch the foniosecondclear",
+    "go north",
     "go east",
     "pinch the kauripine",
     "go south",
