@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 11570,
+  "maxScore": 11610,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -18796,7 +18796,7 @@
       "name": "Rust Parcelling",
       "desc": "A dry parcelling east of the striker. Packed rust coats parcelling.",
       "brief": "Dry parcelling, packed rust.",
-      "exits": { "west": { "to": "rust_striker" }, "east": { "to": "rust_throatseizing" } },
+      "exits": { "west": { "to": "rust_striker" }, "east": { "to": "rust_throatseizing" }, "south": { "to": "rust_sorghumbreak" } },
       "actions": [
         {
           "id": "pinch_parcelling",
@@ -18809,11 +18809,28 @@
         }
       ]
     },
+    "rust_sorghumbreak": {
+      "name": "Rust Sorghumbreak",
+      "desc": "A dry sorghumbreak south of the parcelling. Packed rust coats sorghumbreak.",
+      "brief": "Dry sorghumbreak, packed rust.",
+      "exits": { "north": { "to": "rust_parcelling" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumbreak",
+          "label": "pinch the sorghumbreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumbreak. They packed it on the parcelling and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_throatseizing": {
       "name": "Rust Throatseizing",
       "desc": "A dry throatseizing east of the parcelling. Packed rust coats a throatseizing.",
       "brief": "Dry throatseizing, packed rust.",
-      "exits": { "west": { "to": "rust_parcelling" }, "east": { "to": "rust_fishglue" } },
+      "exits": { "west": { "to": "rust_parcelling" }, "east": { "to": "rust_fishglue" }, "south": { "to": "rust_milletbreak" } },
       "actions": [
         {
           "id": "pinch_throatseizing",
@@ -18826,11 +18843,28 @@
         }
       ]
     },
+    "rust_milletbreak": {
+      "name": "Rust Milletbreak",
+      "desc": "A dry milletbreak south of the throatseizing. Packed rust coats milletbreak.",
+      "brief": "Dry milletbreak, packed rust.",
+      "exits": { "north": { "to": "rust_throatseizing" } },
+      "actions": [
+        {
+          "id": "pinch_milletbreak",
+          "label": "pinch the milletbreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletbreak. They packed it on the throatseizing and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_fishglue": {
       "name": "Rust Fishglue",
       "desc": "A dry fishglue east of the throatseizing. Packed rust coats fishglue.",
       "brief": "Dry fishglue, packed rust.",
-      "exits": { "west": { "to": "rust_throatseizing" }, "east": { "to": "rust_aniegre" } },
+      "exits": { "west": { "to": "rust_throatseizing" }, "east": { "to": "rust_aniegre" }, "south": { "to": "rust_cornbreak" } },
       "actions": [
         {
           "id": "pinch_fishglue",
@@ -18843,11 +18877,28 @@
         }
       ]
     },
+    "rust_cornbreak": {
+      "name": "Rust Cornbreak",
+      "desc": "A dry cornbreak south of the fishglue. Packed rust coats cornbreak.",
+      "brief": "Dry cornbreak, packed rust.",
+      "exits": { "north": { "to": "rust_fishglue" } },
+      "actions": [
+        {
+          "id": "pinch_cornbreak",
+          "label": "pinch the cornbreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornbreak. They packed it on the fishglue and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_aniegre": {
       "name": "Rust Aniegre",
       "desc": "A dry aniegre east of the fishglue. Packed rust coats aniegre.",
       "brief": "Dry aniegre, packed rust.",
-      "exits": { "west": { "to": "rust_fishglue" }, "east": { "to": "rust_ucuuba" } },
+      "exits": { "west": { "to": "rust_fishglue" }, "east": { "to": "rust_ucuuba" }, "south": { "to": "rust_oatbreak" } },
       "actions": [
         {
           "id": "pinch_aniegre",
@@ -18860,11 +18911,28 @@
         }
       ]
     },
+    "rust_oatbreak": {
+      "name": "Rust Oatbreak",
+      "desc": "A dry oatbreak south of the aniegre. Packed rust coats oatbreak.",
+      "brief": "Dry oatbreak, packed rust.",
+      "exits": { "north": { "to": "rust_aniegre" } },
+      "actions": [
+        {
+          "id": "pinch_oatbreak",
+          "label": "pinch the oatbreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatbreak. They packed it on the aniegre and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_ucuuba": {
       "name": "Rust Ucuuba",
       "desc": "A dry ucuuba east of the aniegre. Packed rust coats ucuuba.",
       "brief": "Dry ucuuba, packed rust.",
-      "exits": { "west": { "to": "rust_aniegre" }, "east": { "to": "rust_mersawa" } },
+      "exits": { "west": { "to": "rust_aniegre" }, "east": { "to": "rust_mersawa" }, "south": { "to": "rust_ryebreak" } },
       "actions": [
         {
           "id": "pinch_ucuuba",
@@ -18877,11 +18945,28 @@
         }
       ]
     },
+    "rust_ryebreak": {
+      "name": "Rust Ryebreak",
+      "desc": "A dry ryebreak south of the ucuuba. Packed rust coats ryebreak.",
+      "brief": "Dry ryebreak, packed rust.",
+      "exits": { "north": { "to": "rust_ucuuba" } },
+      "actions": [
+        {
+          "id": "pinch_ryebreak",
+          "label": "pinch the ryebreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard ryebreak. They packed it on the ucuuba and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_mersawa": {
       "name": "Rust Mersawa",
       "desc": "A dry mersawa east of the ucuuba. Packed rust coats mersawa.",
       "brief": "Dry mersawa, packed rust.",
-      "exits": { "west": { "to": "rust_ucuuba" }, "east": { "to": "rust_petaling" } },
+      "exits": { "west": { "to": "rust_ucuuba" }, "east": { "to": "rust_petaling" }, "south": { "to": "rust_wheatbreak" } },
       "actions": [
         {
           "id": "pinch_mersawa",
@@ -18894,11 +18979,28 @@
         }
       ]
     },
+    "rust_wheatbreak": {
+      "name": "Rust Wheatbreak",
+      "desc": "A dry wheatbreak south of the mersawa. Packed rust coats wheatbreak.",
+      "brief": "Dry wheatbreak, packed rust.",
+      "exits": { "north": { "to": "rust_mersawa" } },
+      "actions": [
+        {
+          "id": "pinch_wheatbreak",
+          "label": "pinch the wheatbreak",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard wheatbreak. They packed it on the mersawa and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_petaling": {
       "name": "Rust Petaling",
       "desc": "A dry petaling east of the mersawa. Packed rust coats petaling.",
       "brief": "Dry petaling, packed rust.",
-      "exits": { "west": { "to": "rust_mersawa" }, "east": { "to": "rust_neem" } },
+      "exits": { "west": { "to": "rust_mersawa" }, "east": { "to": "rust_neem" }, "south": { "to": "rust_durumlowgrade" } },
       "actions": [
         {
           "id": "pinch_petaling",
@@ -18911,11 +19013,28 @@
         }
       ]
     },
+    "rust_durumlowgrade": {
+      "name": "Rust Durumlowgrade",
+      "desc": "A dry durumlowgrade south of the petaling. Packed rust coats durumlowgrade.",
+      "brief": "Dry durumlowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_petaling" } },
+      "actions": [
+        {
+          "id": "pinch_durumlowgrade",
+          "label": "pinch the durumlowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumlowgrade. They packed it on the petaling and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_neem": {
       "name": "Rust Neem",
       "desc": "A dry neem east of the petaling. Packed rust coats neem.",
       "brief": "Dry neem, packed rust.",
-      "exits": { "west": { "to": "rust_petaling" }, "east": { "to": "rust_bluegum" } },
+      "exits": { "west": { "to": "rust_petaling" }, "east": { "to": "rust_bluegum" }, "south": { "to": "rust_foniolowgrade" } },
       "actions": [
         {
           "id": "pinch_neem",
@@ -18924,6 +19043,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard neem. They packed it on the petaling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniolowgrade": {
+      "name": "Rust Foniolowgrade",
+      "desc": "A dry foniolowgrade south of the neem. Packed rust coats foniolowgrade.",
+      "brief": "Dry foniolowgrade, packed rust.",
+      "exits": { "north": { "to": "rust_neem" } },
+      "actions": [
+        {
+          "id": "pinch_foniolowgrade",
+          "label": "pinch the foniolowgrade",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniolowgrade. They packed it on the neem and packed rust around it."]
           ]
         }
       ]
@@ -42592,20 +42728,44 @@
     "pinch the striker",
     "go east",
     "pinch the parcelling",
+    "go south",
+    "pinch the sorghumbreak",
+    "go north",
     "go east",
     "pinch the throatseizing",
+    "go south",
+    "pinch the milletbreak",
+    "go north",
     "go east",
     "pinch the fishglue",
+    "go south",
+    "pinch the cornbreak",
+    "go north",
     "go east",
     "pinch the aniegre",
+    "go south",
+    "pinch the oatbreak",
+    "go north",
     "go east",
     "pinch the ucuuba",
+    "go south",
+    "pinch the ryebreak",
+    "go north",
     "go east",
     "pinch the mersawa",
+    "go south",
+    "pinch the wheatbreak",
+    "go north",
     "go east",
     "pinch the petaling",
+    "go south",
+    "pinch the durumlowgrade",
+    "go north",
     "go east",
     "pinch the neem",
+    "go south",
+    "pinch the foniolowgrade",
+    "go north",
     "go east",
     "pinch the bluegum",
     "go west",
