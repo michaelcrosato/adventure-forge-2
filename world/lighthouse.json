@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 16170,
+  "maxScore": 16210,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -11860,7 +11860,7 @@
       "name": "Rust Redcedar",
       "desc": "A dry redcedar east of the norwayspruce. Packed rust coats redcedar.",
       "brief": "Dry redcedar, packed rust.",
-      "exits": { "west": { "to": "rust_norwayspruce" }, "east": { "to": "rust_corkbark" }, "south": { "to": "rust_pukiawe" } },
+      "exits": { "west": { "to": "rust_norwayspruce" }, "east": { "to": "rust_corkbark" }, "south": { "to": "rust_pukiawe" }, "north": { "to": "rust_durummelchizedek" } },
       "actions": [
         {
           "id": "pinch_redcedar",
@@ -11869,6 +11869,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard redcedar. They packed it on the norwayspruce and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durummelchizedek": {
+      "name": "Rust Durummelchizedek",
+      "desc": "A dry durummelchizedek north of the redcedar. Packed rust coats durummelchizedek.",
+      "brief": "Dry durummelchizedek, packed rust.",
+      "exits": { "south": { "to": "rust_redcedar" } },
+      "actions": [
+        {
+          "id": "pinch_durummelchizedek",
+          "label": "pinch the durummelchizedek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durummelchizedek. They packed it on the redcedar and packed rust around it."]
           ]
         }
       ]
@@ -11894,7 +11911,7 @@
       "name": "Rust Corkbark",
       "desc": "A dry corkbark east of the redcedar. Packed rust coats corkbark.",
       "brief": "Dry corkbark, packed rust.",
-      "exits": { "west": { "to": "rust_redcedar" }, "east": { "to": "rust_homolepis" }, "south": { "to": "rust_zucchini" } },
+      "exits": { "west": { "to": "rust_redcedar" }, "east": { "to": "rust_homolepis" }, "south": { "to": "rust_zucchini" }, "north": { "to": "rust_foniomelchizedek" } },
       "actions": [
         {
           "id": "pinch_corkbark",
@@ -11903,6 +11920,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard corkbark. They packed it on the redcedar and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniomelchizedek": {
+      "name": "Rust Foniomelchizedek",
+      "desc": "A dry foniomelchizedek north of the corkbark. Packed rust coats foniomelchizedek.",
+      "brief": "Dry foniomelchizedek, packed rust.",
+      "exits": { "south": { "to": "rust_corkbark" } },
+      "actions": [
+        {
+          "id": "pinch_foniomelchizedek",
+          "label": "pinch the foniomelchizedek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniomelchizedek. They packed it on the corkbark and packed rust around it."]
           ]
         }
       ]
@@ -11928,7 +11962,7 @@
       "name": "Rust Homolepis",
       "desc": "A dry homolepis east of the corkbark. Packed rust coats homolepis.",
       "brief": "Dry homolepis, packed rust.",
-      "exits": { "west": { "to": "rust_corkbark" }, "east": { "to": "rust_titoki" }, "south": { "to": "rust_kumarahou" } },
+      "exits": { "west": { "to": "rust_corkbark" }, "east": { "to": "rust_titoki" }, "south": { "to": "rust_kumarahou" }, "north": { "to": "rust_teffmelchizedek" } },
       "actions": [
         {
           "id": "pinch_homolepis",
@@ -11937,6 +11971,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard homolepis. They packed it on the corkbark and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffmelchizedek": {
+      "name": "Rust Teffmelchizedek",
+      "desc": "A dry teffmelchizedek north of the homolepis. Packed rust coats teffmelchizedek.",
+      "brief": "Dry teffmelchizedek, packed rust.",
+      "exits": { "south": { "to": "rust_homolepis" } },
+      "actions": [
+        {
+          "id": "pinch_teffmelchizedek",
+          "label": "pinch the teffmelchizedek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffmelchizedek. They packed it on the homolepis and packed rust around it."]
           ]
         }
       ]
@@ -12013,7 +12064,7 @@
       "name": "Rust Truss",
       "desc": "A dry truss east of the backstay. Packed rust coats a truss.",
       "brief": "Dry truss, packed rust.",
-      "exits": { "west": { "to": "rust_backstay" }, "east": { "to": "rust_stopperknot" }, "south": { "to": "rust_cucumber" } },
+      "exits": { "west": { "to": "rust_backstay" }, "east": { "to": "rust_stopperknot" }, "south": { "to": "rust_cucumber" }, "north": { "to": "rust_barleymelchizedek" } },
       "actions": [
         {
           "id": "pinch_truss",
@@ -12022,6 +12073,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard truss. They slung it on the backstay and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleymelchizedek": {
+      "name": "Rust Barleymelchizedek",
+      "desc": "A dry barleymelchizedek north of the truss. Packed rust coats barleymelchizedek.",
+      "brief": "Dry barleymelchizedek, packed rust.",
+      "exits": { "south": { "to": "rust_truss" } },
+      "actions": [
+        {
+          "id": "pinch_barleymelchizedek",
+          "label": "pinch the barleymelchizedek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleymelchizedek. They packed it on the truss and packed rust around it."]
           ]
         }
       ]
@@ -12047,7 +12115,7 @@
       "name": "Rust Stopperknot",
       "desc": "A dry stopperknot east of the truss. Packed rust coats a stopperknot.",
       "brief": "Dry stopperknot, packed rust.",
-      "exits": { "west": { "to": "rust_truss" }, "east": { "to": "rust_carob" }, "south": { "to": "rust_snowberry" } },
+      "exits": { "west": { "to": "rust_truss" }, "east": { "to": "rust_carob" }, "south": { "to": "rust_snowberry" }, "north": { "to": "rust_sorghummelchizedek" } },
       "actions": [
         {
           "id": "pinch_stopperknot",
@@ -12056,6 +12124,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard stopperknot. They stopped it on the truss and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghummelchizedek": {
+      "name": "Rust Sorghummelchizedek",
+      "desc": "A dry sorghummelchizedek north of the stopperknot. Packed rust coats sorghummelchizedek.",
+      "brief": "Dry sorghummelchizedek, packed rust.",
+      "exits": { "south": { "to": "rust_stopperknot" } },
+      "actions": [
+        {
+          "id": "pinch_sorghummelchizedek",
+          "label": "pinch the sorghummelchizedek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghummelchizedek. They packed it on the stopperknot and packed rust around it."]
           ]
         }
       ]
@@ -12081,7 +12166,7 @@
       "name": "Rust Carob",
       "desc": "A dry carob east of the stopperknot. Packed rust coats carob.",
       "brief": "Dry carob, packed rust.",
-      "exits": { "west": { "to": "rust_stopperknot" }, "east": { "to": "rust_arolla" }, "south": { "to": "rust_buckeye" } },
+      "exits": { "west": { "to": "rust_stopperknot" }, "east": { "to": "rust_arolla" }, "south": { "to": "rust_buckeye" }, "north": { "to": "rust_milletmelchizedek" } },
       "actions": [
         {
           "id": "pinch_carob",
@@ -12090,6 +12175,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard carob. They packed it on the stopperknot and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletmelchizedek": {
+      "name": "Rust Milletmelchizedek",
+      "desc": "A dry milletmelchizedek north of the carob. Packed rust coats milletmelchizedek.",
+      "brief": "Dry milletmelchizedek, packed rust.",
+      "exits": { "south": { "to": "rust_carob" } },
+      "actions": [
+        {
+          "id": "pinch_milletmelchizedek",
+          "label": "pinch the milletmelchizedek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletmelchizedek. They packed it on the carob and packed rust around it."]
           ]
         }
       ]
@@ -12115,7 +12217,7 @@
       "name": "Rust Arolla",
       "desc": "A dry arolla east of the carob. Packed rust coats arolla.",
       "brief": "Dry arolla, packed rust.",
-      "exits": { "west": { "to": "rust_carob" }, "east": { "to": "rust_blackspruce" }, "south": { "to": "rust_paulownia" } },
+      "exits": { "west": { "to": "rust_carob" }, "east": { "to": "rust_blackspruce" }, "south": { "to": "rust_paulownia" }, "north": { "to": "rust_cornmelchizedek" } },
       "actions": [
         {
           "id": "pinch_arolla",
@@ -12124,6 +12226,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard arolla. They packed it on the carob and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornmelchizedek": {
+      "name": "Rust Cornmelchizedek",
+      "desc": "A dry cornmelchizedek north of the arolla. Packed rust coats cornmelchizedek.",
+      "brief": "Dry cornmelchizedek, packed rust.",
+      "exits": { "south": { "to": "rust_arolla" } },
+      "actions": [
+        {
+          "id": "pinch_cornmelchizedek",
+          "label": "pinch the cornmelchizedek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornmelchizedek. They packed it on the arolla and packed rust around it."]
           ]
         }
       ]
@@ -12149,7 +12268,7 @@
       "name": "Rust Blackspruce",
       "desc": "A dry blackspruce east of the arolla. Packed rust coats blackspruce.",
       "brief": "Dry blackspruce, packed rust.",
-      "exits": { "west": { "to": "rust_arolla" }, "east": { "to": "rust_amabilis" }, "south": { "to": "rust_kalia" } },
+      "exits": { "west": { "to": "rust_arolla" }, "east": { "to": "rust_amabilis" }, "south": { "to": "rust_kalia" }, "north": { "to": "rust_oatmelchizedek" } },
       "actions": [
         {
           "id": "pinch_blackspruce",
@@ -12158,6 +12277,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackspruce. They packed it on the arolla and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatmelchizedek": {
+      "name": "Rust Oatmelchizedek",
+      "desc": "A dry oatmelchizedek north of the blackspruce. Packed rust coats oatmelchizedek.",
+      "brief": "Dry oatmelchizedek, packed rust.",
+      "exits": { "south": { "to": "rust_blackspruce" } },
+      "actions": [
+        {
+          "id": "pinch_oatmelchizedek",
+          "label": "pinch the oatmelchizedek",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatmelchizedek. They packed it on the blackspruce and packed rust around it."]
           ]
         }
       ]
@@ -57023,16 +57159,25 @@
     "go north",
     "go east",
     "pinch the redcedar",
+    "go north",
+    "pinch the durummelchizedek",
+    "go south",
     "go south",
     "pinch the pukiawe",
     "go north",
     "go east",
     "pinch the corkbark",
+    "go north",
+    "pinch the foniomelchizedek",
+    "go south",
     "go south",
     "pinch the zucchini",
     "go north",
     "go east",
     "pinch the homolepis",
+    "go north",
+    "pinch the teffmelchizedek",
+    "go south",
     "go south",
     "pinch the kumarahou",
     "go north",
@@ -57054,26 +57199,41 @@
     "pinch the backstay",
     "go east",
     "pinch the truss",
+    "go north",
+    "pinch the barleymelchizedek",
+    "go south",
     "go south",
     "pinch the cucumber",
     "go north",
     "go east",
     "pinch the stopperknot",
+    "go north",
+    "pinch the sorghummelchizedek",
+    "go south",
     "go south",
     "pinch the snowberry",
     "go north",
     "go east",
     "pinch the carob",
+    "go north",
+    "pinch the milletmelchizedek",
+    "go south",
     "go south",
     "pinch the buckeye",
     "go north",
     "go east",
     "pinch the arolla",
+    "go north",
+    "pinch the cornmelchizedek",
+    "go south",
     "go south",
     "pinch the paulownia",
     "go north",
     "go east",
     "pinch the blackspruce",
+    "go north",
+    "pinch the oatmelchizedek",
+    "go south",
     "go south",
     "pinch the kalia",
     "go north",
