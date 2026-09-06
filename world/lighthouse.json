@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15690,
+  "maxScore": 15730,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -16059,7 +16059,7 @@
       "name": "Rust Turmeric",
       "desc": "A dry turmeric east of the colophony. Packed rust coats turmeric.",
       "brief": "Dry turmeric, packed rust.",
-      "exits": { "west": { "to": "rust_colophony" }, "east": { "to": "rust_marri" }, "south": { "to": "rust_milletstandard" } },
+      "exits": { "west": { "to": "rust_colophony" }, "east": { "to": "rust_marri" }, "south": { "to": "rust_milletstandard" }, "north": { "to": "rust_durummagnum" } },
       "actions": [
         {
           "id": "pinch_turmeric",
@@ -16068,6 +16068,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard turmeric. They packed it on the colophony and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durummagnum": {
+      "name": "Rust Durummagnum",
+      "desc": "A dry durummagnum north of the turmeric. Packed rust coats durummagnum.",
+      "brief": "Dry durummagnum, packed rust.",
+      "exits": { "south": { "to": "rust_turmeric" } },
+      "actions": [
+        {
+          "id": "pinch_durummagnum",
+          "label": "pinch the durummagnum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durummagnum. They packed it on the turmeric and packed rust around it."]
           ]
         }
       ]
@@ -16093,7 +16110,7 @@
       "name": "Rust Marri",
       "desc": "A dry marri east of the turmeric. Packed rust coats marri.",
       "brief": "Dry marri, packed rust.",
-      "exits": { "west": { "to": "rust_turmeric" }, "east": { "to": "rust_blackoak" }, "south": { "to": "rust_cornstandard" } },
+      "exits": { "west": { "to": "rust_turmeric" }, "east": { "to": "rust_blackoak" }, "south": { "to": "rust_cornstandard" }, "north": { "to": "rust_foniomagnum" } },
       "actions": [
         {
           "id": "pinch_marri",
@@ -16102,6 +16119,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard marri. They packed it on the turmeric and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniomagnum": {
+      "name": "Rust Foniomagnum",
+      "desc": "A dry foniomagnum north of the marri. Packed rust coats foniomagnum.",
+      "brief": "Dry foniomagnum, packed rust.",
+      "exits": { "south": { "to": "rust_marri" } },
+      "actions": [
+        {
+          "id": "pinch_foniomagnum",
+          "label": "pinch the foniomagnum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniomagnum. They packed it on the marri and packed rust around it."]
           ]
         }
       ]
@@ -16127,7 +16161,7 @@
       "name": "Rust Blackoak",
       "desc": "A dry blackoak east of the marri. Packed rust coats blackoak.",
       "brief": "Dry blackoak, packed rust.",
-      "exits": { "west": { "to": "rust_marri" }, "east": { "to": "rust_celerytop" }, "south": { "to": "rust_oatstandard" } },
+      "exits": { "west": { "to": "rust_marri" }, "east": { "to": "rust_celerytop" }, "south": { "to": "rust_oatstandard" }, "north": { "to": "rust_teffmagnum" } },
       "actions": [
         {
           "id": "pinch_blackoak",
@@ -16136,6 +16170,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackoak. They packed it on the marri and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffmagnum": {
+      "name": "Rust Teffmagnum",
+      "desc": "A dry teffmagnum north of the blackoak. Packed rust coats teffmagnum.",
+      "brief": "Dry teffmagnum, packed rust.",
+      "exits": { "south": { "to": "rust_blackoak" } },
+      "actions": [
+        {
+          "id": "pinch_teffmagnum",
+          "label": "pinch the teffmagnum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffmagnum. They packed it on the blackoak and packed rust around it."]
           ]
         }
       ]
@@ -16161,7 +16212,7 @@
       "name": "Rust Celerytop",
       "desc": "A dry celerytop east of the blackoak. Packed rust coats celerytop.",
       "brief": "Dry celerytop, packed rust.",
-      "exits": { "west": { "to": "rust_blackoak" }, "east": { "to": "rust_corsican" }, "south": { "to": "rust_durumgeneral" } },
+      "exits": { "west": { "to": "rust_blackoak" }, "east": { "to": "rust_corsican" }, "south": { "to": "rust_durumgeneral" }, "north": { "to": "rust_barleymagnum" } },
       "actions": [
         {
           "id": "pinch_celerytop",
@@ -16170,6 +16221,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard celerytop. They packed it on the blackoak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleymagnum": {
+      "name": "Rust Barleymagnum",
+      "desc": "A dry barleymagnum north of the celerytop. Packed rust coats barleymagnum.",
+      "brief": "Dry barleymagnum, packed rust.",
+      "exits": { "south": { "to": "rust_celerytop" } },
+      "actions": [
+        {
+          "id": "pinch_barleymagnum",
+          "label": "pinch the barleymagnum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleymagnum. They packed it on the celerytop and packed rust around it."]
           ]
         }
       ]
@@ -16195,7 +16263,7 @@
       "name": "Rust Corsican",
       "desc": "A dry corsican east of the celerytop. Packed rust coats corsican.",
       "brief": "Dry corsican, packed rust.",
-      "exits": { "west": { "to": "rust_celerytop" }, "east": { "to": "rust_cunninghamia" }, "south": { "to": "rust_naupaka" } },
+      "exits": { "west": { "to": "rust_celerytop" }, "east": { "to": "rust_cunninghamia" }, "south": { "to": "rust_naupaka" }, "north": { "to": "rust_sorghummagnum" } },
       "actions": [
         {
           "id": "pinch_corsican",
@@ -16204,6 +16272,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard corsican. They packed it on the celerytop and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghummagnum": {
+      "name": "Rust Sorghummagnum",
+      "desc": "A dry sorghummagnum north of the corsican. Packed rust coats sorghummagnum.",
+      "brief": "Dry sorghummagnum, packed rust.",
+      "exits": { "south": { "to": "rust_corsican" } },
+      "actions": [
+        {
+          "id": "pinch_sorghummagnum",
+          "label": "pinch the sorghummagnum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghummagnum. They packed it on the corsican and packed rust around it."]
           ]
         }
       ]
@@ -16297,7 +16382,7 @@
       "name": "Rust Masthead",
       "desc": "A dry masthead east of the hounds. Packed rust coats a masthead.",
       "brief": "Dry masthead, packed rust.",
-      "exits": { "west": { "to": "rust_hounds" }, "east": { "to": "rust_italian" }, "south": { "to": "rust_foniogeneral" } },
+      "exits": { "west": { "to": "rust_hounds" }, "east": { "to": "rust_italian" }, "south": { "to": "rust_foniogeneral" }, "north": { "to": "rust_milletmagnum" } },
       "actions": [
         {
           "id": "pinch_masthead",
@@ -16306,6 +16391,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard masthead. They capped it on the hounds and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletmagnum": {
+      "name": "Rust Milletmagnum",
+      "desc": "A dry milletmagnum north of the masthead. Packed rust coats milletmagnum.",
+      "brief": "Dry milletmagnum, packed rust.",
+      "exits": { "south": { "to": "rust_masthead" } },
+      "actions": [
+        {
+          "id": "pinch_milletmagnum",
+          "label": "pinch the milletmagnum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletmagnum. They packed it on the masthead and packed rust around it."]
           ]
         }
       ]
@@ -16331,7 +16433,7 @@
       "name": "Rust Italian",
       "desc": "A dry italian east of the masthead. Packed rust coats an italian.",
       "brief": "Dry italian, packed rust.",
-      "exits": { "west": { "to": "rust_masthead" }, "east": { "to": "rust_venice" }, "south": { "to": "rust_teffgeneral" } },
+      "exits": { "west": { "to": "rust_masthead" }, "east": { "to": "rust_venice" }, "south": { "to": "rust_teffgeneral" }, "north": { "to": "rust_cornmagnum" } },
       "actions": [
         {
           "id": "pinch_italian",
@@ -16340,6 +16442,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard italian. They wrapped it on the masthead and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornmagnum": {
+      "name": "Rust Cornmagnum",
+      "desc": "A dry cornmagnum north of the italian. Packed rust coats cornmagnum.",
+      "brief": "Dry cornmagnum, packed rust.",
+      "exits": { "south": { "to": "rust_italian" } },
+      "actions": [
+        {
+          "id": "pinch_cornmagnum",
+          "label": "pinch the cornmagnum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornmagnum. They packed it on the italian and packed rust around it."]
           ]
         }
       ]
@@ -16365,7 +16484,7 @@
       "name": "Rust Venice",
       "desc": "A dry venice east of the italian. Packed rust coats venice.",
       "brief": "Dry venice, packed rust.",
-      "exits": { "west": { "to": "rust_italian" }, "east": { "to": "rust_saffron" }, "south": { "to": "rust_barleygeneral" } },
+      "exits": { "west": { "to": "rust_italian" }, "east": { "to": "rust_saffron" }, "south": { "to": "rust_barleygeneral" }, "north": { "to": "rust_oatmagnum" } },
       "actions": [
         {
           "id": "pinch_venice",
@@ -16374,6 +16493,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard venice. They packed it on the italian and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatmagnum": {
+      "name": "Rust Oatmagnum",
+      "desc": "A dry oatmagnum north of the venice. Packed rust coats oatmagnum.",
+      "brief": "Dry oatmagnum, packed rust.",
+      "exits": { "south": { "to": "rust_venice" } },
+      "actions": [
+        {
+          "id": "pinch_oatmagnum",
+          "label": "pinch the oatmagnum",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatmagnum. They packed it on the venice and packed rust around it."]
           ]
         }
       ]
@@ -56069,26 +56205,41 @@
     "go north",
     "go east",
     "pinch the turmeric",
+    "go north",
+    "pinch the durummagnum",
+    "go south",
     "go south",
     "pinch the milletstandard",
     "go north",
     "go east",
     "pinch the marri",
+    "go north",
+    "pinch the foniomagnum",
+    "go south",
     "go south",
     "pinch the cornstandard",
     "go north",
     "go east",
     "pinch the blackoak",
+    "go north",
+    "pinch the teffmagnum",
+    "go south",
     "go south",
     "pinch the oatstandard",
     "go north",
     "go east",
     "pinch the celerytop",
+    "go north",
+    "pinch the barleymagnum",
+    "go south",
     "go south",
     "pinch the durumgeneral",
     "go north",
     "go east",
     "pinch the corsican",
+    "go north",
+    "pinch the sorghummagnum",
+    "go south",
     "go south",
     "pinch the naupaka",
     "go north",
@@ -56113,16 +56264,25 @@
     "pinch the hounds",
     "go east",
     "pinch the masthead",
+    "go north",
+    "pinch the milletmagnum",
+    "go south",
     "go south",
     "pinch the foniogeneral",
     "go north",
     "go east",
     "pinch the italian",
+    "go north",
+    "pinch the cornmagnum",
+    "go south",
     "go south",
     "pinch the teffgeneral",
     "go north",
     "go east",
     "pinch the venice",
+    "go north",
+    "pinch the oatmagnum",
+    "go south",
     "go south",
     "pinch the barleygeneral",
     "go north",
