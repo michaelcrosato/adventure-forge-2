@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15650,
+  "maxScore": 15690,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -16399,7 +16399,7 @@
       "name": "Rust Saffron",
       "desc": "A dry saffron east of the venice. Packed rust coats saffron.",
       "brief": "Dry saffron, packed rust.",
-      "exits": { "west": { "to": "rust_venice" }, "east": { "to": "rust_coolibah" }, "south": { "to": "rust_sorghumgeneral" } },
+      "exits": { "west": { "to": "rust_venice" }, "east": { "to": "rust_coolibah" }, "south": { "to": "rust_sorghumgeneral" }, "north": { "to": "rust_durumgallon" } },
       "actions": [
         {
           "id": "pinch_saffron",
@@ -16408,6 +16408,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard saffron. They packed it on the venice and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumgallon": {
+      "name": "Rust Durumgallon",
+      "desc": "A dry durumgallon north of the saffron. Packed rust coats durumgallon.",
+      "brief": "Dry durumgallon, packed rust.",
+      "exits": { "south": { "to": "rust_saffron" } },
+      "actions": [
+        {
+          "id": "pinch_durumgallon",
+          "label": "pinch the durumgallon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumgallon. They packed it on the saffron and packed rust around it."]
           ]
         }
       ]
@@ -16433,7 +16450,7 @@
       "name": "Rust Coolibah",
       "desc": "A dry coolibah east of the saffron. Packed rust coats coolibah.",
       "brief": "Dry coolibah, packed rust.",
-      "exits": { "west": { "to": "rust_saffron" }, "east": { "to": "rust_swampbox" }, "south": { "to": "rust_milletgeneral" } },
+      "exits": { "west": { "to": "rust_saffron" }, "east": { "to": "rust_swampbox" }, "south": { "to": "rust_milletgeneral" }, "north": { "to": "rust_foniogallon" } },
       "actions": [
         {
           "id": "pinch_coolibah",
@@ -16442,6 +16459,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard coolibah. They packed it on the saffron and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniogallon": {
+      "name": "Rust Foniogallon",
+      "desc": "A dry foniogallon north of the coolibah. Packed rust coats foniogallon.",
+      "brief": "Dry foniogallon, packed rust.",
+      "exits": { "south": { "to": "rust_coolibah" } },
+      "actions": [
+        {
+          "id": "pinch_foniogallon",
+          "label": "pinch the foniogallon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniogallon. They packed it on the coolibah and packed rust around it."]
           ]
         }
       ]
@@ -16467,7 +16501,7 @@
       "name": "Rust Swampbox",
       "desc": "A dry swampbox east of the coolibah. Packed rust coats swampbox.",
       "brief": "Dry swampbox, packed rust.",
-      "exits": { "west": { "to": "rust_coolibah" }, "east": { "to": "rust_huonpine" }, "south": { "to": "rust_corngeneral" } },
+      "exits": { "west": { "to": "rust_coolibah" }, "east": { "to": "rust_huonpine" }, "south": { "to": "rust_corngeneral" }, "north": { "to": "rust_teffgallon" } },
       "actions": [
         {
           "id": "pinch_swampbox",
@@ -16476,6 +16510,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard swampbox. They packed it on the coolibah and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffgallon": {
+      "name": "Rust Teffgallon",
+      "desc": "A dry teffgallon north of the swampbox. Packed rust coats teffgallon.",
+      "brief": "Dry teffgallon, packed rust.",
+      "exits": { "south": { "to": "rust_swampbox" } },
+      "actions": [
+        {
+          "id": "pinch_teffgallon",
+          "label": "pinch the teffgallon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffgallon. They packed it on the swampbox and packed rust around it."]
           ]
         }
       ]
@@ -16501,7 +16552,7 @@
       "name": "Rust Huonpine",
       "desc": "A dry huonpine east of the swampbox. Packed rust coats huonpine.",
       "brief": "Dry huonpine, packed rust.",
-      "exits": { "west": { "to": "rust_swampbox" }, "east": { "to": "rust_maritime" }, "south": { "to": "rust_oatgeneral" } },
+      "exits": { "west": { "to": "rust_swampbox" }, "east": { "to": "rust_maritime" }, "south": { "to": "rust_oatgeneral" }, "north": { "to": "rust_barleygallon" } },
       "actions": [
         {
           "id": "pinch_huonpine",
@@ -16510,6 +16561,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard huonpine. They packed it on the swampbox and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleygallon": {
+      "name": "Rust Barleygallon",
+      "desc": "A dry barleygallon north of the huonpine. Packed rust coats barleygallon.",
+      "brief": "Dry barleygallon, packed rust.",
+      "exits": { "south": { "to": "rust_huonpine" } },
+      "actions": [
+        {
+          "id": "pinch_barleygallon",
+          "label": "pinch the barleygallon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleygallon. They packed it on the huonpine and packed rust around it."]
           ]
         }
       ]
@@ -16535,7 +16603,7 @@
       "name": "Rust Maritime",
       "desc": "A dry maritime east of the huonpine. Packed rust coats maritime.",
       "brief": "Dry maritime, packed rust.",
-      "exits": { "west": { "to": "rust_huonpine" }, "east": { "to": "rust_taiwania" }, "south": { "to": "rust_ilima" } },
+      "exits": { "west": { "to": "rust_huonpine" }, "east": { "to": "rust_taiwania" }, "south": { "to": "rust_ilima" }, "north": { "to": "rust_sorghumgallon" } },
       "actions": [
         {
           "id": "pinch_maritime",
@@ -16544,6 +16612,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard maritime. They packed it on the huonpine and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumgallon": {
+      "name": "Rust Sorghumgallon",
+      "desc": "A dry sorghumgallon north of the maritime. Packed rust coats sorghumgallon.",
+      "brief": "Dry sorghumgallon, packed rust.",
+      "exits": { "south": { "to": "rust_maritime" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumgallon",
+          "label": "pinch the sorghumgallon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumgallon. They packed it on the maritime and packed rust around it."]
           ]
         }
       ]
@@ -16586,7 +16671,7 @@
       "name": "Rust Deadeye",
       "desc": "A dry deadeye east of the shim. Packed rust coats a deadeye.",
       "brief": "Dry deadeye, packed rust.",
-      "exits": { "west": { "to": "rust_shim" }, "east": { "to": "rust_gantline" }, "south": { "to": "rust_durumweak" } },
+      "exits": { "west": { "to": "rust_shim" }, "east": { "to": "rust_gantline" }, "south": { "to": "rust_durumweak" }, "north": { "to": "rust_milletgallon" } },
       "actions": [
         {
           "id": "pinch_deadeye",
@@ -16595,6 +16680,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard deadeye. They reeved it on the shim and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletgallon": {
+      "name": "Rust Milletgallon",
+      "desc": "A dry milletgallon north of the deadeye. Packed rust coats milletgallon.",
+      "brief": "Dry milletgallon, packed rust.",
+      "exits": { "south": { "to": "rust_deadeye" } },
+      "actions": [
+        {
+          "id": "pinch_milletgallon",
+          "label": "pinch the milletgallon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletgallon. They packed it on the deadeye and packed rust around it."]
           ]
         }
       ]
@@ -16620,7 +16722,7 @@
       "name": "Rust Gantline",
       "desc": "A dry gantline east of the deadeye. Packed rust coats a gantline.",
       "brief": "Dry gantline, packed rust.",
-      "exits": { "west": { "to": "rust_deadeye" }, "east": { "to": "rust_trucker" }, "south": { "to": "rust_fonioweak" } },
+      "exits": { "west": { "to": "rust_deadeye" }, "east": { "to": "rust_trucker" }, "south": { "to": "rust_fonioweak" }, "north": { "to": "rust_corngallon" } },
       "actions": [
         {
           "id": "pinch_gantline",
@@ -16629,6 +16731,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gantline. They rove it on the deadeye and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corngallon": {
+      "name": "Rust Corngallon",
+      "desc": "A dry corngallon north of the gantline. Packed rust coats corngallon.",
+      "brief": "Dry corngallon, packed rust.",
+      "exits": { "south": { "to": "rust_gantline" } },
+      "actions": [
+        {
+          "id": "pinch_corngallon",
+          "label": "pinch the corngallon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corngallon. They packed it on the gantline and packed rust around it."]
           ]
         }
       ]
@@ -16654,7 +16773,7 @@
       "name": "Rust Trucker",
       "desc": "A dry trucker east of the gantline. Packed rust coats a trucker.",
       "brief": "Dry trucker, packed rust.",
-      "exits": { "west": { "to": "rust_gantline" }, "east": { "to": "rust_burgundy" }, "south": { "to": "rust_teffweak" } },
+      "exits": { "west": { "to": "rust_gantline" }, "east": { "to": "rust_burgundy" }, "south": { "to": "rust_teffweak" }, "north": { "to": "rust_oatgallon" } },
       "actions": [
         {
           "id": "pinch_trucker",
@@ -16663,6 +16782,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard trucker. They cinched it on the gantline and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatgallon": {
+      "name": "Rust Oatgallon",
+      "desc": "A dry oatgallon north of the trucker. Packed rust coats oatgallon.",
+      "brief": "Dry oatgallon, packed rust.",
+      "exits": { "south": { "to": "rust_trucker" } },
+      "actions": [
+        {
+          "id": "pinch_oatgallon",
+          "label": "pinch the oatgallon",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatgallon. They packed it on the trucker and packed rust around it."]
           ]
         }
       ]
@@ -55992,26 +56128,41 @@
     "go north",
     "go east",
     "pinch the saffron",
+    "go north",
+    "pinch the durumgallon",
+    "go south",
     "go south",
     "pinch the sorghumgeneral",
     "go north",
     "go east",
     "pinch the coolibah",
+    "go north",
+    "pinch the foniogallon",
+    "go south",
     "go south",
     "pinch the milletgeneral",
     "go north",
     "go east",
     "pinch the swampbox",
+    "go north",
+    "pinch the teffgallon",
+    "go south",
     "go south",
     "pinch the corngeneral",
     "go north",
     "go east",
     "pinch the huonpine",
+    "go north",
+    "pinch the barleygallon",
+    "go south",
     "go south",
     "pinch the oatgeneral",
     "go north",
     "go east",
     "pinch the maritime",
+    "go north",
+    "pinch the sorghumgallon",
+    "go south",
     "go south",
     "pinch the ilima",
     "go north",
@@ -56029,16 +56180,25 @@
     "go north",
     "go east",
     "pinch the deadeye",
+    "go north",
+    "pinch the milletgallon",
+    "go south",
     "go south",
     "pinch the durumweak",
     "go north",
     "go east",
     "pinch the gantline",
+    "go north",
+    "pinch the corngallon",
+    "go south",
     "go south",
     "pinch the fonioweak",
     "go north",
     "go east",
     "pinch the trucker",
+    "go north",
+    "pinch the oatgallon",
+    "go south",
     "go south",
     "pinch the teffweak",
     "go north",
