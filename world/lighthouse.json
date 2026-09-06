@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 15290,
+  "maxScore": 15330,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -19272,7 +19272,7 @@
       "name": "Rust Tomfool",
       "desc": "A dry tomfool east of the ceiling. Packed rust coats a tomfool.",
       "brief": "Dry tomfool, packed rust.",
-      "exits": { "west": { "to": "rust_ceiling" }, "east": { "to": "rust_collodion" }, "south": { "to": "rust_barleyallpurpose" } },
+      "exits": { "west": { "to": "rust_ceiling" }, "east": { "to": "rust_collodion" }, "south": { "to": "rust_barleyallpurpose" }, "north": { "to": "rust_durumstein" } },
       "actions": [
         {
           "id": "pinch_tomfool",
@@ -19281,6 +19281,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard tomfool. They crossed it on the ceiling and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumstein": {
+      "name": "Rust Durumstein",
+      "desc": "A dry durumstein north of the tomfool. Packed rust coats durumstein.",
+      "brief": "Dry durumstein, packed rust.",
+      "exits": { "south": { "to": "rust_tomfool" } },
+      "actions": [
+        {
+          "id": "pinch_durumstein",
+          "label": "pinch the durumstein",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumstein. They packed it on the tomfool and packed rust around it."]
           ]
         }
       ]
@@ -19306,7 +19323,7 @@
       "name": "Rust Collodion",
       "desc": "A dry collodion east of the tomfool. Packed rust coats collodion.",
       "brief": "Dry collodion, packed rust.",
-      "exits": { "west": { "to": "rust_tomfool" }, "east": { "to": "rust_mangrove" }, "south": { "to": "rust_sorghumallpurpose" } },
+      "exits": { "west": { "to": "rust_tomfool" }, "east": { "to": "rust_mangrove" }, "south": { "to": "rust_sorghumallpurpose" }, "north": { "to": "rust_foniostein" } },
       "actions": [
         {
           "id": "pinch_collodion",
@@ -19315,6 +19332,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard collodion. They packed it on the tomfool and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniostein": {
+      "name": "Rust Foniostein",
+      "desc": "A dry foniostein north of the collodion. Packed rust coats foniostein.",
+      "brief": "Dry foniostein, packed rust.",
+      "exits": { "south": { "to": "rust_collodion" } },
+      "actions": [
+        {
+          "id": "pinch_foniostein",
+          "label": "pinch the foniostein",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniostein. They packed it on the collodion and packed rust around it."]
           ]
         }
       ]
@@ -19340,7 +19374,7 @@
       "name": "Rust Mangrove",
       "desc": "A dry mangrove east of the collodion. Packed rust coats mangrove.",
       "brief": "Dry mangrove, packed rust.",
-      "exits": { "west": { "to": "rust_collodion" }, "east": { "to": "rust_durain" }, "south": { "to": "rust_milletallpurpose" } },
+      "exits": { "west": { "to": "rust_collodion" }, "east": { "to": "rust_durain" }, "south": { "to": "rust_milletallpurpose" }, "north": { "to": "rust_teffstein" } },
       "actions": [
         {
           "id": "pinch_mangrove",
@@ -19349,6 +19383,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard mangrove. They packed it on the collodion and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffstein": {
+      "name": "Rust Teffstein",
+      "desc": "A dry teffstein north of the mangrove. Packed rust coats teffstein.",
+      "brief": "Dry teffstein, packed rust.",
+      "exits": { "south": { "to": "rust_mangrove" } },
+      "actions": [
+        {
+          "id": "pinch_teffstein",
+          "label": "pinch the teffstein",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffstein. They packed it on the mangrove and packed rust around it."]
           ]
         }
       ]
@@ -19374,7 +19425,7 @@
       "name": "Rust Durain",
       "desc": "A dry durain east of the mangrove. Packed rust coats durain.",
       "brief": "Dry durain, packed rust.",
-      "exits": { "west": { "to": "rust_mangrove" }, "east": { "to": "rust_swampmahogany" }, "south": { "to": "rust_cornallpurpose" } },
+      "exits": { "west": { "to": "rust_mangrove" }, "east": { "to": "rust_swampmahogany" }, "south": { "to": "rust_cornallpurpose" }, "north": { "to": "rust_barleystein" } },
       "actions": [
         {
           "id": "pinch_durain",
@@ -19383,6 +19434,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard durain. They packed it on the mangrove and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleystein": {
+      "name": "Rust Barleystein",
+      "desc": "A dry barleystein north of the durain. Packed rust coats barleystein.",
+      "brief": "Dry barleystein, packed rust.",
+      "exits": { "south": { "to": "rust_durain" } },
+      "actions": [
+        {
+          "id": "pinch_barleystein",
+          "label": "pinch the barleystein",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleystein. They packed it on the durain and packed rust around it."]
           ]
         }
       ]
@@ -19408,7 +19476,7 @@
       "name": "Rust Swampmahogany",
       "desc": "A dry swampmahogany east of the durain. Packed rust coats swampmahogany.",
       "brief": "Dry swampmahogany, packed rust.",
-      "exits": { "west": { "to": "rust_durain" }, "east": { "to": "rust_angophora" }, "south": { "to": "rust_oatallpurpose" } },
+      "exits": { "west": { "to": "rust_durain" }, "east": { "to": "rust_angophora" }, "south": { "to": "rust_oatallpurpose" }, "north": { "to": "rust_sorghumstein" } },
       "actions": [
         {
           "id": "pinch_swampmahogany",
@@ -19417,6 +19485,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard swampmahogany. They packed it on the durain and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumstein": {
+      "name": "Rust Sorghumstein",
+      "desc": "A dry sorghumstein north of the swampmahogany. Packed rust coats sorghumstein.",
+      "brief": "Dry sorghumstein, packed rust.",
+      "exits": { "south": { "to": "rust_swampmahogany" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumstein",
+          "label": "pinch the sorghumstein",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumstein. They packed it on the swampmahogany and packed rust around it."]
           ]
         }
       ]
@@ -19442,7 +19527,7 @@
       "name": "Rust Angophora",
       "desc": "A dry angophora east of the swampmahogany. Packed rust coats angophora.",
       "brief": "Dry angophora, packed rust.",
-      "exits": { "west": { "to": "rust_swampmahogany" }, "east": { "to": "rust_belah" }, "south": { "to": "rust_ryeallpurpose" } },
+      "exits": { "west": { "to": "rust_swampmahogany" }, "east": { "to": "rust_belah" }, "south": { "to": "rust_ryeallpurpose" }, "north": { "to": "rust_milletstein" } },
       "actions": [
         {
           "id": "pinch_angophora",
@@ -19451,6 +19536,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard angophora. They packed it on the swampmahogany and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletstein": {
+      "name": "Rust Milletstein",
+      "desc": "A dry milletstein north of the angophora. Packed rust coats milletstein.",
+      "brief": "Dry milletstein, packed rust.",
+      "exits": { "south": { "to": "rust_angophora" } },
+      "actions": [
+        {
+          "id": "pinch_milletstein",
+          "label": "pinch the milletstein",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletstein. They packed it on the angophora and packed rust around it."]
           ]
         }
       ]
@@ -19476,7 +19578,7 @@
       "name": "Rust Belah",
       "desc": "A dry belah east of the angophora. Packed rust coats belah.",
       "brief": "Dry belah, packed rust.",
-      "exits": { "west": { "to": "rust_angophora" }, "east": { "to": "rust_whitepine" }, "south": { "to": "rust_wheatallpurpose" } },
+      "exits": { "west": { "to": "rust_angophora" }, "east": { "to": "rust_whitepine" }, "south": { "to": "rust_wheatallpurpose" }, "north": { "to": "rust_cornstein" } },
       "actions": [
         {
           "id": "pinch_belah",
@@ -19485,6 +19587,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard belah. They packed it on the angophora and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornstein": {
+      "name": "Rust Cornstein",
+      "desc": "A dry cornstein north of the belah. Packed rust coats cornstein.",
+      "brief": "Dry cornstein, packed rust.",
+      "exits": { "south": { "to": "rust_belah" } },
+      "actions": [
+        {
+          "id": "pinch_cornstein",
+          "label": "pinch the cornstein",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornstein. They packed it on the belah and packed rust around it."]
           ]
         }
       ]
@@ -19510,7 +19629,7 @@
       "name": "Rust Whitepine",
       "desc": "A dry whitepine east of the belah. Packed rust coats whitepine.",
       "brief": "Dry whitepine, packed rust.",
-      "exits": { "west": { "to": "rust_belah" }, "east": { "to": "rust_mapou" }, "south": { "to": "rust_mamane" } },
+      "exits": { "west": { "to": "rust_belah" }, "east": { "to": "rust_mapou" }, "south": { "to": "rust_mamane" }, "north": { "to": "rust_oatstein" } },
       "actions": [
         {
           "id": "pinch_whitepine",
@@ -19519,6 +19638,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard whitepine. They packed it on the belah and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatstein": {
+      "name": "Rust Oatstein",
+      "desc": "A dry oatstein north of the whitepine. Packed rust coats oatstein.",
+      "brief": "Dry oatstein, packed rust.",
+      "exits": { "south": { "to": "rust_whitepine" } },
+      "actions": [
+        {
+          "id": "pinch_oatstein",
+          "label": "pinch the oatstein",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatstein. They packed it on the whitepine and packed rust around it."]
           ]
         }
       ]
@@ -55284,41 +55420,65 @@
     "pinch the ceiling",
     "go east",
     "pinch the tomfool",
+    "go north",
+    "pinch the durumstein",
+    "go south",
     "go south",
     "pinch the barleyallpurpose",
     "go north",
     "go east",
     "pinch the collodion",
+    "go north",
+    "pinch the foniostein",
+    "go south",
     "go south",
     "pinch the sorghumallpurpose",
     "go north",
     "go east",
     "pinch the mangrove",
+    "go north",
+    "pinch the teffstein",
+    "go south",
     "go south",
     "pinch the milletallpurpose",
     "go north",
     "go east",
     "pinch the durain",
+    "go north",
+    "pinch the barleystein",
+    "go south",
     "go south",
     "pinch the cornallpurpose",
     "go north",
     "go east",
     "pinch the swampmahogany",
+    "go north",
+    "pinch the sorghumstein",
+    "go south",
     "go south",
     "pinch the oatallpurpose",
     "go north",
     "go east",
     "pinch the angophora",
+    "go north",
+    "pinch the milletstein",
+    "go south",
     "go south",
     "pinch the ryeallpurpose",
     "go north",
     "go east",
     "pinch the belah",
+    "go north",
+    "pinch the cornstein",
+    "go south",
     "go south",
     "pinch the wheatallpurpose",
     "go north",
     "go east",
     "pinch the whitepine",
+    "go north",
+    "pinch the oatstein",
+    "go south",
     "go south",
     "pinch the mamane",
     "go north",
