@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 14810,
+  "maxScore": 14850,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -22740,7 +22740,7 @@
       "name": "Rust Chengal",
       "desc": "A dry chengal east of the palosanto. Packed rust coats chengal.",
       "brief": "Dry chengal, packed rust.",
-      "exits": { "west": { "to": "rust_palosanto" }, "east": { "to": "rust_kekatong" }, "south": { "to": "rust_sorghumreddog" } },
+      "exits": { "west": { "to": "rust_palosanto" }, "east": { "to": "rust_kekatong" }, "south": { "to": "rust_sorghumreddog" }, "north": { "to": "rust_durumfirkin" } },
       "actions": [
         {
           "id": "pinch_chengal",
@@ -22749,6 +22749,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard chengal. They packed it on the palosanto and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durumfirkin": {
+      "name": "Rust Durumfirkin",
+      "desc": "A dry durumfirkin north of the chengal. Packed rust coats durumfirkin.",
+      "brief": "Dry durumfirkin, packed rust.",
+      "exits": { "south": { "to": "rust_chengal" } },
+      "actions": [
+        {
+          "id": "pinch_durumfirkin",
+          "label": "pinch the durumfirkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durumfirkin. They packed it on the chengal and packed rust around it."]
           ]
         }
       ]
@@ -22774,7 +22791,7 @@
       "name": "Rust Kekatong",
       "desc": "A dry kekatong east of the chengal. Packed rust coats kekatong.",
       "brief": "Dry kekatong, packed rust.",
-      "exits": { "west": { "to": "rust_chengal" }, "east": { "to": "rust_bija" }, "south": { "to": "rust_milletreddog" } },
+      "exits": { "west": { "to": "rust_chengal" }, "east": { "to": "rust_bija" }, "south": { "to": "rust_milletreddog" }, "north": { "to": "rust_foniofirkin" } },
       "actions": [
         {
           "id": "pinch_kekatong",
@@ -22783,6 +22800,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kekatong. They packed it on the chengal and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniofirkin": {
+      "name": "Rust Foniofirkin",
+      "desc": "A dry foniofirkin north of the kekatong. Packed rust coats foniofirkin.",
+      "brief": "Dry foniofirkin, packed rust.",
+      "exits": { "south": { "to": "rust_kekatong" } },
+      "actions": [
+        {
+          "id": "pinch_foniofirkin",
+          "label": "pinch the foniofirkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniofirkin. They packed it on the kekatong and packed rust around it."]
           ]
         }
       ]
@@ -22808,7 +22842,7 @@
       "name": "Rust Bija",
       "desc": "A dry bija east of the kekatong. Packed rust coats bija.",
       "brief": "Dry bija, packed rust.",
-      "exits": { "west": { "to": "rust_kekatong" }, "east": { "to": "rust_messmate" }, "south": { "to": "rust_cornreddog" } },
+      "exits": { "west": { "to": "rust_kekatong" }, "east": { "to": "rust_messmate" }, "south": { "to": "rust_cornreddog" }, "north": { "to": "rust_tefffirkin" } },
       "actions": [
         {
           "id": "pinch_bija",
@@ -22817,6 +22851,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard bija. They packed it on the kekatong and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_tefffirkin": {
+      "name": "Rust Tefffirkin",
+      "desc": "A dry tefffirkin north of the bija. Packed rust coats tefffirkin.",
+      "brief": "Dry tefffirkin, packed rust.",
+      "exits": { "south": { "to": "rust_bija" } },
+      "actions": [
+        {
+          "id": "pinch_tefffirkin",
+          "label": "pinch the tefffirkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard tefffirkin. They packed it on the bija and packed rust around it."]
           ]
         }
       ]
@@ -22910,7 +22961,7 @@
       "name": "Rust Catspaw",
       "desc": "A dry catspaw east of the felt. Packed rust coats a catspaw.",
       "brief": "Dry catspaw, packed rust.",
-      "exits": { "west": { "to": "rust_felt" }, "east": { "to": "rust_gesso" }, "south": { "to": "rust_oatreddog" } },
+      "exits": { "west": { "to": "rust_felt" }, "east": { "to": "rust_gesso" }, "south": { "to": "rust_oatreddog" }, "north": { "to": "rust_barleyfirkin" } },
       "actions": [
         {
           "id": "pinch_catspaw",
@@ -22919,6 +22970,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard catspaw. They hooked it on the felt and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleyfirkin": {
+      "name": "Rust Barleyfirkin",
+      "desc": "A dry barleyfirkin north of the catspaw. Packed rust coats barleyfirkin.",
+      "brief": "Dry barleyfirkin, packed rust.",
+      "exits": { "south": { "to": "rust_catspaw" } },
+      "actions": [
+        {
+          "id": "pinch_barleyfirkin",
+          "label": "pinch the barleyfirkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleyfirkin. They packed it on the catspaw and packed rust around it."]
           ]
         }
       ]
@@ -22944,7 +23012,7 @@
       "name": "Rust Gesso",
       "desc": "A dry gesso east of the catspaw. Packed rust coats gesso.",
       "brief": "Dry gesso, packed rust.",
-      "exits": { "west": { "to": "rust_catspaw" }, "east": { "to": "rust_idigbo" }, "south": { "to": "rust_ryereddog" } },
+      "exits": { "west": { "to": "rust_catspaw" }, "east": { "to": "rust_idigbo" }, "south": { "to": "rust_ryereddog" }, "north": { "to": "rust_sorghumfirkin" } },
       "actions": [
         {
           "id": "pinch_gesso",
@@ -22953,6 +23021,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard gesso. They packed it on the catspaw and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghumfirkin": {
+      "name": "Rust Sorghumfirkin",
+      "desc": "A dry sorghumfirkin north of the gesso. Packed rust coats sorghumfirkin.",
+      "brief": "Dry sorghumfirkin, packed rust.",
+      "exits": { "south": { "to": "rust_gesso" } },
+      "actions": [
+        {
+          "id": "pinch_sorghumfirkin",
+          "label": "pinch the sorghumfirkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghumfirkin. They packed it on the gesso and packed rust around it."]
           ]
         }
       ]
@@ -22978,7 +23063,7 @@
       "name": "Rust Idigbo",
       "desc": "A dry idigbo east of the gesso. Packed rust coats idigbo.",
       "brief": "Dry idigbo, packed rust.",
-      "exits": { "west": { "to": "rust_gesso" }, "east": { "to": "rust_freijo" }, "south": { "to": "rust_wheatreddog" } },
+      "exits": { "west": { "to": "rust_gesso" }, "east": { "to": "rust_freijo" }, "south": { "to": "rust_wheatreddog" }, "north": { "to": "rust_milletfirkin" } },
       "actions": [
         {
           "id": "pinch_idigbo",
@@ -22987,6 +23072,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard idigbo. They packed it on the gesso and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletfirkin": {
+      "name": "Rust Milletfirkin",
+      "desc": "A dry milletfirkin north of the idigbo. Packed rust coats milletfirkin.",
+      "brief": "Dry milletfirkin, packed rust.",
+      "exits": { "south": { "to": "rust_idigbo" } },
+      "actions": [
+        {
+          "id": "pinch_milletfirkin",
+          "label": "pinch the milletfirkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletfirkin. They packed it on the idigbo and packed rust around it."]
           ]
         }
       ]
@@ -23012,7 +23114,7 @@
       "name": "Rust Freijo",
       "desc": "A dry freijo east of the idigbo. Packed rust coats freijo.",
       "brief": "Dry freijo, packed rust.",
-      "exits": { "west": { "to": "rust_idigbo" }, "east": { "to": "rust_primavera" }, "south": { "to": "rust_durumoffal" } },
+      "exits": { "west": { "to": "rust_idigbo" }, "east": { "to": "rust_primavera" }, "south": { "to": "rust_durumoffal" }, "north": { "to": "rust_cornfirkin" } },
       "actions": [
         {
           "id": "pinch_freijo",
@@ -23021,6 +23123,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard freijo. They packed it on the idigbo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornfirkin": {
+      "name": "Rust Cornfirkin",
+      "desc": "A dry cornfirkin north of the freijo. Packed rust coats cornfirkin.",
+      "brief": "Dry cornfirkin, packed rust.",
+      "exits": { "south": { "to": "rust_freijo" } },
+      "actions": [
+        {
+          "id": "pinch_cornfirkin",
+          "label": "pinch the cornfirkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornfirkin. They packed it on the freijo and packed rust around it."]
           ]
         }
       ]
@@ -23046,7 +23165,7 @@
       "name": "Rust Primavera",
       "desc": "A dry primavera east of the freijo. Packed rust coats primavera.",
       "brief": "Dry primavera, packed rust.",
-      "exits": { "west": { "to": "rust_freijo" }, "east": { "to": "rust_resak" }, "south": { "to": "rust_foniooffal" } },
+      "exits": { "west": { "to": "rust_freijo" }, "east": { "to": "rust_resak" }, "south": { "to": "rust_foniooffal" }, "north": { "to": "rust_oatfirkin" } },
       "actions": [
         {
           "id": "pinch_primavera",
@@ -23055,6 +23174,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard primavera. They packed it on the freijo and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatfirkin": {
+      "name": "Rust Oatfirkin",
+      "desc": "A dry oatfirkin north of the primavera. Packed rust coats oatfirkin.",
+      "brief": "Dry oatfirkin, packed rust.",
+      "exits": { "south": { "to": "rust_primavera" } },
+      "actions": [
+        {
+          "id": "pinch_oatfirkin",
+          "label": "pinch the oatfirkin",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatfirkin. They packed it on the primavera and packed rust around it."]
           ]
         }
       ]
@@ -54322,16 +54458,25 @@
     "go north",
     "go east",
     "pinch the chengal",
+    "go north",
+    "pinch the durumfirkin",
+    "go south",
     "go south",
     "pinch the sorghumreddog",
     "go north",
     "go east",
     "pinch the kekatong",
+    "go north",
+    "pinch the foniofirkin",
+    "go south",
     "go south",
     "pinch the milletreddog",
     "go north",
     "go east",
     "pinch the bija",
+    "go north",
+    "pinch the tefffirkin",
+    "go south",
     "go south",
     "pinch the cornreddog",
     "go north",
@@ -54356,26 +54501,41 @@
     "pinch the felt",
     "go east",
     "pinch the catspaw",
+    "go north",
+    "pinch the barleyfirkin",
+    "go south",
     "go south",
     "pinch the oatreddog",
     "go north",
     "go east",
     "pinch the gesso",
+    "go north",
+    "pinch the sorghumfirkin",
+    "go south",
     "go south",
     "pinch the ryereddog",
     "go north",
     "go east",
     "pinch the idigbo",
+    "go north",
+    "pinch the milletfirkin",
+    "go south",
     "go south",
     "pinch the wheatreddog",
     "go north",
     "go east",
     "pinch the freijo",
+    "go north",
+    "pinch the cornfirkin",
+    "go south",
     "go south",
     "pinch the durumoffal",
     "go north",
     "go east",
     "pinch the primavera",
+    "go north",
+    "pinch the oatfirkin",
+    "go south",
     "go south",
     "pinch the foniooffal",
     "go north",
