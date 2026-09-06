@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 7370,
+  "maxScore": 7410,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -8936,7 +8936,7 @@
       "name": "Rust Blackpine",
       "desc": "A dry blackpine east of the acacia. Packed rust coats blackpine.",
       "brief": "Dry blackpine, packed rust.",
-      "exits": { "west": { "to": "rust_acacia" } },
+      "exits": { "west": { "to": "rust_acacia" }, "east": { "to": "rust_stonepine" } },
       "actions": [
         {
           "id": "pinch_blackpine",
@@ -8945,6 +8945,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard blackpine. They packed it on the acacia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_stonepine": {
+      "name": "Rust Stonepine",
+      "desc": "A dry stonepine east of the blackpine. Packed rust coats stonepine.",
+      "brief": "Dry stonepine, packed rust.",
+      "exits": { "west": { "to": "rust_blackpine" } },
+      "actions": [
+        {
+          "id": "pinch_stonepine",
+          "label": "pinch the stonepine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard stonepine. They packed it on the blackpine and packed rust around it."]
           ]
         }
       ]
@@ -10041,7 +10058,7 @@
       "name": "Rust Sassafras",
       "desc": "A dry sassafras east of the redoak. Packed rust coats sassafras.",
       "brief": "Dry sassafras, packed rust.",
-      "exits": { "west": { "to": "rust_redoak" } },
+      "exits": { "west": { "to": "rust_redoak" }, "east": { "to": "rust_monterey" } },
       "actions": [
         {
           "id": "pinch_sassafras",
@@ -10050,6 +10067,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sassafras. They packed it on the redoak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_monterey": {
+      "name": "Rust Monterey",
+      "desc": "A dry monterey east of the sassafras. Packed rust coats monterey.",
+      "brief": "Dry monterey, packed rust.",
+      "exits": { "west": { "to": "rust_sassafras" } },
+      "actions": [
+        {
+          "id": "pinch_monterey",
+          "label": "pinch the monterey",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard monterey. They packed it on the sassafras and packed rust around it."]
           ]
         }
       ]
@@ -10194,7 +10228,7 @@
       "name": "Rust Celerytop",
       "desc": "A dry celerytop east of the blackoak. Packed rust coats celerytop.",
       "brief": "Dry celerytop, packed rust.",
-      "exits": { "west": { "to": "rust_blackoak" } },
+      "exits": { "west": { "to": "rust_blackoak" }, "east": { "to": "rust_corsican" } },
       "actions": [
         {
           "id": "pinch_celerytop",
@@ -10203,6 +10237,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard celerytop. They packed it on the blackoak and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_corsican": {
+      "name": "Rust Corsican",
+      "desc": "A dry corsican east of the celerytop. Packed rust coats corsican.",
+      "brief": "Dry corsican, packed rust.",
+      "exits": { "west": { "to": "rust_celerytop" } },
+      "actions": [
+        {
+          "id": "pinch_corsican",
+          "label": "pinch the corsican",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard corsican. They packed it on the celerytop and packed rust around it."]
           ]
         }
       ]
@@ -10364,7 +10415,7 @@
       "name": "Rust Huonpine",
       "desc": "A dry huonpine east of the swampbox. Packed rust coats huonpine.",
       "brief": "Dry huonpine, packed rust.",
-      "exits": { "west": { "to": "rust_swampbox" } },
+      "exits": { "west": { "to": "rust_swampbox" }, "east": { "to": "rust_maritime" } },
       "actions": [
         {
           "id": "pinch_huonpine",
@@ -10373,6 +10424,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard huonpine. They packed it on the swampbox and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_maritime": {
+      "name": "Rust Maritime",
+      "desc": "A dry maritime east of the huonpine. Packed rust coats maritime.",
+      "brief": "Dry maritime, packed rust.",
+      "exits": { "west": { "to": "rust_huonpine" } },
+      "actions": [
+        {
+          "id": "pinch_maritime",
+          "label": "pinch the maritime",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard maritime. They packed it on the huonpine and packed rust around it."]
           ]
         }
       ]
@@ -10500,7 +10568,7 @@
       "name": "Rust Cypresspine",
       "desc": "A dry cypresspine east of the melaleuca. Packed rust coats cypresspine.",
       "brief": "Dry cypresspine, packed rust.",
-      "exits": { "west": { "to": "rust_melaleuca" } },
+      "exits": { "west": { "to": "rust_melaleuca" }, "east": { "to": "rust_aleppo" } },
       "actions": [
         {
           "id": "pinch_cypresspine",
@@ -10509,6 +10577,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cypresspine. They packed it on the melaleuca and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_aleppo": {
+      "name": "Rust Aleppo",
+      "desc": "A dry aleppo east of the cypresspine. Packed rust coats aleppo.",
+      "brief": "Dry aleppo, packed rust.",
+      "exits": { "west": { "to": "rust_cypresspine" } },
+      "actions": [
+        {
+          "id": "pinch_aleppo",
+          "label": "pinch the aleppo",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard aleppo. They packed it on the cypresspine and packed rust around it."]
           ]
         }
       ]
@@ -10653,7 +10738,7 @@
       "name": "Rust Macadamia",
       "desc": "A dry macadamia east of the teatree. Packed rust coats macadamia.",
       "brief": "Dry macadamia, packed rust.",
-      "exits": { "west": { "to": "rust_teatree" } },
+      "exits": { "west": { "to": "rust_teatree" }, "east": { "to": "rust_bristlecone" } },
       "actions": [
         {
           "id": "pinch_macadamia",
@@ -10662,6 +10747,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard macadamia. They packed it on the teatree and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_bristlecone": {
+      "name": "Rust Bristlecone",
+      "desc": "A dry bristlecone east of the macadamia. Packed rust coats bristlecone.",
+      "brief": "Dry bristlecone, packed rust.",
+      "exits": { "west": { "to": "rust_macadamia" } },
+      "actions": [
+        {
+          "id": "pinch_bristlecone",
+          "label": "pinch the bristlecone",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bristlecone. They packed it on the macadamia and packed rust around it."]
           ]
         }
       ]
@@ -10789,7 +10891,7 @@
       "name": "Rust Hooppine",
       "desc": "A dry hooppine east of the banksia. Packed rust coats hooppine.",
       "brief": "Dry hooppine, packed rust.",
-      "exits": { "west": { "to": "rust_banksia" } },
+      "exits": { "west": { "to": "rust_banksia" }, "east": { "to": "rust_jeffreypine" } },
       "actions": [
         {
           "id": "pinch_hooppine",
@@ -10798,6 +10900,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hooppine. They packed it on the banksia and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_jeffreypine": {
+      "name": "Rust Jeffreypine",
+      "desc": "A dry jeffreypine east of the hooppine. Packed rust coats jeffreypine.",
+      "brief": "Dry jeffreypine, packed rust.",
+      "exits": { "west": { "to": "rust_hooppine" } },
+      "actions": [
+        {
+          "id": "pinch_jeffreypine",
+          "label": "pinch the jeffreypine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard jeffreypine. They packed it on the hooppine and packed rust around it."]
           ]
         }
       ]
@@ -14648,7 +14767,7 @@
       "name": "Rust Leatherwood",
       "desc": "A dry leatherwood east of the callistemon. Packed rust coats leatherwood.",
       "brief": "Dry leatherwood, packed rust.",
-      "exits": { "west": { "to": "rust_callistemon" } },
+      "exits": { "west": { "to": "rust_callistemon" }, "east": { "to": "rust_lodgepole" } },
       "actions": [
         {
           "id": "pinch_leatherwood",
@@ -14657,6 +14776,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard leatherwood. They packed it on the callistemon and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_lodgepole": {
+      "name": "Rust Lodgepole",
+      "desc": "A dry lodgepole east of the leatherwood. Packed rust coats lodgepole.",
+      "brief": "Dry lodgepole, packed rust.",
+      "exits": { "west": { "to": "rust_leatherwood" } },
+      "actions": [
+        {
+          "id": "pinch_lodgepole",
+          "label": "pinch the lodgepole",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard lodgepole. They packed it on the leatherwood and packed rust around it."]
           ]
         }
       ]
@@ -26530,6 +26666,9 @@
     "pinch the acacia",
     "go east",
     "pinch the blackpine",
+    "go east",
+    "pinch the stonepine",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26717,6 +26856,9 @@
     "pinch the redoak",
     "go east",
     "pinch the sassafras",
+    "go east",
+    "pinch the monterey",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26743,6 +26885,9 @@
     "pinch the blackoak",
     "go east",
     "pinch the celerytop",
+    "go east",
+    "pinch the corsican",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26772,6 +26917,9 @@
     "pinch the swampbox",
     "go east",
     "pinch the huonpine",
+    "go east",
+    "pinch the maritime",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26796,6 +26944,9 @@
     "pinch the melaleuca",
     "go east",
     "pinch the cypresspine",
+    "go east",
+    "pinch the aleppo",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26822,6 +26973,9 @@
     "pinch the teatree",
     "go east",
     "pinch the macadamia",
+    "go east",
+    "pinch the bristlecone",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -26846,6 +27000,9 @@
     "pinch the banksia",
     "go east",
     "pinch the hooppine",
+    "go east",
+    "pinch the jeffreypine",
+    "go west",
     "go west",
     "go west",
     "go west",
@@ -27263,6 +27420,9 @@
     "pinch the callistemon",
     "go east",
     "pinch the leatherwood",
+    "go east",
+    "pinch the lodgepole",
+    "go west",
     "go west",
     "go west",
     "go west",
