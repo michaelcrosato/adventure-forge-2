@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 8650,
+  "maxScore": 8690,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -9038,7 +9038,7 @@
       "name": "Rust Rosemadder",
       "desc": "A dry rosemadder east of the caput. Packed rust coats rosemadder.",
       "brief": "Dry rosemadder, packed rust.",
-      "exits": { "west": { "to": "rust_caput" }, "east": { "to": "rust_sprucepine" } },
+      "exits": { "west": { "to": "rust_caput" }, "east": { "to": "rust_sprucepine" }, "south": { "to": "rust_apricot" } },
       "actions": [
         {
           "id": "pinch_rosemadder",
@@ -9051,11 +9051,28 @@
         }
       ]
     },
+    "rust_apricot": {
+      "name": "Rust Apricot",
+      "desc": "A dry apricot south of the rosemadder. Packed rust coats apricot.",
+      "brief": "Dry apricot, packed rust.",
+      "exits": { "north": { "to": "rust_rosemadder" } },
+      "actions": [
+        {
+          "id": "pinch_apricot",
+          "label": "pinch the apricot",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard apricot. They packed it on the rosemadder and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sprucepine": {
       "name": "Rust Sprucepine",
       "desc": "A dry sprucepine east of the rosemadder. Packed rust coats sprucepine.",
       "brief": "Dry sprucepine, packed rust.",
-      "exits": { "west": { "to": "rust_rosemadder" }, "east": { "to": "rust_pondcypress" } },
+      "exits": { "west": { "to": "rust_rosemadder" }, "east": { "to": "rust_pondcypress" }, "south": { "to": "rust_nectarine" } },
       "actions": [
         {
           "id": "pinch_sprucepine",
@@ -9064,6 +9081,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sprucepine. They packed it on the rosemadder and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_nectarine": {
+      "name": "Rust Nectarine",
+      "desc": "A dry nectarine south of the sprucepine. Packed rust coats nectarine.",
+      "brief": "Dry nectarine, packed rust.",
+      "exits": { "north": { "to": "rust_sprucepine" } },
+      "actions": [
+        {
+          "id": "pinch_nectarine",
+          "label": "pinch the nectarine",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard nectarine. They packed it on the sprucepine and packed rust around it."]
           ]
         }
       ]
@@ -9157,7 +9191,7 @@
       "name": "Rust Topping",
       "desc": "A dry topping east of the halyard. Packed rust coats a topping.",
       "brief": "Dry topping, packed rust.",
-      "exits": { "west": { "to": "rust_halyard" }, "east": { "to": "rust_zeppelin" } },
+      "exits": { "west": { "to": "rust_halyard" }, "east": { "to": "rust_zeppelin" }, "south": { "to": "rust_greengage" } },
       "actions": [
         {
           "id": "pinch_topping",
@@ -9170,11 +9204,28 @@
         }
       ]
     },
+    "rust_greengage": {
+      "name": "Rust Greengage",
+      "desc": "A dry greengage south of the topping. Packed rust coats greengage.",
+      "brief": "Dry greengage, packed rust.",
+      "exits": { "north": { "to": "rust_topping" } },
+      "actions": [
+        {
+          "id": "pinch_greengage",
+          "label": "pinch the greengage",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard greengage. They packed it on the topping and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_zeppelin": {
       "name": "Rust Zeppelin",
       "desc": "A dry zeppelin east of the topping. Packed rust coats a zeppelin.",
       "brief": "Dry zeppelin, packed rust.",
-      "exits": { "west": { "to": "rust_topping" }, "east": { "to": "rust_azurite" } },
+      "exits": { "west": { "to": "rust_topping" }, "east": { "to": "rust_azurite" }, "south": { "to": "rust_damson" } },
       "actions": [
         {
           "id": "pinch_zeppelin",
@@ -9187,11 +9238,28 @@
         }
       ]
     },
+    "rust_damson": {
+      "name": "Rust Damson",
+      "desc": "A dry damson south of the zeppelin. Packed rust coats damson.",
+      "brief": "Dry damson, packed rust.",
+      "exits": { "north": { "to": "rust_zeppelin" } },
+      "actions": [
+        {
+          "id": "pinch_damson",
+          "label": "pinch the damson",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard damson. They packed it on the zeppelin and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_azurite": {
       "name": "Rust Azurite",
       "desc": "A dry azurite east of the zeppelin. Packed rust coats azurite.",
       "brief": "Dry azurite, packed rust.",
-      "exits": { "west": { "to": "rust_zeppelin" }, "east": { "to": "rust_naples" } },
+      "exits": { "west": { "to": "rust_zeppelin" }, "east": { "to": "rust_naples" }, "south": { "to": "rust_mirabelle" } },
       "actions": [
         {
           "id": "pinch_azurite",
@@ -9204,11 +9272,28 @@
         }
       ]
     },
+    "rust_mirabelle": {
+      "name": "Rust Mirabelle",
+      "desc": "A dry mirabelle south of the azurite. Packed rust coats mirabelle.",
+      "brief": "Dry mirabelle, packed rust.",
+      "exits": { "north": { "to": "rust_azurite" } },
+      "actions": [
+        {
+          "id": "pinch_mirabelle",
+          "label": "pinch the mirabelle",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard mirabelle. They packed it on the azurite and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_naples": {
       "name": "Rust Naples",
       "desc": "A dry naples east of the azurite. Packed rust coats naples.",
       "brief": "Dry naples, packed rust.",
-      "exits": { "west": { "to": "rust_azurite" }, "east": { "to": "rust_indianyellow" } },
+      "exits": { "west": { "to": "rust_azurite" }, "east": { "to": "rust_indianyellow" }, "south": { "to": "rust_bullace" } },
       "actions": [
         {
           "id": "pinch_naples",
@@ -9221,11 +9306,28 @@
         }
       ]
     },
+    "rust_bullace": {
+      "name": "Rust Bullace",
+      "desc": "A dry bullace south of the naples. Packed rust coats bullace.",
+      "brief": "Dry bullace, packed rust.",
+      "exits": { "north": { "to": "rust_naples" } },
+      "actions": [
+        {
+          "id": "pinch_bullace",
+          "label": "pinch the bullace",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard bullace. They packed it on the naples and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_indianyellow": {
       "name": "Rust Indianyellow",
       "desc": "A dry indianyellow east of the naples. Packed rust coats indianyellow.",
       "brief": "Dry indianyellow, packed rust.",
-      "exits": { "west": { "to": "rust_naples" }, "east": { "to": "rust_sandpine" } },
+      "exits": { "west": { "to": "rust_naples" }, "east": { "to": "rust_sandpine" }, "south": { "to": "rust_morello" } },
       "actions": [
         {
           "id": "pinch_indianyellow",
@@ -9238,11 +9340,28 @@
         }
       ]
     },
+    "rust_morello": {
+      "name": "Rust Morello",
+      "desc": "A dry morello south of the indianyellow. Packed rust coats morello.",
+      "brief": "Dry morello, packed rust.",
+      "exits": { "north": { "to": "rust_indianyellow" } },
+      "actions": [
+        {
+          "id": "pinch_morello",
+          "label": "pinch the morello",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard morello. They packed it on the indianyellow and packed rust around it."]
+          ]
+        }
+      ]
+    },
     "rust_sandpine": {
       "name": "Rust Sandpine",
       "desc": "A dry sandpine east of the indianyellow. Packed rust coats sandpine.",
       "brief": "Dry sandpine, packed rust.",
-      "exits": { "west": { "to": "rust_indianyellow" }, "east": { "to": "rust_cypruscedar" } },
+      "exits": { "west": { "to": "rust_indianyellow" }, "east": { "to": "rust_cypruscedar" }, "south": { "to": "rust_gean" } },
       "actions": [
         {
           "id": "pinch_sandpine",
@@ -9251,6 +9370,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard sandpine. They packed it on the indianyellow and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_gean": {
+      "name": "Rust Gean",
+      "desc": "A dry gean south of the sandpine. Packed rust coats gean.",
+      "brief": "Dry gean, packed rust.",
+      "exits": { "north": { "to": "rust_sandpine" } },
+      "actions": [
+        {
+          "id": "pinch_gean",
+          "label": "pinch the gean",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard gean. They packed it on the sandpine and packed rust around it."]
           ]
         }
       ]
@@ -30938,8 +31074,14 @@
     "go north",
     "go east",
     "pinch the rosemadder",
+    "go south",
+    "pinch the apricot",
+    "go north",
     "go east",
     "pinch the sprucepine",
+    "go south",
+    "pinch the nectarine",
+    "go north",
     "go east",
     "pinch the pondcypress",
     "go south",
@@ -30963,16 +31105,34 @@
     "pinch the halyard",
     "go east",
     "pinch the topping",
+    "go south",
+    "pinch the greengage",
+    "go north",
     "go east",
     "pinch the zeppelin",
+    "go south",
+    "pinch the damson",
+    "go north",
     "go east",
     "pinch the azurite",
+    "go south",
+    "pinch the mirabelle",
+    "go north",
     "go east",
     "pinch the naples",
+    "go south",
+    "pinch the bullace",
+    "go north",
     "go east",
     "pinch the indianyellow",
+    "go south",
+    "pinch the morello",
+    "go north",
     "go east",
     "pinch the sandpine",
+    "go south",
+    "pinch the gean",
+    "go north",
     "go east",
     "pinch the cypruscedar",
     "go south",
