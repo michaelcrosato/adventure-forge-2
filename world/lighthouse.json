@@ -4,7 +4,7 @@
   "intro": "Storm tonight. The great light on the cliff is dark, and every ship on this coast is sailing at the rocks. Someone has to climb up there and light it.",
   "start": "cove",
   "hp": 10,
-  "maxScore": 12610,
+  "maxScore": 12650,
   "skills": { "str": 2 },
   "rooms": {
     "cove": {
@@ -40539,7 +40539,7 @@
       "name": "Rust Cuprite",
       "desc": "A dry cuprite east of the barytes. Packed rust coats cuprite.",
       "brief": "Dry cuprite, packed rust.",
-      "exits": { "west": { "to": "rust_barytes" }, "east": { "to": "rust_hausmannite" }, "south": { "to": "rust_laminaria" } },
+      "exits": { "west": { "to": "rust_barytes" }, "east": { "to": "rust_hausmannite" }, "south": { "to": "rust_laminaria" }, "north": { "to": "rust_durummill" } },
       "actions": [
         {
           "id": "pinch_cuprite",
@@ -40548,6 +40548,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cuprite. They packed it on the barytes and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_durummill": {
+      "name": "Rust Durummill",
+      "desc": "A dry durummill north of the cuprite. Packed rust coats durummill.",
+      "brief": "Dry durummill, packed rust.",
+      "exits": { "south": { "to": "rust_cuprite" } },
+      "actions": [
+        {
+          "id": "pinch_durummill",
+          "label": "pinch the durummill",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard durummill. They packed it on the cuprite and packed rust around it."]
           ]
         }
       ]
@@ -40590,7 +40607,7 @@
       "name": "Rust Shaft",
       "desc": "A dry shaft east of the tip. Packed rust coats a shaft.",
       "brief": "Dry shaft, packed rust.",
-      "exits": { "west": { "to": "rust_tip" }, "east": { "to": "rust_hemp" }, "south": { "to": "rust_seagrass" } },
+      "exits": { "west": { "to": "rust_tip" }, "east": { "to": "rust_hemp" }, "south": { "to": "rust_seagrass" }, "north": { "to": "rust_foniomill" } },
       "actions": [
         {
           "id": "pinch_shaft",
@@ -40599,6 +40616,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard shaft. They set it at the tip and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_foniomill": {
+      "name": "Rust Foniomill",
+      "desc": "A dry foniomill north of the shaft. Packed rust coats foniomill.",
+      "brief": "Dry foniomill, packed rust.",
+      "exits": { "south": { "to": "rust_shaft" } },
+      "actions": [
+        {
+          "id": "pinch_foniomill",
+          "label": "pinch the foniomill",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard foniomill. They packed it on the shaft and packed rust around it."]
           ]
         }
       ]
@@ -40624,7 +40658,7 @@
       "name": "Rust Hemp",
       "desc": "A dry hemp east of the shaft. Packed rust coats a hemp.",
       "brief": "Dry hemp, packed rust.",
-      "exits": { "west": { "to": "rust_shaft" }, "east": { "to": "rust_cork" }, "south": { "to": "rust_eelgrass" } },
+      "exits": { "west": { "to": "rust_shaft" }, "east": { "to": "rust_cork" }, "south": { "to": "rust_eelgrass" }, "north": { "to": "rust_teffmill" } },
       "actions": [
         {
           "id": "pinch_hemp",
@@ -40633,6 +40667,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard hemp. They bound it on the shaft and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_teffmill": {
+      "name": "Rust Teffmill",
+      "desc": "A dry teffmill north of the hemp. Packed rust coats teffmill.",
+      "brief": "Dry teffmill, packed rust.",
+      "exits": { "south": { "to": "rust_hemp" } },
+      "actions": [
+        {
+          "id": "pinch_teffmill",
+          "label": "pinch the teffmill",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard teffmill. They packed it on the hemp and packed rust around it."]
           ]
         }
       ]
@@ -40658,7 +40709,7 @@
       "name": "Rust Cork",
       "desc": "A dry cork east of the hemp. Packed rust coats cork.",
       "brief": "Dry cork, packed rust.",
-      "exits": { "west": { "to": "rust_hemp" }, "east": { "to": "rust_kerosene" }, "south": { "to": "rust_sargassum" } },
+      "exits": { "west": { "to": "rust_hemp" }, "east": { "to": "rust_kerosene" }, "south": { "to": "rust_sargassum" }, "north": { "to": "rust_barleymill" } },
       "actions": [
         {
           "id": "pinch_cork",
@@ -40667,6 +40718,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard cork. They packed it on the hemp and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_barleymill": {
+      "name": "Rust Barleymill",
+      "desc": "A dry barleymill north of the cork. Packed rust coats barleymill.",
+      "brief": "Dry barleymill, packed rust.",
+      "exits": { "south": { "to": "rust_cork" } },
+      "actions": [
+        {
+          "id": "pinch_barleymill",
+          "label": "pinch the barleymill",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard barleymill. They packed it on the cork and packed rust around it."]
           ]
         }
       ]
@@ -40692,7 +40760,7 @@
       "name": "Rust Kerosene",
       "desc": "A dry kerosene east of the cork. Packed rust coats kerosene.",
       "brief": "Dry kerosene, packed rust.",
-      "exits": { "west": { "to": "rust_cork" }, "east": { "to": "rust_maple" }, "south": { "to": "rust_irishmoss" } },
+      "exits": { "west": { "to": "rust_cork" }, "east": { "to": "rust_maple" }, "south": { "to": "rust_irishmoss" }, "north": { "to": "rust_sorghummill" } },
       "actions": [
         {
           "id": "pinch_kerosene",
@@ -40701,6 +40769,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard kerosene. They poured it on the cork and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_sorghummill": {
+      "name": "Rust Sorghummill",
+      "desc": "A dry sorghummill north of the kerosene. Packed rust coats sorghummill.",
+      "brief": "Dry sorghummill, packed rust.",
+      "exits": { "south": { "to": "rust_kerosene" } },
+      "actions": [
+        {
+          "id": "pinch_sorghummill",
+          "label": "pinch the sorghummill",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard sorghummill. They packed it on the kerosene and packed rust around it."]
           ]
         }
       ]
@@ -40726,7 +40811,7 @@
       "name": "Rust Maple",
       "desc": "A dry maple east of the kerosene. Packed rust coats maple.",
       "brief": "Dry maple, packed rust.",
-      "exits": { "west": { "to": "rust_kerosene" }, "east": { "to": "rust_osage" }, "south": { "to": "rust_rockweed" } },
+      "exits": { "west": { "to": "rust_kerosene" }, "east": { "to": "rust_osage" }, "south": { "to": "rust_rockweed" }, "north": { "to": "rust_milletmill" } },
       "actions": [
         {
           "id": "pinch_maple",
@@ -40735,6 +40820,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard maple. They laid it on the kerosene and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_milletmill": {
+      "name": "Rust Milletmill",
+      "desc": "A dry milletmill north of the maple. Packed rust coats milletmill.",
+      "brief": "Dry milletmill, packed rust.",
+      "exits": { "south": { "to": "rust_maple" } },
+      "actions": [
+        {
+          "id": "pinch_milletmill",
+          "label": "pinch the milletmill",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard milletmill. They packed it on the maple and packed rust around it."]
           ]
         }
       ]
@@ -40760,7 +40862,7 @@
       "name": "Rust Osage",
       "desc": "A dry osage east of the maple. Packed rust coats osage.",
       "brief": "Dry osage, packed rust.",
-      "exits": { "west": { "to": "rust_maple" }, "east": { "to": "rust_zincwhite" }, "south": { "to": "rust_bladderwrack" } },
+      "exits": { "west": { "to": "rust_maple" }, "east": { "to": "rust_zincwhite" }, "south": { "to": "rust_bladderwrack" }, "north": { "to": "rust_cornmill" } },
       "actions": [
         {
           "id": "pinch_osage",
@@ -40769,6 +40871,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard osage. They laid it on the maple and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_cornmill": {
+      "name": "Rust Cornmill",
+      "desc": "A dry cornmill north of the osage. Packed rust coats cornmill.",
+      "brief": "Dry cornmill, packed rust.",
+      "exits": { "south": { "to": "rust_osage" } },
+      "actions": [
+        {
+          "id": "pinch_cornmill",
+          "label": "pinch the cornmill",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard cornmill. They packed it on the osage and packed rust around it."]
           ]
         }
       ]
@@ -40794,7 +40913,7 @@
       "name": "Rust Zincwhite",
       "desc": "A dry zincwhite east of the osage. Packed rust coats zincwhite.",
       "brief": "Dry zincwhite, packed rust.",
-      "exits": { "west": { "to": "rust_osage" }, "east": { "to": "rust_bornite" }, "south": { "to": "rust_holdfast" } },
+      "exits": { "west": { "to": "rust_osage" }, "east": { "to": "rust_bornite" }, "south": { "to": "rust_holdfast" }, "north": { "to": "rust_oatmill" } },
       "actions": [
         {
           "id": "pinch_zincwhite",
@@ -40803,6 +40922,23 @@
           "fx": [
             ["score", 5],
             ["say", "Hard zincwhite. They packed it on the osage and packed rust around it."]
+          ]
+        }
+      ]
+    },
+    "rust_oatmill": {
+      "name": "Rust Oatmill",
+      "desc": "A dry oatmill north of the zincwhite. Packed rust coats oatmill.",
+      "brief": "Dry oatmill, packed rust.",
+      "exits": { "south": { "to": "rust_zincwhite" } },
+      "actions": [
+        {
+          "id": "pinch_oatmill",
+          "label": "pinch the oatmill",
+          "once": true,
+          "fx": [
+            ["score", 5],
+            ["say", "Hard oatmill. They packed it on the zincwhite and packed rust around it."]
           ]
         }
       ]
@@ -49919,6 +50055,9 @@
     "go north",
     "go east",
     "pinch the cuprite",
+    "go north",
+    "pinch the durummill",
+    "go south",
     "go south",
     "pinch the laminaria",
     "go north",
@@ -49937,36 +50076,57 @@
     "go south",
     "go east",
     "pinch the shaft",
+    "go north",
+    "pinch the foniomill",
+    "go south",
     "go south",
     "pinch the seagrass",
     "go north",
     "go east",
     "pinch the hemp",
+    "go north",
+    "pinch the teffmill",
+    "go south",
     "go south",
     "pinch the eelgrass",
     "go north",
     "go east",
     "pinch the cork",
+    "go north",
+    "pinch the barleymill",
+    "go south",
     "go south",
     "pinch the sargassum",
     "go north",
     "go east",
     "pinch the kerosene",
+    "go north",
+    "pinch the sorghummill",
+    "go south",
     "go south",
     "pinch the irishmoss",
     "go north",
     "go east",
     "pinch the maple",
+    "go north",
+    "pinch the milletmill",
+    "go south",
     "go south",
     "pinch the rockweed",
     "go north",
     "go east",
     "pinch the osage",
+    "go north",
+    "pinch the cornmill",
+    "go south",
     "go south",
     "pinch the bladderwrack",
     "go north",
     "go east",
     "pinch the zincwhite",
+    "go north",
+    "pinch the oatmill",
+    "go south",
     "go south",
     "pinch the holdfast",
     "go north",
